@@ -3,8 +3,12 @@
 //
 // Usage:
 //
-//	gosm [-pkg name] [-o out.go] [-rt importpath] module.wasm
+//	gosm [-pkg name] [-o out.go] [-rt importpath] module.wasm [more.wasm...]
 //	gosm -emit-host module.wasm   # print only the Host interface
+//
+// Several modules compiled together share their GC types, so struct and
+// array values can flow between them; each gets its own instance type named
+// after its file (a.wasm -> type A, NewA, AHost).
 //
 // It is designed for go generate:
 //
@@ -38,18 +42,22 @@ func main() {
 		flag.PrintDefaults()
 	}
 	flag.Parse()
-	if flag.NArg() != 1 {
+	if flag.NArg() < 1 {
 		flag.Usage()
 		os.Exit(2)
 	}
 	in := flag.Arg(0)
-	b, err := os.ReadFile(in)
-	if err != nil {
-		fatal(err)
-	}
-	m, err := wasm.Decode(b)
-	if err != nil {
-		fatal(err)
+	var srcs []compiler.Source
+	for _, path := range flag.Args() {
+		b, err := os.ReadFile(path)
+		if err != nil {
+			fatal(err)
+		}
+		m, err := wasm.Decode(b)
+		if err != nil {
+			fatal(fmt.Errorf("%s: %v", path, err))
+		}
+		srcs = append(srcs, compiler.Source{Name: strings.TrimSuffix(filepath.Base(path), filepath.Ext(path)), Module: m})
 	}
 	name := *pkg
 	if name == "" {
@@ -70,10 +78,14 @@ func main() {
 			name = "wasm" + name
 		}
 	}
-	src, err := compiler.Compile(m, compiler.Options{
+	srcName := filepath.Base(in)
+	if len(srcs) > 1 {
+		srcName = fmt.Sprintf("%d modules", len(srcs))
+	}
+	src, err := compiler.CompileModules(srcs, compiler.Options{
 		Package:            name,
 		RuntimePath:        *rtPath,
-		Source:             filepath.Base(in),
+		Source:             srcName,
 		StringConstModules: strModules(strMods, *noStrConst),
 		NoBuiltins:         *noBuiltins,
 		HostOnly:           *hostOnly,

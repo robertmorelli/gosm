@@ -48,4 +48,4 @@ for f in "$ROOT"/internal/spectest/extra/*.wast; do
   wasm-tools json-from-wast "$f" -o "$OUT/$n/test.json" --wasm-dir "$OUT/$n/"
 done
 cd "$ROOT"
-go run ./internal/spectest/gen -wast "$OUT" "$@"
+go run ./internal/spectest/gen -multi -wast "$OUT" "$@"

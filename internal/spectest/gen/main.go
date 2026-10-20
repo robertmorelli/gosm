@@ -27,6 +27,7 @@ var (
 	runRe   = flag.String("run", "", "only run tests matching this regexp")
 	verbose = flag.Bool("v", false, "print failures")
 	jobs    = flag.Int("j", runtime.NumCPU()/2, "parallel tests")
+	multi   = flag.Bool("multi", false, "compile all modules of a script into one package (shared GC types)")
 )
 
 type cmd struct {
@@ -119,7 +120,8 @@ func runTest(name string) summary {
 	dir := filepath.Join(*outDir, name)
 	os.RemoveAll(dir)
 	os.MkdirAll(dir, 0o755)
-	type mod struct{ file, pkg string }
+	type mod struct{ file, pkg, ctor string }
+	var multiSrcs []compiler.Source
 	var mods []mod
 	seen := map[string]bool{}
 	var compileErrs []string
@@ -157,6 +159,12 @@ func runTest(name string) summary {
 			compileErrs = append(compileErrs, c.Filename+": "+err.Error())
 			continue
 		}
+		if *multi {
+			name := fmt.Sprintf("M%d", len(multiSrcs))
+			multiSrcs = append(multiSrcs, compiler.Source{Name: name, Module: m})
+			mods = append(mods, mod{c.Filename, "mods", "New" + name + "Dynamic"})
+			continue
+		}
 		code, err := compiler.Compile(m, compiler.Options{Package: pkg, Source: c.Filename})
 		if err != nil {
 			compileErrs = append(compileErrs, c.Filename+": "+err.Error())
@@ -164,19 +172,35 @@ func runTest(name string) summary {
 		}
 		os.MkdirAll(filepath.Join(dir, pkg), 0o755)
 		os.WriteFile(filepath.Join(dir, pkg, pkg+".go"), code, 0o644)
-		mods = append(mods, mod{c.Filename, pkg})
+		mods = append(mods, mod{c.Filename, pkg, "NewDynamic"})
+	}
+	if *multi && len(multiSrcs) > 0 {
+		code, err := compiler.CompileModules(multiSrcs, compiler.Options{Package: "mods", Source: name})
+		if err != nil {
+			sum.Err = "compile: " + err.Error()
+			return sum
+		}
+		os.MkdirAll(filepath.Join(dir, "mods"), 0o755)
+		os.WriteFile(filepath.Join(dir, "mods", "mods.go"), code, 0o644)
+		if len(multiSrcs) == 1 {
+			mods[0].ctor = "NewDynamic"
+		}
 	}
 	abs, _ := filepath.Abs(filepath.Join(src, "test.json"))
 	modPath := "gosm/" + filepath.ToSlash(dir)
 	for attempt := 0; ; attempt++ {
 		var mb bytes.Buffer
 		mb.WriteString("package main\n\nimport (\n\t\"encoding/json\"\n\t\"os\"\n\t\"runtime/debug\"\n\n\t\"gosm/internal/spectest/runner\"\n")
+		imported := map[string]bool{}
 		for _, m := range mods {
-			fmt.Fprintf(&mb, "\t%s %q\n", m.pkg, modPath+"/"+m.pkg)
+			if !imported[m.pkg] {
+				imported[m.pkg] = true
+				fmt.Fprintf(&mb, "\t%s %q\n", m.pkg, modPath+"/"+m.pkg)
+			}
 		}
 		mb.WriteString(")\n\nfunc main() {\n\tdebug.SetMaxStack(4 << 30)\n\tctors := map[string]runner.Ctor{\n")
 		for _, m := range mods {
-			fmt.Fprintf(&mb, "\t\t%q: func(r func(string, string) any) (map[string]any, error) {\n\t\t\ti, err := %s.NewDynamic(r)\n\t\t\tif err != nil {\n\t\t\t\treturn nil, err\n\t\t\t}\n\t\t\treturn i.Exports(), nil\n\t\t},\n", m.file, m.pkg)
+			fmt.Fprintf(&mb, "\t\t%q: func(r func(string, string) any) (map[string]any, error) {\n\t\t\ti, err := %s.%s(r)\n\t\t\tif err != nil {\n\t\t\t\treturn nil, err\n\t\t\t}\n\t\t\treturn i.Exports(), nil\n\t\t},\n", m.file, m.pkg, m.ctor)
 		}
 		fmt.Fprintf(&mb, "\t}\n\tres := runner.Run(%q, ctors)\n\tjson.NewEncoder(os.Stdout).Encode(res)\n}\n", abs)
 		os.WriteFile(filepath.Join(dir, "main.go"), mb.Bytes(), 0o644)

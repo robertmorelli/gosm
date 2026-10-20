@@ -8,34 +8,49 @@ import (
 	"gosm/rt"
 )
 
+// universe holds the Go representation of every defined type of all modules
+// compiled into one package. Types are identified by their iso-recursive
+// structural key, so equivalent types of different modules share one Go
+// type and one RTT.
+type universe struct {
+	types    map[string]*typeInfo
+	order    []*typeInfo
+	pkgNames map[string]bool
+}
+
+func newUniverse() *universe {
+	return &universe{types: map[string]*typeInfo{}, pkgNames: map[string]bool{}}
+}
+
 // typeInfo describes a canonical defined type.
 type typeInfo struct {
-	idx    int // canonical type index
-	kind   byte
-	super  int // canonical index of declared supertype, -1 if none
-	root   int
-	header bool   // struct/array carries an rt.Object header
-	goName string // Go type name for struct/array types
-	rtt    string // name of the package-level *rt.RTT variable
-	fields []fieldInfo
-	hasSub bool
+	c       *compiler // compiler of the defining module
+	midx    int       // type index in the defining module
+	key     string
+	kind    byte
+	final   bool
+	super   *typeInfo // declared supertype, nil if none
+	root    *typeInfo
+	header  bool   // struct/array carries an rt.Object header
+	goName  string // Go type name for struct/array types
+	rtt     string // name of the package-level *rt.RTT variable
+	fields  []fieldInfo
+	hasSub  bool
+	names   []string // name-section names of all equivalent types
+	laidOut bool
 }
 
 type fieldInfo struct {
-	name    string // Go field name (promoted, unique across the chain)
-	storage string // Go storage type (inherited from the root declaration)
-	ft      wasm.FieldType
-	owner   int // canonical type index that declares the Go field
+	name      string // Go field name (promoted, unique across the chain)
+	storage   string // Go storage type (inherited from the root declaration)
+	storageVT wasm.ValType
+	ft        wasm.FieldType // the field as declared in this type
 }
 
-// computeTypes canonicalizes types (iso-recursive equivalence) and assigns
-// Go representations.
-func (c *compiler) computeTypes() {
+// computeKeys computes the structural key of every type of the module.
+func (c *compiler) computeKeys() {
 	m := c.m
-	n := len(m.Types)
-	c.keys = make([]string, n)
-	c.canon = make([]int, n)
-	first := map[string]int{}
+	c.keys = make([]string, len(m.Types))
 	for _, g := range m.RecGroups {
 		sers := make([]string, g.Len)
 		for i := 0; i < g.Len; i++ {
@@ -43,116 +58,113 @@ func (c *compiler) computeTypes() {
 		}
 		gk := rt.GroupKey(sers)
 		for i := 0; i < g.Len; i++ {
-			k := rt.TypeKey(gk, i)
-			c.keys[g.Start+i] = k
-			if f, ok := first[k]; ok {
-				c.canon[g.Start+i] = f
-			} else {
-				first[k] = g.Start + i
-				c.canon[g.Start+i] = g.Start + i
-			}
+			c.keys[g.Start+i] = rt.TypeKey(gk, i)
 		}
-	}
-	c.tinfo = map[int]*typeInfo{}
-	for i := 0; i < n; i++ {
-		if c.canon[i] != i {
-			continue
-		}
-		st := &m.Types[i]
-		ti := &typeInfo{idx: i, kind: st.Comp.Kind, super: -1}
-		if len(st.Supers) > 0 {
-			ti.super = c.canon[st.Supers[0]]
-		}
-		c.tinfo[i] = ti
-	}
-	// roots and hierarchy membership
-	for i := 0; i < n; i++ {
-		ti := c.tinfo[i]
-		if ti == nil {
-			continue
-		}
-		r := i
-		for c.tinfo[r].super >= 0 {
-			r = c.tinfo[r].super
-		}
-		ti.root = r
-		if ti.super >= 0 {
-			c.tinfo[ti.super].hasSub = true
-		}
-	}
-	multi := map[int]bool{}
-	for _, ti := range c.tinfo {
-		if ti.super >= 0 {
-			multi[ti.root] = true
-		}
-	}
-	// Go names
-	for i := 0; i < n; i++ {
-		ti := c.tinfo[i]
-		if ti == nil {
-			continue
-		}
-		ti.header = multi[ti.root] && ti.kind != wasm.KindFunc
-		name := ""
-		for j := 0; j < n; j++ { // first named member of the class
-			if c.canon[j] == i {
-				if s, ok := m.Names.Types[uint32(j)]; ok && s != "" {
-					name = s
-					break
-				}
-			}
-		}
-		switch ti.kind {
-		case wasm.KindStruct:
-			if name == "" {
-				name = fmt.Sprintf("Struct%d", i)
-			}
-			ti.goName = c.pkgIdent(exportIdent(name))
-			ti.rtt = c.pkgIdent("rtt" + ti.goName)
-		case wasm.KindArray:
-			if name == "" {
-				name = fmt.Sprintf("Array%d", i)
-			}
-			ti.goName = c.pkgIdent(exportIdent(name))
-			ti.rtt = c.pkgIdent("rtt" + ti.goName)
-		case wasm.KindFunc:
-			if name != "" {
-				ti.rtt = c.pkgIdent("rtt" + exportIdent(name))
-			} else {
-				ti.rtt = c.pkgIdent(fmt.Sprintf("rttFunc%d", i))
-			}
-		}
-	}
-	// fields, in index order (supertypes always precede subtypes)
-	for i := 0; i < n; i++ {
-		ti := c.tinfo[i]
-		if ti == nil || ti.kind == wasm.KindFunc {
-			continue
-		}
-		c.layoutFields(ti)
 	}
 }
 
-func (c *compiler) layoutFields(ti *typeInfo) {
-	if ti.fields != nil || ti.kind == wasm.KindFunc {
+// register adds the module's types to the universe.
+func (u *universe) register(c *compiler) {
+	m := c.m
+	for i := range m.Types {
+		k := c.keys[i]
+		ti, ok := u.types[k]
+		if !ok {
+			st := &m.Types[i]
+			ti = &typeInfo{c: c, midx: i, key: k, kind: st.Comp.Kind, final: st.Final}
+			if len(st.Supers) > 0 {
+				ti.super = u.types[c.keys[st.Supers[0]]]
+			}
+			u.types[k] = ti
+			u.order = append(u.order, ti)
+		}
+		if n, ok := m.Names.Types[uint32(i)]; ok && n != "" {
+			ti.names = append(ti.names, n)
+		}
+	}
+}
+
+// finish assigns Go names, headers and field layouts once all modules are
+// registered.
+func (u *universe) finish() {
+	for _, ti := range u.order {
+		r := ti
+		for r.super != nil {
+			r = r.super
+		}
+		ti.root = r
+		if ti.super != nil {
+			ti.super.hasSub = true
+		}
+	}
+	multi := map[*typeInfo]bool{}
+	for _, ti := range u.order {
+		if ti.super != nil {
+			multi[ti.root] = true
+		}
+	}
+	for i, ti := range u.order {
+		ti.header = multi[ti.root] && ti.kind != wasm.KindFunc
+		name := ""
+		if len(ti.names) > 0 {
+			name = ti.names[0]
+		}
+		switch ti.kind {
+		case wasm.KindStruct, wasm.KindArray:
+			if name == "" {
+				if ti.kind == wasm.KindStruct {
+					name = fmt.Sprintf("Struct%d", i)
+				} else {
+					name = fmt.Sprintf("Array%d", i)
+				}
+			}
+			ti.goName = u.pkgIdent(exportIdent(name))
+			ti.rtt = u.pkgIdent("rtt" + ti.goName)
+		case wasm.KindFunc:
+			if name != "" {
+				ti.rtt = u.pkgIdent("rtt" + exportIdent(name))
+			} else {
+				ti.rtt = u.pkgIdent(fmt.Sprintf("rttFunc%d", i))
+			}
+		}
+	}
+	for _, ti := range u.order {
+		ti.layoutFields()
+	}
+}
+
+func (u *universe) pkgIdent(base string) string {
+	name := base
+	for k := 2; u.pkgNames[name]; k++ {
+		name = fmt.Sprintf("%s%d", base, k)
+	}
+	u.pkgNames[name] = true
+	return name
+}
+
+func (ti *typeInfo) comp() *wasm.CompType { return &ti.c.m.Types[ti.midx].Comp }
+
+func (ti *typeInfo) layoutFields() {
+	if ti.laidOut || ti.kind == wasm.KindFunc {
 		return
 	}
-	st := &c.m.Types[ti.idx]
+	ti.laidOut = true
+	c := ti.c
 	var inherited []fieldInfo
-	taken := map[string]bool{"Object": true, "RTT": true, "WasmType": true, "WasmHeader": true}
-	if ti.super >= 0 {
-		sup := c.tinfo[ti.super]
-		c.layoutFields(sup)
-		inherited = sup.fields
-		for s := ti.super; s >= 0; s = c.tinfo[s].super {
-			taken[c.tinfo[s].goName] = true
+	taken := map[string]bool{"Object": true, "RTT": true, "WasmType": true, "WasmHeader": true, "WasmLen": true}
+	if ti.super != nil {
+		ti.super.layoutFields()
+		inherited = ti.super.fields
+		for s := ti.super; s != nil; s = s.super {
+			taken[s.goName] = true
 		}
 	}
 	for _, f := range inherited {
 		taken[f.name] = true
 	}
-	out := make([]fieldInfo, 0, len(st.Comp.Fields))
-	for i, ft := range st.Comp.Fields {
+	fields := ti.comp().Fields
+	out := make([]fieldInfo, 0, len(fields))
+	for i, ft := range fields {
 		if i < len(inherited) {
 			fi := inherited[i]
 			fi.ft = ft
@@ -164,7 +176,7 @@ func (c *compiler) layoutFields(ti *typeInfo) {
 			name = "Elems"
 		} else {
 			name = fmt.Sprintf("F%d", i)
-			if fn, ok := c.m.Names.Fields[uint32(ti.idx)][uint32(i)]; ok && fn != "" {
+			if fn, ok := c.m.Names.Fields[uint32(ti.midx)][uint32(i)]; ok && fn != "" {
 				name = exportIdent(fn)
 			}
 		}
@@ -173,7 +185,7 @@ func (c *compiler) layoutFields(ti *typeInfo) {
 			name = fmt.Sprintf("%s_%d", base, k)
 		}
 		taken[name] = true
-		out = append(out, fieldInfo{name: name, storage: c.storageGo(ft), ft: ft, owner: ti.idx})
+		out = append(out, fieldInfo{name: name, storage: c.storageGo(ft), storageVT: ft.Type, ft: ft})
 	}
 	ti.fields = out
 }
@@ -270,7 +282,7 @@ func (c *compiler) valKey(v wasm.ValType) string {
 	return c.valSer(v, wasm.RecGroup{Start: -1})
 }
 
-func (c *compiler) info(typeIdx uint32) *typeInfo { return c.tinfo[c.canon[typeIdx]] }
+func (c *compiler) info(typeIdx uint32) *typeInfo { return c.u.types[c.keys[typeIdx]] }
 
 // goType maps a value type to its Go type.
 func (c *compiler) goType(v wasm.ValType) string {
@@ -329,9 +341,9 @@ func (c *compiler) isSubHeap(a, b wasm.HeapType) bool {
 		return true
 	}
 	if !a.IsAbstract() && !b.IsAbstract() {
-		ca, cb := c.canon[a], c.canon[b]
-		for t := ca; t >= 0; t = c.tinfo[t].super {
-			if t == cb {
+		tb := c.info(uint32(b))
+		for t := c.info(uint32(a)); t != nil; t = t.super {
+			if t == tb {
 				return true
 			}
 		}

@@ -64,7 +64,7 @@ func (f *fn) testExpr(x entry, ht wasm.HeapType, nullable bool) string {
 			// concrete -> concrete within one hierarchy: read the header
 			src, dst := c.info(uint32(x.t.Heap)), c.info(uint32(ht))
 			if src.header {
-				if !dst.hasSub && c.m.Types[ht].Final {
+				if !dst.hasSub && dst.final {
 					t = fmt.Sprintf("(%s != nil && rt.ObjRTT(%s) == %s)", xs, xs, dst.rtt)
 				} else {
 					t = fmt.Sprintf("(%s != nil && rt.ObjRTT(%s).SubOf(%s))", xs, xs, dst.rtt)
@@ -146,22 +146,28 @@ func (f *fn) refOp(in *wasm.Instr) bool {
 	return true
 }
 
-func (f *fn) fieldOf(typeIdx uint32, i uint32) fieldInfo {
-	return f.c.info(typeIdx).fields[i]
+// fieldOf returns field i of type typeIdx with its wasm types expressed in
+// this module's type index space (the universe's layout may come from an
+// equivalent type of another module).
+func (f *fn) fieldOf(typeIdx uint32, i uint32) fieldInfo { return f.c.fieldOf(typeIdx, i) }
+
+func (c *compiler) fieldOf(typeIdx uint32, i uint32) fieldInfo {
+	fi := c.info(typeIdx).fields[i]
+	fi.ft = c.m.Types[typeIdx].Comp.Fields[i]
+	t := typeIdx
+	for {
+		st := &c.m.Types[t]
+		if len(st.Supers) == 0 || int(i) >= len(c.m.Types[st.Supers[0]].Comp.Fields) {
+			break
+		}
+		t = st.Supers[0]
+	}
+	fi.storageVT = c.m.Types[t].Comp.Fields[i].Type
+	return fi
 }
 
 // storageVT is the value type whose Go representation is the field storage.
-func (c *compiler) storageVT(fi fieldInfo) wasm.ValType {
-	ofs := c.tinfo[fi.owner]
-	_ = ofs
-	st := &c.m.Types[fi.owner]
-	for i, ft := range st.Comp.Fields {
-		if c.info(uint32(fi.owner)).fields[i].name == fi.name {
-			return ft.Type
-		}
-	}
-	return fi.ft.Type
-}
+func (c *compiler) storageVT(fi fieldInfo) wasm.ValType { return fi.storageVT }
 
 // toStorage converts a popped value to field storage representation.
 func (f *fn) toStorage(e entry, fi fieldInfo) string {
@@ -239,8 +245,8 @@ func (f *fn) gcOp(in *wasm.Instr) bool {
 		var args []string
 		if in.Op == wasm.OpStructNew {
 			vals := f.popN(len(ti.fields))
-			for i, fi := range ti.fields {
-				args = append(args, f.toStorage(vals[i], fi))
+			for i := range ti.fields {
+				args = append(args, f.toStorage(vals[i], f.fieldOf(in.A, uint32(i))))
 			}
 			f.pushEager(refT(wasm.HeapType(in.A), false), fmt.Sprintf("%s(%s)", c.ctorName(ti), strings.Join(args, ", ")))
 		} else {
@@ -258,7 +264,7 @@ func (f *fn) gcOp(in *wasm.Instr) bool {
 		f.emit("%s.%s = %s", p, fi.name, f.toStorage(v, fi))
 	case wasm.OpArrayNew, wasm.OpArrayNewDefault:
 		ti := c.info(in.A)
-		fi := ti.fields[0]
+		fi := f.fieldOf(in.A, 0)
 		n := f.pop()
 		var v string
 		if in.Op == wasm.OpArrayNew {
@@ -276,7 +282,7 @@ func (f *fn) gcOp(in *wasm.Instr) bool {
 		f.pushEager(refT(wasm.HeapType(in.A), false), fmt.Sprintf("%s(%s(%s, %s))", c.ctorName(ti), mk, f.ex(n), v))
 	case wasm.OpArrayNewFixed:
 		ti := c.info(in.A)
-		fi := ti.fields[0]
+		fi := f.fieldOf(in.A, 0)
 		vals := f.popN(int(in.B))
 		var args []string
 		for _, v := range vals {
@@ -285,13 +291,13 @@ func (f *fn) gcOp(in *wasm.Instr) bool {
 		f.pushEager(refT(wasm.HeapType(in.A), false), fmt.Sprintf("%s([]%s{%s})", c.ctorName(ti), fi.storage, strings.Join(args, ", ")))
 	case wasm.OpArrayNewData:
 		ti := c.info(in.A)
-		fi := ti.fields[0]
+		fi := f.fieldOf(in.A, 0)
 		dec, size := f.elemDec(fi.ft)
 		vals := f.popN(2)
 		f.pushEager(refT(wasm.HeapType(in.A), false), fmt.Sprintf("%s(%s(rt.DataBytes(%s, %s, %s, %d)))", c.ctorName(ti), dec, c.dataRef(in.B), f.ex(vals[0]), f.ex(vals[1]), size))
 	case wasm.OpArrayNewElem:
 		ti := c.info(in.A)
-		fi := ti.fields[0]
+		fi := f.fieldOf(in.A, 0)
 		vals := f.popN(2)
 		seg := fmt.Sprintf("rt.SegSlice(%s, %s, %s)", c.elemRef(in.B), f.ex(vals[0]), f.ex(vals[1]))
 		conv := f.convSlice(seg, c.m.Elems[in.B].Type, fi)

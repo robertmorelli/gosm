@@ -83,14 +83,7 @@ func hostEsc(s string) string {
 }
 
 // pkgIdent reserves a unique package-level identifier.
-func (c *compiler) pkgIdent(base string) string {
-	name := base
-	for k := 2; c.pkgNames[name]; k++ {
-		name = fmt.Sprintf("%s%d", base, k)
-	}
-	c.pkgNames[name] = true
-	return name
-}
+func (c *compiler) pkgIdent(base string) string { return c.u.pkgIdent(base) }
 
 // memberIdent reserves a unique Instance member (field or method) name.
 func (c *compiler) memberIdent(base string) string {
