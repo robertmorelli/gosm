@@ -31,6 +31,7 @@ func main() {
 	flag.Var(&strMods, "string-constants", "import module whose global imports are string constants (repeatable; default \"'\"; Dart uses \"\")")
 	noStrConst := flag.Bool("no-string-constants", false, "disable imported string constants")
 	noBuiltins := flag.Bool("no-builtins", false, "do not implement wasm:js-string / text-encoder / text-decoder builtins")
+	hostType := flag.String("host-type", "", "concrete Go host type defined in the package (e.g. \"*Imports\"); host calls become direct and inlinable")
 	noFormat := flag.Bool("no-format", false, "do not gofmt the output")
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "usage: gosm [flags] module.wasm\n")
@@ -77,6 +78,7 @@ func main() {
 		NoBuiltins:         *noBuiltins,
 		HostOnly:           *hostOnly,
 		NoFormat:           *noFormat,
+		HostType:           *hostType,
 	})
 	if err != nil {
 		if src != nil && *out != "" {

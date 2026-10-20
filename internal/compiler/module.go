@@ -25,6 +25,11 @@ type Options struct {
 	NoBuiltins         bool // treat wasm:js-string etc. as ordinary host imports
 	HostOnly           bool // emit only the Host interface
 	NoFormat           bool // skip gofmt (debugging)
+	// HostType, if set, is a concrete Go type (e.g. "*Imports") defined in the
+	// generated package, used for the host instead of the Host interface so
+	// host methods are called directly and can be inlined. NewDynamic is then
+	// not generated.
+	HostType string
 }
 
 type compiler struct {
@@ -89,7 +94,11 @@ func Compile(m *wasm.Module, opts Options) (src []byte, err error) {
 	c.writeInstance(&out)
 	c.writeFuncs(&out)
 	out.WriteString(c.extra.String())
-	c.writeDynamic(&out)
+	if c.opts.HostType == "" {
+		c.writeDynamic(&out)
+	} else {
+		fmt.Fprintf(&out, "var _ Host = (%s)(nil)\n", c.opts.HostType)
+	}
 
 	srcName := opts.Source
 	if srcName == "" {
@@ -114,6 +123,13 @@ func (c *compiler) format(s string) ([]byte, error) {
 }
 
 func (c *compiler) useImport(p string) { c.imports[p] = true }
+
+func (c *compiler) hostType() string {
+	if c.opts.HostType != "" {
+		return c.opts.HostType
+	}
+	return "Host"
+}
 
 // --- naming ---
 
@@ -472,7 +488,8 @@ func (c *compiler) writeHost(w *strings.Builder) {
 
 func (c *compiler) writeInstance(w *strings.Builder) {
 	m := c.m
-	w.WriteString("// Instance is an instantiated module.\ntype Instance struct {\n\thost Host\n\tfuncs []*rt.Func\n")
+	ht := c.hostType()
+	fmt.Fprintf(w, "// Instance is an instantiated module.\ntype Instance struct {\n\thost %s\n\tfuncs []*rt.Func\n", ht)
 	for i := 0; i < m.NumMems(); i++ {
 		fmt.Fprintf(w, "\tmem%d *rt.Memory\n", i)
 	}
@@ -499,7 +516,8 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 	w.WriteString("}\n\n")
 
 	w.WriteString("// New instantiates the module. host may be nil if the module has no imports.\n")
-	w.WriteString("func New(host Host) (*Instance, error) {\n\tm := &Instance{host: host}\n\tif err := rt.Catch(m.init); err != nil {\n\t\treturn nil, err\n\t}\n\treturn m, nil\n}\n\n")
+	fmt.Fprintf(w, "func New(host %s) (*Instance, error) {\n", ht)
+	w.WriteString("\tm := &Instance{host: host}\n\tif err := rt.Catch(m.init); err != nil {\n\t\treturn nil, err\n\t}\n\treturn m, nil\n}\n\n")
 
 	// data segment contents
 	for i, d := range m.Datas {
@@ -520,7 +538,7 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 				fmt.Fprintf(&b, "m.funcs[%d] = &rt.Func{Type: %s, Fn: m.%s, Name: %q}\n", fi, c.info(im.TypeIdx).rtt, c.funcNames[fi], im.Module+"."+im.Name)
 				_ = ft
 				if hn != "" {
-					fmt.Fprintf(&b, "if fh, ok := m.host.(interface{ WasmFuncRef(int) *rt.Func }); ok {\nif f := fh.WasmFuncRef(%d); f != nil {\nm.funcs[%d] = f\n}\n}\n", fi, fi)
+					fmt.Fprintf(&b, "if fh, ok := any(m.host).(interface{ WasmFuncRef(int) *rt.Func }); ok {\nif f := fh.WasmFuncRef(%d); f != nil {\nm.funcs[%d] = f\n}\n}\n", fi, fi)
 				}
 			}
 			fi++

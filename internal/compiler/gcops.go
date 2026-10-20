@@ -60,6 +60,18 @@ func (f *fn) testExpr(x entry, ht wasm.HeapType, nullable bool) string {
 			t = "false"
 		}
 	default:
+		if !x.t.Heap.IsAbstract() && !ht.IsAbstract() {
+			// concrete -> concrete within one hierarchy: read the header
+			src, dst := c.info(uint32(x.t.Heap)), c.info(uint32(ht))
+			if src.header {
+				if !dst.hasSub && c.m.Types[ht].Final {
+					t = fmt.Sprintf("(%s != nil && rt.ObjRTT(%s) == %s)", xs, xs, dst.rtt)
+				} else {
+					t = fmt.Sprintf("(%s != nil && rt.ObjRTT(%s).SubOf(%s))", xs, xs, dst.rtt)
+				}
+				break
+			}
+		}
 		xa := c.conv(xs, x.t, anyRef)
 		switch ht {
 		case wasm.HeapAny:

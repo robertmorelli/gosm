@@ -370,7 +370,7 @@ func (c *compiler) conv(e string, from, to wasm.ValType) string {
 	if gf == gt {
 		return e
 	}
-	if e == "nil" || strings.HasSuffix(e, ")(nil)") {
+	if e == "nil" || e == "any(nil)" || strings.HasSuffix(e, ")(nil)") {
 		return c.nullOf(to)
 	}
 	fromConcrete := strings.HasPrefix(gf, "*") && gf != "*rt.Func" && gf != "*rt.Exception"
