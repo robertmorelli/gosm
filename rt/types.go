@@ -128,6 +128,11 @@ type Func struct {
 	// Views adapts Fn to supertypes whose Go signature differs (because a
 	// subtype refines parameter or result reference types).
 	Views []FuncView
+	// Raw and Owner are set by modules that use trampolined tail calls: Raw
+	// is the function without the trampoline loop, usable only by code of
+	// the owning instance.
+	Raw   any
+	Owner any
 }
 
 // FuncView is Fn adapted to the signature of a supertype.
@@ -174,6 +179,29 @@ func FnOfRef(f *Func, t *RTT) any {
 		return f.As(t)
 	}
 	return f.Fn
+}
+
+// FnOfTail returns the function to tail-call through type t from code of
+// instance owner: the raw (non-trampolining) function if f belongs to owner
+// and has exactly type t, otherwise the ordinary entry point. table selects
+// the trap for a null entry.
+func FnOfTail(f *Func, t *RTT, owner any, table bool) any {
+	if f == nil {
+		if table {
+			panic(ErrUninitElem)
+		}
+		panic(ErrNullFunc)
+	}
+	if f.Type == t {
+		if f.Raw != nil && f.Owner == owner {
+			return f.Raw
+		}
+		return f.Fn
+	}
+	if !f.Type.SubOf(t) {
+		panic(ErrIndirectType)
+	}
+	return f.As(t)
 }
 
 // GCRef is implemented by every generated struct and array type.

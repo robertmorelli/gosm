@@ -337,54 +337,56 @@ func (f *fn) memoryOp(in *wasm.Instr) bool {
 
 // --- calls ---
 
-func (f *fn) emitCall(callee string, ft *wasm.FuncType, args []string, tail bool) {
-	call := fmt.Sprintf("%s(%s)", callee, strings.Join(append([]string{"d + 1"}, args...), ", "))
-	if tail && f.closure > 0 && sameTypes(f.c, ft.Results, f.results) {
-		// Inside a try closure: evaluate the callee and arguments now, then
-		// leave all handlers and perform the call at function level.
-		f.ntail++
-		fv := fmt.Sprintf("tc%d", f.ntail)
-		f.declare(fv, f.goFuncType(ft))
-		f.emit("%s = %s", fv, callee)
-		var avs []string
+// emitCall emits a call. tailCallee is the callee expression to use when a
+// tail call is trampolined (the raw function); tramp requests trampolining.
+// host marks calls to host imports, which cannot leave a pending tail call.
+func (f *fn) emitCall(callee, tailCallee string, ft *wasm.FuncType, args []string, tail, tramp, host bool) {
+	c := f.c
+	if tail && (tramp || f.closure > 0) && c.usesTramp && sameTypes(c, ft.Results, f.results) {
+		// Store the pending call and return; the caller's loop runs it, so
+		// the Go stack does not grow.
+		var ps, as []string
+		ps = append(ps, "fn "+f.goFuncType(ft))
+		as = append(as, "d")
 		for i, p := range ft.Params {
-			av := fmt.Sprintf("tc%d_%d", f.ntail, i)
-			f.declare(av, f.c.goType(p))
-			f.emit("%s = %s", av, args[i])
-			avs = append(avs, av)
+			ps = append(ps, fmt.Sprintf("a%d %s", i, c.goType(p)))
+			as = append(as, fmt.Sprintf("a%d", i))
 		}
-		tcall := fmt.Sprintf("%s(%s)", fv, strings.Join(append([]string{"d"}, avs...), ", "))
+		res := goResults(c, ft.Results)
+		inner := fmt.Sprintf("fn(%s)", strings.Join(as, ", "))
 		if len(ft.Results) > 0 {
-			tcall = "return " + tcall
-		} else {
-			tcall += "\nreturn"
+			inner = "return " + inner
 		}
-		f.jump(&ctrl{kind: ctrlTail, closure: -1, tailCall: tcall})
+		f.emit("m.tail = func(%s) func(int)%s {\nreturn func(d int)%s {\n%s\n}\n}(%s)",
+			strings.Join(ps, ", "), res, res, inner, strings.Join(append([]string{tailCallee}, args...), ", "))
+		f.returnZeros()
 		f.setUnreachable()
 		return
 	}
-	if tail {
-		call = fmt.Sprintf("%s(%s)", callee, strings.Join(append([]string{"d"}, args...), ", "))
-		if f.closure == 0 && sameTypes(f.c, ft.Results, f.results) {
-			if len(ft.Results) == 0 {
-				f.emit("%s", call)
-				f.emit("return")
-			} else {
-				f.emit("return %s", call)
-			}
-			f.setUnreachable()
-			return
+	if tail && f.closure == 0 && sameTypes(c, ft.Results, f.results) {
+		call := fmt.Sprintf("%s(%s)", callee, strings.Join(append([]string{"d"}, args...), ", "))
+		if len(ft.Results) == 0 {
+			f.emit("%s", call)
+			f.emit("return")
+		} else {
+			f.emit("return %s", call)
 		}
+		f.setUnreachable()
+		return
 	}
+	call := fmt.Sprintf("%s(%s)", callee, strings.Join(append([]string{"d + 1"}, args...), ", "))
 	h := f.height()
 	var outs []string
 	for i, r := range ft.Results {
-		outs = append(outs, f.slot(h+i, f.c.goType(r)))
+		outs = append(outs, f.slot(h+i, c.goType(r)))
 	}
-	if len(outs) == 0 {
-		f.emit("%s", call)
-	} else {
-		f.emit("%s = %s", strings.Join(outs, ", "), call)
+	assign := ""
+	if len(outs) > 0 {
+		assign = strings.Join(outs, ", ") + " = "
+	}
+	f.emit("%s%s", assign, call)
+	if c.usesTramp && !host {
+		f.emit("for m.tail != nil {\nt := m.tail.(func(int)%s)\nm.tail = nil\n%st(d + 1)\n}", goResults(c, ft.Results), assign)
 	}
 	for i, r := range ft.Results {
 		f.pushSlotVar(r, outs[i])
@@ -393,6 +395,32 @@ func (f *fn) emitCall(callee string, ft *wasm.FuncType, args []string, tail bool
 		f.branch(uint32(len(f.ctrls) - 1))
 		f.setUnreachable()
 	}
+}
+
+func goResults(c *compiler, rs []wasm.ValType) string {
+	var gs []string
+	for _, r := range rs {
+		gs = append(gs, c.goType(r))
+	}
+	switch len(gs) {
+	case 0:
+		return ""
+	case 1:
+		return " " + gs[0]
+	}
+	return " (" + strings.Join(gs, ", ") + ")"
+}
+
+// returnZeros returns zero values from the function (used after storing a
+// pending tail call).
+func (f *fn) returnZeros() {
+	var zs []entry
+	for _, r := range f.results {
+		zs = append(zs, entry{t: r, expr: f.c.zeroOf(r), kind: kConst, maxH: -1})
+	}
+	f.stack = append(f.stack, zs...)
+	f.branch(uint32(len(f.ctrls) - 1))
+	f.stack = f.stack[:len(f.stack)-len(zs)]
 }
 
 func sameTypes(c *compiler, a, b []wasm.ValType) bool {
@@ -444,7 +472,9 @@ func (f *fn) call(fi uint32, tail bool) {
 		return
 	}
 	args := f.args(ft)
-	f.emitCall("m."+c.funcName(fi), ft, args, tail)
+	host := int(fi) < c.m.NumImportedFuncs
+	tramp := tail && !host && f.idx >= 0 && (int(fi) == f.idx || c.inTailCycle(f.idx, int(fi)))
+	f.emitCall("m."+c.funcName(fi), "m."+c.funcName(fi), ft, args, tail, tramp, host)
 }
 
 // inlineJSString emits the JSCache fast path for charCodeAt/length directly
@@ -508,7 +538,8 @@ func (f *fn) callIndirect(typeIdx, table uint32, tail bool) {
 		ie = f.u64(idx)
 	}
 	callee := fmt.Sprintf("rt.FnOf(%s.Get(%s), %s).(%s)", c.tableRef(table), ie, c.info(typeIdx).rtt, f.goFuncType(ft))
-	f.emitCall(callee, ft, args, tail)
+	tcallee := fmt.Sprintf("rt.FnOfTail(%s.Get(%s), %s, m, true).(%s)", c.tableRef(table), ie, c.info(typeIdx).rtt, f.goFuncType(ft))
+	f.emitCall(callee, tcallee, ft, args, tail, true, false)
 }
 
 func (f *fn) callRef(typeIdx uint32, tail bool) {
@@ -517,7 +548,8 @@ func (f *fn) callRef(typeIdx uint32, tail bool) {
 	r := f.pop()
 	args := f.args(ft)
 	callee := fmt.Sprintf("rt.FnOfRef(%s, %s).(%s)", f.ex(r), c.info(typeIdx).rtt, f.goFuncType(ft))
-	f.emitCall(callee, ft, args, tail)
+	tcallee := fmt.Sprintf("rt.FnOfTail(%s, %s, m, false).(%s)", f.ex(r), c.info(typeIdx).rtt, f.goFuncType(ft))
+	f.emitCall(callee, tcallee, ft, args, tail, true, false)
 }
 
 // floatConstVar returns a package-level variable holding a float constant.

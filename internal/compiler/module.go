@@ -57,6 +57,9 @@ type compiler struct {
 	exportNames map[int]string
 	fconsts     map[string]string
 	recursive   []bool
+	usesTramp   bool
+	tailComp    []int
+	tailCyclic  map[int]bool
 }
 
 // Compile generates Go source for module m.
@@ -85,6 +88,7 @@ func Compile(m *wasm.Module, opts Options) (src []byte, err error) {
 	c.computeTypes()
 	c.assignNames()
 	c.computeRecursive()
+	c.computeTailCalls()
 	var out strings.Builder
 	if opts.HostOnly {
 		c.writeHost(&out)
@@ -95,6 +99,7 @@ func Compile(m *wasm.Module, opts Options) (src []byte, err error) {
 	c.writeHost(&out)
 	c.writeInstance(&out)
 	c.writeFuncs(&out)
+	c.writeEntries(&out)
 	out.WriteString(c.extra.String())
 	if c.opts.HostType == "" {
 		c.writeDynamic(&out)
@@ -144,7 +149,7 @@ func (c *compiler) assignNames() {
 	c.strConst = map[uint32]string{}
 	c.refFuncs = map[uint32]bool{}
 	c.exportFns = map[uint32]bool{}
-	for _, n := range []string{"host", "funcs", "init", "Exports", "jsCache"} {
+	for _, n := range []string{"host", "funcs", "init", "Exports", "jsCache", "tail"} {
 		c.members[n] = true
 	}
 	// host method names
@@ -257,6 +262,7 @@ func (c *compiler) assignNames() {
 			}
 		}
 		c.funcNames[i] = c.memberIdent(base)
+		c.members[c.funcNames[i]+"Entry"] = true
 	}
 }
 
@@ -562,6 +568,9 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 	if len(c.builtin) > 0 {
 		w.WriteString("\tjsCache rt.JSCache\n")
 	}
+	if c.usesTramp {
+		w.WriteString("\ttail any // pending trampolined tail call\n")
+	}
 	for i := range m.Datas {
 		fmt.Fprintf(w, "\tdata%d []byte\n", i)
 	}
@@ -635,7 +644,11 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 			if n, ok := m.Names.Funcs[uint32(i)]; ok {
 				name = n
 			}
-			fmt.Fprintf(&b, "m.funcs[%d] = &rt.Func{Type: %s, Fn: m.%s, Name: %q%s}\n", i, c.info(m.FuncTypeIdx(uint32(i))).rtt, c.funcNames[i], name, c.funcViews(uint32(i)))
+			if c.usesTramp {
+				fmt.Fprintf(&b, "m.funcs[%d] = &rt.Func{Type: %s, Fn: m.%s, Raw: m.%s, Owner: m, Name: %q%s}\n", i, c.info(m.FuncTypeIdx(uint32(i))).rtt, c.entryName(uint32(i)), c.funcNames[i], name, c.funcViews(uint32(i)))
+			} else {
+				fmt.Fprintf(&b, "m.funcs[%d] = &rt.Func{Type: %s, Fn: m.%s, Name: %q%s}\n", i, c.info(m.FuncTypeIdx(uint32(i))).rtt, c.funcNames[i], name, c.funcViews(uint32(i)))
+			}
 		}
 	}
 	for i, g := range m.Globals {
@@ -693,7 +706,7 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 		fmt.Fprintf(&b, "m.data%d = nil\n", i)
 	}
 	if m.Start != nil {
-		fmt.Fprintf(&b, "m.%s(0)\n", c.funcNames[*m.Start])
+		fmt.Fprintf(&b, "m.%s(0)\n", c.entryName(*m.Start))
 	}
 	b.WriteString("}\n\n")
 	w.WriteString(b.String())
@@ -714,7 +727,7 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 				args = append(args, n)
 			}
 			fmt.Fprintf(w, "// %s calls the exported function %q.\n", mname, e.Name)
-			call := fmt.Sprintf("m.%s(%s)", c.funcNames[e.Index], strings.Join(append([]string{"0"}, args...), ", "))
+			call := fmt.Sprintf("m.%s(%s)", c.entryName(e.Index), strings.Join(append([]string{"0"}, args...), ", "))
 			if len(ft.Results) > 0 {
 				call = "return " + call
 			}
@@ -912,7 +925,7 @@ func (c *compiler) funcViews(fi uint32) string {
 			ps = append(ps, fmt.Sprintf("p%d %s", i, c.goType(p)))
 			args = append(args, c.conv(fmt.Sprintf("p%d", i), p, ft.Params[i]))
 		}
-		call := fmt.Sprintf("m.%s(%s)", c.funcNames[fi], strings.Join(args, ", "))
+		call := fmt.Sprintf("m.%s(%s)", c.entryName(fi), strings.Join(args, ", "))
 		var body string
 		switch len(st.Results) {
 		case 0:
@@ -938,4 +951,57 @@ func (c *compiler) funcViews(fi uint32) string {
 		return ""
 	}
 	return ", Views: []rt.FuncView{" + strings.Join(views, ", ") + "}"
+}
+
+// entryName is the method to call function fi from outside wasm code (host,
+// exports, function references): with trampolined tail calls it is a
+// wrapper that runs pending tail calls to completion.
+func (c *compiler) entryName(fi uint32) string {
+	if !c.usesTramp || int(fi) < c.m.NumImportedFuncs {
+		return c.funcNames[fi]
+	}
+	return c.funcNames[fi] + "Entry"
+}
+
+// writeEntries emits the trampolining entry wrappers.
+func (c *compiler) writeEntries(w *strings.Builder) {
+	if !c.usesTramp {
+		return
+	}
+	m := c.m
+	need := map[uint32]bool{}
+	for f := range c.refFuncs {
+		need[f] = true
+	}
+	for f := range c.exportFns {
+		need[f] = true
+	}
+	if m.Start != nil {
+		need[*m.Start] = true
+	}
+	for fi := uint32(m.NumImportedFuncs); fi < uint32(m.NumFuncs()); fi++ {
+		if !need[fi] {
+			continue
+		}
+		ft := m.FuncType(fi)
+		var args, outs []string
+		args = append(args, "d")
+		for i := range ft.Params {
+			args = append(args, fmt.Sprintf("p%d", i))
+		}
+		for i := range ft.Results {
+			outs = append(outs, fmt.Sprintf("r%d", i))
+		}
+		assign, ret := "", "return"
+		if len(outs) > 0 {
+			assign = strings.Join(outs, ", ") + " := "
+			ret = "return " + strings.Join(outs, ", ")
+		}
+		loopAssign := ""
+		if len(outs) > 0 {
+			loopAssign = strings.Join(outs, ", ") + " = "
+		}
+		fmt.Fprintf(w, "func (m *Instance) %s%s {\n%sm.%s(%s)\nfor m.tail != nil {\nt := m.tail.(func(int)%s)\nm.tail = nil\n%st(d)\n}\n%s\n}\n\n",
+			c.entryName(fi), c.sigGo(ft, nil, true), assign, c.funcNames[fi], strings.Join(args, ", "), goResults(c, ft.Results), loopAssign, ret)
+	}
 }
