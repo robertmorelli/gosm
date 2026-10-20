@@ -7,7 +7,10 @@ compiler, with no FFI bridge in between.
 
 ```sh
 go run gosm/cmd/gosm -pkg mymod -o mymod_gosm.go mymod.wasm
+go run gosm/cmd/gosm -pkg app -o app_gosm.go a.wasm b.wasm   # several modules, shared GC types
 ```
+
+Input is validated first; pass `-no-validate` to skip that.
 
 or with `go generate`:
 
@@ -33,7 +36,9 @@ or with `go generate`:
 | `block` / `loop` / `if` / `br_table` | labels with `goto`, labeled `for` with `continue`/`break`, `if`/`else`, `switch` |
 | exports | methods on `*Instance` named after the export (`Greet`, `Memory`, …) and `Exports()` |
 | imports | a `Host` interface with one method per import, `M_<module>_<field>` |
-| traps / exceptions | `panic(*rt.Trap)` / `panic(*rt.Exception)`; `rt.Catch(func(){…})` turns them into `error` |
+| traps | `panic(*rt.Trap)`; `rt.Catch(func(){…})` turns traps and exceptions into `error` |
+| exceptions | handled inline in the generated code, with no panic (see below). At the API boundary they are `panic(*rt.Exception)`: a Go host throws by panicking, and an export that throws panics |
+| threads | goroutines, each running its own `Instance`, sharing an `*rt.Memory`; atomics use `sync/atomic` |
 
 Operand-stack values become typed locals (`s0`, `s1`, named by stack height)
 or are inlined as pure expressions. Names come from the name section or the
@@ -57,8 +62,28 @@ func (m *Instance) fib(d int, n int64) int64 {
 }
 ```
 
-The `d` parameter is the wasm call depth. It turns runaway recursion into a
-trap instead of a fatal Go stack overflow.
+The `d` parameter is the wasm call depth. Only functions that can recurse
+check it, which turns runaway recursion into a trap instead of a fatal Go
+stack overflow. Leaf functions don't check it, so Go can inline them.
+
+**Exceptions without panics.** In modules that contain handlers:
+- `throw` stores the exception in a pending slot and jumps straight to the
+  handler's label in the same Go function, or returns.
+- Every call site checks the slot.
+- `try_table` is therefore plain inline code that costs nothing to enter.
+- Throwing and catching runs about 5× faster than V8 in a microbenchmark.
+
+**Tail calls run in constant space.**
+- Self tail calls become loops.
+- Direct tail calls outside a cycle are plain Go calls.
+- Tail calls that could recur without bound go through a trampoline: mutual
+  tail recursion, `return_call_indirect` and `return_call_ref`. 40 million
+  mutual tail calls run in 13 MB.
+
+**Multi-module packages.** `gosm a.wasm b.wasm` emits one package in which
+GC types are canonicalized across the modules. A `*Point` made by module A
+is then the same Go type that module B consumes. Each module gets its own
+`A`/`NewA`/`AHost`.
 
 ### The Host
 
@@ -96,7 +121,8 @@ inst, err := greeter.New(myHost{})
 
 ### WASI
 
-Package `gosm/wasi` implements WASI preview1. Its methods follow the Host
+Package `gosm/wasi` implements WASI preview1 and the wasi-threads
+`thread-spawn` hook (`h.Spawn`). Its methods follow the Host
 naming convention, so one `*wasi.Host` satisfies the WASI part of any
 generated `Host`:
 
@@ -110,7 +136,6 @@ code, err := h.Run(inst.Start)
 ## Coverage
 
 gosm implements essentially all of WebAssembly 3.0:
-
 - MVP, multi-value, sign-ext and saturating conversions
 - bulk memory, reference types and typed function references
 - GC: structs, arrays, i31, casts, `br_on_cast*`, iso-recursive type
@@ -120,16 +145,21 @@ gosm implements essentially all of WebAssembly 3.0:
 - tail calls, memory64 and table64, multi-memory, extended-const
 - 128-bit SIMD and relaxed SIMD
 
-`scripts/spectest.sh` downloads the official spec suite, compiles every
-module with gosm and runs every assertion:
+It also implements the threads proposal: shared memories, atomics and
+`wait`/`notify`.
+
+`scripts/spectest.sh` downloads the official spec and threads test suites,
+then:
+1. checks that every invalid or malformed binary module is rejected,
+2. compiles all of a script's modules into one package,
+3. runs every assertion, with spec `thread` blocks on goroutines.
 
 ```
-TOTAL pass 60644 fail 0 skip 4695
+TOTAL pass 64561 fail 0 skip 1248
 ```
 
-The skips are `assert_invalid`/`assert_malformed` cases: gosm does not
-validate, so run `wasm-tools validate` first. Cross-module linking, imports
-and exports, traps and exhaustion are all exercised.
+The skips are malformed *text-format* tests, which don't apply to a
+binary-only tool.
 
 ## Real producers
 
@@ -172,21 +202,16 @@ virtual-calls        219.2      172.9    1.27x        159.9       91.9    1.74x
 
 ## Limitations
 
-- **No validation.** Input is assumed valid.
-- **GC values are per package.** Struct and array values can't cross between
-  two separately generated packages, because each has its own Go types.
-  Funcrefs, externrefs, memories, tables, globals and tags cross package
-  boundaries fine, with function types canonicalized process-wide.
-- **Tail calls.** Self tail calls become loops. Other tail calls are ordinary
-  Go calls, so very deep non-self tail recursion relies on Go's growable
-  stack (1 GB by default) rather than constant space.
-- **try_table bodies become closures**, using `defer`/`recover`. Locals they
-  capture are shared by reference, which is correct but blocks some register
-  allocation in those functions.
-- **Resource limits.** `rt.MaxMemoryPages` (default 4 GiB), `rt.MaxTableSize`,
-  `rt.MaxArrayLen` and `rt.MaxCallDepth` (60000) can be tuned.
-- **Not supported:** post-3.0 proposals (threads/atomics, stack switching,
-  custom descriptors, custom page sizes).
+- **Go's allocator and GC:** allocation-heavy code still trails V8's
+  generational nursery. That's a property of Go's runtime; `GOGC` tuning
+  helps.
+- **Separately generated packages don't share GC types.** Compile modules
+  that exchange struct or array values together. Funcrefs, externrefs,
+  memories, tables, globals and tags cross package boundaries fine.
+- **Resource limits:** `rt.MaxMemoryPages` (default 4 GiB), `rt.MaxTableSize`,
+  `rt.MaxArrayLen` and `rt.MaxCallDepth` are tunable.
+- **Not supported:** stack switching, custom descriptors and custom page
+  sizes (post-3.0 proposals).
 
 ## Layout
 
@@ -194,7 +219,8 @@ virtual-calls        219.2      172.9    1.27x        159.9       91.9    1.74x
 |---|---|
 | `cmd/gosm` | the CLI |
 | `internal/wasm` | binary decoder for the full 3.0 format |
-| `internal/compiler` | type canonicalization and layout, function codegen, module/Host/exports emission |
+| `internal/validate` | WebAssembly 3.0 + threads validator |
+| `internal/compiler` | type universe, function codegen, exceptions, tail calls, module/Host/exports emission |
 | `rt` | runtime: memories, tables, RTTs and casts, exceptions, numerics, SIMD, JS string builtins |
 | `wasi` | WASI preview1 host |
 | `internal/spectest` | spec-test harness (`gen` compiles and runs, `runner` executes scripts), plus `extra/` tests |

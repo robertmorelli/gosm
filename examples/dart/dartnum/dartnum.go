@@ -1,4 +1,6 @@
-package rt
+// Package dartnum formats numbers the way the dart2wasm glue expects
+// (Number.prototype.toString semantics), for the hand-written Dart hosts.
+package dartnum
 
 import (
 	"math"
@@ -6,8 +8,8 @@ import (
 	"strings"
 )
 
-// JSNumberToString formats f exactly like JavaScript's Number.prototype.toString().
-func JSNumberToString(f float64) string {
+// Format formats f like Number.prototype.toString().
+func Format(f float64) string {
 	switch {
 	case f != f:
 		return "NaN"
@@ -52,11 +54,11 @@ func JSNumberToString(f float64) string {
 	return sign + digits[:1] + "." + digits[1:] + "e" + es + strconv.Itoa(ev)
 }
 
-// JSNumberToStringRadix formats an integer-valued number in the given radix
+// FormatRadix formats an integer-valued number in the given radix
 // like Number.prototype.toString(radix) (integers only).
-func JSNumberToStringRadix(f float64, radix int) string {
+func FormatRadix(f float64, radix int) string {
 	if radix == 10 || f != math.Trunc(f) || math.IsInf(f, 0) {
-		return JSNumberToString(f)
+		return Format(f)
 	}
 	return strconv.FormatInt(int64(f), radix)
 }

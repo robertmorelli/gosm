@@ -7,6 +7,7 @@ import (
 	"strings"
 	"time"
 
+	"gosm/examples/dart/dartnum"
 	"gosm/rt"
 )
 
@@ -20,7 +21,7 @@ func NewDartHost() *DartHost {
 	return &DartHost{jsTag: &rt.Tag{Type: rt.FuncType([]string{"ref null extern"}, nil)}}
 }
 
-func (h *DartHost) M_dart2wasm__290(x float64) any { return rt.JSNumberToString(x) }
+func (h *DartHost) M_dart2wasm__290(x float64) any { return dartnum.Format(x) }
 func (h *DartHost) M_dart2wasm__288(x, radix int32) any {
 	return strconv.FormatInt(int64(x), int(radix))
 }
