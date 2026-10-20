@@ -385,8 +385,9 @@ func (c *compiler) writeTypes(w *strings.Builder) {
 		// constructors
 		if ti.kind == wasm.KindStruct {
 			var ps []string
+			pn := ctorParamNames(ti)
 			for i, fi := range ti.fields {
-				ps = append(ps, fmt.Sprintf("f%d %s", i, fi.storage))
+				ps = append(ps, fmt.Sprintf("%s %s", pn[i], fi.storage))
 			}
 			fmt.Fprintf(w, "// %s allocates a %s.\n", c.ctorName(ti), ti.goName)
 			fmt.Fprintf(w, "func %s(%s) *%s {\n", c.ctorName(ti), strings.Join(ps, ", "), ti.goName)
@@ -395,7 +396,7 @@ func (c *compiler) writeTypes(w *strings.Builder) {
 				fmt.Fprintf(w, "\tp.RTT = %s\n", ti.rtt)
 			}
 			for i, fi := range ti.fields {
-				fmt.Fprintf(w, "\tp.%s = f%d\n", fi.name, i)
+				fmt.Fprintf(w, "\tp.%s = %s\n", fi.name, pn[i])
 			}
 			w.WriteString("\treturn p\n}\n\n")
 			fmt.Fprintf(w, "func %s() *%s {\n", c.ctorDefaultName(ti), ti.goName)
@@ -418,12 +419,61 @@ func (c *compiler) writeTypes(w *strings.Builder) {
 }
 
 func (c *compiler) typeDesc(idx int) string {
-	g := c.m.RecGroups[c.m.Types[idx].Group]
-	s := c.subSer(g, idx)
-	if len(s) > 200 {
-		s = s[:200] + "..."
+	st := &c.m.Types[idx]
+	var b strings.Builder
+	field := func(i int, f wasm.FieldType) {
+		t := f.Type.String()
+		if f.Mutable {
+			t = "(mut " + t + ")"
+		}
+		if st.Comp.Kind == wasm.KindStruct {
+			if n, ok := c.m.Names.Fields[uint32(idx)][uint32(i)]; ok {
+				fmt.Fprintf(&b, " (field $%s %s)", n, t)
+				return
+			}
+			fmt.Fprintf(&b, " (field %s)", t)
+			return
+		}
+		b.WriteString(" " + t)
+	}
+	if st.Comp.Kind == wasm.KindStruct {
+		b.WriteString("(struct")
+	} else {
+		b.WriteString("(array")
+	}
+	for i, f := range st.Comp.Fields {
+		if b.Len() > 160 {
+			b.WriteString(" ...")
+			break
+		}
+		field(i, f)
+	}
+	b.WriteString(")")
+	s := b.String()
+	if len(st.Supers) > 0 {
+		sup := c.tinfo[c.canon[st.Supers[0]]].goName
+		s = fmt.Sprintf("(sub %s %s), a subtype of %s", sup, s, sup)
+	} else if !st.Final {
+		s = "(sub " + s + ")"
 	}
 	return s
+}
+
+func ctorParamNames(ti *typeInfo) []string {
+	used := map[string]bool{}
+	var out []string
+	for i, fi := range ti.fields {
+		n := localIdent(fi.name)
+		if reservedLocals[n] || n == "p" || slotLike.MatchString(n) {
+			n = fmt.Sprintf("f%d", i)
+		}
+		for used[n] {
+			n += "_"
+		}
+		used[n] = true
+		out = append(out, n)
+	}
+	return out
 }
 
 // --- Host interface ---

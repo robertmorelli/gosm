@@ -18,7 +18,7 @@ var (
 
 var rttChars = rt.NewRTT(rt.KArray, nil, true, "ge5e1c8e2b83b19ec39c889a5.0", nil)
 
-// Chars is the wasm array type sub final () array(mut i16).
+// Chars is the wasm array type (array (mut i16)).
 type Chars struct {
 	Elems []int16
 }
@@ -36,7 +36,7 @@ func NewChars(elems []int16) *Chars {
 
 var rttPoint = rt.NewRTT(rt.KStruct, nil, true, "gf6f9f14757066cc6653bd0c6.0", nil)
 
-// Point is the wasm struct type sub final () struct(mut i32,mut i32).
+// Point is the wasm struct type (struct (field $x (mut i32)) (field $y (mut i32))).
 type Point struct {
 	X int32
 	Y int32
@@ -45,10 +45,10 @@ type Point struct {
 func (*Point) WasmType() *rt.RTT { return rttPoint }
 
 // NewPoint allocates a Point.
-func NewPoint(f0 int32, f1 int32) *Point {
+func NewPoint(x int32, y int32) *Point {
 	p := &Point{}
-	p.X = f0
-	p.Y = f1
+	p.X = x
+	p.Y = y
 	return p
 }
 
