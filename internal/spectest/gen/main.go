@@ -18,6 +18,7 @@ import (
 	"sync"
 
 	"gosm/internal/compiler"
+	"gosm/internal/validate"
 	"gosm/internal/wasm"
 )
 
@@ -125,6 +126,28 @@ func runTest(name string) summary {
 	var mods []mod
 	seen := map[string]bool{}
 	var compileErrs []string
+	// validation: invalid and malformed binary modules must be rejected
+	var vpass, vfail int
+	var vfailures []string
+	for _, c := range s.Commands {
+		if (c.Type != "assert_invalid" && c.Type != "assert_malformed") || c.ModuleType == "text" || c.Filename == "" {
+			continue
+		}
+		wb, err := os.ReadFile(filepath.Join(src, c.Filename))
+		if err != nil {
+			continue
+		}
+		m, err := wasm.Decode(wb)
+		if err == nil {
+			err = validate.Validate(m)
+		}
+		if err != nil {
+			vpass++
+		} else {
+			vfail++
+			vfailures = append(vfailures, fmt.Sprintf("%s (%s): accepted an invalid module", c.Filename, c.Type))
+		}
+	}
 	for _, c := range s.Commands {
 		if c.Filename == "" || seen[c.Filename] {
 			continue
@@ -155,6 +178,9 @@ func runTest(name string) summary {
 			}
 		}
 		m, err := wasm.Decode(wb)
+		if err == nil {
+			err = validate.Validate(m)
+		}
 		if err != nil {
 			compileErrs = append(compileErrs, c.Filename+": "+err.Error())
 			continue
@@ -243,8 +269,8 @@ func runTest(name string) summary {
 			sum.Err += fmt.Sprintf("run: %v\n%s", err, truncate(stderr.String(), 2000))
 			return sum
 		}
-		sum.Passed, sum.Failed, sum.Skipped = res.Passed, res.Failed, res.Skipped
-		sum.Failures = append(compileErrs, res.Failures...)
+		sum.Passed, sum.Failed, sum.Skipped = res.Passed+vpass, res.Failed+vfail, res.Skipped-vpass-vfail
+		sum.Failures = append(append(compileErrs, vfailures...), res.Failures...)
 		if len(compileErrs) > 0 && sum.Err == "" {
 			sum.Err = fmt.Sprintf("%d modules failed to compile", len(compileErrs))
 		}

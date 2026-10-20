@@ -23,6 +23,7 @@ import (
 	"strings"
 
 	"gosm/internal/compiler"
+	"gosm/internal/validate"
 	"gosm/internal/wasm"
 )
 
@@ -36,6 +37,7 @@ func main() {
 	noStrConst := flag.Bool("no-string-constants", false, "disable imported string constants")
 	noBuiltins := flag.Bool("no-builtins", false, "do not implement wasm:js-string / text-encoder / text-decoder builtins")
 	hostType := flag.String("host-type", "", "concrete Go host type defined in the package (e.g. \"*Imports\"); host calls become direct and inlinable")
+	noValidate := flag.Bool("no-validate", false, "skip validation of the input module(s)")
 	noFormat := flag.Bool("no-format", false, "do not gofmt the output")
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "usage: gosm [flags] module.wasm\n")
@@ -56,6 +58,11 @@ func main() {
 		m, err := wasm.Decode(b)
 		if err != nil {
 			fatal(fmt.Errorf("%s: %v", path, err))
+		}
+		if !*noValidate {
+			if err := validate.Validate(m); err != nil {
+				fatal(fmt.Errorf("%s: invalid module: %v", path, err))
+			}
 		}
 		srcs = append(srcs, compiler.Source{Name: strings.TrimSuffix(filepath.Base(path), filepath.Ext(path)), Module: m})
 	}

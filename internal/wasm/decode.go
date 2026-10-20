@@ -27,10 +27,21 @@ func Decode(b []byte) (m *Module, err error) {
 	r.pos = 8
 	m = &Module{}
 	var funcDecls []uint32
+	lastRank := 0
 	for !r.eof() {
 		id := r.byte()
 		size := r.u32()
 		body := r.bytes(int(size))
+		if id != 0 {
+			rank, ok := sectionRank[id]
+			if !ok {
+				r.fail("malformed section id")
+			}
+			if rank <= lastRank {
+				r.fail("unexpected content after last section")
+			}
+			lastRank = rank
+		}
 		sr := &reader{b: body}
 		base := r.pos - int(size)
 		switch id {
@@ -189,6 +200,11 @@ func Decode(b []byte) (m *Module, err error) {
 	return m, nil
 }
 
+// sectionRank gives the required relative order of non-custom sections.
+var sectionRank = map[byte]int{
+	1: 1, 2: 2, 3: 3, 4: 4, 5: 5, 13: 6, 6: 7, 7: 8, 8: 9, 9: 10, 12: 11, 10: 12, 11: 13,
+}
+
 func decodeTypes(r *reader, m *Module) {
 	n := r.u32()
 	for i := uint32(0); i < n; i++ {
@@ -332,6 +348,9 @@ func readTableType(r *reader) TableType {
 		r.fail("malformed reference type")
 	}
 	t.Limits = readLimits(r)
+	if t.Limits.Shared {
+		r.fail("malformed limits flags")
+	}
 	return t
 }
 
