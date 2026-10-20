@@ -86,6 +86,9 @@ func main() {
 		os.Stdout.Write(src)
 		return
 	}
+	if base := strings.TrimSuffix(filepath.Base(*out), ".go"); strings.HasSuffix(base, "_wasm") || strings.HasSuffix(base, "_js") {
+		fmt.Fprintf(os.Stderr, "gosm: warning: %s ends in a GOOS/GOARCH suffix and will only build for that target\n", *out)
+	}
 	if err := os.WriteFile(*out, src, 0o644); err != nil {
 		fatal(err)
 	}

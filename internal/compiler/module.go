@@ -116,7 +116,7 @@ func (c *compiler) useImport(p string) { c.imports[p] = true }
 
 // --- naming ---
 
-var slotLike = regexp.MustCompile(`^(s|c|x|ret|p|l|e|r|top)\d*(_\d+)?$`)
+var slotLike = regexp.MustCompile(`^((s|c|x|ret|p|l|tc)\d+(_\d+)?|top)$`)
 
 func (c *compiler) assignNames() {
 	m := c.m
@@ -217,9 +217,21 @@ func (c *compiler) assignNames() {
 		c.exportNames[i] = c.memberIdent(exportIdent(e.Name))
 	}
 	c.funcNames = make([]string, m.NumFuncs())
+	exportName := map[uint32]string{}
+	for _, e := range m.Exports {
+		if e.Kind == wasm.ExtFunc {
+			if _, ok := exportName[e.Index]; !ok {
+				exportName[e.Index] = e.Name
+			}
+		}
+	}
 	for i := range c.funcNames {
 		base := fmt.Sprintf("f%d", i)
-		if n, ok := m.Names.Funcs[uint32(i)]; ok && n != "" {
+		n, ok := m.Names.Funcs[uint32(i)]
+		if !ok || n == "" {
+			n, ok = exportName[uint32(i)]
+		}
+		if ok && n != "" {
 			base = localIdent(n)
 			if slotLike.MatchString(base) || base == "new" {
 				base = "f_" + base

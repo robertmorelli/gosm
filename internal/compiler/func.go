@@ -106,6 +106,7 @@ type fn struct {
 
 	needDelegateDefer bool
 	ntail             int
+	dropped           map[string]bool
 }
 
 func (f *fn) emit(format string, args ...any) {
@@ -978,6 +979,8 @@ func (f *fn) finish(header string, body string) string {
 	if f.needDelegateDefer {
 		b.WriteString("defer rt.UndelegateFrame()\n")
 	}
+	body = f.peephole(body)
+	f.dropUnmentioned(body)
 	// group declarations by type for readability
 	byType := map[string][]string{}
 	var types []string
@@ -989,12 +992,20 @@ func (f *fn) finish(header string, body string) string {
 		byType[t] = append(byType[t], n)
 	}
 	for _, t := range types {
-		fmt.Fprintf(&b, "var %s %s\n", strings.Join(byType[t], ", "), t)
+		var names []string
+		for _, n := range byType[t] {
+			if !f.dropped[n] {
+				names = append(names, n)
+			}
+		}
+		if len(names) > 0 {
+			fmt.Fprintf(&b, "var %s %s\n", strings.Join(names, ", "), t)
+		}
 	}
 	scanReads(body, f.read)
 	var unused []string
 	for _, n := range f.decls {
-		if !f.read[n] {
+		if !f.read[n] && !f.dropped[n] {
 			unused = append(unused, n)
 		}
 	}
@@ -1048,4 +1059,62 @@ func scanReads(body string, read map[string]bool) {
 			i++
 		}
 	}
+}
+
+var identRe = regexp.MustCompile(`[A-Za-z_][A-Za-z0-9_]*`)
+
+// mentions counts identifier occurrences (not after '.') in code.
+func mentions(code string) map[string]int {
+	n := map[string]int{}
+	for _, loc := range identRe.FindAllStringIndex(code, -1) {
+		if loc[0] > 0 && code[loc[0]-1] == '.' {
+			continue
+		}
+		n[code[loc[0]:loc[1]]]++
+	}
+	return n
+}
+
+var slotAssign = regexp.MustCompile(`^(s\d+(?:_\d+)?) = (.*)$`)
+var useLine = regexp.MustCompile(`^(return |[A-Za-z_][A-Za-z0-9_]* = )(s\d+(?:_\d+)?)$`)
+
+// peephole folds "sN = expr" followed by "return sN" / "x = sN" into a
+// single statement when sN is used nowhere else.
+func (f *fn) peephole(body string) string {
+	lines := strings.Split(body, "\n")
+	cnt := mentions(body)
+	out := make([]string, 0, len(lines))
+	for i := 0; i < len(lines); i++ {
+		if i+1 < len(lines) {
+			if m := slotAssign.FindStringSubmatch(lines[i]); m != nil {
+				if u := useLine.FindStringSubmatch(lines[i+1]); u != nil && u[2] == m[1] && cnt[m[1]] == 2 {
+					out = append(out, u[1]+m[2])
+					i++
+					continue
+				}
+			}
+		}
+		out = append(out, lines[i])
+	}
+	return strings.Join(out, "\n")
+}
+
+// dropUnmentioned marks declared variables that no longer appear at all.
+func (f *fn) dropUnmentioned(body string) {
+	cnt := mentions(body)
+	f.dropped = map[string]bool{}
+	for _, n := range f.decls {
+		if cnt[n] == 0 && !f.isLocal(n) {
+			f.dropped[n] = true
+		}
+	}
+}
+
+func (f *fn) isLocal(n string) bool {
+	for _, l := range f.lname {
+		if l == n {
+			return true
+		}
+	}
+	return false
 }
