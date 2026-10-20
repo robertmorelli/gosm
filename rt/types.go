@@ -125,23 +125,53 @@ type Func struct {
 	Type *RTT
 	Fn   any
 	Name string
+	// Views adapts Fn to supertypes whose Go signature differs (because a
+	// subtype refines parameter or result reference types).
+	Views []FuncView
 }
 
-// FnOf checks a table entry for call_indirect and returns its Go function.
-func FnOf(f *Func, t *RTT) any {
-	if f == nil {
-		panic(ErrUninitElem)
+// FuncView is Fn adapted to the signature of a supertype.
+type FuncView struct {
+	Type *RTT
+	Fn   any
+}
+
+// As returns the Go function to call f through static type t.
+func (f *Func) As(t *RTT) any {
+	if f.Type == t || f.Views == nil {
+		return f.Fn
 	}
-	if f.Type != t && !f.Type.SubOf(t) {
-		panic(ErrIndirectType)
+	for _, v := range f.Views {
+		if v.Type == t {
+			return v.Fn
+		}
 	}
 	return f.Fn
 }
 
-// FnOfRef returns the Go function of a non-null function reference.
-func FnOfRef(f *Func) any {
+// FnOf checks a table entry for call_indirect through type t and returns
+// its Go function.
+func FnOf(f *Func, t *RTT) any {
+	if f == nil {
+		panic(ErrUninitElem)
+	}
+	if f.Type != t {
+		if !f.Type.SubOf(t) {
+			panic(ErrIndirectType)
+		}
+		return f.As(t)
+	}
+	return f.Fn
+}
+
+// FnOfRef returns the Go function of a non-null function reference called
+// through type t.
+func FnOfRef(f *Func, t *RTT) any {
 	if f == nil {
 		panic(ErrNullFunc)
+	}
+	if f.Type != t {
+		return f.As(t)
 	}
 	return f.Fn
 }

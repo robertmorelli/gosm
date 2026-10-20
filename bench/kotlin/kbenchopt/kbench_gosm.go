@@ -3102,7 +3102,7 @@ func (m *Instance) f4(d int, p0 *Struct2, p1 *Struct2) int32 {
 					}
 					s4_5 = p0.F0
 					s4_6 = s4_5.F1
-					s2_4 = rt.FnOfRef(s4_6).(func(int, *Struct2, *Struct2) int32)(d+1, p0, p1)
+					s2_4 = rt.FnOfRef(s4_6, rttFunc125).(func(int, *Struct2, *Struct2) int32)(d+1, p0, p1)
 				B15:
 				B13:
 					if s2_4 == 0 {
@@ -3165,7 +3165,7 @@ L1:
 			} else {
 				s5 = l1.F0
 				s5_1 = s5.F2
-				s4 = rt.FnOfRef(s5_1).(func(int, *Struct2) int32)(d+1, l1)
+				s4 = rt.FnOfRef(s5_1, rttFunc122).(func(int, *Struct2) int32)(d+1, l1)
 				s0_3 = NewStruct121(rt.ViewAs[Struct5](m.g4), m.g5, m.g3, int32(0), s4)
 			}
 			l2 = s0_3
@@ -3414,7 +3414,7 @@ func (m *Instance) f12(d int, p0 *Struct2, p1 *Struct2) int32 {
 		}
 		s2 = p0.F0
 		s2_1 = s2.F1
-		s0 = rt.FnOfRef(s2_1).(func(int, *Struct2, *Struct2) int32)(d+1, p0, l3)
+		s0 = rt.FnOfRef(s2_1, rttFunc125).(func(int, *Struct2, *Struct2) int32)(d+1, p0, l3)
 	B5:
 	} else {
 		s0 = int32(0)
@@ -3430,7 +3430,7 @@ func (m *Instance) f12(d int, p0 *Struct2, p1 *Struct2) int32 {
 		}
 		s2 = p0.F0
 		s2_1 = s2.F1
-		s0 = rt.FnOfRef(s2_1).(func(int, *Struct2, *Struct2) int32)(d+1, p0, p1)
+		s0 = rt.FnOfRef(s2_1, rttFunc125).(func(int, *Struct2, *Struct2) int32)(d+1, p0, p1)
 	B7:
 	} else {
 		s0 = int32(0)
@@ -3457,7 +3457,7 @@ func (m *Instance) f13(d int, p0 *Struct2) int32 {
 	} else {
 		s5 = p0.F0
 		s5_1 = s5.F2
-		s4 = rt.FnOfRef(s5_1).(func(int, *Struct2) int32)(d+1, p0)
+		s4 = rt.FnOfRef(s5_1, rttFunc122).(func(int, *Struct2) int32)(d+1, p0)
 		s0_1 = NewStruct121(rt.ViewAs[Struct5](m.g4), m.g5, m.g3, int32(0), s4)
 	}
 	l1 = s0_1
@@ -3472,7 +3472,7 @@ func (m *Instance) f13(d int, p0 *Struct2) int32 {
 	} else {
 		s6 = p0.F0
 		s6_1 = s6.F2
-		s5_2 = rt.FnOfRef(s6_1).(func(int, *Struct2) int32)(d+1, p0)
+		s5_2 = rt.FnOfRef(s6_1, rttFunc122).(func(int, *Struct2) int32)(d+1, p0)
 		s1_1 = NewStruct121(rt.ViewAs[Struct5](m.g4), m.g5, m.g3, int32(0), s5_2)
 	}
 	l1 = s1_1
@@ -3723,7 +3723,7 @@ L2:
 			} else {
 				s1_4 = l7.F0
 				s1_5 = s1_4.F2
-				s0 = rt.FnOfRef(s1_5).(func(int, *Struct2) int32)(d+1, l7)
+				s0 = rt.FnOfRef(s1_5, rttFunc122).(func(int, *Struct2) int32)(d+1, l7)
 				s1 = p0.F10
 				s0 = int32(uint32((s0 * int32(-1640531527))) >> (uint32(s1) & 31))
 			}
@@ -3816,7 +3816,7 @@ func (m *Instance) f21(d int, p0 *Struct123, p1 *Struct2) int32 {
 	} else {
 		s1 = p1.F0
 		s1_1 = s1.F2
-		s0 = rt.FnOfRef(s1_1).(func(int, *Struct2) int32)(d+1, p1)
+		s0 = rt.FnOfRef(s1_1, rttFunc122).(func(int, *Struct2) int32)(d+1, p1)
 		s1_2 = p0.F10
 		s0 = int32(uint32((s0 * int32(-1640531527))) >> (uint32(s1_2) & 31))
 	}
@@ -3855,7 +3855,7 @@ L2:
 		} else {
 			s2 = l5.F0
 			s2_1 = s2.F1
-			s0 = rt.FnOfRef(s2_1).(func(int, *Struct2, *Struct2) int32)(d+1, l5, p1)
+			s0 = rt.FnOfRef(s2_1, rttFunc125).(func(int, *Struct2, *Struct2) int32)(d+1, l5, p1)
 		}
 		if s0 != 0 {
 			return l3
@@ -5078,7 +5078,7 @@ func (m *Instance) f63(d int, p0 *Struct2) *Struct108 {
 	} else {
 		s1 = p0.F0
 		s1_1 = s1.F3
-		s0 = rt.FnOfRef(s1_1).(func(int, *Struct2) *Struct108)(d+1, p0)
+		s0 = rt.FnOfRef(s1_1, rttFunc110).(func(int, *Struct2) *Struct108)(d+1, p0)
 	}
 	l1 = s0
 	if l1 == nil {
@@ -6214,7 +6214,7 @@ func (m *Instance) f94(d int, p0 *Struct2, p1 *Struct2, p2 int32) {
 		panic(rt.ErrCast)
 	}
 	s1_1 = rt.As[Struct164](s1).F1
-	s0 = rt.FnOfRef(s1_1).(func(int, *Struct2) *Struct108)(d+1, p1)
+	s0 = rt.FnOfRef(s1_1, rttFunc110).(func(int, *Struct2) *Struct108)(d+1, p1)
 	l3 = s0
 	if l3 == nil {
 		s1 = m.f98(d+1, p1, int64(6362707103299592704))
@@ -6222,7 +6222,7 @@ func (m *Instance) f94(d int, p0 *Struct2, p1 *Struct2, p2 int32) {
 			panic(rt.ErrCast)
 		}
 		s1_1 = rt.As[Struct164](s1).F0
-		s0 = rt.FnOfRef(s1_1).(func(int, *Struct2) *Struct108)(d+1, p1)
+		s0 = rt.FnOfRef(s1_1, rttFunc110).(func(int, *Struct2) *Struct108)(d+1, p1)
 		l3 = s0
 	}
 	if l3 == nil {
@@ -6255,7 +6255,7 @@ func (m *Instance) f94(d int, p0 *Struct2, p1 *Struct2, p2 int32) {
 			panic(rt.ErrCast)
 		}
 		s1_1 = rt.As[Struct164](s1).F1
-		s0 = rt.FnOfRef(s1_1).(func(int, *Struct2) *Struct108)(d+1, rt.ViewAs[Struct2](l5))
+		s0 = rt.FnOfRef(s1_1, rttFunc110).(func(int, *Struct2) *Struct108)(d+1, rt.ViewAs[Struct2](l5))
 		l3 = s0
 		if l3 == nil {
 			s1 = m.f98(d+1, rt.ViewAs[Struct2](l5), int64(6362707103299592704))
@@ -6263,7 +6263,7 @@ func (m *Instance) f94(d int, p0 *Struct2, p1 *Struct2, p2 int32) {
 				panic(rt.ErrCast)
 			}
 			s1_1 = rt.As[Struct164](s1).F0
-			s0 = rt.FnOfRef(s1_1).(func(int, *Struct2) *Struct108)(d+1, rt.ViewAs[Struct2](l5))
+			s0 = rt.FnOfRef(s1_1, rttFunc110).(func(int, *Struct2) *Struct108)(d+1, rt.ViewAs[Struct2](l5))
 			l3 = s0
 		}
 		if l3 == nil {
@@ -6276,7 +6276,7 @@ func (m *Instance) f94(d int, p0 *Struct2, p1 *Struct2, p2 int32) {
 			panic(rt.ErrCast)
 		}
 		s4_2 = rt.As[Struct164](s4_1).F2
-		s2 = rt.FnOfRef(s4_2).(func(int, *Struct2, *Struct2) int32)(d+1, p1, rt.ViewAs[Struct2](s3))
+		s2 = rt.FnOfRef(s4_2, rttFunc125).(func(int, *Struct2, *Struct2) int32)(d+1, p1, rt.ViewAs[Struct2](s3))
 		if s2 != 0 {
 			s0_3 = p2
 		} else {
@@ -7753,7 +7753,7 @@ func (m *Instance) f142(d int, p0 *Struct108, p1 *Struct127) {
 	s0_1 = m.f133(d+1, s0)
 	l10 = s0_1
 	s0_2 = p1.F4
-	l25 = rt.FnOfRef(s0_2).(func(int) *Struct2)(d + 1)
+	l25 = rt.FnOfRef(s0_2, rttFunc13).(func(int) *Struct2)(d + 1)
 	s1 = m.f149(d+1, int32(298))
 	s0_4 = m.f120(d+1, p0, rt.ViewAs[Struct2](s1))
 	s1_1 = m.f134(d + 1)
@@ -8768,7 +8768,7 @@ L8:
 					panic(rt.ErrCast)
 				}
 				s2_1 = rt.As[Struct141](s2).F0
-				s1_3 = rt.FnOfRef(s2_1).(func(int, *Struct2) float64)(d+1, l5)
+				s1_3 = rt.FnOfRef(s2_1, rttFunc18).(func(int, *Struct2) float64)(d+1, l5)
 				l3 = float64(l3 + s1_3)
 				continue L9
 			}
@@ -9095,7 +9095,7 @@ L1:
 				} else {
 					s3 = l2.F0
 					s3_1 = s3.F1
-					s1_2 = rt.FnOfRef(s3_1).(func(int, *Struct2, *Struct2) int32)(d+1, l2, rt.ViewAs[Struct2](l8))
+					s1_2 = rt.FnOfRef(s3_1, rttFunc125).(func(int, *Struct2, *Struct2) int32)(d+1, l2, rt.ViewAs[Struct2](l8))
 				}
 				if s1_2 != 0 {
 					goto B9

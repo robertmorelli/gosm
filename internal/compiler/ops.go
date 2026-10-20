@@ -483,7 +483,7 @@ func (f *fn) callRef(typeIdx uint32, tail bool) {
 	ft := &c.m.Types[typeIdx].Comp.Func
 	r := f.pop()
 	args := f.args(ft)
-	callee := fmt.Sprintf("rt.FnOfRef(%s).(%s)", f.ex(r), f.goFuncType(ft))
+	callee := fmt.Sprintf("rt.FnOfRef(%s, %s).(%s)", f.ex(r), c.info(typeIdx).rtt, f.goFuncType(ft))
 	f.emitCall(callee, ft, args, tail)
 }
 

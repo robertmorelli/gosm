@@ -11371,7 +11371,7 @@ func (m *Instance) kotlinCollectionsJoinTo(d int, this *KotlinAny, buffer *Kotli
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable11](s2_2).Append_2
-	s0 = rt.FnOfRef(s2_3).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, prefix)
+	s0 = rt.FnOfRef(s2_3, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, prefix)
 	count = int32(0)
 	s1 = this.Vtable
 	s1_1 = s1.SpecialITable
@@ -11380,7 +11380,7 @@ func (m *Instance) kotlinCollectionsJoinTo(d int, this *KotlinAny, buffer *Kotli
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable4](s1_2).Iterator
-	s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, this)
+	s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this)
 	iterator = s0
 L1:
 	for {
@@ -11391,7 +11391,7 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_1 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, iterator)
+		s0_1 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
 		if s0_1 == 0 {
 			goto B2
 		}
@@ -11402,7 +11402,7 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
 		element = s0
 		tmp0 = count
 		this_ = tmp0
@@ -11418,7 +11418,7 @@ L1:
 				panic(rt.ErrCast)
 			}
 			s2_3 = rt.As[ClassITable11](s2_2).Append_2
-			s0 = rt.FnOfRef(s2_3).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, separator)
+			s0 = rt.FnOfRef(s2_3, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, separator)
 		}
 		if limit < int32(0) {
 			s0_1 = int32(1)
@@ -11447,7 +11447,7 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s2_3 = rt.As[ClassITable11](s2_2).Append_2
-		s0 = rt.FnOfRef(s2_3).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, truncated)
+		s0 = rt.FnOfRef(s2_3, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, truncated)
 	}
 	s2 = buffer.Vtable
 	s2_1 = s2.SpecialITable
@@ -11456,7 +11456,7 @@ L1:
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable11](s2_2).Append_2
-	s0 = rt.FnOfRef(s2_3).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, postfix)
+	s0 = rt.FnOfRef(s2_3, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, postfix)
 	return buffer
 }
 
@@ -11486,7 +11486,7 @@ func (m *Instance) kotlinRangesContains(d int, this *KotlinAny, value int64) int
 			panic(rt.ErrCast)
 		}
 		s2_1 = rt.As[ClassITable12](s2).Contains
-		s0_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, this, rt.ViewAs[KotlinAny](s1))
+		s0_1 = rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, this, rt.ViewAs[KotlinAny](s1))
 	} else {
 		s0_1 = int32(0)
 	}
@@ -12207,7 +12207,7 @@ B2:
 	} else {
 		s5 = tmp0SafeReceiver.Vtable
 		s5_1 = s5.HashCode
-		s4 = rt.FnOfRef(s5_1).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+		s4 = rt.FnOfRef(s5_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
 		s0_6 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	}
 	tmp1ElvisLhs = s0_6
@@ -12236,7 +12236,7 @@ B3:
 	} else {
 		s6 = tmp0SafeReceiver_.Vtable
 		s6_1 = s6.HashCode
-		s5_2 = rt.FnOfRef(s6_1).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver_)
+		s5_2 = rt.FnOfRef(s6_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver_)
 		s1_5 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5_2)
 	}
 	tmp1ElvisLhs_ = s1_5
@@ -12446,7 +12446,7 @@ func (m *Instance) kotlinCollectionsEntryRefEquals(d int, this *KotlinAny, other
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable8](s1_2).GetKey
-		s0_4 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp)
+		s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp)
 		s1_4 = m.kotlinCollectionsEntryRefGetKey(d+1, rt.ViewAs[KotlinAny](tmp0This))
 		s0 = m.kotlinWasmInternalNullableEquals(d+1, s0_4, s1_4)
 	} else {
@@ -12461,7 +12461,7 @@ func (m *Instance) kotlinCollectionsEntryRefEquals(d int, this *KotlinAny, other
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable8](s1_2).GetValue
-		s0_4 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
+		s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
 		s1_4 = m.kotlinCollectionsEntryRefGetValue(d+1, rt.ViewAs[KotlinAny](tmp0This))
 		s0 = m.kotlinWasmInternalNullableEquals(d+1, s0_4, s1_4)
 	} else {
@@ -12492,7 +12492,7 @@ func (m *Instance) kotlinCollectionsEntryRefHashCode(d int, this *KotlinAny) int
 	} else {
 		s5 = tmp0SafeReceiver.Vtable
 		s5_1 = s5.HashCode
-		s4 = rt.FnOfRef(s5_1).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+		s4 = rt.FnOfRef(s5_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
 		s0_1 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	}
 	tmp1ElvisLhs = s0_1
@@ -12512,7 +12512,7 @@ B1:
 	} else {
 		s6 = tmp0SafeReceiver_.Vtable
 		s6_1 = s6.HashCode
-		s5_2 = rt.FnOfRef(s6_1).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver_)
+		s5_2 = rt.FnOfRef(s6_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver_)
 		s1_1 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5_2)
 	}
 	tmp1ElvisLhs_ = s1_1
@@ -12655,7 +12655,7 @@ func (m *Instance) kotlinCollectionsHashMapInit3(d int, this *KotlinCollectionsH
 		message = s1_1
 		s3 = message.Vtable
 		s3_1 = s3.ToString
-		s2 = rt.FnOfRef(s3_1).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		s2 = rt.FnOfRef(s3_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
 		s1_2 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s2)
 		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s1_2)}})
 	}
@@ -13066,7 +13066,7 @@ func (m *Instance) kotlinCollectionsHashMapAllocateValuesArray(d int, this *Kotl
 		message = s0_3
 		s2 = message.Vtable
 		s2_1 = s2.ToString
-		s1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		s1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
 		s0_4 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
 		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_4)}})
 	}
@@ -13093,7 +13093,7 @@ func (m *Instance) kotlinCollectionsHashMapHash(d int, this *KotlinCollectionsHa
 	} else {
 		s1 = key.Vtable
 		s1_1 = s1.HashCode
-		s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) int32)(d+1, key)
+		s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, key)
 		s1_2 = this.HashShift
 		s0 = int32(uint32((s0 * int32(-1640531527))) >> (uint32(s1_2) & 31))
 	}
@@ -13450,7 +13450,7 @@ func (m *Instance) kotlinCollectionsHashMapContainsEntry(d int, this *KotlinColl
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable8](s2_2).GetKey
-	s1 = rt.FnOfRef(s2_3).(func(int, *KotlinAny) *KotlinAny)(d+1, entry)
+	s1 = rt.FnOfRef(s2_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, entry)
 	s0 = m.kotlinCollectionsHashMapFindKey(d+1, this, s1)
 	index = s0
 	if index < int32(0) {
@@ -13472,7 +13472,7 @@ func (m *Instance) kotlinCollectionsHashMapContainsEntry(d int, this *KotlinColl
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable8](s2_2).GetValue
-	s1 = rt.FnOfRef(s2_3).(func(int, *KotlinAny) *KotlinAny)(d+1, entry)
+	s1 = rt.FnOfRef(s2_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, entry)
 	s0 = m.kotlinWasmInternalNullableEquals(d+1, s0_2, s1)
 	return s0
 }
@@ -13495,7 +13495,7 @@ func (m *Instance) kotlinCollectionsHashMapContentEquals(d int, this *KotlinColl
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable9](s2_2).GetSize
-	s1 = rt.FnOfRef(s2_3).(func(int, *KotlinAny) int32)(d+1, other)
+	s1 = rt.FnOfRef(s2_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, other)
 	s0 = rt.B2I(s0 == s1)
 	if s0 != 0 {
 		s2 = other.Vtable
@@ -13505,7 +13505,7 @@ func (m *Instance) kotlinCollectionsHashMapContentEquals(d int, this *KotlinColl
 			panic(rt.ErrCast)
 		}
 		s2_3 = rt.As[ClassITable9](s2_2).GetEntries
-		s1_1 = rt.FnOfRef(s2_3).(func(int, *KotlinAny) *KotlinAny)(d+1, other)
+		s1_1 = rt.FnOfRef(s2_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, other)
 		s0 = m.kotlinCollectionsHashMapContainsAllEntries(d+1, this, s1_1)
 	} else {
 		s0 = int32(0)
@@ -13538,7 +13538,7 @@ func (m *Instance) kotlinCollectionsHashMapContainsAllEntries(d int, this *Kotli
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).Iterator
-	s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, m_)
+	s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, m_)
 	it = s0
 L1:
 	for {
@@ -13549,7 +13549,7 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_1 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, it)
+		s0_1 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, it)
 		if s0_1 == 0 {
 			goto B2
 		}
@@ -13560,7 +13560,7 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, it)
+		s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, it)
 		entry = s0
 		c0 = func() (c int) {
 			defer func() {
@@ -13807,7 +13807,7 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContains2(d int, this *Ko
 	}
 	s2_5 = rt.ViewAs[ClassVTable15](rt.ViewAs[KotlinCollectionsHashMapEntrySetBase](this).Vtable)
 	s2_6 = s2_5.Contains_2
-	s0 = rt.FnOfRef(s2_6).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, s0_1, s1_4)
+	s0 = rt.FnOfRef(s2_6, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, s0_1, s1_4)
 	return s0
 }
 
@@ -14001,7 +14001,7 @@ func (m *Instance) kotlinTextStringBuilderAppend3(d int, this *KotlinAny, value 
 		panic(rt.ErrCast)
 	}
 	s4_3 = rt.As[ClassITable](s4_2).GetLength
-	s3 = rt.FnOfRef(s4_3).(func(int, *KotlinAny) int32)(d+1, toAppend)
+	s3 = rt.FnOfRef(s4_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, toAppend)
 	return m.kotlinTextStringBuilderAppend5(d+1, rt.ViewAs[KotlinAny](tmp0This), toAppend, int32(0), s3)
 }
 
@@ -14193,7 +14193,7 @@ func (m *Instance) kotlinTextStringBuilderAppendRange(d int, this *KotlinTextStr
 		panic(rt.ErrCast)
 	}
 	s4_3 = rt.As[ClassITable](s4_2).GetLength
-	s3 = rt.FnOfRef(s4_3).(func(int, *KotlinAny) int32)(d+1, value)
+	s3 = rt.FnOfRef(s4_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, value)
 	m.kotlinCollectionsCompanionCheckBoundsIndexes(d+1, s0, startIndex, endIndex, s3)
 	extraLength = (endIndex - startIndex)
 	m.kotlinTextStringBuilderEnsureExtraCapacity(d+1, this, extraLength)
@@ -14255,7 +14255,7 @@ L5:
 			panic(rt.ErrCast)
 		}
 		s4_3 = rt.As[ClassITable](s4_2).Get
-		s2_1 = rt.FnOfRef(s4_3).(func(int, *KotlinAny, int32) int32)(d+1, s2_2, unary_)
+		s2_1 = rt.FnOfRef(s4_3, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, s2_2, unary_)
 		m.kotlinCharArraySet(d+1, s0_2, s1, s2_1)
 		continue L5
 	B6:
@@ -14356,7 +14356,7 @@ B2:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable3](s1_2).IsEmpty
-		s0_3 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, tmp)
+		s0_3 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp)
 	} else {
 		s0_3 = int32(0)
 	}
@@ -14371,7 +14371,7 @@ B2:
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable4](s1_2).Iterator
-	s0_4 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
+	s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
 	iterator = s0_4
 L6:
 	for {
@@ -14382,7 +14382,7 @@ L6:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_3 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, iterator)
+		s0_3 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
 		if s0_3 == 0 {
 			goto B7
 		}
@@ -14393,7 +14393,7 @@ L6:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0_4 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
 		element_ = s0_4
 		tmp0_ = element_
 		it = tmp0_
@@ -14453,7 +14453,7 @@ B2:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable3](s1_2).IsEmpty
-		s0_3 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, tmp)
+		s0_3 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp)
 	} else {
 		s0_3 = int32(0)
 	}
@@ -14468,7 +14468,7 @@ B2:
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable4](s1_2).Iterator
-	s0_4 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
+	s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
 	iterator = s0_4
 L6:
 	for {
@@ -14479,7 +14479,7 @@ L6:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_3 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, iterator)
+		s0_3 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
 		if s0_3 == 0 {
 			goto B7
 		}
@@ -14490,13 +14490,13 @@ L6:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0_4 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
 		element = s0_4
 		tmp0_ = element
 		it = tmp0_
 		s2 = rt.ViewAs[ClassVTable8](tmp0This.Vtable)
 		s2_1 = s2.Contains
-		s0_3 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), it)
+		s0_3 = rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), it)
 		goto B8
 	B8:
 		if s0_3 == 0 {
@@ -14527,7 +14527,7 @@ func (m *Instance) kotlinCollectionsAbstractCollectionIsEmpty(d int, this *Kotli
 	tmp0This = rt.ViewAs[KotlinCollectionsAbstractCollection](this)
 	s1 = rt.ViewAs[ClassVTable8](tmp0This.Vtable)
 	s1_1 = s1.GetSize
-	s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 	return rt.B2I(s0 == int32(0))
 }
 
@@ -14576,7 +14576,7 @@ func (m *Instance) kotlinCollectionsFunction1Bound1AInvoke(d int, this *KotlinAn
 	tmp0This = rt.ViewAs[KotlinCollectionsFunction1Bound1A](this)
 	s0 = tmp0This.F0
 	s2 = tmp0This.Func
-	s0 = rt.FnOfRef(s2).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, p0_)
+	s0 = rt.FnOfRef(s2, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, p0_)
 	return s0
 }
 
@@ -14633,7 +14633,7 @@ func (m *Instance) kotlinCollectionsIteratorImplHasNext(d int, this *KotlinAny) 
 	tmp = tmp0This.This
 	s2 = rt.ViewAs[ClassVTable22](tmp.Vtable)
 	s2_1 = s2.GetSize
-	s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
+	s1_1 = rt.FnOfRef(s2_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
 	s0 = rt.B2I(s0 < s1_1)
 	return s0
 }
@@ -14655,7 +14655,7 @@ func (m *Instance) kotlinCollectionsIteratorImplNext(d int, this *KotlinAny) *Ko
 	tmp0This = rt.ViewAs[KotlinCollectionsIteratorImpl](this)
 	s1 = rt.ViewAs[ClassVTable21](tmp0This.Vtable)
 	s1_1 = s1.HasNext
-	s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 	if s0 == 0 {
 		s0_1 = m.kotlinNoSuchElementExceptionInit(d+1, (*KotlinNoSuchElementException)(nil))
 		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
@@ -14673,7 +14673,7 @@ B2:
 	s1_3.Index = s2
 	s2_1 = rt.ViewAs[ClassVTable22](tmp.Vtable)
 	s2_2 = s2_1.Get
-	return rt.FnOfRef(s2_2).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](s0_2), unary)
+	return rt.FnOfRef(s2_2, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](s0_2), unary)
 }
 
 func (m *Instance) kotlinCollectionsCompanionInit2(d int, this *KotlinCollectionsCompanion2) *KotlinCollectionsCompanion2 {
@@ -14868,7 +14868,7 @@ func (m *Instance) kotlinCollectionsCompanionOrderedHashCode(d int, this *Kotlin
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).Iterator
-	s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
+	s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
 	iterator = s0
 L1:
 	for {
@@ -14879,7 +14879,7 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_1 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, iterator)
+		s0_1 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
 		if s0_1 == 0 {
 			goto B2
 		}
@@ -14890,7 +14890,7 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
 		e_ = s0
 		tmp0SafeReceiver = e_
 		s0_1 = (int32(31) * hashCode)
@@ -14899,7 +14899,7 @@ L1:
 		} else {
 			s6 = tmp0SafeReceiver.Vtable
 			s6_1 = s6.HashCode
-			s5 = rt.FnOfRef(s6_1).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+			s5 = rt.FnOfRef(s6_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
 			s1_4 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 		}
 		tmp1ElvisLhs = s1_4
@@ -14934,7 +14934,7 @@ func (m *Instance) kotlinCollectionsCompanionOrderedEquals(d int, this *KotlinCo
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).GetSize
-	s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, c_)
+	s0 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, c_)
 	s2 = other.Vtable
 	s2_1 = s2.SpecialITable
 	s2_2 = s2_1.F0
@@ -14942,7 +14942,7 @@ func (m *Instance) kotlinCollectionsCompanionOrderedEquals(d int, this *KotlinCo
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable3](s2_2).GetSize
-	s1_4 = rt.FnOfRef(s2_3).(func(int, *KotlinAny) int32)(d+1, other)
+	s1_4 = rt.FnOfRef(s2_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, other)
 	s0 = rt.B2I(s0 == s1_4)
 	if s0 == 0 {
 		return int32(0)
@@ -14954,7 +14954,7 @@ func (m *Instance) kotlinCollectionsCompanionOrderedEquals(d int, this *KotlinCo
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).Iterator
-	s0_1 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, other)
+	s0_1 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, other)
 	otherIterator = s0_1
 	s1 = c_.Vtable
 	s1_1 = s1.SpecialITable
@@ -14963,7 +14963,7 @@ func (m *Instance) kotlinCollectionsCompanionOrderedEquals(d int, this *KotlinCo
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).Iterator
-	s0_1 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
+	s0_1 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
 	iterator = s0_1
 L2:
 	for {
@@ -14974,7 +14974,7 @@ L2:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, iterator)
+		s0 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
 		if s0 == 0 {
 			goto B3
 		}
@@ -14985,7 +14985,7 @@ L2:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0_1 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		s0_1 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
 		elem = s0_1
 		s1 = otherIterator.Vtable
 		s1_1 = s1.SpecialITable
@@ -14994,7 +14994,7 @@ L2:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0_1 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, otherIterator)
+		s0_1 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, otherIterator)
 		elemOther = s0_1
 		s0 = m.kotlinWasmInternalNullableEquals(d+1, elem, elemOther)
 		if s0 == 0 {
@@ -15128,7 +15128,7 @@ func (m *Instance) kotlinCollectionsCompanionUnorderedHashCode(d int, this *Kotl
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).Iterator
-	s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
+	s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
 	iterator = s0
 L1:
 	for {
@@ -15139,7 +15139,7 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_1 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, iterator)
+		s0_1 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
 		if s0_1 == 0 {
 			goto B2
 		}
@@ -15150,7 +15150,7 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
 		element = s0
 		tmp0SafeReceiver = element
 		s0_1 = hashCode
@@ -15159,7 +15159,7 @@ L1:
 		} else {
 			s6 = tmp0SafeReceiver.Vtable
 			s6_1 = s6.HashCode
-			s5 = rt.FnOfRef(s6_1).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+			s5 = rt.FnOfRef(s6_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
 			s1_4 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 		}
 		tmp1ElvisLhs = s1_4
@@ -15193,7 +15193,7 @@ func (m *Instance) kotlinCollectionsCompanionSetEquals(d int, this *KotlinCollec
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).GetSize
-	s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, c_)
+	s0 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, c_)
 	s2 = other.Vtable
 	s2_1 = s2.SpecialITable
 	s2_2 = s2_1.F1
@@ -15201,7 +15201,7 @@ func (m *Instance) kotlinCollectionsCompanionSetEquals(d int, this *KotlinCollec
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable3](s2_2).GetSize
-	s1_4 = rt.FnOfRef(s2_3).(func(int, *KotlinAny) int32)(d+1, other)
+	s1_4 = rt.FnOfRef(s2_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, other)
 	s0 = rt.B2I(s0 == s1_4)
 	if s0 == 0 {
 		return int32(0)
@@ -15213,7 +15213,7 @@ func (m *Instance) kotlinCollectionsCompanionSetEquals(d int, this *KotlinCollec
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable3](s2_2).ContainsAll
-	s0 = rt.FnOfRef(s2_3).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, c_, other)
+	s0 = rt.FnOfRef(s2_3, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, c_, other)
 	return s0
 }
 
@@ -15247,7 +15247,7 @@ func (m *Instance) kotlinCollectionsIntIteratorNext(d int, this *KotlinAny) int3
 	tmp0This = rt.ViewAs[KotlinCollectionsIntIterator](this)
 	s1 = rt.ViewAs[ClassVTable23](tmp0This.Vtable)
 	s1_1 = s1.NextInt
-	return rt.FnOfRef(s1_1).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	return rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 }
 
 func (m *Instance) kotlinCollectionsIntIteratorNext2(d int, this *KotlinAny) *KotlinAny {
@@ -15495,7 +15495,7 @@ func (m *Instance) kotlinRandomDefaultNextBits(d int, this *KotlinAny, bitCount 
 	tmp = tmp0This.DefaultRandom
 	s2 = rt.ViewAs[ClassVTable26](tmp.Vtable)
 	s2_1 = s2.NextBits
-	return rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp), bitCount)
+	return rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp), bitCount)
 }
 
 func (m *Instance) kotlinRandomDefaultNextInt(d int, this *KotlinAny) int32 {
@@ -15513,7 +15513,7 @@ func (m *Instance) kotlinRandomDefaultNextInt(d int, this *KotlinAny) int32 {
 	tmp = tmp0This.DefaultRandom
 	s1 = rt.ViewAs[ClassVTable26](tmp.Vtable)
 	s1_1 = s1.NextInt
-	return rt.FnOfRef(s1_1).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
+	return rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
 }
 
 func (m *Instance) kotlinRandomDefaultNextInt2(d int, this *KotlinAny, from int32, until int32) int32 {
@@ -15531,7 +15531,7 @@ func (m *Instance) kotlinRandomDefaultNextInt2(d int, this *KotlinAny, from int3
 	tmp = tmp0This.DefaultRandom
 	s3 = rt.ViewAs[ClassVTable26](tmp.Vtable)
 	s3_1 = s3.NextInt_2
-	return rt.FnOfRef(s3_1).(func(int, *KotlinAny, int32, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp), from, until)
+	return rt.FnOfRef(s3_1, rttFunc115).(func(int, *KotlinAny, int32, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp), from, until)
 }
 
 func (m *Instance) kotlinRandomDefaultGetInstance(d int) *KotlinRandomDefault {
@@ -15570,7 +15570,7 @@ func (m *Instance) kotlinRandomRandomNextInt(d int, this *KotlinAny) int32 {
 	tmp0This = rt.ViewAs[KotlinRandomRandom](this)
 	s2 = rt.ViewAs[ClassVTable26](tmp0This.Vtable)
 	s2_1 = s2.NextBits
-	return rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), int32(32))
+	return rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), int32(32))
 }
 
 func (m *Instance) kotlinRandomRandomNextInt2(d int, this *KotlinAny, from int32, until int32) int32 {
@@ -15605,13 +15605,13 @@ func (m *Instance) kotlinRandomRandomNextInt2(d int, this *KotlinAny, from int32
 			bitCount = s0
 			s2 = rt.ViewAs[ClassVTable26](tmp0This.Vtable)
 			s2_1 = s2.NextBits
-			s0 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), bitCount)
+			s0 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), bitCount)
 		} else {
 		L5:
 			for {
 				s1_1 = rt.ViewAs[ClassVTable26](tmp0This.Vtable)
 				s1_2 = s1_1.NextInt
-				s0 = rt.FnOfRef(s1_2).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+				s0 = rt.FnOfRef(s1_2, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 				bits_ = int32(uint32(s0) >> (uint32(1) & 31))
 				s0 = m.kotlinIntRemImpl(d+1, bits_, n)
 				v = s0
@@ -15633,7 +15633,7 @@ func (m *Instance) kotlinRandomRandomNextInt2(d int, this *KotlinAny, from int32
 			}
 			s1_1 = rt.ViewAs[ClassVTable26](tmp0This.Vtable)
 			s1_2 = s1_1.NextInt
-			s0 = rt.FnOfRef(s1_2).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+			s0 = rt.FnOfRef(s1_2, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 			rnd_ = s0
 			if from <= rnd_ {
 				s0 = rt.B2I(rnd_ < until)
@@ -15676,7 +15676,7 @@ func (m *Instance) kotlinRandomCheckRangeBounds(d int, from int32, until int32) 
 		message = s0_2
 		s2 = message.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
 		s0_3 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
 		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
 	}
@@ -15860,7 +15860,7 @@ func (m *Instance) kotlinRandomXorWowRandomCheckInvariants(d int, this *KotlinRa
 		message = s0_2
 		s2 = message.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
 		s0_3 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
 		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
 	}
@@ -16169,7 +16169,7 @@ func (m *Instance) kotlinRangesIntRangeToString(d int, this *KotlinAny) *KotlinS
 	tmp = rt.ViewAs[KotlinAny](s0)
 	s1 = tmp.Vtable
 	s1_1 = s1.ToString
-	s0_1 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+	s0_1 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
 	s1_2 = m.stringLiteralLatin1(d+1, int32(67))
 	s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1_2))
 	s5 = rt.ViewAs[KotlinRangesIntProgression](tmp0This).Last
@@ -16326,7 +16326,7 @@ func (m *Instance) kotlinRangesIntProgressionIterator2(d int, this *KotlinAny) *
 	}
 	s1 = rt.ViewAs[ClassVTable28](rt.ViewAs[KotlinRangesIntProgression](this).Vtable)
 	s1_1 = s1.Iterator
-	s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinCollectionsIntIterator)(d+1, this)
+	s0 = rt.FnOfRef(s1_1, rttFunc129).(func(int, *KotlinAny) *KotlinCollectionsIntIterator)(d+1, this)
 	return rt.ViewAs[KotlinAny](s0)
 }
 
@@ -16373,7 +16373,7 @@ func (m *Instance) kotlinRangesIntProgressionEquals(d int, this *KotlinAny, othe
 	if s0 != 0 {
 		s1 = rt.ViewAs[ClassVTable28](tmp0This.Vtable)
 		s1_1 = s1.IsEmpty
-		s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+		s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 		if s0 != 0 {
 			if !(other == nil || (other != nil && rt.ObjRTT(other).SubOf(rttKotlinRangesIntProgression))) {
 				panic(rt.ErrCast)
@@ -16381,7 +16381,7 @@ func (m *Instance) kotlinRangesIntProgressionEquals(d int, this *KotlinAny, othe
 			tmp = rt.ViewAs[KotlinRangesIntProgression](other)
 			s1 = rt.ViewAs[ClassVTable28](tmp.Vtable)
 			s1_1 = s1.IsEmpty
-			s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
+			s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
 		} else {
 			s0 = int32(0)
 		}
@@ -16435,7 +16435,7 @@ func (m *Instance) kotlinRangesIntProgressionHashCode(d int, this *KotlinAny) in
 	tmp0This = rt.ViewAs[KotlinRangesIntProgression](this)
 	s1 = rt.ViewAs[ClassVTable28](tmp0This.Vtable)
 	s1_1 = s1.IsEmpty
-	s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 	if s0 != 0 {
 		s0 = int32(-1)
 	} else {
@@ -16475,7 +16475,7 @@ func (m *Instance) kotlinRangesIntProgressionToString(d int, this *KotlinAny) *K
 		tmp = rt.ViewAs[KotlinAny](s0_1)
 		s1 = tmp.Vtable
 		s1_1 = s1.ToString
-		s0_2 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		s0_2 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
 		s1_2 = m.stringLiteralLatin1(d+1, int32(67))
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](s1_2))
 		s5 = tmp0This.Last
@@ -16492,7 +16492,7 @@ func (m *Instance) kotlinRangesIntProgressionToString(d int, this *KotlinAny) *K
 		tmp_ = rt.ViewAs[KotlinAny](s0_1)
 		s1 = tmp_.Vtable
 		s1_1 = s1.ToString
-		s0_2 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp_)
+		s0_2 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp_)
 		s1_2 = m.stringLiteralLatin1(d+1, int32(74))
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](s1_2))
 		s5 = tmp0This.Last
@@ -16540,7 +16540,7 @@ func (m *Instance) kotlinRangesClosedRangeContains(d int, this *KotlinAny, value
 		panic(rt.ErrCast)
 	}
 	s2_1 = rt.As[ClassITable12](s2).GetStart
-	s1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinAny)(d+1, this)
+	s1 = rt.FnOfRef(s2_1, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this)
 	s2_2 = value.Vtable
 	s2_3 = s2_2.SpecialITable
 	s2 = s2_3.F16
@@ -16548,14 +16548,14 @@ func (m *Instance) kotlinRangesClosedRangeContains(d int, this *KotlinAny, value
 		panic(rt.ErrCast)
 	}
 	s2_1 = rt.As[ClassITable2](s2).CompareTo
-	s0 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, value, s1)
+	s0 = rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, value, s1)
 	if s0 >= int32(0) {
 		s2 = m.kotlinWasmInternalGetInterfaceVTable(d+1, this, int64(2327395236054518271))
 		if !(rt.IsType(s2, rttClassITable12)) {
 			panic(rt.ErrCast)
 		}
 		s2_1 = rt.As[ClassITable12](s2).GetEndInclusive
-		s1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinAny)(d+1, this)
+		s1 = rt.FnOfRef(s2_1, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this)
 		s2_2 = value.Vtable
 		s2_3 = s2_2.SpecialITable
 		s2 = s2_3.F16
@@ -16563,7 +16563,7 @@ func (m *Instance) kotlinRangesClosedRangeContains(d int, this *KotlinAny, value
 			panic(rt.ErrCast)
 		}
 		s2_1 = rt.As[ClassITable2](s2).CompareTo
-		s0 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, value, s1)
+		s0 = rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, value, s1)
 		s0 = rt.B2I(s0 <= int32(0))
 	} else {
 		s0 = int32(0)
@@ -16595,7 +16595,7 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 			panic(rt.ErrCast)
 		}
 		s3_4 = rt.As[ClassITable14](s3_3).Invoke
-		s1 = rt.FnOfRef(s3_4).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, transform, element)
+		s1 = rt.FnOfRef(s3_4, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, transform, element)
 		tmp = s1
 		s0 = this
 		if tmp == nil {
@@ -16631,7 +16631,7 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 			panic(rt.ErrCast)
 		}
 		s2_4 = rt.As[ClassITable11](s2_3).Append_2
-		s0 = rt.FnOfRef(s2_4).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, s1)
+		s0 = rt.FnOfRef(s2_4, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, s1)
 	} else {
 		if element == nil {
 			s0_1 = int32(1)
@@ -16684,7 +16684,7 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 				panic(rt.ErrCast)
 			}
 			s2_4 = rt.As[ClassITable11](s2_3).Append_2
-			s0 = rt.FnOfRef(s2_4).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, s1)
+			s0 = rt.FnOfRef(s2_4, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, s1)
 		} else {
 			if element == nil {
 				s0_1 = int32(0)
@@ -16715,11 +16715,11 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 					panic(rt.ErrCast)
 				}
 				s2_4 = rt.As[ClassITable11](s2_3).Append
-				s0 = rt.FnOfRef(s2_4).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, s0, s1_1)
+				s0 = rt.FnOfRef(s2_4, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, s0, s1_1)
 			} else {
 				s2_1 = element.Vtable
 				s2_4 = s2_1.ToString
-				s1_5 = rt.FnOfRef(s2_4).(func(int, *KotlinAny) *KotlinString)(d+1, element)
+				s1_5 = rt.FnOfRef(s2_4, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, element)
 				s2_1 = this.Vtable
 				s2_2 = s2_1.SpecialITable
 				s2_3 = s2_2.F21
@@ -16727,7 +16727,7 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 					panic(rt.ErrCast)
 				}
 				s2_4 = rt.As[ClassITable11](s2_3).Append_2
-				s0 = rt.FnOfRef(s2_4).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, this, rt.ViewAs[KotlinAny](s1_5))
+				s0 = rt.FnOfRef(s2_4, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, this, rt.ViewAs[KotlinAny](s1_5))
 			}
 		}
 	}
@@ -16750,7 +16750,7 @@ func (m *Instance) kotlinTextGetLastIndex(d int, this *KotlinAny) int32 {
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable](s1_2).GetLength
-	s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, this)
+	s0 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this)
 	return (s0 - int32(1))
 }
 
@@ -16764,7 +16764,7 @@ func (m *Instance) kotlinTextPadStart(d int, this *KotlinString, length int32, p
 	tmp = m.kotlinTextPadStart2(d+1, rt.ViewAs[KotlinAny](this), length, padChar)
 	s1 = tmp.Vtable
 	s1_1 = s1.ToString
-	return rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+	return rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
 }
 
 func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, padChar int32) *KotlinAny {
@@ -16797,7 +16797,7 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 		panic(rt.ErrCast)
 	}
 	s2_5 = rt.As[ClassITable](s2_4).GetLength
-	s1_1 = rt.FnOfRef(s2_5).(func(int, *KotlinAny) int32)(d+1, this)
+	s1_1 = rt.FnOfRef(s2_5, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this)
 	s0_1 = rt.B2I(length <= s1_1)
 	if s0_1 != 0 {
 		s3 = this.Vtable
@@ -16807,7 +16807,7 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 			panic(rt.ErrCast)
 		}
 		s3_3 = rt.As[ClassITable](s3_2).GetLength
-		s2_6 = rt.FnOfRef(s3_3).(func(int, *KotlinAny) int32)(d+1, this)
+		s2_6 = rt.FnOfRef(s3_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this)
 		s3 = this.Vtable
 		s3_1 = s3.SpecialITable
 		s3_2 = s3_1.F17
@@ -16815,7 +16815,7 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 			panic(rt.ErrCast)
 		}
 		s3_3 = rt.As[ClassITable](s3_2).SubSequence
-		s0_2 = rt.FnOfRef(s3_3).(func(int, *KotlinAny, int32, int32) *KotlinAny)(d+1, this, int32(0), s2_6)
+		s0_2 = rt.FnOfRef(s3_3, rttFunc6).(func(int, *KotlinAny, int32, int32) *KotlinAny)(d+1, this, int32(0), s2_6)
 		return s0_2
 	}
 	s0_3 = m.kotlinTextStringBuilderInit3(d+1, (*KotlinTextStringBuilder)(nil), length)
@@ -16828,7 +16828,7 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 		panic(rt.ErrCast)
 	}
 	s2_5 = rt.As[ClassITable](s2_4).GetLength
-	s1_1 = rt.FnOfRef(s2_5).(func(int, *KotlinAny) int32)(d+1, this)
+	s1_1 = rt.FnOfRef(s2_5, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this)
 	s0_1 = (length - s1_1)
 	last = s0_1
 	if inductionVariable <= last {
@@ -17005,7 +17005,7 @@ B3:
 				tmp = rt.ViewAs[KotlinAny](s1)
 				s2 = tmp.Vtable
 				s2_1 = s2.ToString
-				s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+				s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
 				s2_2 = m.stringLiteralLatin1(d+1, int32(79))
 				s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
 				s0_3 = m.kotlinAssertionErrorInit(d+1, (*KotlinAssertionError)(nil), rt.ViewAs[KotlinAny](s1_1))
@@ -17054,7 +17054,7 @@ B3:
 				tmp_ = rt.ViewAs[KotlinAny](s1)
 				s2 = tmp_.Vtable
 				s2_1 = s2.ToString
-				s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp_)
+				s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp_)
 				s2_2 = m.stringLiteralLatin1(d+1, int32(80))
 				s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
 				s0_3 = m.kotlinAssertionErrorInit(d+1, (*KotlinAssertionError)(nil), rt.ViewAs[KotlinAny](s1_1))
@@ -17079,7 +17079,7 @@ B3:
 				tmp__ = rt.ViewAs[KotlinAny](s1)
 				s2 = tmp__.Vtable
 				s2_1 = s2.ToString
-				s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp__)
+				s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp__)
 				s2_2 = m.stringLiteralLatin1(d+1, int32(81))
 				s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
 				s0_3 = m.kotlinAssertionErrorInit(d+1, (*KotlinAssertionError)(nil), rt.ViewAs[KotlinAny](s1_1))
@@ -17806,7 +17806,7 @@ func (m *Instance) kotlinTimeDurationAppendFractionalImpl(d int, this int64, rec
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable](s1_2).GetLength
-		s0_2 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, this_)
+		s0_2 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this_)
 		s0_2 = m.kotlinIntDecImpl(d+1, s0_2)
 		inductionVariable = s0_2
 		if int32(0) <= inductionVariable {
@@ -17821,7 +17821,7 @@ func (m *Instance) kotlinTimeDurationAppendFractionalImpl(d int, this int64, rec
 					panic(rt.ErrCast)
 				}
 				s2_3 = rt.As[ClassITable](s2_2).Get
-				s0_2 = rt.FnOfRef(s2_3).(func(int, *KotlinAny, int32) int32)(d+1, this_, index)
+				s0_2 = rt.FnOfRef(s2_3, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, this_, index)
 				tmp0_ = s0_2
 				it = tmp0_
 				s0_2 = rt.B2I(rt.B2I(it == int32(48)) == 0)
@@ -18399,7 +18399,7 @@ B2:
 	message = tmp0_
 	s2 = message.Vtable
 	s2_1 = s2.ToString
-	s1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+	s1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
 	s0_3 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), s1)
 	panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
 B1:
@@ -18602,7 +18602,7 @@ func (m *Instance) kotlinTimeValueTimeMarkCompareTo(d int, this *KotlinAny, othe
 		panic(rt.ErrCast)
 	}
 	s2_2 = rt.As[ClassITable13](s2_1).CompareTo
-	s0 = rt.FnOfRef(s2_2).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, s0_1, s1_2)
+	s0 = rt.FnOfRef(s2_2, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, s0_1, s1_2)
 	return s0
 }
 
@@ -18649,7 +18649,7 @@ func (m *Instance) kotlinTimeComparableTimeMarkCompareTo(d int, this *KotlinAny,
 		panic(rt.ErrCast)
 	}
 	s2_1 = rt.As[ClassITable13](s2).Minus
-	s0 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, *KotlinAny) int64)(d+1, this, other)
+	s0 = rt.FnOfRef(s2_1, rttFunc151).(func(int, *KotlinAny, *KotlinAny) int64)(d+1, this, other)
 	s1 = m.kotlinTimeCompanionGetInstance(d + 1)
 	s1_1 = s1.ZERO
 	return m.kotlinTimeDurationCompareToImpl(d+1, s0, s1_1)
@@ -19988,7 +19988,7 @@ func (m *Instance) kotlinToString(d int, this *KotlinAny) *KotlinString {
 	} else {
 		s1 = tmp0SafeReceiver.Vtable
 		s1_1 = s1.ToString
-		s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
+		s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
 	}
 	tmp1ElvisLhs = s0
 	if tmp1ElvisLhs == nil {
@@ -22320,7 +22320,7 @@ func (m *Instance) kotlinWasmInternalGenExponent(d int, buffer *KotlinWasmIntern
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable](s1_2).GetLength
-	s0 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](kStr))
+	s0 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](kStr))
 	s0 = m.kotlinIntDecImpl(d+1, s0)
 	last = s0
 	if inductionVariable <= last {
@@ -23212,7 +23212,7 @@ func (m *Instance) kotlinWasmInternalNullableEquals(d int, lhs *KotlinAny, rhs *
 	tmp = lhs
 	s2 = tmp.Vtable
 	s2_1 = s2.Equals
-	return rt.FnOfRef(s2_1).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, tmp, rhs)
+	return rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, tmp, rhs)
 }
 
 func (m *Instance) kotlinWasmInternalRangeCheck(d int, index int32, size int32) {
@@ -23258,7 +23258,7 @@ func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, kla
 		panic(rt.ErrCast)
 	}
 	s1_1 = rt.As[ClassITable15](s1).GetQualifiedName
-	s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, klass)
+	s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, klass)
 	tmp0ElvisLhs = s0
 	if tmp0ElvisLhs == nil {
 		s1 = m.kotlinWasmInternalGetInterfaceVTable(d+1, klass, int64(6362707103299592704))
@@ -23266,7 +23266,7 @@ func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, kla
 			panic(rt.ErrCast)
 		}
 		s1_1 = rt.As[ClassITable15](s1).GetSimpleName
-		s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, klass)
+		s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, klass)
 	} else {
 		s0 = tmp0ElvisLhs
 	}
@@ -23308,7 +23308,7 @@ func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, kla
 			panic(rt.ErrCast)
 		}
 		s1_1 = rt.As[ClassITable15](s1).GetQualifiedName
-		s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, it)
+		s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, it)
 		tmp0ElvisLhs_ = s0
 		if tmp0ElvisLhs_ == nil {
 			s1 = m.kotlinWasmInternalGetInterfaceVTable(d+1, it, int64(6362707103299592704))
@@ -23316,7 +23316,7 @@ func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, kla
 				panic(rt.ErrCast)
 			}
 			s1_1 = rt.As[ClassITable15](s1).GetSimpleName
-			s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, it)
+			s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, it)
 		} else {
 			s0 = tmp0ElvisLhs_
 		}
@@ -23342,7 +23342,7 @@ func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, kla
 			panic(rt.ErrCast)
 		}
 		s2_2 = rt.As[ClassITable15](s2_1).Equals
-		s0_1 = rt.FnOfRef(s2_2).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, klass, rt.ViewAs[KotlinAny](s1_3))
+		s0_1 = rt.FnOfRef(s2_2, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, klass, rt.ViewAs[KotlinAny](s1_3))
 		if s0_1 != 0 {
 			s0_1 = isNullable
 		} else {
@@ -23402,7 +23402,7 @@ func (m *Instance) kotlinWasmInternalGetQualifiedName(d int, rtti any) *KotlinSt
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable](s1_2).GetLength
-	s0_1 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, this)
+	s0_1 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this)
 	s0_1 = rt.B2I(s0_1 == int32(0))
 	goto B1
 B1:
@@ -23430,7 +23430,7 @@ func (m *Instance) kotlinWasmInternalGetSimpleName(d int, rtti any) *KotlinStrin
 		panic(rt.ErrCast)
 	}
 	s1 = rt.As[RTTI](rtti).SimpleNameStringLoader
-	return rt.FnOfRef(s1).(func(int, int32) *KotlinString)(d+1, poolId)
+	return rt.FnOfRef(s1, rttFunc5).(func(int, int32) *KotlinString)(d+1, poolId)
 }
 
 func (m *Instance) kotlinWasmInternalGetPackageName(d int, rtti any) *KotlinString {
@@ -23447,7 +23447,7 @@ func (m *Instance) kotlinWasmInternalGetPackageName(d int, rtti any) *KotlinStri
 		panic(rt.ErrCast)
 	}
 	s1 = rt.As[RTTI](rtti).QualifierStringLoader
-	return rt.FnOfRef(s1).(func(int, int32) *KotlinString)(d+1, poolId)
+	return rt.FnOfRef(s1, rttFunc5).(func(int, int32) *KotlinString)(d+1, poolId)
 }
 
 func (m *Instance) kotlinWasmInternalIsAnonymousClass(d int, rtti any) int32 {
@@ -23644,7 +23644,7 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements2(d int, this *Ko
 		tmp = rt.ViewAs[KotlinAny](s1)
 		s2 = tmp.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
 		s2_2 = m.stringLiteralLatin1(d+1, int32(151))
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
 		s2_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), toIndex)
@@ -23664,7 +23664,7 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements2(d int, this *Ko
 		message = s0_2
 		s2 = message.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
 		s0 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
 		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
 	}
@@ -23748,7 +23748,7 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements4(d int, this *Ko
 		tmp = rt.ViewAs[KotlinAny](s1)
 		s2 = tmp.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
 		s2_2 = m.stringLiteralLatin1(d+1, int32(151))
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
 		s2_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), toIndex)
@@ -23796,7 +23796,7 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements6(d int, this *Ko
 		tmp = rt.ViewAs[KotlinAny](s1)
 		s2 = tmp.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
 		s2_2 = m.stringLiteralLatin1(d+1, int32(151))
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
 		s2_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), toIndex)
@@ -23879,7 +23879,7 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements8(d int, this *Ko
 		tmp = rt.ViewAs[KotlinAny](s1)
 		s2 = tmp.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
 		s2_2 = m.stringLiteralLatin1(d+1, int32(151))
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
 		s2_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), toIndex)
@@ -23957,7 +23957,7 @@ func (m *Instance) kotlinAssert2(d int, value int32, lazyMessage *KotlinAny) {
 			panic(rt.ErrCast)
 		}
 		s1_4 = rt.As[ClassITable4](s1_3).Iterator
-		message = rt.FnOfRef(s1_4).(func(int, *KotlinAny) *KotlinAny)(d+1, lazyMessage)
+		message = rt.FnOfRef(s1_4, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, lazyMessage)
 		s0_1 = m.kotlinAssertionErrorInit(d+1, (*KotlinAssertionError)(nil), message)
 		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
 	}
@@ -23988,7 +23988,7 @@ func (m *Instance) kotlinFunction0Invoke(d int, this *KotlinAny) *KotlinAny {
 	}
 	tmp0This = rt.ViewAs[KotlinFunction0](this)
 	s0 = tmp0This.Func
-	return rt.FnOfRef(s0).(func(int) *KotlinAny)(d + 1)
+	return rt.FnOfRef(s0, rttFunc231).(func(int) *KotlinAny)(d + 1)
 }
 
 func (m *Instance) kotlinAssertLambdaInvoke(d int) *KotlinAny {
@@ -24165,7 +24165,7 @@ func (m *Instance) kotlinAssertionErrorInit(d int, this *KotlinAssertionError, m
 	} else {
 		s2 = tmp0SafeReceiver.Vtable
 		s2_1 = s2.ToString
-		s1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
+		s1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
 	}
 	if message == nil {
 		s2_2 = int32(0)
@@ -24822,7 +24822,7 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetQualifiedName(d int, 
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable](s1_2).GetLength
-	s0_2 = rt.FnOfRef(s1_3).(func(int, *KotlinAny) int32)(d+1, this_)
+	s0_2 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this_)
 	s0_2 = rt.B2I(s0_2 == int32(0))
 	goto B1
 B1:
@@ -25069,7 +25069,7 @@ func (m *Instance) kotlinTextSamKotlinComparator0Equals(d int, this *KotlinAny, 
 				panic(rt.ErrCast)
 			}
 			s1_1 = rt.As[ClassITable4](s1).Iterator
-			s0_1 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+			s0_1 = rt.FnOfRef(s1_1, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 			tmp = s0_1
 			tmp_ = other
 			s2 = m.kotlinWasmInternalGetInterfaceVTable(d+1, tmp_, int64(-5643994456597899506))
@@ -25077,10 +25077,10 @@ func (m *Instance) kotlinTextSamKotlinComparator0Equals(d int, this *KotlinAny, 
 				panic(rt.ErrCast)
 			}
 			s2_1 = rt.As[ClassITable4](s2).Iterator
-			s1_2 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
+			s1_2 = rt.FnOfRef(s2_1, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
 			s2_2 = tmp.Vtable
 			s2_1 = s2_2.Equals
-			s0 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, tmp, s1_2)
+			s0 = rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, tmp, s1_2)
 		} else {
 			s0 = int32(0)
 		}
@@ -25108,10 +25108,10 @@ func (m *Instance) kotlinTextSamKotlinComparator0HashCode(d int, this *KotlinAny
 		panic(rt.ErrCast)
 	}
 	s1_1 = rt.As[ClassITable4](s1).Iterator
-	tmp = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	tmp = rt.FnOfRef(s1_1, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 	s1_2 = tmp.Vtable
 	s1_1 = s1_2.HashCode
-	return rt.FnOfRef(s1_1).(func(int, *KotlinAny) int32)(d+1, tmp)
+	return rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp)
 }
 
 func (m *Instance) kotlinTextFunction2Init(d int, this *KotlinTextFunction2, func_ *rt.Func) *KotlinTextFunction2 {
@@ -25246,7 +25246,7 @@ func (m *Instance) kotlinTextEncodeUtf8(d int, string_ *KotlinString, startIndex
 		message = s0_2
 		s2 = message.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
 		s0_3 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
 		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
 	}
@@ -26764,13 +26764,13 @@ func (m *Instance) kotlinThrowableToString(d int, this *KotlinAny) *KotlinString
 	s = s0_1
 	s1 = rt.ViewAs[ClassVTable4](tmp0This.Vtable)
 	s1_1 = s1.GetMessage
-	s0_1 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	s0_1 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 	if rt.B2I(s0_1 == nil) == 0 {
 		s1_2 = m.stringLiteralLatin1(d+1, int32(202))
 		s0_1 = m.kotlinStringPlus(d+1, s, rt.ViewAs[KotlinAny](s1_2))
 		s2 = rt.ViewAs[ClassVTable4](tmp0This.Vtable)
 		s2_1 = s2.GetMessage
-		s1_2 = rt.FnOfRef(s2_1).(func(int, *KotlinAny) *KotlinString)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+		s1_2 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, rt.ViewAs[KotlinAny](tmp0This))
 		s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1_2))
 	} else {
 		s0_1 = s
@@ -28223,7 +28223,7 @@ func (m *Instance) kotlinWasmInternalInvokeOnExportedFunctionExit(d int) {
 			panic(rt.ErrCast)
 		}
 		s1_4 = rt.As[ClassITable4](s1_3).Iterator
-		s0 = rt.FnOfRef(s1_4).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp0SafeReceiver)
+		s0 = rt.FnOfRef(s1_4, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp0SafeReceiver)
 	}
 	return
 }
@@ -28242,7 +28242,7 @@ func (m *Instance) kotlinIoPrintln(d int, message *KotlinAny) {
 	} else {
 		s1 = tmp0SafeReceiver.Vtable
 		s1_1 = s1.ToString
-		s0 = rt.FnOfRef(s1_1).(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
+		s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
 	}
 	m.kotlinIoPrintImpl(d+1, s0, int32(0), int32(1))
 	return
@@ -28355,7 +28355,7 @@ func (m *Instance) kotlinIoWasiPrintImpl(d int, allocator *KotlinWasmUnsafeMemor
 	}
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), bytesToWrite)
+	s0_1 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), bytesToWrite)
 	ptr = s0_1
 	if rt.B2I(data == nil) == 0 {
 		currentPtr = ptr
@@ -28385,11 +28385,11 @@ func (m *Instance) kotlinIoWasiPrintImpl(d int, allocator *KotlinWasmUnsafeMemor
 	}
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(8))
+	s0_1 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(8))
 	scatterPtr = s0_1
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(4))
+	s0_1 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(4))
 	rp0 = s0_1
 	if useErrorStream != 0 {
 		s0_1 = int32(2)
@@ -28459,7 +28459,7 @@ L10:
 				panic(rt.ErrCast)
 			}
 			s3_4 = rt.As[ClassITable7](s3_3).Get
-			s1_2 = rt.FnOfRef(s3_4).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp_, res)
+			s1_2 = rt.FnOfRef(s3_4, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp_, res)
 			tmp = s1_2
 			if tmp == nil {
 				s1 = int32(0)
@@ -28510,7 +28510,7 @@ func (m *Instance) kotlinIoWasiWaitUntilEventImpl(d int, allocator *KotlinWasmUn
 	_ = s0_4
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(20))
+	s0 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(20))
 	subscriptionPtr = s0
 	s0 = m.kotlinWasmUnsafePointerPlusImpl(d+1, subscriptionPtr, int32(0))
 	m.kotlinWasmUnsafePointerStoreLongImpl(d+1, s0, int64(0))
@@ -28522,11 +28522,11 @@ func (m *Instance) kotlinIoWasiWaitUntilEventImpl(d int, allocator *KotlinWasmUn
 	eventSize = int32(26)
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), eventSize)
+	s0 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), eventSize)
 	eventPtr = s0
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(4))
+	s0 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(4))
 	rp0 = s0
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, subscriptionPtr)
 	tmp0 = s0
@@ -28558,7 +28558,7 @@ B3:
 			panic(rt.ErrCast)
 		}
 		s3_4 = rt.As[ClassITable7](s3_3).Get
-		s1_1 = rt.FnOfRef(s3_4).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp_, ret)
+		s1_1 = rt.FnOfRef(s3_4, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp_, ret)
 		tmp = s1_1
 		if tmp == nil {
 			s1 = int32(0)
@@ -28622,7 +28622,7 @@ B10:
 			panic(rt.ErrCast)
 		}
 		s3_4 = rt.As[ClassITable7](s3_3).Get
-		s1_1 = rt.FnOfRef(s3_4).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp___, eventRet)
+		s1_1 = rt.FnOfRef(s3_4, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp___, eventRet)
 		tmp__ = s1_1
 		if tmp__ == nil {
 			s1 = int32(0)
@@ -28707,7 +28707,7 @@ func (m *Instance) kotlinRandomWasiRandomGet(d int) int64 {
 		allocator_ = tmp0
 		s2 = rt.ViewAs[ClassVTable43](allocator_.Vtable)
 		s2_1 = s2.Allocate
-		s0_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator_), int32(8))
+		s0_1 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator_), int32(8))
 		memory = s0_1
 		s0_1 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, memory)
 		tmp0_ = s0_1
@@ -28729,7 +28729,7 @@ func (m *Instance) kotlinRandomWasiRandomGet(d int) int64 {
 				panic(rt.ErrCast)
 			}
 			s3_3 = rt.As[ClassITable7](s3_2).Get
-			s1 = rt.FnOfRef(s3_3).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp___, ret)
+			s1 = rt.FnOfRef(s3_3, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp___, ret)
 			tmp__ = s1
 			if tmp__ == nil {
 				s1_1 = int32(0)
@@ -28988,7 +28988,7 @@ func (m *Instance) kotlinTimeClockTimeGet(d int, clockId int32) int64 {
 		allocator_ = tmp0
 		s2 = rt.ViewAs[ClassVTable43](allocator_.Vtable)
 		s2_1 = s2.Allocate
-		s0_1 = rt.FnOfRef(s2_1).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator_), int32(8))
+		s0_1 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator_), int32(8))
 		rp0 = s0_1
 		s2_2 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, rp0)
 		tmp0_ = s2_2
@@ -29014,7 +29014,7 @@ func (m *Instance) kotlinTimeClockTimeGet(d int, clockId int32) int64 {
 				panic(rt.ErrCast)
 			}
 			s7_3 = rt.As[ClassITable7](s7_2).Get
-			s5 = rt.FnOfRef(s7_3).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp__, ret)
+			s5 = rt.FnOfRef(s7_3, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp__, ret)
 			tmp_ = s5
 			if tmp_ == nil {
 				s5_1 = int32(0)
@@ -29747,7 +29747,7 @@ L2:
 					panic(rt.ErrCast)
 				}
 				s2_6 = rt.As[ClassITable16](s2_5).Area
-				s1_2 = rt.FnOfRef(s2_6).(func(int, *KotlinAny) float64)(d+1, s)
+				s1_2 = rt.FnOfRef(s2_6, rttFunc318).(func(int, *KotlinAny) float64)(d+1, s)
 				s0_3 = float64(sum + s1_2)
 				sum = s0_3
 				continue L16
@@ -29843,7 +29843,7 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 				panic(rt.ErrCast)
 			}
 			s3_3 = rt.As[ClassITable10](s3_2).Put
-			s0_4 = rt.FnOfRef(s3_3).(func(int, *KotlinAny, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, this, key, value)
+			s0_4 = rt.FnOfRef(s3_3, rttFunc48).(func(int, *KotlinAny, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, this, key, value)
 			s0_5 = m.kotlinUnitGetInstance(d + 1)
 			goto B8
 		B8:
@@ -29864,7 +29864,7 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 		panic(rt.ErrCast)
 	}
 	s1_5 = rt.As[ClassITable10](s1_4).GetEntries
-	s0_4 = rt.FnOfRef(s1_5).(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
+	s0_4 = rt.FnOfRef(s1_5, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
 	tmp_ = s0_4
 	s1_2 = tmp_.Vtable
 	s1_3 = s1_2.SpecialITable
@@ -29873,7 +29873,7 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 		panic(rt.ErrCast)
 	}
 	s1_5 = rt.As[ClassITable4](s1_4).Iterator
-	s0_4 = rt.FnOfRef(s1_5).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
+	s0_4 = rt.FnOfRef(s1_5, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
 	goto B9
 B9:
 	iterator = s0_4
@@ -29886,7 +29886,7 @@ L10:
 			panic(rt.ErrCast)
 		}
 		s1_5 = rt.As[ClassITable6](s1_4).HasNext
-		s0_7 = rt.FnOfRef(s1_5).(func(int, *KotlinAny) int32)(d+1, iterator)
+		s0_7 = rt.FnOfRef(s1_5, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
 		if s0_7 == 0 {
 			goto B11
 		}
@@ -29897,7 +29897,7 @@ L10:
 			panic(rt.ErrCast)
 		}
 		s1_5 = rt.As[ClassITable6](s1_4).Next
-		s0_4 = rt.FnOfRef(s1_5).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		s0_4 = rt.FnOfRef(s1_5, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
 		tmp__ = s0_4
 		if tmp__ == nil {
 			s0_7 = int32(0)
@@ -29935,7 +29935,7 @@ L10:
 			panic(rt.ErrCast)
 		}
 		s1_5 = rt.As[ClassITable8](s1_4).GetKey
-		s0_4 = rt.FnOfRef(s1_5).(func(int, *KotlinAny) *KotlinAny)(d+1, this__)
+		s0_4 = rt.FnOfRef(s1_5, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this__)
 		tmp___ = s0_4
 		if tmp___ == nil {
 			s0_7 = int32(0)
@@ -29964,7 +29964,7 @@ L10:
 			panic(rt.ErrCast)
 		}
 		s1_5 = rt.As[ClassITable8](s1_4).GetValue
-		s0_4 = rt.FnOfRef(s1_5).(func(int, *KotlinAny) *KotlinAny)(d+1, this___)
+		s0_4 = rt.FnOfRef(s1_5, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this___)
 		tmp____ = s0_4
 		if tmp____ == nil {
 			s0_7 = int32(0)
@@ -30040,7 +30040,7 @@ func (m *Instance) timed(d int, name *KotlinString, f *KotlinAny) {
 		panic(rt.ErrCast)
 	}
 	s1_4 = rt.As[ClassITable4](s1_3).Iterator
-	r_ = rt.FnOfRef(s1_4).(func(int, *KotlinAny) *KotlinAny)(d+1, f)
+	r_ = rt.FnOfRef(s1_4, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, f)
 	s1_5 = m.stringLiteralLatin1(d+1, int32(298))
 	s0_3 = m.kotlinStringPlus(d+1, name, rt.ViewAs[KotlinAny](s1_5))
 	s5 = m.kotlinTimeValueTimeMarkElapsedNowImpl(d+1, t)

@@ -580,7 +580,7 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 			if n, ok := m.Names.Funcs[uint32(i)]; ok {
 				name = n
 			}
-			fmt.Fprintf(&b, "m.funcs[%d] = &rt.Func{Type: %s, Fn: m.%s, Name: %q}\n", i, c.info(m.FuncTypeIdx(uint32(i))).rtt, c.funcNames[i], name)
+			fmt.Fprintf(&b, "m.funcs[%d] = &rt.Func{Type: %s, Fn: m.%s, Name: %q%s}\n", i, c.info(m.FuncTypeIdx(uint32(i))).rtt, c.funcNames[i], name, c.funcViews(uint32(i)))
 		}
 	}
 	for i, g := range m.Globals {
@@ -835,4 +835,52 @@ func (c *compiler) writeFuncs(w *strings.Builder) {
 		hdr := fmt.Sprintf("func (m *Instance) %s%s", c.funcNames[idx], c.sigGo(ft, names[:len(ft.Params)], true))
 		w.WriteString(f.finish(hdr, f.w.String()))
 	}
+}
+
+// funcViews returns a ", Views: ..." clause adapting function fi to each
+// supertype of its type whose Go signature differs.
+func (c *compiler) funcViews(fi uint32) string {
+	tidx := c.m.FuncTypeIdx(fi)
+	ft := c.m.FuncType(fi)
+	own := c.goFuncSig(ft)
+	var views []string
+	for s := c.info(tidx).super; s >= 0; s = c.tinfo[s].super {
+		st := &c.m.Types[s].Comp.Func
+		sig := c.goFuncSig(st)
+		if sig == own {
+			continue
+		}
+		var ps, args, rs []string
+		ps = append(ps, "d int")
+		args = append(args, "d")
+		for i, p := range st.Params {
+			ps = append(ps, fmt.Sprintf("p%d %s", i, c.goType(p)))
+			args = append(args, c.conv(fmt.Sprintf("p%d", i), p, ft.Params[i]))
+		}
+		call := fmt.Sprintf("m.%s(%s)", c.funcNames[fi], strings.Join(args, ", "))
+		var body string
+		switch len(st.Results) {
+		case 0:
+			body = call
+		default:
+			var outs, rets []string
+			for i, r := range st.Results {
+				outs = append(outs, fmt.Sprintf("r%d", i))
+				rets = append(rets, c.conv(fmt.Sprintf("r%d", i), ft.Results[i], r))
+				rs = append(rs, c.goType(r))
+			}
+			body = fmt.Sprintf("%s := %s\nreturn %s", strings.Join(outs, ", "), call, strings.Join(rets, ", "))
+		}
+		res := ""
+		if len(rs) == 1 {
+			res = " " + rs[0]
+		} else if len(rs) > 1 {
+			res = " (" + strings.Join(rs, ", ") + ")"
+		}
+		views = append(views, fmt.Sprintf("{Type: %s, Fn: func(%s)%s {\n%s\n}}", c.tinfo[s].rtt, strings.Join(ps, ", "), res, body))
+	}
+	if len(views) == 0 {
+		return ""
+	}
+	return ", Views: []rt.FuncView{" + strings.Join(views, ", ") + "}"
 }

@@ -1414,7 +1414,7 @@ func (m *Instance) init() {
 	m.g332 = m.constExpr53()
 	m.g333 = m.constExpr54()
 	m.g334 = m.constExpr55()
-	m.g335 = rt.As[Array3](any(nil))
+	m.g335 = (*Array3)(nil)
 	m.g336 = m.constExpr56()
 	m.g337 = m.constExpr57()
 	m.g338 = m.constExpr58()
@@ -1422,7 +1422,7 @@ func (m *Instance) init() {
 	m.g340 = m.constExpr60()
 	m.g341 = m.constExpr61()
 	m.g342 = m.constExpr62()
-	m.g343 = rt.AsObj[Struct4](any(nil))
+	m.g343 = (*Struct4)(nil)
 	m.g344 = m.constExpr63()
 	m.g345 = m.constExpr64()
 	m.tab0 = rt.NewTable[*rt.Func](741, 0, false, false, "ref null func", (*rt.Func)(nil))
@@ -1719,7 +1719,7 @@ func (m *Instance) invokeMain(d int, p0 any) {
 	case -2:
 		s0_6 = x3.Values[0].(any)
 		l8 = s0_6
-		s0_7 = NewStruct18(int32(59), rt.AsObj[Struct2](any(nil)), l8)
+		s0_7 = NewStruct18(int32(59), (*Struct2)(nil), l8)
 		l9 = s0_7
 		s1_3 = l9.F2
 		s1_3 = m.f11(d+1, s1_3)
@@ -1782,7 +1782,7 @@ func (m *Instance) f19(d int, p0 *Struct0) {
 	var s0_2 any
 	s0 = m.f20(d+1, p0)
 	if s0 != 0 {
-		if !(rt.IsType(rt.Box(p0), rttStruct1)) {
+		if !(p0 != nil && rt.ObjRTT(p0) == rttStruct1) {
 			panic(rt.ErrCast)
 		}
 		s0_1 = rt.ViewAs[Struct1](p0)
@@ -1828,7 +1828,7 @@ func (m *Instance) f22(d int, p0 *Struct0) *Struct1 {
 	var l4 int64
 	var s1, s0_1 int32
 	var s0_2, s1_1 *Array10
-	if !(rt.IsType(rt.Box(p0), rttStruct11)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct11) {
 		panic(rt.ErrCast)
 	}
 	l2 = rt.ViewAs[Struct11](p0)
@@ -1887,7 +1887,7 @@ func (m *Instance) f23(d int, p0 *Struct0) *Struct1 {
 	var s0_8 *Struct5
 	var s0_9 *Struct8
 	_ = s0_4
-	if !(rt.IsType(rt.Box(p0), rttStruct12)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct12) {
 		panic(rt.ErrCast)
 	}
 	s0 = rt.ViewAs[Struct12](p0).F1
@@ -1904,7 +1904,7 @@ func (m *Instance) f23(d int, p0 *Struct0) *Struct1 {
 	if l4 == int64(-4616189618054758400) {
 		return m.g302
 	}
-	if !(rt.IsType(rt.Box(p0), rttStruct12)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct12) {
 		panic(rt.ErrCast)
 	}
 	s0 = rt.ViewAs[Struct12](p0).F1
@@ -1925,7 +1925,7 @@ L5:
 		}
 		break L5
 	}
-	if !(rt.IsType(rt.Box(p0), rttStruct12)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct12) {
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.ViewAs[Struct12](p0).F1
@@ -1933,7 +1933,7 @@ L5:
 		return m.g303
 	}
 	if (int64(math.Float64bits(s0)) & int64(9223372036854775807)) == int64(9218868437227405312) {
-		if !(rt.IsType(rt.Box(p0), rttStruct12)) {
+		if !(p0 != nil && rt.ObjRTT(p0) == rttStruct12) {
 			panic(rt.ErrCast)
 		}
 		s0 = rt.ViewAs[Struct12](p0).F1
@@ -1942,7 +1942,7 @@ L5:
 		}
 		return m.g305
 	}
-	if !(rt.IsType(rt.Box(p0), rttStruct12)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct12) {
 		panic(rt.ErrCast)
 	}
 	l9 = rt.ViewAs[Struct12](p0)
@@ -2066,7 +2066,7 @@ B13:
 	s0 = m.f8(d+1, s0_1, m.g19.V, int32(0))
 	l7 = s0
 	if (int64(math.Float64bits(l7)) & int64(9218868437227405312)) == int64(9218868437227405312) {
-		s0_5 = NewStruct7(int32(55), rt.AsObj[Struct2](any(nil)))
+		s0_5 = NewStruct7(int32(55), (*Struct2)(nil))
 		m.f18(d+1, s0_5)
 		panic(rt.ErrUnreachable)
 	}
@@ -2098,7 +2098,7 @@ func (m *Instance) f24(d int, p0 *Struct0) *Struct1 {
 	}
 	var l1, l2 int64
 	var s0_1 any
-	if !(rt.IsType(rt.Box(p0), rttStruct5)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct5) {
 		panic(rt.ErrCast)
 	}
 	l1 = rt.ViewAs[Struct5](p0).F1
@@ -2120,7 +2120,7 @@ func (m *Instance) f25(d int, p0 *Struct0) *Struct1 {
 	var l2, l3, l4, s0, s1_2, s3_1 *Struct1
 	var s1, s3 *Struct0
 	var s1_1, s0_1, s2, s4 int32
-	if !(rt.IsType(rt.Box(p0), rttStruct8)) {
+	if !(p0 != nil && rt.ObjRTT(p0).SubOf(rttStruct8)) {
 		panic(rt.ErrCast)
 	}
 	l1 = rt.ViewAs[Struct8](p0)
@@ -2156,14 +2156,14 @@ func (m *Instance) f26(d int, p0 *Struct0) *Struct8 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return NewStruct8(int32(51), rt.AsObj[Struct2](any(nil)), int32(0), rt.AsObj[Struct5](any(nil)), rt.AsObj[Struct1](any(nil)), p0)
+	return NewStruct8(int32(51), (*Struct2)(nil), int32(0), (*Struct5)(nil), (*Struct1)(nil), p0)
 }
 
 func (m *Instance) f27(d int, p0 *Struct0) *Struct1 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	if !(rt.IsType(rt.Box(p0), rttStruct1)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct1) {
 		panic(rt.ErrCast)
 	}
 	return rt.ViewAs[Struct1](p0)
@@ -2187,7 +2187,7 @@ func (m *Instance) f29(d int, p0 *Struct1, p1 *Struct0, p2 *Struct1) *Struct1 {
 	s0 = m.f20(d+1, rt.ViewAs[Struct0](p0))
 	s0 = m.f20(d+1, p1)
 	if s0 != 0 {
-		if !(rt.IsType(rt.Box(p1), rttStruct1)) {
+		if !(p1 != nil && rt.ObjRTT(p1) == rttStruct1) {
 			panic(rt.ErrCast)
 		}
 		s0_1 = rt.ViewAs[Struct1](p1)
@@ -2226,7 +2226,7 @@ func (m *Instance) f30(d int, p0 *Struct1, p1 *Struct0) *Struct1 {
 	s0_1 = p0.F1
 	s1 = m.f20(d+1, p1)
 	if s1 != 0 {
-		if !(rt.IsType(rt.Box(p1), rttStruct1)) {
+		if !(p1 != nil && rt.ObjRTT(p1) == rttStruct1) {
 			panic(rt.ErrCast)
 		}
 		s1_1 = rt.ViewAs[Struct1](p1)
@@ -2335,7 +2335,7 @@ B1:
 	l1 = p0
 	s0 = l1.F0
 	if s0 == int32(4) {
-		if !(rt.IsType(rt.Box(l1), rttStruct1)) {
+		if !(l1 != nil && rt.ObjRTT(l1) == rttStruct1) {
 			panic(rt.ErrCast)
 		}
 		s0_2 = rt.ViewAs[Struct1](l1).F1
@@ -2364,7 +2364,7 @@ func (m *Instance) f35(d int, p0 *Struct1, p1 *Struct0, p2 *Struct1, p3 *Struct0
 	s0 = m.f20(d+1, rt.ViewAs[Struct0](p0))
 	s0 = m.f20(d+1, p1)
 	if s0 != 0 {
-		if !(rt.IsType(rt.Box(p1), rttStruct1)) {
+		if !(p1 != nil && rt.ObjRTT(p1) == rttStruct1) {
 			panic(rt.ErrCast)
 		}
 		s0_1 = rt.ViewAs[Struct1](p1)
@@ -2376,7 +2376,7 @@ func (m *Instance) f35(d int, p0 *Struct1, p1 *Struct0, p2 *Struct1, p3 *Struct0
 	s0 = m.f20(d+1, rt.ViewAs[Struct0](p2))
 	s0 = m.f20(d+1, p3)
 	if s0 != 0 {
-		if !(rt.IsType(rt.Box(p3), rttStruct1)) {
+		if !(p3 != nil && rt.ObjRTT(p3) == rttStruct1) {
 			panic(rt.ErrCast)
 		}
 		s0_1 = rt.ViewAs[Struct1](p3)
@@ -2498,7 +2498,7 @@ func (m *Instance) f42(d int, p0 int64) {
 	var s0 *Struct23
 	s3 = NewStruct5(int32(86), p0)
 	s6 = NewStruct5(int32(86), int64(2147483647))
-	s0 = NewStruct23(int32(52), rt.AsObj[Struct2](any(nil)), int32(1), s3, rt.AsObj[Struct1](any(nil)), rt.ViewAs[Struct0](m.g310), s6)
+	s0 = NewStruct23(int32(52), (*Struct2)(nil), int32(1), s3, (*Struct1)(nil), rt.ViewAs[Struct0](m.g310), s6)
 	m.f18(d+1, rt.ViewAs[Struct7](s0))
 	panic(rt.ErrUnreachable)
 }
@@ -2536,7 +2536,7 @@ func (m *Instance) f46(d int, p0 *Struct8) *Struct1 {
 	var l1, s1 *Struct5
 	var s0_1 int64
 	var s0_2 *Struct1
-	if !(rt.IsType(rt.Box(p0), rttStruct23)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct23) {
 		panic(rt.ErrCast)
 	}
 	l1 = rt.ViewAs[Struct23](p0).F6
@@ -2628,7 +2628,7 @@ func (m *Instance) f51(d int, p0 *Struct0) *Struct1 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	if !(rt.IsType(rt.Box(p0), rttStruct24)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct24) {
 		panic(rt.ErrCast)
 	}
 	return rt.ViewAs[Struct24](p0).F2
@@ -2653,7 +2653,7 @@ func (m *Instance) f53(d int, p0 *Struct0) *Struct1 {
 	var l2, l3, s0 *Struct1
 	var s0_1 any
 	var s0_2 *Struct7
-	if !(rt.IsType(rt.Box(p0), rttStruct2)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct2) {
 		panic(rt.ErrCast)
 	}
 	l1 = rt.ViewAs[Struct2](p0)
@@ -2669,7 +2669,7 @@ func (m *Instance) f53(d int, p0 *Struct0) *Struct1 {
 			l1.F2 = l2
 			s0 = l2
 		} else {
-			s0_2 = NewStruct7(int32(49), rt.AsObj[Struct2](any(nil)))
+			s0_2 = NewStruct7(int32(49), (*Struct2)(nil))
 			m.f18(d+1, s0_2)
 			panic(rt.ErrUnreachable)
 		}
@@ -2686,7 +2686,7 @@ func (m *Instance) f54(d int, p0 any) *Struct2 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return NewStruct2(int32(32), p0, rt.AsObj[Struct1](any(nil)))
+	return NewStruct2(int32(32), p0, (*Struct1)(nil))
 }
 
 func (m *Instance) f55(d int, p0 *Struct0) *Struct1 {
@@ -2701,7 +2701,7 @@ func (m *Instance) f56(d int, p0 *Struct0) *Struct1 {
 		rt.Exhausted()
 	}
 	var s0 any
-	if !(rt.IsType(rt.Box(p0), rttStruct18)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct18) {
 		panic(rt.ErrCast)
 	}
 	s0 = rt.ViewAs[Struct18](p0).F2
@@ -2725,7 +2725,7 @@ func (m *Instance) f57(d int, p0 *Struct0) *Struct1 {
 	var c9 int
 	_ = s0_6
 	_ = s0_7
-	if !(rt.IsType(rt.Box(p0), rttStruct4)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct4) {
 		panic(rt.ErrCast)
 	}
 	l4 = rt.ViewAs[Struct4](p0)
@@ -2796,7 +2796,7 @@ B2:
 			}
 		}()
 		s2_2 = l4.F1
-		l3 = NewStruct9(int32(87), l4, s2_2, int64(0), rt.AsObj[Struct0](any(nil)))
+		l3 = NewStruct9(int32(87), l4, s2_2, int64(0), (*Struct0)(nil))
 		s0_1 = m.f65(d+1, rt.ViewAs[Struct0](l3))
 		if s0_1 != 0 {
 			s0_1 = m.f6(d+1, m.g36.V)
@@ -2916,7 +2916,7 @@ func (m *Instance) f59(d int, p0 *Struct4) {
 	}
 	s0 = p0.F1
 	if s0 < l1 {
-		m.f61(d+1, rt.AsObj[Struct0](any(nil)))
+		m.f61(d+1, (*Struct0)(nil))
 		panic(rt.ErrUnreachable)
 	}
 	s1 = p0.F1
@@ -2949,7 +2949,7 @@ func (m *Instance) f59(d int, p0 *Struct4) {
 	} else {
 		s0_2 = p0.F2
 		s3 = p0.F1
-		rt.ArrayFill(s0_2.Elems, int32(l1), rt.AsObj[Struct0](any(nil)), int32((s3 - l1)))
+		rt.ArrayFill(s0_2.Elems, int32(l1), (*Struct0)(nil), int32((s3 - l1)))
 	}
 	p0.F1 = l1
 	return
@@ -2962,7 +2962,7 @@ func (m *Instance) f60(d int, p0 int64, p1 int64) {
 	var s3 *Struct5
 	var s0 *Struct16
 	s3 = NewStruct5(int32(86), p0)
-	s0 = NewStruct16(int32(53), rt.AsObj[Struct2](any(nil)), int32(1), s3, m.g334, rt.ViewAs[Struct0](m.g337), p1)
+	s0 = NewStruct16(int32(53), (*Struct2)(nil), int32(1), s3, m.g334, rt.ViewAs[Struct0](m.g337), p1)
 	m.f18(d+1, rt.ViewAs[Struct7](s0))
 	panic(rt.ErrUnreachable)
 }
@@ -3017,12 +3017,12 @@ func (m *Instance) f63(d int, p0 *Struct8) *Struct1 {
 	var s0 *Struct0
 	var s0_1, s2 int64
 	var s1 *Struct5
-	if !(rt.IsType(rt.Box(p0), rttStruct16)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct16) {
 		panic(rt.ErrCast)
 	}
 	l1 = rt.ViewAs[Struct16](p0)
 	s0 = m.f64(d+1, rt.ViewAs[Struct8](l1))
-	if !(rt.IsType(rt.Box(s0), rttStruct5)) {
+	if !(s0 != nil && rt.ObjRTT(s0) == rttStruct5) {
 		panic(rt.ErrCast)
 	}
 	s0_1 = rt.ViewAs[Struct5](s0).F1
@@ -3044,7 +3044,7 @@ func (m *Instance) f64(d int, p0 *Struct8) *Struct0 {
 	}
 	var s1, s0 *Struct5
 	var s1_1 int64
-	if !(rt.IsType(rt.Box(p0), rttStruct16)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct16) {
 		panic(rt.ErrCast)
 	}
 	s1 = rt.ViewAs[Struct16](p0).F3
@@ -3064,7 +3064,7 @@ func (m *Instance) f65(d int, p0 *Struct0) int32 {
 	var s0_3 *Struct25
 	var s1_2 *Array3
 	var s1_3 *Struct0
-	if !(rt.IsType(rt.Box(p0), rttStruct9)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct9) {
 		panic(rt.ErrCast)
 	}
 	l1 = rt.ViewAs[Struct9](p0)
@@ -3074,7 +3074,7 @@ func (m *Instance) f65(d int, p0 *Struct0) int32 {
 	s0_2 = rt.B2I(s0_1 != s1)
 	if s0_2 != 0 {
 		s2 = l1.F1
-		s0_3 = NewStruct25(int32(57), rt.AsObj[Struct2](any(nil)), s2)
+		s0_3 = NewStruct25(int32(57), (*Struct2)(nil), s2)
 		m.f18(d+1, rt.ViewAs[Struct7](s0_3))
 		panic(rt.ErrUnreachable)
 	}
@@ -3082,7 +3082,7 @@ func (m *Instance) f65(d int, p0 *Struct0) int32 {
 	s1 = l1.F2
 	s0_2 = rt.B2I(s0_1 >= s1)
 	if s0_2 != 0 {
-		l1.F4 = rt.AsObj[Struct0](any(nil))
+		l1.F4 = (*Struct0)(nil)
 		return int32(0)
 	}
 	s1_1 = l1.F1
@@ -3100,7 +3100,7 @@ func (m *Instance) f66(d int, p0 *Struct0) *Struct0 {
 		rt.Exhausted()
 	}
 	var l1 *Struct0
-	if !(rt.IsType(rt.Box(p0), rttStruct9)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct9) {
 		panic(rt.ErrCast)
 	}
 	l1 = rt.ViewAs[Struct9](p0).F4
@@ -3117,7 +3117,7 @@ func (m *Instance) f67(d int, p0 *Struct0) *Struct1 {
 	}
 	var s1 *Struct4
 	var s1_1 *Struct1
-	if !(rt.IsType(rt.Box(p0), rttStruct25)) {
+	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct25) {
 		panic(rt.ErrCast)
 	}
 	s1 = rt.ViewAs[Struct25](p0).F2

@@ -3555,7 +3555,7 @@ func (m *Instance) f91(d int, p0 *Struct2, p1 *Struct30) {
 	l2 = s0
 	s1 = p1.F2
 	s1_1 = s1.F0
-	s0_1 = rt.FnOfRef(s1_1).(func(int, any) *Struct0)(d+1, rt.AnyOf(m.g58))
+	s0_1 = rt.FnOfRef(s1_1, rttFunc18).(func(int, any) *Struct0)(d+1, rt.AnyOf(m.g58))
 	if s0_1 == nil {
 		panic(rt.ErrNullRef)
 	}
@@ -4107,7 +4107,7 @@ func (m *Instance) f99(d int) int64 {
 B1:
 	s1_1 = s1.F2
 	s1_2 = s1_1.F0
-	s0_1 = rt.FnOfRef(s1_2).(func(int, any) *Struct0)(d+1, rt.AnyOf(s0))
+	s0_1 = rt.FnOfRef(s1_2, rttFunc18).(func(int, any) *Struct0)(d+1, rt.AnyOf(s0))
 	if !(s0_1 != nil && rt.ObjRTT(s0_1) == rttStruct7) {
 		panic(rt.ErrCast)
 	}
