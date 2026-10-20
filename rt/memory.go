@@ -3,6 +3,8 @@ package rt
 import (
 	"encoding/binary"
 	"math"
+	"sync"
+	"sync/atomic"
 )
 
 const PageSize = 65536
@@ -18,6 +20,10 @@ type Memory struct {
 	Max    uint64 // maximum pages (valid if HasMax)
 	HasMax bool
 	Is64   bool
+	Shared bool // shared between threads (see NewSharedMemory)
+
+	growMu sync.Mutex
+	wq     atomic.Pointer[waitQueue]
 }
 
 // NewMemory allocates a memory with min pages.
@@ -33,6 +39,10 @@ func (m *Memory) Pages() uint64 { return uint64(len(m.Data)) / PageSize }
 // Grow grows the memory by delta pages, returning the old size in pages or
 // -1 on failure.
 func (m *Memory) Grow(delta uint64) int64 {
+	if m.Shared {
+		m.growMu.Lock()
+		defer m.growMu.Unlock()
+	}
 	old := m.Pages()
 	if delta == 0 {
 		return int64(old)
@@ -50,6 +60,8 @@ func (m *Memory) Grow(delta uint64) int64 {
 	n := (old + delta) * PageSize
 	if uint64(cap(m.Data)) >= n {
 		m.Data = m.Data[:n]
+	} else if m.Shared {
+		return -1 // a shared memory cannot move
 	} else {
 		c := uint64(cap(m.Data)) * 2
 		if c < n {

@@ -657,7 +657,7 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 		case wasm.ExtMem:
 			fmt.Fprintf(&b, "m.mem%d = m.host.%s()\n", mi, hn)
 			l := im.Mem.Limits
-			fmt.Fprintf(&b, "rt.CheckMemoryImport(m.mem%d, %d, %d, %v, %v)\n", mi, l.Min, l.Max, l.HasMax, l.Is64)
+			fmt.Fprintf(&b, "rt.CheckMemoryImport(m.mem%d, %d, %d, %v, %v, %v)\n", mi, l.Min, l.Max, l.HasMax, l.Is64, l.Shared)
 			mi++
 		case wasm.ExtTable:
 			fmt.Fprintf(&b, "m.tab%d = m.host.%s()\n", ti, hn)
@@ -684,7 +684,11 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 	}
 	for i, mt := range m.Mems {
 		l := mt.Limits
-		fmt.Fprintf(&b, "m.mem%d = rt.NewMemory(%d, %d, %v, %v)\n", m.NumImportedMems+i, l.Min, l.Max, l.HasMax, l.Is64)
+		if l.Shared {
+			fmt.Fprintf(&b, "m.mem%d = rt.NewSharedMemory(%d, %d, %v)\n", m.NumImportedMems+i, l.Min, l.Max, l.Is64)
+		} else {
+			fmt.Fprintf(&b, "m.mem%d = rt.NewMemory(%d, %d, %v, %v)\n", m.NumImportedMems+i, l.Min, l.Max, l.HasMax, l.Is64)
+		}
 	}
 	for i := m.NumImportedFuncs; i < m.NumFuncs(); i++ {
 		if c.refFuncs[uint32(i)] {

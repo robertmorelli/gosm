@@ -42,6 +42,15 @@ type command struct {
 	Action   action  `json:"action"`
 	Expected []value `json:"expected"`
 	Text     string  `json:"text"`
+	// threads proposal
+	SharedModule string    `json:"shared_module"`
+	Commands     []command `json:"commands"`
+	Thread       string    `json:"thread"`
+}
+
+type thread struct {
+	st   *state
+	done chan struct{}
 }
 
 type script struct {
@@ -64,6 +73,7 @@ type state struct {
 	defs       map[string]string
 	res        Result
 	spectest   map[string]any
+	threads    map[string]*thread
 }
 
 // Run executes the script at path.
@@ -218,6 +228,38 @@ func (s *state) run(c command) {
 			return
 		}
 		s.res.Passed++
+	case "thread":
+		child := &state{
+			ctors: s.ctors, named: map[string]map[string]any{}, registered: map[string]map[string]any{},
+			defs: s.defs, spectest: s.spectest, threads: map[string]*thread{},
+		}
+		if c.SharedModule != "" {
+			child.named[c.SharedModule] = s.named[c.SharedModule]
+		}
+		t := &thread{st: child, done: make(chan struct{})}
+		if s.threads == nil {
+			s.threads = map[string]*thread{}
+		}
+		s.threads[c.Name] = t
+		go func() {
+			defer close(t.done)
+			for _, cc := range c.Commands {
+				child.run(cc)
+			}
+		}()
+	case "wait":
+		t := s.threads[c.Thread]
+		if t == nil {
+			s.fail(c, "unknown thread %q", c.Thread)
+			return
+		}
+		<-t.done
+		s.res.Passed += t.st.res.Passed
+		s.res.Failed += t.st.res.Failed
+		s.res.Skipped += t.st.res.Skipped
+		for _, f := range t.st.res.Failures {
+			s.res.Failures = append(s.res.Failures, "thread "+c.Thread+": "+f)
+		}
 	case "assert_invalid", "assert_malformed":
 		s.res.Skipped++
 	default:
@@ -536,6 +578,7 @@ func spectest() map[string]any {
 		"table":         tab,
 		"table64":       tab64,
 		"memory":        mem,
+		"shared_memory": rt.NewSharedMemory(1, 2, false),
 	}
 }
 

@@ -17,6 +17,7 @@ import (
 	"encoding/binary"
 	"io"
 	"os"
+	"sync/atomic"
 	"time"
 
 	"gosm/rt"
@@ -48,6 +49,13 @@ type Host struct {
 	Stdout io.Writer
 	Stderr io.Writer
 	start  time.Time
+
+	// Spawn, if set, implements wasi-threads: it is called on a new
+	// goroutine for every thread-spawn with the new thread id and the
+	// guest's argument. It should instantiate the module again (importing
+	// the same shared memory) and call its wasi_thread_start export.
+	Spawn  func(tid, arg int32)
+	nextID atomic.Int32
 }
 
 // New creates a host with the given arguments and environment (nil env
@@ -227,6 +235,16 @@ func (h *Host) M_wasi_snapshot_preview1_random_get(buf, n int32) int32 {
 }
 
 func (h *Host) M_wasi_snapshot_preview1_sched_yield() int32 { return ErrnoSuccess }
+
+// M_wasi_thread_spawn implements wasi-threads thread-spawn.
+func (h *Host) M_wasi_thread_spawn(arg int32) int32 {
+	if h.Spawn == nil {
+		return -1
+	}
+	tid := h.nextID.Add(1)
+	go h.Spawn(tid, arg)
+	return tid
+}
 
 // poll_oneoff supports clock subscriptions (sleeps); fd subscriptions
 // report immediate readiness.

@@ -21,12 +21,14 @@ func LinkErr(module, name, msg string) *LinkError {
 
 func linkFail(msg string) { panic(&LinkError{Msg: msg}) }
 
-func CheckMemoryImport(m *Memory, min, max uint64, hasMax, is64 bool) {
+func CheckMemoryImport(m *Memory, min, max uint64, hasMax, is64, shared bool) {
 	switch {
 	case m == nil:
 		linkFail("missing memory")
 	case m.Is64 != is64:
 		linkFail("incompatible import type: memory index type")
+	case m.Shared != shared:
+		linkFail("incompatible import type: memory sharing")
 	case m.Pages() < min:
 		linkFail("incompatible import type: memory too small")
 	case hasMax && (!m.HasMax || m.Max > max):

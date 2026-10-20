@@ -13,6 +13,9 @@ mkdir -p "$WORK"
 if [ ! -d "$WORK/spec" ]; then
   git clone --depth 1 https://github.com/WebAssembly/spec.git "$WORK/spec"
 fi
+if [ ! -d "$WORK/threads" ]; then
+  git clone --depth 1 https://github.com/WebAssembly/threads.git "$WORK/threads"
+fi
 OUT=$WORK/json
 if [ ! -d "$OUT" ]; then
   mkdir -p "$OUT" "$WORK/patched"
@@ -32,6 +35,12 @@ PY
     [ "$n" = "gc__type-subtyping" ] && src=$WORK/patched/type-subtyping.wast
     mkdir -p "$OUT/$n"
     wasm-tools json-from-wast "$src" -o "$OUT/$n/test.json" --wasm-dir "$OUT/$n/" || echo "skip $n"
+  done
+  cd "$WORK/threads/test/core/threads"
+  for f in *.wast; do
+    n=threads__${f%.wast}
+    mkdir -p "$OUT/$n"
+    wasm-tools json-from-wast "$f" -o "$OUT/$n/test.json" --wasm-dir "$OUT/$n/"
   done
   cd "$WORK/spec/test/legacy/exceptions/core"
   for f in *.wast; do

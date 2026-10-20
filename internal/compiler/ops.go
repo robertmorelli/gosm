@@ -607,3 +607,52 @@ func (f *fn) guardedIndirect(fexpr string, typeIdx uint32, ft *wasm.FuncType, ar
 		f.pushSlotVar(r, outs[i])
 	}
 }
+
+// atomicOp compiles a threads-proposal atomic instruction.
+func (f *fn) atomicOp(in *wasm.Instr) bool {
+	if in.Op.Prefix() != wasm.PrefixAtomic {
+		return false
+	}
+	c := f.c
+	info := wasm.AtomicOps[in.Op.Sub()]
+	if info.Kind == wasm.AtomicFence {
+		f.emit("rt.Fence()")
+		return true
+	}
+	mem := c.memRef(in.B)
+	t := wasm.ValType{Kind: info.Type}
+	res := func(e string) string {
+		if info.Type == wasm.I32 {
+			return "int32(uint32(" + e + "))"
+		}
+		return "int64(" + e + ")"
+	}
+	switch info.Kind {
+	case wasm.AtomicLoad:
+		addr := f.pop()
+		f.pushEager(t, res(fmt.Sprintf("%s.ALoad(%s, %d)", mem, f.ea(in.B, addr, in.Offset), info.Size)))
+	case wasm.AtomicStore:
+		v := f.pop()
+		addr := f.pop()
+		f.emit("%s.AStore(%s, %d, %s)", mem, f.ea(in.B, addr, in.Offset), info.Size, f.u64(v))
+	case wasm.AtomicRMW:
+		v := f.pop()
+		addr := f.pop()
+		f.pushEager(t, res(fmt.Sprintf("%s.ARMW(%s, %d, %d, %s)", mem, f.ea(in.B, addr, in.Offset), info.Size, info.RMW, f.u64(v))))
+	case wasm.AtomicCmpxchg:
+		repl := f.pop()
+		exp := f.pop()
+		addr := f.pop()
+		f.pushEager(t, res(fmt.Sprintf("%s.ACmpxchg(%s, %d, %s, %s)", mem, f.ea(in.B, addr, in.Offset), info.Size, f.u64(exp), f.u64(repl))))
+	case wasm.AtomicWait:
+		timeout := f.pop()
+		exp := f.pop()
+		addr := f.pop()
+		f.pushEager(ti32, fmt.Sprintf("%s.Wait(%s, %d, %s, %s)", mem, f.ea(in.B, addr, in.Offset), info.Size, f.u64(exp), f.ex(timeout)))
+	case wasm.AtomicNotify:
+		cnt := f.pop()
+		addr := f.pop()
+		f.pushEager(ti32, fmt.Sprintf("%s.Notify(%s, %s)", mem, f.ea(in.B, addr, in.Offset), f.u32(cnt)))
+	}
+	return true
+}

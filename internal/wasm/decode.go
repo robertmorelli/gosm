@@ -534,6 +534,8 @@ func readInstr(r *reader) Instr {
 		readMiscInstr(r, &in)
 	case c == PrefixSIMD:
 		readSIMDInstr(r, &in)
+	case c == PrefixAtomic:
+		readAtomicInstr(r, &in)
 	case c <= 0x0B || c == 0x0F || c == 0x19 || c == 0x1A || c == 0x1B || (c >= 0x45 && c <= 0xC4) || c == 0xD1 || c == 0xD3 || c == 0xD4:
 		// no immediates
 	default:

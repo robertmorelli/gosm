@@ -35,6 +35,17 @@ type cmd struct {
 	Type       string `json:"type"`
 	Filename   string `json:"filename"`
 	ModuleType string `json:"module_type"`
+	Commands   []cmd  `json:"commands"`
+}
+
+// flatten includes commands nested in thread blocks.
+func flatten(cs []cmd) []cmd {
+	var out []cmd
+	for _, c := range cs {
+		out = append(out, c)
+		out = append(out, flatten(c.Commands)...)
+	}
+	return out
 }
 
 type summary struct {
@@ -118,6 +129,7 @@ func runTest(name string) summary {
 	}
 	var s struct{ Commands []cmd }
 	json.Unmarshal(b, &s)
+	s.Commands = flatten(s.Commands)
 	dir := filepath.Join(*outDir, name)
 	os.RemoveAll(dir)
 	os.MkdirAll(dir, 0o755)

@@ -639,7 +639,7 @@ func (f *fn) instr(in *wasm.Instr) {
 	case wasm.OpF64Const:
 		f.pushConst(wasm.TF64, f64Lit(uint64(in.I64)), uint64(in.I64))
 	default:
-		if f.numeric(in) || f.memoryOp(in) || f.refOp(in) || f.gcOp(in) || f.tableOp(in) {
+		if f.numeric(in) || f.memoryOp(in) || f.refOp(in) || f.gcOp(in) || f.tableOp(in) || f.atomicOp(in) {
 			return
 		}
 		if in.Op.Prefix() == wasm.PrefixSIMD {

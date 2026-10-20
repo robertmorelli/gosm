@@ -701,6 +701,9 @@ func (f *fctx) instr2(in *wasm.Instr) {
 	case wasm.PrefixMisc:
 		f.miscInstr(in)
 		return
+	case wasm.PrefixAtomic:
+		f.atomicInstr(in)
+		return
 	case wasm.PrefixGC:
 		f.gcInstr(in)
 		return
@@ -978,5 +981,50 @@ func (f *fctx) gcInstr(in *wasm.Instr) {
 		f.push(wasm.TI32)
 	default:
 		fail("illegal opcode 0xfb %d", in.Op.Sub())
+	}
+}
+
+func (f *fctx) atomicInstr(in *wasm.Instr) {
+	info, ok := wasm.AtomicOps[in.Op.Sub()]
+	if !ok {
+		fail("illegal opcode 0x%x", uint32(in.Op))
+	}
+	if info.Kind == wasm.AtomicFence {
+		return
+	}
+	log2 := uint32(0)
+	for 1<<log2 < info.Size {
+		log2++
+	}
+	if in.Align != log2 {
+		fail("alignment must be equal to natural")
+	}
+	at := f.memArg(in, log2)
+	t := wasm.ValType{Kind: info.Type}
+	switch info.Kind {
+	case wasm.AtomicNotify:
+		f.popExpect(wasm.TI32)
+		f.popExpect(at)
+		f.push(wasm.TI32)
+	case wasm.AtomicWait:
+		f.popExpect(wasm.TI64)
+		f.popExpect(t)
+		f.popExpect(at)
+		f.push(wasm.TI32)
+	case wasm.AtomicLoad:
+		f.popExpect(at)
+		f.push(t)
+	case wasm.AtomicStore:
+		f.popExpect(t)
+		f.popExpect(at)
+	case wasm.AtomicRMW:
+		f.popExpect(t)
+		f.popExpect(at)
+		f.push(t)
+	case wasm.AtomicCmpxchg:
+		f.popExpect(t)
+		f.popExpect(t)
+		f.popExpect(at)
+		f.push(t)
 	}
 }
