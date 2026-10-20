@@ -1354,9 +1354,9 @@ func newMixinType11Default() *MixinType11 {
 	return p
 }
 
-var rttFunc47 = rt.CanonRTT(rt.KFunc, nil, true, "gaccc512e52a36d17d2b4ad72.0")
+var rttFunc46 = rt.CanonRTT(rt.KFunc, nil, true, "gaccc512e52a36d17d2b4ad72.0")
 
-var rttFunc48 = rt.CanonRTT(rt.KFunc, nil, true, "gb149bba08f59d4b5641589cb.0")
+var rttFunc47 = rt.CanonRTT(rt.KFunc, nil, true, "gb149bba08f59d4b5641589cb.0")
 
 var rttClassVTable12 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g3aa09ffd573885512d31b12a.0", func(p unsafe.Pointer) any { return (*ClassVTable12)(p) })
 
@@ -2203,7 +2203,7 @@ func newMixinType18Default() *MixinType18 {
 	return p
 }
 
-var rttFunc75 = rt.CanonRTT(rt.KFunc, nil, true, "gcde95dbb1a5d82fd154a79bc.0")
+var rttFunc72 = rt.CanonRTT(rt.KFunc, nil, true, "gcde95dbb1a5d82fd154a79bc.0")
 
 var rttClassVTable18 = rt.NewRTT(rt.KStruct, rttClassVTable3, true, "g23192d3540231edcb5209990.0", func(p unsafe.Pointer) any { return (*ClassVTable18)(p) })
 
@@ -2314,7 +2314,7 @@ func newMixinType19Default() *MixinType19 {
 	return p
 }
 
-var rttFunc79 = rt.CanonRTT(rt.KFunc, nil, true, "gb0a5ef0016c7f4741e879f43.0")
+var rttFunc76 = rt.CanonRTT(rt.KFunc, nil, true, "gb0a5ef0016c7f4741e879f43.0")
 
 var rttKotlinCharArray = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g8fda0063846403cb4f851dd8.0", func(p unsafe.Pointer) any { return (*KotlinCharArray)(p) })
 
@@ -2393,11 +2393,11 @@ func newMixinType20Default() *MixinType20 {
 	return p
 }
 
-var rttFunc83 = rt.CanonRTT(rt.KFunc, nil, true, "g2a62bcd81c13c6289fdb6b98.0")
+var rttFunc79 = rt.CanonRTT(rt.KFunc, nil, true, "g2a62bcd81c13c6289fdb6b98.0")
 
-var rttFunc84 = rt.CanonRTT(rt.KFunc, nil, true, "g2a62bcd81c13c6289fdb6b98.1")
+var rttFunc80 = rt.CanonRTT(rt.KFunc, nil, true, "g2a62bcd81c13c6289fdb6b98.1")
 
-var rttFunc85 = rt.CanonRTT(rt.KFunc, nil, true, "g2a62bcd81c13c6289fdb6b98.2")
+var rttFunc81 = rt.CanonRTT(rt.KFunc, nil, true, "g2a62bcd81c13c6289fdb6b98.2")
 
 var rttClassVTable19 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g2a62bcd81c13c6289fdb6b98.3", func(p unsafe.Pointer) any { return (*ClassVTable19)(p) })
 
@@ -3105,7 +3105,7 @@ func newMixinType27Default() *MixinType27 {
 	return p
 }
 
-var rttFunc107 = rt.CanonRTT(rt.KFunc, nil, true, "g3a5e257473e4b2b15f19905f.0")
+var rttFunc101 = rt.CanonRTT(rt.KFunc, nil, true, "g3a5e257473e4b2b15f19905f.0")
 
 var rttClassVTable24 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "g3a5e257473e4b2b15f19905f.1", func(p unsafe.Pointer) any { return (*ClassVTable24)(p) })
 
@@ -3214,7 +3214,7 @@ func newMixinType28Default() *MixinType28 {
 	return p
 }
 
-var rttFunc111 = rt.CanonRTT(rt.KFunc, nil, true, "gc674ad0c95b06064a9e74145.0")
+var rttFunc105 = rt.CanonRTT(rt.KFunc, nil, true, "gc674ad0c95b06064a9e74145.0")
 
 var rttClassVTable25 = rt.NewRTT(rt.KStruct, rttClassVTable22, true, "gc0c8ede28175138a74c66e58.0", func(p unsafe.Pointer) any { return (*ClassVTable25)(p) })
 
@@ -3329,7 +3329,7 @@ func newMixinType29Default() *MixinType29 {
 	return p
 }
 
-var rttFunc115 = rt.CanonRTT(rt.KFunc, nil, true, "gd3ee076b87d75954a08eb0db.0")
+var rttFunc109 = rt.CanonRTT(rt.KFunc, nil, true, "gd3ee076b87d75954a08eb0db.0")
 
 var rttClassVTable26 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "gf13e3c5e13bccc2525163c65.0", func(p unsafe.Pointer) any { return (*ClassVTable26)(p) })
 
@@ -3702,7 +3702,7 @@ func newMixinType33Default() *MixinType33 {
 	return p
 }
 
-var rttFunc129 = rt.CanonRTT(rt.KFunc, nil, true, "gcfcdf3d40167b2122cce1e74.0")
+var rttFunc120 = rt.CanonRTT(rt.KFunc, nil, true, "gcfcdf3d40167b2122cce1e74.0")
 
 var rttClassVTable28 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "ga7d841391dc731abf7c9e17f.0", func(p unsafe.Pointer) any { return (*ClassVTable28)(p) })
 
@@ -4286,7 +4286,7 @@ func newMixinType39Default() *MixinType39 {
 	return p
 }
 
-var rttFunc147 = rt.CanonRTT(rt.KFunc, nil, true, "g83a59473676bff2745a6a99f.0")
+var rttFunc136 = rt.CanonRTT(rt.KFunc, nil, true, "g83a59473676bff2745a6a99f.0")
 
 var rttClassVTable31 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g0c123a20ea44683becff541d.0", func(p unsafe.Pointer) any { return (*ClassVTable31)(p) })
 
@@ -4393,7 +4393,7 @@ func newMixinType40Default() *MixinType40 {
 	return p
 }
 
-var rttFunc151 = rt.CanonRTT(rt.KFunc, nil, true, "g6f63472313d837a6684dac56.0")
+var rttFunc140 = rt.CanonRTT(rt.KFunc, nil, true, "g6f63472313d837a6684dac56.0")
 
 var rttClassVTable32 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "ge80af908b3ce303feae88c0c.0", func(p unsafe.Pointer) any { return (*ClassVTable32)(p) })
 
@@ -4502,7 +4502,7 @@ func newMixinType41Default() *MixinType41 {
 	return p
 }
 
-var rttFunc155 = rt.CanonRTT(rt.KFunc, nil, true, "g108fb47b2515ca163a67194c.0")
+var rttFunc144 = rt.CanonRTT(rt.KFunc, nil, true, "g108fb47b2515ca163a67194c.0")
 
 var rttClassVTable33 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g039e66cdca5083b039c960eb.0", func(p unsafe.Pointer) any { return (*ClassVTable33)(p) })
 
@@ -6185,7 +6185,7 @@ func newMixinType60Default() *MixinType60 {
 	return p
 }
 
-var rttFunc216 = rt.CanonRTT(rt.KFunc, nil, true, "g01b6ed94185c67564418104f.0")
+var rttFunc189 = rt.CanonRTT(rt.KFunc, nil, true, "g01b6ed94185c67564418104f.0")
 
 var rttClassVTable37 = rt.NewRTT(rt.KStruct, rttClassVTable3, true, "gb55a0a97ecb875deaa64cac4.0", func(p unsafe.Pointer) any { return (*ClassVTable37)(p) })
 
@@ -6583,7 +6583,7 @@ func newClassVTable39Default() *ClassVTable39 {
 	return p
 }
 
-var rttFunc231 = rt.CanonRTT(rt.KFunc, nil, true, "g636c7bac45c31e4e809d6b5e.0")
+var rttFunc201 = rt.CanonRTT(rt.KFunc, nil, true, "g636c7bac45c31e4e809d6b5e.0")
 
 var rttKotlinFunction0 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g9e5ae0cf095dcb42ccb65d59.0", func(p unsafe.Pointer) any { return (*KotlinFunction0)(p) })
 
@@ -9027,7 +9027,7 @@ func newMixinType93Default() *MixinType93 {
 	return p
 }
 
-var rttFunc318 = rt.CanonRTT(rt.KFunc, nil, true, "g009201aa1ea2593440c4c5a9.0")
+var rttFunc266 = rt.CanonRTT(rt.KFunc, nil, true, "g009201aa1ea2593440c4c5a9.0")
 
 var rttClassVTable46 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g934b4d9c002ca36c9d9530ab.0", func(p unsafe.Pointer) any { return (*ClassVTable46)(p) })
 
@@ -9702,529 +9702,529 @@ func newClassITable16Default() *ClassITable16 {
 	return p
 }
 
-var rttFunc366 = rt.CanonRTT(rt.KFunc, nil, true, "g2aa67f818f2cca574639b278.0")
+var rttFunc292 = rt.CanonRTT(rt.KFunc, nil, true, "g2aa67f818f2cca574639b278.0")
 
-var rttFunc367 = rt.CanonRTT(rt.KFunc, nil, true, "g15a139b4434e0bde30f4ae22.0")
+var rttFunc293 = rt.CanonRTT(rt.KFunc, nil, true, "g15a139b4434e0bde30f4ae22.0")
 
-var rttFunc368 = rt.CanonRTT(rt.KFunc, nil, true, "g2c7dbf2b0a55c0885e2698e5.0")
+var rttFunc294 = rt.CanonRTT(rt.KFunc, nil, true, "g2c7dbf2b0a55c0885e2698e5.0")
 
-var rttFunc369 = rt.CanonRTT(rt.KFunc, nil, true, "g9cdd5d7aadeb47a5c53f55c8.0")
+var rttFunc295 = rt.CanonRTT(rt.KFunc, nil, true, "g9cdd5d7aadeb47a5c53f55c8.0")
 
-var rttFunc370 = rt.CanonRTT(rt.KFunc, nil, true, "gb6eb9f96e162d5e06309668c.0")
+var rttFunc296 = rt.CanonRTT(rt.KFunc, nil, true, "gb6eb9f96e162d5e06309668c.0")
 
-var rttFunc371 = rt.CanonRTT(rt.KFunc, nil, true, "gdcda79bf619f8cf80c2e5e29.0")
+var rttFunc297 = rt.CanonRTT(rt.KFunc, nil, true, "gdcda79bf619f8cf80c2e5e29.0")
 
-var rttFunc372 = rt.CanonRTT(rt.KFunc, nil, true, "gd6aa3896ac97dc8fe96209d6.0")
+var rttFunc298 = rt.CanonRTT(rt.KFunc, nil, true, "gd6aa3896ac97dc8fe96209d6.0")
 
-var rttFunc373 = rt.CanonRTT(rt.KFunc, nil, true, "g401143fd857a89965a27894a.0")
+var rttFunc299 = rt.CanonRTT(rt.KFunc, nil, true, "g401143fd857a89965a27894a.0")
 
-var rttFunc374 = rt.CanonRTT(rt.KFunc, nil, true, "gc9f29c3efb613c6b57e85f26.0")
+var rttFunc300 = rt.CanonRTT(rt.KFunc, nil, true, "gc9f29c3efb613c6b57e85f26.0")
 
-var rttFunc375 = rt.CanonRTT(rt.KFunc, nil, true, "ga4ea0dd3f1242dd22a9da67d.0")
+var rttFunc301 = rt.CanonRTT(rt.KFunc, nil, true, "ga4ea0dd3f1242dd22a9da67d.0")
 
-var rttFunc376 = rt.CanonRTT(rt.KFunc, nil, true, "g44b8e06a2b45ca1ca535f3a8.0")
+var rttFunc302 = rt.CanonRTT(rt.KFunc, nil, true, "g44b8e06a2b45ca1ca535f3a8.0")
 
-var rttFunc377 = rt.CanonRTT(rt.KFunc, nil, true, "g63f2284d8fefcaf3dbdc3a30.0")
+var rttFunc303 = rt.CanonRTT(rt.KFunc, nil, true, "g63f2284d8fefcaf3dbdc3a30.0")
 
-var rttFunc378 = rt.CanonRTT(rt.KFunc, nil, true, "g34761ca1a42fefb1a6142ab6.0")
+var rttFunc304 = rt.CanonRTT(rt.KFunc, nil, true, "g34761ca1a42fefb1a6142ab6.0")
 
-var rttFunc379 = rt.CanonRTT(rt.KFunc, nil, true, "g1ba208c75f6ab0d80fcf40c0.0")
+var rttFunc305 = rt.CanonRTT(rt.KFunc, nil, true, "g1ba208c75f6ab0d80fcf40c0.0")
 
-var rttFunc380 = rt.CanonRTT(rt.KFunc, nil, true, "g904075f4f7a36164d7f3745c.0")
+var rttFunc306 = rt.CanonRTT(rt.KFunc, nil, true, "g904075f4f7a36164d7f3745c.0")
 
-var rttFunc381 = rt.CanonRTT(rt.KFunc, nil, true, "g266a176489a91f6e326aaf67.0")
+var rttFunc307 = rt.CanonRTT(rt.KFunc, nil, true, "g266a176489a91f6e326aaf67.0")
 
-var rttFunc382 = rt.CanonRTT(rt.KFunc, nil, true, "gc7e0a99b0494133272bd9d84.0")
+var rttFunc308 = rt.CanonRTT(rt.KFunc, nil, true, "gc7e0a99b0494133272bd9d84.0")
 
-var rttFunc383 = rt.CanonRTT(rt.KFunc, nil, true, "g8161b2436f9b95940d4f87fa.0")
+var rttFunc309 = rt.CanonRTT(rt.KFunc, nil, true, "g8161b2436f9b95940d4f87fa.0")
 
-var rttFunc384 = rt.CanonRTT(rt.KFunc, nil, true, "gb92a264fea0095715cad8581.0")
+var rttFunc310 = rt.CanonRTT(rt.KFunc, nil, true, "gb92a264fea0095715cad8581.0")
 
-var rttFunc385 = rt.CanonRTT(rt.KFunc, nil, true, "gcc229fd8138def408f62fba1.0")
+var rttFunc311 = rt.CanonRTT(rt.KFunc, nil, true, "gcc229fd8138def408f62fba1.0")
 
-var rttFunc386 = rt.CanonRTT(rt.KFunc, nil, true, "g95d92df3d3933fa6fce3416e.0")
+var rttFunc312 = rt.CanonRTT(rt.KFunc, nil, true, "g95d92df3d3933fa6fce3416e.0")
 
-var rttFunc387 = rt.CanonRTT(rt.KFunc, nil, true, "g59f43b2a919058ad306ccdf6.0")
+var rttFunc313 = rt.CanonRTT(rt.KFunc, nil, true, "g59f43b2a919058ad306ccdf6.0")
 
-var rttFunc388 = rt.CanonRTT(rt.KFunc, nil, true, "gc901190a829c8f220d69402f.0")
+var rttFunc314 = rt.CanonRTT(rt.KFunc, nil, true, "gc901190a829c8f220d69402f.0")
 
-var rttFunc389 = rt.CanonRTT(rt.KFunc, nil, true, "gf8de437eeaa85e7f29c6a776.0")
+var rttFunc315 = rt.CanonRTT(rt.KFunc, nil, true, "gf8de437eeaa85e7f29c6a776.0")
 
-var rttFunc390 = rt.CanonRTT(rt.KFunc, nil, true, "g95bf8e4b5b3b2bd589e82eb7.0")
+var rttFunc316 = rt.CanonRTT(rt.KFunc, nil, true, "g95bf8e4b5b3b2bd589e82eb7.0")
 
-var rttFunc391 = rt.CanonRTT(rt.KFunc, nil, true, "g1651f122f1c3a06255cd617a.0")
+var rttFunc317 = rt.CanonRTT(rt.KFunc, nil, true, "g1651f122f1c3a06255cd617a.0")
 
-var rttFunc392 = rt.CanonRTT(rt.KFunc, nil, true, "ge498035e3b258af79a0f2c92.0")
+var rttFunc318 = rt.CanonRTT(rt.KFunc, nil, true, "ge498035e3b258af79a0f2c92.0")
 
-var rttFunc393 = rt.CanonRTT(rt.KFunc, nil, true, "ge1ef1ea280da4a16b8d7f310.0")
+var rttFunc319 = rt.CanonRTT(rt.KFunc, nil, true, "ge1ef1ea280da4a16b8d7f310.0")
 
-var rttFunc394 = rt.CanonRTT(rt.KFunc, nil, true, "g3d515c55192bceb33a580593.0")
+var rttFunc320 = rt.CanonRTT(rt.KFunc, nil, true, "g3d515c55192bceb33a580593.0")
 
-var rttFunc395 = rt.CanonRTT(rt.KFunc, nil, true, "g34728d403fdacc1963b8e1e2.0")
+var rttFunc321 = rt.CanonRTT(rt.KFunc, nil, true, "g34728d403fdacc1963b8e1e2.0")
 
-var rttFunc396 = rt.CanonRTT(rt.KFunc, nil, true, "g8510b896ff31b00c8843d969.0")
+var rttFunc322 = rt.CanonRTT(rt.KFunc, nil, true, "g8510b896ff31b00c8843d969.0")
 
-var rttFunc397 = rt.CanonRTT(rt.KFunc, nil, true, "g23f0df043710a79feed3537b.0")
+var rttFunc323 = rt.CanonRTT(rt.KFunc, nil, true, "g23f0df043710a79feed3537b.0")
 
-var rttFunc398 = rt.CanonRTT(rt.KFunc, nil, true, "g3d01dfb0e2b4fec26b7e2f85.0")
+var rttFunc324 = rt.CanonRTT(rt.KFunc, nil, true, "g3d01dfb0e2b4fec26b7e2f85.0")
 
-var rttFunc399 = rt.CanonRTT(rt.KFunc, nil, true, "g17763b8a5d18fe7a8dda8ac2.0")
+var rttFunc325 = rt.CanonRTT(rt.KFunc, nil, true, "g17763b8a5d18fe7a8dda8ac2.0")
 
-var rttFunc400 = rt.CanonRTT(rt.KFunc, nil, true, "g8bb4f292aa0a4a7f6b9f1b73.0")
+var rttFunc326 = rt.CanonRTT(rt.KFunc, nil, true, "g8bb4f292aa0a4a7f6b9f1b73.0")
 
-var rttFunc401 = rt.CanonRTT(rt.KFunc, nil, true, "ge01a038cf4162d72b602c61b.0")
+var rttFunc327 = rt.CanonRTT(rt.KFunc, nil, true, "ge01a038cf4162d72b602c61b.0")
 
-var rttFunc402 = rt.CanonRTT(rt.KFunc, nil, true, "g1d1fe69dc4cc5fc88b406f5a.0")
+var rttFunc328 = rt.CanonRTT(rt.KFunc, nil, true, "g1d1fe69dc4cc5fc88b406f5a.0")
 
-var rttFunc403 = rt.CanonRTT(rt.KFunc, nil, true, "gb9283ad477e16e8876bcfb86.0")
+var rttFunc329 = rt.CanonRTT(rt.KFunc, nil, true, "gb9283ad477e16e8876bcfb86.0")
 
-var rttFunc404 = rt.CanonRTT(rt.KFunc, nil, true, "gb94ace0c779b03180e0cb8d0.0")
+var rttFunc330 = rt.CanonRTT(rt.KFunc, nil, true, "gb94ace0c779b03180e0cb8d0.0")
 
-var rttFunc405 = rt.CanonRTT(rt.KFunc, nil, true, "gea29a6a7d8219f3d04247799.0")
+var rttFunc331 = rt.CanonRTT(rt.KFunc, nil, true, "gea29a6a7d8219f3d04247799.0")
 
-var rttFunc406 = rt.CanonRTT(rt.KFunc, nil, true, "g7d4b6aaa4b9b6f82d36db5eb.0")
+var rttFunc332 = rt.CanonRTT(rt.KFunc, nil, true, "g7d4b6aaa4b9b6f82d36db5eb.0")
 
-var rttFunc407 = rt.CanonRTT(rt.KFunc, nil, true, "g33897516bffa13238e79e29e.0")
+var rttFunc333 = rt.CanonRTT(rt.KFunc, nil, true, "g33897516bffa13238e79e29e.0")
 
-var rttFunc408 = rt.CanonRTT(rt.KFunc, nil, true, "g7e60e6c292ea4727016c8f95.0")
+var rttFunc334 = rt.CanonRTT(rt.KFunc, nil, true, "g7e60e6c292ea4727016c8f95.0")
 
-var rttFunc409 = rt.CanonRTT(rt.KFunc, nil, true, "g529bc38b7751c8c9108a87cc.0")
+var rttFunc335 = rt.CanonRTT(rt.KFunc, nil, true, "g529bc38b7751c8c9108a87cc.0")
 
-var rttFunc410 = rt.CanonRTT(rt.KFunc, nil, true, "gc35fe20ff51bac33dac519fe.0")
+var rttFunc336 = rt.CanonRTT(rt.KFunc, nil, true, "gc35fe20ff51bac33dac519fe.0")
 
-var rttFunc411 = rt.CanonRTT(rt.KFunc, nil, true, "ge5b0052af79f308880fd78e5.0")
+var rttFunc337 = rt.CanonRTT(rt.KFunc, nil, true, "ge5b0052af79f308880fd78e5.0")
 
-var rttFunc412 = rt.CanonRTT(rt.KFunc, nil, true, "ge2685cc2866983235219fe5f.0")
+var rttFunc338 = rt.CanonRTT(rt.KFunc, nil, true, "ge2685cc2866983235219fe5f.0")
 
-var rttFunc413 = rt.CanonRTT(rt.KFunc, nil, true, "g9ef06e6952c936e3a66cb9a6.0")
+var rttFunc339 = rt.CanonRTT(rt.KFunc, nil, true, "g9ef06e6952c936e3a66cb9a6.0")
 
-var rttFunc414 = rt.CanonRTT(rt.KFunc, nil, true, "g0eefb0151d9efde9ee81fce5.0")
+var rttFunc340 = rt.CanonRTT(rt.KFunc, nil, true, "g0eefb0151d9efde9ee81fce5.0")
 
-var rttFunc415 = rt.CanonRTT(rt.KFunc, nil, true, "g97f48469ba0a026560195a33.0")
+var rttFunc341 = rt.CanonRTT(rt.KFunc, nil, true, "g97f48469ba0a026560195a33.0")
 
-var rttFunc416 = rt.CanonRTT(rt.KFunc, nil, true, "g10729946e581aa8fc842ec67.0")
+var rttFunc342 = rt.CanonRTT(rt.KFunc, nil, true, "g10729946e581aa8fc842ec67.0")
 
-var rttFunc417 = rt.CanonRTT(rt.KFunc, nil, true, "ga89c8e636bf7aecf547735b2.0")
+var rttFunc343 = rt.CanonRTT(rt.KFunc, nil, true, "ga89c8e636bf7aecf547735b2.0")
 
-var rttFunc418 = rt.CanonRTT(rt.KFunc, nil, true, "g954301bb738c33f2781a8a08.0")
+var rttFunc344 = rt.CanonRTT(rt.KFunc, nil, true, "g954301bb738c33f2781a8a08.0")
 
-var rttFunc419 = rt.CanonRTT(rt.KFunc, nil, true, "g7b2eefec016c60681e56bb61.0")
+var rttFunc345 = rt.CanonRTT(rt.KFunc, nil, true, "g7b2eefec016c60681e56bb61.0")
 
-var rttFunc420 = rt.CanonRTT(rt.KFunc, nil, true, "g34e1c835c5caf203030b0dce.0")
+var rttFunc346 = rt.CanonRTT(rt.KFunc, nil, true, "g34e1c835c5caf203030b0dce.0")
 
-var rttFunc421 = rt.CanonRTT(rt.KFunc, nil, true, "g1f9fee1cd89483a12a18eefb.0")
+var rttFunc347 = rt.CanonRTT(rt.KFunc, nil, true, "g1f9fee1cd89483a12a18eefb.0")
 
-var rttFunc422 = rt.CanonRTT(rt.KFunc, nil, true, "gafdee90bbc1967142b07bd70.0")
+var rttFunc348 = rt.CanonRTT(rt.KFunc, nil, true, "gafdee90bbc1967142b07bd70.0")
 
-var rttFunc423 = rt.CanonRTT(rt.KFunc, nil, true, "gdeea8f06cb5b981b7b74b758.0")
+var rttFunc349 = rt.CanonRTT(rt.KFunc, nil, true, "gdeea8f06cb5b981b7b74b758.0")
 
-var rttFunc424 = rt.CanonRTT(rt.KFunc, nil, true, "g71b502efdf0eb8dc0209d5a4.0")
+var rttFunc350 = rt.CanonRTT(rt.KFunc, nil, true, "g71b502efdf0eb8dc0209d5a4.0")
 
-var rttFunc425 = rt.CanonRTT(rt.KFunc, nil, true, "g54c169266568384c22e5c31f.0")
+var rttFunc351 = rt.CanonRTT(rt.KFunc, nil, true, "g54c169266568384c22e5c31f.0")
 
-var rttFunc426 = rt.CanonRTT(rt.KFunc, nil, true, "g31547c56209eda17bbf3a96c.0")
+var rttFunc352 = rt.CanonRTT(rt.KFunc, nil, true, "g31547c56209eda17bbf3a96c.0")
 
-var rttFunc427 = rt.CanonRTT(rt.KFunc, nil, true, "g30b56be65009e99144396c33.0")
+var rttFunc353 = rt.CanonRTT(rt.KFunc, nil, true, "g30b56be65009e99144396c33.0")
 
-var rttFunc428 = rt.CanonRTT(rt.KFunc, nil, true, "gfac9539d2fab05bbda225887.0")
+var rttFunc354 = rt.CanonRTT(rt.KFunc, nil, true, "gfac9539d2fab05bbda225887.0")
 
-var rttFunc429 = rt.CanonRTT(rt.KFunc, nil, true, "g899c9e1981a7a06fb15645c8.0")
+var rttFunc355 = rt.CanonRTT(rt.KFunc, nil, true, "g899c9e1981a7a06fb15645c8.0")
 
-var rttFunc430 = rt.CanonRTT(rt.KFunc, nil, true, "g7c29616b96cefd1b241d2581.0")
+var rttFunc356 = rt.CanonRTT(rt.KFunc, nil, true, "g7c29616b96cefd1b241d2581.0")
 
-var rttFunc431 = rt.CanonRTT(rt.KFunc, nil, true, "g73696148f4ce6290183afc51.0")
+var rttFunc357 = rt.CanonRTT(rt.KFunc, nil, true, "g73696148f4ce6290183afc51.0")
 
-var rttFunc432 = rt.CanonRTT(rt.KFunc, nil, true, "gf8394c853cd585adb1780cdb.0")
+var rttFunc358 = rt.CanonRTT(rt.KFunc, nil, true, "gf8394c853cd585adb1780cdb.0")
 
-var rttFunc433 = rt.CanonRTT(rt.KFunc, nil, true, "ge4ca631139ee67edd3273c18.0")
+var rttFunc359 = rt.CanonRTT(rt.KFunc, nil, true, "ge4ca631139ee67edd3273c18.0")
 
-var rttFunc434 = rt.CanonRTT(rt.KFunc, nil, true, "gd4d66a60efcc0fb304648585.0")
+var rttFunc360 = rt.CanonRTT(rt.KFunc, nil, true, "gd4d66a60efcc0fb304648585.0")
 
-var rttFunc435 = rt.CanonRTT(rt.KFunc, nil, true, "g7ea1f098428f21254c1113b3.0")
+var rttFunc361 = rt.CanonRTT(rt.KFunc, nil, true, "g7ea1f098428f21254c1113b3.0")
 
-var rttFunc436 = rt.CanonRTT(rt.KFunc, nil, true, "g2429682e2f19adaf60e2b9da.0")
+var rttFunc362 = rt.CanonRTT(rt.KFunc, nil, true, "g2429682e2f19adaf60e2b9da.0")
 
-var rttFunc437 = rt.CanonRTT(rt.KFunc, nil, true, "g42a049b752cc719473129f68.0")
+var rttFunc363 = rt.CanonRTT(rt.KFunc, nil, true, "g42a049b752cc719473129f68.0")
 
-var rttFunc438 = rt.CanonRTT(rt.KFunc, nil, true, "g72ed556e5a490a77fcfd1354.0")
+var rttFunc364 = rt.CanonRTT(rt.KFunc, nil, true, "g72ed556e5a490a77fcfd1354.0")
 
-var rttFunc439 = rt.CanonRTT(rt.KFunc, nil, true, "g5a8af861ab3d1497e49be09b.0")
+var rttFunc365 = rt.CanonRTT(rt.KFunc, nil, true, "g5a8af861ab3d1497e49be09b.0")
 
-var rttFunc440 = rt.CanonRTT(rt.KFunc, nil, true, "g3a805ac767fe9cf307a7f50f.0")
+var rttFunc366 = rt.CanonRTT(rt.KFunc, nil, true, "g3a805ac767fe9cf307a7f50f.0")
 
-var rttFunc441 = rt.CanonRTT(rt.KFunc, nil, true, "g6986f00f5a1153078334ce02.0")
+var rttFunc367 = rt.CanonRTT(rt.KFunc, nil, true, "g6986f00f5a1153078334ce02.0")
 
-var rttFunc442 = rt.CanonRTT(rt.KFunc, nil, true, "gf609cb364fa2bff191d910c4.0")
+var rttFunc368 = rt.CanonRTT(rt.KFunc, nil, true, "gf609cb364fa2bff191d910c4.0")
 
-var rttFunc443 = rt.CanonRTT(rt.KFunc, nil, true, "g941397cc173ebd8b629cfb69.0")
+var rttFunc369 = rt.CanonRTT(rt.KFunc, nil, true, "g941397cc173ebd8b629cfb69.0")
 
-var rttFunc444 = rt.CanonRTT(rt.KFunc, nil, true, "g22ea2d087cedd7db727bf743.0")
+var rttFunc370 = rt.CanonRTT(rt.KFunc, nil, true, "g22ea2d087cedd7db727bf743.0")
 
-var rttFunc445 = rt.CanonRTT(rt.KFunc, nil, true, "g6d20a70a31382222cdfe4b55.0")
+var rttFunc371 = rt.CanonRTT(rt.KFunc, nil, true, "g6d20a70a31382222cdfe4b55.0")
 
-var rttFunc446 = rt.CanonRTT(rt.KFunc, nil, true, "g1dac5a1deccc1ed2fa4087ae.0")
+var rttFunc372 = rt.CanonRTT(rt.KFunc, nil, true, "g1dac5a1deccc1ed2fa4087ae.0")
 
-var rttFunc447 = rt.CanonRTT(rt.KFunc, nil, true, "g962df8bcb63fc8300b02f06b.0")
+var rttFunc373 = rt.CanonRTT(rt.KFunc, nil, true, "g962df8bcb63fc8300b02f06b.0")
 
-var rttFunc448 = rt.CanonRTT(rt.KFunc, nil, true, "g0f38969c512755cf5d0b1604.0")
+var rttFunc374 = rt.CanonRTT(rt.KFunc, nil, true, "g0f38969c512755cf5d0b1604.0")
 
-var rttFunc449 = rt.CanonRTT(rt.KFunc, nil, true, "g57a69e8b8f326d3f5ecdc3f9.0")
+var rttFunc375 = rt.CanonRTT(rt.KFunc, nil, true, "g57a69e8b8f326d3f5ecdc3f9.0")
 
-var rttFunc450 = rt.CanonRTT(rt.KFunc, nil, true, "ge380a091dd5f45ce7d850ca5.0")
+var rttFunc376 = rt.CanonRTT(rt.KFunc, nil, true, "ge380a091dd5f45ce7d850ca5.0")
 
-var rttFunc451 = rt.CanonRTT(rt.KFunc, nil, true, "gfd472b651488abc78519bed6.0")
+var rttFunc377 = rt.CanonRTT(rt.KFunc, nil, true, "gfd472b651488abc78519bed6.0")
 
-var rttFunc452 = rt.CanonRTT(rt.KFunc, nil, true, "gc9cc8f051847bf36b5677a59.0")
+var rttFunc378 = rt.CanonRTT(rt.KFunc, nil, true, "gc9cc8f051847bf36b5677a59.0")
 
-var rttFunc453 = rt.CanonRTT(rt.KFunc, nil, true, "gff71458ea15337488804b894.0")
+var rttFunc379 = rt.CanonRTT(rt.KFunc, nil, true, "gff71458ea15337488804b894.0")
 
-var rttFunc454 = rt.CanonRTT(rt.KFunc, nil, true, "g4dbb330e1a22e23dff247713.0")
+var rttFunc380 = rt.CanonRTT(rt.KFunc, nil, true, "g4dbb330e1a22e23dff247713.0")
 
-var rttFunc455 = rt.CanonRTT(rt.KFunc, nil, true, "g2c407e271e9b96b96a2476a5.0")
+var rttFunc381 = rt.CanonRTT(rt.KFunc, nil, true, "g2c407e271e9b96b96a2476a5.0")
 
-var rttFunc456 = rt.CanonRTT(rt.KFunc, nil, true, "g0c92aa8e8c8d90e085b275e9.0")
+var rttFunc382 = rt.CanonRTT(rt.KFunc, nil, true, "g0c92aa8e8c8d90e085b275e9.0")
 
-var rttFunc457 = rt.CanonRTT(rt.KFunc, nil, true, "g13c4c1d97e1d6d419f619c44.0")
+var rttFunc383 = rt.CanonRTT(rt.KFunc, nil, true, "g13c4c1d97e1d6d419f619c44.0")
 
-var rttFunc458 = rt.CanonRTT(rt.KFunc, nil, true, "gd15ada18e32874f54ed5347a.0")
+var rttFunc384 = rt.CanonRTT(rt.KFunc, nil, true, "gd15ada18e32874f54ed5347a.0")
 
-var rttFunc459 = rt.CanonRTT(rt.KFunc, nil, true, "gb2a2a05e8b930ae86243c9a3.0")
+var rttFunc385 = rt.CanonRTT(rt.KFunc, nil, true, "gb2a2a05e8b930ae86243c9a3.0")
 
-var rttFunc460 = rt.CanonRTT(rt.KFunc, nil, true, "geb20883015970440955e0a82.0")
+var rttFunc386 = rt.CanonRTT(rt.KFunc, nil, true, "geb20883015970440955e0a82.0")
 
-var rttFunc461 = rt.CanonRTT(rt.KFunc, nil, true, "gdf445fd11f517d560bab93d1.0")
+var rttFunc387 = rt.CanonRTT(rt.KFunc, nil, true, "gdf445fd11f517d560bab93d1.0")
 
-var rttFunc462 = rt.CanonRTT(rt.KFunc, nil, true, "gab5c4a1a79f7288412caf40e.0")
+var rttFunc388 = rt.CanonRTT(rt.KFunc, nil, true, "gab5c4a1a79f7288412caf40e.0")
 
-var rttFunc463 = rt.CanonRTT(rt.KFunc, nil, true, "ge934ed8a708bced767190523.0")
+var rttFunc389 = rt.CanonRTT(rt.KFunc, nil, true, "ge934ed8a708bced767190523.0")
 
-var rttFunc464 = rt.CanonRTT(rt.KFunc, nil, true, "g169bce6119e8c070f0e684c1.0")
+var rttFunc390 = rt.CanonRTT(rt.KFunc, nil, true, "g169bce6119e8c070f0e684c1.0")
 
-var rttFunc465 = rt.CanonRTT(rt.KFunc, nil, true, "g7bea5e3df005bb1bf170c1d4.0")
+var rttFunc391 = rt.CanonRTT(rt.KFunc, nil, true, "g7bea5e3df005bb1bf170c1d4.0")
 
-var rttFunc466 = rt.CanonRTT(rt.KFunc, nil, true, "gf1bdc35b248e3db5c1678bf7.0")
+var rttFunc392 = rt.CanonRTT(rt.KFunc, nil, true, "gf1bdc35b248e3db5c1678bf7.0")
 
-var rttFunc467 = rt.CanonRTT(rt.KFunc, nil, true, "g3a1a9e4e98d87a371d14e440.0")
+var rttFunc393 = rt.CanonRTT(rt.KFunc, nil, true, "g3a1a9e4e98d87a371d14e440.0")
 
-var rttFunc468 = rt.CanonRTT(rt.KFunc, nil, true, "g92430aa3207d88a8c94f2900.0")
+var rttFunc394 = rt.CanonRTT(rt.KFunc, nil, true, "g92430aa3207d88a8c94f2900.0")
 
-var rttFunc469 = rt.CanonRTT(rt.KFunc, nil, true, "g89e4d3d6adf30992b16b50b5.0")
+var rttFunc395 = rt.CanonRTT(rt.KFunc, nil, true, "g89e4d3d6adf30992b16b50b5.0")
 
-var rttFunc470 = rt.CanonRTT(rt.KFunc, nil, true, "g963821d2b94087e3e8f91937.0")
+var rttFunc396 = rt.CanonRTT(rt.KFunc, nil, true, "g963821d2b94087e3e8f91937.0")
 
-var rttFunc471 = rt.CanonRTT(rt.KFunc, nil, true, "gb251733073963da77f3648f4.0")
+var rttFunc397 = rt.CanonRTT(rt.KFunc, nil, true, "gb251733073963da77f3648f4.0")
 
-var rttFunc472 = rt.CanonRTT(rt.KFunc, nil, true, "ga27e35a8a352a5930cfe6b6f.0")
+var rttFunc398 = rt.CanonRTT(rt.KFunc, nil, true, "ga27e35a8a352a5930cfe6b6f.0")
 
-var rttFunc473 = rt.CanonRTT(rt.KFunc, nil, true, "g1552d2d805caedee70705a08.0")
+var rttFunc399 = rt.CanonRTT(rt.KFunc, nil, true, "g1552d2d805caedee70705a08.0")
 
-var rttFunc474 = rt.CanonRTT(rt.KFunc, nil, true, "g0a374454b98c46c0a5f170a5.0")
+var rttFunc400 = rt.CanonRTT(rt.KFunc, nil, true, "g0a374454b98c46c0a5f170a5.0")
 
-var rttFunc475 = rt.CanonRTT(rt.KFunc, nil, true, "ge4a3f8d716c7deff551e28c6.0")
+var rttFunc401 = rt.CanonRTT(rt.KFunc, nil, true, "ge4a3f8d716c7deff551e28c6.0")
 
-var rttFunc476 = rt.CanonRTT(rt.KFunc, nil, true, "gf0e4b808b6112f3a01c8b799.0")
+var rttFunc402 = rt.CanonRTT(rt.KFunc, nil, true, "gf0e4b808b6112f3a01c8b799.0")
 
-var rttFunc477 = rt.CanonRTT(rt.KFunc, nil, true, "g3ea3f61a0b9b0063974eb218.0")
+var rttFunc403 = rt.CanonRTT(rt.KFunc, nil, true, "g3ea3f61a0b9b0063974eb218.0")
 
-var rttFunc478 = rt.CanonRTT(rt.KFunc, nil, true, "g7401cfed596b91adc96eeeaa.0")
+var rttFunc404 = rt.CanonRTT(rt.KFunc, nil, true, "g7401cfed596b91adc96eeeaa.0")
 
-var rttFunc479 = rt.CanonRTT(rt.KFunc, nil, true, "g80a851e7c9508de0dbd4b0e8.0")
+var rttFunc405 = rt.CanonRTT(rt.KFunc, nil, true, "g80a851e7c9508de0dbd4b0e8.0")
 
-var rttFunc480 = rt.CanonRTT(rt.KFunc, nil, true, "g3012df7828f6c53f2cf6ed2a.0")
+var rttFunc406 = rt.CanonRTT(rt.KFunc, nil, true, "g3012df7828f6c53f2cf6ed2a.0")
 
-var rttFunc481 = rt.CanonRTT(rt.KFunc, nil, true, "g1f003065244565d7d4a16ced.0")
+var rttFunc407 = rt.CanonRTT(rt.KFunc, nil, true, "g1f003065244565d7d4a16ced.0")
 
-var rttFunc482 = rt.CanonRTT(rt.KFunc, nil, true, "g33a51c00cb5cd6205b853497.0")
+var rttFunc408 = rt.CanonRTT(rt.KFunc, nil, true, "g33a51c00cb5cd6205b853497.0")
 
-var rttFunc483 = rt.CanonRTT(rt.KFunc, nil, true, "gaf9d8c2be04766c4d8b61081.0")
+var rttFunc409 = rt.CanonRTT(rt.KFunc, nil, true, "gaf9d8c2be04766c4d8b61081.0")
 
-var rttFunc484 = rt.CanonRTT(rt.KFunc, nil, true, "gacad2a3f6a19672fd721c8ef.0")
+var rttFunc410 = rt.CanonRTT(rt.KFunc, nil, true, "gacad2a3f6a19672fd721c8ef.0")
 
-var rttFunc485 = rt.CanonRTT(rt.KFunc, nil, true, "gb84fb1a94caa257495d0101b.0")
+var rttFunc411 = rt.CanonRTT(rt.KFunc, nil, true, "gb84fb1a94caa257495d0101b.0")
 
-var rttFunc486 = rt.CanonRTT(rt.KFunc, nil, true, "g91296a499023572c6451243e.0")
+var rttFunc412 = rt.CanonRTT(rt.KFunc, nil, true, "g91296a499023572c6451243e.0")
 
-var rttFunc487 = rt.CanonRTT(rt.KFunc, nil, true, "g1f3bf97dbc9b3a8ba24d24b4.0")
+var rttFunc413 = rt.CanonRTT(rt.KFunc, nil, true, "g1f3bf97dbc9b3a8ba24d24b4.0")
 
-var rttFunc488 = rt.CanonRTT(rt.KFunc, nil, true, "ga341a08e5210c546e4fa27d5.0")
+var rttFunc414 = rt.CanonRTT(rt.KFunc, nil, true, "ga341a08e5210c546e4fa27d5.0")
 
-var rttFunc489 = rt.CanonRTT(rt.KFunc, nil, true, "g60049854dac23c06f70da74c.0")
+var rttFunc415 = rt.CanonRTT(rt.KFunc, nil, true, "g60049854dac23c06f70da74c.0")
 
-var rttFunc490 = rt.CanonRTT(rt.KFunc, nil, true, "g7d21d73a6f65bde1dfc133d7.0")
+var rttFunc416 = rt.CanonRTT(rt.KFunc, nil, true, "g7d21d73a6f65bde1dfc133d7.0")
 
-var rttFunc491 = rt.CanonRTT(rt.KFunc, nil, true, "gccb5ddf87f1538b155203d1e.0")
+var rttFunc417 = rt.CanonRTT(rt.KFunc, nil, true, "gccb5ddf87f1538b155203d1e.0")
 
-var rttFunc492 = rt.CanonRTT(rt.KFunc, nil, true, "g72130e5f456281d387a49be2.0")
+var rttFunc418 = rt.CanonRTT(rt.KFunc, nil, true, "g72130e5f456281d387a49be2.0")
 
-var rttFunc493 = rt.CanonRTT(rt.KFunc, nil, true, "g2538e5f78b5291c84733b82c.0")
+var rttFunc419 = rt.CanonRTT(rt.KFunc, nil, true, "g2538e5f78b5291c84733b82c.0")
 
-var rttFunc494 = rt.CanonRTT(rt.KFunc, nil, true, "gb9028c0dae7620bd8da8d523.0")
+var rttFunc420 = rt.CanonRTT(rt.KFunc, nil, true, "gb9028c0dae7620bd8da8d523.0")
 
-var rttFunc495 = rt.CanonRTT(rt.KFunc, nil, true, "g3a3d3ff8e9390088dff0613b.0")
+var rttFunc421 = rt.CanonRTT(rt.KFunc, nil, true, "g3a3d3ff8e9390088dff0613b.0")
 
-var rttFunc496 = rt.CanonRTT(rt.KFunc, nil, true, "g9fc0626e98015fe5fbad61b7.0")
+var rttFunc422 = rt.CanonRTT(rt.KFunc, nil, true, "g9fc0626e98015fe5fbad61b7.0")
 
-var rttFunc497 = rt.CanonRTT(rt.KFunc, nil, true, "g0574936c02ecb5edb0a2d81a.0")
+var rttFunc423 = rt.CanonRTT(rt.KFunc, nil, true, "g0574936c02ecb5edb0a2d81a.0")
 
-var rttFunc498 = rt.CanonRTT(rt.KFunc, nil, true, "g0061d1025e552f481c37a918.0")
+var rttFunc424 = rt.CanonRTT(rt.KFunc, nil, true, "g0061d1025e552f481c37a918.0")
 
-var rttFunc499 = rt.CanonRTT(rt.KFunc, nil, true, "g864d7aaa7853bb2a7cf1575e.0")
+var rttFunc425 = rt.CanonRTT(rt.KFunc, nil, true, "g864d7aaa7853bb2a7cf1575e.0")
 
-var rttFunc500 = rt.CanonRTT(rt.KFunc, nil, true, "ga194dcb5336d6c596644133a.0")
+var rttFunc426 = rt.CanonRTT(rt.KFunc, nil, true, "ga194dcb5336d6c596644133a.0")
 
-var rttFunc501 = rt.CanonRTT(rt.KFunc, nil, true, "gf2fc8334f61f619a4158836c.0")
+var rttFunc427 = rt.CanonRTT(rt.KFunc, nil, true, "gf2fc8334f61f619a4158836c.0")
 
-var rttFunc502 = rt.CanonRTT(rt.KFunc, nil, true, "gb27d8b3d25cdcc1e4fc38a33.0")
+var rttFunc428 = rt.CanonRTT(rt.KFunc, nil, true, "gb27d8b3d25cdcc1e4fc38a33.0")
 
-var rttFunc503 = rt.CanonRTT(rt.KFunc, nil, true, "g921fe9f43619f89126bee684.0")
+var rttFunc429 = rt.CanonRTT(rt.KFunc, nil, true, "g921fe9f43619f89126bee684.0")
 
-var rttFunc504 = rt.CanonRTT(rt.KFunc, nil, true, "gaa3cf097945c6aa2e5ab81cb.0")
+var rttFunc430 = rt.CanonRTT(rt.KFunc, nil, true, "gaa3cf097945c6aa2e5ab81cb.0")
 
-var rttFunc505 = rt.CanonRTT(rt.KFunc, nil, true, "g48d3c28a625655f7b3443311.0")
+var rttFunc431 = rt.CanonRTT(rt.KFunc, nil, true, "g48d3c28a625655f7b3443311.0")
 
-var rttFunc506 = rt.CanonRTT(rt.KFunc, nil, true, "geaf649155aed4b3d94a681b0.0")
+var rttFunc432 = rt.CanonRTT(rt.KFunc, nil, true, "geaf649155aed4b3d94a681b0.0")
 
-var rttFunc507 = rt.CanonRTT(rt.KFunc, nil, true, "g5cfff70338d6155c6f1aae01.0")
+var rttFunc433 = rt.CanonRTT(rt.KFunc, nil, true, "g5cfff70338d6155c6f1aae01.0")
 
-var rttFunc508 = rt.CanonRTT(rt.KFunc, nil, true, "g6e35fed31b59d5db90a1adfd.0")
+var rttFunc434 = rt.CanonRTT(rt.KFunc, nil, true, "g6e35fed31b59d5db90a1adfd.0")
 
-var rttFunc509 = rt.CanonRTT(rt.KFunc, nil, true, "g044d8daf9f414e377f178648.0")
+var rttFunc435 = rt.CanonRTT(rt.KFunc, nil, true, "g044d8daf9f414e377f178648.0")
 
-var rttFunc510 = rt.CanonRTT(rt.KFunc, nil, true, "g02de0b36b5dfb2805455d487.0")
+var rttFunc436 = rt.CanonRTT(rt.KFunc, nil, true, "g02de0b36b5dfb2805455d487.0")
 
-var rttFunc511 = rt.CanonRTT(rt.KFunc, nil, true, "g8fc08683d71afacb826fd1c2.0")
+var rttFunc437 = rt.CanonRTT(rt.KFunc, nil, true, "g8fc08683d71afacb826fd1c2.0")
 
-var rttFunc512 = rt.CanonRTT(rt.KFunc, nil, true, "g4bc54bf25ba0d22ab0d409b5.0")
+var rttFunc438 = rt.CanonRTT(rt.KFunc, nil, true, "g4bc54bf25ba0d22ab0d409b5.0")
 
-var rttFunc513 = rt.CanonRTT(rt.KFunc, nil, true, "ga971d32d060b299c33b0e460.0")
+var rttFunc439 = rt.CanonRTT(rt.KFunc, nil, true, "ga971d32d060b299c33b0e460.0")
 
-var rttFunc514 = rt.CanonRTT(rt.KFunc, nil, true, "g96d5f3391dbdbdafef1cb93f.0")
+var rttFunc440 = rt.CanonRTT(rt.KFunc, nil, true, "g96d5f3391dbdbdafef1cb93f.0")
 
-var rttFunc515 = rt.CanonRTT(rt.KFunc, nil, true, "g5d141ee108e6c3e91d4489c6.0")
+var rttFunc441 = rt.CanonRTT(rt.KFunc, nil, true, "g5d141ee108e6c3e91d4489c6.0")
 
-var rttFunc516 = rt.CanonRTT(rt.KFunc, nil, true, "gf59818c51db886f36cde2dd4.0")
+var rttFunc442 = rt.CanonRTT(rt.KFunc, nil, true, "gf59818c51db886f36cde2dd4.0")
 
-var rttFunc517 = rt.CanonRTT(rt.KFunc, nil, true, "g3a30c395102867c295fa7c71.0")
+var rttFunc443 = rt.CanonRTT(rt.KFunc, nil, true, "g3a30c395102867c295fa7c71.0")
 
-var rttFunc518 = rt.CanonRTT(rt.KFunc, nil, true, "g8453c740ed82ae32211e21ee.0")
+var rttFunc444 = rt.CanonRTT(rt.KFunc, nil, true, "g8453c740ed82ae32211e21ee.0")
 
-var rttFunc519 = rt.CanonRTT(rt.KFunc, nil, true, "gfa5d958e645e75e67e7e88bb.0")
+var rttFunc445 = rt.CanonRTT(rt.KFunc, nil, true, "gfa5d958e645e75e67e7e88bb.0")
 
-var rttFunc520 = rt.CanonRTT(rt.KFunc, nil, true, "g010ad0cac6e145799a11e22c.0")
+var rttFunc446 = rt.CanonRTT(rt.KFunc, nil, true, "g010ad0cac6e145799a11e22c.0")
 
-var rttFunc521 = rt.CanonRTT(rt.KFunc, nil, true, "gbd6fddfaab90c9ec75d79003.0")
+var rttFunc447 = rt.CanonRTT(rt.KFunc, nil, true, "gbd6fddfaab90c9ec75d79003.0")
 
-var rttFunc522 = rt.CanonRTT(rt.KFunc, nil, true, "ge8ed68013fc74f79158117f9.0")
+var rttFunc448 = rt.CanonRTT(rt.KFunc, nil, true, "ge8ed68013fc74f79158117f9.0")
 
-var rttFunc523 = rt.CanonRTT(rt.KFunc, nil, true, "gc7528d613d774d8db3493ed0.0")
+var rttFunc449 = rt.CanonRTT(rt.KFunc, nil, true, "gc7528d613d774d8db3493ed0.0")
 
-var rttFunc524 = rt.CanonRTT(rt.KFunc, nil, true, "g8c986f9aa1ff8ee6eb6e30ce.0")
+var rttFunc450 = rt.CanonRTT(rt.KFunc, nil, true, "g8c986f9aa1ff8ee6eb6e30ce.0")
 
-var rttFunc525 = rt.CanonRTT(rt.KFunc, nil, true, "gda8f85629275205b492120a4.0")
+var rttFunc451 = rt.CanonRTT(rt.KFunc, nil, true, "gda8f85629275205b492120a4.0")
 
-var rttFunc526 = rt.CanonRTT(rt.KFunc, nil, true, "gde9541b7a354dbc62355e74f.0")
+var rttFunc452 = rt.CanonRTT(rt.KFunc, nil, true, "gde9541b7a354dbc62355e74f.0")
 
-var rttFunc527 = rt.CanonRTT(rt.KFunc, nil, true, "gb2464cebea828bb0694ba6e2.0")
+var rttFunc453 = rt.CanonRTT(rt.KFunc, nil, true, "gb2464cebea828bb0694ba6e2.0")
 
-var rttFunc528 = rt.CanonRTT(rt.KFunc, nil, true, "gc116bc7e345379575a485548.0")
+var rttFunc454 = rt.CanonRTT(rt.KFunc, nil, true, "gc116bc7e345379575a485548.0")
 
-var rttFunc529 = rt.CanonRTT(rt.KFunc, nil, true, "gd2b3ece536564693045c69fe.0")
+var rttFunc455 = rt.CanonRTT(rt.KFunc, nil, true, "gd2b3ece536564693045c69fe.0")
 
-var rttFunc530 = rt.CanonRTT(rt.KFunc, nil, true, "gd2abd5ef69338db5537aca50.0")
+var rttFunc456 = rt.CanonRTT(rt.KFunc, nil, true, "gd2abd5ef69338db5537aca50.0")
 
-var rttFunc531 = rt.CanonRTT(rt.KFunc, nil, true, "gcffcb533c232712962798cab.0")
+var rttFunc457 = rt.CanonRTT(rt.KFunc, nil, true, "gcffcb533c232712962798cab.0")
 
-var rttFunc532 = rt.CanonRTT(rt.KFunc, nil, true, "g599570e2bab84aafbe1fb1f3.0")
+var rttFunc458 = rt.CanonRTT(rt.KFunc, nil, true, "g599570e2bab84aafbe1fb1f3.0")
 
-var rttFunc533 = rt.CanonRTT(rt.KFunc, nil, true, "ge0fe9dfbc372888b84bcd004.0")
+var rttFunc459 = rt.CanonRTT(rt.KFunc, nil, true, "ge0fe9dfbc372888b84bcd004.0")
 
-var rttFunc534 = rt.CanonRTT(rt.KFunc, nil, true, "g0d1338ca49cab2be5cd931f2.0")
+var rttFunc460 = rt.CanonRTT(rt.KFunc, nil, true, "g0d1338ca49cab2be5cd931f2.0")
 
-var rttFunc535 = rt.CanonRTT(rt.KFunc, nil, true, "g779343e301ba2c0b5b7299a0.0")
+var rttFunc461 = rt.CanonRTT(rt.KFunc, nil, true, "g779343e301ba2c0b5b7299a0.0")
 
-var rttFunc536 = rt.CanonRTT(rt.KFunc, nil, true, "g85f3e0b1b745a450a3c85a4c.0")
+var rttFunc462 = rt.CanonRTT(rt.KFunc, nil, true, "g85f3e0b1b745a450a3c85a4c.0")
 
-var rttFunc537 = rt.CanonRTT(rt.KFunc, nil, true, "g0d04a8407067917d864eeba6.0")
+var rttFunc463 = rt.CanonRTT(rt.KFunc, nil, true, "g0d04a8407067917d864eeba6.0")
 
-var rttFunc538 = rt.CanonRTT(rt.KFunc, nil, true, "g76b973d18e69494524e7d6f6.0")
+var rttFunc464 = rt.CanonRTT(rt.KFunc, nil, true, "g76b973d18e69494524e7d6f6.0")
 
-var rttFunc539 = rt.CanonRTT(rt.KFunc, nil, true, "ga441da9434a3ca95c3e2bbaa.0")
+var rttFunc465 = rt.CanonRTT(rt.KFunc, nil, true, "ga441da9434a3ca95c3e2bbaa.0")
 
-var rttFunc540 = rt.CanonRTT(rt.KFunc, nil, true, "g1f2904ddf68fead1e7023d7c.0")
+var rttFunc466 = rt.CanonRTT(rt.KFunc, nil, true, "g1f2904ddf68fead1e7023d7c.0")
 
-var rttFunc541 = rt.CanonRTT(rt.KFunc, nil, true, "g5193f445ca96612a1c817cea.0")
+var rttFunc467 = rt.CanonRTT(rt.KFunc, nil, true, "g5193f445ca96612a1c817cea.0")
 
-var rttFunc542 = rt.CanonRTT(rt.KFunc, nil, true, "g63362e2523d9890a447b34d6.0")
+var rttFunc468 = rt.CanonRTT(rt.KFunc, nil, true, "g63362e2523d9890a447b34d6.0")
 
-var rttFunc543 = rt.CanonRTT(rt.KFunc, nil, true, "g31a123f9bbe65d37c21200a6.0")
+var rttFunc469 = rt.CanonRTT(rt.KFunc, nil, true, "g31a123f9bbe65d37c21200a6.0")
 
-var rttFunc544 = rt.CanonRTT(rt.KFunc, nil, true, "gfe01d9a48455330d6845f461.0")
+var rttFunc470 = rt.CanonRTT(rt.KFunc, nil, true, "gfe01d9a48455330d6845f461.0")
 
-var rttFunc545 = rt.CanonRTT(rt.KFunc, nil, true, "ge8be990cd8e5ef2cb5fdbf10.0")
+var rttFunc471 = rt.CanonRTT(rt.KFunc, nil, true, "ge8be990cd8e5ef2cb5fdbf10.0")
 
-var rttFunc546 = rt.CanonRTT(rt.KFunc, nil, true, "g99c5d0be47457550c69c3c54.0")
+var rttFunc472 = rt.CanonRTT(rt.KFunc, nil, true, "g99c5d0be47457550c69c3c54.0")
 
-var rttFunc547 = rt.CanonRTT(rt.KFunc, nil, true, "gfcd7101fe200523b953240ea.0")
+var rttFunc473 = rt.CanonRTT(rt.KFunc, nil, true, "gfcd7101fe200523b953240ea.0")
 
-var rttFunc548 = rt.CanonRTT(rt.KFunc, nil, true, "gc9058bb8fc8be6760a679f41.0")
+var rttFunc474 = rt.CanonRTT(rt.KFunc, nil, true, "gc9058bb8fc8be6760a679f41.0")
 
-var rttFunc549 = rt.CanonRTT(rt.KFunc, nil, true, "g057ba9b64719e1d205415877.0")
+var rttFunc475 = rt.CanonRTT(rt.KFunc, nil, true, "g057ba9b64719e1d205415877.0")
 
-var rttFunc550 = rt.CanonRTT(rt.KFunc, nil, true, "g723e2389b37c6dfe2d1def97.0")
+var rttFunc476 = rt.CanonRTT(rt.KFunc, nil, true, "g723e2389b37c6dfe2d1def97.0")
 
-var rttFunc551 = rt.CanonRTT(rt.KFunc, nil, true, "gc39207e667e006642e8e7c22.0")
+var rttFunc477 = rt.CanonRTT(rt.KFunc, nil, true, "gc39207e667e006642e8e7c22.0")
 
-var rttFunc552 = rt.CanonRTT(rt.KFunc, nil, true, "g82934cdd5b56d68452f101c0.0")
+var rttFunc478 = rt.CanonRTT(rt.KFunc, nil, true, "g82934cdd5b56d68452f101c0.0")
 
-var rttFunc553 = rt.CanonRTT(rt.KFunc, nil, true, "gd7697d144c1998219d110cec.0")
+var rttFunc479 = rt.CanonRTT(rt.KFunc, nil, true, "gd7697d144c1998219d110cec.0")
 
-var rttFunc554 = rt.CanonRTT(rt.KFunc, nil, true, "gdb59e355a5488c49d94855eb.0")
+var rttFunc480 = rt.CanonRTT(rt.KFunc, nil, true, "gdb59e355a5488c49d94855eb.0")
 
-var rttFunc555 = rt.CanonRTT(rt.KFunc, nil, true, "gc97df58b1babd39b09a9a915.0")
+var rttFunc481 = rt.CanonRTT(rt.KFunc, nil, true, "gc97df58b1babd39b09a9a915.0")
 
-var rttFunc556 = rt.CanonRTT(rt.KFunc, nil, true, "gd3657f3faea0430f1a712ecd.0")
+var rttFunc482 = rt.CanonRTT(rt.KFunc, nil, true, "gd3657f3faea0430f1a712ecd.0")
 
-var rttFunc557 = rt.CanonRTT(rt.KFunc, nil, true, "g55212addb6da7f60db602d79.0")
+var rttFunc483 = rt.CanonRTT(rt.KFunc, nil, true, "g55212addb6da7f60db602d79.0")
 
-var rttFunc558 = rt.CanonRTT(rt.KFunc, nil, true, "g15df18ff2524b3f834846597.0")
+var rttFunc484 = rt.CanonRTT(rt.KFunc, nil, true, "g15df18ff2524b3f834846597.0")
 
-var rttFunc559 = rt.CanonRTT(rt.KFunc, nil, true, "g73895cb8278c90135e77d4f6.0")
+var rttFunc485 = rt.CanonRTT(rt.KFunc, nil, true, "g73895cb8278c90135e77d4f6.0")
 
-var rttFunc560 = rt.CanonRTT(rt.KFunc, nil, true, "g4e96ee69de01dd97651b3f55.0")
+var rttFunc486 = rt.CanonRTT(rt.KFunc, nil, true, "g4e96ee69de01dd97651b3f55.0")
 
-var rttFunc561 = rt.CanonRTT(rt.KFunc, nil, true, "ga0631df2220432682db5836f.0")
+var rttFunc487 = rt.CanonRTT(rt.KFunc, nil, true, "ga0631df2220432682db5836f.0")
 
-var rttFunc562 = rt.CanonRTT(rt.KFunc, nil, true, "g114cb1cfc9cf96c0ca96fd7e.0")
+var rttFunc488 = rt.CanonRTT(rt.KFunc, nil, true, "g114cb1cfc9cf96c0ca96fd7e.0")
 
-var rttFunc563 = rt.CanonRTT(rt.KFunc, nil, true, "g5186967fe4bb169fb063e45f.0")
+var rttFunc489 = rt.CanonRTT(rt.KFunc, nil, true, "g5186967fe4bb169fb063e45f.0")
 
-var rttFunc564 = rt.CanonRTT(rt.KFunc, nil, true, "g830a1b386c3902e440bc010c.0")
+var rttFunc490 = rt.CanonRTT(rt.KFunc, nil, true, "g830a1b386c3902e440bc010c.0")
 
-var rttFunc565 = rt.CanonRTT(rt.KFunc, nil, true, "g7e2f83fbd92820f061a9a4e2.0")
+var rttFunc491 = rt.CanonRTT(rt.KFunc, nil, true, "g7e2f83fbd92820f061a9a4e2.0")
 
-var rttFunc566 = rt.CanonRTT(rt.KFunc, nil, true, "g6cfdab155a93a3c5b0edb80f.0")
+var rttFunc492 = rt.CanonRTT(rt.KFunc, nil, true, "g6cfdab155a93a3c5b0edb80f.0")
 
-var rttFunc567 = rt.CanonRTT(rt.KFunc, nil, true, "ga5b17d32152498ce28933e90.0")
+var rttFunc493 = rt.CanonRTT(rt.KFunc, nil, true, "ga5b17d32152498ce28933e90.0")
 
-var rttFunc568 = rt.CanonRTT(rt.KFunc, nil, true, "gde8b375379812b28d0f97206.0")
+var rttFunc494 = rt.CanonRTT(rt.KFunc, nil, true, "gde8b375379812b28d0f97206.0")
 
-var rttFunc569 = rt.CanonRTT(rt.KFunc, nil, true, "g6d3bcd6a03b74478a4112712.0")
+var rttFunc495 = rt.CanonRTT(rt.KFunc, nil, true, "g6d3bcd6a03b74478a4112712.0")
 
-var rttFunc570 = rt.CanonRTT(rt.KFunc, nil, true, "gad68bf271423394968275777.0")
+var rttFunc496 = rt.CanonRTT(rt.KFunc, nil, true, "gad68bf271423394968275777.0")
 
-var rttFunc571 = rt.CanonRTT(rt.KFunc, nil, true, "gf399b4ddab7e385ce841e487.0")
+var rttFunc497 = rt.CanonRTT(rt.KFunc, nil, true, "gf399b4ddab7e385ce841e487.0")
 
-var rttFunc572 = rt.CanonRTT(rt.KFunc, nil, true, "gd47deccbbb1edda023c86afe.0")
+var rttFunc498 = rt.CanonRTT(rt.KFunc, nil, true, "gd47deccbbb1edda023c86afe.0")
 
-var rttFunc573 = rt.CanonRTT(rt.KFunc, nil, true, "g92dd070644ed9e4d52dbf8a1.0")
+var rttFunc499 = rt.CanonRTT(rt.KFunc, nil, true, "g92dd070644ed9e4d52dbf8a1.0")
 
-var rttFunc574 = rt.CanonRTT(rt.KFunc, nil, true, "ge5fb831f151fc6be74cf580d.0")
+var rttFunc500 = rt.CanonRTT(rt.KFunc, nil, true, "ge5fb831f151fc6be74cf580d.0")
 
-var rttFunc575 = rt.CanonRTT(rt.KFunc, nil, true, "g314201375a9ba6b8f892bea8.0")
+var rttFunc501 = rt.CanonRTT(rt.KFunc, nil, true, "g314201375a9ba6b8f892bea8.0")
 
-var rttFunc576 = rt.CanonRTT(rt.KFunc, nil, true, "gaf317a1006c4154e1b2e3489.0")
+var rttFunc502 = rt.CanonRTT(rt.KFunc, nil, true, "gaf317a1006c4154e1b2e3489.0")
 
-var rttFunc577 = rt.CanonRTT(rt.KFunc, nil, true, "g43eb402e431c5aab87131fae.0")
+var rttFunc503 = rt.CanonRTT(rt.KFunc, nil, true, "g43eb402e431c5aab87131fae.0")
 
-var rttFunc578 = rt.CanonRTT(rt.KFunc, nil, true, "ge0b5756e6e5a6940f50e4705.0")
+var rttFunc504 = rt.CanonRTT(rt.KFunc, nil, true, "ge0b5756e6e5a6940f50e4705.0")
 
-var rttFunc579 = rt.CanonRTT(rt.KFunc, nil, true, "g39bdc66afa58d9ec7ca9aa44.0")
+var rttFunc505 = rt.CanonRTT(rt.KFunc, nil, true, "g39bdc66afa58d9ec7ca9aa44.0")
 
-var rttFunc580 = rt.CanonRTT(rt.KFunc, nil, true, "gb52693be0e6d7d6e88bd9498.0")
+var rttFunc506 = rt.CanonRTT(rt.KFunc, nil, true, "gb52693be0e6d7d6e88bd9498.0")
 
-var rttFunc581 = rt.CanonRTT(rt.KFunc, nil, true, "g58faa410db926ee3aa7555fe.0")
+var rttFunc507 = rt.CanonRTT(rt.KFunc, nil, true, "g58faa410db926ee3aa7555fe.0")
 
-var rttFunc582 = rt.CanonRTT(rt.KFunc, nil, true, "ge61a32da4d9d8bf7cd2dad0a.0")
+var rttFunc508 = rt.CanonRTT(rt.KFunc, nil, true, "ge61a32da4d9d8bf7cd2dad0a.0")
 
-var rttFunc583 = rt.CanonRTT(rt.KFunc, nil, true, "g370f08687154b6f501e9550e.0")
+var rttFunc509 = rt.CanonRTT(rt.KFunc, nil, true, "g370f08687154b6f501e9550e.0")
 
-var rttFunc584 = rt.CanonRTT(rt.KFunc, nil, true, "g0f0d0d3821e03c79b27f7a0a.0")
+var rttFunc510 = rt.CanonRTT(rt.KFunc, nil, true, "g0f0d0d3821e03c79b27f7a0a.0")
 
-var rttFunc585 = rt.CanonRTT(rt.KFunc, nil, true, "g4eac6f3e16adb558a9cb43f8.0")
+var rttFunc511 = rt.CanonRTT(rt.KFunc, nil, true, "g4eac6f3e16adb558a9cb43f8.0")
 
-var rttFunc586 = rt.CanonRTT(rt.KFunc, nil, true, "gcc44324f444f264fdacdb0e0.0")
+var rttFunc512 = rt.CanonRTT(rt.KFunc, nil, true, "gcc44324f444f264fdacdb0e0.0")
 
-var rttFunc587 = rt.CanonRTT(rt.KFunc, nil, true, "g9b723c313a2018f4b1269864.0")
+var rttFunc513 = rt.CanonRTT(rt.KFunc, nil, true, "g9b723c313a2018f4b1269864.0")
 
-var rttFunc588 = rt.CanonRTT(rt.KFunc, nil, true, "g7e4fc3dd2dff27b038acb9c1.0")
+var rttFunc514 = rt.CanonRTT(rt.KFunc, nil, true, "g7e4fc3dd2dff27b038acb9c1.0")
 
-var rttFunc589 = rt.CanonRTT(rt.KFunc, nil, true, "gf92e0b419c75ba0fb79f47c3.0")
+var rttFunc515 = rt.CanonRTT(rt.KFunc, nil, true, "gf92e0b419c75ba0fb79f47c3.0")
 
-var rttFunc590 = rt.CanonRTT(rt.KFunc, nil, true, "gca27128bf65a8662446049c1.0")
+var rttFunc516 = rt.CanonRTT(rt.KFunc, nil, true, "gca27128bf65a8662446049c1.0")
 
-var rttFunc591 = rt.CanonRTT(rt.KFunc, nil, true, "g7919c46bb17549be04ff9a41.0")
+var rttFunc517 = rt.CanonRTT(rt.KFunc, nil, true, "g7919c46bb17549be04ff9a41.0")
 
-var rttFunc592 = rt.CanonRTT(rt.KFunc, nil, true, "g02528fbc47417fb6da0d9a20.0")
+var rttFunc518 = rt.CanonRTT(rt.KFunc, nil, true, "g02528fbc47417fb6da0d9a20.0")
 
-var rttFunc593 = rt.CanonRTT(rt.KFunc, nil, true, "g7ba61123597a64b7ffb579be.0")
+var rttFunc519 = rt.CanonRTT(rt.KFunc, nil, true, "g7ba61123597a64b7ffb579be.0")
 
-var rttFunc594 = rt.CanonRTT(rt.KFunc, nil, true, "g5d558574887861620fd9ebe1.0")
+var rttFunc520 = rt.CanonRTT(rt.KFunc, nil, true, "g5d558574887861620fd9ebe1.0")
 
-var rttFunc595 = rt.CanonRTT(rt.KFunc, nil, true, "g555ca8b5bfd32c3b320abf15.0")
+var rttFunc521 = rt.CanonRTT(rt.KFunc, nil, true, "g555ca8b5bfd32c3b320abf15.0")
 
-var rttFunc596 = rt.CanonRTT(rt.KFunc, nil, true, "g71641c5de0172237e1330166.0")
+var rttFunc522 = rt.CanonRTT(rt.KFunc, nil, true, "g71641c5de0172237e1330166.0")
 
-var rttFunc597 = rt.CanonRTT(rt.KFunc, nil, true, "geef30408d84710e4d883410c.0")
+var rttFunc523 = rt.CanonRTT(rt.KFunc, nil, true, "geef30408d84710e4d883410c.0")
 
-var rttFunc598 = rt.CanonRTT(rt.KFunc, nil, true, "gff019e49a92073afbcb8509b.0")
+var rttFunc524 = rt.CanonRTT(rt.KFunc, nil, true, "gff019e49a92073afbcb8509b.0")
 
-var rttFunc599 = rt.CanonRTT(rt.KFunc, nil, true, "g5ea1261aa48757abd3ec2a3a.0")
+var rttFunc525 = rt.CanonRTT(rt.KFunc, nil, true, "g5ea1261aa48757abd3ec2a3a.0")
 
-var rttFunc600 = rt.CanonRTT(rt.KFunc, nil, true, "g6a768537d01ed177331dba9c.0")
+var rttFunc526 = rt.CanonRTT(rt.KFunc, nil, true, "g6a768537d01ed177331dba9c.0")
 
-var rttFunc601 = rt.CanonRTT(rt.KFunc, nil, true, "gd1f08e2da3d2c587344de584.0")
+var rttFunc527 = rt.CanonRTT(rt.KFunc, nil, true, "gd1f08e2da3d2c587344de584.0")
 
-var rttFunc602 = rt.CanonRTT(rt.KFunc, nil, true, "g14a2cd3e01a90a68b56da555.0")
+var rttFunc528 = rt.CanonRTT(rt.KFunc, nil, true, "g14a2cd3e01a90a68b56da555.0")
 
-var rttFunc603 = rt.CanonRTT(rt.KFunc, nil, true, "g900b26e29448b7dc2a7f67c7.0")
+var rttFunc529 = rt.CanonRTT(rt.KFunc, nil, true, "g900b26e29448b7dc2a7f67c7.0")
 
-var rttFunc604 = rt.CanonRTT(rt.KFunc, nil, true, "g5566ac9f31998ecd7bc1bfa2.0")
+var rttFunc530 = rt.CanonRTT(rt.KFunc, nil, true, "g5566ac9f31998ecd7bc1bfa2.0")
 
-var rttFunc605 = rt.CanonRTT(rt.KFunc, nil, true, "g79d98e03e8b010ac391ccb47.0")
+var rttFunc531 = rt.CanonRTT(rt.KFunc, nil, true, "g79d98e03e8b010ac391ccb47.0")
 
-var rttFunc606 = rt.CanonRTT(rt.KFunc, nil, true, "gacf94d1768289c07cbae1436.0")
+var rttFunc532 = rt.CanonRTT(rt.KFunc, nil, true, "gacf94d1768289c07cbae1436.0")
 
-var rttFunc607 = rt.CanonRTT(rt.KFunc, nil, true, "g5ef8a9c81ac22e8f9350bfc0.0")
+var rttFunc533 = rt.CanonRTT(rt.KFunc, nil, true, "g5ef8a9c81ac22e8f9350bfc0.0")
 
-var rttFunc608 = rt.CanonRTT(rt.KFunc, nil, true, "g3dae63008fa71e2e78c3c167.0")
+var rttFunc534 = rt.CanonRTT(rt.KFunc, nil, true, "g3dae63008fa71e2e78c3c167.0")
 
-var rttFunc609 = rt.CanonRTT(rt.KFunc, nil, true, "gc506fb85e57d36c4a8cba99b.0")
+var rttFunc535 = rt.CanonRTT(rt.KFunc, nil, true, "gc506fb85e57d36c4a8cba99b.0")
 
-var rttFunc610 = rt.CanonRTT(rt.KFunc, nil, true, "gc80fce674444aabd41868db3.0")
+var rttFunc536 = rt.CanonRTT(rt.KFunc, nil, true, "gc80fce674444aabd41868db3.0")
 
-var rttFunc611 = rt.CanonRTT(rt.KFunc, nil, true, "g4f004db8be503caffde2d514.0")
+var rttFunc537 = rt.CanonRTT(rt.KFunc, nil, true, "g4f004db8be503caffde2d514.0")
 
-var rttFunc612 = rt.CanonRTT(rt.KFunc, nil, true, "ge4545f435a3d008e9ae4f9c3.0")
+var rttFunc538 = rt.CanonRTT(rt.KFunc, nil, true, "ge4545f435a3d008e9ae4f9c3.0")
 
-var rttFunc613 = rt.CanonRTT(rt.KFunc, nil, true, "g278d72099c3aa0c60d581396.0")
+var rttFunc539 = rt.CanonRTT(rt.KFunc, nil, true, "g278d72099c3aa0c60d581396.0")
 
-var rttFunc614 = rt.CanonRTT(rt.KFunc, nil, true, "gf060ecedb88b40d7517479df.0")
+var rttFunc540 = rt.CanonRTT(rt.KFunc, nil, true, "gf060ecedb88b40d7517479df.0")
 
-var rttFunc615 = rt.CanonRTT(rt.KFunc, nil, true, "g0a545b69a363bcefe530210b.0")
+var rttFunc541 = rt.CanonRTT(rt.KFunc, nil, true, "g0a545b69a363bcefe530210b.0")
 
-var rttFunc616 = rt.CanonRTT(rt.KFunc, nil, true, "gefbd1ddf8c6ad9a2756e4da3.0")
+var rttFunc542 = rt.CanonRTT(rt.KFunc, nil, true, "gefbd1ddf8c6ad9a2756e4da3.0")
 
-var rttFunc617 = rt.CanonRTT(rt.KFunc, nil, true, "gc4a4443c06b337a334d30788.0")
+var rttFunc543 = rt.CanonRTT(rt.KFunc, nil, true, "gc4a4443c06b337a334d30788.0")
 
-var rttFunc618 = rt.CanonRTT(rt.KFunc, nil, true, "g6b1893b1c5cdbd38dc58ee2f.0")
+var rttFunc544 = rt.CanonRTT(rt.KFunc, nil, true, "g6b1893b1c5cdbd38dc58ee2f.0")
 
-var rttFunc619 = rt.CanonRTT(rt.KFunc, nil, true, "gf34711d7e27d2bed2ca285e9.0")
+var rttFunc545 = rt.CanonRTT(rt.KFunc, nil, true, "gf34711d7e27d2bed2ca285e9.0")
 
-var rttFunc620 = rt.CanonRTT(rt.KFunc, nil, true, "ga1e5395e16b6509d69888cfc.0")
+var rttFunc546 = rt.CanonRTT(rt.KFunc, nil, true, "ga1e5395e16b6509d69888cfc.0")
 
-var rttFunc621 = rt.CanonRTT(rt.KFunc, nil, true, "g127643e8a8d8440decad0f8f.0")
+var rttFunc547 = rt.CanonRTT(rt.KFunc, nil, true, "g127643e8a8d8440decad0f8f.0")
 
-var rttFunc622 = rt.CanonRTT(rt.KFunc, nil, true, "g8b596b0f2322c5ba1d6c82a3.0")
+var rttFunc548 = rt.CanonRTT(rt.KFunc, nil, true, "g8b596b0f2322c5ba1d6c82a3.0")
 
-var rttFunc623 = rt.CanonRTT(rt.KFunc, nil, true, "gac2efefb85fac2121e93ad0b.0")
+var rttFunc549 = rt.CanonRTT(rt.KFunc, nil, true, "gac2efefb85fac2121e93ad0b.0")
 
-var rttFunc624 = rt.CanonRTT(rt.KFunc, nil, true, "gb717f1eb359f60e264e9d035.0")
+var rttFunc550 = rt.CanonRTT(rt.KFunc, nil, true, "gb717f1eb359f60e264e9d035.0")
 
-var rttFunc625 = rt.CanonRTT(rt.KFunc, nil, true, "g510051232612788dae3ec357.0")
+var rttFunc551 = rt.CanonRTT(rt.KFunc, nil, true, "g510051232612788dae3ec357.0")
 
-var rttFunc627 = rt.CanonRTT(rt.KFunc, nil, true, "g2fc191d146042c271d4fb527.0")
+var rttFunc552 = rt.CanonRTT(rt.KFunc, nil, true, "g2fc191d146042c271d4fb527.0")
 
-var rttFunc628 = rt.CanonRTT(rt.KFunc, nil, true, "g4b545ba2e77bd977e3e28642.0")
+var rttFunc553 = rt.CanonRTT(rt.KFunc, nil, true, "g4b545ba2e77bd977e3e28642.0")
 
 // Host supplies the module's imports. Each method is named
 // M_<module>_<field> (non-identifier bytes escaped as _hh).
@@ -10619,6 +10619,7 @@ type Instance struct {
 	g372  *RTTI
 	g373  *RTTI
 	tag0  *rt.Tag
+	exn   *rt.Exception // pending wasm exception
 	data0 []byte
 	data1 []byte
 	data2 []byte
@@ -10669,187 +10670,187 @@ const dataSeg8 = "\xef\xbf\xbd"
 
 func (m *Instance) init() {
 	m.funcs = make([]*rt.Func, 756)
-	m.tag0 = &rt.Tag{Type: rttFunc628}
+	m.tag0 = &rt.Tag{Type: rttFunc553}
 	m.mem0 = rt.NewMemory(0, 0, false, false)
-	m.funcs[33] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsAbstractMutableSetEquals, Name: "kotlin.collections.AbstractMutableSet.equals"}
-	m.funcs[34] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsAbstractMutableSetHashCode, Name: "kotlin.collections.AbstractMutableSet.hashCode"}
-	m.funcs[43] = &rt.Func{Type: rttFunc75, Fn: m.kotlinCollectionsEntriesItrNext, Name: "kotlin.collections.EntriesItr.next"}
-	m.funcs[44] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsEntriesItrNext2, Name: "kotlin.collections.EntriesItr.next"}
-	m.funcs[47] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsEntriesItrHasNext, Name: "kotlin.collections.EntriesItr.hasNext"}
-	m.funcs[49] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsEntryRefGetKey, Name: "kotlin.collections.EntryRef.<get-key>"}
-	m.funcs[50] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsEntryRefGetValue, Name: "kotlin.collections.EntryRef.<get-value>"}
-	m.funcs[51] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsEntryRefEquals, Name: "kotlin.collections.EntryRef.equals"}
-	m.funcs[52] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsEntryRefHashCode, Name: "kotlin.collections.EntryRef.hashCode"}
-	m.funcs[53] = &rt.Func{Type: rttFunc9, Fn: m.kotlinCollectionsEntryRefToString, Name: "kotlin.collections.EntryRef.toString"}
-	m.funcs[56] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsHashMapGetSize, Name: "kotlin.collections.HashMap.<get-size>"}
-	m.funcs[59] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsHashMapIsEmpty, Name: "kotlin.collections.HashMap.isEmpty"}
-	m.funcs[60] = &rt.Func{Type: rttFunc47, Fn: m.kotlinCollectionsHashMapGet, Name: "kotlin.collections.HashMap.get"}
-	m.funcs[61] = &rt.Func{Type: rttFunc48, Fn: m.kotlinCollectionsHashMapPut, Name: "kotlin.collections.HashMap.put"}
-	m.funcs[62] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsHashMapGetEntries, Name: "kotlin.collections.HashMap.<get-entries>"}
-	m.funcs[63] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsHashMapGetEntries2, Name: "kotlin.collections.HashMap.<get-entries>"}
-	m.funcs[64] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsHashMapEquals, Name: "kotlin.collections.HashMap.equals"}
-	m.funcs[65] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsHashMapHashCode, Name: "kotlin.collections.HashMap.hashCode"}
-	m.funcs[66] = &rt.Func{Type: rttFunc9, Fn: m.kotlinCollectionsHashMapToString, Name: "kotlin.collections.HashMap.toString"}
-	m.funcs[86] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsHashMapEntrySetIterator, Name: "kotlin.collections.HashMapEntrySet.iterator"}
-	m.funcs[87] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsHashMapEntrySetIterator2, Name: "kotlin.collections.HashMapEntrySet.iterator"}
-	m.funcs[89] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsHashMapEntrySetBaseGetSize, Name: "kotlin.collections.HashMapEntrySetBase.<get-size>"}
-	m.funcs[90] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsHashMapEntrySetBaseIsEmpty, Name: "kotlin.collections.HashMapEntrySetBase.isEmpty"}
-	m.funcs[91] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsHashMapEntrySetBaseContains, Name: "kotlin.collections.HashMapEntrySetBase.contains"}
-	m.funcs[92] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsHashMapEntrySetBaseContains2, Name: "kotlin.collections.HashMapEntrySetBase.contains"}
-	m.funcs[93] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsHashMapEntrySetBaseContainsAll, Name: "kotlin.collections.HashMapEntrySetBase.containsAll"}
-	m.funcs[100] = &rt.Func{Type: rttFunc14, Fn: m.kotlinTextStringBuilderGetLength, Name: "kotlin.text.StringBuilder.<get-length>"}
-	m.funcs[101] = &rt.Func{Type: rttFunc7, Fn: m.kotlinTextStringBuilderGet, Name: "kotlin.text.StringBuilder.get"}
-	m.funcs[102] = &rt.Func{Type: rttFunc6, Fn: m.kotlinTextStringBuilderSubSequence, Name: "kotlin.text.StringBuilder.subSequence"}
-	m.funcs[103] = &rt.Func{Type: rttFunc84, Fn: m.kotlinTextStringBuilderAppend, Name: "kotlin.text.StringBuilder.append"}
-	m.funcs[104] = &rt.Func{Type: rttFunc79, Fn: m.kotlinTextStringBuilderAppend2, Name: "kotlin.text.StringBuilder.append"}
-	m.funcs[105] = &rt.Func{Type: rttFunc83, Fn: m.kotlinTextStringBuilderAppend3, Name: "kotlin.text.StringBuilder.append"}
-	m.funcs[106] = &rt.Func{Type: rttFunc47, Fn: m.kotlinTextStringBuilderAppend4, Name: "kotlin.text.StringBuilder.append"}
-	m.funcs[107] = &rt.Func{Type: rttFunc85, Fn: m.kotlinTextStringBuilderAppend5, Name: "kotlin.text.StringBuilder.append"}
-	m.funcs[114] = &rt.Func{Type: rttFunc9, Fn: m.kotlinTextStringBuilderToString, Name: "kotlin.text.StringBuilder.toString"}
-	m.funcs[120] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsAbstractCollectionContains, Name: "kotlin.collections.AbstractCollection.contains"}
-	m.funcs[121] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsAbstractCollectionContainsAll, Name: "kotlin.collections.AbstractCollection.containsAll"}
-	m.funcs[122] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsAbstractCollectionIsEmpty, Name: "kotlin.collections.AbstractCollection.isEmpty"}
-	m.funcs[123] = &rt.Func{Type: rttFunc9, Fn: m.kotlinCollectionsAbstractCollectionToString, Name: "kotlin.collections.AbstractCollection.toString"}
-	m.funcs[125] = &rt.Func{Type: rttFunc47, Fn: m.kotlinCollectionsFunction1Bound1AInvoke, Name: "kotlin.collections.Function1_bound1_A.invoke"}
-	m.funcs[126] = &rt.Func{Type: rttFunc47, Fn: m.kotlinCollectionsAbstractCollectionToStringLambdaInvoke, Name: "kotlin.collections.AbstractCollection$toString$lambda.invoke"}
-	m.funcs[128] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsIteratorImplHasNext, Name: "kotlin.collections.IteratorImpl.hasNext"}
-	m.funcs[129] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsIteratorImplNext, Name: "kotlin.collections.IteratorImpl.next"}
-	m.funcs[139] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsAbstractListIterator, Name: "kotlin.collections.AbstractList.iterator"}
-	m.funcs[140] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsAbstractListEquals, Name: "kotlin.collections.AbstractList.equals"}
-	m.funcs[141] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsAbstractListHashCode, Name: "kotlin.collections.AbstractList.hashCode"}
-	m.funcs[148] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsIntIteratorNext, Name: "kotlin.collections.IntIterator.next"}
-	m.funcs[149] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsIntIteratorNext2, Name: "kotlin.collections.IntIterator.next"}
-	m.funcs[151] = &rt.Func{Type: rttFunc14, Fn: m.kotlinEnumsEnumEntriesListGetSize, Name: "kotlin.enums.EnumEntriesList.<get-size>"}
-	m.funcs[152] = &rt.Func{Type: rttFunc111, Fn: m.kotlinEnumsEnumEntriesListGet, Name: "kotlin.enums.EnumEntriesList.get"}
-	m.funcs[153] = &rt.Func{Type: rttFunc79, Fn: m.kotlinEnumsEnumEntriesListGet2, Name: "kotlin.enums.EnumEntriesList.get"}
-	m.funcs[154] = &rt.Func{Type: rttFunc107, Fn: m.kotlinEnumsEnumEntriesListContains, Name: "kotlin.enums.EnumEntriesList.contains"}
-	m.funcs[155] = &rt.Func{Type: rttFunc11, Fn: m.kotlinEnumsEnumEntriesListContains2, Name: "kotlin.enums.EnumEntriesList.contains"}
-	m.funcs[161] = &rt.Func{Type: rttFunc7, Fn: m.kotlinRandomDefaultNextBits, Name: "kotlin.random.Default.nextBits"}
-	m.funcs[162] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRandomDefaultNextInt, Name: "kotlin.random.Default.nextInt"}
-	m.funcs[163] = &rt.Func{Type: rttFunc115, Fn: m.kotlinRandomDefaultNextInt2, Name: "kotlin.random.Default.nextInt"}
-	m.funcs[167] = &rt.Func{Type: rttFunc115, Fn: m.kotlinRandomRandomNextInt2, Name: "kotlin.random.Random.nextInt"}
-	m.funcs[177] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRandomXorWowRandomNextInt, Name: "kotlin.random.XorWowRandom.nextInt"}
-	m.funcs[178] = &rt.Func{Type: rttFunc7, Fn: m.kotlinRandomXorWowRandomNextBits, Name: "kotlin.random.XorWowRandom.nextBits"}
-	m.funcs[183] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntRangeGetStart, Name: "kotlin.ranges.IntRange.<get-start>"}
-	m.funcs[184] = &rt.Func{Type: rttFunc33, Fn: m.kotlinRangesIntRangeGetStart2, Name: "kotlin.ranges.IntRange.<get-start>"}
-	m.funcs[185] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntRangeGetEndInclusive, Name: "kotlin.ranges.IntRange.<get-endInclusive>"}
-	m.funcs[186] = &rt.Func{Type: rttFunc33, Fn: m.kotlinRangesIntRangeGetEndInclusive2, Name: "kotlin.ranges.IntRange.<get-endInclusive>"}
-	m.funcs[187] = &rt.Func{Type: rttFunc7, Fn: m.kotlinRangesIntRangeContains, Name: "kotlin.ranges.IntRange.contains"}
-	m.funcs[188] = &rt.Func{Type: rttFunc11, Fn: m.kotlinRangesIntRangeContains2, Name: "kotlin.ranges.IntRange.contains"}
-	m.funcs[189] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntRangeIsEmpty, Name: "kotlin.ranges.IntRange.isEmpty"}
-	m.funcs[190] = &rt.Func{Type: rttFunc11, Fn: m.kotlinRangesIntRangeEquals, Name: "kotlin.ranges.IntRange.equals"}
-	m.funcs[191] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntRangeHashCode, Name: "kotlin.ranges.IntRange.hashCode"}
-	m.funcs[192] = &rt.Func{Type: rttFunc9, Fn: m.kotlinRangesIntRangeToString, Name: "kotlin.ranges.IntRange.toString"}
-	m.funcs[194] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntProgressionIteratorHasNext, Name: "kotlin.ranges.IntProgressionIterator.hasNext"}
-	m.funcs[195] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntProgressionIteratorNextInt, Name: "kotlin.ranges.IntProgressionIterator.nextInt"}
-	m.funcs[198] = &rt.Func{Type: rttFunc129, Fn: m.kotlinRangesIntProgressionIterator, Name: "kotlin.ranges.IntProgression.iterator"}
-	m.funcs[199] = &rt.Func{Type: rttFunc33, Fn: m.kotlinRangesIntProgressionIterator2, Name: "kotlin.ranges.IntProgression.iterator"}
-	m.funcs[200] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntProgressionIsEmpty, Name: "kotlin.ranges.IntProgression.isEmpty"}
-	m.funcs[201] = &rt.Func{Type: rttFunc11, Fn: m.kotlinRangesIntProgressionEquals, Name: "kotlin.ranges.IntProgression.equals"}
-	m.funcs[202] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntProgressionHashCode, Name: "kotlin.ranges.IntProgression.hashCode"}
-	m.funcs[203] = &rt.Func{Type: rttFunc9, Fn: m.kotlinRangesIntProgressionToString, Name: "kotlin.ranges.IntProgression.toString"}
-	m.funcs[240] = &rt.Func{Type: rttFunc147, Fn: m.kotlinTimeDurationCompareTo, Name: "kotlin.time.Duration.compareTo"}
-	m.funcs[241] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTimeDurationCompareTo2, Name: "kotlin.time.Duration.compareTo"}
-	m.funcs[242] = &rt.Func{Type: rttFunc9, Fn: m.kotlinTimeDurationToString, Name: "kotlin.time.Duration.toString"}
-	m.funcs[243] = &rt.Func{Type: rttFunc14, Fn: m.kotlinTimeDurationHashCode, Name: "kotlin.time.Duration.hashCode"}
-	m.funcs[244] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTimeDurationEquals, Name: "kotlin.time.Duration.equals"}
-	m.funcs[265] = &rt.Func{Type: rttFunc151, Fn: m.kotlinTimeValueTimeMarkMinus, Name: "kotlin.time.ValueTimeMark.minus"}
-	m.funcs[266] = &rt.Func{Type: rttFunc9, Fn: m.kotlinTimeValueTimeMarkToString, Name: "kotlin.time.ValueTimeMark.toString"}
-	m.funcs[267] = &rt.Func{Type: rttFunc14, Fn: m.kotlinTimeValueTimeMarkHashCode, Name: "kotlin.time.ValueTimeMark.hashCode"}
-	m.funcs[268] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTimeValueTimeMarkEquals, Name: "kotlin.time.ValueTimeMark.equals"}
-	m.funcs[269] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTimeValueTimeMarkCompareTo, Name: "kotlin.time.ValueTimeMark.compareTo"}
-	m.funcs[271] = &rt.Func{Type: rttFunc155, Fn: m.kotlinTimeMonotonicMarkNow, Name: "kotlin.time.Monotonic.markNow"}
-	m.funcs[272] = &rt.Func{Type: rttFunc9, Fn: m.kotlinTimeMonotonicToString, Name: "kotlin.time.Monotonic.toString"}
-	m.funcs[273] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTimeComparableTimeMarkCompareTo, Name: "kotlin.time.ComparableTimeMark.compareTo"}
-	m.funcs[286] = &rt.Func{Type: rttFunc7, Fn: m.kotlinUIntCompareTo, Name: "kotlin.UInt.compareTo"}
-	m.funcs[287] = &rt.Func{Type: rttFunc11, Fn: m.kotlinUIntCompareTo2, Name: "kotlin.UInt.compareTo"}
-	m.funcs[288] = &rt.Func{Type: rttFunc9, Fn: m.kotlinUIntToString, Name: "kotlin.UInt.toString"}
-	m.funcs[289] = &rt.Func{Type: rttFunc14, Fn: m.kotlinUIntHashCode, Name: "kotlin.UInt.hashCode"}
-	m.funcs[290] = &rt.Func{Type: rttFunc11, Fn: m.kotlinUIntEquals, Name: "kotlin.UInt.equals"}
-	m.funcs[299] = &rt.Func{Type: rttFunc147, Fn: m.kotlinULongCompareTo, Name: "kotlin.ULong.compareTo"}
-	m.funcs[300] = &rt.Func{Type: rttFunc11, Fn: m.kotlinULongCompareTo2, Name: "kotlin.ULong.compareTo"}
-	m.funcs[301] = &rt.Func{Type: rttFunc9, Fn: m.kotlinULongToString, Name: "kotlin.ULong.toString"}
-	m.funcs[302] = &rt.Func{Type: rttFunc14, Fn: m.kotlinULongHashCode, Name: "kotlin.ULong.hashCode"}
-	m.funcs[303] = &rt.Func{Type: rttFunc11, Fn: m.kotlinULongEquals, Name: "kotlin.ULong.equals"}
-	m.funcs[305] = &rt.Func{Type: rttFunc11, Fn: m.kotlinAnyEquals, Name: "kotlin.Any.equals"}
-	m.funcs[306] = &rt.Func{Type: rttFunc14, Fn: m.kotlinAnyHashCode, Name: "kotlin.Any.hashCode"}
-	m.funcs[307] = &rt.Func{Type: rttFunc9, Fn: m.kotlinAnyToString, Name: "kotlin.Any.toString"}
-	m.funcs[334] = &rt.Func{Type: rttFunc7, Fn: m.kotlinBooleanCompareTo, Name: "kotlin.Boolean.compareTo"}
-	m.funcs[335] = &rt.Func{Type: rttFunc11, Fn: m.kotlinBooleanCompareTo2, Name: "kotlin.Boolean.compareTo"}
-	m.funcs[336] = &rt.Func{Type: rttFunc9, Fn: m.kotlinBooleanToString, Name: "kotlin.Boolean.toString"}
-	m.funcs[337] = &rt.Func{Type: rttFunc11, Fn: m.kotlinBooleanEquals, Name: "kotlin.Boolean.equals"}
-	m.funcs[338] = &rt.Func{Type: rttFunc14, Fn: m.kotlinBooleanHashCode, Name: "kotlin.Boolean.hashCode"}
-	m.funcs[345] = &rt.Func{Type: rttFunc7, Fn: m.kotlinCharCompareTo, Name: "kotlin.Char.compareTo"}
-	m.funcs[346] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCharCompareTo2, Name: "kotlin.Char.compareTo"}
-	m.funcs[347] = &rt.Func{Type: rttFunc9, Fn: m.kotlinCharToString, Name: "kotlin.Char.toString"}
-	m.funcs[348] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCharEquals, Name: "kotlin.Char.equals"}
-	m.funcs[349] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCharHashCode, Name: "kotlin.Char.hashCode"}
-	m.funcs[353] = &rt.Func{Type: rttFunc107, Fn: m.kotlinEnumCompareTo, Name: "kotlin.Enum.compareTo"}
-	m.funcs[354] = &rt.Func{Type: rttFunc11, Fn: m.kotlinEnumCompareTo2, Name: "kotlin.Enum.compareTo"}
-	m.funcs[355] = &rt.Func{Type: rttFunc11, Fn: m.kotlinEnumEquals, Name: "kotlin.Enum.equals"}
-	m.funcs[356] = &rt.Func{Type: rttFunc14, Fn: m.kotlinEnumHashCode, Name: "kotlin.Enum.hashCode"}
-	m.funcs[357] = &rt.Func{Type: rttFunc9, Fn: m.kotlinEnumToString, Name: "kotlin.Enum.toString"}
-	m.funcs[375] = &rt.Func{Type: rttFunc7, Fn: m.kotlinIntCompareTo, Name: "kotlin.Int.compareTo"}
-	m.funcs[376] = &rt.Func{Type: rttFunc11, Fn: m.kotlinIntCompareTo2, Name: "kotlin.Int.compareTo"}
-	m.funcs[377] = &rt.Func{Type: rttFunc9, Fn: m.kotlinIntToString, Name: "kotlin.Int.toString"}
-	m.funcs[378] = &rt.Func{Type: rttFunc11, Fn: m.kotlinIntEquals, Name: "kotlin.Int.equals"}
-	m.funcs[379] = &rt.Func{Type: rttFunc14, Fn: m.kotlinIntHashCode, Name: "kotlin.Int.hashCode"}
-	m.funcs[389] = &rt.Func{Type: rttFunc147, Fn: m.kotlinLongCompareTo, Name: "kotlin.Long.compareTo"}
-	m.funcs[390] = &rt.Func{Type: rttFunc11, Fn: m.kotlinLongCompareTo2, Name: "kotlin.Long.compareTo"}
-	m.funcs[391] = &rt.Func{Type: rttFunc9, Fn: m.kotlinLongToString, Name: "kotlin.Long.toString"}
-	m.funcs[392] = &rt.Func{Type: rttFunc11, Fn: m.kotlinLongEquals, Name: "kotlin.Long.equals"}
-	m.funcs[393] = &rt.Func{Type: rttFunc14, Fn: m.kotlinLongHashCode, Name: "kotlin.Long.hashCode"}
-	m.funcs[402] = &rt.Func{Type: rttFunc216, Fn: m.kotlinDoubleCompareTo, Name: "kotlin.Double.compareTo"}
-	m.funcs[403] = &rt.Func{Type: rttFunc11, Fn: m.kotlinDoubleCompareTo2, Name: "kotlin.Double.compareTo"}
-	m.funcs[404] = &rt.Func{Type: rttFunc9, Fn: m.kotlinDoubleToString, Name: "kotlin.Double.toString"}
-	m.funcs[405] = &rt.Func{Type: rttFunc11, Fn: m.kotlinDoubleEquals, Name: "kotlin.Double.equals"}
-	m.funcs[406] = &rt.Func{Type: rttFunc14, Fn: m.kotlinDoubleHashCode, Name: "kotlin.Double.hashCode"}
-	m.funcs[483] = &rt.Func{Type: rttFunc33, Fn: m.kotlinFunction0Invoke, Name: "kotlin.Function0.invoke"}
-	m.funcs[484] = &rt.Func{Type: rttFunc231, Fn: m.kotlinAssertLambdaInvoke, Name: "kotlin.assert$lambda.invoke"}
-	m.funcs[530] = &rt.Func{Type: rttFunc9, Fn: m.kotlinUnitToString, Name: "kotlin.Unit.toString"}
-	m.funcs[537] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassImplGetSimpleName, Name: "kotlin.wasm.internal.KClassImpl.<get-simpleName>"}
-	m.funcs[538] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassImplGetQualifiedName, Name: "kotlin.wasm.internal.KClassImpl.<get-qualifiedName>"}
-	m.funcs[539] = &rt.Func{Type: rttFunc11, Fn: m.kotlinWasmInternalKClassImplEquals, Name: "kotlin.wasm.internal.KClassImpl.equals"}
-	m.funcs[540] = &rt.Func{Type: rttFunc14, Fn: m.kotlinWasmInternalKClassImplHashCode, Name: "kotlin.wasm.internal.KClassImpl.hashCode"}
-	m.funcs[541] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassImplToString, Name: "kotlin.wasm.internal.KClassImpl.toString"}
-	m.funcs[542] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassInterfaceImplGetSimpleName, Name: "kotlin.wasm.internal.KClassInterfaceImpl.<get-simpleName>"}
-	m.funcs[543] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassInterfaceImplGetSimpleName2, Name: "kotlin.wasm.internal.KClassInterfaceImpl.<get-simpleName>"}
-	m.funcs[544] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassInterfaceImplGetQualifiedName, Name: "kotlin.wasm.internal.KClassInterfaceImpl.<get-qualifiedName>"}
-	m.funcs[545] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassInterfaceImplGetQualifiedName2, Name: "kotlin.wasm.internal.KClassInterfaceImpl.<get-qualifiedName>"}
-	m.funcs[546] = &rt.Func{Type: rttFunc11, Fn: m.kotlinWasmInternalKClassInterfaceImplEquals, Name: "kotlin.wasm.internal.KClassInterfaceImpl.equals"}
-	m.funcs[547] = &rt.Func{Type: rttFunc14, Fn: m.kotlinWasmInternalKClassInterfaceImplHashCode, Name: "kotlin.wasm.internal.KClassInterfaceImpl.hashCode"}
-	m.funcs[548] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassInterfaceImplToString, Name: "kotlin.wasm.internal.KClassInterfaceImpl.toString"}
-	m.funcs[554] = &rt.Func{Type: rttFunc33, Fn: m.kotlinTextSamKotlinComparator0GetFunctionDelegate, Name: "kotlin.text.sam$kotlin_Comparator$0.getFunctionDelegate"}
-	m.funcs[555] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTextSamKotlinComparator0Equals, Name: "kotlin.text.sam$kotlin_Comparator$0.equals"}
-	m.funcs[556] = &rt.Func{Type: rttFunc14, Fn: m.kotlinTextSamKotlinComparator0HashCode, Name: "kotlin.text.sam$kotlin_Comparator$0.hashCode"}
-	m.funcs[558] = &rt.Func{Type: rttFunc47, Fn: m.kotlinTextSTRINGCASEINSENSITIVEORDERLambdaInvoke, Name: "kotlin.text.STRING_CASE_INSENSITIVE_ORDER$lambda.invoke"}
-	m.funcs[592] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmUnsafePointerToString, Name: "kotlin.wasm.unsafe.Pointer.toString"}
-	m.funcs[593] = &rt.Func{Type: rttFunc14, Fn: m.kotlinWasmUnsafePointerHashCode, Name: "kotlin.wasm.unsafe.Pointer.hashCode"}
-	m.funcs[594] = &rt.Func{Type: rttFunc11, Fn: m.kotlinWasmUnsafePointerEquals, Name: "kotlin.wasm.unsafe.Pointer.equals"}
-	m.funcs[596] = &rt.Func{Type: rttFunc7, Fn: m.kotlinWasmUnsafeScopedMemoryAllocatorAllocate, Name: "kotlin.wasm.unsafe.ScopedMemoryAllocator.allocate"}
-	m.funcs[602] = &rt.Func{Type: rttFunc14, Fn: m.kotlinStringGetLength, Name: "kotlin.String.<get-length>"}
-	m.funcs[604] = &rt.Func{Type: rttFunc7, Fn: m.kotlinStringGet, Name: "kotlin.String.get"}
-	m.funcs[607] = &rt.Func{Type: rttFunc6, Fn: m.kotlinStringSubSequence, Name: "kotlin.String.subSequence"}
-	m.funcs[609] = &rt.Func{Type: rttFunc8, Fn: m.kotlinStringCompareTo, Name: "kotlin.String.compareTo"}
-	m.funcs[610] = &rt.Func{Type: rttFunc11, Fn: m.kotlinStringCompareTo2, Name: "kotlin.String.compareTo"}
-	m.funcs[611] = &rt.Func{Type: rttFunc11, Fn: m.kotlinStringEquals, Name: "kotlin.String.equals"}
-	m.funcs[612] = &rt.Func{Type: rttFunc9, Fn: m.kotlinStringToString, Name: "kotlin.String.toString"}
-	m.funcs[613] = &rt.Func{Type: rttFunc14, Fn: m.kotlinStringHashCode, Name: "kotlin.String.hashCode"}
-	m.funcs[616] = &rt.Func{Type: rttFunc9, Fn: m.kotlinThrowableGetMessage, Name: "kotlin.Throwable.<get-message>"}
-	m.funcs[619] = &rt.Func{Type: rttFunc9, Fn: m.kotlinThrowableToString, Name: "kotlin.Throwable.toString"}
-	m.funcs[722] = &rt.Func{Type: rttFunc9, Fn: m.kotlinTimeMonotonicTimeSourceToString, Name: "kotlin.time.MonotonicTimeSource.toString"}
-	m.funcs[723] = &rt.Func{Type: rttFunc155, Fn: m.kotlinTimeMonotonicTimeSourceMarkNow, Name: "kotlin.time.MonotonicTimeSource.markNow"}
-	m.funcs[736] = &rt.Func{Type: rttFunc318, Fn: m.circleArea, Name: "Circle.area"}
-	m.funcs[738] = &rt.Func{Type: rttFunc318, Fn: m.rectArea, Name: "Rect.area"}
-	m.funcs[740] = &rt.Func{Type: rttFunc318, Fn: m.triArea, Name: "Tri.area"}
-	m.funcs[745] = &rt.Func{Type: rttFunc377, Fn: m.main, Name: "main"}
-	m.funcs[746] = &rt.Func{Type: rttFunc231, Fn: m.mainLambdaInvoke, Name: "main$lambda.invoke"}
-	m.funcs[747] = &rt.Func{Type: rttFunc231, Fn: m.mainLambdaInvoke2, Name: "main$lambda.invoke"}
-	m.funcs[748] = &rt.Func{Type: rttFunc231, Fn: m.mainLambdaInvoke3, Name: "main$lambda.invoke"}
-	m.funcs[749] = &rt.Func{Type: rttFunc231, Fn: m.mainLambdaInvoke4, Name: "main$lambda.invoke"}
-	m.funcs[750] = &rt.Func{Type: rttFunc231, Fn: m.mainLambdaInvoke5, Name: "main$lambda.invoke"}
-	m.funcs[753] = &rt.Func{Type: rttFunc5, Fn: m.stringLiteralLatin1, Name: "_stringLiteralLatin1"}
-	m.funcs[754] = &rt.Func{Type: rttFunc5, Fn: m.stringLiteralUtf16, Name: "_stringLiteralUtf16"}
+	m.funcs[33] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsAbstractMutableSetEqualsEntry, Raw: m.kotlinCollectionsAbstractMutableSetEquals, Owner: m, Name: "kotlin.collections.AbstractMutableSet.equals"}
+	m.funcs[34] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsAbstractMutableSetHashCodeEntry, Raw: m.kotlinCollectionsAbstractMutableSetHashCode, Owner: m, Name: "kotlin.collections.AbstractMutableSet.hashCode"}
+	m.funcs[43] = &rt.Func{Type: rttFunc72, Fn: m.kotlinCollectionsEntriesItrNextEntry, Raw: m.kotlinCollectionsEntriesItrNext, Owner: m, Name: "kotlin.collections.EntriesItr.next"}
+	m.funcs[44] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsEntriesItrNext2Entry, Raw: m.kotlinCollectionsEntriesItrNext2, Owner: m, Name: "kotlin.collections.EntriesItr.next"}
+	m.funcs[47] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsEntriesItrHasNextEntry, Raw: m.kotlinCollectionsEntriesItrHasNext, Owner: m, Name: "kotlin.collections.EntriesItr.hasNext"}
+	m.funcs[49] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsEntryRefGetKeyEntry, Raw: m.kotlinCollectionsEntryRefGetKey, Owner: m, Name: "kotlin.collections.EntryRef.<get-key>"}
+	m.funcs[50] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsEntryRefGetValueEntry, Raw: m.kotlinCollectionsEntryRefGetValue, Owner: m, Name: "kotlin.collections.EntryRef.<get-value>"}
+	m.funcs[51] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsEntryRefEqualsEntry, Raw: m.kotlinCollectionsEntryRefEquals, Owner: m, Name: "kotlin.collections.EntryRef.equals"}
+	m.funcs[52] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsEntryRefHashCodeEntry, Raw: m.kotlinCollectionsEntryRefHashCode, Owner: m, Name: "kotlin.collections.EntryRef.hashCode"}
+	m.funcs[53] = &rt.Func{Type: rttFunc9, Fn: m.kotlinCollectionsEntryRefToStringEntry, Raw: m.kotlinCollectionsEntryRefToString, Owner: m, Name: "kotlin.collections.EntryRef.toString"}
+	m.funcs[56] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsHashMapGetSizeEntry, Raw: m.kotlinCollectionsHashMapGetSize, Owner: m, Name: "kotlin.collections.HashMap.<get-size>"}
+	m.funcs[59] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsHashMapIsEmptyEntry, Raw: m.kotlinCollectionsHashMapIsEmpty, Owner: m, Name: "kotlin.collections.HashMap.isEmpty"}
+	m.funcs[60] = &rt.Func{Type: rttFunc46, Fn: m.kotlinCollectionsHashMapGetEntry, Raw: m.kotlinCollectionsHashMapGet, Owner: m, Name: "kotlin.collections.HashMap.get"}
+	m.funcs[61] = &rt.Func{Type: rttFunc47, Fn: m.kotlinCollectionsHashMapPutEntry, Raw: m.kotlinCollectionsHashMapPut, Owner: m, Name: "kotlin.collections.HashMap.put"}
+	m.funcs[62] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsHashMapGetEntriesEntry, Raw: m.kotlinCollectionsHashMapGetEntries, Owner: m, Name: "kotlin.collections.HashMap.<get-entries>"}
+	m.funcs[63] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsHashMapGetEntries2Entry, Raw: m.kotlinCollectionsHashMapGetEntries2, Owner: m, Name: "kotlin.collections.HashMap.<get-entries>"}
+	m.funcs[64] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsHashMapEqualsEntry, Raw: m.kotlinCollectionsHashMapEquals, Owner: m, Name: "kotlin.collections.HashMap.equals"}
+	m.funcs[65] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsHashMapHashCodeEntry, Raw: m.kotlinCollectionsHashMapHashCode, Owner: m, Name: "kotlin.collections.HashMap.hashCode"}
+	m.funcs[66] = &rt.Func{Type: rttFunc9, Fn: m.kotlinCollectionsHashMapToStringEntry, Raw: m.kotlinCollectionsHashMapToString, Owner: m, Name: "kotlin.collections.HashMap.toString"}
+	m.funcs[86] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsHashMapEntrySetIteratorEntry, Raw: m.kotlinCollectionsHashMapEntrySetIterator, Owner: m, Name: "kotlin.collections.HashMapEntrySet.iterator"}
+	m.funcs[87] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsHashMapEntrySetIterator2Entry, Raw: m.kotlinCollectionsHashMapEntrySetIterator2, Owner: m, Name: "kotlin.collections.HashMapEntrySet.iterator"}
+	m.funcs[89] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsHashMapEntrySetBaseGetSizeEntry, Raw: m.kotlinCollectionsHashMapEntrySetBaseGetSize, Owner: m, Name: "kotlin.collections.HashMapEntrySetBase.<get-size>"}
+	m.funcs[90] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsHashMapEntrySetBaseIsEmptyEntry, Raw: m.kotlinCollectionsHashMapEntrySetBaseIsEmpty, Owner: m, Name: "kotlin.collections.HashMapEntrySetBase.isEmpty"}
+	m.funcs[91] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsHashMapEntrySetBaseContainsEntry, Raw: m.kotlinCollectionsHashMapEntrySetBaseContains, Owner: m, Name: "kotlin.collections.HashMapEntrySetBase.contains"}
+	m.funcs[92] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsHashMapEntrySetBaseContains2Entry, Raw: m.kotlinCollectionsHashMapEntrySetBaseContains2, Owner: m, Name: "kotlin.collections.HashMapEntrySetBase.contains"}
+	m.funcs[93] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsHashMapEntrySetBaseContainsAllEntry, Raw: m.kotlinCollectionsHashMapEntrySetBaseContainsAll, Owner: m, Name: "kotlin.collections.HashMapEntrySetBase.containsAll"}
+	m.funcs[100] = &rt.Func{Type: rttFunc14, Fn: m.kotlinTextStringBuilderGetLengthEntry, Raw: m.kotlinTextStringBuilderGetLength, Owner: m, Name: "kotlin.text.StringBuilder.<get-length>"}
+	m.funcs[101] = &rt.Func{Type: rttFunc7, Fn: m.kotlinTextStringBuilderGetEntry, Raw: m.kotlinTextStringBuilderGet, Owner: m, Name: "kotlin.text.StringBuilder.get"}
+	m.funcs[102] = &rt.Func{Type: rttFunc6, Fn: m.kotlinTextStringBuilderSubSequenceEntry, Raw: m.kotlinTextStringBuilderSubSequence, Owner: m, Name: "kotlin.text.StringBuilder.subSequence"}
+	m.funcs[103] = &rt.Func{Type: rttFunc80, Fn: m.kotlinTextStringBuilderAppendEntry, Raw: m.kotlinTextStringBuilderAppend, Owner: m, Name: "kotlin.text.StringBuilder.append"}
+	m.funcs[104] = &rt.Func{Type: rttFunc76, Fn: m.kotlinTextStringBuilderAppend2Entry, Raw: m.kotlinTextStringBuilderAppend2, Owner: m, Name: "kotlin.text.StringBuilder.append"}
+	m.funcs[105] = &rt.Func{Type: rttFunc79, Fn: m.kotlinTextStringBuilderAppend3Entry, Raw: m.kotlinTextStringBuilderAppend3, Owner: m, Name: "kotlin.text.StringBuilder.append"}
+	m.funcs[106] = &rt.Func{Type: rttFunc46, Fn: m.kotlinTextStringBuilderAppend4Entry, Raw: m.kotlinTextStringBuilderAppend4, Owner: m, Name: "kotlin.text.StringBuilder.append"}
+	m.funcs[107] = &rt.Func{Type: rttFunc81, Fn: m.kotlinTextStringBuilderAppend5Entry, Raw: m.kotlinTextStringBuilderAppend5, Owner: m, Name: "kotlin.text.StringBuilder.append"}
+	m.funcs[114] = &rt.Func{Type: rttFunc9, Fn: m.kotlinTextStringBuilderToStringEntry, Raw: m.kotlinTextStringBuilderToString, Owner: m, Name: "kotlin.text.StringBuilder.toString"}
+	m.funcs[120] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsAbstractCollectionContainsEntry, Raw: m.kotlinCollectionsAbstractCollectionContains, Owner: m, Name: "kotlin.collections.AbstractCollection.contains"}
+	m.funcs[121] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsAbstractCollectionContainsAllEntry, Raw: m.kotlinCollectionsAbstractCollectionContainsAll, Owner: m, Name: "kotlin.collections.AbstractCollection.containsAll"}
+	m.funcs[122] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsAbstractCollectionIsEmptyEntry, Raw: m.kotlinCollectionsAbstractCollectionIsEmpty, Owner: m, Name: "kotlin.collections.AbstractCollection.isEmpty"}
+	m.funcs[123] = &rt.Func{Type: rttFunc9, Fn: m.kotlinCollectionsAbstractCollectionToStringEntry, Raw: m.kotlinCollectionsAbstractCollectionToString, Owner: m, Name: "kotlin.collections.AbstractCollection.toString"}
+	m.funcs[125] = &rt.Func{Type: rttFunc46, Fn: m.kotlinCollectionsFunction1Bound1AInvokeEntry, Raw: m.kotlinCollectionsFunction1Bound1AInvoke, Owner: m, Name: "kotlin.collections.Function1_bound1_A.invoke"}
+	m.funcs[126] = &rt.Func{Type: rttFunc46, Fn: m.kotlinCollectionsAbstractCollectionToStringLambdaInvokeEntry, Raw: m.kotlinCollectionsAbstractCollectionToStringLambdaInvoke, Owner: m, Name: "kotlin.collections.AbstractCollection$toString$lambda.invoke"}
+	m.funcs[128] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsIteratorImplHasNextEntry, Raw: m.kotlinCollectionsIteratorImplHasNext, Owner: m, Name: "kotlin.collections.IteratorImpl.hasNext"}
+	m.funcs[129] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsIteratorImplNextEntry, Raw: m.kotlinCollectionsIteratorImplNext, Owner: m, Name: "kotlin.collections.IteratorImpl.next"}
+	m.funcs[139] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsAbstractListIteratorEntry, Raw: m.kotlinCollectionsAbstractListIterator, Owner: m, Name: "kotlin.collections.AbstractList.iterator"}
+	m.funcs[140] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCollectionsAbstractListEqualsEntry, Raw: m.kotlinCollectionsAbstractListEquals, Owner: m, Name: "kotlin.collections.AbstractList.equals"}
+	m.funcs[141] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsAbstractListHashCodeEntry, Raw: m.kotlinCollectionsAbstractListHashCode, Owner: m, Name: "kotlin.collections.AbstractList.hashCode"}
+	m.funcs[148] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCollectionsIntIteratorNextEntry, Raw: m.kotlinCollectionsIntIteratorNext, Owner: m, Name: "kotlin.collections.IntIterator.next"}
+	m.funcs[149] = &rt.Func{Type: rttFunc33, Fn: m.kotlinCollectionsIntIteratorNext2Entry, Raw: m.kotlinCollectionsIntIteratorNext2, Owner: m, Name: "kotlin.collections.IntIterator.next"}
+	m.funcs[151] = &rt.Func{Type: rttFunc14, Fn: m.kotlinEnumsEnumEntriesListGetSizeEntry, Raw: m.kotlinEnumsEnumEntriesListGetSize, Owner: m, Name: "kotlin.enums.EnumEntriesList.<get-size>"}
+	m.funcs[152] = &rt.Func{Type: rttFunc105, Fn: m.kotlinEnumsEnumEntriesListGetEntry, Raw: m.kotlinEnumsEnumEntriesListGet, Owner: m, Name: "kotlin.enums.EnumEntriesList.get"}
+	m.funcs[153] = &rt.Func{Type: rttFunc76, Fn: m.kotlinEnumsEnumEntriesListGet2Entry, Raw: m.kotlinEnumsEnumEntriesListGet2, Owner: m, Name: "kotlin.enums.EnumEntriesList.get"}
+	m.funcs[154] = &rt.Func{Type: rttFunc101, Fn: m.kotlinEnumsEnumEntriesListContainsEntry, Raw: m.kotlinEnumsEnumEntriesListContains, Owner: m, Name: "kotlin.enums.EnumEntriesList.contains"}
+	m.funcs[155] = &rt.Func{Type: rttFunc11, Fn: m.kotlinEnumsEnumEntriesListContains2Entry, Raw: m.kotlinEnumsEnumEntriesListContains2, Owner: m, Name: "kotlin.enums.EnumEntriesList.contains"}
+	m.funcs[161] = &rt.Func{Type: rttFunc7, Fn: m.kotlinRandomDefaultNextBitsEntry, Raw: m.kotlinRandomDefaultNextBits, Owner: m, Name: "kotlin.random.Default.nextBits"}
+	m.funcs[162] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRandomDefaultNextIntEntry, Raw: m.kotlinRandomDefaultNextInt, Owner: m, Name: "kotlin.random.Default.nextInt"}
+	m.funcs[163] = &rt.Func{Type: rttFunc109, Fn: m.kotlinRandomDefaultNextInt2Entry, Raw: m.kotlinRandomDefaultNextInt2, Owner: m, Name: "kotlin.random.Default.nextInt"}
+	m.funcs[167] = &rt.Func{Type: rttFunc109, Fn: m.kotlinRandomRandomNextInt2Entry, Raw: m.kotlinRandomRandomNextInt2, Owner: m, Name: "kotlin.random.Random.nextInt"}
+	m.funcs[177] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRandomXorWowRandomNextIntEntry, Raw: m.kotlinRandomXorWowRandomNextInt, Owner: m, Name: "kotlin.random.XorWowRandom.nextInt"}
+	m.funcs[178] = &rt.Func{Type: rttFunc7, Fn: m.kotlinRandomXorWowRandomNextBitsEntry, Raw: m.kotlinRandomXorWowRandomNextBits, Owner: m, Name: "kotlin.random.XorWowRandom.nextBits"}
+	m.funcs[183] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntRangeGetStartEntry, Raw: m.kotlinRangesIntRangeGetStart, Owner: m, Name: "kotlin.ranges.IntRange.<get-start>"}
+	m.funcs[184] = &rt.Func{Type: rttFunc33, Fn: m.kotlinRangesIntRangeGetStart2Entry, Raw: m.kotlinRangesIntRangeGetStart2, Owner: m, Name: "kotlin.ranges.IntRange.<get-start>"}
+	m.funcs[185] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntRangeGetEndInclusiveEntry, Raw: m.kotlinRangesIntRangeGetEndInclusive, Owner: m, Name: "kotlin.ranges.IntRange.<get-endInclusive>"}
+	m.funcs[186] = &rt.Func{Type: rttFunc33, Fn: m.kotlinRangesIntRangeGetEndInclusive2Entry, Raw: m.kotlinRangesIntRangeGetEndInclusive2, Owner: m, Name: "kotlin.ranges.IntRange.<get-endInclusive>"}
+	m.funcs[187] = &rt.Func{Type: rttFunc7, Fn: m.kotlinRangesIntRangeContainsEntry, Raw: m.kotlinRangesIntRangeContains, Owner: m, Name: "kotlin.ranges.IntRange.contains"}
+	m.funcs[188] = &rt.Func{Type: rttFunc11, Fn: m.kotlinRangesIntRangeContains2Entry, Raw: m.kotlinRangesIntRangeContains2, Owner: m, Name: "kotlin.ranges.IntRange.contains"}
+	m.funcs[189] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntRangeIsEmptyEntry, Raw: m.kotlinRangesIntRangeIsEmpty, Owner: m, Name: "kotlin.ranges.IntRange.isEmpty"}
+	m.funcs[190] = &rt.Func{Type: rttFunc11, Fn: m.kotlinRangesIntRangeEqualsEntry, Raw: m.kotlinRangesIntRangeEquals, Owner: m, Name: "kotlin.ranges.IntRange.equals"}
+	m.funcs[191] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntRangeHashCodeEntry, Raw: m.kotlinRangesIntRangeHashCode, Owner: m, Name: "kotlin.ranges.IntRange.hashCode"}
+	m.funcs[192] = &rt.Func{Type: rttFunc9, Fn: m.kotlinRangesIntRangeToStringEntry, Raw: m.kotlinRangesIntRangeToString, Owner: m, Name: "kotlin.ranges.IntRange.toString"}
+	m.funcs[194] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntProgressionIteratorHasNextEntry, Raw: m.kotlinRangesIntProgressionIteratorHasNext, Owner: m, Name: "kotlin.ranges.IntProgressionIterator.hasNext"}
+	m.funcs[195] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntProgressionIteratorNextIntEntry, Raw: m.kotlinRangesIntProgressionIteratorNextInt, Owner: m, Name: "kotlin.ranges.IntProgressionIterator.nextInt"}
+	m.funcs[198] = &rt.Func{Type: rttFunc120, Fn: m.kotlinRangesIntProgressionIteratorEntry, Raw: m.kotlinRangesIntProgressionIterator, Owner: m, Name: "kotlin.ranges.IntProgression.iterator"}
+	m.funcs[199] = &rt.Func{Type: rttFunc33, Fn: m.kotlinRangesIntProgressionIterator2Entry, Raw: m.kotlinRangesIntProgressionIterator2, Owner: m, Name: "kotlin.ranges.IntProgression.iterator"}
+	m.funcs[200] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntProgressionIsEmptyEntry, Raw: m.kotlinRangesIntProgressionIsEmpty, Owner: m, Name: "kotlin.ranges.IntProgression.isEmpty"}
+	m.funcs[201] = &rt.Func{Type: rttFunc11, Fn: m.kotlinRangesIntProgressionEqualsEntry, Raw: m.kotlinRangesIntProgressionEquals, Owner: m, Name: "kotlin.ranges.IntProgression.equals"}
+	m.funcs[202] = &rt.Func{Type: rttFunc14, Fn: m.kotlinRangesIntProgressionHashCodeEntry, Raw: m.kotlinRangesIntProgressionHashCode, Owner: m, Name: "kotlin.ranges.IntProgression.hashCode"}
+	m.funcs[203] = &rt.Func{Type: rttFunc9, Fn: m.kotlinRangesIntProgressionToStringEntry, Raw: m.kotlinRangesIntProgressionToString, Owner: m, Name: "kotlin.ranges.IntProgression.toString"}
+	m.funcs[240] = &rt.Func{Type: rttFunc136, Fn: m.kotlinTimeDurationCompareToEntry, Raw: m.kotlinTimeDurationCompareTo, Owner: m, Name: "kotlin.time.Duration.compareTo"}
+	m.funcs[241] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTimeDurationCompareTo2Entry, Raw: m.kotlinTimeDurationCompareTo2, Owner: m, Name: "kotlin.time.Duration.compareTo"}
+	m.funcs[242] = &rt.Func{Type: rttFunc9, Fn: m.kotlinTimeDurationToStringEntry, Raw: m.kotlinTimeDurationToString, Owner: m, Name: "kotlin.time.Duration.toString"}
+	m.funcs[243] = &rt.Func{Type: rttFunc14, Fn: m.kotlinTimeDurationHashCodeEntry, Raw: m.kotlinTimeDurationHashCode, Owner: m, Name: "kotlin.time.Duration.hashCode"}
+	m.funcs[244] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTimeDurationEqualsEntry, Raw: m.kotlinTimeDurationEquals, Owner: m, Name: "kotlin.time.Duration.equals"}
+	m.funcs[265] = &rt.Func{Type: rttFunc140, Fn: m.kotlinTimeValueTimeMarkMinusEntry, Raw: m.kotlinTimeValueTimeMarkMinus, Owner: m, Name: "kotlin.time.ValueTimeMark.minus"}
+	m.funcs[266] = &rt.Func{Type: rttFunc9, Fn: m.kotlinTimeValueTimeMarkToStringEntry, Raw: m.kotlinTimeValueTimeMarkToString, Owner: m, Name: "kotlin.time.ValueTimeMark.toString"}
+	m.funcs[267] = &rt.Func{Type: rttFunc14, Fn: m.kotlinTimeValueTimeMarkHashCodeEntry, Raw: m.kotlinTimeValueTimeMarkHashCode, Owner: m, Name: "kotlin.time.ValueTimeMark.hashCode"}
+	m.funcs[268] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTimeValueTimeMarkEqualsEntry, Raw: m.kotlinTimeValueTimeMarkEquals, Owner: m, Name: "kotlin.time.ValueTimeMark.equals"}
+	m.funcs[269] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTimeValueTimeMarkCompareToEntry, Raw: m.kotlinTimeValueTimeMarkCompareTo, Owner: m, Name: "kotlin.time.ValueTimeMark.compareTo"}
+	m.funcs[271] = &rt.Func{Type: rttFunc144, Fn: m.kotlinTimeMonotonicMarkNowEntry, Raw: m.kotlinTimeMonotonicMarkNow, Owner: m, Name: "kotlin.time.Monotonic.markNow"}
+	m.funcs[272] = &rt.Func{Type: rttFunc9, Fn: m.kotlinTimeMonotonicToStringEntry, Raw: m.kotlinTimeMonotonicToString, Owner: m, Name: "kotlin.time.Monotonic.toString"}
+	m.funcs[273] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTimeComparableTimeMarkCompareToEntry, Raw: m.kotlinTimeComparableTimeMarkCompareTo, Owner: m, Name: "kotlin.time.ComparableTimeMark.compareTo"}
+	m.funcs[286] = &rt.Func{Type: rttFunc7, Fn: m.kotlinUIntCompareToEntry, Raw: m.kotlinUIntCompareTo, Owner: m, Name: "kotlin.UInt.compareTo"}
+	m.funcs[287] = &rt.Func{Type: rttFunc11, Fn: m.kotlinUIntCompareTo2Entry, Raw: m.kotlinUIntCompareTo2, Owner: m, Name: "kotlin.UInt.compareTo"}
+	m.funcs[288] = &rt.Func{Type: rttFunc9, Fn: m.kotlinUIntToStringEntry, Raw: m.kotlinUIntToString, Owner: m, Name: "kotlin.UInt.toString"}
+	m.funcs[289] = &rt.Func{Type: rttFunc14, Fn: m.kotlinUIntHashCodeEntry, Raw: m.kotlinUIntHashCode, Owner: m, Name: "kotlin.UInt.hashCode"}
+	m.funcs[290] = &rt.Func{Type: rttFunc11, Fn: m.kotlinUIntEqualsEntry, Raw: m.kotlinUIntEquals, Owner: m, Name: "kotlin.UInt.equals"}
+	m.funcs[299] = &rt.Func{Type: rttFunc136, Fn: m.kotlinULongCompareToEntry, Raw: m.kotlinULongCompareTo, Owner: m, Name: "kotlin.ULong.compareTo"}
+	m.funcs[300] = &rt.Func{Type: rttFunc11, Fn: m.kotlinULongCompareTo2Entry, Raw: m.kotlinULongCompareTo2, Owner: m, Name: "kotlin.ULong.compareTo"}
+	m.funcs[301] = &rt.Func{Type: rttFunc9, Fn: m.kotlinULongToStringEntry, Raw: m.kotlinULongToString, Owner: m, Name: "kotlin.ULong.toString"}
+	m.funcs[302] = &rt.Func{Type: rttFunc14, Fn: m.kotlinULongHashCodeEntry, Raw: m.kotlinULongHashCode, Owner: m, Name: "kotlin.ULong.hashCode"}
+	m.funcs[303] = &rt.Func{Type: rttFunc11, Fn: m.kotlinULongEqualsEntry, Raw: m.kotlinULongEquals, Owner: m, Name: "kotlin.ULong.equals"}
+	m.funcs[305] = &rt.Func{Type: rttFunc11, Fn: m.kotlinAnyEqualsEntry, Raw: m.kotlinAnyEquals, Owner: m, Name: "kotlin.Any.equals"}
+	m.funcs[306] = &rt.Func{Type: rttFunc14, Fn: m.kotlinAnyHashCodeEntry, Raw: m.kotlinAnyHashCode, Owner: m, Name: "kotlin.Any.hashCode"}
+	m.funcs[307] = &rt.Func{Type: rttFunc9, Fn: m.kotlinAnyToStringEntry, Raw: m.kotlinAnyToString, Owner: m, Name: "kotlin.Any.toString"}
+	m.funcs[334] = &rt.Func{Type: rttFunc7, Fn: m.kotlinBooleanCompareToEntry, Raw: m.kotlinBooleanCompareTo, Owner: m, Name: "kotlin.Boolean.compareTo"}
+	m.funcs[335] = &rt.Func{Type: rttFunc11, Fn: m.kotlinBooleanCompareTo2Entry, Raw: m.kotlinBooleanCompareTo2, Owner: m, Name: "kotlin.Boolean.compareTo"}
+	m.funcs[336] = &rt.Func{Type: rttFunc9, Fn: m.kotlinBooleanToStringEntry, Raw: m.kotlinBooleanToString, Owner: m, Name: "kotlin.Boolean.toString"}
+	m.funcs[337] = &rt.Func{Type: rttFunc11, Fn: m.kotlinBooleanEqualsEntry, Raw: m.kotlinBooleanEquals, Owner: m, Name: "kotlin.Boolean.equals"}
+	m.funcs[338] = &rt.Func{Type: rttFunc14, Fn: m.kotlinBooleanHashCodeEntry, Raw: m.kotlinBooleanHashCode, Owner: m, Name: "kotlin.Boolean.hashCode"}
+	m.funcs[345] = &rt.Func{Type: rttFunc7, Fn: m.kotlinCharCompareToEntry, Raw: m.kotlinCharCompareTo, Owner: m, Name: "kotlin.Char.compareTo"}
+	m.funcs[346] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCharCompareTo2Entry, Raw: m.kotlinCharCompareTo2, Owner: m, Name: "kotlin.Char.compareTo"}
+	m.funcs[347] = &rt.Func{Type: rttFunc9, Fn: m.kotlinCharToStringEntry, Raw: m.kotlinCharToString, Owner: m, Name: "kotlin.Char.toString"}
+	m.funcs[348] = &rt.Func{Type: rttFunc11, Fn: m.kotlinCharEqualsEntry, Raw: m.kotlinCharEquals, Owner: m, Name: "kotlin.Char.equals"}
+	m.funcs[349] = &rt.Func{Type: rttFunc14, Fn: m.kotlinCharHashCodeEntry, Raw: m.kotlinCharHashCode, Owner: m, Name: "kotlin.Char.hashCode"}
+	m.funcs[353] = &rt.Func{Type: rttFunc101, Fn: m.kotlinEnumCompareToEntry, Raw: m.kotlinEnumCompareTo, Owner: m, Name: "kotlin.Enum.compareTo"}
+	m.funcs[354] = &rt.Func{Type: rttFunc11, Fn: m.kotlinEnumCompareTo2Entry, Raw: m.kotlinEnumCompareTo2, Owner: m, Name: "kotlin.Enum.compareTo"}
+	m.funcs[355] = &rt.Func{Type: rttFunc11, Fn: m.kotlinEnumEqualsEntry, Raw: m.kotlinEnumEquals, Owner: m, Name: "kotlin.Enum.equals"}
+	m.funcs[356] = &rt.Func{Type: rttFunc14, Fn: m.kotlinEnumHashCodeEntry, Raw: m.kotlinEnumHashCode, Owner: m, Name: "kotlin.Enum.hashCode"}
+	m.funcs[357] = &rt.Func{Type: rttFunc9, Fn: m.kotlinEnumToStringEntry, Raw: m.kotlinEnumToString, Owner: m, Name: "kotlin.Enum.toString"}
+	m.funcs[375] = &rt.Func{Type: rttFunc7, Fn: m.kotlinIntCompareToEntry, Raw: m.kotlinIntCompareTo, Owner: m, Name: "kotlin.Int.compareTo"}
+	m.funcs[376] = &rt.Func{Type: rttFunc11, Fn: m.kotlinIntCompareTo2Entry, Raw: m.kotlinIntCompareTo2, Owner: m, Name: "kotlin.Int.compareTo"}
+	m.funcs[377] = &rt.Func{Type: rttFunc9, Fn: m.kotlinIntToStringEntry, Raw: m.kotlinIntToString, Owner: m, Name: "kotlin.Int.toString"}
+	m.funcs[378] = &rt.Func{Type: rttFunc11, Fn: m.kotlinIntEqualsEntry, Raw: m.kotlinIntEquals, Owner: m, Name: "kotlin.Int.equals"}
+	m.funcs[379] = &rt.Func{Type: rttFunc14, Fn: m.kotlinIntHashCodeEntry, Raw: m.kotlinIntHashCode, Owner: m, Name: "kotlin.Int.hashCode"}
+	m.funcs[389] = &rt.Func{Type: rttFunc136, Fn: m.kotlinLongCompareToEntry, Raw: m.kotlinLongCompareTo, Owner: m, Name: "kotlin.Long.compareTo"}
+	m.funcs[390] = &rt.Func{Type: rttFunc11, Fn: m.kotlinLongCompareTo2Entry, Raw: m.kotlinLongCompareTo2, Owner: m, Name: "kotlin.Long.compareTo"}
+	m.funcs[391] = &rt.Func{Type: rttFunc9, Fn: m.kotlinLongToStringEntry, Raw: m.kotlinLongToString, Owner: m, Name: "kotlin.Long.toString"}
+	m.funcs[392] = &rt.Func{Type: rttFunc11, Fn: m.kotlinLongEqualsEntry, Raw: m.kotlinLongEquals, Owner: m, Name: "kotlin.Long.equals"}
+	m.funcs[393] = &rt.Func{Type: rttFunc14, Fn: m.kotlinLongHashCodeEntry, Raw: m.kotlinLongHashCode, Owner: m, Name: "kotlin.Long.hashCode"}
+	m.funcs[402] = &rt.Func{Type: rttFunc189, Fn: m.kotlinDoubleCompareToEntry, Raw: m.kotlinDoubleCompareTo, Owner: m, Name: "kotlin.Double.compareTo"}
+	m.funcs[403] = &rt.Func{Type: rttFunc11, Fn: m.kotlinDoubleCompareTo2Entry, Raw: m.kotlinDoubleCompareTo2, Owner: m, Name: "kotlin.Double.compareTo"}
+	m.funcs[404] = &rt.Func{Type: rttFunc9, Fn: m.kotlinDoubleToStringEntry, Raw: m.kotlinDoubleToString, Owner: m, Name: "kotlin.Double.toString"}
+	m.funcs[405] = &rt.Func{Type: rttFunc11, Fn: m.kotlinDoubleEqualsEntry, Raw: m.kotlinDoubleEquals, Owner: m, Name: "kotlin.Double.equals"}
+	m.funcs[406] = &rt.Func{Type: rttFunc14, Fn: m.kotlinDoubleHashCodeEntry, Raw: m.kotlinDoubleHashCode, Owner: m, Name: "kotlin.Double.hashCode"}
+	m.funcs[483] = &rt.Func{Type: rttFunc33, Fn: m.kotlinFunction0InvokeEntry, Raw: m.kotlinFunction0Invoke, Owner: m, Name: "kotlin.Function0.invoke"}
+	m.funcs[484] = &rt.Func{Type: rttFunc201, Fn: m.kotlinAssertLambdaInvokeEntry, Raw: m.kotlinAssertLambdaInvoke, Owner: m, Name: "kotlin.assert$lambda.invoke"}
+	m.funcs[530] = &rt.Func{Type: rttFunc9, Fn: m.kotlinUnitToStringEntry, Raw: m.kotlinUnitToString, Owner: m, Name: "kotlin.Unit.toString"}
+	m.funcs[537] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassImplGetSimpleNameEntry, Raw: m.kotlinWasmInternalKClassImplGetSimpleName, Owner: m, Name: "kotlin.wasm.internal.KClassImpl.<get-simpleName>"}
+	m.funcs[538] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassImplGetQualifiedNameEntry, Raw: m.kotlinWasmInternalKClassImplGetQualifiedName, Owner: m, Name: "kotlin.wasm.internal.KClassImpl.<get-qualifiedName>"}
+	m.funcs[539] = &rt.Func{Type: rttFunc11, Fn: m.kotlinWasmInternalKClassImplEqualsEntry, Raw: m.kotlinWasmInternalKClassImplEquals, Owner: m, Name: "kotlin.wasm.internal.KClassImpl.equals"}
+	m.funcs[540] = &rt.Func{Type: rttFunc14, Fn: m.kotlinWasmInternalKClassImplHashCodeEntry, Raw: m.kotlinWasmInternalKClassImplHashCode, Owner: m, Name: "kotlin.wasm.internal.KClassImpl.hashCode"}
+	m.funcs[541] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassImplToStringEntry, Raw: m.kotlinWasmInternalKClassImplToString, Owner: m, Name: "kotlin.wasm.internal.KClassImpl.toString"}
+	m.funcs[542] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassInterfaceImplGetSimpleNameEntry, Raw: m.kotlinWasmInternalKClassInterfaceImplGetSimpleName, Owner: m, Name: "kotlin.wasm.internal.KClassInterfaceImpl.<get-simpleName>"}
+	m.funcs[543] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassInterfaceImplGetSimpleName2Entry, Raw: m.kotlinWasmInternalKClassInterfaceImplGetSimpleName2, Owner: m, Name: "kotlin.wasm.internal.KClassInterfaceImpl.<get-simpleName>"}
+	m.funcs[544] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassInterfaceImplGetQualifiedNameEntry, Raw: m.kotlinWasmInternalKClassInterfaceImplGetQualifiedName, Owner: m, Name: "kotlin.wasm.internal.KClassInterfaceImpl.<get-qualifiedName>"}
+	m.funcs[545] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassInterfaceImplGetQualifiedName2Entry, Raw: m.kotlinWasmInternalKClassInterfaceImplGetQualifiedName2, Owner: m, Name: "kotlin.wasm.internal.KClassInterfaceImpl.<get-qualifiedName>"}
+	m.funcs[546] = &rt.Func{Type: rttFunc11, Fn: m.kotlinWasmInternalKClassInterfaceImplEqualsEntry, Raw: m.kotlinWasmInternalKClassInterfaceImplEquals, Owner: m, Name: "kotlin.wasm.internal.KClassInterfaceImpl.equals"}
+	m.funcs[547] = &rt.Func{Type: rttFunc14, Fn: m.kotlinWasmInternalKClassInterfaceImplHashCodeEntry, Raw: m.kotlinWasmInternalKClassInterfaceImplHashCode, Owner: m, Name: "kotlin.wasm.internal.KClassInterfaceImpl.hashCode"}
+	m.funcs[548] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmInternalKClassInterfaceImplToStringEntry, Raw: m.kotlinWasmInternalKClassInterfaceImplToString, Owner: m, Name: "kotlin.wasm.internal.KClassInterfaceImpl.toString"}
+	m.funcs[554] = &rt.Func{Type: rttFunc33, Fn: m.kotlinTextSamKotlinComparator0GetFunctionDelegateEntry, Raw: m.kotlinTextSamKotlinComparator0GetFunctionDelegate, Owner: m, Name: "kotlin.text.sam$kotlin_Comparator$0.getFunctionDelegate"}
+	m.funcs[555] = &rt.Func{Type: rttFunc11, Fn: m.kotlinTextSamKotlinComparator0EqualsEntry, Raw: m.kotlinTextSamKotlinComparator0Equals, Owner: m, Name: "kotlin.text.sam$kotlin_Comparator$0.equals"}
+	m.funcs[556] = &rt.Func{Type: rttFunc14, Fn: m.kotlinTextSamKotlinComparator0HashCodeEntry, Raw: m.kotlinTextSamKotlinComparator0HashCode, Owner: m, Name: "kotlin.text.sam$kotlin_Comparator$0.hashCode"}
+	m.funcs[558] = &rt.Func{Type: rttFunc46, Fn: m.kotlinTextSTRINGCASEINSENSITIVEORDERLambdaInvokeEntry, Raw: m.kotlinTextSTRINGCASEINSENSITIVEORDERLambdaInvoke, Owner: m, Name: "kotlin.text.STRING_CASE_INSENSITIVE_ORDER$lambda.invoke"}
+	m.funcs[592] = &rt.Func{Type: rttFunc9, Fn: m.kotlinWasmUnsafePointerToStringEntry, Raw: m.kotlinWasmUnsafePointerToString, Owner: m, Name: "kotlin.wasm.unsafe.Pointer.toString"}
+	m.funcs[593] = &rt.Func{Type: rttFunc14, Fn: m.kotlinWasmUnsafePointerHashCodeEntry, Raw: m.kotlinWasmUnsafePointerHashCode, Owner: m, Name: "kotlin.wasm.unsafe.Pointer.hashCode"}
+	m.funcs[594] = &rt.Func{Type: rttFunc11, Fn: m.kotlinWasmUnsafePointerEqualsEntry, Raw: m.kotlinWasmUnsafePointerEquals, Owner: m, Name: "kotlin.wasm.unsafe.Pointer.equals"}
+	m.funcs[596] = &rt.Func{Type: rttFunc7, Fn: m.kotlinWasmUnsafeScopedMemoryAllocatorAllocateEntry, Raw: m.kotlinWasmUnsafeScopedMemoryAllocatorAllocate, Owner: m, Name: "kotlin.wasm.unsafe.ScopedMemoryAllocator.allocate"}
+	m.funcs[602] = &rt.Func{Type: rttFunc14, Fn: m.kotlinStringGetLengthEntry, Raw: m.kotlinStringGetLength, Owner: m, Name: "kotlin.String.<get-length>"}
+	m.funcs[604] = &rt.Func{Type: rttFunc7, Fn: m.kotlinStringGetEntry, Raw: m.kotlinStringGet, Owner: m, Name: "kotlin.String.get"}
+	m.funcs[607] = &rt.Func{Type: rttFunc6, Fn: m.kotlinStringSubSequenceEntry, Raw: m.kotlinStringSubSequence, Owner: m, Name: "kotlin.String.subSequence"}
+	m.funcs[609] = &rt.Func{Type: rttFunc8, Fn: m.kotlinStringCompareToEntry, Raw: m.kotlinStringCompareTo, Owner: m, Name: "kotlin.String.compareTo"}
+	m.funcs[610] = &rt.Func{Type: rttFunc11, Fn: m.kotlinStringCompareTo2Entry, Raw: m.kotlinStringCompareTo2, Owner: m, Name: "kotlin.String.compareTo"}
+	m.funcs[611] = &rt.Func{Type: rttFunc11, Fn: m.kotlinStringEqualsEntry, Raw: m.kotlinStringEquals, Owner: m, Name: "kotlin.String.equals"}
+	m.funcs[612] = &rt.Func{Type: rttFunc9, Fn: m.kotlinStringToStringEntry, Raw: m.kotlinStringToString, Owner: m, Name: "kotlin.String.toString"}
+	m.funcs[613] = &rt.Func{Type: rttFunc14, Fn: m.kotlinStringHashCodeEntry, Raw: m.kotlinStringHashCode, Owner: m, Name: "kotlin.String.hashCode"}
+	m.funcs[616] = &rt.Func{Type: rttFunc9, Fn: m.kotlinThrowableGetMessageEntry, Raw: m.kotlinThrowableGetMessage, Owner: m, Name: "kotlin.Throwable.<get-message>"}
+	m.funcs[619] = &rt.Func{Type: rttFunc9, Fn: m.kotlinThrowableToStringEntry, Raw: m.kotlinThrowableToString, Owner: m, Name: "kotlin.Throwable.toString"}
+	m.funcs[722] = &rt.Func{Type: rttFunc9, Fn: m.kotlinTimeMonotonicTimeSourceToStringEntry, Raw: m.kotlinTimeMonotonicTimeSourceToString, Owner: m, Name: "kotlin.time.MonotonicTimeSource.toString"}
+	m.funcs[723] = &rt.Func{Type: rttFunc144, Fn: m.kotlinTimeMonotonicTimeSourceMarkNowEntry, Raw: m.kotlinTimeMonotonicTimeSourceMarkNow, Owner: m, Name: "kotlin.time.MonotonicTimeSource.markNow"}
+	m.funcs[736] = &rt.Func{Type: rttFunc266, Fn: m.circleAreaEntry, Raw: m.circleArea, Owner: m, Name: "Circle.area"}
+	m.funcs[738] = &rt.Func{Type: rttFunc266, Fn: m.rectAreaEntry, Raw: m.rectArea, Owner: m, Name: "Rect.area"}
+	m.funcs[740] = &rt.Func{Type: rttFunc266, Fn: m.triAreaEntry, Raw: m.triArea, Owner: m, Name: "Tri.area"}
+	m.funcs[745] = &rt.Func{Type: rttFunc303, Fn: m.mainEntry, Raw: m.main, Owner: m, Name: "main"}
+	m.funcs[746] = &rt.Func{Type: rttFunc201, Fn: m.mainLambdaInvokeEntry, Raw: m.mainLambdaInvoke, Owner: m, Name: "main$lambda.invoke"}
+	m.funcs[747] = &rt.Func{Type: rttFunc201, Fn: m.mainLambdaInvoke2Entry, Raw: m.mainLambdaInvoke2, Owner: m, Name: "main$lambda.invoke"}
+	m.funcs[748] = &rt.Func{Type: rttFunc201, Fn: m.mainLambdaInvoke3Entry, Raw: m.mainLambdaInvoke3, Owner: m, Name: "main$lambda.invoke"}
+	m.funcs[749] = &rt.Func{Type: rttFunc201, Fn: m.mainLambdaInvoke4Entry, Raw: m.mainLambdaInvoke4, Owner: m, Name: "main$lambda.invoke"}
+	m.funcs[750] = &rt.Func{Type: rttFunc201, Fn: m.mainLambdaInvoke5Entry, Raw: m.mainLambdaInvoke5, Owner: m, Name: "main$lambda.invoke"}
+	m.funcs[753] = &rt.Func{Type: rttFunc5, Fn: m.stringLiteralLatin1Entry, Raw: m.stringLiteralLatin1, Owner: m, Name: "_stringLiteralLatin1"}
+	m.funcs[754] = &rt.Func{Type: rttFunc5, Fn: m.stringLiteralUtf16Entry, Raw: m.stringLiteralUtf16, Owner: m, Name: "_stringLiteralUtf16"}
 	m.g0 = (*KotlinIntArray)(nil)
 	m.g1 = int32(0)
 	m.g2 = (*KotlinIntArray)(nil)
@@ -11233,7 +11234,7 @@ func (m *Instance) init() {
 	m.data6 = []byte(dataSeg6)
 	m.data7 = []byte(dataSeg7)
 	m.data8 = []byte(dataSeg8)
-	m.initializeModule(0)
+	m.initializeModuleEntry(0)
 }
 
 // Memory returns the exported memory "memory".
@@ -11241,7 +11242,7 @@ func (m *Instance) Memory() *rt.Memory { return m.mem0 }
 
 // Start calls the exported function "_start".
 func (m *Instance) Start() {
-	m.main(0)
+	m.mainEntry(0)
 }
 
 // Exports returns the module's exports by name: *rt.Func, *rt.Memory,
@@ -11254,18 +11255,22 @@ func (m *Instance) Exports() map[string]any {
 }
 
 func (m *Instance) f0(d int, p0 int32, p1 int32, p2 int32, p3 int32) int32 {
+	defer m.catchExn()
 	return m.host.M_wasi_snapshot_preview1_fd_write(p0, p1, p2, p3)
 }
 
 func (m *Instance) f1(d int, p0 int32, p1 int32, p2 int32, p3 int32) int32 {
+	defer m.catchExn()
 	return m.host.M_wasi_snapshot_preview1_poll_oneoff(p0, p1, p2, p3)
 }
 
 func (m *Instance) f2(d int, p0 int32, p1 int32) int32 {
+	defer m.catchExn()
 	return m.host.M_wasi_snapshot_preview1_random_get(p0, p1)
 }
 
 func (m *Instance) f3(d int, p0 int32, p1 int64, p2 int32) int32 {
+	defer m.catchExn()
 	return m.host.M_wasi_snapshot_preview1_clock_time_get(p0, p1, p2)
 }
 
@@ -11278,13 +11283,22 @@ func (m *Instance) kotlinCollectionsGetOrNull(d int, this *KotlinArray, index in
 	var s0_1 *KotlinAny
 	if int32(0) <= index {
 		s1 = m.kotlinArrayGetSize(d+1, this)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		s1 = m.kotlinIntDecImpl(d+1, s1)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		s0 = rt.B2I(index <= s1)
 	} else {
 		s0 = int32(0)
 	}
 	if s0 != 0 {
 		s0_1 = m.kotlinArrayGet(d+1, this, index)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 	} else {
 		s0_1 = (*KotlinAny)(nil)
 	}
@@ -11295,11 +11309,19 @@ func (m *Instance) kotlinCollectionsJoinToString(d int, this *KotlinAny, separat
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var tmp *KotlinAny
+	var tmp, s0 *KotlinAny
 	var s1, s0_1 *KotlinTextStringBuilder
 	var s1_1 *KotlinWasmInternalKClassImpl
+	var s0_2 *KotlinString
 	s1 = m.kotlinTextStringBuilderInit2(d+1, (*KotlinTextStringBuilder)(nil))
-	tmp = m.kotlinCollectionsJoinTo(d+1, this, rt.ViewAs[KotlinAny](s1), separator, prefix, postfix, limit, truncated, transform)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	s0 = m.kotlinCollectionsJoinTo(d+1, this, rt.ViewAs[KotlinAny](s1), separator, prefix, postfix, limit, truncated, transform)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	tmp = s0
 	if tmp != nil && rt.ObjRTT(tmp) == rttKotlinTextStringBuilder {
 		if !(tmp == nil || (tmp != nil && rt.ObjRTT(tmp) == rttKotlinTextStringBuilder)) {
 			panic(rt.ErrCast)
@@ -11308,9 +11330,16 @@ func (m *Instance) kotlinCollectionsJoinToString(d int, this *KotlinAny, separat
 	} else {
 		s1_1 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g281))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp, rt.ViewAs[KotlinAny](s1_1), int32(0))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinTextStringBuilderToString(d+1, rt.ViewAs[KotlinAny](s0_1))
+	s0_2 = m.kotlinTextStringBuilderToString(d+1, rt.ViewAs[KotlinAny](s0_1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_2
 }
 
 func (m *Instance) kotlinCollectionsJoinToStringDefault(d int, this *KotlinAny, separator *KotlinAny, prefix *KotlinAny, postfix *KotlinAny, limit *KotlinInt, truncated *KotlinAny, transform *KotlinAny, mask0 int32, handler *KotlinAny) *KotlinString {
@@ -11322,14 +11351,23 @@ func (m *Instance) kotlinCollectionsJoinToStringDefault(d int, this *KotlinAny, 
 	var s4 int32
 	if rt.B2I((mask0&int32(1)) == int32(0)) == 0 {
 		s0 = m.stringLiteralLatin1(d+1, int32(2))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		separator = rt.ViewAs[KotlinAny](s0)
 	}
 	if rt.B2I((mask0&int32(2)) == int32(0)) == 0 {
 		s0 = m.stringLiteralLatin1(d+1, int32(3))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		prefix = rt.ViewAs[KotlinAny](s0)
 	}
 	if rt.B2I((mask0&int32(4)) == int32(0)) == 0 {
 		s0 = m.stringLiteralLatin1(d+1, int32(3))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		postfix = rt.ViewAs[KotlinAny](s0)
 	}
 	if rt.B2I((mask0&int32(8)) == int32(0)) == 0 {
@@ -11338,6 +11376,9 @@ func (m *Instance) kotlinCollectionsJoinToStringDefault(d int, this *KotlinAny, 
 	}
 	if rt.B2I((mask0&int32(16)) == int32(0)) == 0 {
 		s0 = m.stringLiteralLatin1(d+1, int32(4))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		truncated = rt.ViewAs[KotlinAny](s0)
 	}
 	if rt.B2I((mask0&int32(32)) == int32(0)) == 0 {
@@ -11345,6 +11386,9 @@ func (m *Instance) kotlinCollectionsJoinToStringDefault(d int, this *KotlinAny, 
 	}
 	s4 = limit.Value
 	s0 = m.kotlinCollectionsJoinToString(d+1, this, separator, prefix, postfix, s4, truncated, transform)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0
 }
 
@@ -11356,8 +11400,9 @@ func (m *Instance) kotlinCollectionsJoinTo(d int, this *KotlinAny, buffer *Kotli
 	var iterator, element, s0 *KotlinAny
 	var s2, s1 *ClassVTable
 	var s2_1, s1_1 *SpecialITable
-	var s2_2, s1_2 any
+	var s2_2, fn1, s1_2, fn2, fn3, fn4, fn5, fn6, fn7 any
 	var s2_3, s1_3 *rt.Func
+	var own1, own2, own3, own4, own5, own6, own7 bool
 	s2 = buffer.Vtable
 	s2_1 = s2.SpecialITable
 	s2_2 = s2_1.F21
@@ -11365,7 +11410,15 @@ func (m *Instance) kotlinCollectionsJoinTo(d int, this *KotlinAny, buffer *Kotli
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable11](s2_2).Append_2
-	s0 = rt.FnOfRef(s2_3, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, prefix)
+	fn1, own1 = rt.FnOwn(s2_3, rttFunc46, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, prefix)
+	} else {
+		s0 = m.guard0(fn1.(func(int, *KotlinAny, *KotlinAny) *KotlinAny), d+1, buffer, prefix)
+	}
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	count = int32(0)
 	s1 = this.Vtable
 	s1_1 = s1.SpecialITable
@@ -11374,7 +11427,15 @@ func (m *Instance) kotlinCollectionsJoinTo(d int, this *KotlinAny, buffer *Kotli
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable4](s1_2).Iterator
-	s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this)
+	fn2, own2 = rt.FnOwn(s1_3, rttFunc33, m, false)
+	if own2 {
+		s0 = fn2.(func(int, *KotlinAny) *KotlinAny)(d+1, this)
+	} else {
+		s0 = m.guard1(fn2.(func(int, *KotlinAny) *KotlinAny), d+1, this)
+	}
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	iterator = s0
 L1:
 	for {
@@ -11385,7 +11446,15 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_1 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
+		fn3, own3 = rt.FnOwn(s1_3, rttFunc14, m, false)
+		if own3 {
+			s0_1 = fn3.(func(int, *KotlinAny) int32)(d+1, iterator)
+		} else {
+			s0_1 = m.guard2(fn3.(func(int, *KotlinAny) int32), d+1, iterator)
+		}
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		if s0_1 == 0 {
 			goto B2
 		}
@@ -11396,7 +11465,15 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		fn4, own4 = rt.FnOwn(s1_3, rttFunc33, m, false)
+		if own4 {
+			s0 = fn4.(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		} else {
+			s0 = m.guard1(fn4.(func(int, *KotlinAny) *KotlinAny), d+1, iterator)
+		}
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		element = s0
 		tmp0 = count
 		this_ = tmp0
@@ -11412,7 +11489,15 @@ L1:
 				panic(rt.ErrCast)
 			}
 			s2_3 = rt.As[ClassITable11](s2_2).Append_2
-			s0 = rt.FnOfRef(s2_3, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, separator)
+			fn5, own5 = rt.FnOwn(s2_3, rttFunc46, m, false)
+			if own5 {
+				s0 = fn5.(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, separator)
+			} else {
+				s0 = m.guard0(fn5.(func(int, *KotlinAny, *KotlinAny) *KotlinAny), d+1, buffer, separator)
+			}
+			if m.exn != nil {
+				return (*KotlinAny)(nil)
+			}
 		}
 		if limit < int32(0) {
 			s0_1 = int32(1)
@@ -11421,6 +11506,9 @@ L1:
 		}
 		if s0_1 != 0 {
 			m.kotlinTextAppendElement(d+1, buffer, element, transform)
+			if m.exn != nil {
+				return (*KotlinAny)(nil)
+			}
 		} else {
 			goto B2
 		}
@@ -11441,7 +11529,15 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s2_3 = rt.As[ClassITable11](s2_2).Append_2
-		s0 = rt.FnOfRef(s2_3, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, truncated)
+		fn6, own6 = rt.FnOwn(s2_3, rttFunc46, m, false)
+		if own6 {
+			s0 = fn6.(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, truncated)
+		} else {
+			s0 = m.guard0(fn6.(func(int, *KotlinAny, *KotlinAny) *KotlinAny), d+1, buffer, truncated)
+		}
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 	}
 	s2 = buffer.Vtable
 	s2_1 = s2.SpecialITable
@@ -11450,7 +11546,15 @@ L1:
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable11](s2_2).Append_2
-	s0 = rt.FnOfRef(s2_3, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, postfix)
+	fn7, own7 = rt.FnOwn(s2_3, rttFunc46, m, false)
+	if own7 {
+		s0 = fn7.(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, buffer, postfix)
+	} else {
+		s0 = m.guard0(fn7.(func(int, *KotlinAny, *KotlinAny) *KotlinAny), d+1, buffer, postfix)
+	}
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return buffer
 }
 
@@ -11461,10 +11565,14 @@ func (m *Instance) kotlinRangesContains(d int, this *KotlinAny, value int64) int
 	var tmp0, this_, s0_3 *KotlinAny
 	var tmp0_, it, s0, s1 *KotlinInt
 	var s5, s0_1 int32
-	var s2 any
+	var s2, fn1 any
 	var s2_1 *rt.Func
+	var own1 bool
 	var s0_2 *KotlinBoolean
 	s0 = m.kotlinRangesToIntExactOrNull(d+1, value)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0 = rt.ViewAs[KotlinAny](s0)
 	this_ = tmp0
 	if !(this_ == nil || (this_ != nil && rt.ObjRTT(this_) == rttKotlinInt)) {
@@ -11476,15 +11584,29 @@ func (m *Instance) kotlinRangesContains(d int, this *KotlinAny, value int64) int
 		s5 = it.Value
 		s1 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 		s2 = m.kotlinWasmInternalGetInterfaceVTable(d+1, this, int64(2327395236054518271))
+		if m.exn != nil {
+			return int32(0)
+		}
 		if !(rt.IsType(s2, rttClassITable12)) {
 			panic(rt.ErrCast)
 		}
 		s2_1 = rt.As[ClassITable12](s2).Contains
-		s0_1 = rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, this, rt.ViewAs[KotlinAny](s1))
+		fn1, own1 = rt.FnOwn(s2_1, rttFunc11, m, false)
+		if own1 {
+			s0_1 = fn1.(func(int, *KotlinAny, *KotlinAny) int32)(d+1, this, rt.ViewAs[KotlinAny](s1))
+		} else {
+			s0_1 = m.guard3(fn1.(func(int, *KotlinAny, *KotlinAny) int32), d+1, this, rt.ViewAs[KotlinAny](s1))
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 	} else {
 		s0_1 = int32(0)
 	}
 	s0_2 = m.kotlinWasmInternalGetBoxedBoolean(d+1, s0_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_3 = rt.ViewAs[KotlinAny](s0_2)
 	goto B2
 B2:
@@ -11507,6 +11629,9 @@ func (m *Instance) kotlinRangesToIntExactOrNull(d int, this int64) *KotlinInt {
 	}
 	if s0 != 0 {
 		s4 = m.kotlinLongToIntImpl(d+1, this)
+		if m.exn != nil {
+			return (*KotlinInt)(nil)
+		}
 		s0_1 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	} else {
 		s0_1 = (*KotlinInt)(nil)
@@ -11543,16 +11668,41 @@ func (m *Instance) kotlinRangesCoerceIn(d int, this int64, minimumValue int64, m
 	var s0 *KotlinIllegalArgumentException
 	if minimumValue > maximumValue {
 		s1 = m.stringLiteralLatin1(d+1, int32(5))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s2 = NewKotlinLong(rt.ViewAs[ClassVTable](m.g196), m.g260, m.g345, int32(0), maximumValue)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(6))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s2 = NewKotlinLong(rt.ViewAs[ClassVTable](m.g196), m.g260, m.g345, int32(0), minimumValue)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(7))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return int64(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return int64(0)
 	}
 	if this < minimumValue {
 		return minimumValue
@@ -11592,7 +11742,13 @@ func (m *Instance) kotlinKotlinNothingValueExceptionInit(d int, this *KotlinKotl
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit(d+1, rt.ViewAs[KotlinRuntimeException](this))
+	if m.exn != nil {
+		return (*KotlinKotlinNothingValueException)(nil)
+	}
 	s0 = m.kotlinKotlinNothingValueExceptionInit2(d+1, this)
+	if m.exn != nil {
+		return (*KotlinKotlinNothingValueException)(nil)
+	}
 	return this
 }
 
@@ -11603,8 +11759,14 @@ func (m *Instance) kotlinKotlinNothingValueExceptionInit2(d int, this *KotlinKot
 func (m *Instance) kotlinTextBinarySearchRange(d int, array *KotlinIntArray, needle int32) int32 {
 	var bottom, top_, middle, value, s0, s1 int32
 	m.kotlinTextInitPropertiesDigitCharsKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	bottom = int32(0)
 	s0 = m.kotlinIntArrayGetSize(d+1, array)
+	if m.exn != nil {
+		return int32(0)
+	}
 	top_ = (s0 - int32(1))
 	middle = int32(-1)
 	value = int32(0)
@@ -11614,8 +11776,14 @@ L1:
 			goto B2
 		}
 		s0 = m.kotlinIntDivImpl(d+1, (bottom + top_), int32(2))
+		if m.exn != nil {
+			return int32(0)
+		}
 		middle = s0
 		s0 = m.kotlinIntArrayGet(d+1, array, middle)
+		if m.exn != nil {
+			return int32(0)
+		}
 		value = s0
 		if needle > value {
 			bottom = (middle + int32(1))
@@ -11662,24 +11830,39 @@ func (m *Instance) kotlinTextInitPropertiesDigitCharsKt(d int) {
 
 func (m *Instance) kotlinTextGetRangeStart(d int) *KotlinIntArray {
 	m.kotlinTextInitPropertiesLowercaseMappingsKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	return m.g2
 }
 
 func (m *Instance) kotlinTextGetRangeLength(d int) *KotlinIntArray {
 	m.kotlinTextInitPropertiesLowercaseMappingsKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	return m.g3
 }
 
 func (m *Instance) kotlinTextLowercaseCharImpl(d int, this int32) int32 {
 	var tmp0, this_, s0 int32
 	m.kotlinTextInitPropertiesLowercaseMappingsKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0 = this
 	this_ = tmp0
 	s0 = this_
 	goto B1
 B1:
 	s0 = m.kotlinTextLowercaseCodePoint(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinIntToCharImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -11687,6 +11870,9 @@ func (m *Instance) kotlinTextLowercaseCodePoint(d int, this int32) int32 {
 	var index, s0, s1_1, s2_1 int32
 	var s0_1, s1, s2 *KotlinIntArray
 	m.kotlinTextInitPropertiesLowercaseMappingsKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if int32(65) <= this {
 		s0 = rt.B2I(this <= int32(90))
 	} else {
@@ -11699,13 +11885,34 @@ func (m *Instance) kotlinTextLowercaseCodePoint(d int, this int32) int32 {
 		return this
 	}
 	s0_1 = m.kotlinTextGetRangeStart(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinTextBinarySearchRange(d+1, s0_1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	index = s0
 	s1 = m.kotlinTextGetRangeStart(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1_1 = m.kotlinIntArrayGet(d+1, s1, index)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s2 = m.kotlinTextGetRangeLength(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s2_1 = m.kotlinIntArrayGet(d+1, s2, index)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinTextEqualDistanceMapping(d+1, this, s1_1, s2_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -11739,24 +11946,39 @@ func (m *Instance) kotlinTextInitPropertiesLowercaseMappingsKt(d int) {
 
 func (m *Instance) kotlinTextGetRangeStart2(d int) *KotlinIntArray {
 	m.kotlinTextInitPropertiesUppercaseMappingsKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	return m.g5
 }
 
 func (m *Instance) kotlinTextGetRangeLength2(d int) *KotlinIntArray {
 	m.kotlinTextInitPropertiesUppercaseMappingsKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	return m.g6
 }
 
 func (m *Instance) kotlinTextUppercaseCharImpl(d int, this int32) int32 {
 	var tmp0, this_, s0 int32
 	m.kotlinTextInitPropertiesUppercaseMappingsKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0 = this
 	this_ = tmp0
 	s0 = this_
 	goto B1
 B1:
 	s0 = m.kotlinTextUppercaseCodePoint(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinIntToCharImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -11764,6 +11986,9 @@ func (m *Instance) kotlinTextUppercaseCodePoint(d int, this int32) int32 {
 	var index, s0, s1_1, s2_1 int32
 	var s0_1, s1, s2 *KotlinIntArray
 	m.kotlinTextInitPropertiesUppercaseMappingsKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if int32(97) <= this {
 		s0 = rt.B2I(this <= int32(122))
 	} else {
@@ -11776,19 +12001,43 @@ func (m *Instance) kotlinTextUppercaseCodePoint(d int, this int32) int32 {
 		return this
 	}
 	s0_1 = m.kotlinTextGetRangeStart2(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinTextBinarySearchRange(d+1, s0_1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	index = s0
 	s1 = m.kotlinTextGetRangeStart2(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1_1 = m.kotlinIntArrayGet(d+1, s1, index)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s2 = m.kotlinTextGetRangeLength2(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s2_1 = m.kotlinIntArrayGet(d+1, s2, index)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinTextEqualDistanceMapping(d+1, this, s1_1, s2_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinTextEqualDistanceMapping(d int, code int32, start int32, pattern int32) int32 {
 	var diff, length, distance, mapping, s0 int32
 	m.kotlinTextInitPropertiesUppercaseMappingsKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	diff = (code - start)
 	length = (pattern & int32(255))
 	if diff >= length {
@@ -11796,6 +12045,9 @@ func (m *Instance) kotlinTextEqualDistanceMapping(d int, code int32, start int32
 	}
 	distance = ((pattern >> (uint32(8) & 31)) & int32(15))
 	s0 = m.kotlinIntRemImpl(d+1, diff, distance)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if rt.B2I(s0 == int32(0)) == 0 {
 		return code
 	}
@@ -11835,6 +12087,9 @@ func (m *Instance) kotlinCollectionsAbstractMutableCollectionInit(d int, this *K
 	var s0 *KotlinCollectionsAbstractCollection
 	_ = s0
 	s0 = m.kotlinCollectionsAbstractCollectionInit(d+1, rt.ViewAs[KotlinCollectionsAbstractCollection](this))
+	if m.exn != nil {
+		return (*KotlinCollectionsAbstractMutableCollection)(nil)
+	}
 	return this
 }
 
@@ -11842,6 +12097,9 @@ func (m *Instance) kotlinCollectionsAbstractMutableSetInit(d int, this *KotlinCo
 	var s0 *KotlinCollectionsAbstractMutableCollection
 	_ = s0
 	s0 = m.kotlinCollectionsAbstractMutableCollectionInit(d+1, rt.ViewAs[KotlinCollectionsAbstractMutableCollection](this))
+	if m.exn != nil {
+		return (*KotlinCollectionsAbstractMutableSet)(nil)
+	}
 	return this
 }
 
@@ -11884,6 +12142,9 @@ func (m *Instance) kotlinCollectionsAbstractMutableSetEquals(d int, this *Kotlin
 	}
 	s0_4 = m.g10
 	s0 = m.kotlinCollectionsCompanionSetEquals(d+1, s0_4, rt.ViewAs[KotlinAny](tmp0This), other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -11893,12 +12154,17 @@ func (m *Instance) kotlinCollectionsAbstractMutableSetHashCode(d int, this *Kotl
 	}
 	var tmp0This *KotlinCollectionsAbstractMutableSet
 	var s0 *KotlinCollectionsCompanion3
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsAbstractMutableSet))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsAbstractMutableSet](this)
 	s0 = m.g10
-	return m.kotlinCollectionsCompanionUnorderedHashCode(d+1, s0, rt.ViewAs[KotlinAny](tmp0This))
+	s0_1 = m.kotlinCollectionsCompanionUnorderedHashCode(d+1, s0, rt.ViewAs[KotlinAny](tmp0This))
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCollectionsCompanionInit(d int, this *KotlinCollectionsCompanion) *KotlinCollectionsCompanion {
@@ -11917,7 +12183,13 @@ func (m *Instance) kotlinCollectionsCompanionInit(d int, this *KotlinCollections
 func (m *Instance) kotlinCollectionsCompanionComputeHashSize(d int, this *KotlinCollectionsCompanion, capacity int32) int32 {
 	var s0 int32
 	s0 = m.kotlinRangesCoerceAtLeast(d+1, capacity, int32(1))
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinTakeHighestOneBit(d+1, (s0 * int32(3)))
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -11940,6 +12212,9 @@ func (m *Instance) kotlinCollectionsItrInit(d int, this *KotlinCollectionsItr, m
 	s1_1 = s1.ModCount
 	this.ExpectedModCount = s1_1
 	m.kotlinCollectionsItrInitNext(d+1, this)
+	if m.exn != nil {
+		return (*KotlinCollectionsItr)(nil)
+	}
 	return this
 }
 
@@ -11959,6 +12234,9 @@ L1:
 			s0_2 = s0_1.PresenceArray
 			s1_1 = this.Index
 			s0 = m.kotlinIntArrayGet(d+1, s0_2, s1_1)
+			if m.exn != nil {
+				return
+			}
 			s0 = rt.B2I(s0 < int32(0))
 		} else {
 			s0 = int32(0)
@@ -12002,7 +12280,11 @@ func (m *Instance) kotlinCollectionsItrCheckForComodification(d int, this *Kotli
 	s0_1 = rt.B2I(s0_1 == s1)
 	if s0_1 == 0 {
 		s0_2 = m.kotlinConcurrentModificationExceptionInit(d+1, (*KotlinConcurrentModificationException)(nil))
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return
 	}
 	return
 }
@@ -12016,13 +12298,16 @@ func (m *Instance) kotlinCollectionsEntriesItrInit(d int, this *KotlinCollection
 		this = s0
 	}
 	s0_1 = m.kotlinCollectionsItrInit(d+1, rt.ViewAs[KotlinCollectionsItr](this), map_)
+	if m.exn != nil {
+		return (*KotlinCollectionsEntriesItr)(nil)
+	}
 	return this
 }
 
 func (m *Instance) kotlinCollectionsEntriesItrNext(d int, this *KotlinAny) *KotlinCollectionsEntryRef {
 	var tmp0This, s0_2, s1_2 *KotlinCollectionsEntriesItr
 	var unary, tmp0, this_, s0, s1_1, s2 int32
-	var result *KotlinCollectionsEntryRef
+	var result, s0_3 *KotlinCollectionsEntryRef
 	var s1 *KotlinCollectionsHashMap
 	var s0_1 *KotlinNoSuchElementException
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsEntriesItr)) {
@@ -12030,13 +12315,20 @@ func (m *Instance) kotlinCollectionsEntriesItrNext(d int, this *KotlinAny) *Kotl
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsEntriesItr](this)
 	m.kotlinCollectionsItrCheckForComodification(d+1, rt.ViewAs[KotlinCollectionsItr](tmp0This))
+	if m.exn != nil {
+		return (*KotlinCollectionsEntryRef)(nil)
+	}
 	s0 = rt.ViewAs[KotlinCollectionsItr](tmp0This).Index
 	s1 = rt.ViewAs[KotlinCollectionsItr](tmp0This).Map
 	s1_1 = s1.Length
 	s0 = rt.B2I(s0 >= s1_1)
 	if s0 != 0 {
 		s0_1 = m.kotlinNoSuchElementExceptionInit(d+1, (*KotlinNoSuchElementException)(nil))
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return (*KotlinCollectionsEntryRef)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return (*KotlinCollectionsEntryRef)(nil)
 	}
 	s1_1 = rt.ViewAs[KotlinCollectionsItr](tmp0This).Index
 	unary = s1_1
@@ -12051,14 +12343,24 @@ B2:
 	rt.ViewAs[KotlinCollectionsItr](s0_2).LastIndex = unary
 	s1 = rt.ViewAs[KotlinCollectionsItr](tmp0This).Map
 	s2 = rt.ViewAs[KotlinCollectionsItr](tmp0This).LastIndex
-	result = m.kotlinCollectionsEntryRefInit(d+1, (*KotlinCollectionsEntryRef)(nil), s1, s2)
+	s0_3 = m.kotlinCollectionsEntryRefInit(d+1, (*KotlinCollectionsEntryRef)(nil), s1, s2)
+	if m.exn != nil {
+		return (*KotlinCollectionsEntryRef)(nil)
+	}
+	result = s0_3
 	m.kotlinCollectionsItrInitNext(d+1, rt.ViewAs[KotlinCollectionsItr](tmp0This))
+	if m.exn != nil {
+		return (*KotlinCollectionsEntryRef)(nil)
+	}
 	return result
 }
 
 func (m *Instance) kotlinCollectionsEntriesItrNext2(d int, this *KotlinAny) *KotlinAny {
 	var s0 *KotlinCollectionsEntryRef
 	s0 = m.kotlinCollectionsEntriesItrNext(d+1, this)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0)
 }
 
@@ -12067,7 +12369,7 @@ func (m *Instance) kotlinCollectionsEntriesItrNextHashCode(d int, this *KotlinCo
 		rt.Exhausted()
 	}
 	var unary, tmp0, this_, result, s0, s1_1, s2, s4, s5_2 int32
-	var tmp0_, this__, tmp0SafeReceiver, tmp0__, this___, tmp0SafeReceiver_ *KotlinAny
+	var tmp0_, this__, tmp0SafeReceiver, tmp0__, this___, tmp0SafeReceiver_, s0_5, s1_4 *KotlinAny
 	var tmp1ElvisLhs, tmp1ElvisLhs_, s0_6, s1_5 *KotlinInt
 	var tmp8, s0_4, s1_3 *KotlinArray
 	var s1, s0_3 *KotlinCollectionsHashMap
@@ -12075,13 +12377,19 @@ func (m *Instance) kotlinCollectionsEntriesItrNextHashCode(d int, this *KotlinCo
 	var s0_2, s1_2 *KotlinCollectionsEntriesItr
 	var s5, s6 *ClassVTable
 	var s5_1, s6_1 *rt.Func
+	var fn1, fn2 any
+	var own1, own2 bool
 	s0 = rt.ViewAs[KotlinCollectionsItr](this).Index
 	s1 = rt.ViewAs[KotlinCollectionsItr](this).Map
 	s1_1 = s1.Length
 	s0 = rt.B2I(s0 >= s1_1)
 	if s0 != 0 {
 		s0_1 = m.kotlinNoSuchElementExceptionInit(d+1, (*KotlinNoSuchElementException)(nil))
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return int32(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return int32(0)
 	}
 	s1_1 = rt.ViewAs[KotlinCollectionsItr](this).Index
 	unary = s1_1
@@ -12097,7 +12405,11 @@ B2:
 	s0_3 = rt.ViewAs[KotlinCollectionsItr](this).Map
 	s0_4 = s0_3.KeysArray
 	s1_1 = rt.ViewAs[KotlinCollectionsItr](this).LastIndex
-	tmp0_ = m.kotlinArrayGet(d+1, s0_4, s1_1)
+	s0_5 = m.kotlinArrayGet(d+1, s0_4, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	tmp0_ = s0_5
 	this__ = tmp0_
 	tmp0SafeReceiver = this__
 	if tmp0SafeReceiver == nil {
@@ -12105,7 +12417,15 @@ B2:
 	} else {
 		s5 = tmp0SafeReceiver.Vtable
 		s5_1 = s5.HashCode
-		s4 = rt.FnOfRef(s5_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+		fn1, own1 = rt.FnOwn(s5_1, rttFunc14, m, false)
+		if own1 {
+			s4 = fn1.(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+		} else {
+			s4 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, tmp0SafeReceiver)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_6 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	}
 	tmp1ElvisLhs = s0_6
@@ -12121,12 +12441,19 @@ B3:
 	tmp8 = s1_3
 	if tmp8 == nil {
 		m.kotlinWasmInternalTHROWNPE(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	} else {
 		s1_3 = tmp8
 	}
 	s2 = rt.ViewAs[KotlinCollectionsItr](this).LastIndex
-	tmp0__ = m.kotlinArrayGet(d+1, s1_3, s2)
+	s1_4 = m.kotlinArrayGet(d+1, s1_3, s2)
+	if m.exn != nil {
+		return int32(0)
+	}
+	tmp0__ = s1_4
 	this___ = tmp0__
 	tmp0SafeReceiver_ = this___
 	if tmp0SafeReceiver_ == nil {
@@ -12134,7 +12461,15 @@ B3:
 	} else {
 		s6 = tmp0SafeReceiver_.Vtable
 		s6_1 = s6.HashCode
-		s5_2 = rt.FnOfRef(s6_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver_)
+		fn2, own2 = rt.FnOwn(s6_1, rttFunc14, m, false)
+		if own2 {
+			s5_2 = fn2.(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver_)
+		} else {
+			s5_2 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, tmp0SafeReceiver_)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1_5 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5_2)
 	}
 	tmp1ElvisLhs_ = s1_5
@@ -12148,6 +12483,9 @@ B7:
 	s0 = (s0 ^ s1_1)
 	result = s0
 	m.kotlinCollectionsItrInitNext(d+1, rt.ViewAs[KotlinCollectionsItr](this))
+	if m.exn != nil {
+		return int32(0)
+	}
 	return result
 }
 
@@ -12170,7 +12508,11 @@ func (m *Instance) kotlinCollectionsEntriesItrNextAppendString(d int, this *Kotl
 	s0 = rt.B2I(s0 >= s1_1)
 	if s0 != 0 {
 		s0_1 = m.kotlinNoSuchElementExceptionInit(d+1, (*KotlinNoSuchElementException)(nil))
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	s1_1 = rt.ViewAs[KotlinCollectionsItr](this).Index
 	unary = s1_1
@@ -12187,37 +12529,70 @@ B2:
 	s0_4 = s0_3.KeysArray
 	s1_1 = rt.ViewAs[KotlinCollectionsItr](this).LastIndex
 	s0_5 = m.kotlinArrayGet(d+1, s0_4, s1_1)
+	if m.exn != nil {
+		return
+	}
 	key = s0_5
 	s1 = rt.ViewAs[KotlinCollectionsItr](this).Map
 	s0 = rt.B2I(rt.Box(key) == rt.Box(s1))
 	if s0 != 0 {
 		s1_3 = m.stringLiteralLatin1(d+1, int32(16))
+		if m.exn != nil {
+			return
+		}
 		s0_6 = m.kotlinTextStringBuilderAppend9(d+1, sb, s1_3)
+		if m.exn != nil {
+			return
+		}
 	} else {
 		s0_6 = m.kotlinTextStringBuilderAppend6(d+1, sb, key)
+		if m.exn != nil {
+			return
+		}
 	}
 	s0_6 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](sb), int32(61))
+	if m.exn != nil {
+		return
+	}
 	s0_3 = rt.ViewAs[KotlinCollectionsItr](this).Map
 	s0_4 = s0_3.ValuesArray
 	tmp9 = s0_4
 	if tmp9 == nil {
 		m.kotlinWasmInternalTHROWNPE(d + 1)
+		if m.exn != nil {
+			return
+		}
 		panic(rt.ErrUnreachable)
 	} else {
 		s0_4 = tmp9
 	}
 	s1_1 = rt.ViewAs[KotlinCollectionsItr](this).LastIndex
 	s0_5 = m.kotlinArrayGet(d+1, s0_4, s1_1)
+	if m.exn != nil {
+		return
+	}
 	value = s0_5
 	s1 = rt.ViewAs[KotlinCollectionsItr](this).Map
 	s0 = rt.B2I(rt.Box(value) == rt.Box(s1))
 	if s0 != 0 {
 		s1_3 = m.stringLiteralLatin1(d+1, int32(16))
+		if m.exn != nil {
+			return
+		}
 		s0_6 = m.kotlinTextStringBuilderAppend9(d+1, sb, s1_3)
+		if m.exn != nil {
+			return
+		}
 	} else {
 		s0_6 = m.kotlinTextStringBuilderAppend6(d+1, sb, value)
+		if m.exn != nil {
+			return
+		}
 	}
 	m.kotlinCollectionsItrInitNext(d+1, rt.ViewAs[KotlinCollectionsItr](this))
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
@@ -12227,6 +12602,7 @@ func (m *Instance) kotlinCollectionsEntriesItrHasNext(d int, this *KotlinAny) in
 	}
 	var s0 *KotlinCollectionsItr
 	var s1 *KotlinWasmInternalKClassImpl
+	var s0_1 int32
 	if this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsItr) {
 		if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsItr))) {
 			panic(rt.ErrCast)
@@ -12235,9 +12611,16 @@ func (m *Instance) kotlinCollectionsEntriesItrHasNext(d int, this *KotlinAny) in
 	} else {
 		s1 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g278))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, this, rt.ViewAs[KotlinAny](s1), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinCollectionsItrHasNext(d+1, s0)
+	s0_1 = m.kotlinCollectionsItrHasNext(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCollectionsEntryRefInit(d int, this *KotlinCollectionsEntryRef, map_ *KotlinCollectionsHashMap, index int32) *KotlinCollectionsEntryRef {
@@ -12261,15 +12644,23 @@ func (m *Instance) kotlinCollectionsEntryRefGetKey(d int, this *KotlinAny) *Kotl
 	var s0 *KotlinCollectionsHashMap
 	var s0_1 *KotlinArray
 	var s1 int32
+	var s0_2 *KotlinAny
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsEntryRef)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsEntryRef](this)
 	m.kotlinCollectionsEntryRefCheckForComodification(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = tmp0This.Map
 	s0_1 = s0.KeysArray
 	s1 = tmp0This.Index
-	return m.kotlinArrayGet(d+1, s0_1, s1)
+	s0_2 = m.kotlinArrayGet(d+1, s0_1, s1)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	return s0_2
 }
 
 func (m *Instance) kotlinCollectionsEntryRefGetValue(d int, this *KotlinAny) *KotlinAny {
@@ -12277,22 +12668,33 @@ func (m *Instance) kotlinCollectionsEntryRefGetValue(d int, this *KotlinAny) *Ko
 	var tmp10, s0_1 *KotlinArray
 	var s0 *KotlinCollectionsHashMap
 	var s1 int32
+	var s0_2 *KotlinAny
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsEntryRef)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsEntryRef](this)
 	m.kotlinCollectionsEntryRefCheckForComodification(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = tmp0This.Map
 	s0_1 = s0.ValuesArray
 	tmp10 = s0_1
 	if tmp10 == nil {
 		m.kotlinWasmInternalTHROWNPE(d + 1)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	} else {
 		s0_1 = tmp10
 	}
 	s1 = tmp0This.Index
-	return m.kotlinArrayGet(d+1, s0_1, s1)
+	s0_2 = m.kotlinArrayGet(d+1, s0_1, s1)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	return s0_2
 }
 
 func (m *Instance) kotlinCollectionsEntryRefEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -12304,8 +12706,9 @@ func (m *Instance) kotlinCollectionsEntryRefEquals(d int, this *KotlinAny, other
 	var s0 int32
 	var s0_1, s1 *ClassVTable
 	var s0_2, s1_1 *SpecialITable
-	var s0_3, s1_2 any
+	var s0_3, s1_2, fn1, fn2 any
 	var s1_3 *rt.Func
+	var own1, own2 bool
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsEntryRef)) {
 		panic(rt.ErrCast)
 	}
@@ -12335,9 +12738,23 @@ func (m *Instance) kotlinCollectionsEntryRefEquals(d int, this *KotlinAny, other
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable8](s1_2).GetKey
-		s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp)
+		fn1, own1 = rt.FnOwn(s1_3, rttFunc33, m, false)
+		if own1 {
+			s0_4 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, tmp)
+		} else {
+			s0_4 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, tmp)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1_4 = m.kotlinCollectionsEntryRefGetKey(d+1, rt.ViewAs[KotlinAny](tmp0This))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinWasmInternalNullableEquals(d+1, s0_4, s1_4)
+		if m.exn != nil {
+			return int32(0)
+		}
 	} else {
 		s0 = int32(0)
 	}
@@ -12350,9 +12767,23 @@ func (m *Instance) kotlinCollectionsEntryRefEquals(d int, this *KotlinAny, other
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable8](s1_2).GetValue
-		s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
+		fn2, own2 = rt.FnOwn(s1_3, rttFunc33, m, false)
+		if own2 {
+			s0_4 = fn2.(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
+		} else {
+			s0_4 = m.guard1(fn2.(func(int, *KotlinAny) *KotlinAny), d+1, tmp_)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1_4 = m.kotlinCollectionsEntryRefGetValue(d+1, rt.ViewAs[KotlinAny](tmp0This))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinWasmInternalNullableEquals(d+1, s0_4, s1_4)
+		if m.exn != nil {
+			return int32(0)
+		}
 	} else {
 		s0 = int32(0)
 	}
@@ -12364,16 +12795,22 @@ func (m *Instance) kotlinCollectionsEntryRefHashCode(d int, this *KotlinAny) int
 		rt.Exhausted()
 	}
 	var tmp0This *KotlinCollectionsEntryRef
-	var tmp0, this_, tmp0SafeReceiver, tmp0_, this__, tmp0SafeReceiver_, s1 *KotlinAny
+	var tmp0, this_, tmp0SafeReceiver, tmp0_, this__, tmp0SafeReceiver_, s0, s1 *KotlinAny
 	var tmp1ElvisLhs, tmp1ElvisLhs_, s0_1, s1_1 *KotlinInt
 	var s5, s6 *ClassVTable
 	var s5_1, s6_1 *rt.Func
+	var fn1, fn2 any
+	var own1, own2 bool
 	var s4, s0_2, s5_2, s1_2 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsEntryRef)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsEntryRef](this)
-	tmp0 = m.kotlinCollectionsEntryRefGetKey(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	s0 = m.kotlinCollectionsEntryRefGetKey(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	if m.exn != nil {
+		return int32(0)
+	}
+	tmp0 = s0
 	this_ = tmp0
 	tmp0SafeReceiver = this_
 	if tmp0SafeReceiver == nil {
@@ -12381,7 +12818,15 @@ func (m *Instance) kotlinCollectionsEntryRefHashCode(d int, this *KotlinAny) int
 	} else {
 		s5 = tmp0SafeReceiver.Vtable
 		s5_1 = s5.HashCode
-		s4 = rt.FnOfRef(s5_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+		fn1, own1 = rt.FnOwn(s5_1, rttFunc14, m, false)
+		if own1 {
+			s4 = fn1.(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+		} else {
+			s4 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, tmp0SafeReceiver)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	}
 	tmp1ElvisLhs = s0_1
@@ -12393,6 +12838,9 @@ func (m *Instance) kotlinCollectionsEntryRefHashCode(d int, this *KotlinAny) int
 	goto B1
 B1:
 	s1 = m.kotlinCollectionsEntryRefGetValue(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0_ = s1
 	this__ = tmp0_
 	tmp0SafeReceiver_ = this__
@@ -12401,7 +12849,15 @@ B1:
 	} else {
 		s6 = tmp0SafeReceiver_.Vtable
 		s6_1 = s6.HashCode
-		s5_2 = rt.FnOfRef(s6_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver_)
+		fn2, own2 = rt.FnOwn(s6_1, rttFunc14, m, false)
+		if own2 {
+			s5_2 = fn2.(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver_)
+		} else {
+			s5_2 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, tmp0SafeReceiver_)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1_1 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5_2)
 	}
 	tmp1ElvisLhs_ = s1_1
@@ -12428,11 +12884,29 @@ func (m *Instance) kotlinCollectionsEntryRefToString(d int, this *KotlinAny) *Ko
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsEntryRef](this)
 	s0 = m.kotlinCollectionsEntryRefGetKey(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_1 = m.kotlinToString(d+1, s0)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1 = m.stringLiteralLatin1(d+1, int32(18))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1_1 = m.kotlinCollectionsEntryRefGetValue(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_1 = m.kotlinStringPlus(d+1, s0_1, s1_1)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0_1
 }
 
@@ -12447,8 +12921,15 @@ func (m *Instance) kotlinCollectionsEntryRefCheckForComodification(d int, this *
 	s0_1 = rt.B2I(s0_1 == s1)
 	if s0_1 == 0 {
 		s1_1 = m.stringLiteralLatin1(d+1, int32(19))
+		if m.exn != nil {
+			return
+		}
 		s0_2 = m.kotlinConcurrentModificationExceptionInit2(d+1, (*KotlinConcurrentModificationException)(nil), s1_1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return
 	}
 	return
 }
@@ -12469,7 +12950,13 @@ func (m *Instance) kotlinCollectionsHashMapInit(d int, this *KotlinCollectionsHa
 	this.Length = length
 	s1 = m.g8
 	s2 = m.kotlinCollectionsHashMapGetHashSize(d+1, this)
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMap)(nil)
+	}
 	s1_1 = m.kotlinCollectionsCompanionComputeShift(d+1, s1, s2)
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMap)(nil)
+	}
 	this.HashShift = s1_1
 	this.ModCount = int32(0)
 	this.Size = int32(0)
@@ -12499,6 +12986,9 @@ func (m *Instance) kotlinCollectionsHashMapInit2(d int, this *KotlinCollectionsH
 		this = s0
 	}
 	s0 = m.kotlinCollectionsHashMapInit3(d+1, this, int32(8))
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMap)(nil)
+	}
 	return this
 }
 
@@ -12512,6 +13002,8 @@ func (m *Instance) kotlinCollectionsHashMapInit3(d int, this *KotlinCollectionsH
 	var s1, s2 *KotlinString
 	var s3 *ClassVTable
 	var s3_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s1_2 *KotlinIllegalArgumentException
 	var s1_3 *KotlinUnit
 	var s1_4 *KotlinArray
@@ -12529,27 +13021,60 @@ func (m *Instance) kotlinCollectionsHashMapInit3(d int, this *KotlinCollectionsH
 	value = tmp0_
 	if value == 0 {
 		s1 = m.stringLiteralLatin1(d+1, int32(21))
+		if m.exn != nil {
+			return (*KotlinCollectionsHashMap)(nil)
+		}
 		s1_1 = rt.ViewAs[KotlinAny](s1)
 		goto B5
 	B5:
 		message = s1_1
 		s3 = message.Vtable
 		s3_1 = s3.ToString
-		s2 = rt.FnOfRef(s3_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		fn1, own1 = rt.FnOwn(s3_1, rttFunc9, m, false)
+		if own1 {
+			s2 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		} else {
+			s2 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, message)
+		}
+		if m.exn != nil {
+			return (*KotlinCollectionsHashMap)(nil)
+		}
 		s1_2 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s2)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s1_2)}})
+		if m.exn != nil {
+			return (*KotlinCollectionsHashMap)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s1_2)}}
+		return (*KotlinCollectionsHashMap)(nil)
 	}
 	s1_3 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMap)(nil)
+	}
 	goto B3
 B3:
 	s1_4 = m.kotlinArrayInit(d+1, (*KotlinArray)(nil), size)
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMap)(nil)
+	}
 	goto B2
 B2:
 	s3_2 = m.kotlinIntArrayInit(d+1, (*KotlinIntArray)(nil), initialCapacity)
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMap)(nil)
+	}
 	s5 = m.g8
 	s5_1 = m.kotlinCollectionsCompanionComputeHashSize(d+1, s5, initialCapacity)
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMap)(nil)
+	}
 	s4 = m.kotlinIntArrayInit(d+1, (*KotlinIntArray)(nil), s5_1)
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMap)(nil)
+	}
 	s0 = m.kotlinCollectionsHashMapInit(d+1, s0, s1_4, (*KotlinArray)(nil), s3_2, s4, int32(2), int32(0))
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMap)(nil)
+	}
 	return this
 }
 
@@ -12569,13 +13094,18 @@ func (m *Instance) kotlinCollectionsHashMapGet(d int, this *KotlinAny, key *Kotl
 		rt.Exhausted()
 	}
 	var tmp0This *KotlinCollectionsHashMap
-	var index int32
+	var index, s0 int32
 	var tmp0, s0_1 *KotlinArray
+	var s0_2 *KotlinAny
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsHashMap)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsHashMap](this)
-	index = m.kotlinCollectionsHashMapFindKey(d+1, tmp0This, key)
+	s0 = m.kotlinCollectionsHashMapFindKey(d+1, tmp0This, key)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	index = s0
 	if index < int32(0) {
 		return (*KotlinAny)(nil)
 	}
@@ -12583,11 +13113,18 @@ func (m *Instance) kotlinCollectionsHashMapGet(d int, this *KotlinAny, key *Kotl
 	tmp0 = s0_1
 	if tmp0 == nil {
 		m.kotlinWasmInternalTHROWNPE(d + 1)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	} else {
 		s0_1 = tmp0
 	}
-	return m.kotlinArrayGet(d+1, s0_1, index)
+	s0_2 = m.kotlinArrayGet(d+1, s0_1, index)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	return s0_2
 }
 
 func (m *Instance) kotlinCollectionsHashMapPut(d int, this *KotlinAny, key *KotlinAny, value *KotlinAny) *KotlinAny {
@@ -12595,7 +13132,7 @@ func (m *Instance) kotlinCollectionsHashMapPut(d int, this *KotlinAny, key *Kotl
 		rt.Exhausted()
 	}
 	var tmp0This *KotlinCollectionsHashMap
-	var index, tmp0, this_, tmp0_, this__, s1 int32
+	var index, tmp0, this_, tmp0_, this__, s0, s1 int32
 	var valuesArray, s0_1 *KotlinArray
 	var oldValue, s0_2 *KotlinAny
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsHashMap)) {
@@ -12603,8 +13140,18 @@ func (m *Instance) kotlinCollectionsHashMapPut(d int, this *KotlinAny, key *Kotl
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsHashMap](this)
 	m.kotlinCollectionsHashMapCheckIsMutable(d+1, tmp0This)
-	index = m.kotlinCollectionsHashMapAddKey(d+1, tmp0This, key)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	s0 = m.kotlinCollectionsHashMapAddKey(d+1, tmp0This, key)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	index = s0
 	s0_1 = m.kotlinCollectionsHashMapAllocateValuesArray(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	valuesArray = s0_1
 	if index < int32(0) {
 		tmp0 = index
@@ -12614,6 +13161,9 @@ func (m *Instance) kotlinCollectionsHashMapPut(d int, this *KotlinAny, key *Kotl
 		goto B2
 	B2:
 		s0_2 = m.kotlinArrayGet(d+1, s0_1, (s1 - int32(1)))
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		oldValue = s0_2
 		tmp0_ = index
 		s0_1 = valuesArray
@@ -12622,9 +13172,15 @@ func (m *Instance) kotlinCollectionsHashMapPut(d int, this *KotlinAny, key *Kotl
 		goto B3
 	B3:
 		m.kotlinArraySet(d+1, s0_1, (s1 - int32(1)), value)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		return oldValue
 	} else {
 		m.kotlinArraySet(d+1, valuesArray, index, value)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		return (*KotlinAny)(nil)
 	}
 }
@@ -12641,6 +13197,9 @@ func (m *Instance) kotlinCollectionsHashMapGetEntries(d int, this *KotlinAny) *K
 	cur = s0
 	if cur == nil {
 		s0 = m.kotlinCollectionsHashMapEntrySetInit(d+1, (*KotlinCollectionsHashMapEntrySet)(nil), tmp0This)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		new_ = s0
 		tmp0This.EntriesView = new_
 		s0_1 = rt.ViewAs[KotlinAny](new_)
@@ -12651,7 +13210,12 @@ func (m *Instance) kotlinCollectionsHashMapGetEntries(d int, this *KotlinAny) *K
 }
 
 func (m *Instance) kotlinCollectionsHashMapGetEntries2(d int, this *KotlinAny) *KotlinAny {
-	return m.kotlinCollectionsHashMapGetEntries(d+1, this)
+	var s0 *KotlinAny
+	s0 = m.kotlinCollectionsHashMapGetEntries(d+1, this)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsHashMapEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -12689,6 +13253,9 @@ func (m *Instance) kotlinCollectionsHashMapEquals(d int, this *KotlinAny, other 
 		}
 		if s0 != 0 {
 			s0 = m.kotlinCollectionsHashMapContentEquals(d+1, tmp0This, other)
+			if m.exn != nil {
+				return int32(0)
+			}
 		} else {
 			s0 = int32(0)
 		}
@@ -12702,20 +13269,30 @@ func (m *Instance) kotlinCollectionsHashMapHashCode(d int, this *KotlinAny) int3
 	}
 	var tmp0This *KotlinCollectionsHashMap
 	var result, s0_1, s1 int32
-	var it *KotlinCollectionsEntriesItr
+	var it, s0 *KotlinCollectionsEntriesItr
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsHashMap)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsHashMap](this)
 	result = int32(0)
-	it = m.kotlinCollectionsHashMapEntriesIterator(d+1, tmp0This)
+	s0 = m.kotlinCollectionsHashMapEntriesIterator(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
+	it = s0
 L1:
 	for {
 		s0_1 = m.kotlinCollectionsItrHasNext(d+1, rt.ViewAs[KotlinCollectionsItr](it))
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0_1 == 0 {
 			goto B2
 		}
 		s1 = m.kotlinCollectionsEntriesItrNextHashCode(d+1, it)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = (result + s1)
 		result = s0_1
 		continue L1
@@ -12732,8 +13309,8 @@ func (m *Instance) kotlinCollectionsHashMapToString(d int, this *KotlinAny) *Kot
 	var tmp0This *KotlinCollectionsHashMap
 	var sb, s0 *KotlinTextStringBuilder
 	var i, unary, tmp0, this_, s2, s1, s0_2 int32
-	var it *KotlinCollectionsEntriesItr
-	var s1_1 *KotlinString
+	var it, s0_1 *KotlinCollectionsEntriesItr
+	var s1_1, s0_3 *KotlinString
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsHashMap)) {
 		panic(rt.ErrCast)
 	}
@@ -12741,22 +13318,47 @@ func (m *Instance) kotlinCollectionsHashMapToString(d int, this *KotlinAny) *Kot
 	s2 = tmp0This.Size
 	s1 = (int32(2) + (s2 * int32(3)))
 	s0 = m.kotlinTextStringBuilderInit3(d+1, (*KotlinTextStringBuilder)(nil), s1)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	sb = s0
 	s1_1 = m.stringLiteralLatin1(d+1, int32(22))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinTextStringBuilderAppend9(d+1, sb, s1_1)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	i = int32(0)
-	it = m.kotlinCollectionsHashMapEntriesIterator(d+1, tmp0This)
+	s0_1 = m.kotlinCollectionsHashMapEntriesIterator(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	it = s0_1
 L1:
 	for {
 		s0_2 = m.kotlinCollectionsItrHasNext(d+1, rt.ViewAs[KotlinCollectionsItr](it))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		if s0_2 == 0 {
 			goto B2
 		}
 		if i > int32(0) {
 			s1_1 = m.stringLiteralLatin1(d+1, int32(2))
+			if m.exn != nil {
+				return (*KotlinString)(nil)
+			}
 			s0 = m.kotlinTextStringBuilderAppend9(d+1, sb, s1_1)
+			if m.exn != nil {
+				return (*KotlinString)(nil)
+			}
 		}
 		m.kotlinCollectionsEntriesItrNextAppendString(d+1, it, sb)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		unary = i
 		tmp0 = unary
 		this_ = tmp0
@@ -12769,20 +13371,40 @@ L1:
 		break L1
 	}
 	s1_1 = m.stringLiteralLatin1(d+1, int32(23))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinTextStringBuilderAppend9(d+1, sb, s1_1)
-	return m.kotlinTextStringBuilderToString(d+1, rt.ViewAs[KotlinAny](sb))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	s0_3 = m.kotlinTextStringBuilderToString(d+1, rt.ViewAs[KotlinAny](sb))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_3
 }
 
 func (m *Instance) kotlinCollectionsHashMapGetCapacity(d int, this *KotlinCollectionsHashMap) int32 {
 	var s0 *KotlinArray
+	var s0_1 int32
 	s0 = this.KeysArray
-	return m.kotlinArrayGetSize(d+1, s0)
+	s0_1 = m.kotlinArrayGetSize(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCollectionsHashMapGetHashSize(d int, this *KotlinCollectionsHashMap) int32 {
 	var s0 *KotlinIntArray
+	var s0_1 int32
 	s0 = this.HashArray
-	return m.kotlinIntArrayGetSize(d+1, s0)
+	s0_1 = m.kotlinIntArrayGetSize(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCollectionsHashMapRegisterModification(d int, this *KotlinCollectionsHashMap) {
@@ -12798,7 +13420,11 @@ func (m *Instance) kotlinCollectionsHashMapCheckIsMutable(d int, this *KotlinCol
 	s0 = int32(this.IsReadOnly)
 	if s0 != 0 {
 		s0_1 = m.kotlinUnsupportedOperationExceptionInit(d+1, (*KotlinUnsupportedOperationException)(nil))
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	return
 }
@@ -12809,11 +13435,20 @@ func (m *Instance) kotlinCollectionsHashMapEnsureExtraCapacity(d int, this *Kotl
 	}
 	var s0, s1 int32
 	s0 = m.kotlinCollectionsHashMapShouldCompact(d+1, this, n)
+	if m.exn != nil {
+		return
+	}
 	if s0 != 0 {
 		m.kotlinCollectionsHashMapCompact(d+1, this, int32(1))
+		if m.exn != nil {
+			return
+		}
 	} else {
 		s1 = this.Length
 		m.kotlinCollectionsHashMapEnsureCapacity(d+1, this, (s1 + n))
+		if m.exn != nil {
+			return
+		}
 	}
 	return
 }
@@ -12821,11 +13456,17 @@ func (m *Instance) kotlinCollectionsHashMapEnsureExtraCapacity(d int, this *Kotl
 func (m *Instance) kotlinCollectionsHashMapShouldCompact(d int, this *KotlinCollectionsHashMap, extraCapacity int32) int32 {
 	var spareCapacity, gaps, s0, s1 int32
 	s0 = m.kotlinCollectionsHashMapGetCapacity(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = this.Length
 	s0 = (s0 - s1)
 	spareCapacity = s0
 	s0 = this.Length
 	s1 = m.kotlinCollectionsHashMapGetSize(d+1, rt.ViewAs[KotlinAny](this))
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = (s0 - s1)
 	gaps = s0
 	if spareCapacity < extraCapacity {
@@ -12835,7 +13476,13 @@ func (m *Instance) kotlinCollectionsHashMapShouldCompact(d int, this *KotlinColl
 	}
 	if s0 != 0 {
 		s1 = m.kotlinCollectionsHashMapGetCapacity(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinIntDivImpl(d+1, s1, int32(4))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = rt.B2I(gaps >= s1)
 	} else {
 		s0 = int32(0)
@@ -12856,17 +13503,33 @@ func (m *Instance) kotlinCollectionsHashMapEnsureCapacity(d int, this *KotlinCol
 	var s0_4 *KotlinCollectionsCompanion
 	if minCapacity < int32(0) {
 		s0 = m.kotlinOutOfMemoryErrorInit(d+1, (*KotlinOutOfMemoryError)(nil))
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return
 	}
 	s1 = m.kotlinCollectionsHashMapGetCapacity(d+1, this)
+	if m.exn != nil {
+		return
+	}
 	s0_1 = rt.B2I(minCapacity > s1)
 	if s0_1 != 0 {
 		s0_2 = m.g9
 		s1 = m.kotlinCollectionsHashMapGetCapacity(d+1, this)
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinCollectionsCompanionNewCapacity(d+1, s0_2, s1, minCapacity)
+		if m.exn != nil {
+			return
+		}
 		newSize = s0_1
 		s1_1 = this.KeysArray
 		s1_1 = m.kotlinCollectionsCopyOfUninitializedElements(d+1, s1_1, newSize)
+		if m.exn != nil {
+			return
+		}
 		this.KeysArray = s1_1
 		s1_1 = this.ValuesArray
 		tmp0SafeReceiver = s1_1
@@ -12875,18 +13538,33 @@ func (m *Instance) kotlinCollectionsHashMapEnsureCapacity(d int, this *KotlinCol
 			s1_1 = (*KotlinArray)(nil)
 		} else {
 			s1_1 = m.kotlinCollectionsCopyOfUninitializedElements(d+1, tmp0SafeReceiver, newSize)
+			if m.exn != nil {
+				return
+			}
 		}
 		s0_3.ValuesArray = s1_1
 		s1_2 = this.PresenceArray
 		s1_2 = m.kotlinCollectionsCopyOf2(d+1, s1_2, newSize)
+		if m.exn != nil {
+			return
+		}
 		this.PresenceArray = s1_2
 		s0_4 = m.g8
 		s0_1 = m.kotlinCollectionsCompanionComputeHashSize(d+1, s0_4, newSize)
+		if m.exn != nil {
+			return
+		}
 		newHashSize = s0_1
 		s1 = m.kotlinCollectionsHashMapGetHashSize(d+1, this)
+		if m.exn != nil {
+			return
+		}
 		s0_1 = rt.B2I(newHashSize > s1)
 		if s0_1 != 0 {
 			m.kotlinCollectionsHashMapRehash(d+1, this, newHashSize)
+			if m.exn != nil {
+				return
+			}
 		}
 	}
 	return
@@ -12897,11 +13575,13 @@ func (m *Instance) kotlinCollectionsHashMapAllocateValuesArray(d int, this *Kotl
 		rt.Exhausted()
 	}
 	var curValuesArray, newValuesArray, s0 *KotlinArray
-	var tmp0, size, tmp0_, value int32
+	var tmp0, size, tmp0_, value, s0_1 int32
 	var message, s0_3 *KotlinAny
 	var s0_2, s1 *KotlinString
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s0_4 *KotlinIllegalArgumentException
 	var s0_5 *KotlinUnit
 	_ = s0_5
@@ -12910,26 +13590,51 @@ func (m *Instance) kotlinCollectionsHashMapAllocateValuesArray(d int, this *Kotl
 	if rt.B2I(curValuesArray == nil) == 0 {
 		return curValuesArray
 	}
-	tmp0 = m.kotlinCollectionsHashMapGetCapacity(d+1, this)
+	s0_1 = m.kotlinCollectionsHashMapGetCapacity(d+1, this)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
+	tmp0 = s0_1
 	size = tmp0
 	tmp0_ = rt.B2I(size >= int32(0))
 	value = tmp0_
 	if value == 0 {
 		s0_2 = m.stringLiteralLatin1(d+1, int32(21))
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
 		s0_3 = rt.ViewAs[KotlinAny](s0_2)
 		goto B5
 	B5:
 		message = s0_3
 		s2 = message.Vtable
 		s2_1 = s2.ToString
-		s1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own1 {
+			s1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		} else {
+			s1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, message)
+		}
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
 		s0_4 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_4)}})
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_4)}}
+		return (*KotlinArray)(nil)
 	}
 	s0_5 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	goto B3
 B3:
 	s0 = m.kotlinArrayInit(d+1, (*KotlinArray)(nil), size)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	goto B2
 B2:
 	newValuesArray = s0
@@ -12944,12 +13649,22 @@ func (m *Instance) kotlinCollectionsHashMapHash(d int, this *KotlinCollectionsHa
 	var s0, s1_2 int32
 	var s1 *ClassVTable
 	var s1_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	if key == nil {
 		s0 = int32(0)
 	} else {
 		s1 = key.Vtable
 		s1_1 = s1.HashCode
-		s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, key)
+		fn1, own1 = rt.FnOwn(s1_1, rttFunc14, m, false)
+		if own1 {
+			s0 = fn1.(func(int, *KotlinAny) int32)(d+1, key)
+		} else {
+			s0 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, key)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1_2 = this.HashShift
 		s0 = int32(uint32((s0 * int32(-1640531527))) >> (uint32(s1_2) & 31))
 	}
@@ -12977,21 +13692,42 @@ L1:
 		}
 		s0_2 = this.PresenceArray
 		s0_1 = m.kotlinIntArrayGet(d+1, s0_2, i)
+		if m.exn != nil {
+			return
+		}
 		hash = s0_1
 		if hash >= int32(0) {
 			s0 = this.KeysArray
 			s2 = this.KeysArray
 			s2_1 = m.kotlinArrayGet(d+1, s2, i)
+			if m.exn != nil {
+				return
+			}
 			m.kotlinArraySet(d+1, s0, j, s2_1)
+			if m.exn != nil {
+				return
+			}
 			if rt.B2I(valuesArray == nil) == 0 {
 				s2_1 = m.kotlinArrayGet(d+1, valuesArray, i)
+				if m.exn != nil {
+					return
+				}
 				m.kotlinArraySet(d+1, valuesArray, j, s2_1)
+				if m.exn != nil {
+					return
+				}
 			}
 			if updateHashArray != 0 {
 				s0_2 = this.PresenceArray
 				m.kotlinIntArraySet(d+1, s0_2, j, hash)
+				if m.exn != nil {
+					return
+				}
 				s0_2 = this.HashArray
 				m.kotlinIntArraySet(d+1, s0_2, hash, (j + int32(1)))
+				if m.exn != nil {
+					return
+				}
 			}
 			unary = j
 			tmp0 = unary
@@ -13015,11 +13751,17 @@ L1:
 	s0 = this.KeysArray
 	s2_2 = this.Length
 	m.kotlinCollectionsResetRange(d+1, s0, j, s2_2)
+	if m.exn != nil {
+		return
+	}
 	tmp0SafeReceiver = valuesArray
 	if tmp0SafeReceiver == nil {
 	} else {
 		s2_2 = this.Length
 		m.kotlinCollectionsResetRange(d+1, tmp0SafeReceiver, j, s2_2)
+		if m.exn != nil {
+			return
+		}
 	}
 	this.Length = j
 	return
@@ -13036,16 +13778,28 @@ func (m *Instance) kotlinCollectionsHashMapRehash(d int, this *KotlinCollections
 	var s1_3 *KotlinString
 	var s0_2 *KotlinIllegalStateException
 	m.kotlinCollectionsHashMapRegisterModification(d+1, this)
+	if m.exn != nil {
+		return
+	}
 	s0 = this.Length
 	s1 = this.Size
 	s0 = rt.B2I(s0 > s1)
 	if s0 != 0 {
 		m.kotlinCollectionsHashMapCompact(d+1, this, int32(0))
+		if m.exn != nil {
+			return
+		}
 	}
 	s1_1 = m.kotlinIntArrayInit(d+1, (*KotlinIntArray)(nil), newHashSize)
+	if m.exn != nil {
+		return
+	}
 	this.HashArray = s1_1
 	s1_2 = m.g8
 	s1 = m.kotlinCollectionsCompanionComputeShift(d+1, s1_2, newHashSize)
+	if m.exn != nil {
+		return
+	}
 	this.HashShift = s1
 	i = int32(0)
 L2:
@@ -13064,10 +13818,20 @@ L2:
 	B4:
 		i = s1
 		s0 = m.kotlinCollectionsHashMapPutRehash(d+1, s0_1, unary)
+		if m.exn != nil {
+			return
+		}
 		if s0 == 0 {
 			s1_3 = m.stringLiteralLatin1(d+1, int32(24))
+			if m.exn != nil {
+				return
+			}
 			s0_2 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), s1_3)
-			panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+			if m.exn != nil {
+				return
+			}
+			m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+			return
 		}
 		continue L2
 	B3:
@@ -13086,7 +13850,13 @@ func (m *Instance) kotlinCollectionsHashMapPutRehash(d int, this *KotlinCollecti
 	var s0_1 *KotlinIntArray
 	s1 = this.KeysArray
 	s1_1 = m.kotlinArrayGet(d+1, s1, i)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinCollectionsHashMapHash(d+1, this, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	hash = s0
 	s0 = this.MaxProbeDistance
 	probesLeft = s0
@@ -13098,24 +13868,42 @@ L1:
 		}
 		s0_1 = this.HashArray
 		s0 = m.kotlinIntArrayGet(d+1, s0_1, hash)
+		if m.exn != nil {
+			return int32(0)
+		}
 		index = s0
 		if index == int32(0) {
 			s0_1 = this.HashArray
 			m.kotlinIntArraySet(d+1, s0_1, hash, (i + int32(1)))
+			if m.exn != nil {
+				return int32(0)
+			}
 			s0_1 = this.PresenceArray
 			m.kotlinIntArraySet(d+1, s0_1, i, hash)
+			if m.exn != nil {
+				return int32(0)
+			}
 			return int32(1)
 		}
 		s0 = m.kotlinIntDecImpl(d+1, probesLeft)
+		if m.exn != nil {
+			return int32(0)
+		}
 		probesLeft = s0
 		if probesLeft < int32(0) {
 			return int32(0)
 		}
 		unary = hash
 		s0 = m.kotlinIntDecImpl(d+1, unary)
+		if m.exn != nil {
+			return int32(0)
+		}
 		hash = s0
 		if unary == int32(0) {
 			s0 = m.kotlinCollectionsHashMapGetHashSize(d+1, this)
+			if m.exn != nil {
+				return int32(0)
+			}
 			hash = (s0 - int32(1))
 		}
 		continue L1
@@ -13134,6 +13922,9 @@ func (m *Instance) kotlinCollectionsHashMapFindKey(d int, this *KotlinCollection
 	var s0_2 *KotlinArray
 	var s0_3 *KotlinAny
 	s0 = m.kotlinCollectionsHashMapHash(d+1, this, key)
+	if m.exn != nil {
+		return int32(0)
+	}
 	hash = s0
 	s0 = this.MaxProbeDistance
 	probesLeft = s0
@@ -13145,26 +13936,44 @@ L1:
 		}
 		s0_1 = this.HashArray
 		s0 = m.kotlinIntArrayGet(d+1, s0_1, hash)
+		if m.exn != nil {
+			return int32(0)
+		}
 		index = s0
 		if index == int32(0) {
 			return int32(-1)
 		}
 		s0_2 = this.KeysArray
 		s0_3 = m.kotlinArrayGet(d+1, s0_2, (index - int32(1)))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinWasmInternalNullableEquals(d+1, s0_3, key)
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0 != 0 {
 			return (index - int32(1))
 		}
 		s0 = m.kotlinIntDecImpl(d+1, probesLeft)
+		if m.exn != nil {
+			return int32(0)
+		}
 		probesLeft = s0
 		if probesLeft < int32(0) {
 			return int32(-1)
 		}
 		unary = hash
 		s0 = m.kotlinIntDecImpl(d+1, unary)
+		if m.exn != nil {
+			return int32(0)
+		}
 		hash = s0
 		if unary == int32(0) {
 			s0 = m.kotlinCollectionsHashMapGetHashSize(d+1, this)
+			if m.exn != nil {
+				return int32(0)
+			}
 			hash = (s0 - int32(1))
 		}
 		continue L1
@@ -13184,6 +13993,9 @@ func (m *Instance) kotlinCollectionsHashMapAddKey(d int, this *KotlinCollections
 	var s0_3 *KotlinArray
 	var s0_4 *KotlinAny
 	m.kotlinCollectionsHashMapCheckIsMutable(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 L1:
 	for {
 		s0 = int32(1)
@@ -13191,11 +14003,23 @@ L1:
 			goto B2
 		}
 		s0 = m.kotlinCollectionsHashMapHash(d+1, this, key)
+		if m.exn != nil {
+			return int32(0)
+		}
 		hash = s0
 		s0 = this.MaxProbeDistance
 		s1 = m.kotlinCollectionsHashMapGetHashSize(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinIntDivImpl(d+1, s1, int32(2))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinRangesCoerceAtMost(d+1, (s0 * int32(2)), s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		tentativeMaxProbeDistance = s0
 		probeDistance = int32(0)
 	L3:
@@ -13206,13 +14030,22 @@ L1:
 			}
 			s0_1 = this.HashArray
 			s0 = m.kotlinIntArrayGet(d+1, s0_1, hash)
+			if m.exn != nil {
+				return int32(0)
+			}
 			index = s0
 			if index == int32(0) {
 				s0 = this.Length
 				s1 = m.kotlinCollectionsHashMapGetCapacity(d+1, this)
+				if m.exn != nil {
+					return int32(0)
+				}
 				s0 = rt.B2I(s0 >= s1)
 				if s0 != 0 {
 					m.kotlinCollectionsHashMapEnsureExtraCapacity(d+1, this, int32(1))
+					if m.exn != nil {
+						return int32(0)
+					}
 					continue L1
 				}
 				s0 = this.Length
@@ -13227,10 +14060,19 @@ L1:
 				putIndex = unary
 				s0_3 = this.KeysArray
 				m.kotlinArraySet(d+1, s0_3, putIndex, key)
+				if m.exn != nil {
+					return int32(0)
+				}
 				s0_1 = this.PresenceArray
 				m.kotlinIntArraySet(d+1, s0_1, putIndex, hash)
+				if m.exn != nil {
+					return int32(0)
+				}
 				s0_1 = this.HashArray
 				m.kotlinIntArraySet(d+1, s0_1, hash, (putIndex + int32(1)))
+				if m.exn != nil {
+					return int32(0)
+				}
 				s0 = this.Size
 				unary_ = s0
 				tmp0_ = unary_
@@ -13241,6 +14083,9 @@ L1:
 			B8:
 				s0_2.Size = s1
 				m.kotlinCollectionsHashMapRegisterModification(d+1, this)
+				if m.exn != nil {
+					return int32(0)
+				}
 				s1 = this.MaxProbeDistance
 				s0 = rt.B2I(probeDistance > s1)
 				if s0 != 0 {
@@ -13250,7 +14095,13 @@ L1:
 			}
 			s0_3 = this.KeysArray
 			s0_4 = m.kotlinArrayGet(d+1, s0_3, (index - int32(1)))
+			if m.exn != nil {
+				return int32(0)
+			}
 			s0 = m.kotlinWasmInternalNullableEquals(d+1, s0_4, key)
+			if m.exn != nil {
+				return int32(0)
+			}
 			if s0 != 0 {
 				tmp0__ = index
 				this___ = tmp0__
@@ -13267,14 +14118,26 @@ L1:
 			probeDistance = s0
 			if probeDistance > tentativeMaxProbeDistance {
 				s1 = m.kotlinCollectionsHashMapGetHashSize(d+1, this)
+				if m.exn != nil {
+					return int32(0)
+				}
 				m.kotlinCollectionsHashMapRehash(d+1, this, (s1 * int32(2)))
+				if m.exn != nil {
+					return int32(0)
+				}
 				continue L1
 			}
 			unary__ = hash
 			s0 = m.kotlinIntDecImpl(d+1, unary__)
+			if m.exn != nil {
+				return int32(0)
+			}
 			hash = s0
 			if unary__ == int32(0) {
 				s0 = m.kotlinCollectionsHashMapGetHashSize(d+1, this)
+				if m.exn != nil {
+					return int32(0)
+				}
 				hash = (s0 - int32(1))
 			}
 			continue L3
@@ -13296,8 +14159,9 @@ func (m *Instance) kotlinCollectionsHashMapContainsEntry(d int, this *KotlinColl
 	var tmp3, s0_1 *KotlinArray
 	var s2 *ClassVTable
 	var s2_1 *SpecialITable
-	var s2_2 any
+	var s2_2, fn1, fn2 any
 	var s2_3 *rt.Func
+	var own1, own2 bool
 	var s1, s0_2 *KotlinAny
 	s2 = entry.Vtable
 	s2_1 = s2.SpecialITable
@@ -13306,8 +14170,19 @@ func (m *Instance) kotlinCollectionsHashMapContainsEntry(d int, this *KotlinColl
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable8](s2_2).GetKey
-	s1 = rt.FnOfRef(s2_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, entry)
+	fn1, own1 = rt.FnOwn(s2_3, rttFunc33, m, false)
+	if own1 {
+		s1 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, entry)
+	} else {
+		s1 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, entry)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinCollectionsHashMapFindKey(d+1, this, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	index = s0
 	if index < int32(0) {
 		return int32(0)
@@ -13316,11 +14191,17 @@ func (m *Instance) kotlinCollectionsHashMapContainsEntry(d int, this *KotlinColl
 	tmp3 = s0_1
 	if tmp3 == nil {
 		m.kotlinWasmInternalTHROWNPE(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	} else {
 		s0_1 = tmp3
 	}
 	s0_2 = m.kotlinArrayGet(d+1, s0_1, index)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s2 = entry.Vtable
 	s2_1 = s2.SpecialITable
 	s2_2 = s2_1.F4
@@ -13328,8 +14209,19 @@ func (m *Instance) kotlinCollectionsHashMapContainsEntry(d int, this *KotlinColl
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable8](s2_2).GetValue
-	s1 = rt.FnOfRef(s2_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, entry)
+	fn2, own2 = rt.FnOwn(s2_3, rttFunc33, m, false)
+	if own2 {
+		s1 = fn2.(func(int, *KotlinAny) *KotlinAny)(d+1, entry)
+	} else {
+		s1 = m.guard1(fn2.(func(int, *KotlinAny) *KotlinAny), d+1, entry)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinWasmInternalNullableEquals(d+1, s0_2, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -13340,8 +14232,9 @@ func (m *Instance) kotlinCollectionsHashMapContentEquals(d int, this *KotlinColl
 	var s0, s1 int32
 	var s2 *ClassVTable
 	var s2_1 *SpecialITable
-	var s2_2 any
+	var s2_2, fn1, fn2 any
 	var s2_3 *rt.Func
+	var own1, own2 bool
 	var s1_1 *KotlinAny
 	s0 = this.Size
 	s2 = other.Vtable
@@ -13351,7 +14244,15 @@ func (m *Instance) kotlinCollectionsHashMapContentEquals(d int, this *KotlinColl
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable9](s2_2).GetSize
-	s1 = rt.FnOfRef(s2_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, other)
+	fn1, own1 = rt.FnOwn(s2_3, rttFunc14, m, false)
+	if own1 {
+		s1 = fn1.(func(int, *KotlinAny) int32)(d+1, other)
+	} else {
+		s1 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, other)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = rt.B2I(s0 == s1)
 	if s0 != 0 {
 		s2 = other.Vtable
@@ -13361,8 +14262,19 @@ func (m *Instance) kotlinCollectionsHashMapContentEquals(d int, this *KotlinColl
 			panic(rt.ErrCast)
 		}
 		s2_3 = rt.As[ClassITable9](s2_2).GetEntries
-		s1_1 = rt.FnOfRef(s2_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, other)
+		fn2, own2 = rt.FnOwn(s2_3, rttFunc33, m, false)
+		if own2 {
+			s1_1 = fn2.(func(int, *KotlinAny) *KotlinAny)(d+1, other)
+		} else {
+			s1_1 = m.guard1(fn2.(func(int, *KotlinAny) *KotlinAny), d+1, other)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinCollectionsHashMapContainsAllEntries(d+1, this, s1_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 	} else {
 		s0 = int32(0)
 	}
@@ -13378,14 +14290,14 @@ func (m *Instance) kotlinCollectionsHashMapContainsAllEntries(d int, this *Kotli
 	var e_ *KotlinClassCastException
 	var s1 *ClassVTable
 	var s1_1 *SpecialITable
-	var s1_2 any
+	var s1_2, fn1, fn2, fn3 any
 	var s1_3 *rt.Func
-	var s0_1, s1_4, ret0 int32
+	var own1, own2, own3 bool
+	var s0_1, s1_4 int32
 	var s0_2 *KotlinCollectionsHashMap
 	var s8, s9 *KotlinString
 	var s6 *KotlinWasmInternalTypeInfoData
 	var s2 *KotlinWasmInternalKClassInterfaceImpl
-	var c0 int
 	_ = e_
 	s1 = m_.Vtable
 	s1_1 = s1.SpecialITable
@@ -13394,7 +14306,15 @@ func (m *Instance) kotlinCollectionsHashMapContainsAllEntries(d int, this *Kotli
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).Iterator
-	s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, m_)
+	fn1, own1 = rt.FnOwn(s1_3, rttFunc33, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, m_)
+	} else {
+		s0 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, m_)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	it = s0
 L1:
 	for {
@@ -13405,7 +14325,15 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_1 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, it)
+		fn2, own2 = rt.FnOwn(s1_3, rttFunc14, m, false)
+		if own2 {
+			s0_1 = fn2.(func(int, *KotlinAny) int32)(d+1, it)
+		} else {
+			s0_1 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, it)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0_1 == 0 {
 			goto B2
 		}
@@ -13416,69 +14344,75 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, it)
-		entry = s0
-		c0 = func() (c int) {
-			defer func() {
-				if r := recover(); r != nil {
-					e := rt.Unwrap(r, 12)
-					_ = e
-					if e.Tag == m.tag0 {
-						s0_3 = e.Values[0].(*KotlinThrowable)
-						c = 1
-						return
-					}
-					panic(r)
-				}
-			}()
-			if entry == nil {
-				s0_1 = int32(1)
-			} else {
-				s0_2 = this
-				if entry == nil {
-					s1_4 = int32(0)
-				} else {
-					iSINTERFACEPARAMETER = entry
-					s1 = iSINTERFACEPARAMETER.Vtable
-					s1_1 = s1.SpecialITable
-					if s1_1 == nil {
-						goto B9
-					}
-					s1_2 = s1_1.F4
-					s1_4 = rt.B2I(rt.B2I(s1_2 == nil) == 0)
-					goto B8
-				B9:
-					s1_4 = int32(0)
-				B8:
-				}
-				if s1_4 != 0 {
-					s1_5 = entry
-				} else {
-					s8 = m.stringLiteralLatin1(d+1, int32(25))
-					s9 = m.stringLiteralLatin1(d+1, int32(26))
-					s6 = m.kotlinWasmInternalTypeInfoDataInit(d+1, (*KotlinWasmInternalTypeInfoData)(nil), int64(-4544035249496944347), s8, s9)
-					s2 = NewKotlinWasmInternalKClassInterfaceImpl(rt.ViewAs[ClassVTable](m.g219), m.g265, m.g322, int32(0), s6)
-					m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, entry, rt.ViewAs[KotlinAny](s2), int32(0))
-					panic(rt.ErrUnreachable)
-				}
-				s0_1 = m.kotlinCollectionsHashMapContainsEntry(d+1, s0_2, s1_5)
-				s0_1 = rt.B2I(s0_1 == 0)
-			}
-			if s0_1 != 0 {
-				ret0 = int32(0)
-				return 2
-			}
-			return 3
-
-		}()
-		switch c0 {
-		case 1:
-			goto B4
-		case 2:
-			return ret0
-		case 3:
-			goto B3
+		fn3, own3 = rt.FnOwn(s1_3, rttFunc33, m, false)
+		if own3 {
+			s0 = fn3.(func(int, *KotlinAny) *KotlinAny)(d+1, it)
+		} else {
+			s0 = m.guard1(fn3.(func(int, *KotlinAny) *KotlinAny), d+1, it)
 		}
+		if m.exn != nil {
+			return int32(0)
+		}
+		entry = s0
+		if entry == nil {
+			s0_1 = int32(1)
+		} else {
+			s0_2 = this
+			if entry == nil {
+				s1_4 = int32(0)
+			} else {
+				iSINTERFACEPARAMETER = entry
+				s1 = iSINTERFACEPARAMETER.Vtable
+				s1_1 = s1.SpecialITable
+				if s1_1 == nil {
+					goto B9
+				}
+				s1_2 = s1_1.F4
+				s1_4 = rt.B2I(rt.B2I(s1_2 == nil) == 0)
+				goto B8
+			B9:
+				s1_4 = int32(0)
+			B8:
+			}
+			if s1_4 != 0 {
+				s1_5 = entry
+			} else {
+				s8 = m.stringLiteralLatin1(d+1, int32(25))
+				if m.exn != nil {
+					goto H5
+				}
+				s9 = m.stringLiteralLatin1(d+1, int32(26))
+				if m.exn != nil {
+					goto H5
+				}
+				s6 = m.kotlinWasmInternalTypeInfoDataInit(d+1, (*KotlinWasmInternalTypeInfoData)(nil), int64(-4544035249496944347), s8, s9)
+				if m.exn != nil {
+					goto H5
+				}
+				s2 = NewKotlinWasmInternalKClassInterfaceImpl(rt.ViewAs[ClassVTable](m.g219), m.g265, m.g322, int32(0), s6)
+				m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, entry, rt.ViewAs[KotlinAny](s2), int32(0))
+				if m.exn != nil {
+					goto H5
+				}
+				panic(rt.ErrUnreachable)
+			}
+			s0_1 = m.kotlinCollectionsHashMapContainsEntry(d+1, s0_2, s1_5)
+			if m.exn != nil {
+				goto H5
+			}
+			s0_1 = rt.B2I(s0_1 == 0)
+		}
+		if s0_1 != 0 {
+			return int32(0)
+		}
+		goto B3
+	H5:
+		if m.exn.Tag == m.tag0 {
+			s0_3 = m.exn.Values[0].(*KotlinThrowable)
+			m.exn = nil
+			goto B4
+		}
+		return int32(0)
 	B4:
 		mergedCatchParam = s0_3
 		if mergedCatchParam != nil && rt.ObjRTT(mergedCatchParam).SubOf(rttKotlinClassCastException) {
@@ -13488,7 +14422,8 @@ L1:
 			e_ = rt.ViewAs[KotlinClassCastException](mergedCatchParam)
 			return int32(0)
 		} else {
-			panic(&rt.Exception{Tag: m.tag0, Values: []any{mergedCatchParam}})
+			m.exn = &rt.Exception{Tag: m.tag0, Values: []any{mergedCatchParam}}
+			return int32(0)
 		}
 	B3:
 		continue L1
@@ -13499,7 +14434,12 @@ L1:
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntriesIterator(d int, this *KotlinCollectionsHashMap) *KotlinCollectionsEntriesItr {
-	return m.kotlinCollectionsEntriesItrInit(d+1, (*KotlinCollectionsEntriesItr)(nil), this)
+	var s0 *KotlinCollectionsEntriesItr
+	s0 = m.kotlinCollectionsEntriesItrInit(d+1, (*KotlinCollectionsEntriesItr)(nil), this)
+	if m.exn != nil {
+		return (*KotlinCollectionsEntriesItr)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetInit(d int, this *KotlinCollectionsHashMapEntrySet, backing *KotlinCollectionsHashMap) *KotlinCollectionsHashMapEntrySet {
@@ -13511,6 +14451,9 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetInit(d int, this *KotlinColle
 		this = s0
 	}
 	s0_1 = m.kotlinCollectionsHashMapEntrySetBaseInit(d+1, rt.ViewAs[KotlinCollectionsHashMapEntrySetBase](this), backing)
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMapEntrySet)(nil)
+	}
 	return this
 }
 
@@ -13524,17 +14467,28 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetIterator(d int, this *KotlinA
 	tmp0This = rt.ViewAs[KotlinCollectionsHashMapEntrySet](this)
 	s0 = rt.ViewAs[KotlinCollectionsHashMapEntrySetBase](tmp0This).Backing
 	s0_1 = m.kotlinCollectionsHashMapEntriesIterator(d+1, s0)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0_1)
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetIterator2(d int, this *KotlinAny) *KotlinAny {
-	return m.kotlinCollectionsHashMapEntrySetIterator(d+1, this)
+	var s0 *KotlinAny
+	s0 = m.kotlinCollectionsHashMapEntrySetIterator(d+1, this)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetBaseInit(d int, this *KotlinCollectionsHashMapEntrySetBase, backing *KotlinCollectionsHashMap) *KotlinCollectionsHashMapEntrySetBase {
 	var s0 *KotlinCollectionsAbstractMutableSet
 	_ = s0
 	s0 = m.kotlinCollectionsAbstractMutableSetInit(d+1, rt.ViewAs[KotlinCollectionsAbstractMutableSet](this))
+	if m.exn != nil {
+		return (*KotlinCollectionsHashMapEntrySetBase)(nil)
+	}
 	this.Backing = backing
 	return this
 }
@@ -13542,23 +14496,33 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetBaseInit(d int, this *KotlinC
 func (m *Instance) kotlinCollectionsHashMapEntrySetBaseGetSize(d int, this *KotlinAny) int32 {
 	var tmp0This *KotlinCollectionsHashMapEntrySetBase
 	var s0 *KotlinCollectionsHashMap
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsHashMapEntrySetBase))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsHashMapEntrySetBase](this)
 	s0 = tmp0This.Backing
-	return m.kotlinCollectionsHashMapGetSize(d+1, rt.ViewAs[KotlinAny](s0))
+	s0_1 = m.kotlinCollectionsHashMapGetSize(d+1, rt.ViewAs[KotlinAny](s0))
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetBaseIsEmpty(d int, this *KotlinAny) int32 {
 	var tmp0This *KotlinCollectionsHashMapEntrySetBase
 	var s0 *KotlinCollectionsHashMap
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsHashMapEntrySetBase))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsHashMapEntrySetBase](this)
 	s0 = tmp0This.Backing
-	return m.kotlinCollectionsHashMapIsEmpty(d+1, rt.ViewAs[KotlinAny](s0))
+	s0_1 = m.kotlinCollectionsHashMapIsEmpty(d+1, rt.ViewAs[KotlinAny](s0))
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContains(d int, this *KotlinAny, element *KotlinAny) int32 {
@@ -13567,12 +14531,17 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContains(d int, this *Kot
 	}
 	var tmp0This *KotlinCollectionsHashMapEntrySetBase
 	var s0 *KotlinCollectionsHashMap
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsHashMapEntrySetBase))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsHashMapEntrySetBase](this)
 	s0 = tmp0This.Backing
-	return m.kotlinCollectionsHashMapContainsEntry(d+1, s0, element)
+	s0_1 = m.kotlinCollectionsHashMapContainsEntry(d+1, s0, element)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContains2(d int, this *KotlinAny, element *KotlinAny) int32 {
@@ -13583,12 +14552,13 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContains2(d int, this *Ko
 	var s0, s1_3, s2_3 int32
 	var s1, s2 *ClassVTable
 	var s1_1, s2_1 *SpecialITable
-	var s1_2, s2_2 any
+	var s1_2, s2_2, fn1 any
 	var s8, s9 *KotlinString
 	var s6 *KotlinWasmInternalTypeInfoData
 	var s2_4 *KotlinWasmInternalKClassInterfaceImpl
 	var s2_5 *ClassVTable15
 	var s2_6 *rt.Func
+	var own1 bool
 	if element == nil {
 		s0 = int32(0)
 	} else {
@@ -13631,10 +14601,22 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContains2(d int, this *Ko
 		s1_4 = element
 	} else {
 		s8 = m.stringLiteralLatin1(d+1, int32(25))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s9 = m.stringLiteralLatin1(d+1, int32(26))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s6 = m.kotlinWasmInternalTypeInfoDataInit(d+1, (*KotlinWasmInternalTypeInfoData)(nil), int64(-4544035249496944347), s8, s9)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2_4 = NewKotlinWasmInternalKClassInterfaceImpl(rt.ViewAs[ClassVTable](m.g219), m.g265, m.g322, int32(0), s6)
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, element, rt.ViewAs[KotlinAny](s2_4), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	if !(this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsHashMapEntrySetBase)) {
@@ -13642,7 +14624,15 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContains2(d int, this *Ko
 	}
 	s2_5 = rt.ViewAs[ClassVTable15](rt.ViewAs[KotlinCollectionsHashMapEntrySetBase](this).Vtable)
 	s2_6 = s2_5.Contains_2
-	s0 = rt.FnOfRef(s2_6, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, s0_1, s1_4)
+	fn1, own1 = rt.FnOwn(s2_6, rttFunc11, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny, *KotlinAny) int32)(d+1, s0_1, s1_4)
+	} else {
+		s0 = m.guard3(fn1.(func(int, *KotlinAny, *KotlinAny) int32), d+1, s0_1, s1_4)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -13652,27 +14642,45 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContainsAll(d int, this *
 	}
 	var tmp0This *KotlinCollectionsHashMapEntrySetBase
 	var s0 *KotlinCollectionsHashMap
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsHashMapEntrySetBase))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsHashMapEntrySetBase](this)
 	s0 = tmp0This.Backing
-	return m.kotlinCollectionsHashMapContainsAllEntries(d+1, s0, elements)
+	s0_1 = m.kotlinCollectionsHashMapContainsAllEntries(d+1, s0, elements)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCollectionsObjectInitializer(d int) {
 	var s0 *KotlinCollectionsCompanion
 	s0 = m.kotlinCollectionsCompanionInit(d+1, (*KotlinCollectionsCompanion)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g8 = s0
 	return
 }
 
 func (m *Instance) kotlinTextUppercaseChar(d int, this int32) int32 {
-	return m.kotlinTextUppercaseCharImpl(d+1, this)
+	var s0 int32
+	s0 = m.kotlinTextUppercaseCharImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTextLowercaseChar(d int, this int32) int32 {
-	return m.kotlinTextLowercaseCharImpl(d+1, this)
+	var s0 int32
+	s0 = m.kotlinTextLowercaseCharImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTextStringBuilderInit(d int, this *KotlinTextStringBuilder, array *KotlinCharArray) *KotlinTextStringBuilder {
@@ -13693,6 +14701,9 @@ func (m *Instance) kotlinTextStringBuilderInit2(d int, this *KotlinTextStringBui
 		this = s0
 	}
 	s0 = m.kotlinTextStringBuilderInit3(d+1, this, int32(10))
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	return this
 }
 
@@ -13704,7 +14715,13 @@ func (m *Instance) kotlinTextStringBuilderInit3(d int, this *KotlinTextStringBui
 		this = s0
 	}
 	s1 = m.kotlinCharArrayInit(d+1, (*KotlinCharArray)(nil), capacity)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	s0 = m.kotlinTextStringBuilderInit(d+1, this, s1)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	return this
 }
 
@@ -13723,7 +14740,7 @@ func (m *Instance) kotlinTextStringBuilderGet(d int, this *KotlinAny, index int3
 	}
 	var tmp0This *KotlinTextStringBuilder
 	var s0 *KotlinCollectionsCompanion2
-	var s2 int32
+	var s2, s0_2 int32
 	var s0_1 *KotlinCharArray
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinTextStringBuilder)) {
 		panic(rt.ErrCast)
@@ -13732,8 +14749,15 @@ func (m *Instance) kotlinTextStringBuilderGet(d int, this *KotlinAny, index int3
 	s0 = m.g9
 	s2 = tmp0This.Length
 	m.kotlinCollectionsCompanionCheckElementIndex(d+1, s0, index, s2)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = tmp0This.Array
-	return m.kotlinCharArrayGet(d+1, s0_1, index)
+	s0_2 = m.kotlinCharArrayGet(d+1, s0_1, index)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_2
 }
 
 func (m *Instance) kotlinTextStringBuilderSubSequence(d int, this *KotlinAny, startIndex int32, endIndex int32) *KotlinAny {
@@ -13747,6 +14771,9 @@ func (m *Instance) kotlinTextStringBuilderSubSequence(d int, this *KotlinAny, st
 	}
 	tmp0This = rt.ViewAs[KotlinTextStringBuilder](this)
 	s0 = m.kotlinTextStringBuilderSubstring(d+1, tmp0This, startIndex, endIndex)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0)
 }
 
@@ -13762,6 +14789,9 @@ func (m *Instance) kotlinTextStringBuilderAppend(d int, this *KotlinAny, value i
 	}
 	tmp0This = rt.ViewAs[KotlinTextStringBuilder](this)
 	m.kotlinTextStringBuilderEnsureExtraCapacity(d+1, tmp0This, int32(1))
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	s0 = tmp0This.Array
 	unary = tmp0This.Length
 	tmp0 = unary
@@ -13772,6 +14802,9 @@ func (m *Instance) kotlinTextStringBuilderAppend(d int, this *KotlinAny, value i
 B1:
 	s1_1.Length = s2
 	m.kotlinCharArraySet(d+1, s0, unary, value)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	return tmp0This
 }
 
@@ -13781,6 +14814,9 @@ func (m *Instance) kotlinTextStringBuilderAppend2(d int, this *KotlinAny, value 
 	}
 	var s0 *KotlinTextStringBuilder
 	s0 = m.kotlinTextStringBuilderAppend(d+1, this, value)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0)
 }
 
@@ -13788,13 +14824,14 @@ func (m *Instance) kotlinTextStringBuilderAppend3(d int, this *KotlinAny, value 
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var tmp0This *KotlinTextStringBuilder
+	var tmp0This, s0_2 *KotlinTextStringBuilder
 	var toAppend, tmp0ElvisLhs, s0_1 *KotlinAny
 	var s0 *KotlinString
 	var s4 *ClassVTable
 	var s4_1 *SpecialITable
-	var s4_2 any
+	var s4_2, fn1 any
 	var s4_3 *rt.Func
+	var own1 bool
 	var s3 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinTextStringBuilder)) {
 		panic(rt.ErrCast)
@@ -13803,6 +14840,9 @@ func (m *Instance) kotlinTextStringBuilderAppend3(d int, this *KotlinAny, value 
 	tmp0ElvisLhs = value
 	if tmp0ElvisLhs == nil {
 		s0 = m.stringLiteralLatin1(d+1, int32(33))
+		if m.exn != nil {
+			return (*KotlinTextStringBuilder)(nil)
+		}
 		s0_1 = rt.ViewAs[KotlinAny](s0)
 	} else {
 		s0_1 = tmp0ElvisLhs
@@ -13815,8 +14855,20 @@ func (m *Instance) kotlinTextStringBuilderAppend3(d int, this *KotlinAny, value 
 		panic(rt.ErrCast)
 	}
 	s4_3 = rt.As[ClassITable](s4_2).GetLength
-	s3 = rt.FnOfRef(s4_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, toAppend)
-	return m.kotlinTextStringBuilderAppend5(d+1, rt.ViewAs[KotlinAny](tmp0This), toAppend, int32(0), s3)
+	fn1, own1 = rt.FnOwn(s4_3, rttFunc14, m, false)
+	if own1 {
+		s3 = fn1.(func(int, *KotlinAny) int32)(d+1, toAppend)
+	} else {
+		s3 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, toAppend)
+	}
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
+	s0_2 = m.kotlinTextStringBuilderAppend5(d+1, rt.ViewAs[KotlinAny](tmp0This), toAppend, int32(0), s3)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
+	return s0_2
 }
 
 func (m *Instance) kotlinTextStringBuilderAppend4(d int, this *KotlinAny, value *KotlinAny) *KotlinAny {
@@ -13825,6 +14877,9 @@ func (m *Instance) kotlinTextStringBuilderAppend4(d int, this *KotlinAny, value 
 	}
 	var s0 *KotlinTextStringBuilder
 	s0 = m.kotlinTextStringBuilderAppend3(d+1, this, value)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0)
 }
 
@@ -13843,11 +14898,17 @@ func (m *Instance) kotlinTextStringBuilderAppend5(d int, this *KotlinAny, value 
 	s0 = tmp0This
 	if tmp0ElvisLhs == nil {
 		s1 = m.stringLiteralLatin1(d+1, int32(33))
+		if m.exn != nil {
+			return (*KotlinTextStringBuilder)(nil)
+		}
 		s1_1 = rt.ViewAs[KotlinAny](s1)
 	} else {
 		s1_1 = tmp0ElvisLhs
 	}
 	s0 = m.kotlinTextStringBuilderAppendRange(d+1, s0, s1_1, startIndex, endIndex)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	return s0
 }
 
@@ -13856,8 +14917,16 @@ func (m *Instance) kotlinTextStringBuilderAppend6(d int, this *KotlinTextStringB
 		rt.Exhausted()
 	}
 	var s1 *KotlinString
+	var s0 *KotlinTextStringBuilder
 	s1 = m.kotlinToString(d+1, value)
-	return m.kotlinTextStringBuilderAppend9(d+1, this, s1)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
+	s0 = m.kotlinTextStringBuilderAppend9(d+1, this, s1)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTextStringBuilderAppend7(d int, this *KotlinTextStringBuilder, value int32) *KotlinTextStringBuilder {
@@ -13867,10 +14936,16 @@ func (m *Instance) kotlinTextStringBuilderAppend7(d int, this *KotlinTextStringB
 	var s1, s3, s2_1 int32
 	var s2 *KotlinCharArray
 	m.kotlinTextStringBuilderEnsureExtraCapacity(d+1, this, int32(11))
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	s1 = this.Length
 	s2 = this.Array
 	s3 = this.Length
 	s2_1 = m.kotlinTextInsertInt(d+1, s2, s3, value)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	s1 = (s1 + s2_1)
 	this.Length = s1
 	return this
@@ -13881,8 +14956,16 @@ func (m *Instance) kotlinTextStringBuilderAppend8(d int, this *KotlinTextStringB
 		rt.Exhausted()
 	}
 	var s1 *KotlinString
+	var s0 *KotlinTextStringBuilder
 	s1 = m.kotlinLongToStringImpl(d+1, value)
-	return m.kotlinTextStringBuilderAppend9(d+1, this, s1)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
+	s0 = m.kotlinTextStringBuilderAppend9(d+1, this, s1)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTextStringBuilderAppend9(d int, this *KotlinTextStringBuilder, value *KotlinString) *KotlinTextStringBuilder {
@@ -13895,16 +14978,25 @@ func (m *Instance) kotlinTextStringBuilderAppend9(d int, this *KotlinTextStringB
 	tmp0ElvisLhs = value
 	if tmp0ElvisLhs == nil {
 		s0 = m.stringLiteralLatin1(d+1, int32(33))
+		if m.exn != nil {
+			return (*KotlinTextStringBuilder)(nil)
+		}
 	} else {
 		s0 = tmp0ElvisLhs
 	}
 	toAppend = s0
 	s1 = toAppend.Length
 	m.kotlinTextStringBuilderEnsureExtraCapacity(d+1, this, s1)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	s1 = this.Length
 	s2 = this.Array
 	s3 = this.Length
 	s2_1 = m.kotlinTextInsertString(d+1, s2, s3, toAppend)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	s1 = (s1 + s2_1)
 	this.Length = s1
 	return this
@@ -13921,8 +15013,17 @@ func (m *Instance) kotlinTextStringBuilderInsert(d int, this *KotlinTextStringBu
 	s0 = m.g9
 	s2 = this.Length
 	m.kotlinCollectionsCompanionCheckPositionIndex(d+1, s0, index, s2)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	m.kotlinTextStringBuilderEnsureExtraCapacity(d+1, this, int32(1))
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	s0_1 = m.kotlinTextGetLastIndex(d+1, rt.ViewAs[KotlinAny](this))
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	newLastIndex = (s0_1 + int32(1))
 	inductionVariable = newLastIndex
 	last = (index + int32(1))
@@ -13934,7 +15035,13 @@ func (m *Instance) kotlinTextStringBuilderInsert(d int, this *KotlinTextStringBu
 			s0_2 = this.Array
 			s2_1 = this.Array
 			s2 = m.kotlinCharArrayGet(d+1, s2_1, (i - int32(1)))
+			if m.exn != nil {
+				return (*KotlinTextStringBuilder)(nil)
+			}
 			m.kotlinCharArraySet(d+1, s0_2, i, s2)
+			if m.exn != nil {
+				return (*KotlinTextStringBuilder)(nil)
+			}
 			if rt.B2I(i == last) == 0 {
 				continue L2
 			}
@@ -13943,6 +15050,9 @@ func (m *Instance) kotlinTextStringBuilderInsert(d int, this *KotlinTextStringBu
 	}
 	s0_2 = this.Array
 	m.kotlinCharArraySet(d+1, s0_2, index, value)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	s0_1 = this.Length
 	unary = s0_1
 	tmp0 = unary
@@ -13962,24 +15072,37 @@ func (m *Instance) kotlinTextStringBuilderSubstring(d int, this *KotlinTextStrin
 	var s0 *KotlinCollectionsCompanion2
 	var s3 int32
 	var s0_1 *KotlinCharArray
+	var s0_2 *KotlinString
 	s0 = m.g9
 	s3 = this.Length
 	m.kotlinCollectionsCompanionCheckBoundsIndexes(d+1, s0, startIndex, endIndex, s3)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_1 = this.Array
-	return m.kotlinTextUnsafeStringFromCharArray(d+1, s0_1, startIndex, (endIndex - startIndex))
+	s0_2 = m.kotlinTextUnsafeStringFromCharArray(d+1, s0_1, startIndex, (endIndex - startIndex))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_2
 }
 
 func (m *Instance) kotlinTextStringBuilderToString(d int, this *KotlinAny) *KotlinString {
 	var tmp0This *KotlinTextStringBuilder
 	var s0 *KotlinCharArray
 	var s2 int32
+	var s0_1 *KotlinString
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinTextStringBuilder)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinTextStringBuilder](this)
 	s0 = tmp0This.Array
 	s2 = tmp0This.Length
-	return m.kotlinTextUnsafeStringFromCharArray(d+1, s0, int32(0), s2)
+	s0_1 = m.kotlinTextUnsafeStringFromCharArray(d+1, s0, int32(0), s2)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTextStringBuilderAppendRange(d int, this *KotlinTextStringBuilder, value *KotlinAny, startIndex int32, endIndex int32) *KotlinTextStringBuilder {
@@ -13992,8 +15115,9 @@ func (m *Instance) kotlinTextStringBuilderAppendRange(d int, this *KotlinTextStr
 	var s0 *KotlinCollectionsCompanion2
 	var s4 *ClassVTable
 	var s4_1 *SpecialITable
-	var s4_2 any
+	var s4_2, fn1, fn2 any
 	var s4_3 *rt.Func
+	var own1, own2 bool
 	var s2, s0_2 *KotlinCharArray
 	var s1_1 *KotlinTextStringBuilder
 	s0 = m.g9
@@ -14004,10 +15128,24 @@ func (m *Instance) kotlinTextStringBuilderAppendRange(d int, this *KotlinTextStr
 		panic(rt.ErrCast)
 	}
 	s4_3 = rt.As[ClassITable](s4_2).GetLength
-	s3 = rt.FnOfRef(s4_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, value)
+	fn1, own1 = rt.FnOwn(s4_3, rttFunc14, m, false)
+	if own1 {
+		s3 = fn1.(func(int, *KotlinAny) int32)(d+1, value)
+	} else {
+		s3 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, value)
+	}
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	m.kotlinCollectionsCompanionCheckBoundsIndexes(d+1, s0, startIndex, endIndex, s3)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	extraLength = (endIndex - startIndex)
 	m.kotlinTextStringBuilderEnsureExtraCapacity(d+1, this, extraLength)
+	if m.exn != nil {
+		return (*KotlinTextStringBuilder)(nil)
+	}
 	if value != nil && rt.ObjRTT(value) == rttKotlinString {
 		if !(value == nil || (value != nil && rt.ObjRTT(value) == rttKotlinString)) {
 			panic(rt.ErrCast)
@@ -14030,6 +15168,9 @@ func (m *Instance) kotlinTextStringBuilderAppendRange(d int, this *KotlinTextStr
 		s2 = this.Array
 		s3 = this.Length
 		s2_1 = m.kotlinTextInsertString2(d+1, s2, s3, it, startIndex, extraLength)
+		if m.exn != nil {
+			return (*KotlinTextStringBuilder)(nil)
+		}
 		s1 = (s1 + s2_1)
 		this.Length = s1
 		return this
@@ -14066,8 +15207,19 @@ L5:
 			panic(rt.ErrCast)
 		}
 		s4_3 = rt.As[ClassITable](s4_2).Get
-		s2_1 = rt.FnOfRef(s4_3, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, s2_2, unary_)
+		fn2, own2 = rt.FnOwn(s4_3, rttFunc7, m, false)
+		if own2 {
+			s2_1 = fn2.(func(int, *KotlinAny, int32) int32)(d+1, s2_2, unary_)
+		} else {
+			s2_1 = m.guard5(fn2.(func(int, *KotlinAny, int32) int32), d+1, s2_2, unary_)
+		}
+		if m.exn != nil {
+			return (*KotlinTextStringBuilder)(nil)
+		}
 		m.kotlinCharArraySet(d+1, s0_2, s1, s2_1)
+		if m.exn != nil {
+			return (*KotlinTextStringBuilder)(nil)
+		}
 		continue L5
 	B6:
 		break L5
@@ -14082,6 +15234,9 @@ func (m *Instance) kotlinTextStringBuilderEnsureExtraCapacity(d int, this *Kotli
 	var s1 int32
 	s1 = this.Length
 	m.kotlinTextStringBuilderEnsureCapacityInternal(d+1, this, (s1 + n))
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
@@ -14095,28 +15250,48 @@ func (m *Instance) kotlinTextStringBuilderEnsureCapacityInternal(d int, this *Ko
 	var s0_2 *KotlinCollectionsCompanion2
 	if minCapacity < int32(0) {
 		s0 = m.kotlinOutOfMemoryErrorInit(d+1, (*KotlinOutOfMemoryError)(nil))
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return
 	}
 	s1 = this.Array
 	s1_1 = m.kotlinCharArrayGetSize(d+1, s1)
+	if m.exn != nil {
+		return
+	}
 	s0_1 = rt.B2I(minCapacity > s1_1)
 	if s0_1 != 0 {
 		s0_2 = m.g9
 		s1 = this.Array
 		s1_1 = m.kotlinCharArrayGetSize(d+1, s1)
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinCollectionsCompanionNewCapacity(d+1, s0_2, s1_1, minCapacity)
+		if m.exn != nil {
+			return
+		}
 		newSize = s0_1
 		s1 = this.Array
 		s1 = m.kotlinCollectionsCopyOf(d+1, s1, newSize)
+		if m.exn != nil {
+			return
+		}
 		this.Array = s1
 	}
 	return
 }
 
 func (m *Instance) kotlinTextInsertString(d int, array *KotlinCharArray, start int32, value *KotlinString) int32 {
-	var s4 int32
+	var s4, s0 int32
 	s4 = value.Length
-	return m.kotlinTextInsertString2(d+1, array, start, value, int32(0), s4)
+	s0 = m.kotlinTextInsertString2(d+1, array, start, value, int32(0), s4)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsAbstractCollectionInit(d int, this *KotlinCollectionsAbstractCollection) *KotlinCollectionsAbstractCollection {
@@ -14131,9 +15306,10 @@ func (m *Instance) kotlinCollectionsAbstractCollectionContains(d int, this *Kotl
 	var tmp0, this_, iSINTERFACEPARAMETER, tmp, iterator, element_, tmp0_, it, s0_4 *KotlinAny
 	var s0, s1 *ClassVTable
 	var s0_1, s1_1 *SpecialITable
-	var s0_2, s1_2 any
+	var s0_2, s1_2, fn1, fn2, fn3, fn4 any
 	var s0_3 int32
 	var s1_3 *rt.Func
+	var own1, own2, own3, own4 bool
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsAbstractCollection))) {
 		panic(rt.ErrCast)
 	}
@@ -14161,7 +15337,15 @@ B2:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable3](s1_2).IsEmpty
-		s0_3 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp)
+		fn1, own1 = rt.FnOwn(s1_3, rttFunc14, m, false)
+		if own1 {
+			s0_3 = fn1.(func(int, *KotlinAny) int32)(d+1, tmp)
+		} else {
+			s0_3 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, tmp)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 	} else {
 		s0_3 = int32(0)
 	}
@@ -14176,7 +15360,15 @@ B2:
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable4](s1_2).Iterator
-	s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
+	fn2, own2 = rt.FnOwn(s1_3, rttFunc33, m, false)
+	if own2 {
+		s0_4 = fn2.(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
+	} else {
+		s0_4 = m.guard1(fn2.(func(int, *KotlinAny) *KotlinAny), d+1, this_)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	iterator = s0_4
 L6:
 	for {
@@ -14187,7 +15379,15 @@ L6:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_3 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
+		fn3, own3 = rt.FnOwn(s1_3, rttFunc14, m, false)
+		if own3 {
+			s0_3 = fn3.(func(int, *KotlinAny) int32)(d+1, iterator)
+		} else {
+			s0_3 = m.guard2(fn3.(func(int, *KotlinAny) int32), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0_3 == 0 {
 			goto B7
 		}
@@ -14198,11 +15398,22 @@ L6:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		fn4, own4 = rt.FnOwn(s1_3, rttFunc33, m, false)
+		if own4 {
+			s0_4 = fn4.(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		} else {
+			s0_4 = m.guard1(fn4.(func(int, *KotlinAny) *KotlinAny), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		element_ = s0_4
 		tmp0_ = element_
 		it = tmp0_
 		s0_3 = m.kotlinWasmInternalNullableEquals(d+1, it, element)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B8
 	B8:
 		if s0_3 != 0 {
@@ -14227,9 +15438,10 @@ func (m *Instance) kotlinCollectionsAbstractCollectionContainsAll(d int, this *K
 	var tmp0, this_, iSINTERFACEPARAMETER, tmp, iterator, element, tmp0_, it, s0_4 *KotlinAny
 	var s0, s1 *ClassVTable
 	var s0_1, s1_1 *SpecialITable
-	var s0_2, s1_2 any
+	var s0_2, s1_2, fn1, fn2, fn3, fn4, fn5 any
 	var s0_3 int32
 	var s1_3, s2_1 *rt.Func
+	var own1, own2, own3, own4, own5 bool
 	var s2 *ClassVTable8
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsAbstractCollection))) {
 		panic(rt.ErrCast)
@@ -14258,7 +15470,15 @@ B2:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable3](s1_2).IsEmpty
-		s0_3 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp)
+		fn1, own1 = rt.FnOwn(s1_3, rttFunc14, m, false)
+		if own1 {
+			s0_3 = fn1.(func(int, *KotlinAny) int32)(d+1, tmp)
+		} else {
+			s0_3 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, tmp)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 	} else {
 		s0_3 = int32(0)
 	}
@@ -14273,7 +15493,15 @@ B2:
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable4](s1_2).Iterator
-	s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
+	fn2, own2 = rt.FnOwn(s1_3, rttFunc33, m, false)
+	if own2 {
+		s0_4 = fn2.(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
+	} else {
+		s0_4 = m.guard1(fn2.(func(int, *KotlinAny) *KotlinAny), d+1, this_)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	iterator = s0_4
 L6:
 	for {
@@ -14284,7 +15512,15 @@ L6:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_3 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
+		fn3, own3 = rt.FnOwn(s1_3, rttFunc14, m, false)
+		if own3 {
+			s0_3 = fn3.(func(int, *KotlinAny) int32)(d+1, iterator)
+		} else {
+			s0_3 = m.guard2(fn3.(func(int, *KotlinAny) int32), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0_3 == 0 {
 			goto B7
 		}
@@ -14295,13 +15531,29 @@ L6:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0_4 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		fn4, own4 = rt.FnOwn(s1_3, rttFunc33, m, false)
+		if own4 {
+			s0_4 = fn4.(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		} else {
+			s0_4 = m.guard1(fn4.(func(int, *KotlinAny) *KotlinAny), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		element = s0_4
 		tmp0_ = element
 		it = tmp0_
 		s2 = rt.ViewAs[ClassVTable8](tmp0This.Vtable)
 		s2_1 = s2.Contains
-		s0_3 = rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), it)
+		fn5, own5 = rt.FnOwn(s2_1, rttFunc11, m, false)
+		if own5 {
+			s0_3 = fn5.(func(int, *KotlinAny, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), it)
+		} else {
+			s0_3 = m.guard3(fn5.(func(int, *KotlinAny, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp0This), it)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B8
 	B8:
 		if s0_3 == 0 {
@@ -14325,6 +15577,8 @@ func (m *Instance) kotlinCollectionsAbstractCollectionIsEmpty(d int, this *Kotli
 	var tmp0This *KotlinCollectionsAbstractCollection
 	var s1 *ClassVTable8
 	var s1_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s0 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsAbstractCollection))) {
 		panic(rt.ErrCast)
@@ -14332,7 +15586,15 @@ func (m *Instance) kotlinCollectionsAbstractCollectionIsEmpty(d int, this *Kotli
 	tmp0This = rt.ViewAs[KotlinCollectionsAbstractCollection](this)
 	s1 = rt.ViewAs[ClassVTable8](tmp0This.Vtable)
 	s1_1 = s1.GetSize
-	s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc14, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	} else {
+		s0 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp0This))
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	return rt.B2I(s0 == int32(0))
 }
 
@@ -14341,17 +15603,33 @@ func (m *Instance) kotlinCollectionsAbstractCollectionToString(d int, this *Kotl
 		rt.Exhausted()
 	}
 	var tmp0This *KotlinCollectionsAbstractCollection
-	var s1, s2, s3 *KotlinString
+	var s1, s2, s3, s0 *KotlinString
 	var s6 *KotlinCollectionsFunction1Bound1A
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsAbstractCollection))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsAbstractCollection](this)
 	s1 = m.stringLiteralLatin1(d+1, int32(2))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s2 = m.stringLiteralLatin1(d+1, int32(35))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s3 = m.stringLiteralLatin1(d+1, int32(36))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s6 = m.kotlinCollectionsFunction1Bound1AInit(d+1, (*KotlinCollectionsFunction1Bound1A)(nil), m.funcs[126], rt.ViewAs[KotlinAny](tmp0This))
-	return m.kotlinCollectionsJoinToStringDefault(d+1, rt.ViewAs[KotlinAny](tmp0This), rt.ViewAs[KotlinAny](s1), rt.ViewAs[KotlinAny](s2), rt.ViewAs[KotlinAny](s3), (*KotlinInt)(nil), (*KotlinAny)(nil), rt.ViewAs[KotlinAny](s6), int32(24), (*KotlinAny)(nil))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	s0 = m.kotlinCollectionsJoinToStringDefault(d+1, rt.ViewAs[KotlinAny](tmp0This), rt.ViewAs[KotlinAny](s1), rt.ViewAs[KotlinAny](s2), rt.ViewAs[KotlinAny](s3), (*KotlinInt)(nil), (*KotlinAny)(nil), rt.ViewAs[KotlinAny](s6), int32(24), (*KotlinAny)(nil))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsFunction1Bound1AInit(d int, this *KotlinCollectionsFunction1Bound1A, func_ *rt.Func, p0_ *KotlinAny) *KotlinCollectionsFunction1Bound1A {
@@ -14372,13 +15650,23 @@ func (m *Instance) kotlinCollectionsFunction1Bound1AInvoke(d int, this *KotlinAn
 	var tmp0This *KotlinCollectionsFunction1Bound1A
 	var s0 *KotlinAny
 	var s2 *rt.Func
+	var fn1 any
+	var own1 bool
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsFunction1Bound1A)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsFunction1Bound1A](this)
 	s0 = tmp0This.F0
 	s2 = tmp0This.Func
-	s0 = rt.FnOfRef(s2, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, p0_)
+	fn1, own1 = rt.FnOwn(s2, rttFunc46, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, p0_)
+	} else {
+		s0 = m.guard0(fn1.(func(int, *KotlinAny, *KotlinAny) *KotlinAny), d+1, s0, p0_)
+	}
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return s0
 }
 
@@ -14396,9 +15684,15 @@ func (m *Instance) kotlinCollectionsAbstractCollectionToStringLambdaInvoke(d int
 	tmp1 = rt.ViewAs[KotlinCollectionsAbstractCollection](this0)
 	if rt.Box(tmp0) == rt.Box(tmp1) {
 		s0 = m.stringLiteralLatin1(d+1, int32(38))
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		s0_1 = rt.ViewAs[KotlinAny](s0)
 	} else {
 		s0 = m.kotlinToString(d+1, tmp0)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		s0_1 = rt.ViewAs[KotlinAny](s0)
 	}
 	return s0_1
@@ -14424,6 +15718,8 @@ func (m *Instance) kotlinCollectionsIteratorImplHasNext(d int, this *KotlinAny) 
 	var s0, s1_1 int32
 	var s2 *ClassVTable22
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsIteratorImpl))) {
 		panic(rt.ErrCast)
 	}
@@ -14432,7 +15728,15 @@ func (m *Instance) kotlinCollectionsIteratorImplHasNext(d int, this *KotlinAny) 
 	tmp = tmp0This.This
 	s2 = rt.ViewAs[ClassVTable22](tmp.Vtable)
 	s2_1 = s2.GetSize
-	s1_1 = rt.FnOfRef(s2_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc14, m, false)
+	if own1 {
+		s1_1 = fn1.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
+	} else {
+		s1_1 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp))
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = rt.B2I(s0 < s1_1)
 	return s0
 }
@@ -14446,18 +15750,33 @@ func (m *Instance) kotlinCollectionsIteratorImplNext(d int, this *KotlinAny) *Ko
 	var unary, tmp0, this_, s0, s2 int32
 	var s1 *ClassVTable21
 	var s1_1, s2_2 *rt.Func
+	var fn1, fn2 any
+	var own1, own2 bool
 	var s0_1 *KotlinNoSuchElementException
 	var s2_1 *ClassVTable22
+	var s0_3 *KotlinAny
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsIteratorImpl))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsIteratorImpl](this)
 	s1 = rt.ViewAs[ClassVTable21](tmp0This.Vtable)
 	s1_1 = s1.HasNext
-	s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc14, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	} else {
+		s0 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp0This))
+	}
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	if s0 == 0 {
 		s0_1 = m.kotlinNoSuchElementExceptionInit(d+1, (*KotlinNoSuchElementException)(nil))
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return (*KotlinAny)(nil)
 	}
 	s0_2 = tmp0This.This
 	tmp = s0_2
@@ -14472,7 +15791,16 @@ B2:
 	s1_3.Index = s2
 	s2_1 = rt.ViewAs[ClassVTable22](tmp.Vtable)
 	s2_2 = s2_1.Get
-	return rt.FnOfRef(s2_2, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](s0_2), unary)
+	fn2, own2 = rt.FnOwn(s2_2, rttFunc76, m, false)
+	if own2 {
+		s0_3 = fn2.(func(int, *KotlinAny, int32) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](s0_2), unary)
+	} else {
+		s0_3 = m.guard6(fn2.(func(int, *KotlinAny, int32) *KotlinAny), d+1, rt.ViewAs[KotlinAny](s0_2), unary)
+	}
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	return s0_3
 }
 
 func (m *Instance) kotlinCollectionsCompanionInit2(d int, this *KotlinCollectionsCompanion2) *KotlinCollectionsCompanion2 {
@@ -14500,14 +15828,33 @@ func (m *Instance) kotlinCollectionsCompanionCheckElementIndex(d int, this *Kotl
 	}
 	if s0 != 0 {
 		s1 = m.stringLiteralLatin1(d+1, int32(41))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), index)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(42))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), size)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinIndexOutOfBoundsExceptionInit2(d+1, (*KotlinIndexOutOfBoundsException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	return
 }
@@ -14527,14 +15874,33 @@ func (m *Instance) kotlinCollectionsCompanionCheckPositionIndex(d int, this *Kot
 	}
 	if s0 != 0 {
 		s1 = m.stringLiteralLatin1(d+1, int32(41))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), index)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(42))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), size)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinIndexOutOfBoundsExceptionInit2(d+1, (*KotlinIndexOutOfBoundsException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	return
 }
@@ -14555,29 +15921,76 @@ func (m *Instance) kotlinCollectionsCompanionCheckRangeIndexes(d int, this *Kotl
 	}
 	if s0 != 0 {
 		s1 = m.stringLiteralLatin1(d+1, int32(43))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), fromIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(44))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), toIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(42))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), size)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinIndexOutOfBoundsExceptionInit2(d+1, (*KotlinIndexOutOfBoundsException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	if fromIndex > toIndex {
 		s1 = m.stringLiteralLatin1(d+1, int32(43))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), fromIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(45))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), toIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s0_2 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return
 	}
 	return
 }
@@ -14598,29 +16011,76 @@ func (m *Instance) kotlinCollectionsCompanionCheckBoundsIndexes(d int, this *Kot
 	}
 	if s0 != 0 {
 		s1 = m.stringLiteralLatin1(d+1, int32(46))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), startIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(47))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), endIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(42))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), size)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinIndexOutOfBoundsExceptionInit2(d+1, (*KotlinIndexOutOfBoundsException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	if startIndex > endIndex {
 		s1 = m.stringLiteralLatin1(d+1, int32(46))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), startIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(48))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), endIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s0_2 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return
 	}
 	return
 }
@@ -14651,8 +16111,9 @@ func (m *Instance) kotlinCollectionsCompanionOrderedHashCode(d int, this *Kotlin
 	var tmp1ElvisLhs, s1_4 *KotlinInt
 	var s1, s6 *ClassVTable
 	var s1_1 *SpecialITable
-	var s1_2 any
+	var s1_2, fn1, fn2, fn3, fn4 any
 	var s1_3, s6_1 *rt.Func
+	var own1, own2, own3, own4 bool
 	hashCode = int32(1)
 	s1 = c_.Vtable
 	s1_1 = s1.SpecialITable
@@ -14661,7 +16122,15 @@ func (m *Instance) kotlinCollectionsCompanionOrderedHashCode(d int, this *Kotlin
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).Iterator
-	s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
+	fn1, own1 = rt.FnOwn(s1_3, rttFunc33, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
+	} else {
+		s0 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, c_)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	iterator = s0
 L1:
 	for {
@@ -14672,7 +16141,15 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_1 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
+		fn2, own2 = rt.FnOwn(s1_3, rttFunc14, m, false)
+		if own2 {
+			s0_1 = fn2.(func(int, *KotlinAny) int32)(d+1, iterator)
+		} else {
+			s0_1 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0_1 == 0 {
 			goto B2
 		}
@@ -14683,7 +16160,15 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		fn3, own3 = rt.FnOwn(s1_3, rttFunc33, m, false)
+		if own3 {
+			s0 = fn3.(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		} else {
+			s0 = m.guard1(fn3.(func(int, *KotlinAny) *KotlinAny), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		e_ = s0
 		tmp0SafeReceiver = e_
 		s0_1 = (int32(31) * hashCode)
@@ -14692,7 +16177,15 @@ L1:
 		} else {
 			s6 = tmp0SafeReceiver.Vtable
 			s6_1 = s6.HashCode
-			s5 = rt.FnOfRef(s6_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+			fn4, own4 = rt.FnOwn(s6_1, rttFunc14, m, false)
+			if own4 {
+				s5 = fn4.(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+			} else {
+				s5 = m.guard2(fn4.(func(int, *KotlinAny) int32), d+1, tmp0SafeReceiver)
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1_4 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 		}
 		tmp1ElvisLhs = s1_4
@@ -14717,8 +16210,9 @@ func (m *Instance) kotlinCollectionsCompanionOrderedEquals(d int, this *KotlinCo
 	var otherIterator, iterator, elem, elemOther, s0_1 *KotlinAny
 	var s1, s2 *ClassVTable
 	var s1_1, s2_1 *SpecialITable
-	var s1_2, s2_2 any
+	var s1_2, fn1, s2_2, fn2, fn3, fn4, fn5, fn6, fn7 any
 	var s1_3, s2_3 *rt.Func
+	var own1, own2, own3, own4, own5, own6, own7 bool
 	var s0, s1_4 int32
 	s1 = c_.Vtable
 	s1_1 = s1.SpecialITable
@@ -14727,7 +16221,15 @@ func (m *Instance) kotlinCollectionsCompanionOrderedEquals(d int, this *KotlinCo
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).GetSize
-	s0 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, c_)
+	fn1, own1 = rt.FnOwn(s1_3, rttFunc14, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) int32)(d+1, c_)
+	} else {
+		s0 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, c_)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s2 = other.Vtable
 	s2_1 = s2.SpecialITable
 	s2_2 = s2_1.F0
@@ -14735,7 +16237,15 @@ func (m *Instance) kotlinCollectionsCompanionOrderedEquals(d int, this *KotlinCo
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable3](s2_2).GetSize
-	s1_4 = rt.FnOfRef(s2_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, other)
+	fn2, own2 = rt.FnOwn(s2_3, rttFunc14, m, false)
+	if own2 {
+		s1_4 = fn2.(func(int, *KotlinAny) int32)(d+1, other)
+	} else {
+		s1_4 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, other)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = rt.B2I(s0 == s1_4)
 	if s0 == 0 {
 		return int32(0)
@@ -14747,7 +16257,15 @@ func (m *Instance) kotlinCollectionsCompanionOrderedEquals(d int, this *KotlinCo
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).Iterator
-	s0_1 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, other)
+	fn3, own3 = rt.FnOwn(s1_3, rttFunc33, m, false)
+	if own3 {
+		s0_1 = fn3.(func(int, *KotlinAny) *KotlinAny)(d+1, other)
+	} else {
+		s0_1 = m.guard1(fn3.(func(int, *KotlinAny) *KotlinAny), d+1, other)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	otherIterator = s0_1
 	s1 = c_.Vtable
 	s1_1 = s1.SpecialITable
@@ -14756,7 +16274,15 @@ func (m *Instance) kotlinCollectionsCompanionOrderedEquals(d int, this *KotlinCo
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).Iterator
-	s0_1 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
+	fn4, own4 = rt.FnOwn(s1_3, rttFunc33, m, false)
+	if own4 {
+		s0_1 = fn4.(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
+	} else {
+		s0_1 = m.guard1(fn4.(func(int, *KotlinAny) *KotlinAny), d+1, c_)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	iterator = s0_1
 L2:
 	for {
@@ -14767,7 +16293,15 @@ L2:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
+		fn5, own5 = rt.FnOwn(s1_3, rttFunc14, m, false)
+		if own5 {
+			s0 = fn5.(func(int, *KotlinAny) int32)(d+1, iterator)
+		} else {
+			s0 = m.guard2(fn5.(func(int, *KotlinAny) int32), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0 == 0 {
 			goto B3
 		}
@@ -14778,7 +16312,15 @@ L2:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0_1 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		fn6, own6 = rt.FnOwn(s1_3, rttFunc33, m, false)
+		if own6 {
+			s0_1 = fn6.(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		} else {
+			s0_1 = m.guard1(fn6.(func(int, *KotlinAny) *KotlinAny), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		elem = s0_1
 		s1 = otherIterator.Vtable
 		s1_1 = s1.SpecialITable
@@ -14787,9 +16329,20 @@ L2:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0_1 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, otherIterator)
+		fn7, own7 = rt.FnOwn(s1_3, rttFunc33, m, false)
+		if own7 {
+			s0_1 = fn7.(func(int, *KotlinAny) *KotlinAny)(d+1, otherIterator)
+		} else {
+			s0_1 = m.guard1(fn7.(func(int, *KotlinAny) *KotlinAny), d+1, otherIterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		elemOther = s0_1
 		s0 = m.kotlinWasmInternalNullableEquals(d+1, elem, elemOther)
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0 == 0 {
 			return int32(0)
 		}
@@ -14804,6 +16357,9 @@ func (m *Instance) kotlinCollectionsAbstractListInit(d int, this *KotlinCollecti
 	var s0 *KotlinCollectionsAbstractCollection
 	_ = s0
 	s0 = m.kotlinCollectionsAbstractCollectionInit(d+1, rt.ViewAs[KotlinCollectionsAbstractCollection](this))
+	if m.exn != nil {
+		return (*KotlinCollectionsAbstractList)(nil)
+	}
 	return this
 }
 
@@ -14815,6 +16371,9 @@ func (m *Instance) kotlinCollectionsAbstractListIterator(d int, this *KotlinAny)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsAbstractList](this)
 	s0 = m.kotlinCollectionsIteratorImplInit(d+1, (*KotlinCollectionsIteratorImpl)(nil), tmp0This)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0)
 }
 
@@ -14857,6 +16416,9 @@ func (m *Instance) kotlinCollectionsAbstractListEquals(d int, this *KotlinAny, o
 	}
 	s0_4 = m.g9
 	s0 = m.kotlinCollectionsCompanionOrderedEquals(d+1, s0_4, rt.ViewAs[KotlinAny](tmp0This), other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -14866,17 +16428,25 @@ func (m *Instance) kotlinCollectionsAbstractListHashCode(d int, this *KotlinAny)
 	}
 	var tmp0This *KotlinCollectionsAbstractList
 	var s0 *KotlinCollectionsCompanion2
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsAbstractList))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsAbstractList](this)
 	s0 = m.g9
-	return m.kotlinCollectionsCompanionOrderedHashCode(d+1, s0, rt.ViewAs[KotlinAny](tmp0This))
+	s0_1 = m.kotlinCollectionsCompanionOrderedHashCode(d+1, s0, rt.ViewAs[KotlinAny](tmp0This))
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCollectionsObjectInitializer2(d int) {
 	var s0 *KotlinCollectionsCompanion2
 	s0 = m.kotlinCollectionsCompanionInit2(d+1, (*KotlinCollectionsCompanion2)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g9 = s0
 	return
 }
@@ -14899,8 +16469,9 @@ func (m *Instance) kotlinCollectionsCompanionUnorderedHashCode(d int, this *Kotl
 	var tmp1ElvisLhs, s1_4 *KotlinInt
 	var s1, s6 *ClassVTable
 	var s1_1 *SpecialITable
-	var s1_2 any
+	var s1_2, fn1, fn2, fn3, fn4 any
 	var s1_3, s6_1 *rt.Func
+	var own1, own2, own3, own4 bool
 	hashCode = int32(0)
 	s1 = c_.Vtable
 	s1_1 = s1.SpecialITable
@@ -14909,7 +16480,15 @@ func (m *Instance) kotlinCollectionsCompanionUnorderedHashCode(d int, this *Kotl
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).Iterator
-	s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
+	fn1, own1 = rt.FnOwn(s1_3, rttFunc33, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, c_)
+	} else {
+		s0 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, c_)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	iterator = s0
 L1:
 	for {
@@ -14920,7 +16499,15 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).HasNext
-		s0_1 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
+		fn2, own2 = rt.FnOwn(s1_3, rttFunc14, m, false)
+		if own2 {
+			s0_1 = fn2.(func(int, *KotlinAny) int32)(d+1, iterator)
+		} else {
+			s0_1 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0_1 == 0 {
 			goto B2
 		}
@@ -14931,7 +16518,15 @@ L1:
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable6](s1_2).Next
-		s0 = rt.FnOfRef(s1_3, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		fn3, own3 = rt.FnOwn(s1_3, rttFunc33, m, false)
+		if own3 {
+			s0 = fn3.(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		} else {
+			s0 = m.guard1(fn3.(func(int, *KotlinAny) *KotlinAny), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		element = s0
 		tmp0SafeReceiver = element
 		s0_1 = hashCode
@@ -14940,7 +16535,15 @@ L1:
 		} else {
 			s6 = tmp0SafeReceiver.Vtable
 			s6_1 = s6.HashCode
-			s5 = rt.FnOfRef(s6_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+			fn4, own4 = rt.FnOwn(s6_1, rttFunc14, m, false)
+			if own4 {
+				s5 = fn4.(func(int, *KotlinAny) int32)(d+1, tmp0SafeReceiver)
+			} else {
+				s5 = m.guard2(fn4.(func(int, *KotlinAny) int32), d+1, tmp0SafeReceiver)
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1_4 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 		}
 		tmp1ElvisLhs = s1_4
@@ -14964,8 +16567,9 @@ func (m *Instance) kotlinCollectionsCompanionSetEquals(d int, this *KotlinCollec
 	}
 	var s1, s2 *ClassVTable
 	var s1_1, s2_1 *SpecialITable
-	var s1_2, s2_2 any
+	var s1_2, fn1, s2_2, fn2, fn3 any
 	var s1_3, s2_3 *rt.Func
+	var own1, own2, own3 bool
 	var s0, s1_4 int32
 	s1 = c_.Vtable
 	s1_1 = s1.SpecialITable
@@ -14974,7 +16578,15 @@ func (m *Instance) kotlinCollectionsCompanionSetEquals(d int, this *KotlinCollec
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable3](s1_2).GetSize
-	s0 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, c_)
+	fn1, own1 = rt.FnOwn(s1_3, rttFunc14, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) int32)(d+1, c_)
+	} else {
+		s0 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, c_)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s2 = other.Vtable
 	s2_1 = s2.SpecialITable
 	s2_2 = s2_1.F1
@@ -14982,7 +16594,15 @@ func (m *Instance) kotlinCollectionsCompanionSetEquals(d int, this *KotlinCollec
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable3](s2_2).GetSize
-	s1_4 = rt.FnOfRef(s2_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, other)
+	fn2, own2 = rt.FnOwn(s2_3, rttFunc14, m, false)
+	if own2 {
+		s1_4 = fn2.(func(int, *KotlinAny) int32)(d+1, other)
+	} else {
+		s1_4 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, other)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = rt.B2I(s0 == s1_4)
 	if s0 == 0 {
 		return int32(0)
@@ -14994,13 +16614,24 @@ func (m *Instance) kotlinCollectionsCompanionSetEquals(d int, this *KotlinCollec
 		panic(rt.ErrCast)
 	}
 	s2_3 = rt.As[ClassITable3](s2_2).ContainsAll
-	s0 = rt.FnOfRef(s2_3, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, c_, other)
+	fn3, own3 = rt.FnOwn(s2_3, rttFunc11, m, false)
+	if own3 {
+		s0 = fn3.(func(int, *KotlinAny, *KotlinAny) int32)(d+1, c_, other)
+	} else {
+		s0 = m.guard3(fn3.(func(int, *KotlinAny, *KotlinAny) int32), d+1, c_, other)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinCollectionsObjectInitializer3(d int) {
 	var s0 *KotlinCollectionsCompanion3
 	s0 = m.kotlinCollectionsCompanionInit3(d+1, (*KotlinCollectionsCompanion3)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g10 = s0
 	return
 }
@@ -15016,13 +16647,25 @@ func (m *Instance) kotlinCollectionsIntIteratorNext(d int, this *KotlinAny) int3
 	var tmp0This *KotlinCollectionsIntIterator
 	var s1 *ClassVTable23
 	var s1_1 *rt.Func
+	var fn1 any
+	var own1 bool
+	var s0 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsIntIterator))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinCollectionsIntIterator](this)
 	s1 = rt.ViewAs[ClassVTable23](tmp0This.Vtable)
 	s1_1 = s1.NextInt
-	return rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc14, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	} else {
+		s0 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp0This))
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsIntIteratorNext2(d int, this *KotlinAny) *KotlinAny {
@@ -15032,6 +16675,9 @@ func (m *Instance) kotlinCollectionsIntIteratorNext2(d int, this *KotlinAny) *Ko
 	var s4 int32
 	var s0 *KotlinInt
 	s4 = m.kotlinCollectionsIntIteratorNext(d+1, this)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	return rt.ViewAs[KotlinAny](s0)
 }
@@ -15045,6 +16691,9 @@ func (m *Instance) kotlinEnumsEnumEntriesListInit(d int, this *KotlinEnumsEnumEn
 		this = s0
 	}
 	s0_1 = m.kotlinCollectionsAbstractListInit(d+1, rt.ViewAs[KotlinCollectionsAbstractList](this))
+	if m.exn != nil {
+		return (*KotlinEnumsEnumEntriesList)(nil)
+	}
 	this.Entries = entries
 	return this
 }
@@ -15052,12 +16701,17 @@ func (m *Instance) kotlinEnumsEnumEntriesListInit(d int, this *KotlinEnumsEnumEn
 func (m *Instance) kotlinEnumsEnumEntriesListGetSize(d int, this *KotlinAny) int32 {
 	var tmp0This *KotlinEnumsEnumEntriesList
 	var s0 *KotlinArray
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinEnumsEnumEntriesList)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinEnumsEnumEntriesList](this)
 	s0 = tmp0This.Entries
-	return m.kotlinArrayGetSize(d+1, s0)
+	s0_1 = m.kotlinArrayGetSize(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinEnumsEnumEntriesListGet(d int, this *KotlinAny, index int32) *KotlinEnum {
@@ -15076,9 +16730,18 @@ func (m *Instance) kotlinEnumsEnumEntriesListGet(d int, this *KotlinAny, index i
 	s0 = m.g9
 	s2 = tmp0This.Entries
 	s2_1 = m.kotlinArrayGetSize(d+1, s2)
+	if m.exn != nil {
+		return (*KotlinEnum)(nil)
+	}
 	m.kotlinCollectionsCompanionCheckElementIndex(d+1, s0, index, s2_1)
+	if m.exn != nil {
+		return (*KotlinEnum)(nil)
+	}
 	s0_1 = tmp0This.Entries
 	s0_2 = m.kotlinArrayGet(d+1, s0_1, index)
+	if m.exn != nil {
+		return (*KotlinEnum)(nil)
+	}
 	if !(s0_2 == nil || (s0_2 != nil && rt.ObjRTT(s0_2).SubOf(rttKotlinEnum))) {
 		panic(rt.ErrCast)
 	}
@@ -15091,6 +16754,9 @@ func (m *Instance) kotlinEnumsEnumEntriesListGet2(d int, this *KotlinAny, index 
 	}
 	var s0 *KotlinEnum
 	s0 = m.kotlinEnumsEnumEntriesListGet(d+1, this, index)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0)
 }
 
@@ -15110,6 +16776,9 @@ func (m *Instance) kotlinEnumsEnumEntriesListContains(d int, this *KotlinAny, el
 	s0 = tmp0This.Entries
 	s1 = element.Ordinal
 	s0_1 = m.kotlinCollectionsGetOrNull(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if !(s0_1 == nil || (s0_1 != nil && rt.ObjRTT(s0_1).SubOf(rttKotlinEnum))) {
 		panic(rt.ErrCast)
 	}
@@ -15147,15 +16816,24 @@ func (m *Instance) kotlinEnumsEnumEntriesListContains2(d int, this *KotlinAny, e
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g312))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, element, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	s0 = m.kotlinEnumsEnumEntriesListContains(d+1, s0_1, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinEnumsEnumEntries(d int, entries *KotlinArray) *KotlinAny {
 	var s0 *KotlinEnumsEnumEntriesList
 	s0 = m.kotlinEnumsEnumEntriesListInit(d+1, (*KotlinEnumsEnumEntriesList)(nil), entries)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0)
 }
 
@@ -15168,6 +16846,9 @@ func (m *Instance) kotlinInternalGetProgressionLastElement(d int, start int32, e
 			s0 = end
 		} else {
 			s1 = m.kotlinInternalDifferenceModulo(d+1, end, start, step)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s0 = (end - s1)
 		}
 	} else {
@@ -15184,12 +16865,22 @@ func (m *Instance) kotlinInternalGetProgressionLastElement(d int, start int32, e
 				goto B5
 			B5:
 				s1 = m.kotlinInternalDifferenceModulo(d+1, s1, s2, s3)
+				if m.exn != nil {
+					return int32(0)
+				}
 				s0 = (s0 + s1)
 			}
 		} else {
 			s1_1 = m.stringLiteralLatin1(d+1, int32(54))
+			if m.exn != nil {
+				return int32(0)
+			}
 			s0_1 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
-			panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+			if m.exn != nil {
+				return int32(0)
+			}
+			m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+			return int32(0)
 		}
 	}
 	return s0
@@ -15198,15 +16889,27 @@ func (m *Instance) kotlinInternalGetProgressionLastElement(d int, start int32, e
 func (m *Instance) kotlinInternalDifferenceModulo(d int, a int32, b int32, c_ int32) int32 {
 	var s0, s1 int32
 	s0 = m.kotlinInternalMod(d+1, a, c_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinInternalMod(d+1, b, c_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = (s0 - s1)
 	s0 = m.kotlinInternalMod(d+1, s0, c_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinInternalMod(d int, a int32, b int32) int32 {
 	var mod, s0 int32
 	s0 = m.kotlinIntRemImpl(d+1, a, b)
+	if m.exn != nil {
+		return int32(0)
+	}
 	mod = s0
 	if mod >= int32(0) {
 		s0 = mod
@@ -15229,7 +16932,13 @@ func (m *Instance) kotlinRandomDefaultInit(d int, this *KotlinRandomDefault) *Ko
 	}
 	m.g11 = this
 	s0_1 = m.kotlinRandomRandomInit(d+1, rt.ViewAs[KotlinRandomRandom](this))
+	if m.exn != nil {
+		return (*KotlinRandomDefault)(nil)
+	}
 	s1 = m.kotlinRandomDefaultPlatformRandom(d + 1)
+	if m.exn != nil {
+		return (*KotlinRandomDefault)(nil)
+	}
 	this.DefaultRandom = s1
 	return this
 }
@@ -15242,6 +16951,9 @@ func (m *Instance) kotlinRandomDefaultNextBits(d int, this *KotlinAny, bitCount 
 	var tmp *KotlinRandomRandom
 	var s2 *ClassVTable26
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRandomDefault)) {
 		panic(rt.ErrCast)
 	}
@@ -15249,7 +16961,16 @@ func (m *Instance) kotlinRandomDefaultNextBits(d int, this *KotlinAny, bitCount 
 	tmp = tmp0This.DefaultRandom
 	s2 = rt.ViewAs[ClassVTable26](tmp.Vtable)
 	s2_1 = s2.NextBits
-	return rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp), bitCount)
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc7, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp), bitCount)
+	} else {
+		s0_1 = m.guard5(fn1.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](tmp), bitCount)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinRandomDefaultNextInt(d int, this *KotlinAny) int32 {
@@ -15260,6 +16981,9 @@ func (m *Instance) kotlinRandomDefaultNextInt(d int, this *KotlinAny) int32 {
 	var tmp *KotlinRandomRandom
 	var s1 *ClassVTable26
 	var s1_1 *rt.Func
+	var fn1 any
+	var own1 bool
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRandomDefault)) {
 		panic(rt.ErrCast)
 	}
@@ -15267,7 +16991,16 @@ func (m *Instance) kotlinRandomDefaultNextInt(d int, this *KotlinAny) int32 {
 	tmp = tmp0This.DefaultRandom
 	s1 = rt.ViewAs[ClassVTable26](tmp.Vtable)
 	s1_1 = s1.NextInt
-	return rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc14, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
+	} else {
+		s0_1 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp))
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinRandomDefaultNextInt2(d int, this *KotlinAny, from int32, until int32) int32 {
@@ -15278,6 +17011,9 @@ func (m *Instance) kotlinRandomDefaultNextInt2(d int, this *KotlinAny, from int3
 	var tmp *KotlinRandomRandom
 	var s3 *ClassVTable26
 	var s3_1 *rt.Func
+	var fn1 any
+	var own1 bool
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRandomDefault)) {
 		panic(rt.ErrCast)
 	}
@@ -15285,7 +17021,16 @@ func (m *Instance) kotlinRandomDefaultNextInt2(d int, this *KotlinAny, from int3
 	tmp = tmp0This.DefaultRandom
 	s3 = rt.ViewAs[ClassVTable26](tmp.Vtable)
 	s3_1 = s3.NextInt_2
-	return rt.FnOfRef(s3_1, rttFunc115).(func(int, *KotlinAny, int32, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp), from, until)
+	fn1, own1 = rt.FnOwn(s3_1, rttFunc109, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, *KotlinAny, int32, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp), from, until)
+	} else {
+		s0_1 = m.guard7(fn1.(func(int, *KotlinAny, int32, int32) int32), d+1, rt.ViewAs[KotlinAny](tmp), from, until)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinRandomDefaultGetInstance(d int) *KotlinRandomDefault {
@@ -15296,6 +17041,9 @@ func (m *Instance) kotlinRandomDefaultGetInstance(d int) *KotlinRandomDefault {
 	s0 = m.g11
 	if s0 == nil {
 		s0 = m.kotlinRandomDefaultInit(d+1, (*KotlinRandomDefault)(nil))
+		if m.exn != nil {
+			return (*KotlinRandomDefault)(nil)
+		}
 	}
 	s0 = m.g11
 	return s0
@@ -15308,6 +17056,9 @@ func (m *Instance) kotlinRandomRandomInit(d int, this *KotlinRandomRandom) *Kotl
 	var s0 *KotlinRandomDefault
 	_ = s0
 	s0 = m.kotlinRandomDefaultGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinRandomRandom)(nil)
+	}
 	return this
 }
 
@@ -15315,13 +17066,25 @@ func (m *Instance) kotlinRandomRandomNextInt(d int, this *KotlinAny) int32 {
 	var tmp0This *KotlinRandomRandom
 	var s2 *ClassVTable26
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
+	var s0 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinRandomRandom))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinRandomRandom](this)
 	s2 = rt.ViewAs[ClassVTable26](tmp0This.Vtable)
 	s2_1 = s2.NextBits
-	return rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), int32(32))
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc7, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), int32(32))
+	} else {
+		s0 = m.guard5(fn1.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](tmp0This), int32(32))
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinRandomRandomNextInt2(d int, this *KotlinAny, from int32, until int32) int32 {
@@ -15332,11 +17095,16 @@ func (m *Instance) kotlinRandomRandomNextInt2(d int, this *KotlinAny, from int32
 	var n, rnd, tmp0, this_, bitCount, v, bits_, rnd_, s0, s1 int32
 	var s2, s1_1 *ClassVTable26
 	var s2_1, s1_2 *rt.Func
+	var fn1, fn2, fn3 any
+	var own1, own2, own3 bool
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinRandomRandom))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinRandomRandom](this)
 	m.kotlinRandomCheckRangeBounds(d+1, from, until)
+	if m.exn != nil {
+		return int32(0)
+	}
 	n = (until - from)
 	if n > int32(0) {
 		s0 = int32(1)
@@ -15353,18 +17121,40 @@ func (m *Instance) kotlinRandomRandomNextInt2(d int, this *KotlinAny, from int32
 		s0 = (s0 & s1)
 		if s0 == n {
 			s0 = m.kotlinRandomFastLog2(d+1, n)
+			if m.exn != nil {
+				return int32(0)
+			}
 			bitCount = s0
 			s2 = rt.ViewAs[ClassVTable26](tmp0This.Vtable)
 			s2_1 = s2.NextBits
-			s0 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), bitCount)
+			fn1, own1 = rt.FnOwn(s2_1, rttFunc7, m, false)
+			if own1 {
+				s0 = fn1.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This), bitCount)
+			} else {
+				s0 = m.guard5(fn1.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](tmp0This), bitCount)
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 		} else {
 		L5:
 			for {
 				s1_1 = rt.ViewAs[ClassVTable26](tmp0This.Vtable)
 				s1_2 = s1_1.NextInt
-				s0 = rt.FnOfRef(s1_2, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+				fn2, own2 = rt.FnOwn(s1_2, rttFunc14, m, false)
+				if own2 {
+					s0 = fn2.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+				} else {
+					s0 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp0This))
+				}
+				if m.exn != nil {
+					return int32(0)
+				}
 				bits_ = int32(uint32(s0) >> (uint32(1) & 31))
 				s0 = m.kotlinIntRemImpl(d+1, bits_, n)
+				if m.exn != nil {
+					return int32(0)
+				}
 				v = s0
 				if ((bits_ - v) + (n - int32(1))) < int32(0) {
 					continue L5
@@ -15384,7 +17174,15 @@ func (m *Instance) kotlinRandomRandomNextInt2(d int, this *KotlinAny, from int32
 			}
 			s1_1 = rt.ViewAs[ClassVTable26](tmp0This.Vtable)
 			s1_2 = s1_1.NextInt
-			s0 = rt.FnOfRef(s1_2, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+			fn3, own3 = rt.FnOwn(s1_2, rttFunc14, m, false)
+			if own3 {
+				s0 = fn3.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+			} else {
+				s0 = m.guard2(fn3.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp0This))
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 			rnd_ = s0
 			if from <= rnd_ {
 				s0 = rt.B2I(rnd_ < until)
@@ -15412,6 +17210,8 @@ func (m *Instance) kotlinRandomCheckRangeBounds(d int, from int32, until int32) 
 	var s0_1, s1_1 *KotlinString
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s0_3 *KotlinIllegalArgumentException
 	var s0_4 *KotlinUnit
 	_ = s0_4
@@ -15421,17 +17221,35 @@ func (m *Instance) kotlinRandomCheckRangeBounds(d int, from int32, until int32) 
 		s0 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), from)
 		s1 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), until)
 		s0_1 = m.kotlinRandomBoundsErrorMessage(d+1, rt.ViewAs[KotlinAny](s0), rt.ViewAs[KotlinAny](s1))
+		if m.exn != nil {
+			return
+		}
 		s0_2 = rt.ViewAs[KotlinAny](s0_1)
 		goto B3
 	B3:
 		message = s0_2
 		s2 = message.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own1 {
+			s1_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		} else {
+			s1_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, message)
+		}
+		if m.exn != nil {
+			return
+		}
 		s0_3 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+		return
 	}
 	s0_4 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return
+	}
 	goto B1
 B1:
 	return
@@ -15447,12 +17265,33 @@ func (m *Instance) kotlinRandomBoundsErrorMessage(d int, from *KotlinAny, until 
 	}
 	var s0, s1 *KotlinString
 	s0 = m.stringLiteralLatin1(d+1, int32(59))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinStringPlus(d+1, s0, from)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1 = m.stringLiteralLatin1(d+1, int32(2))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](s1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinStringPlus(d+1, s0, until)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1 = m.stringLiteralLatin1(d+1, int32(60))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](s1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0
 }
 
@@ -15464,16 +17303,28 @@ func (m *Instance) kotlinRandomRandom(d int, seed int64) *KotlinRandomRandom {
 	var tmp2, bitCount, s1, s2_1 int32
 	var s0 *KotlinRandomXorWowRandom
 	s1 = m.kotlinLongToIntImpl(d+1, seed)
+	if m.exn != nil {
+		return (*KotlinRandomRandom)(nil)
+	}
 	tmp0 = seed
 	tmp2 = int32(32)
 	this = tmp0
 	bitCount = tmp2
 	s3 = m.kotlinIntToLongImpl(d+1, bitCount)
+	if m.exn != nil {
+		return (*KotlinRandomRandom)(nil)
+	}
 	s2 = (this >> (uint64(s3) & 63))
 	goto B1
 B1:
 	s2_1 = m.kotlinLongToIntImpl(d+1, s2)
+	if m.exn != nil {
+		return (*KotlinRandomRandom)(nil)
+	}
 	s0 = m.kotlinRandomXorWowRandomInit2(d+1, (*KotlinRandomXorWowRandom)(nil), s1, s2_1)
+	if m.exn != nil {
+		return (*KotlinRandomRandom)(nil)
+	}
 	return rt.ViewAs[KotlinRandomRandom](s0)
 }
 
@@ -15516,6 +17367,9 @@ func (m *Instance) kotlinRandomXorWowRandomInit(d int, this *KotlinRandomXorWowR
 		this = s0
 	}
 	s0_1 = m.kotlinRandomRandomInit(d+1, rt.ViewAs[KotlinRandomRandom](this))
+	if m.exn != nil {
+		return (*KotlinRandomXorWowRandom)(nil)
+	}
 	this.X = x
 	this.Y = y
 	this.Z = z
@@ -15523,6 +17377,9 @@ func (m *Instance) kotlinRandomXorWowRandomInit(d int, this *KotlinRandomXorWowR
 	this.V = v
 	this.Addend = addend
 	m.kotlinRandomXorWowRandomCheckInvariants(d+1, this)
+	if m.exn != nil {
+		return (*KotlinRandomXorWowRandom)(nil)
+	}
 	tmp0 = int32(64)
 	times = tmp0
 	inductionVariable = int32(0)
@@ -15534,7 +17391,13 @@ func (m *Instance) kotlinRandomXorWowRandomInit(d int, this *KotlinRandomXorWowR
 			tmp0_ = index
 			it = tmp0_
 			s0_2 = m.kotlinRandomXorWowRandomNextInt(d+1, rt.ViewAs[KotlinAny](this))
+			if m.exn != nil {
+				return (*KotlinRandomXorWowRandom)(nil)
+			}
 			s0_3 = m.kotlinUnitGetInstance(d + 1)
+			if m.exn != nil {
+				return (*KotlinRandomXorWowRandom)(nil)
+			}
 			goto B7
 		B7:
 			if inductionVariable < times {
@@ -15544,6 +17407,9 @@ func (m *Instance) kotlinRandomXorWowRandomInit(d int, this *KotlinRandomXorWowR
 		}
 	}
 	s0_3 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinRandomXorWowRandom)(nil)
+	}
 	goto B2
 B2:
 	return this
@@ -15568,6 +17434,9 @@ func (m *Instance) kotlinRandomXorWowRandomInit2(d int, this *KotlinRandomXorWow
 	goto B2
 B2:
 	s0 = m.kotlinRandomXorWowRandomInit(d+1, s0, s1, s2, int32(0), int32(0), s5, ((seed1 << (uint32(10) & 31)) ^ int32(uint32(seed2)>>(uint32(4)&31))))
+	if m.exn != nil {
+		return (*KotlinRandomXorWowRandom)(nil)
+	}
 	return this
 }
 
@@ -15580,6 +17449,8 @@ func (m *Instance) kotlinRandomXorWowRandomCheckInvariants(d int, this *KotlinRa
 	var s0_1, s1_1 *KotlinString
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s0_3 *KotlinIllegalArgumentException
 	var s0_4 *KotlinUnit
 	_ = s0_4
@@ -15596,17 +17467,35 @@ func (m *Instance) kotlinRandomXorWowRandomCheckInvariants(d int, this *KotlinRa
 	value = tmp0
 	if value == 0 {
 		s0_1 = m.stringLiteralLatin1(d+1, int32(63))
+		if m.exn != nil {
+			return
+		}
 		s0_2 = rt.ViewAs[KotlinAny](s0_1)
 		goto B3
 	B3:
 		message = s0_2
 		s2 = message.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own1 {
+			s1_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		} else {
+			s1_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, message)
+		}
+		if m.exn != nil {
+			return
+		}
 		s0_3 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+		return
 	}
 	s0_4 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return
+	}
 	goto B1
 B1:
 	return
@@ -15648,13 +17537,22 @@ func (m *Instance) kotlinRandomXorWowRandomNextBits(d int, this *KotlinAny, bitC
 	}
 	tmp0This = rt.ViewAs[KotlinRandomXorWowRandom](this)
 	s0 = m.kotlinRandomXorWowRandomNextInt(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinRandomTakeUpperBits(d+1, s0, bitCount)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinRandomObjectInitializer(d int) {
 	var s0 *KotlinRandomCompanion
 	s0 = m.kotlinRandomCompanionInit(d+1, (*KotlinRandomCompanion)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g12 = s0
 	return
 }
@@ -15671,6 +17569,9 @@ func (m *Instance) kotlinRangesCompanionInit(d int, this *KotlinRangesCompanion)
 	}
 	m.g13 = this
 	s1 = m.kotlinRangesIntRangeInit(d+1, (*KotlinRangesIntRange)(nil), int32(1), int32(0))
+	if m.exn != nil {
+		return (*KotlinRangesCompanion)(nil)
+	}
 	this.EMPTY = s1
 	return this
 }
@@ -15683,6 +17584,9 @@ func (m *Instance) kotlinRangesCompanionGetInstance(d int) *KotlinRangesCompanio
 	s0 = m.g13
 	if s0 == nil {
 		s0 = m.kotlinRangesCompanionInit(d+1, (*KotlinRangesCompanion)(nil))
+		if m.exn != nil {
+			return (*KotlinRangesCompanion)(nil)
+		}
 	}
 	s0 = m.g13
 	return s0
@@ -15702,7 +17606,13 @@ func (m *Instance) kotlinRangesIntRangeInit(d int, this *KotlinRangesIntRange, s
 		this = s0
 	}
 	s0_1 = m.kotlinRangesCompanionGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinRangesIntRange)(nil)
+	}
 	s0_2 = m.kotlinRangesIntProgressionInit(d+1, rt.ViewAs[KotlinRangesIntProgression](this), start, endInclusive, int32(1))
+	if m.exn != nil {
+		return (*KotlinRangesIntRange)(nil)
+	}
 	return this
 }
 
@@ -15719,6 +17629,9 @@ func (m *Instance) kotlinRangesIntRangeGetStart2(d int, this *KotlinAny) *Kotlin
 	var s4 int32
 	var s0 *KotlinInt
 	s4 = m.kotlinRangesIntRangeGetStart(d+1, this)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	return rt.ViewAs[KotlinAny](s0)
 }
@@ -15736,6 +17649,9 @@ func (m *Instance) kotlinRangesIntRangeGetEndInclusive2(d int, this *KotlinAny) 
 	var s4 int32
 	var s0 *KotlinInt
 	s4 = m.kotlinRangesIntRangeGetEndInclusive(d+1, this)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	return rt.ViewAs[KotlinAny](s0)
 }
@@ -15762,7 +17678,7 @@ func (m *Instance) kotlinRangesIntRangeContains2(d int, this *KotlinAny, value *
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
 	if value != nil && rt.ObjRTT(value) == rttKotlinInt {
@@ -15773,9 +17689,16 @@ func (m *Instance) kotlinRangesIntRangeContains2(d int, this *KotlinAny, value *
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g344))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, value, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinRangesIntRangeContains(d+1, s0, s1)
+	s0_1 = m.kotlinRangesIntRangeContains(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinRangesIntRangeIsEmpty(d int, this *KotlinAny) int32 {
@@ -15805,11 +17728,17 @@ func (m *Instance) kotlinRangesIntRangeEquals(d int, this *KotlinAny, other *Kot
 	}
 	if s0 != 0 {
 		s0 = m.kotlinRangesIntRangeIsEmpty(d+1, rt.ViewAs[KotlinAny](tmp0This))
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0 != 0 {
 			if !(other == nil || (other != nil && rt.ObjRTT(other) == rttKotlinRangesIntRange)) {
 				panic(rt.ErrCast)
 			}
 			s0 = m.kotlinRangesIntRangeIsEmpty(d+1, rt.ViewAs[KotlinAny](rt.ViewAs[KotlinRangesIntRange](other)))
+			if m.exn != nil {
+				return int32(0)
+			}
 		} else {
 			s0 = int32(0)
 		}
@@ -15847,6 +17776,9 @@ func (m *Instance) kotlinRangesIntRangeHashCode(d int, this *KotlinAny) int32 {
 	}
 	tmp0This = rt.ViewAs[KotlinRangesIntRange](this)
 	s0 = m.kotlinRangesIntRangeIsEmpty(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 != 0 {
 		s0 = int32(-1)
 	} else {
@@ -15868,6 +17800,8 @@ func (m *Instance) kotlinRangesIntRangeToString(d int, this *KotlinAny) *KotlinS
 	var s0, s1_3 *KotlinInt
 	var s1 *ClassVTable
 	var s1_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s0_1, s1_2 *KotlinString
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRangesIntRange)) {
 		panic(rt.ErrCast)
@@ -15878,12 +17812,29 @@ func (m *Instance) kotlinRangesIntRangeToString(d int, this *KotlinAny) *KotlinS
 	tmp = rt.ViewAs[KotlinAny](s0)
 	s1 = tmp.Vtable
 	s1_1 = s1.ToString
-	s0_1 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc9, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+	} else {
+		s0_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp)
+	}
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1_2 = m.stringLiteralLatin1(d+1, int32(67))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1_2))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s5 = rt.ViewAs[KotlinRangesIntProgression](tmp0This).Last
 	s1_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 	s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1_3))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0_1
 }
 
@@ -15897,6 +17848,9 @@ func (m *Instance) kotlinRangesIntProgressionIteratorInit(d int, this *KotlinRan
 		this = s0
 	}
 	s0_1 = m.kotlinCollectionsIntIteratorInit(d+1, rt.ViewAs[KotlinCollectionsIntIterator](this))
+	if m.exn != nil {
+		return (*KotlinRangesIntProgressionIterator)(nil)
+	}
 	this.Step = step
 	this.FinalElement = last
 	s1 = this.Step
@@ -15943,7 +17897,11 @@ func (m *Instance) kotlinRangesIntProgressionIteratorNextInt(d int, this *Kotlin
 		s0 = int32(tmp0This.HasNext)
 		if s0 == 0 {
 			s0_1 = m.kotlinNoSuchElementExceptionInit(d+1, (*KotlinNoSuchElementException)(nil))
-			panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+			if m.exn != nil {
+				return int32(0)
+			}
+			m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+			return int32(0)
 		}
 		tmp0This.HasNext = int8(0)
 	} else {
@@ -15975,16 +17933,33 @@ func (m *Instance) kotlinRangesIntProgressionInit(d int, this *KotlinRangesIntPr
 	}
 	if step == int32(0) {
 		s1 = m.stringLiteralLatin1(d+1, int32(71))
+		if m.exn != nil {
+			return (*KotlinRangesIntProgression)(nil)
+		}
 		s0_1 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return (*KotlinRangesIntProgression)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return (*KotlinRangesIntProgression)(nil)
 	}
 	if step == int32(-2147483648) {
 		s1 = m.stringLiteralLatin1(d+1, int32(72))
+		if m.exn != nil {
+			return (*KotlinRangesIntProgression)(nil)
+		}
 		s0_1 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return (*KotlinRangesIntProgression)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return (*KotlinRangesIntProgression)(nil)
 	}
 	this.First = start
 	s1_1 = m.kotlinInternalGetProgressionLastElement(d+1, start, endInclusive, step)
+	if m.exn != nil {
+		return (*KotlinRangesIntProgression)(nil)
+	}
 	this.Last = s1_1
 	this.Step = step
 	return this
@@ -16002,6 +17977,9 @@ func (m *Instance) kotlinRangesIntProgressionIterator(d int, this *KotlinAny) *K
 	s2 = tmp0This.Last
 	s3 = tmp0This.Step
 	s0 = m.kotlinRangesIntProgressionIteratorInit(d+1, (*KotlinRangesIntProgressionIterator)(nil), s1, s2, s3)
+	if m.exn != nil {
+		return (*KotlinCollectionsIntIterator)(nil)
+	}
 	return rt.ViewAs[KotlinCollectionsIntIterator](s0)
 }
 
@@ -16011,13 +17989,23 @@ func (m *Instance) kotlinRangesIntProgressionIterator2(d int, this *KotlinAny) *
 	}
 	var s1 *ClassVTable28
 	var s1_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s0 *KotlinCollectionsIntIterator
 	if !(this != nil && rt.ObjRTT(this).SubOf(rttKotlinRangesIntProgression)) {
 		panic(rt.ErrCast)
 	}
 	s1 = rt.ViewAs[ClassVTable28](rt.ViewAs[KotlinRangesIntProgression](this).Vtable)
 	s1_1 = s1.Iterator
-	s0 = rt.FnOfRef(s1_1, rttFunc129).(func(int, *KotlinAny) *KotlinCollectionsIntIterator)(d+1, this)
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc120, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) *KotlinCollectionsIntIterator)(d+1, this)
+	} else {
+		s0 = m.guard8(fn1.(func(int, *KotlinAny) *KotlinCollectionsIntIterator), d+1, this)
+	}
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0)
 }
 
@@ -16049,6 +18037,8 @@ func (m *Instance) kotlinRangesIntProgressionEquals(d int, this *KotlinAny, othe
 	var s0, s1_2 int32
 	var s1 *ClassVTable28
 	var s1_1 *rt.Func
+	var fn1, fn2 any
+	var own1, own2 bool
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinRangesIntProgression))) {
 		panic(rt.ErrCast)
 	}
@@ -16061,7 +18051,15 @@ func (m *Instance) kotlinRangesIntProgressionEquals(d int, this *KotlinAny, othe
 	if s0 != 0 {
 		s1 = rt.ViewAs[ClassVTable28](tmp0This.Vtable)
 		s1_1 = s1.IsEmpty
-		s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+		fn1, own1 = rt.FnOwn(s1_1, rttFunc14, m, false)
+		if own1 {
+			s0 = fn1.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+		} else {
+			s0 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp0This))
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0 != 0 {
 			if !(other == nil || (other != nil && rt.ObjRTT(other).SubOf(rttKotlinRangesIntProgression))) {
 				panic(rt.ErrCast)
@@ -16069,7 +18067,15 @@ func (m *Instance) kotlinRangesIntProgressionEquals(d int, this *KotlinAny, othe
 			tmp = rt.ViewAs[KotlinRangesIntProgression](other)
 			s1 = rt.ViewAs[ClassVTable28](tmp.Vtable)
 			s1_1 = s1.IsEmpty
-			s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
+			fn2, own2 = rt.FnOwn(s1_1, rttFunc14, m, false)
+			if own2 {
+				s0 = fn2.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp))
+			} else {
+				s0 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp))
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 		} else {
 			s0 = int32(0)
 		}
@@ -16116,6 +18122,8 @@ func (m *Instance) kotlinRangesIntProgressionHashCode(d int, this *KotlinAny) in
 	var tmp0This *KotlinRangesIntProgression
 	var s1 *ClassVTable28
 	var s1_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s0, s2, s1_2 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinRangesIntProgression))) {
 		panic(rt.ErrCast)
@@ -16123,7 +18131,15 @@ func (m *Instance) kotlinRangesIntProgressionHashCode(d int, this *KotlinAny) in
 	tmp0This = rt.ViewAs[KotlinRangesIntProgression](this)
 	s1 = rt.ViewAs[ClassVTable28](tmp0This.Vtable)
 	s1_1 = s1.IsEmpty
-	s0 = rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc14, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	} else {
+		s0 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](tmp0This))
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 != 0 {
 		s0 = int32(-1)
 	} else {
@@ -16148,6 +18164,8 @@ func (m *Instance) kotlinRangesIntProgressionToString(d int, this *KotlinAny) *K
 	var s0_1, s1_3 *KotlinInt
 	var s1 *ClassVTable
 	var s1_1 *rt.Func
+	var fn1, fn2 any
+	var own1, own2 bool
 	var s0_2, s1_2 *KotlinString
 	var s1_4 *ClassVTable35
 	var s2 *AnyArray
@@ -16163,31 +18181,80 @@ func (m *Instance) kotlinRangesIntProgressionToString(d int, this *KotlinAny) *K
 		tmp = rt.ViewAs[KotlinAny](s0_1)
 		s1 = tmp.Vtable
 		s1_1 = s1.ToString
-		s0_2 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		fn1, own1 = rt.FnOwn(s1_1, rttFunc9, m, false)
+		if own1 {
+			s0_2 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		} else {
+			s0_2 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp)
+		}
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s1_2 = m.stringLiteralLatin1(d+1, int32(67))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](s1_2))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s5 = tmp0This.Last
 		s1_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](s1_3))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s1_2 = m.stringLiteralLatin1(d+1, int32(73))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](s1_2))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s5 = tmp0This.Step
 		s1_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](s1_3))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	} else {
 		s4 = tmp0This.First
 		s0_1 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 		tmp_ = rt.ViewAs[KotlinAny](s0_1)
 		s1 = tmp_.Vtable
 		s1_1 = s1.ToString
-		s0_2 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp_)
+		fn2, own2 = rt.FnOwn(s1_1, rttFunc9, m, false)
+		if own2 {
+			s0_2 = fn2.(func(int, *KotlinAny) *KotlinString)(d+1, tmp_)
+		} else {
+			s0_2 = m.guard4(fn2.(func(int, *KotlinAny) *KotlinString), d+1, tmp_)
+		}
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s1_2 = m.stringLiteralLatin1(d+1, int32(74))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](s1_2))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s5 = tmp0This.Last
 		s1_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](s1_3))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s1_2 = m.stringLiteralLatin1(d+1, int32(73))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](s1_2))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s5 = tmp0This.Step
 		tmp0 = s5
 		s1_4 = m.g194
@@ -16199,6 +18266,9 @@ func (m *Instance) kotlinRangesIntProgressionToString(d int, this *KotlinAny) *K
 	B2:
 		s1_3 = NewKotlinInt(rt.ViewAs[ClassVTable](s1_4), s2, s3, int32(0), s5)
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](s1_3))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	}
 	return s0_2
 }
@@ -16206,23 +18276,38 @@ func (m *Instance) kotlinRangesIntProgressionToString(d int, this *KotlinAny) *K
 func (m *Instance) kotlinRangesObjectInitializer(d int) {
 	var s0 *KotlinRangesCompanion2
 	s0 = m.kotlinRangesCompanionInit2(d+1, (*KotlinRangesCompanion2)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g14 = s0
 	return
 }
 
 func (m *Instance) kotlinRangesClosedRangeContains(d int, this *KotlinAny, value *KotlinAny) int32 {
-	var s2 any
+	var s2, fn1, fn2, fn3, fn4 any
 	var s2_1 *rt.Func
+	var own1, own2, own3, own4 bool
 	var s1 *KotlinAny
 	var s2_2 *ClassVTable
 	var s2_3 *SpecialITable
 	var s0 int32
 	s2 = m.kotlinWasmInternalGetInterfaceVTable(d+1, this, int64(2327395236054518271))
+	if m.exn != nil {
+		return int32(0)
+	}
 	if !(rt.IsType(s2, rttClassITable12)) {
 		panic(rt.ErrCast)
 	}
 	s2_1 = rt.As[ClassITable12](s2).GetStart
-	s1 = rt.FnOfRef(s2_1, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this)
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc33, m, false)
+	if own1 {
+		s1 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, this)
+	} else {
+		s1 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, this)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s2_2 = value.Vtable
 	s2_3 = s2_2.SpecialITable
 	s2 = s2_3.F16
@@ -16230,14 +18315,33 @@ func (m *Instance) kotlinRangesClosedRangeContains(d int, this *KotlinAny, value
 		panic(rt.ErrCast)
 	}
 	s2_1 = rt.As[ClassITable2](s2).CompareTo
-	s0 = rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, value, s1)
+	fn2, own2 = rt.FnOwn(s2_1, rttFunc11, m, false)
+	if own2 {
+		s0 = fn2.(func(int, *KotlinAny, *KotlinAny) int32)(d+1, value, s1)
+	} else {
+		s0 = m.guard3(fn2.(func(int, *KotlinAny, *KotlinAny) int32), d+1, value, s1)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 >= int32(0) {
 		s2 = m.kotlinWasmInternalGetInterfaceVTable(d+1, this, int64(2327395236054518271))
+		if m.exn != nil {
+			return int32(0)
+		}
 		if !(rt.IsType(s2, rttClassITable12)) {
 			panic(rt.ErrCast)
 		}
 		s2_1 = rt.As[ClassITable12](s2).GetEndInclusive
-		s1 = rt.FnOfRef(s2_1, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this)
+		fn3, own3 = rt.FnOwn(s2_1, rttFunc33, m, false)
+		if own3 {
+			s1 = fn3.(func(int, *KotlinAny) *KotlinAny)(d+1, this)
+		} else {
+			s1 = m.guard1(fn3.(func(int, *KotlinAny) *KotlinAny), d+1, this)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2_2 = value.Vtable
 		s2_3 = s2_2.SpecialITable
 		s2 = s2_3.F16
@@ -16245,7 +18349,15 @@ func (m *Instance) kotlinRangesClosedRangeContains(d int, this *KotlinAny, value
 			panic(rt.ErrCast)
 		}
 		s2_1 = rt.As[ClassITable2](s2).CompareTo
-		s0 = rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, value, s1)
+		fn4, own4 = rt.FnOwn(s2_1, rttFunc11, m, false)
+		if own4 {
+			s0 = fn4.(func(int, *KotlinAny, *KotlinAny) int32)(d+1, value, s1)
+		} else {
+			s0 = m.guard3(fn4.(func(int, *KotlinAny, *KotlinAny) int32), d+1, value, s1)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = rt.B2I(s0 <= int32(0))
 	} else {
 		s0 = int32(0)
@@ -16261,8 +18373,9 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 	var s3, s1_2, s2_1, s0_2 *ClassVTable
 	var s3_1, s1_3, s2_2, s0_3 *SpecialITable
 	var s3_2 *AnyArray
-	var s3_3, s1_4, s2_3, s0_4 any
+	var s3_3, fn1, s1_4, s2_3, fn2, s0_4, fn3, fn4, fn5, fn6 any
 	var s3_4, s2_4 *rt.Func
+	var own1, own2, own3, own4, own5, own6 bool
 	var s1_1, s0_1 int32
 	var s8, s9, s1_5 *KotlinString
 	var s6 *KotlinWasmInternalTypeInfoData
@@ -16277,7 +18390,15 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 			panic(rt.ErrCast)
 		}
 		s3_4 = rt.As[ClassITable14](s3_3).Invoke
-		s1 = rt.FnOfRef(s3_4, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, transform, element)
+		fn1, own1 = rt.FnOwn(s3_4, rttFunc46, m, false)
+		if own1 {
+			s1 = fn1.(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, transform, element)
+		} else {
+			s1 = m.guard0(fn1.(func(int, *KotlinAny, *KotlinAny) *KotlinAny), d+1, transform, element)
+		}
+		if m.exn != nil {
+			return
+		}
 		tmp = s1
 		s0 = this
 		if tmp == nil {
@@ -16300,10 +18421,22 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 			s1 = tmp
 		} else {
 			s8 = m.stringLiteralLatin1(d+1, int32(0))
+			if m.exn != nil {
+				return
+			}
 			s9 = m.stringLiteralLatin1(d+1, int32(75))
+			if m.exn != nil {
+				return
+			}
 			s6 = m.kotlinWasmInternalTypeInfoDataInit(d+1, (*KotlinWasmInternalTypeInfoData)(nil), int64(6370907013483330859), s8, s9)
+			if m.exn != nil {
+				return
+			}
 			s2 = NewKotlinWasmInternalKClassInterfaceImpl(rt.ViewAs[ClassVTable](m.g219), m.g265, m.g322, int32(0), s6)
 			m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp, rt.ViewAs[KotlinAny](s2), int32(0))
+			if m.exn != nil {
+				return
+			}
 			panic(rt.ErrUnreachable)
 		}
 		s2_1 = this.Vtable
@@ -16313,7 +18446,15 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 			panic(rt.ErrCast)
 		}
 		s2_4 = rt.As[ClassITable11](s2_3).Append_2
-		s0 = rt.FnOfRef(s2_4, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, s1)
+		fn2, own2 = rt.FnOwn(s2_4, rttFunc46, m, false)
+		if own2 {
+			s0 = fn2.(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, s1)
+		} else {
+			s0 = m.guard0(fn2.(func(int, *KotlinAny, *KotlinAny) *KotlinAny), d+1, s0, s1)
+		}
+		if m.exn != nil {
+			return
+		}
 	} else {
 		if element == nil {
 			s0_1 = int32(1)
@@ -16353,10 +18494,22 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 				s1 = element
 			} else {
 				s8 = m.stringLiteralLatin1(d+1, int32(0))
+				if m.exn != nil {
+					return
+				}
 				s9 = m.stringLiteralLatin1(d+1, int32(75))
+				if m.exn != nil {
+					return
+				}
 				s6 = m.kotlinWasmInternalTypeInfoDataInit(d+1, (*KotlinWasmInternalTypeInfoData)(nil), int64(6370907013483330859), s8, s9)
+				if m.exn != nil {
+					return
+				}
 				s2 = NewKotlinWasmInternalKClassInterfaceImpl(rt.ViewAs[ClassVTable](m.g219), m.g265, m.g322, int32(0), s6)
 				m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, element, rt.ViewAs[KotlinAny](s2), int32(1))
+				if m.exn != nil {
+					return
+				}
 				panic(rt.ErrUnreachable)
 			}
 			s2_1 = this.Vtable
@@ -16366,7 +18519,15 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 				panic(rt.ErrCast)
 			}
 			s2_4 = rt.As[ClassITable11](s2_3).Append_2
-			s0 = rt.FnOfRef(s2_4, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, s1)
+			fn3, own3 = rt.FnOwn(s2_4, rttFunc46, m, false)
+			if own3 {
+				s0 = fn3.(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, s0, s1)
+			} else {
+				s0 = m.guard0(fn3.(func(int, *KotlinAny, *KotlinAny) *KotlinAny), d+1, s0, s1)
+			}
+			if m.exn != nil {
+				return
+			}
 		} else {
 			if element == nil {
 				s0_1 = int32(0)
@@ -16388,6 +18549,9 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 				} else {
 					s2_5 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g310))
 					m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, element, rt.ViewAs[KotlinAny](s2_5), int32(0))
+					if m.exn != nil {
+						return
+					}
 					panic(rt.ErrUnreachable)
 				}
 				s2_1 = this.Vtable
@@ -16397,11 +18561,27 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 					panic(rt.ErrCast)
 				}
 				s2_4 = rt.As[ClassITable11](s2_3).Append
-				s0 = rt.FnOfRef(s2_4, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, s0, s1_1)
+				fn4, own4 = rt.FnOwn(s2_4, rttFunc76, m, false)
+				if own4 {
+					s0 = fn4.(func(int, *KotlinAny, int32) *KotlinAny)(d+1, s0, s1_1)
+				} else {
+					s0 = m.guard6(fn4.(func(int, *KotlinAny, int32) *KotlinAny), d+1, s0, s1_1)
+				}
+				if m.exn != nil {
+					return
+				}
 			} else {
 				s2_1 = element.Vtable
 				s2_4 = s2_1.ToString
-				s1_5 = rt.FnOfRef(s2_4, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, element)
+				fn5, own5 = rt.FnOwn(s2_4, rttFunc9, m, false)
+				if own5 {
+					s1_5 = fn5.(func(int, *KotlinAny) *KotlinString)(d+1, element)
+				} else {
+					s1_5 = m.guard4(fn5.(func(int, *KotlinAny) *KotlinString), d+1, element)
+				}
+				if m.exn != nil {
+					return
+				}
 				s2_1 = this.Vtable
 				s2_2 = s2_1.SpecialITable
 				s2_3 = s2_2.F21
@@ -16409,7 +18589,15 @@ func (m *Instance) kotlinTextAppendElement(d int, this *KotlinAny, element *Kotl
 					panic(rt.ErrCast)
 				}
 				s2_4 = rt.As[ClassITable11](s2_3).Append_2
-				s0 = rt.FnOfRef(s2_4, rttFunc47).(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, this, rt.ViewAs[KotlinAny](s1_5))
+				fn6, own6 = rt.FnOwn(s2_4, rttFunc46, m, false)
+				if own6 {
+					s0 = fn6.(func(int, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, this, rt.ViewAs[KotlinAny](s1_5))
+				} else {
+					s0 = m.guard0(fn6.(func(int, *KotlinAny, *KotlinAny) *KotlinAny), d+1, this, rt.ViewAs[KotlinAny](s1_5))
+				}
+				if m.exn != nil {
+					return
+				}
 			}
 		}
 	}
@@ -16422,8 +18610,9 @@ func (m *Instance) kotlinTextGetLastIndex(d int, this *KotlinAny) int32 {
 	}
 	var s1 *ClassVTable
 	var s1_1 *SpecialITable
-	var s1_2 any
+	var s1_2, fn1 any
 	var s1_3 *rt.Func
+	var own1 bool
 	var s0 int32
 	s1 = this.Vtable
 	s1_1 = s1.SpecialITable
@@ -16432,7 +18621,15 @@ func (m *Instance) kotlinTextGetLastIndex(d int, this *KotlinAny) int32 {
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable](s1_2).GetLength
-	s0 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this)
+	fn1, own1 = rt.FnOwn(s1_3, rttFunc14, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) int32)(d+1, this)
+	} else {
+		s0 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, this)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	return (s0 - int32(1))
 }
 
@@ -16440,13 +18637,29 @@ func (m *Instance) kotlinTextPadStart(d int, this *KotlinString, length int32, p
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var tmp *KotlinAny
+	var tmp, s0 *KotlinAny
 	var s1 *ClassVTable
 	var s1_1 *rt.Func
-	tmp = m.kotlinTextPadStart2(d+1, rt.ViewAs[KotlinAny](this), length, padChar)
+	var fn1 any
+	var own1 bool
+	var s0_1 *KotlinString
+	s0 = m.kotlinTextPadStart2(d+1, rt.ViewAs[KotlinAny](this), length, padChar)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	tmp = s0
 	s1 = tmp.Vtable
 	s1_1 = s1.ToString
-	return rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc9, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+	} else {
+		s0_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp)
+	}
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, padChar int32) *KotlinAny {
@@ -16460,17 +18673,34 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 	var s0 *KotlinIllegalArgumentException
 	var s2_2, s3 *ClassVTable
 	var s2_3, s3_1 *SpecialITable
-	var s2_4, s3_2 any
+	var s2_4, fn1, s3_2, fn2, fn3, fn4 any
 	var s2_5, s3_3 *rt.Func
+	var own1, own2, own3, own4 bool
 	var s0_2 *KotlinAny
 	if length < int32(0) {
 		s1 = m.stringLiteralLatin1(d+1, int32(76))
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), length)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(77))
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		s0 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return (*KotlinAny)(nil)
 	}
 	s2_2 = this.Vtable
 	s2_3 = s2_2.SpecialITable
@@ -16479,7 +18709,15 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 		panic(rt.ErrCast)
 	}
 	s2_5 = rt.As[ClassITable](s2_4).GetLength
-	s1_1 = rt.FnOfRef(s2_5, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this)
+	fn1, own1 = rt.FnOwn(s2_5, rttFunc14, m, false)
+	if own1 {
+		s1_1 = fn1.(func(int, *KotlinAny) int32)(d+1, this)
+	} else {
+		s1_1 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, this)
+	}
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0_1 = rt.B2I(length <= s1_1)
 	if s0_1 != 0 {
 		s3 = this.Vtable
@@ -16489,7 +18727,15 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 			panic(rt.ErrCast)
 		}
 		s3_3 = rt.As[ClassITable](s3_2).GetLength
-		s2_6 = rt.FnOfRef(s3_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this)
+		fn2, own2 = rt.FnOwn(s3_3, rttFunc14, m, false)
+		if own2 {
+			s2_6 = fn2.(func(int, *KotlinAny) int32)(d+1, this)
+		} else {
+			s2_6 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, this)
+		}
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		s3 = this.Vtable
 		s3_1 = s3.SpecialITable
 		s3_2 = s3_1.F17
@@ -16497,10 +18743,21 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 			panic(rt.ErrCast)
 		}
 		s3_3 = rt.As[ClassITable](s3_2).SubSequence
-		s0_2 = rt.FnOfRef(s3_3, rttFunc6).(func(int, *KotlinAny, int32, int32) *KotlinAny)(d+1, this, int32(0), s2_6)
+		fn3, own3 = rt.FnOwn(s3_3, rttFunc6, m, false)
+		if own3 {
+			s0_2 = fn3.(func(int, *KotlinAny, int32, int32) *KotlinAny)(d+1, this, int32(0), s2_6)
+		} else {
+			s0_2 = m.guard9(fn3.(func(int, *KotlinAny, int32, int32) *KotlinAny), d+1, this, int32(0), s2_6)
+		}
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		return s0_2
 	}
 	s0_3 = m.kotlinTextStringBuilderInit3(d+1, (*KotlinTextStringBuilder)(nil), length)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	sb = s0_3
 	inductionVariable = int32(1)
 	s2_2 = this.Vtable
@@ -16510,7 +18767,15 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 		panic(rt.ErrCast)
 	}
 	s2_5 = rt.As[ClassITable](s2_4).GetLength
-	s1_1 = rt.FnOfRef(s2_5, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this)
+	fn4, own4 = rt.FnOwn(s2_5, rttFunc14, m, false)
+	if own4 {
+		s1_1 = fn4.(func(int, *KotlinAny) int32)(d+1, this)
+	} else {
+		s1_1 = m.guard2(fn4.(func(int, *KotlinAny) int32), d+1, this)
+	}
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0_1 = (length - s1_1)
 	last = s0_1
 	if inductionVariable <= last {
@@ -16519,6 +18784,9 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 			i = inductionVariable
 			inductionVariable = (inductionVariable + int32(1))
 			s0_3 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](sb), padChar)
+			if m.exn != nil {
+				return (*KotlinAny)(nil)
+			}
 			if rt.B2I(i == last) == 0 {
 				continue L4
 			}
@@ -16526,6 +18794,9 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 		}
 	}
 	s0_3 = m.kotlinTextStringBuilderAppend3(d+1, rt.ViewAs[KotlinAny](sb), this)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](sb)
 }
 
@@ -16541,11 +18812,17 @@ func (m *Instance) kotlinTimeDurationGetValueImpl(d int, this int64) int64 {
 	var tmp0, this_, s0, s1 int64
 	var tmp2, bitCount int32
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0 = s0
 	tmp2 = int32(1)
 	this_ = tmp0
 	bitCount = tmp2
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (this_ >> (uint64(s1) & 63))
 	goto B1
 B1:
@@ -16558,7 +18835,13 @@ func (m *Instance) kotlinTimeDurationIsInNanosImpl(d int, this int64) int32 {
 	tmp0 = this
 	this_ = tmp0
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = m.kotlinLongToIntImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = (s0_1 & int32(1))
 	goto B1
 B1:
@@ -16571,7 +18854,13 @@ func (m *Instance) kotlinTimeDurationIsInMillisImpl(d int, this int64) int32 {
 	tmp0 = this
 	this_ = tmp0
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = m.kotlinLongToIntImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = (s0_1 & int32(1))
 	goto B1
 B1:
@@ -16582,10 +18871,19 @@ func (m *Instance) kotlinTimeDurationGetStorageUnitImpl(d int, this int64) *Kotl
 	var s0 int32
 	var s0_1 *KotlinTimeDurationUnit
 	s0 = m.kotlinTimeDurationIsInNanosImpl(d+1, this)
+	if m.exn != nil {
+		return (*KotlinTimeDurationUnit)(nil)
+	}
 	if s0 != 0 {
 		s0_1 = m.kotlinTimeDurationUnitNANOSECONDSGetInstance(d + 1)
+		if m.exn != nil {
+			return (*KotlinTimeDurationUnit)(nil)
+		}
 	} else {
 		s0_1 = m.kotlinTimeDurationUnitMILLISECONDSGetInstance(d + 1)
+		if m.exn != nil {
+			return (*KotlinTimeDurationUnit)(nil)
+		}
 	}
 	return s0_1
 }
@@ -16602,8 +18900,14 @@ func (m *Instance) kotlinTimeCompanionInit(d int, this *KotlinTimeCompanion) *Ko
 	}
 	m.g15 = this
 	s1 = m.kotlinTimeDurationInitImpl(d+1, int64(0))
+	if m.exn != nil {
+		return (*KotlinTimeCompanion)(nil)
+	}
 	this.ZERO = s1
 	s1 = m.kotlinTimeDurationOfMillis(d+1, int64(4611686018427387903))
+	if m.exn != nil {
+		return (*KotlinTimeCompanion)(nil)
+	}
 	this.INFINITE = s1
 	tmp0 = int64(4611686018427387903)
 	s0 = this
@@ -16612,9 +18916,15 @@ func (m *Instance) kotlinTimeCompanionInit(d int, this *KotlinTimeCompanion) *Ko
 	goto B2
 B2:
 	s1 = m.kotlinTimeDurationOfMillis(d+1, s1)
+	if m.exn != nil {
+		return (*KotlinTimeCompanion)(nil)
+	}
 	s0.NEGINFINITE = s1
 	this.INVALIDRAWVALUE = int64(9223372036854759646)
 	s1 = m.kotlinTimeDurationInitImpl(d+1, int64(9223372036854759646))
+	if m.exn != nil {
+		return (*KotlinTimeCompanion)(nil)
+	}
 	this.INVALID = s1
 	return this
 }
@@ -16630,11 +18940,16 @@ func (m *Instance) kotlinTimeCompanionFromRawValue(d int, this *KotlinTimeCompan
 	var s1 *KotlinLong
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1, fn2, fn3 any
+	var own1, own2, own3 bool
 	var s1_1, s2_2 *KotlinString
 	var s0_3 *KotlinAssertionError
 	var s0_4 *KotlinUnit
 	_ = s0_4
 	s4 = m.kotlinTimeDurationInitImpl(d+1, rawValue)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = NewKotlinTimeDuration(rt.ViewAs[ClassVTable](m.g173), m.g252, m.g294, int32(0), s4)
 	tmp0 = rt.ViewAs[KotlinAny](s0)
 	this_ = tmp0
@@ -16649,6 +18964,9 @@ func (m *Instance) kotlinTimeCompanionFromRawValue(d int, this *KotlinTimeCompan
 B3:
 	if s0_2 != 0 {
 		s0_2 = m.kotlinTimeDurationIsInNanosImpl(d+1, thisApply)
+		if m.exn != nil {
+			return int64(0)
+		}
 		if s0_2 != 0 {
 			tmp0__ = int64(4611686018426999999)
 			this__ = tmp0__
@@ -16657,6 +18975,9 @@ B3:
 		B6:
 			containsLower = s0_1
 			s0_1 = m.kotlinTimeDurationGetValueImpl(d+1, thisApply)
+			if m.exn != nil {
+				return int64(0)
+			}
 			containsArg = s0_1
 			if containsLower <= containsArg {
 				s0_2 = rt.B2I(containsArg <= int64(4611686018426999999))
@@ -16665,18 +18986,42 @@ B3:
 			}
 			if s0_2 == 0 {
 				s5 = m.kotlinTimeDurationGetValueImpl(d+1, thisApply)
+				if m.exn != nil {
+					return int64(0)
+				}
 				s1 = NewKotlinLong(rt.ViewAs[ClassVTable](m.g196), m.g260, m.g345, int32(0), s5)
 				tmp = rt.ViewAs[KotlinAny](s1)
 				s2 = tmp.Vtable
 				s2_1 = s2.ToString
-				s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+				fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+				if own1 {
+					s1_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+				} else {
+					s1_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp)
+				}
+				if m.exn != nil {
+					return int64(0)
+				}
 				s2_2 = m.stringLiteralLatin1(d+1, int32(79))
+				if m.exn != nil {
+					return int64(0)
+				}
 				s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
+				if m.exn != nil {
+					return int64(0)
+				}
 				s0_3 = m.kotlinAssertionErrorInit(d+1, (*KotlinAssertionError)(nil), rt.ViewAs[KotlinAny](s1_1))
-				panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+				if m.exn != nil {
+					return int64(0)
+				}
+				m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+				return int64(0)
 			}
 		} else {
 			s0_1 = m.kotlinTimeDurationGetValueImpl(d+1, thisApply)
+			if m.exn != nil {
+				return int64(0)
+			}
 			tmp0___ = s0_1
 			this___ = tmp0___
 			tmp0____ = int64(4611686018427387903)
@@ -16693,6 +19038,9 @@ B3:
 		B9:
 			if s0_2 == 0 {
 				s0_1 = m.kotlinTimeDurationGetValueImpl(d+1, thisApply)
+				if m.exn != nil {
+					return int64(0)
+				}
 				tmp0_____ = s0_1
 				this_____ = tmp0_____
 				if this_____ == int64(4611686018427387903) {
@@ -16714,15 +19062,36 @@ B3:
 			}
 			if s0_2 != 0 {
 				s5 = m.kotlinTimeDurationGetValueImpl(d+1, thisApply)
+				if m.exn != nil {
+					return int64(0)
+				}
 				s1 = NewKotlinLong(rt.ViewAs[ClassVTable](m.g196), m.g260, m.g345, int32(0), s5)
 				tmp_ = rt.ViewAs[KotlinAny](s1)
 				s2 = tmp_.Vtable
 				s2_1 = s2.ToString
-				s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp_)
+				fn2, own2 = rt.FnOwn(s2_1, rttFunc9, m, false)
+				if own2 {
+					s1_1 = fn2.(func(int, *KotlinAny) *KotlinString)(d+1, tmp_)
+				} else {
+					s1_1 = m.guard4(fn2.(func(int, *KotlinAny) *KotlinString), d+1, tmp_)
+				}
+				if m.exn != nil {
+					return int64(0)
+				}
 				s2_2 = m.stringLiteralLatin1(d+1, int32(80))
+				if m.exn != nil {
+					return int64(0)
+				}
 				s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
+				if m.exn != nil {
+					return int64(0)
+				}
 				s0_3 = m.kotlinAssertionErrorInit(d+1, (*KotlinAssertionError)(nil), rt.ViewAs[KotlinAny](s1_1))
-				panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+				if m.exn != nil {
+					return int64(0)
+				}
+				m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+				return int64(0)
 			}
 			tmp0_______ = int64(4611686018426)
 			this_______ = tmp0_______
@@ -16731,6 +19100,9 @@ B3:
 		B17:
 			containsLower_ = s0_1
 			s0_1 = m.kotlinTimeDurationGetValueImpl(d+1, thisApply)
+			if m.exn != nil {
+				return int64(0)
+			}
 			containsArg_ = s0_1
 			if containsLower_ <= containsArg_ {
 				s0_2 = rt.B2I(containsArg_ <= int64(4611686018426))
@@ -16739,19 +19111,43 @@ B3:
 			}
 			if s0_2 != 0 {
 				s5 = m.kotlinTimeDurationGetValueImpl(d+1, thisApply)
+				if m.exn != nil {
+					return int64(0)
+				}
 				s1 = NewKotlinLong(rt.ViewAs[ClassVTable](m.g196), m.g260, m.g345, int32(0), s5)
 				tmp__ = rt.ViewAs[KotlinAny](s1)
 				s2 = tmp__.Vtable
 				s2_1 = s2.ToString
-				s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp__)
+				fn3, own3 = rt.FnOwn(s2_1, rttFunc9, m, false)
+				if own3 {
+					s1_1 = fn3.(func(int, *KotlinAny) *KotlinString)(d+1, tmp__)
+				} else {
+					s1_1 = m.guard4(fn3.(func(int, *KotlinAny) *KotlinString), d+1, tmp__)
+				}
+				if m.exn != nil {
+					return int64(0)
+				}
 				s2_2 = m.stringLiteralLatin1(d+1, int32(81))
+				if m.exn != nil {
+					return int64(0)
+				}
 				s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
+				if m.exn != nil {
+					return int64(0)
+				}
 				s0_3 = m.kotlinAssertionErrorInit(d+1, (*KotlinAssertionError)(nil), rt.ViewAs[KotlinAny](s1_1))
-				panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+				if m.exn != nil {
+					return int64(0)
+				}
+				m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+				return int64(0)
 			}
 		}
 	}
 	s0_4 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B2
 B2:
 	if !(this_ != nil && rt.ObjRTT(this_) == rttKotlinTimeDuration) {
@@ -16771,6 +19167,9 @@ func (m *Instance) kotlinTimeCompanionGetInstance(d int) *KotlinTimeCompanion {
 	s0 = m.g15
 	if s0 == nil {
 		s0 = m.kotlinTimeCompanionInit(d+1, (*KotlinTimeCompanion)(nil))
+		if m.exn != nil {
+			return (*KotlinTimeCompanion)(nil)
+		}
 	}
 	s0 = m.g15
 	return s0
@@ -16783,6 +19182,9 @@ func (m *Instance) kotlinTimeDurationUnaryMinusImpl(d int, this int64) int64 {
 	var tmp0, this_, tmp0_, this__, s0, s1 int64
 	var s1_1 int32
 	s0 = m.kotlinTimeDurationGetValueImpl(d+1, this)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0 = s0
 	this_ = tmp0
 	s0 = (int64(0) - this_)
@@ -16791,11 +19193,20 @@ B1:
 	tmp0_ = this
 	this__ = tmp0_
 	s1 = m.kotlinTimeDurationGetRawValueImpl(d+1, this__)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1_1 = m.kotlinLongToIntImpl(d+1, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1_1 = (s1_1 & int32(1))
 	goto B2
 B2:
 	s0 = m.kotlinTimeDurationOf(d+1, s0, s1_1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0
 }
 
@@ -16816,29 +19227,62 @@ func (m *Instance) kotlinTimeDurationPlusImpl(d int, this int64, other int64) in
 	tmp0 = this
 	this_ = tmp0
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this_)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0_1 = m.kotlinLongToIntImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0_1 = (s0_1 & int32(1))
 	goto B1
 B1:
 	tmp0_ = other
 	this__ = tmp0_
 	s1 = m.kotlinTimeDurationGetRawValueImpl(d+1, this__)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1_1 = m.kotlinLongToIntImpl(d+1, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1_1 = (s1_1 & int32(1))
 	goto B2
 B2:
 	s0_1 = rt.B2I(s0_1 == s1_1)
 	if s0_1 != 0 {
 		s0_1 = m.kotlinTimeDurationIsInNanosImpl(d+1, this)
+		if m.exn != nil {
+			return int64(0)
+		}
 		if s0_1 != 0 {
 			s0 = m.kotlinTimeDurationGetValueImpl(d+1, this)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s1 = m.kotlinTimeDurationGetValueImpl(d+1, other)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = (s0 + s1)
 			s0 = m.kotlinTimeDurationOfNanosNormalized(d+1, s0)
+			if m.exn != nil {
+				return int64(0)
+			}
 		} else {
 			s4 = m.kotlinTimeDurationGetValueImpl(d+1, this)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s5 = m.kotlinTimeDurationGetValueImpl(d+1, other)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s4 = m.kotlinTimeAddMillisWithoutOverflow(d+1, s4, s5)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0_2 = NewKotlinLong(rt.ViewAs[ClassVTable](m.g196), m.g260, m.g345, int32(0), s4)
 			tmp0__ = rt.ViewAs[KotlinAny](s0_2)
 			this___ = tmp0__
@@ -16853,8 +19297,15 @@ B2:
 			s2 = m.g294
 			if it == int64(9223372036854759646) {
 				s5_1 = m.stringLiteralLatin1(d+1, int32(82))
+				if m.exn != nil {
+					return int64(0)
+				}
 				s4_1 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s5_1)
-				panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s4_1)}})
+				if m.exn != nil {
+					return int64(0)
+				}
+				m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s4_1)}}
+				return int64(0)
 			} else {
 				tmp0____ = it
 				this____ = tmp0____
@@ -16873,8 +19324,14 @@ B2:
 			B8:
 				if s4_2 != 0 {
 					s4 = m.kotlinTimeDurationOfMillis(d+1, it)
+					if m.exn != nil {
+						return int64(0)
+					}
 				} else {
 					s4 = m.kotlinTimeDurationOfMillisNormalized(d+1, it)
+					if m.exn != nil {
+						return int64(0)
+					}
 				}
 			}
 			s0_4 = NewKotlinTimeDuration(rt.ViewAs[ClassVTable](s0_3), s1_2, s2, int32(0), s4)
@@ -16890,14 +19347,35 @@ B2:
 		}
 	} else {
 		s0_1 = m.kotlinTimeDurationIsInMillisImpl(d+1, this)
+		if m.exn != nil {
+			return int64(0)
+		}
 		if s0_1 != 0 {
 			s1 = m.kotlinTimeDurationGetValueImpl(d+1, this)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s2_1 = m.kotlinTimeDurationGetValueImpl(d+1, other)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinTimeDurationAddValuesMixedRangesImpl(d+1, this, s1, s2_1)
+			if m.exn != nil {
+				return int64(0)
+			}
 		} else {
 			s1 = m.kotlinTimeDurationGetValueImpl(d+1, other)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s2_1 = m.kotlinTimeDurationGetValueImpl(d+1, this)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinTimeDurationAddValuesMixedRangesImpl(d+1, this, s1, s2_1)
+			if m.exn != nil {
+				return int64(0)
+			}
 		}
 	}
 	return s0
@@ -16910,8 +19388,14 @@ func (m *Instance) kotlinTimeDurationAddValuesMixedRangesImpl(d int, this int64,
 	var otherMillis, resultMillis, tmp0, this_, otherNanoRemainder, s0, s1 int64
 	var s0_1 int32
 	s0 = m.kotlinTimeNanosToMillis(d+1, otherNanos)
+	if m.exn != nil {
+		return int64(0)
+	}
 	otherMillis = s0
 	s0 = m.kotlinTimeAddMillisWithoutOverflow(d+1, thisMillis, otherMillis)
+	if m.exn != nil {
+		return int64(0)
+	}
 	resultMillis = s0
 	tmp0 = int64(4611686018426)
 	this_ = tmp0
@@ -16925,12 +19409,24 @@ B1:
 	}
 	if s0_1 != 0 {
 		s1 = m.kotlinTimeMillisToNanos(d+1, otherMillis)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = (otherNanos - s1)
 		otherNanoRemainder = s0
 		s0 = m.kotlinTimeMillisToNanos(d+1, resultMillis)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinTimeDurationOfNanos(d+1, (s0 + otherNanoRemainder))
+		if m.exn != nil {
+			return int64(0)
+		}
 	} else {
 		s0 = m.kotlinTimeDurationOfMillis(d+1, resultMillis)
+		if m.exn != nil {
+			return int64(0)
+		}
 	}
 	return s0
 }
@@ -16938,6 +19434,9 @@ B1:
 func (m *Instance) kotlinTimeDurationIsNegativeImpl(d int, this int64) int32 {
 	var s0 int64
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return rt.B2I(s0 < int64(0))
 }
 
@@ -16949,17 +19448,35 @@ func (m *Instance) kotlinTimeDurationIsInfiniteImpl(d int, this int64) int32 {
 	var s1 *KotlinTimeCompanion
 	var s0_1 int32
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinTimeCompanionGetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1_1 = s1.INFINITE
 	s1_1 = m.kotlinTimeDurationGetRawValueImpl(d+1, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = rt.B2I(s0 == s1_1)
 	if s0_1 != 0 {
 		s0_1 = int32(1)
 	} else {
 		s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinTimeCompanionGetInstance(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1_1 = s1.NEGINFINITE
 		s1_1 = m.kotlinTimeDurationGetRawValueImpl(d+1, s1_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = rt.B2I(s0 == s1_1)
 	}
 	return s0_1
@@ -16972,8 +19489,14 @@ func (m *Instance) kotlinTimeDurationGetAbsoluteValueImpl(d int, this int64) int
 	var s0 int32
 	var s0_1 int64
 	s0 = m.kotlinTimeDurationIsNegativeImpl(d+1, this)
+	if m.exn != nil {
+		return int64(0)
+	}
 	if s0 != 0 {
 		s0_1 = m.kotlinTimeDurationUnaryMinusImpl(d+1, this)
+		if m.exn != nil {
+			return int64(0)
+		}
 	} else {
 		s0_1 = this
 	}
@@ -16984,38 +19507,71 @@ func (m *Instance) kotlinTimeDurationCompareToImpl(d int, this int64, other int6
 	var compareBits, tmp0, this_, tmp0_, this__, s0, s1 int64
 	var r_, tmp0__, this___, s0_1, s1_1 int32
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinTimeDurationGetRawValueImpl(d+1, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = (s0 ^ s1)
 	compareBits = s0
 	if compareBits < int64(0) {
 		s0_1 = int32(1)
 	} else {
 		s0_1 = m.kotlinLongToIntImpl(d+1, compareBits)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = rt.B2I((s0_1 & int32(1)) == int32(0))
 	}
 	if s0_1 != 0 {
 		s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinTimeDurationGetRawValueImpl(d+1, other)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = m.kotlinLongCompareToImpl(d+1, s0, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		return s0_1
 	}
 	tmp0 = this
 	this_ = tmp0
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = m.kotlinLongToIntImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = (s0_1 & int32(1))
 	goto B3
 B3:
 	tmp0_ = other
 	this__ = tmp0_
 	s1 = m.kotlinTimeDurationGetRawValueImpl(d+1, this__)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1_1 = m.kotlinLongToIntImpl(d+1, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1_1 = (s1_1 & int32(1))
 	goto B4
 B4:
 	s0_1 = (s0_1 - s1_1)
 	r_ = s0_1
 	s0_1 = m.kotlinTimeDurationIsNegativeImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0_1 != 0 {
 		tmp0__ = r_
 		this___ = tmp0__
@@ -17035,19 +19591,34 @@ func (m *Instance) kotlinTimeDurationGetHoursComponentImpl(d int, this int64) in
 	var tmp0, this_, s0_1, s1 int64
 	var tmp2, other, s0 int32
 	s0 = m.kotlinTimeDurationIsInfiniteImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 != 0 {
 		s0 = int32(0)
 	} else {
 		s0_1 = m.kotlinTimeDurationGetInWholeHoursImpl(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp0 = s0_1
 		tmp2 = int32(24)
 		this_ = tmp0
 		other = tmp2
 		s1 = m.kotlinIntToLongImpl(d+1, other)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = m.kotlinLongRemImpl(d+1, this_, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B2
 	B2:
 		s0 = m.kotlinLongToIntImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 	}
 	return s0
 }
@@ -17059,19 +19630,34 @@ func (m *Instance) kotlinTimeDurationGetMinutesComponentImpl(d int, this int64) 
 	var tmp0, this_, s0_1, s1 int64
 	var tmp2, other, s0 int32
 	s0 = m.kotlinTimeDurationIsInfiniteImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 != 0 {
 		s0 = int32(0)
 	} else {
 		s0_1 = m.kotlinTimeDurationGetInWholeMinutesImpl(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp0 = s0_1
 		tmp2 = int32(60)
 		this_ = tmp0
 		other = tmp2
 		s1 = m.kotlinIntToLongImpl(d+1, other)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = m.kotlinLongRemImpl(d+1, this_, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B2
 	B2:
 		s0 = m.kotlinLongToIntImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 	}
 	return s0
 }
@@ -17083,19 +19669,34 @@ func (m *Instance) kotlinTimeDurationGetSecondsComponentImpl(d int, this int64) 
 	var tmp0, this_, s0_1, s1 int64
 	var tmp2, other, s0 int32
 	s0 = m.kotlinTimeDurationIsInfiniteImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 != 0 {
 		s0 = int32(0)
 	} else {
 		s0_1 = m.kotlinTimeDurationGetInWholeSecondsImpl(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp0 = s0_1
 		tmp2 = int32(60)
 		this_ = tmp0
 		other = tmp2
 		s1 = m.kotlinIntToLongImpl(d+1, other)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = m.kotlinLongRemImpl(d+1, this_, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B2
 	B2:
 		s0 = m.kotlinLongToIntImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 	}
 	return s0
 }
@@ -17107,33 +19708,66 @@ func (m *Instance) kotlinTimeDurationGetNanosecondsComponentImpl(d int, this int
 	var tmp0, this_, tmp0_, this__, s0_1, s1 int64
 	var tmp2, other, tmp2_, other_, s0 int32
 	s0 = m.kotlinTimeDurationIsInfiniteImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 != 0 {
 		s0 = int32(0)
 	} else {
 		s0 = m.kotlinTimeDurationIsInMillisImpl(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0 != 0 {
 			s0_1 = m.kotlinTimeDurationGetValueImpl(d+1, this)
+			if m.exn != nil {
+				return int32(0)
+			}
 			tmp0 = s0_1
 			tmp2 = int32(1000)
 			this_ = tmp0
 			other = tmp2
 			s1 = m.kotlinIntToLongImpl(d+1, other)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s0_1 = m.kotlinLongRemImpl(d+1, this_, s1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B3
 		B3:
 			s0_1 = m.kotlinTimeMillisToNanos(d+1, s0_1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s0 = m.kotlinLongToIntImpl(d+1, s0_1)
+			if m.exn != nil {
+				return int32(0)
+			}
 		} else {
 			s0_1 = m.kotlinTimeDurationGetValueImpl(d+1, this)
+			if m.exn != nil {
+				return int32(0)
+			}
 			tmp0_ = s0_1
 			tmp2_ = int32(1000000000)
 			this__ = tmp0_
 			other_ = tmp2_
 			s1 = m.kotlinIntToLongImpl(d+1, other_)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s0_1 = m.kotlinLongRemImpl(d+1, this__, s1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B4
 		B4:
 			s0 = m.kotlinLongToIntImpl(d+1, s0_1)
+			if m.exn != nil {
+				return int32(0)
+			}
 		}
 	}
 	return s0
@@ -17148,24 +19782,48 @@ func (m *Instance) kotlinTimeDurationToLongImpl(d int, this int64, unit *KotlinT
 	var s0_1 int32
 	var s1_2 *KotlinTimeDurationUnit
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0Subject = s0
 	s1 = m.kotlinTimeCompanionGetInstance(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1_1 = s1.INFINITE
 	s1_1 = m.kotlinTimeDurationGetRawValueImpl(d+1, s1_1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0_1 = rt.B2I(tmp0Subject == s1_1)
 	if s0_1 != 0 {
 		s0 = int64(9223372036854775807)
 	} else {
 		s1 = m.kotlinTimeCompanionGetInstance(d + 1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s1_1 = s1.NEGINFINITE
 		s1_1 = m.kotlinTimeDurationGetRawValueImpl(d+1, s1_1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0_1 = rt.B2I(tmp0Subject == s1_1)
 		if s0_1 != 0 {
 			s0 = int64(-9223372036854775808)
 		} else {
 			s0 = m.kotlinTimeDurationGetValueImpl(d+1, this)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s1_2 = m.kotlinTimeDurationGetStorageUnitImpl(d+1, this)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinTimeConvertDurationUnit(d+1, s0, s1_2, unit)
+			if m.exn != nil {
+				return int64(0)
+			}
 		}
 	}
 	return s0
@@ -17176,8 +19834,16 @@ func (m *Instance) kotlinTimeDurationGetInWholeDaysImpl(d int, this int64) int64
 		rt.Exhausted()
 	}
 	var s1 *KotlinTimeDurationUnit
+	var s0 int64
 	s1 = m.kotlinTimeDurationUnitDAYSGetInstance(d + 1)
-	return m.kotlinTimeDurationToLongImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	s0 = m.kotlinTimeDurationToLongImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTimeDurationGetInWholeHoursImpl(d int, this int64) int64 {
@@ -17185,8 +19851,16 @@ func (m *Instance) kotlinTimeDurationGetInWholeHoursImpl(d int, this int64) int6
 		rt.Exhausted()
 	}
 	var s1 *KotlinTimeDurationUnit
+	var s0 int64
 	s1 = m.kotlinTimeDurationUnitHOURSGetInstance(d + 1)
-	return m.kotlinTimeDurationToLongImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	s0 = m.kotlinTimeDurationToLongImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTimeDurationGetInWholeMinutesImpl(d int, this int64) int64 {
@@ -17194,8 +19868,16 @@ func (m *Instance) kotlinTimeDurationGetInWholeMinutesImpl(d int, this int64) in
 		rt.Exhausted()
 	}
 	var s1 *KotlinTimeDurationUnit
+	var s0 int64
 	s1 = m.kotlinTimeDurationUnitMINUTESGetInstance(d + 1)
-	return m.kotlinTimeDurationToLongImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	s0 = m.kotlinTimeDurationToLongImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTimeDurationGetInWholeSecondsImpl(d int, this int64) int64 {
@@ -17203,8 +19885,16 @@ func (m *Instance) kotlinTimeDurationGetInWholeSecondsImpl(d int, this int64) in
 		rt.Exhausted()
 	}
 	var s1 *KotlinTimeDurationUnit
+	var s0 int64
 	s1 = m.kotlinTimeDurationUnitSECONDSGetInstance(d + 1)
-	return m.kotlinTimeDurationToLongImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	s0 = m.kotlinTimeDurationToLongImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTimeDurationGetInWholeMicrosecondsImpl(d int, this int64) int64 {
@@ -17212,8 +19902,16 @@ func (m *Instance) kotlinTimeDurationGetInWholeMicrosecondsImpl(d int, this int6
 		rt.Exhausted()
 	}
 	var s1 *KotlinTimeDurationUnit
+	var s0 int64
 	s1 = m.kotlinTimeDurationUnitMICROSECONDSGetInstance(d + 1)
-	return m.kotlinTimeDurationToLongImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	s0 = m.kotlinTimeDurationToLongImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTimeDurationToStringImpl(d int, this int64) *KotlinString {
@@ -17229,27 +19927,57 @@ func (m *Instance) kotlinTimeDurationToStringImpl(d int, this int64) *KotlinStri
 	var s0_4 *KotlinUnit
 	_ = s0_5
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	tmp0Subject = s0
 	if tmp0Subject == int64(0) {
 		s0_1 = m.stringLiteralLatin1(d+1, int32(83))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	} else {
 		s1 = m.kotlinTimeCompanionGetInstance(d + 1)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s1_1 = s1.INFINITE
 		s1_1 = m.kotlinTimeDurationGetRawValueImpl(d+1, s1_1)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_2 = rt.B2I(tmp0Subject == s1_1)
 		if s0_2 != 0 {
 			s0_1 = m.stringLiteralLatin1(d+1, int32(84))
+			if m.exn != nil {
+				return (*KotlinString)(nil)
+			}
 		} else {
 			s1 = m.kotlinTimeCompanionGetInstance(d + 1)
+			if m.exn != nil {
+				return (*KotlinString)(nil)
+			}
 			s1_1 = s1.NEGINFINITE
 			s1_1 = m.kotlinTimeDurationGetRawValueImpl(d+1, s1_1)
+			if m.exn != nil {
+				return (*KotlinString)(nil)
+			}
 			s0_2 = rt.B2I(tmp0Subject == s1_1)
 			if s0_2 != 0 {
 				s0_1 = m.stringLiteralLatin1(d+1, int32(85))
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 			} else {
 				s0_2 = m.kotlinTimeDurationIsNegativeImpl(d+1, this)
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				isNegative = s0_2
 				s0_3 = m.kotlinTextStringBuilderInit2(d+1, (*KotlinTextStringBuilder)(nil))
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				tmp0 = rt.ViewAs[KotlinAny](s0_3)
 				this_ = tmp0
 				if !(this_ == nil || (this_ != nil && rt.ObjRTT(this_) == rttKotlinTextStringBuilder)) {
@@ -17259,19 +19987,40 @@ func (m *Instance) kotlinTimeDurationToStringImpl(d int, this int64) *KotlinStri
 				thisBuildString = tmp0_
 				if isNegative != 0 {
 					s0_3 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](thisBuildString), int32(45))
+					if m.exn != nil {
+						return (*KotlinString)(nil)
+					}
 				}
 				s0 = m.kotlinTimeDurationGetAbsoluteValueImpl(d+1, this)
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				tmp0__ = s0
 				this__ = tmp0__
 				s0 = m.kotlinTimeDurationGetInWholeDaysImpl(d+1, this__)
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				tmp0___ = s0
 				s0_2 = m.kotlinTimeDurationGetHoursComponentImpl(d+1, this__)
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				tmp2 = s0_2
 				s0_2 = m.kotlinTimeDurationGetMinutesComponentImpl(d+1, this__)
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				tmp4 = s0_2
 				s0_2 = m.kotlinTimeDurationGetSecondsComponentImpl(d+1, this__)
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				tmp6 = s0_2
 				s0_2 = m.kotlinTimeDurationGetNanosecondsComponentImpl(d+1, this__)
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				tmp8 = s0_2
 				days = tmp0___
 				hours = tmp2
@@ -17290,7 +20039,13 @@ func (m *Instance) kotlinTimeDurationToStringImpl(d int, this int64) *KotlinStri
 				components = int32(0)
 				if hasDays != 0 {
 					s0_3 = m.kotlinTextStringBuilderAppend8(d+1, thisBuildString, days)
+					if m.exn != nil {
+						return (*KotlinString)(nil)
+					}
 					s0_3 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](s0_3), int32(100))
+					if m.exn != nil {
+						return (*KotlinString)(nil)
+					}
 					unary = components
 					tmp0____ = unary
 					this___ = tmp0____
@@ -17322,9 +20077,18 @@ func (m *Instance) kotlinTimeDurationToStringImpl(d int, this int64) *KotlinStri
 					components = s0_2
 					if unary_ > int32(0) {
 						s0_3 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](thisBuildString), int32(32))
+						if m.exn != nil {
+							return (*KotlinString)(nil)
+						}
 					}
 					s0_3 = m.kotlinTextStringBuilderAppend7(d+1, thisBuildString, hours)
+					if m.exn != nil {
+						return (*KotlinString)(nil)
+					}
 					s0_3 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](s0_3), int32(104))
+					if m.exn != nil {
+						return (*KotlinString)(nil)
+					}
 				}
 				if hasMinutes != 0 {
 					s0_2 = int32(1)
@@ -17349,9 +20113,18 @@ func (m *Instance) kotlinTimeDurationToStringImpl(d int, this int64) *KotlinStri
 					components = s0_2
 					if unary__ > int32(0) {
 						s0_3 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](thisBuildString), int32(32))
+						if m.exn != nil {
+							return (*KotlinString)(nil)
+						}
 					}
 					s0_3 = m.kotlinTextStringBuilderAppend7(d+1, thisBuildString, minutes)
+					if m.exn != nil {
+						return (*KotlinString)(nil)
+					}
 					s0_3 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](s0_3), int32(109))
+					if m.exn != nil {
+						return (*KotlinString)(nil)
+					}
 				}
 				if hasSeconds != 0 {
 					unary___ = components
@@ -17363,6 +20136,9 @@ func (m *Instance) kotlinTimeDurationToStringImpl(d int, this int64) *KotlinStri
 					components = s0_2
 					if unary___ > int32(0) {
 						s0_3 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](thisBuildString), int32(32))
+						if m.exn != nil {
+							return (*KotlinString)(nil)
+						}
 					}
 					if rt.B2I(seconds == int32(0)) == 0 {
 						s0_2 = int32(1)
@@ -17381,23 +20157,62 @@ func (m *Instance) kotlinTimeDurationToStringImpl(d int, this int64) *KotlinStri
 					}
 					if s0_2 != 0 {
 						s5 = m.stringLiteralLatin1(d+1, int32(86))
+						if m.exn != nil {
+							return (*KotlinString)(nil)
+						}
 						m.kotlinTimeDurationAppendFractionalImpl(d+1, this, thisBuildString, seconds, nanoseconds, int32(9), s5, int32(0))
+						if m.exn != nil {
+							return (*KotlinString)(nil)
+						}
 					} else {
 						if nanoseconds >= int32(1000000) {
 							s2 = m.kotlinIntDivImpl(d+1, nanoseconds, int32(1000000))
+							if m.exn != nil {
+								return (*KotlinString)(nil)
+							}
 							s3 = m.kotlinIntRemImpl(d+1, nanoseconds, int32(1000000))
+							if m.exn != nil {
+								return (*KotlinString)(nil)
+							}
 							s5 = m.stringLiteralLatin1(d+1, int32(87))
+							if m.exn != nil {
+								return (*KotlinString)(nil)
+							}
 							m.kotlinTimeDurationAppendFractionalImpl(d+1, this, thisBuildString, s2, s3, int32(6), s5, int32(0))
+							if m.exn != nil {
+								return (*KotlinString)(nil)
+							}
 						} else {
 							if nanoseconds >= int32(1000) {
 								s2 = m.kotlinIntDivImpl(d+1, nanoseconds, int32(1000))
+								if m.exn != nil {
+									return (*KotlinString)(nil)
+								}
 								s3 = m.kotlinIntRemImpl(d+1, nanoseconds, int32(1000))
+								if m.exn != nil {
+									return (*KotlinString)(nil)
+								}
 								s5 = m.stringLiteralLatin1(d+1, int32(88))
+								if m.exn != nil {
+									return (*KotlinString)(nil)
+								}
 								m.kotlinTimeDurationAppendFractionalImpl(d+1, this, thisBuildString, s2, s3, int32(3), s5, int32(0))
+								if m.exn != nil {
+									return (*KotlinString)(nil)
+								}
 							} else {
 								s0_3 = m.kotlinTextStringBuilderAppend7(d+1, thisBuildString, nanoseconds)
+								if m.exn != nil {
+									return (*KotlinString)(nil)
+								}
 								s1_2 = m.stringLiteralLatin1(d+1, int32(89))
+								if m.exn != nil {
+									return (*KotlinString)(nil)
+								}
 								s0_3 = m.kotlinTextStringBuilderAppend9(d+1, s0_3, s1_2)
+								if m.exn != nil {
+									return (*KotlinString)(nil)
+								}
 							}
 						}
 					}
@@ -17409,16 +20224,28 @@ func (m *Instance) kotlinTimeDurationToStringImpl(d int, this int64) *KotlinStri
 				}
 				if s0_2 != 0 {
 					s0_3 = m.kotlinTextStringBuilderInsert(d+1, thisBuildString, int32(1), int32(40))
+					if m.exn != nil {
+						return (*KotlinString)(nil)
+					}
 					s0_3 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](s0_3), int32(41))
+					if m.exn != nil {
+						return (*KotlinString)(nil)
+					}
 				}
 				s0_4 = m.g44
 				s0_5 = rt.ViewAs[KotlinAny](s0_4)
 				goto B9
 			B9:
 				s0_4 = m.kotlinUnitGetInstance(d + 1)
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				goto B8
 			B8:
 				s0_4 = m.kotlinUnitGetInstance(d + 1)
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				goto B6
 			B6:
 				if !(this_ == nil || (this_ != nil && rt.ObjRTT(this_) == rttKotlinTextStringBuilder)) {
@@ -17428,6 +20255,9 @@ func (m *Instance) kotlinTimeDurationToStringImpl(d int, this int64) *KotlinStri
 				goto B5
 			B5:
 				s0_1 = m.kotlinTextStringBuilderToString(d+1, rt.ViewAs[KotlinAny](s0_3))
+				if m.exn != nil {
+					return (*KotlinString)(nil)
+				}
 				goto B4
 			B4:
 			}
@@ -17446,14 +20276,27 @@ func (m *Instance) kotlinTimeDurationAppendFractionalImpl(d int, this int64, rec
 	var tmp0__, this__, tmp0___, this___, s0 *KotlinTextStringBuilder
 	var s1, s2 *ClassVTable
 	var s1_1, s2_1 *SpecialITable
-	var s1_2, s2_2 any
+	var s1_2, fn1, s2_2, fn2 any
 	var s1_3, s2_3 *rt.Func
+	var own1, own2 bool
 	_ = s0
 	s0 = m.kotlinTextStringBuilderAppend7(d+1, receiver, whole)
+	if m.exn != nil {
+		return
+	}
 	if rt.B2I(fractional == int32(0)) == 0 {
 		s0 = m.kotlinTextStringBuilderAppend(d+1, rt.ViewAs[KotlinAny](receiver), int32(46))
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinIntToStringImpl(d+1, fractional)
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinTextPadStart(d+1, s0_1, fractionalSize, int32(48))
+		if m.exn != nil {
+			return
+		}
 		fracString = s0_1
 		tmp0 = rt.ViewAs[KotlinAny](fracString)
 		this_ = tmp0
@@ -17464,8 +20307,19 @@ func (m *Instance) kotlinTimeDurationAppendFractionalImpl(d int, this int64, rec
 			panic(rt.ErrCast)
 		}
 		s1_3 = rt.As[ClassITable](s1_2).GetLength
-		s0_2 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this_)
+		fn1, own1 = rt.FnOwn(s1_3, rttFunc14, m, false)
+		if own1 {
+			s0_2 = fn1.(func(int, *KotlinAny) int32)(d+1, this_)
+		} else {
+			s0_2 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, this_)
+		}
+		if m.exn != nil {
+			return
+		}
 		s0_2 = m.kotlinIntDecImpl(d+1, s0_2)
+		if m.exn != nil {
+			return
+		}
 		inductionVariable = s0_2
 		if int32(0) <= inductionVariable {
 		L4:
@@ -17479,7 +20333,15 @@ func (m *Instance) kotlinTimeDurationAppendFractionalImpl(d int, this int64, rec
 					panic(rt.ErrCast)
 				}
 				s2_3 = rt.As[ClassITable](s2_2).Get
-				s0_2 = rt.FnOfRef(s2_3, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, this_, index)
+				fn2, own2 = rt.FnOwn(s2_3, rttFunc7, m, false)
+				if own2 {
+					s0_2 = fn2.(func(int, *KotlinAny, int32) int32)(d+1, this_, index)
+				} else {
+					s0_2 = m.guard5(fn2.(func(int, *KotlinAny, int32) int32), d+1, this_, index)
+				}
+				if m.exn != nil {
+					return
+				}
 				tmp0_ = s0_2
 				it = tmp0_
 				s0_2 = rt.B2I(rt.B2I(it == int32(48)) == 0)
@@ -17514,6 +20376,9 @@ func (m *Instance) kotlinTimeDurationAppendFractionalImpl(d int, this int64, rec
 			startIndex = tmp4
 			endIndex = tmp6
 			s0 = m.kotlinTextStringBuilderAppendRange(d+1, this__, value, startIndex, endIndex)
+			if m.exn != nil {
+				return
+			}
 			goto B11
 		B11:
 		} else {
@@ -17521,22 +20386,36 @@ func (m *Instance) kotlinTimeDurationAppendFractionalImpl(d int, this int64, rec
 			tmp2_ = rt.ViewAs[KotlinAny](fracString)
 			tmp4_ = int32(0)
 			s0_2 = m.kotlinIntDivImpl(d+1, (nonZeroDigits + int32(2)), int32(3))
+			if m.exn != nil {
+				return
+			}
 			tmp6_ = (s0_2 * int32(3))
 			this___ = tmp0___
 			value_ = tmp2_
 			startIndex_ = tmp4_
 			endIndex_ = tmp6_
 			s0 = m.kotlinTextStringBuilderAppendRange(d+1, this___, value_, startIndex_, endIndex_)
+			if m.exn != nil {
+				return
+			}
 			goto B12
 		B12:
 		}
 	}
 	s0 = m.kotlinTextStringBuilderAppend9(d+1, receiver, unit)
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
 func (m *Instance) kotlinTimeDurationHashCodeImpl(d int, this int64) int32 {
-	return m.kotlinLongHashCodeImpl(d+1, this)
+	var s0 int32
+	s0 = m.kotlinLongHashCodeImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTimeDurationEqualsImpl(d int, this int64, other *KotlinAny) int32 {
@@ -17562,11 +20441,16 @@ func (m *Instance) kotlinTimeDurationEqualsImpl(d int, this int64, other *Kotlin
 
 func (m *Instance) kotlinTimeDurationCompareTo(d int, this *KotlinAny, other int64) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeDuration) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinTimeDuration](this).RawValue
-	return m.kotlinTimeDurationCompareToImpl(d+1, tmp0This, other)
+	s0_1 = m.kotlinTimeDurationCompareToImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeDurationCompareTo2(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -17574,7 +20458,7 @@ func (m *Instance) kotlinTimeDurationCompareTo2(d int, this *KotlinAny, other *K
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s1_1 int64
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
@@ -17591,9 +20475,16 @@ func (m *Instance) kotlinTimeDurationCompareTo2(d int, this *KotlinAny, other *K
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g294))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinTimeDurationCompareTo(d+1, s0, s1_1)
+	s0_1 = m.kotlinTimeDurationCompareTo(d+1, s0, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeDurationToString(d int, this *KotlinAny) *KotlinString {
@@ -17601,29 +20492,44 @@ func (m *Instance) kotlinTimeDurationToString(d int, this *KotlinAny) *KotlinStr
 		rt.Exhausted()
 	}
 	var tmp0This int64
+	var s0_1 *KotlinString
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeDuration) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinTimeDuration](this).RawValue
-	return m.kotlinTimeDurationToStringImpl(d+1, tmp0This)
+	s0_1 = m.kotlinTimeDurationToStringImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeDurationHashCode(d int, this *KotlinAny) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeDuration) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinTimeDuration](this).RawValue
-	return m.kotlinTimeDurationHashCodeImpl(d+1, tmp0This)
+	s0_1 = m.kotlinTimeDurationHashCodeImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeDurationEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeDuration) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinTimeDuration](this).RawValue
-	return m.kotlinTimeDurationEqualsImpl(d+1, tmp0This, other)
+	s0_1 = m.kotlinTimeDurationEqualsImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeDurationOfMillis(d int, normalMillis int64) int64 {
@@ -17634,11 +20540,17 @@ func (m *Instance) kotlinTimeDurationOfMillis(d int, normalMillis int64) int64 {
 	var tmp2, bitCount, tmp2_, other int32
 	var s0 *KotlinTimeCompanion
 	s0 = m.kotlinTimeCompanionGetInstance(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0_ = normalMillis
 	tmp2 = int32(1)
 	this = tmp0_
 	bitCount = tmp2
 	s2 = m.kotlinIntToLongImpl(d+1, bitCount)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = (this << (uint64(s2) & 63))
 	goto B1
 B1:
@@ -17647,10 +20559,16 @@ B1:
 	this_ = tmp0
 	other = tmp2_
 	s2 = m.kotlinIntToLongImpl(d+1, other)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = (this_ + s2)
 	goto B2
 B2:
 	s0_1 = m.kotlinTimeCompanionFromRawValue(d+1, s0, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0_1
 }
 
@@ -17662,7 +20580,13 @@ func (m *Instance) kotlinTimeToDuration(d int, this int64, unit *KotlinTimeDurat
 	var tmp0_, tmp2_, other, this___, s0_1 int32
 	var s1, s2 *KotlinTimeDurationUnit
 	s1 = m.kotlinTimeDurationUnitNANOSECONDSGetInstance(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = m.kotlinTimeConvertDurationUnitOverflow(d+1, int64(4611686018426999999), s1, unit)
+	if m.exn != nil {
+		return int64(0)
+	}
 	maxNsInUnit = s0
 	tmp0 = maxNsInUnit
 	this_ = tmp0
@@ -17676,13 +20600,31 @@ B1:
 	}
 	if s0_1 != 0 {
 		s2 = m.kotlinTimeDurationUnitNANOSECONDSGetInstance(d + 1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinTimeConvertDurationUnitOverflow(d+1, this, unit, s2)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinTimeDurationOfNanos(d+1, s0)
+		if m.exn != nil {
+			return int64(0)
+		}
 	} else {
 		s1 = m.kotlinTimeDurationUnitMILLISECONDSGetInstance(d + 1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0_1 = m.kotlinEnumCompareTo(d+1, rt.ViewAs[KotlinAny](unit), rt.ViewAs[KotlinEnum](s1))
+		if m.exn != nil {
+			return int64(0)
+		}
 		if s0_1 >= int32(0) {
 			s0_1 = m.kotlinMathGetSign(d+1, this)
+			if m.exn != nil {
+				return int64(0)
+			}
 			tmp0_ = s0_1
 			tmp0__ = int64(-9223372036854775808)
 			tmp2_ = int32(1)
@@ -17690,30 +20632,60 @@ B1:
 			this__ = tmp0__
 			other = tmp2_
 			s2_1 = m.kotlinIntToLongImpl(d+1, other)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s1_1 = (this__ + s2_1)
 			goto B5
 		B5:
 			s0 = m.kotlinRangesCoerceAtLeast2(d+1, s0, s1_1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinMathAbs(d+1, s0)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinTimeConvertDurationUnitToMilliseconds(d+1, s0, unit)
+			if m.exn != nil {
+				return int64(0)
+			}
 			tmp2 = s0
 			this___ = tmp0_
 			other_ = tmp2
 			s0 = m.kotlinIntToLongImpl(d+1, this___)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = (s0 * other_)
 			goto B6
 		B6:
 			s0 = m.kotlinTimeDurationOfMillis(d+1, s0)
+			if m.exn != nil {
+				return int64(0)
+			}
 		} else {
 			s2 = m.kotlinTimeDurationUnitMILLISECONDSGetInstance(d + 1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinTimeConvertDurationUnit(d+1, this, unit, s2)
+			if m.exn != nil {
+				return int64(0)
+			}
 			tmp0___ = int64(4611686018427387903)
 			this____ = tmp0___
 			s1_1 = (int64(0) - this____)
 			goto B7
 		B7:
 			s0 = m.kotlinRangesCoerceIn(d+1, s0, s1_1, int64(4611686018427387903))
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinTimeDurationOfMillis(d+1, s0)
+			if m.exn != nil {
+				return int64(0)
+			}
 		}
 	}
 	return s0
@@ -17727,11 +20699,17 @@ func (m *Instance) kotlinTimeDurationOf(d int, normalValue int64, unitDiscrimina
 	var tmp2, bitCount, tmp2_, other int32
 	var s0 *KotlinTimeCompanion
 	s0 = m.kotlinTimeCompanionGetInstance(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0_ = normalValue
 	tmp2 = int32(1)
 	this = tmp0_
 	bitCount = tmp2
 	s2 = m.kotlinIntToLongImpl(d+1, bitCount)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = (this << (uint64(s2) & 63))
 	goto B1
 B1:
@@ -17740,10 +20718,16 @@ B1:
 	this_ = tmp0
 	other = tmp2_
 	s2 = m.kotlinIntToLongImpl(d+1, other)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = (this_ + s2)
 	goto B2
 B2:
 	s0_1 = m.kotlinTimeCompanionFromRawValue(d+1, s0, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0_1
 }
 
@@ -17765,9 +20749,18 @@ B1:
 	}
 	if s0_1 != 0 {
 		s0 = m.kotlinTimeDurationOfNanos(d+1, nanos)
+		if m.exn != nil {
+			return int64(0)
+		}
 	} else {
 		s0 = m.kotlinTimeNanosToMillis(d+1, nanos)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinTimeDurationOfMillis(d+1, s0)
+		if m.exn != nil {
+			return int64(0)
+		}
 	}
 	return s0
 }
@@ -17850,6 +20843,9 @@ B1:
 			goto B15
 		B15:
 			s0_1 = m.kotlinRangesCoerceIn(d+1, s0_1, s1, int64(4611686018427387903))
+			if m.exn != nil {
+				return int64(0)
+			}
 		}
 	}
 	return s0_1
@@ -17873,7 +20869,13 @@ B1:
 	}
 	if s0_1 != 0 {
 		s0 = m.kotlinTimeMillisToNanos(d+1, millis)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinTimeDurationOfNanos(d+1, s0)
+		if m.exn != nil {
+			return int64(0)
+		}
 	} else {
 		tmp0_ = int64(4611686018427387903)
 		s0 = millis
@@ -17882,7 +20884,13 @@ B1:
 		goto B4
 	B4:
 		s0 = m.kotlinRangesCoerceIn(d+1, s0, s1, int64(4611686018427387903))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinTimeDurationOfMillis(d+1, s0)
+		if m.exn != nil {
+			return int64(0)
+		}
 	}
 	return s0
 }
@@ -17895,7 +20903,13 @@ func (m *Instance) kotlinTimeNanosToMillis(d int, nanos int64) int64 {
 	this = tmp0
 	other = tmp2
 	s1 = m.kotlinIntToLongImpl(d+1, other)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = m.kotlinLongDivImpl(d+1, this, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B1
 B1:
 	return s0
@@ -17909,6 +20923,9 @@ func (m *Instance) kotlinTimeMillisToNanos(d int, millis int64) int64 {
 	this = tmp0
 	other = tmp2
 	s1 = m.kotlinIntToLongImpl(d+1, other)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (this * s1)
 	goto B1
 B1:
@@ -17923,15 +20940,24 @@ func (m *Instance) kotlinTimeDurationOfNanos(d int, normalNanos int64) int64 {
 	var tmp2, bitCount int32
 	var s0 *KotlinTimeCompanion
 	s0 = m.kotlinTimeCompanionGetInstance(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0 = normalNanos
 	tmp2 = int32(1)
 	this = tmp0
 	bitCount = tmp2
 	s2 = m.kotlinIntToLongImpl(d+1, bitCount)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = (this << (uint64(s2) & 63))
 	goto B1
 B1:
 	s0_1 = m.kotlinTimeCompanionFromRawValue(d+1, s0, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0_1
 }
 
@@ -17939,9 +20965,16 @@ func (m *Instance) kotlinTimeConvertDurationUnitToMilliseconds(d int, value int6
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var s1 int64
+	var s1, s0 int64
 	s1 = m.kotlinTimeGetMillisMultiplier(d+1, unit)
-	return m.kotlinTimeMultiplyNonNegativeWithoutOverflow(d+1, value, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	s0 = m.kotlinTimeMultiplyNonNegativeWithoutOverflow(d+1, value, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTimeMultiplyNonNegativeWithoutOverflow(d int, this int64, other int64) int64 {
@@ -17952,13 +20985,25 @@ func (m *Instance) kotlinTimeMultiplyNonNegativeWithoutOverflow(d int, this int6
 	} else {
 		if this == int64(1) {
 			s0 = m.kotlinRangesCoerceAtMost2(d+1, other, int64(4611686018427387903))
+			if m.exn != nil {
+				return int64(0)
+			}
 		} else {
 			if other == int64(1) {
 				s0 = m.kotlinRangesCoerceAtMost2(d+1, this, int64(4611686018427387903))
+				if m.exn != nil {
+					return int64(0)
+				}
 			} else {
 				s1 = m.kotlinCountLeadingZeroBits(d+1, this)
+				if m.exn != nil {
+					return int64(0)
+				}
 				s0_1 = (int32(128) - s1)
 				s1 = m.kotlinCountLeadingZeroBits(d+1, other)
+				if m.exn != nil {
+					return int64(0)
+				}
 				s0_1 = (s0_1 - s1)
 				bitSum = s0_1
 				if bitSum < int32(63) {
@@ -17968,6 +21013,9 @@ func (m *Instance) kotlinTimeMultiplyNonNegativeWithoutOverflow(d int, this int6
 						s0 = int64(4611686018427387903)
 					} else {
 						s0 = m.kotlinRangesCoerceAtMost2(d+1, (this * other), int64(4611686018427387903))
+						if m.exn != nil {
+							return int64(0)
+						}
 					}
 				}
 			}
@@ -17987,6 +21035,8 @@ func (m *Instance) kotlinTimeGetMillisMultiplier(d int, this *KotlinTimeDuration
 	var s0_2, s1 *KotlinString
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s0_3 *KotlinIllegalStateException
 	tmp0Subject = this
 	tmp0 = rt.ViewAs[KotlinEnum](tmp0Subject).Ordinal
@@ -18028,14 +21078,32 @@ B3:
 	goto B1
 B2:
 	s0_2 = m.stringLiteralLatin1(d+1, int32(92))
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](this))
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0_ = rt.ViewAs[KotlinAny](s0_2)
 	message = tmp0_
 	s2 = message.Vtable
 	s2_1 = s2.ToString
-	s1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+	if own1 {
+		s1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, message)
+	} else {
+		s1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, message)
+	}
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0_3 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), s1)
-	panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+	if m.exn != nil {
+		return int64(0)
+	}
+	m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+	return int64(0)
 B1:
 	return s0_1
 }
@@ -18053,8 +21121,16 @@ func (m *Instance) kotlinTimeValueTimeMarkElapsedNowImpl(d int, this int64) int6
 		rt.Exhausted()
 	}
 	var s0 *KotlinTimeMonotonicTimeSource
+	var s0_1 int64
 	s0 = m.kotlinTimeMonotonicTimeSourceGetInstance(d + 1)
-	return m.kotlinTimeMonotonicTimeSourceElapsedFrom(d+1, s0, this)
+	if m.exn != nil {
+		return int64(0)
+	}
+	s0_1 = m.kotlinTimeMonotonicTimeSourceElapsedFrom(d+1, s0, this)
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkMinusImpl(d int, this int64, other *KotlinAny) int64 {
@@ -18064,22 +21140,45 @@ func (m *Instance) kotlinTimeValueTimeMarkMinusImpl(d int, this int64, other *Ko
 	var s1, s2_1 *KotlinString
 	var s2 *KotlinTimeValueTimeMark
 	var s0 *KotlinIllegalArgumentException
-	var s1_1 int64
+	var s1_1, s0_1 int64
 	if rt.B2I((other != nil && rt.ObjRTT(other) == rttKotlinTimeValueTimeMark)) == 0 {
 		s1 = m.stringLiteralLatin1(d+1, int32(93))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s2 = NewKotlinTimeValueTimeMark(rt.ViewAs[ClassVTable](m.g174), m.g253, m.g295, int32(0), this)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(94))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, other)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return int64(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return int64(0)
 	}
 	if !(other != nil && rt.ObjRTT(other) == rttKotlinTimeValueTimeMark) {
 		panic(rt.ErrCast)
 	}
 	s1_1 = rt.ViewAs[KotlinTimeValueTimeMark](other).Reading
-	return m.kotlinTimeValueTimeMarkMinusImpl2(d+1, this, s1_1)
+	s0_1 = m.kotlinTimeValueTimeMarkMinusImpl2(d+1, this, s1_1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkMinusImpl2(d int, this int64, other int64) int64 {
@@ -18087,8 +21186,16 @@ func (m *Instance) kotlinTimeValueTimeMarkMinusImpl2(d int, this int64, other in
 		rt.Exhausted()
 	}
 	var s0 *KotlinTimeMonotonicTimeSource
+	var s0_1 int64
 	s0 = m.kotlinTimeMonotonicTimeSourceGetInstance(d + 1)
-	return m.kotlinTimeMonotonicTimeSourceDifferenceBetween(d+1, s0, this, other)
+	if m.exn != nil {
+		return int64(0)
+	}
+	s0_1 = m.kotlinTimeMonotonicTimeSourceDifferenceBetween(d+1, s0, this, other)
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkToStringImpl(d int, this int64) *KotlinString {
@@ -18098,15 +21205,32 @@ func (m *Instance) kotlinTimeValueTimeMarkToStringImpl(d int, this int64) *Kotli
 	var s0, s1_1 *KotlinString
 	var s1 *KotlinLong
 	s0 = m.stringLiteralLatin1(d+1, int32(95))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1 = NewKotlinLong(rt.ViewAs[ClassVTable](m.g196), m.g260, m.g345, int32(0), this)
 	s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](s1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1_1 = m.stringLiteralLatin1(d+1, int32(96))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](s1_1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkHashCodeImpl(d int, this int64) int32 {
-	return m.kotlinLongHashCodeImpl(d+1, this)
+	var s0 int32
+	s0 = m.kotlinLongHashCodeImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkEqualsImpl(d int, this int64, other *KotlinAny) int32 {
@@ -18141,6 +21265,9 @@ func (m *Instance) kotlinTimeValueTimeMarkMinus(d int, this *KotlinAny, other *K
 	s0 = rt.ViewAs[KotlinTimeValueTimeMark](this).Reading
 	tmp0This = s0
 	s0 = m.kotlinTimeValueTimeMarkMinusImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0
 }
 
@@ -18149,29 +21276,44 @@ func (m *Instance) kotlinTimeValueTimeMarkToString(d int, this *KotlinAny) *Kotl
 		rt.Exhausted()
 	}
 	var tmp0This int64
+	var s0_1 *KotlinString
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeValueTimeMark) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinTimeValueTimeMark](this).Reading
-	return m.kotlinTimeValueTimeMarkToStringImpl(d+1, tmp0This)
+	s0_1 = m.kotlinTimeValueTimeMarkToStringImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkHashCode(d int, this *KotlinAny) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeValueTimeMark) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinTimeValueTimeMark](this).Reading
-	return m.kotlinTimeValueTimeMarkHashCodeImpl(d+1, tmp0This)
+	s0_1 = m.kotlinTimeValueTimeMarkHashCodeImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeValueTimeMark) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinTimeValueTimeMark](this).Reading
-	return m.kotlinTimeValueTimeMarkEqualsImpl(d+1, tmp0This, other)
+	s0_1 = m.kotlinTimeValueTimeMarkEqualsImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkCompareTo(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -18183,17 +21325,33 @@ func (m *Instance) kotlinTimeValueTimeMarkCompareTo(d int, this *KotlinAny, othe
 	var s7, s8, s9 *KotlinString
 	var s5, s6 *KotlinWasmInternalTypeInfoData
 	var s1, s2 *KotlinWasmInternalKClassInterfaceImpl
-	var s2_1 any
+	var s2_1, fn1 any
 	var s2_2 *rt.Func
+	var own1 bool
 	s0 = m.kotlinWasmInternalIsSupportedInterface(d+1, this, int64(3341077956117880572))
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 != 0 {
 		s0_1 = this
 	} else {
 		s7 = m.stringLiteralLatin1(d+1, int32(90))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s8 = m.stringLiteralLatin1(d+1, int32(99))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s5 = m.kotlinWasmInternalTypeInfoDataInit(d+1, (*KotlinWasmInternalTypeInfoData)(nil), int64(3341077956117880572), s7, s8)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = NewKotlinWasmInternalKClassInterfaceImpl(rt.ViewAs[ClassVTable](m.g219), m.g265, m.g322, int32(0), s5)
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, this, rt.ViewAs[KotlinAny](s1), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	tmp = s0_1
@@ -18202,23 +21360,49 @@ func (m *Instance) kotlinTimeValueTimeMarkCompareTo(d int, this *KotlinAny, othe
 		s1_1 = int32(0)
 	} else {
 		s1_1 = m.kotlinWasmInternalIsSupportedInterface(d+1, other, int64(3341077956117880572))
+		if m.exn != nil {
+			return int32(0)
+		}
 	}
 	if s1_1 != 0 {
 		s1_2 = other
 	} else {
 		s8 = m.stringLiteralLatin1(d+1, int32(90))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s9 = m.stringLiteralLatin1(d+1, int32(99))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s6 = m.kotlinWasmInternalTypeInfoDataInit(d+1, (*KotlinWasmInternalTypeInfoData)(nil), int64(3341077956117880572), s8, s9)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2 = NewKotlinWasmInternalKClassInterfaceImpl(rt.ViewAs[ClassVTable](m.g219), m.g265, m.g322, int32(0), s6)
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	s2_1 = m.kotlinWasmInternalGetInterfaceVTable(d+1, tmp, int64(3341077956117880572))
+	if m.exn != nil {
+		return int32(0)
+	}
 	if !(rt.IsType(s2_1, rttClassITable13)) {
 		panic(rt.ErrCast)
 	}
 	s2_2 = rt.As[ClassITable13](s2_1).CompareTo
-	s0 = rt.FnOfRef(s2_2, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, s0_1, s1_2)
+	fn1, own1 = rt.FnOwn(s2_2, rttFunc11, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny, *KotlinAny) int32)(d+1, s0_1, s1_2)
+	} else {
+		s0 = m.guard3(fn1.(func(int, *KotlinAny, *KotlinAny) int32), d+1, s0_1, s1_2)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -18236,8 +21420,16 @@ func (m *Instance) kotlinTimeMonotonicMarkNow(d int, this *KotlinAny) int64 {
 		rt.Exhausted()
 	}
 	var s0 *KotlinTimeMonotonicTimeSource
+	var s0_1 int64
 	s0 = m.kotlinTimeMonotonicTimeSourceGetInstance(d + 1)
-	return m.kotlinTimeMonotonicTimeSourceMarkNow(d+1, rt.ViewAs[KotlinAny](s0))
+	if m.exn != nil {
+		return int64(0)
+	}
+	s0_1 = m.kotlinTimeMonotonicTimeSourceMarkNow(d+1, rt.ViewAs[KotlinAny](s0))
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeMonotonicToString(d int, this *KotlinAny) *KotlinString {
@@ -18245,32 +21437,63 @@ func (m *Instance) kotlinTimeMonotonicToString(d int, this *KotlinAny) *KotlinSt
 		rt.Exhausted()
 	}
 	var s0 *KotlinTimeMonotonicTimeSource
+	var s0_1 *KotlinString
 	s0 = m.kotlinTimeMonotonicTimeSourceGetInstance(d + 1)
-	return m.kotlinTimeMonotonicTimeSourceToString(d+1, rt.ViewAs[KotlinAny](s0))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	s0_1 = m.kotlinTimeMonotonicTimeSourceToString(d+1, rt.ViewAs[KotlinAny](s0))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeComparableTimeMarkCompareTo(d int, this *KotlinAny, other *KotlinAny) int32 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var s2 any
+	var s2, fn1 any
 	var s2_1 *rt.Func
+	var own1 bool
 	var s0, s1_1 int64
 	var s1 *KotlinTimeCompanion
+	var s0_1 int32
 	s2 = m.kotlinWasmInternalGetInterfaceVTable(d+1, this, int64(3341077956117880572))
+	if m.exn != nil {
+		return int32(0)
+	}
 	if !(rt.IsType(s2, rttClassITable13)) {
 		panic(rt.ErrCast)
 	}
 	s2_1 = rt.As[ClassITable13](s2).Minus
-	s0 = rt.FnOfRef(s2_1, rttFunc151).(func(int, *KotlinAny, *KotlinAny) int64)(d+1, this, other)
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc140, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny, *KotlinAny) int64)(d+1, this, other)
+	} else {
+		s0 = m.guard10(fn1.(func(int, *KotlinAny, *KotlinAny) int64), d+1, this, other)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinTimeCompanionGetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1_1 = s1.ZERO
-	return m.kotlinTimeDurationCompareToImpl(d+1, s0, s1_1)
+	s0_1 = m.kotlinTimeDurationCompareToImpl(d+1, s0, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTimeObjectInitializer(d int) {
 	var s0 *KotlinTimeMonotonic
 	s0 = m.kotlinTimeMonotonicInit(d+1, (*KotlinTimeMonotonic)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g16 = s0
 	return
 }
@@ -18288,6 +21511,9 @@ func (m *Instance) kotlinTimeSaturatingDiff(d int, valueNs int64, origin int64, 
 	this_ = tmp0_
 	other = tmp2
 	s1 = m.kotlinIntToLongImpl(d+1, other)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (this_ - s1)
 	goto B2
 B2:
@@ -18296,10 +21522,19 @@ B2:
 B1:
 	if s0_1 != 0 {
 		s0 = m.kotlinTimeInfinityOfSign(d+1, origin)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinTimeDurationUnaryMinusImpl(d+1, s0)
+		if m.exn != nil {
+			return int64(0)
+		}
 		return s0
 	}
 	s0 = m.kotlinTimeSaturatingFiniteDiff(d+1, valueNs, origin, unit)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0
 }
 
@@ -18317,6 +21552,9 @@ func (m *Instance) kotlinTimeSaturatingOriginsDiff(d int, origin1 int64, origin2
 	this_ = tmp0_
 	other = tmp2
 	s1 = m.kotlinIntToLongImpl(d+1, other)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (this_ - s1)
 	goto B2
 B2:
@@ -18326,11 +21564,20 @@ B1:
 	if s0_1 != 0 {
 		if origin1 == origin2 {
 			s0_2 = m.kotlinTimeCompanionGetInstance(d + 1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = s0_2.ZERO
 			return s0
 		}
 		s0 = m.kotlinTimeInfinityOfSign(d+1, origin2)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinTimeDurationUnaryMinusImpl(d+1, s0)
+		if m.exn != nil {
+			return int64(0)
+		}
 		return s0
 	}
 	tmp0__ = origin1
@@ -18340,6 +21587,9 @@ B1:
 	this___ = tmp0___
 	other_ = tmp2_
 	s1 = m.kotlinIntToLongImpl(d+1, other_)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (this___ - s1)
 	goto B6
 B6:
@@ -18348,9 +21598,15 @@ B6:
 B5:
 	if s0_1 != 0 {
 		s0 = m.kotlinTimeInfinityOfSign(d+1, origin1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		return s0
 	}
 	s0 = m.kotlinTimeSaturatingFiniteDiff(d+1, origin1, origin2, unit)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0
 }
 
@@ -18362,9 +21618,15 @@ func (m *Instance) kotlinTimeInfinityOfSign(d int, value int64) int64 {
 	var s0_1 int64
 	if value < int64(0) {
 		s0 = m.kotlinTimeCompanionGetInstance(d + 1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0_1 = s0.NEGINFINITE
 	} else {
 		s0 = m.kotlinTimeCompanionGetInstance(d + 1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0_1 = s0.INFINITE
 	}
 	return s0_1
@@ -18395,38 +21657,86 @@ B1:
 	s0 = (s0 & s1)
 	if s0 < int64(0) {
 		s1_1 = m.kotlinTimeDurationUnitMILLISECONDSGetInstance(d + 1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0_1 = m.kotlinEnumCompareTo(d+1, rt.ViewAs[KotlinAny](unit), rt.ViewAs[KotlinEnum](s1_1))
+		if m.exn != nil {
+			return int64(0)
+		}
 		if s0_1 < int32(0) {
 			s1_1 = m.kotlinTimeDurationUnitMILLISECONDSGetInstance(d + 1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinTimeConvertDurationUnit(d+1, int64(1), s1_1, unit)
+			if m.exn != nil {
+				return int64(0)
+			}
 			unitsInMilli = s0
 			s0 = m.kotlinLongDivImpl(d+1, value1, unitsInMilli)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s1 = m.kotlinLongDivImpl(d+1, value2, unitsInMilli)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = (s0 - s1)
 			resultMs = s0
 			s0 = m.kotlinLongRemImpl(d+1, value1, unitsInMilli)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s1 = m.kotlinLongRemImpl(d+1, value2, unitsInMilli)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = (s0 - s1)
 			resultUnit = s0
 			s0_2 = m.kotlinTimeCompanionGetInstance(d + 1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			tmp0__ = s0_2
 			tmp2 = resultMs
 			this__ = tmp0__
 			this___ = tmp2
 			s1_1 = m.kotlinTimeDurationUnitMILLISECONDSGetInstance(d + 1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinTimeToDuration(d+1, this___, s1_1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			goto B5
 		B5:
 			s1 = m.kotlinTimeToDuration(d+1, resultUnit, unit)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinTimeDurationPlusImpl(d+1, s0, s1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			return s0
 		} else {
 			s0 = m.kotlinTimeInfinityOfSign(d+1, result)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.kotlinTimeDurationUnaryMinusImpl(d+1, s0)
+			if m.exn != nil {
+				return int64(0)
+			}
 			return s0
 		}
 	}
 	s0 = m.kotlinTimeToDuration(d+1, result, unit)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0
 }
 
@@ -18454,8 +21764,17 @@ func (m *Instance) kotlinCompanionInit(d int, this *KotlinCompanion) *KotlinComp
 func (m *Instance) kotlinUIntCompareToImpl(d int, this int32, other int32) int32 {
 	var s0, s1 int32
 	s0 = m.kotlinUIntGetDataImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinUIntGetDataImpl(d+1, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinUintCompare(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -18463,21 +21782,35 @@ func (m *Instance) kotlinUIntToStringImpl(d int, this int32) *KotlinString {
 	var tmp0, value, tmp0_, this_, s0 int32
 	var s0_1 *KotlinString
 	s0 = m.kotlinUIntGetDataImpl(d+1, this)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	tmp0 = s0
 	value = tmp0
 	tmp0_ = value
 	this_ = tmp0_
 	s0 = m.kotlinUIntInitImpl(d+1, this_)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	goto B2
 B2:
 	s0_1 = m.kotlinWasmInternalUtoa32(d+1, s0)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	goto B1
 B1:
 	return s0_1
 }
 
 func (m *Instance) kotlinUIntHashCodeImpl(d int, this int32) int32 {
-	return m.kotlinIntHashCodeImpl(d+1, this)
+	var s0 int32
+	s0 = m.kotlinIntHashCodeImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinUIntEqualsImpl(d int, this int32, other *KotlinAny) int32 {
@@ -18509,6 +21842,9 @@ func (m *Instance) kotlinUIntCompareTo(d int, this *KotlinAny, other int32) int3
 	s0 = rt.ViewAs[KotlinUInt](this).Data
 	tmp0This = s0
 	s0 = m.kotlinUIntCompareToImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -18517,7 +21853,7 @@ func (m *Instance) kotlinUIntCompareTo2(d int, this *KotlinAny, other *KotlinAny
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
 	if other == nil {
@@ -18533,18 +21869,30 @@ func (m *Instance) kotlinUIntCompareTo2(d int, this *KotlinAny, other *KotlinAny
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g298))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinUIntCompareTo(d+1, s0, s1)
+	s0_1 = m.kotlinUIntCompareTo(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinUIntToString(d int, this *KotlinAny) *KotlinString {
 	var tmp0This int32
+	var s0_1 *KotlinString
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinUInt) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinUInt](this).Data
-	return m.kotlinUIntToStringImpl(d+1, tmp0This)
+	s0_1 = m.kotlinUIntToStringImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinUIntHashCode(d int, this *KotlinAny) int32 {
@@ -18555,6 +21903,9 @@ func (m *Instance) kotlinUIntHashCode(d int, this *KotlinAny) int32 {
 	s0 = rt.ViewAs[KotlinUInt](this).Data
 	tmp0This = s0
 	s0 = m.kotlinUIntHashCodeImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -18566,12 +21917,18 @@ func (m *Instance) kotlinUIntEquals(d int, this *KotlinAny, other *KotlinAny) in
 	s0 = rt.ViewAs[KotlinUInt](this).Data
 	tmp0This = s0
 	s0 = m.kotlinUIntEqualsImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinObjectInitializer(d int) {
 	var s0 *KotlinCompanion
 	s0 = m.kotlinCompanionInit(d+1, (*KotlinCompanion)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g17 = s0
 	return
 }
@@ -18599,30 +21956,55 @@ func (m *Instance) kotlinCompanionInit2(d int, this *KotlinCompanion2) *KotlinCo
 
 func (m *Instance) kotlinULongCompareToImpl(d int, this int64, other int64) int32 {
 	var s0, s1 int64
+	var s0_1 int32
 	s0 = m.kotlinULongGetDataImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other)
-	return m.kotlinUlongCompare(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	s0_1 = m.kotlinUlongCompare(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinULongToStringImpl(d int, this int64) *KotlinString {
 	var tmp0, value, tmp0_, this_, s0 int64
 	var s0_1 *KotlinString
 	s0 = m.kotlinULongGetDataImpl(d+1, this)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	tmp0 = s0
 	value = tmp0
 	tmp0_ = value
 	this_ = tmp0_
 	s0 = m.kotlinULongInitImpl(d+1, this_)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	goto B2
 B2:
 	s0_1 = m.kotlinWasmInternalUtoa64(d+1, s0)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	goto B1
 B1:
 	return s0_1
 }
 
 func (m *Instance) kotlinULongHashCodeImpl(d int, this int64) int32 {
-	return m.kotlinLongHashCodeImpl(d+1, this)
+	var s0 int32
+	s0 = m.kotlinLongHashCodeImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinULongEqualsImpl(d int, this int64, other *KotlinAny) int32 {
@@ -18648,11 +22030,16 @@ func (m *Instance) kotlinULongEqualsImpl(d int, this int64, other *KotlinAny) in
 
 func (m *Instance) kotlinULongCompareTo(d int, this *KotlinAny, other int64) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinULong) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinULong](this).Data
-	return m.kotlinULongCompareToImpl(d+1, tmp0This, other)
+	s0_1 = m.kotlinULongCompareToImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinULongCompareTo2(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -18660,7 +22047,7 @@ func (m *Instance) kotlinULongCompareTo2(d int, this *KotlinAny, other *KotlinAn
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s1_1 int64
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
@@ -18677,41 +22064,66 @@ func (m *Instance) kotlinULongCompareTo2(d int, this *KotlinAny, other *KotlinAn
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g300))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinULongCompareTo(d+1, s0, s1_1)
+	s0_1 = m.kotlinULongCompareTo(d+1, s0, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinULongToString(d int, this *KotlinAny) *KotlinString {
 	var tmp0This int64
+	var s0_1 *KotlinString
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinULong) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinULong](this).Data
-	return m.kotlinULongToStringImpl(d+1, tmp0This)
+	s0_1 = m.kotlinULongToStringImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinULongHashCode(d int, this *KotlinAny) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinULong) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinULong](this).Data
-	return m.kotlinULongHashCodeImpl(d+1, tmp0This)
+	s0_1 = m.kotlinULongHashCodeImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinULongEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinULong) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinULong](this).Data
-	return m.kotlinULongEqualsImpl(d+1, tmp0This, other)
+	s0_1 = m.kotlinULongEqualsImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinObjectInitializer2(d int) {
 	var s0 *KotlinCompanion2
 	s0 = m.kotlinCompanionInit2(d+1, (*KotlinCompanion2)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g18 = s0
 	return
 }
@@ -18724,7 +22136,12 @@ func (m *Instance) kotlinAnyHashCode(d int, this *KotlinAny) int32 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinIdentityHashCode(d+1, this)
+	var s0 int32
+	s0 = m.kotlinIdentityHashCode(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinAnyToString(d int, this *KotlinAny) *KotlinString {
@@ -18737,11 +22154,26 @@ func (m *Instance) kotlinAnyToString(d int, this *KotlinAny) *KotlinString {
 	var s1_1 *KotlinInt
 	s0 = this.Rtti
 	s0_1 = m.kotlinWasmInternalGetQualifiedName(d+1, rt.AnyOf(s0))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1 = m.stringLiteralLatin1(d+1, int32(107))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s5 = m.kotlinIdentityHashCode(d+1, this)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1_1 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 	s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1_1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0_1
 }
 
@@ -18754,7 +22186,13 @@ func (m *Instance) kotlinIdentityHashCode(d int, this *KotlinAny) int32 {
 	s0 = this.HashCode
 	if s0 == int32(0) {
 		s1 = m.kotlinRandomDefaultGetInstance(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1_1 = m.kotlinRandomDefaultNextInt2(d+1, rt.ViewAs[KotlinAny](s1), int32(1), int32(2147483647))
+		if m.exn != nil {
+			return int32(0)
+		}
 		this.HashCode = s1_1
 	}
 	s0 = this.HashCode
@@ -18772,8 +22210,15 @@ func (m *Instance) kotlinArrayInit(d int, this *KotlinArray, size int32) *Kotlin
 	}
 	if size < int32(0) {
 		s1 = m.stringLiteralLatin1(d+1, int32(109))
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
 		s0_1 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return (*KotlinArray)(nil)
 	}
 	s1_1 = NewKotlinWasmInternalWasmAnyArray(rt.MakeSlice(size, (*KotlinAny)(nil)))
 	this.Storage = s1_1
@@ -18792,6 +22237,9 @@ func (m *Instance) kotlinArrayGet(d int, this *KotlinArray, index int32) *Kotlin
 	s1 = this.Storage
 	s1_1 = int32(len(s1.Elems))
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1_1)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = this.Storage
 	return s0.Elems[uint32(index)]
 }
@@ -18802,6 +22250,9 @@ func (m *Instance) kotlinArraySet(d int, this *KotlinArray, index int32, value *
 	s1 = this.Storage
 	s1_1 = int32(len(s1.Elems))
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1_1)
+	if m.exn != nil {
+		return
+	}
 	s0 = this.Storage
 	s0.Elems[uint32(index)] = value
 	return
@@ -18824,8 +22275,15 @@ func (m *Instance) kotlinCharArrayInit(d int, this *KotlinCharArray, size int32)
 	}
 	if size < int32(0) {
 		s1 = m.stringLiteralLatin1(d+1, int32(109))
+		if m.exn != nil {
+			return (*KotlinCharArray)(nil)
+		}
 		s0_1 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return (*KotlinCharArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return (*KotlinCharArray)(nil)
 	}
 	s1_1 = NewKotlinWasmInternalWasmCharArray(rt.MakeSlice(size, int16(0)))
 	this.Storage = s1_1
@@ -18838,6 +22296,9 @@ func (m *Instance) kotlinCharArrayGet(d int, this *KotlinCharArray, index int32)
 	s1 = this.Storage
 	s1_1 = int32(len(s1.Elems))
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = this.Storage
 	return int32(uint16(s0.Elems[uint32(index)]))
 }
@@ -18848,6 +22309,9 @@ func (m *Instance) kotlinCharArraySet(d int, this *KotlinCharArray, index int32,
 	s1 = this.Storage
 	s1_1 = int32(len(s1.Elems))
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1_1)
+	if m.exn != nil {
+		return
+	}
 	s0 = this.Storage
 	s0.Elems[uint32(index)] = int16(value)
 	return
@@ -18870,8 +22334,15 @@ func (m *Instance) kotlinByteArrayInit(d int, this *KotlinByteArray, size int32)
 	}
 	if size < int32(0) {
 		s1 = m.stringLiteralLatin1(d+1, int32(109))
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
 		s0_1 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return (*KotlinByteArray)(nil)
 	}
 	s1_1 = NewKotlinWasmInternalWasmByteArray(rt.MakeSlice(size, int8(0)))
 	this.Storage = s1_1
@@ -18890,6 +22361,9 @@ func (m *Instance) kotlinByteArrayGet(d int, this *KotlinByteArray, index int32)
 	s1 = this.Storage
 	s1_1 = int32(len(s1.Elems))
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = this.Storage
 	return int32(s0.Elems[uint32(index)])
 }
@@ -18900,6 +22374,9 @@ func (m *Instance) kotlinByteArraySet(d int, this *KotlinByteArray, index int32,
 	s1 = this.Storage
 	s1_1 = int32(len(s1.Elems))
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1_1)
+	if m.exn != nil {
+		return
+	}
 	s0 = this.Storage
 	s0.Elems[uint32(index)] = int8(value)
 	return
@@ -18917,6 +22394,9 @@ func (m *Instance) kotlinShortArrayGet(d int, this *KotlinShortArray, index int3
 	s1 = this.Storage
 	s1_1 = int32(len(s1.Elems))
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = this.Storage
 	return int32(s0.Elems[uint32(index)])
 }
@@ -18932,8 +22412,15 @@ func (m *Instance) kotlinIntArrayInit(d int, this *KotlinIntArray, size int32) *
 	}
 	if size < int32(0) {
 		s1 = m.stringLiteralLatin1(d+1, int32(109))
+		if m.exn != nil {
+			return (*KotlinIntArray)(nil)
+		}
 		s0_1 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return (*KotlinIntArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return (*KotlinIntArray)(nil)
 	}
 	s1_1 = NewKotlinWasmInternalWasmIntArray(rt.MakeSlice(size, int32(0)))
 	this.Storage = s1_1
@@ -18946,6 +22433,9 @@ func (m *Instance) kotlinIntArrayGet(d int, this *KotlinIntArray, index int32) i
 	s1 = this.Storage
 	s1_1 = int32(len(s1.Elems))
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = this.Storage
 	return s0.Elems[uint32(index)]
 }
@@ -18956,6 +22446,9 @@ func (m *Instance) kotlinIntArraySet(d int, this *KotlinIntArray, index int32, v
 	s1 = this.Storage
 	s1_1 = int32(len(s1.Elems))
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1_1)
+	if m.exn != nil {
+		return
+	}
 	s0 = this.Storage
 	s0.Elems[uint32(index)] = value
 	return
@@ -18973,6 +22466,9 @@ func (m *Instance) kotlinLongArrayGet(d int, this *KotlinLongArray, index int32)
 	s1 = this.Storage
 	s1_1 = int32(len(s1.Elems))
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1_1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = this.Storage
 	return s0.Elems[uint32(index)]
 }
@@ -19002,8 +22498,14 @@ func (m *Instance) kotlinBooleanToStringImpl(d int, this int32) *KotlinString {
 	var s0 *KotlinString
 	if this != 0 {
 		s0 = m.stringLiteralLatin1(d+1, int32(116))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	} else {
 		s0 = m.stringLiteralLatin1(d+1, int32(117))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	}
 	return s0
 }
@@ -19045,6 +22547,9 @@ func (m *Instance) kotlinBooleanCompareTo(d int, this *KotlinAny, other int32) i
 	s0 = int32(rt.ViewAs[KotlinBoolean](this).Value)
 	tmp0This = s0
 	s0 = m.kotlinBooleanCompareToImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -19053,7 +22558,7 @@ func (m *Instance) kotlinBooleanCompareTo2(d int, this *KotlinAny, other *Kotlin
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
 	if other == nil {
@@ -19069,18 +22574,30 @@ func (m *Instance) kotlinBooleanCompareTo2(d int, this *KotlinAny, other *Kotlin
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g308))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinBooleanCompareTo(d+1, s0, s1)
+	s0_1 = m.kotlinBooleanCompareTo(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinBooleanToString(d int, this *KotlinAny) *KotlinString {
 	var tmp0This int32
+	var s0_1 *KotlinString
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinBoolean) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = int32(rt.ViewAs[KotlinBoolean](this).Value)
-	return m.kotlinBooleanToStringImpl(d+1, tmp0This)
+	s0_1 = m.kotlinBooleanToStringImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinBooleanEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -19091,6 +22608,9 @@ func (m *Instance) kotlinBooleanEquals(d int, this *KotlinAny, other *KotlinAny)
 	s0 = int32(rt.ViewAs[KotlinBoolean](this).Value)
 	tmp0This = s0
 	s0 = m.kotlinBooleanEqualsImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -19102,12 +22622,18 @@ func (m *Instance) kotlinBooleanHashCode(d int, this *KotlinAny) int32 {
 	s0 = int32(rt.ViewAs[KotlinBoolean](this).Value)
 	tmp0This = s0
 	s0 = m.kotlinBooleanHashCodeImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinObjectInitializer3(d int) {
 	var s0 *KotlinCompanion3
 	s0 = m.kotlinCompanionInit3(d+1, (*KotlinCompanion3)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g19 = s0
 	return
 }
@@ -19136,9 +22662,14 @@ B3:
 
 func (m *Instance) kotlinCharToStringImpl(d int, this int32) *KotlinString {
 	var array *KotlinWasmInternalWasmCharArray
+	var s0_1 *KotlinString
 	array = NewKotlinWasmInternalWasmCharArray(rt.MakeSlice(int32(1), int16(0)))
 	array.Elems[uint32(0)] = int16(this)
-	return m.kotlinCreateString(d+1, array)
+	s0_1 = m.kotlinCreateString(d+1, array)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCharEqualsImpl(d int, this int32, other *KotlinAny) int32 {
@@ -19177,6 +22708,9 @@ func (m *Instance) kotlinCharHashCodeImpl(d int, this int32) int32 {
 	goto B1
 B1:
 	s0 = m.kotlinIntHashCodeImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -19212,6 +22746,9 @@ func (m *Instance) kotlinCharCompareTo(d int, this *KotlinAny, other int32) int3
 	s0 = int32(uint16(rt.ViewAs[KotlinChar](this).Value))
 	tmp0This = s0
 	s0 = m.kotlinCharCompareToImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -19220,7 +22757,7 @@ func (m *Instance) kotlinCharCompareTo2(d int, this *KotlinAny, other *KotlinAny
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
 	if other == nil {
@@ -19236,18 +22773,30 @@ func (m *Instance) kotlinCharCompareTo2(d int, this *KotlinAny, other *KotlinAny
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g310))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinCharCompareTo(d+1, s0, s1)
+	s0_1 = m.kotlinCharCompareTo(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCharToString(d int, this *KotlinAny) *KotlinString {
 	var tmp0This int32
+	var s0_1 *KotlinString
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinChar) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = int32(uint16(rt.ViewAs[KotlinChar](this).Value))
-	return m.kotlinCharToStringImpl(d+1, tmp0This)
+	s0_1 = m.kotlinCharToStringImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCharEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -19258,6 +22807,9 @@ func (m *Instance) kotlinCharEquals(d int, this *KotlinAny, other *KotlinAny) in
 	s0 = int32(uint16(rt.ViewAs[KotlinChar](this).Value))
 	tmp0This = s0
 	s0 = m.kotlinCharEqualsImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -19269,12 +22821,18 @@ func (m *Instance) kotlinCharHashCode(d int, this *KotlinAny) int32 {
 	s0 = int32(uint16(rt.ViewAs[KotlinChar](this).Value))
 	tmp0This = s0
 	s0 = m.kotlinCharHashCodeImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinObjectInitializer4(d int) {
 	var s0 *KotlinCompanion4
 	s0 = m.kotlinCompanionInit4(d+1, (*KotlinCompanion4)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g20 = s0
 	return
 }
@@ -19304,6 +22862,9 @@ func (m *Instance) kotlinEnumCompareTo(d int, this *KotlinAny, other *KotlinEnum
 	s0 = tmp0This.Ordinal
 	s1 = other.Ordinal
 	s0 = m.kotlinIntCompareToImpl(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -19312,7 +22873,7 @@ func (m *Instance) kotlinEnumCompareTo2(d int, this *KotlinAny, other *KotlinAny
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s1_1 *KotlinEnum
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
@@ -19329,9 +22890,16 @@ func (m *Instance) kotlinEnumCompareTo2(d int, this *KotlinAny, other *KotlinAny
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g312))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinEnumCompareTo(d+1, s0, s1_1)
+	s0_1 = m.kotlinEnumCompareTo(d+1, s0, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinEnumEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -19348,11 +22916,16 @@ func (m *Instance) kotlinEnumHashCode(d int, this *KotlinAny) int32 {
 		rt.Exhausted()
 	}
 	var tmp0This *KotlinEnum
+	var s0 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinEnum))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinEnum](this)
-	return m.kotlinAnyHashCode(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	s0 = m.kotlinAnyHashCode(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinEnumToString(d int, this *KotlinAny) *KotlinString {
@@ -19367,6 +22940,9 @@ func (m *Instance) kotlinEnumToString(d int, this *KotlinAny) *KotlinString {
 func (m *Instance) kotlinObjectInitializer5(d int) {
 	var s0 *KotlinCompanion5
 	s0 = m.kotlinCompanionInit5(d+1, (*KotlinCompanion5)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g21 = s0
 	return
 }
@@ -19379,17 +22955,30 @@ func (m *Instance) kotlinToString(d int, this *KotlinAny) *KotlinString {
 	var tmp0SafeReceiver *KotlinAny
 	var s1 *ClassVTable
 	var s1_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	tmp0SafeReceiver = this
 	if tmp0SafeReceiver == nil {
 		s0 = (*KotlinString)(nil)
 	} else {
 		s1 = tmp0SafeReceiver.Vtable
 		s1_1 = s1.ToString
-		s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
+		fn1, own1 = rt.FnOwn(s1_1, rttFunc9, m, false)
+		if own1 {
+			s0 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
+		} else {
+			s0 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp0SafeReceiver)
+		}
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	}
 	tmp1ElvisLhs = s0
 	if tmp1ElvisLhs == nil {
 		s0 = m.stringLiteralLatin1(d+1, int32(33))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	} else {
 		s0 = tmp1ElvisLhs
 	}
@@ -19455,8 +23044,15 @@ B4:
 	goto B1
 B3:
 	s1 = m.stringLiteralLatin1(d+1, int32(125))
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = m.kotlinArithmeticExceptionInit(d+1, (*KotlinArithmeticException)(nil), s1)
-	panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+	if m.exn != nil {
+		return int32(0)
+	}
+	m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+	return int32(0)
 B2:
 	s0 = rt.I32DivS(this, other)
 B1:
@@ -19470,8 +23066,15 @@ func (m *Instance) kotlinIntRemImpl(d int, this int32, other int32) int32 {
 	tmp0Subject = other
 	if tmp0Subject == int32(0) {
 		s1 = m.stringLiteralLatin1(d+1, int32(125))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinArithmeticExceptionInit(d+1, (*KotlinArithmeticException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return int32(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return int32(0)
 	} else {
 		s0_1 = rt.I32RemS(this, other)
 	}
@@ -19483,7 +23086,12 @@ func (m *Instance) kotlinIntDecImpl(d int, this int32) int32 {
 }
 
 func (m *Instance) kotlinIntRangeToImpl(d int, this int32, other int32) *KotlinRangesIntRange {
-	return m.kotlinRangesIntRangeInit(d+1, (*KotlinRangesIntRange)(nil), this, other)
+	var s0 *KotlinRangesIntRange
+	s0 = m.kotlinRangesIntRangeInit(d+1, (*KotlinRangesIntRange)(nil), this, other)
+	if m.exn != nil {
+		return (*KotlinRangesIntRange)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinIntToByteImpl(d int, this int32) int32 {
@@ -19506,7 +23114,12 @@ func (m *Instance) kotlinIntToStringImpl(d int, this int32) *KotlinString {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinWasmInternalItoa32(d+1, this)
+	var s0 *KotlinString
+	s0 = m.kotlinWasmInternalItoa32(d+1, this)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinIntEqualsImpl(d int, this int32, other *KotlinAny) int32 {
@@ -19540,6 +23153,9 @@ func (m *Instance) kotlinIntCompareTo(d int, this *KotlinAny, other int32) int32
 	s0 = rt.ViewAs[KotlinInt](this).Value
 	tmp0This = s0
 	s0 = m.kotlinIntCompareToImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -19548,7 +23164,7 @@ func (m *Instance) kotlinIntCompareTo2(d int, this *KotlinAny, other *KotlinAny)
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
 	if other == nil {
@@ -19564,9 +23180,16 @@ func (m *Instance) kotlinIntCompareTo2(d int, this *KotlinAny, other *KotlinAny)
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g344))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinIntCompareTo(d+1, s0, s1)
+	s0_1 = m.kotlinIntCompareTo(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinIntToString(d int, this *KotlinAny) *KotlinString {
@@ -19574,11 +23197,16 @@ func (m *Instance) kotlinIntToString(d int, this *KotlinAny) *KotlinString {
 		rt.Exhausted()
 	}
 	var tmp0This int32
+	var s0_1 *KotlinString
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinInt) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinInt](this).Value
-	return m.kotlinIntToStringImpl(d+1, tmp0This)
+	s0_1 = m.kotlinIntToStringImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinIntEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -19589,6 +23217,9 @@ func (m *Instance) kotlinIntEquals(d int, this *KotlinAny, other *KotlinAny) int
 	s0 = rt.ViewAs[KotlinInt](this).Value
 	tmp0This = s0
 	s0 = m.kotlinIntEqualsImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -19600,6 +23231,9 @@ func (m *Instance) kotlinIntHashCode(d int, this *KotlinAny) int32 {
 	s0 = rt.ViewAs[KotlinInt](this).Value
 	tmp0This = s0
 	s0 = m.kotlinIntHashCodeImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -19651,8 +23285,15 @@ B1:
 	} else {
 		if tmp0Subject == int64(0) {
 			s1_1 = m.stringLiteralLatin1(d+1, int32(125))
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0_2 = m.kotlinArithmeticExceptionInit(d+1, (*KotlinArithmeticException)(nil), s1_1)
-			panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+			if m.exn != nil {
+				return int64(0)
+			}
+			m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+			return int64(0)
 		} else {
 			s0 = rt.I64DivS(this, other)
 		}
@@ -19667,8 +23308,15 @@ func (m *Instance) kotlinLongRemImpl(d int, this int64, other int64) int64 {
 	tmp0Subject = other
 	if tmp0Subject == int64(0) {
 		s1 = m.stringLiteralLatin1(d+1, int32(125))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = m.kotlinArithmeticExceptionInit(d+1, (*KotlinArithmeticException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return int64(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return int64(0)
 	} else {
 		s0_1 = rt.I64RemS(this, other)
 	}
@@ -19687,7 +23335,12 @@ func (m *Instance) kotlinLongToStringImpl(d int, this int64) *KotlinString {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinWasmInternalItoa64(d+1, this)
+	var s0 *KotlinString
+	s0 = m.kotlinWasmInternalItoa64(d+1, this)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinLongEqualsImpl(d int, this int64, other *KotlinAny) int32 {
@@ -19718,20 +23371,31 @@ func (m *Instance) kotlinLongHashCodeImpl(d int, this int64) int32 {
 	this_ = tmp0
 	bitCount = tmp2
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = int64(uint64(this_) >> (uint64(s1) & 63))
 	goto B1
 B1:
 	s0_1 = m.kotlinLongToIntImpl(d+1, (s0 ^ this))
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0_1
 }
 
 func (m *Instance) kotlinLongCompareTo(d int, this *KotlinAny, other int64) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinLong) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinLong](this).Value
-	return m.kotlinLongCompareToImpl(d+1, tmp0This, other)
+	s0_1 = m.kotlinLongCompareToImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinLongCompareTo2(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -19739,7 +23403,7 @@ func (m *Instance) kotlinLongCompareTo2(d int, this *KotlinAny, other *KotlinAny
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s1_1 int64
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
@@ -19756,9 +23420,16 @@ func (m *Instance) kotlinLongCompareTo2(d int, this *KotlinAny, other *KotlinAny
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g345))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinLongCompareTo(d+1, s0, s1_1)
+	s0_1 = m.kotlinLongCompareTo(d+1, s0, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinLongToString(d int, this *KotlinAny) *KotlinString {
@@ -19766,29 +23437,44 @@ func (m *Instance) kotlinLongToString(d int, this *KotlinAny) *KotlinString {
 		rt.Exhausted()
 	}
 	var tmp0This int64
+	var s0_1 *KotlinString
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinLong) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinLong](this).Value
-	return m.kotlinLongToStringImpl(d+1, tmp0This)
+	s0_1 = m.kotlinLongToStringImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinLongEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinLong) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinLong](this).Value
-	return m.kotlinLongEqualsImpl(d+1, tmp0This, other)
+	s0_1 = m.kotlinLongEqualsImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinLongHashCode(d int, this *KotlinAny) int32 {
 	var tmp0This int64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinLong) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinLong](this).Value
-	return m.kotlinLongHashCodeImpl(d+1, tmp0This)
+	s0_1 = m.kotlinLongHashCodeImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinCompanionInit8(d int, this *KotlinCompanion8) *KotlinCompanion8 {
@@ -19809,6 +23495,7 @@ func (m *Instance) kotlinCompanionInit8(d int, this *KotlinCompanion8) *KotlinCo
 
 func (m *Instance) kotlinDoubleCompareToImpl(d int, this float64, other float64) int32 {
 	var thisBits, otherBits, s0 int64
+	var s0_1 int32
 	if this > other {
 		return int32(1)
 	}
@@ -19816,10 +23503,20 @@ func (m *Instance) kotlinDoubleCompareToImpl(d int, this float64, other float64)
 		return int32(-1)
 	}
 	s0 = m.kotlinToBits2(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	thisBits = s0
 	s0 = m.kotlinToBits2(d+1, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	otherBits = s0
-	return m.kotlinLongCompareToImpl(d+1, thisBits, otherBits)
+	s0_1 = m.kotlinLongCompareToImpl(d+1, thisBits, otherBits)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinDoubleToIntImpl(d int, this float64) int32 {
@@ -19838,7 +23535,12 @@ func (m *Instance) kotlinDoubleToStringImpl(d int, this float64) *KotlinString {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinWasmInternalDtoa(d+1, this, int32(0))
+	var s0 *KotlinString
+	s0 = m.kotlinWasmInternalDtoa(d+1, this, int32(0))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinDoubleEqualsImpl(d int, this float64, other *KotlinAny) int32 {
@@ -19852,11 +23554,17 @@ func (m *Instance) kotlinDoubleEqualsImpl(d int, this float64, other *KotlinAny)
 	}
 	if s0 != 0 {
 		s0_1 = m.kotlinToBits2(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 		if !(other != nil && rt.ObjRTT(other) == rttKotlinDouble) {
 			panic(rt.ErrCast)
 		}
 		s1 = rt.ViewAs[KotlinDouble](other).Value
 		s1_1 = m.kotlinToBits2(d+1, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = rt.B2I(s0_1 == s1_1)
 	} else {
 		s0 = int32(0)
@@ -19866,17 +23574,30 @@ func (m *Instance) kotlinDoubleEqualsImpl(d int, this float64, other *KotlinAny)
 
 func (m *Instance) kotlinDoubleHashCodeImpl(d int, this float64) int32 {
 	var s0 int64
+	var s0_1 int32
 	s0 = m.kotlinToBits2(d+1, this)
-	return m.kotlinLongHashCodeImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
+	s0_1 = m.kotlinLongHashCodeImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinDoubleCompareTo(d int, this *KotlinAny, other float64) int32 {
 	var tmp0This float64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinDouble) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinDouble](this).Value
-	return m.kotlinDoubleCompareToImpl(d+1, tmp0This, other)
+	s0_1 = m.kotlinDoubleCompareToImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinDoubleCompareTo2(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -19884,7 +23605,7 @@ func (m *Instance) kotlinDoubleCompareTo2(d int, this *KotlinAny, other *KotlinA
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s1_1 float64
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
@@ -19901,9 +23622,16 @@ func (m *Instance) kotlinDoubleCompareTo2(d int, this *KotlinAny, other *KotlinA
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g346))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinDoubleCompareTo(d+1, s0, s1_1)
+	s0_1 = m.kotlinDoubleCompareTo(d+1, s0, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinDoubleToString(d int, this *KotlinAny) *KotlinString {
@@ -19911,29 +23639,44 @@ func (m *Instance) kotlinDoubleToString(d int, this *KotlinAny) *KotlinString {
 		rt.Exhausted()
 	}
 	var tmp0This float64
+	var s0_1 *KotlinString
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinDouble) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinDouble](this).Value
-	return m.kotlinDoubleToStringImpl(d+1, tmp0This)
+	s0_1 = m.kotlinDoubleToStringImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinDoubleEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
 	var tmp0This float64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinDouble) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinDouble](this).Value
-	return m.kotlinDoubleEqualsImpl(d+1, tmp0This, other)
+	s0_1 = m.kotlinDoubleEqualsImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinDoubleHashCode(d int, this *KotlinAny) int32 {
 	var tmp0This float64
+	var s0_1 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinDouble) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinDouble](this).Value
-	return m.kotlinDoubleHashCodeImpl(d+1, tmp0This)
+	s0_1 = m.kotlinDoubleHashCodeImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinObjectInitializer6(d int) {
@@ -19941,87 +23684,138 @@ func (m *Instance) kotlinObjectInitializer6(d int) {
 	var s0_1 *KotlinCompanion7
 	var s0_2 *KotlinCompanion8
 	s0 = m.kotlinCompanionInit6(d+1, (*KotlinCompanion6)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g22 = s0
 	s0_1 = m.kotlinCompanionInit7(d+1, (*KotlinCompanion7)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g23 = s0_1
 	s0_2 = m.kotlinCompanionInit8(d+1, (*KotlinCompanion8)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g24 = s0_2
 	return
 }
 
 func (m *Instance) kotlinWasmInternalSetK(d int, set int32) {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.g26 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetK(d int) int32 {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return m.g26
 }
 
 func (m *Instance) kotlinWasmInternalSetExp(d int, set int32) {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.g27 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetExp(d int) int32 {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return m.g27
 }
 
 func (m *Instance) kotlinWasmInternalSetFrcMinus(d int, set int64) {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.g28 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetFrcMinus(d int) int64 {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return m.g28
 }
 
 func (m *Instance) kotlinWasmInternalSetFrcPlus(d int, set int64) {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.g29 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetFrcPlus(d int) int64 {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return m.g29
 }
 
 func (m *Instance) kotlinWasmInternalSetFrcPow(d int, set int64) {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.g30 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetFrcPow(d int) int64 {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return m.g30
 }
 
 func (m *Instance) kotlinWasmInternalSetExpPow(d int, set int32) {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.g31 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetExpPow(d int) int32 {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return m.g31
 }
 
 func (m *Instance) kotlinWasmInternalGetEXPPOWERS(d int) *KotlinShortArray {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinShortArray)(nil)
+	}
 	return m.g32
 }
 
 func (m *Instance) kotlinWasmInternalGetFRCPOWERS(d int) *KotlinLongArray {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinLongArray)(nil)
+	}
 	return m.g33
 }
 
@@ -20035,39 +23829,78 @@ func (m *Instance) kotlinWasmInternalDtoa(d int, value float64, isSinglePrecisio
 	var s0_1 *KotlinString
 	var s1 float64
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	if value == float64(0) {
 		s0 = m.kotlinToRawBits(d+1, value)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		if s0 == int64(0) {
 			s0_1 = m.stringLiteralLatin1(d+1, int32(131))
+			if m.exn != nil {
+				return (*KotlinString)(nil)
+			}
 		} else {
 			s0_1 = m.stringLiteralLatin1(d+1, int32(132))
+			if m.exn != nil {
+				return (*KotlinString)(nil)
+			}
 		}
 		return s0_1
 	}
 	s0_2 = m.kotlinIsFinite(d+1, value)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	if s0_2 == 0 {
 		s0_2 = m.kotlinIsNaN(d+1, value)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		if s0_2 != 0 {
 			s0_1 = m.stringLiteralLatin1(d+1, int32(133))
+			if m.exn != nil {
+				return (*KotlinString)(nil)
+			}
 			return s0_1
 		}
 		s1 = m.kotlinIntToDoubleImpl(d+1, int32(0))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_2 = rt.B2I(value < s1)
 		if s0_2 != 0 {
 			s0_1 = m.stringLiteralLatin1(d+1, int32(85))
+			if m.exn != nil {
+				return (*KotlinString)(nil)
+			}
 		} else {
 			s0_1 = m.stringLiteralLatin1(d+1, int32(84))
+			if m.exn != nil {
+				return (*KotlinString)(nil)
+			}
 		}
 		return s0_1
 	}
 	s0_3 = NewKotlinWasmInternalWasmCharArray(rt.MakeSlice(int32(28), int16(0)))
 	buf = s0_3
 	s0_2 = m.kotlinWasmInternalDtoaCore(d+1, buf, value, isSinglePrecision)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	size = s0_2
 	s0_3 = NewKotlinWasmInternalWasmCharArray(rt.MakeSlice(size, int16(0)))
 	ret = s0_3
 	m.kotlinWasmInternalCopyInto(d+1, buf, ret, int32(0), int32(0), size)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_1 = m.kotlinCreateString(d+1, ret)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0_1
 }
 
@@ -20080,22 +23913,46 @@ func (m *Instance) kotlinWasmInternalDtoaCore(d int, buffer *KotlinWasmInternalW
 	var s2 *KotlinWasmInternalCharCodes
 	var s0_1 *KotlinWasmInternalBufferWithOffset
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	value = valueInp
 	s1 = m.kotlinIntToDoubleImpl(d+1, int32(0))
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = rt.B2I(value < s1)
 	sign = s0
 	if sign == int32(1) {
 		value = rt.F64Neg(value)
 		s2 = m.kotlinWasmInternalCharCodesMINUSGetInstance(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2_1 = s2.Code
 		s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		buffer.Elems[uint32(0)] = int16(s2_1)
 	}
 	s0 = m.kotlinWasmInternalGrisu2(d+1, value, buffer, sign, isSinglePrecision)
+	if m.exn != nil {
+		return int32(0)
+	}
 	len_ = s0
 	s0_1 = m.kotlinWasmInternalBufferWithOffsetInit(d+1, (*KotlinWasmInternalBufferWithOffset)(nil), buffer, sign)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s2_1 = m.kotlinWasmInternalGetK(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinWasmInternalPrettify(d+1, s0_1, (len_ - sign), s2_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	len_ = s0
 	return (len_ + sign)
 }
@@ -20106,6 +23963,9 @@ func (m *Instance) kotlinWasmInternalCopyInto(d int, this *KotlinWasmInternalWas
 	_ = it
 	_ = s0
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return
+	}
 	if destinationOffset <= sourceOffset {
 		srcIndex = sourceOffset
 		dstIndex = destinationOffset
@@ -20130,6 +23990,9 @@ func (m *Instance) kotlinWasmInternalCopyInto(d int, this *KotlinWasmInternalWas
 			srcIndex = (srcIndex + increment)
 			dstIndex = (dstIndex + increment)
 			s0 = m.kotlinUnitGetInstance(d + 1)
+			if m.exn != nil {
+				return
+			}
 			goto B7
 		B7:
 			if inductionVariable < times {
@@ -20139,6 +24002,9 @@ func (m *Instance) kotlinWasmInternalCopyInto(d int, this *KotlinWasmInternalWas
 		}
 	}
 	s0 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return
+	}
 	goto B2
 B2:
 	return
@@ -20154,19 +24020,49 @@ func (m *Instance) kotlinWasmInternalStaticInit(d int) {
 	}
 	m.g34 = int32(1)
 	s1 = m.stringLiteralLatin1(d+1, int32(134))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmInternalCharCodesInit(d+1, (*KotlinWasmInternalCharCodes)(nil), s1, int32(0), int32(43))
+	if m.exn != nil {
+		return
+	}
 	m.g35 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(135))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmInternalCharCodesInit(d+1, (*KotlinWasmInternalCharCodes)(nil), s1, int32(1), int32(45))
+	if m.exn != nil {
+		return
+	}
 	m.g36 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(136))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmInternalCharCodesInit(d+1, (*KotlinWasmInternalCharCodes)(nil), s1, int32(2), int32(46))
+	if m.exn != nil {
+		return
+	}
 	m.g37 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(137))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmInternalCharCodesInit(d+1, (*KotlinWasmInternalCharCodes)(nil), s1, int32(3), int32(48))
+	if m.exn != nil {
+		return
+	}
 	m.g38 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(138))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmInternalCharCodesInit(d+1, (*KotlinWasmInternalCharCodes)(nil), s1, int32(4), int32(101))
+	if m.exn != nil {
+		return
+	}
 	m.g39 = s0_1
 	return
 }
@@ -20180,6 +24076,9 @@ func (m *Instance) kotlinWasmInternalCharCodesInit(d int, this *KotlinWasmIntern
 		this = s0
 	}
 	s0_1 = m.kotlinEnumInit(d+1, rt.ViewAs[KotlinEnum](this), name, ordinal)
+	if m.exn != nil {
+		return (*KotlinWasmInternalCharCodes)(nil)
+	}
 	this.Code = code
 	return this
 }
@@ -20189,43 +24088,79 @@ func (m *Instance) kotlinWasmInternalGrisu2(d int, value float64, buffer *Kotlin
 	var exp, uv, sid, tmp2, bitCount, tmp2_, bitCount_, tmp0___, this__, tmp2___, bitCount__, tmp2____, bitCount___, tmp2_____, bitCount____, off, tmp2_______, bitCount_____, tmp2________, bitCount______, expPow, tmp2_________, other__, tmp0_______________, this______________, wpExp, tmp2___________, other____, tmp0__________________, this_________________, s0_1 int32
 	var s0 float32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if isSinglePrecision != 0 {
 		s0 = m.kotlinDoubleToFloatImpl(d+1, value)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = m.kotlinToBits(d+1, s0)
+		if m.exn != nil {
+			return int32(0)
+		}
 		uv = s0_1
 		exp = int32(uint32((uv & int32(2139095040))) >> (uint32(23) & 31))
 		sid = (uv & int32(8388607))
 		s0_2 = m.kotlinWasmInternalToULong(d+1, rt.B2I(rt.B2I(exp == int32(0)) == 0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp0_ = s0_2
 		tmp2 = int32(23)
 		this = tmp0_
 		bitCount = tmp2
 		s0_2 = m.kotlinULongGetDataImpl(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp0__ = s0_2
 		tmp2_ = bitCount
 		this_ = tmp0__
 		bitCount_ = tmp2_
 		s1 = m.kotlinIntToLongImpl(d+1, bitCount_)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_2 = (this_ << (uint64(s1) & 63))
 		goto B3
 	B3:
 		s0_2 = m.kotlinULongInitImpl(d+1, s0_2)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B2
 	B2:
 		tmp0 = s0_2
 		tmp0___ = sid
 		this__ = tmp0___
 		s0_2 = m.kotlinIntToLongImpl(d+1, this__)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_2 = m.kotlinULongInitImpl(d+1, s0_2)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B4
 	B4:
 		tmp2__ = s0_2
 		this___ = tmp0
 		other = tmp2__
 		s0_2 = m.kotlinULongGetDataImpl(d+1, this___)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_2 = (s0_2 + s1)
 		s0_2 = m.kotlinULongInitImpl(d+1, s0_2)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B5
 	B5:
 		frc = s0_2
@@ -20237,48 +24172,81 @@ func (m *Instance) kotlinWasmInternalGrisu2(d int, value float64, buffer *Kotlin
 		exp = (s0_1 - int32(150))
 	} else {
 		s0_2 = m.kotlinToBits2(d+1, value)
+		if m.exn != nil {
+			return int32(0)
+		}
 		uv_ = s0_2
 		tmp0____ = (uv_ & int64(9218868437227405312))
 		tmp2___ = int32(52)
 		this____ = tmp0____
 		bitCount__ = tmp2___
 		s1 = m.kotlinIntToLongImpl(d+1, bitCount__)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_2 = int64(uint64(this____) >> (uint64(s1) & 63))
 		goto B7
 	B7:
 		s0_1 = m.kotlinLongToIntImpl(d+1, s0_2)
+		if m.exn != nil {
+			return int32(0)
+		}
 		exp = s0_1
 		sid_ = (uv_ & int64(4503599627370495))
 		s0_2 = m.kotlinWasmInternalToULong(d+1, rt.B2I(rt.B2I(exp == int32(0)) == 0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp0______ = s0_2
 		tmp2____ = int32(52)
 		this_____ = tmp0______
 		bitCount___ = tmp2____
 		s0_2 = m.kotlinULongGetDataImpl(d+1, this_____)
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp0_______ = s0_2
 		tmp2_____ = bitCount___
 		this______ = tmp0_______
 		bitCount____ = tmp2_____
 		s1 = m.kotlinIntToLongImpl(d+1, bitCount____)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_2 = (this______ << (uint64(s1) & 63))
 		goto B9
 	B9:
 		s0_2 = m.kotlinULongInitImpl(d+1, s0_2)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B8
 	B8:
 		tmp0_____ = s0_2
 		tmp0________ = sid_
 		this_______ = tmp0________
 		s0_2 = m.kotlinULongInitImpl(d+1, this_______)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B10
 	B10:
 		tmp2______ = s0_2
 		this________ = tmp0_____
 		other_ = tmp2______
 		s0_2 = m.kotlinULongGetDataImpl(d+1, this________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other_)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_2 = (s0_2 + s1)
 		s0_2 = m.kotlinULongInitImpl(d+1, s0_2)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B11
 	B11:
 		frc = s0_2
@@ -20290,16 +24258,31 @@ func (m *Instance) kotlinWasmInternalGrisu2(d int, value float64, buffer *Kotlin
 		exp = (s0_1 - int32(1075))
 	}
 	m.kotlinWasmInternalNormalizedBoundaries(d+1, frc, exp, isSinglePrecision)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = m.kotlinWasmInternalGetExp(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	m.kotlinWasmInternalGetCachedPower(d+1, s0_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0_________ = frc
 	this_________ = tmp0_________
 	tmp0__________ = this_________
 	this__________ = tmp0__________
 	s0_2 = m.kotlinULongGetDataImpl(d+1, this__________)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B14
 B14:
 	s0_1 = m.kotlinCountLeadingZeroBits(d+1, s0_2)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B13
 B13:
 	off = s0_1
@@ -20308,27 +24291,51 @@ B13:
 	this___________ = tmp0___________
 	bitCount_____ = tmp2_______
 	s0_2 = m.kotlinULongGetDataImpl(d+1, this___________)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0____________ = s0_2
 	tmp2________ = bitCount_____
 	this____________ = tmp0____________
 	bitCount______ = tmp2________
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount______)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_2 = (this____________ << (uint64(s1) & 63))
 	goto B16
 B16:
 	s0_2 = m.kotlinULongInitImpl(d+1, s0_2)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B15
 B15:
 	frc = s0_2
 	exp = (exp - off)
 	s0_2 = m.kotlinWasmInternalGetFrcPow(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	frcPow = s0_2
 	s0_1 = m.kotlinWasmInternalGetExpPow(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	expPow = s0_1
 	s0_2 = m.kotlinWasmInternalUmul64f(d+1, frc, frcPow)
+	if m.exn != nil {
+		return int32(0)
+	}
 	wFrc = s0_2
 	s0_2 = m.kotlinWasmInternalGetFrcPlus(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_2 = m.kotlinWasmInternalUmul64f(d+1, s0_2, frcPow)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0_____________ = s0_2
 	tmp2_________ = int32(1)
 	this_____________ = tmp0_____________
@@ -20337,6 +24344,9 @@ B15:
 	tmp0_______________ = other__
 	this______________ = tmp0_______________
 	s0_1 = m.kotlinUIntGetDataImpl(d+1, this______________)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_2 = int64(uint32(s0_1))
 	goto B18
 B18:
@@ -20344,19 +24354,40 @@ B18:
 	this_______________ = tmp0______________
 	other___ = tmp2__________
 	s0_2 = m.kotlinULongGetDataImpl(d+1, this_______________)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other___)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_2 = (s0_2 - s1)
 	s0_2 = m.kotlinULongInitImpl(d+1, s0_2)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B19
 B19:
 	goto B17
 B17:
 	wpFrc = s0_2
 	s0_1 = m.kotlinWasmInternalGetExp(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = m.kotlinWasmInternalUmul64e(d+1, s0_1, expPow)
+	if m.exn != nil {
+		return int32(0)
+	}
 	wpExp = s0_1
 	s0_2 = m.kotlinWasmInternalGetFrcMinus(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_2 = m.kotlinWasmInternalUmul64f(d+1, s0_2, frcPow)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0________________ = s0_2
 	tmp2___________ = int32(1)
 	this________________ = tmp0________________
@@ -20365,6 +24396,9 @@ B17:
 	tmp0__________________ = other____
 	this_________________ = tmp0__________________
 	s0_1 = m.kotlinUIntGetDataImpl(d+1, this_________________)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_2 = int64(uint32(s0_1))
 	goto B21
 B21:
@@ -20372,9 +24406,18 @@ B21:
 	this__________________ = tmp0_________________
 	other_____ = tmp2____________
 	s0_2 = m.kotlinULongGetDataImpl(d+1, this__________________)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other_____)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_2 = (s0_2 + s1)
 	s0_2 = m.kotlinULongInitImpl(d+1, s0_2)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B22
 B22:
 	goto B20
@@ -20385,13 +24428,25 @@ B20:
 	this___________________ = tmp0___________________
 	other______ = tmp2_____________
 	s0_2 = m.kotlinULongGetDataImpl(d+1, this___________________)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other______)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_2 = (s0_2 - s1)
 	s0_2 = m.kotlinULongInitImpl(d+1, s0_2)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B23
 B23:
 	delta = s0_2
 	s0_1 = m.kotlinWasmInternalGenDigits(d+1, buffer, wFrc, wpFrc, wpExp, delta, sign)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0_1
 }
 
@@ -20403,16 +24458,37 @@ func (m *Instance) kotlinWasmInternalPrettify(d int, buffer *KotlinWasmInternalB
 	var s2 *KotlinWasmInternalCharCodes
 	var s0_1, s1_1 *KotlinWasmInternalBufferWithOffset
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	length = lengthInp
 	if k == int32(0) {
 		s2 = m.kotlinWasmInternalCharCodesDOTGetInstance(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2_1 = s2.Code
 		s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, length, s2_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2 = m.kotlinWasmInternalCharCodes0GetInstance(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2_1 = s2.Code
 		s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, (length + int32(1)), s2_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		return (length + int32(2))
 	}
 	kk = (length + k)
@@ -20430,9 +24506,18 @@ func (m *Instance) kotlinWasmInternalPrettify(d int, buffer *KotlinWasmInternalB
 				i = inductionVariable
 				inductionVariable = (inductionVariable + int32(1))
 				s2 = m.kotlinWasmInternalCharCodes0GetInstance(d + 1)
+				if m.exn != nil {
+					return int32(0)
+				}
 				s2_1 = s2.Code
 				s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+				if m.exn != nil {
+					return int32(0)
+				}
 				m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, i, s2_1)
+				if m.exn != nil {
+					return int32(0)
+				}
 				if inductionVariable < last {
 					continue L5
 				}
@@ -20440,13 +24525,31 @@ func (m *Instance) kotlinWasmInternalPrettify(d int, buffer *KotlinWasmInternalB
 			}
 		}
 		s2 = m.kotlinWasmInternalCharCodesDOTGetInstance(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2_1 = s2.Code
 		s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, kk, s2_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2 = m.kotlinWasmInternalCharCodes0GetInstance(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2_1 = s2.Code
 		s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, (kk + int32(1)), s2_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		return (kk + int32(2))
 	} else {
 		if kk > int32(0) {
@@ -20464,10 +24567,22 @@ func (m *Instance) kotlinWasmInternalPrettify(d int, buffer *KotlinWasmInternalB
 			goto B10
 		B10:
 			m.kotlinWasmInternalBufferWithOffsetMemoryCopy(d+1, s0_1, s1, s2_1, s3)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinWasmInternalCharCodesDOTGetInstance(d + 1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2_1 = s2.Code
 			s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, kk, s2_1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			return (length + int32(1))
 		} else {
 			if int32(-6) < kk {
@@ -20478,14 +24593,35 @@ func (m *Instance) kotlinWasmInternalPrettify(d int, buffer *KotlinWasmInternalB
 			if s0 != 0 {
 				offset = (int32(2) - kk)
 				m.kotlinWasmInternalBufferWithOffsetMemoryCopy(d+1, buffer, offset, int32(0), length)
+				if m.exn != nil {
+					return int32(0)
+				}
 				s2 = m.kotlinWasmInternalCharCodes0GetInstance(d + 1)
+				if m.exn != nil {
+					return int32(0)
+				}
 				s2_1 = s2.Code
 				s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+				if m.exn != nil {
+					return int32(0)
+				}
 				m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, int32(0), s2_1)
+				if m.exn != nil {
+					return int32(0)
+				}
 				s2 = m.kotlinWasmInternalCharCodesDOTGetInstance(d + 1)
+				if m.exn != nil {
+					return int32(0)
+				}
 				s2_1 = s2.Code
 				s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+				if m.exn != nil {
+					return int32(0)
+				}
 				m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, int32(1), s2_1)
+				if m.exn != nil {
+					return int32(0)
+				}
 				inductionVariable_ = int32(2)
 				if inductionVariable_ < offset {
 				L14:
@@ -20493,9 +24629,18 @@ func (m *Instance) kotlinWasmInternalPrettify(d int, buffer *KotlinWasmInternalB
 						i_ = inductionVariable_
 						inductionVariable_ = (inductionVariable_ + int32(1))
 						s2 = m.kotlinWasmInternalCharCodes0GetInstance(d + 1)
+						if m.exn != nil {
+							return int32(0)
+						}
 						s2_1 = s2.Code
 						s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+						if m.exn != nil {
+							return int32(0)
+						}
 						m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, i_, s2_1)
+						if m.exn != nil {
+							return int32(0)
+						}
 						if inductionVariable_ < offset {
 							continue L14
 						}
@@ -20506,26 +24651,68 @@ func (m *Instance) kotlinWasmInternalPrettify(d int, buffer *KotlinWasmInternalB
 			} else {
 				if length == int32(1) {
 					s2 = m.kotlinWasmInternalCharCodesEGetInstance(d + 1)
+					if m.exn != nil {
+						return int32(0)
+					}
 					s2_1 = s2.Code
 					s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+					if m.exn != nil {
+						return int32(0)
+					}
 					m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, int32(1), s2_1)
+					if m.exn != nil {
+						return int32(0)
+					}
 					s0_1 = m.kotlinWasmInternalBufferWithOffsetOffsetABitMore(d+1, buffer, int32(2))
+					if m.exn != nil {
+						return int32(0)
+					}
 					s0 = m.kotlinWasmInternalGenExponent(d+1, s0_1, (kk - int32(1)))
+					if m.exn != nil {
+						return int32(0)
+					}
 					length = s0
 					return (length + int32(2))
 				} else {
 					len_ = length
 					m.kotlinWasmInternalBufferWithOffsetMemoryCopy(d+1, buffer, int32(2), int32(1), (len_ - int32(1)))
+					if m.exn != nil {
+						return int32(0)
+					}
 					s2 = m.kotlinWasmInternalCharCodesDOTGetInstance(d + 1)
+					if m.exn != nil {
+						return int32(0)
+					}
 					s2_1 = s2.Code
 					s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+					if m.exn != nil {
+						return int32(0)
+					}
 					m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, int32(1), s2_1)
+					if m.exn != nil {
+						return int32(0)
+					}
 					s2 = m.kotlinWasmInternalCharCodesEGetInstance(d + 1)
+					if m.exn != nil {
+						return int32(0)
+					}
 					s2_1 = s2.Code
 					s2_1 = m.kotlinIntToCharImpl(d+1, s2_1)
+					if m.exn != nil {
+						return int32(0)
+					}
 					m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, (len_ + int32(1)), s2_1)
+					if m.exn != nil {
+						return int32(0)
+					}
 					s1_1 = m.kotlinWasmInternalBufferWithOffsetOffsetABitMore(d+1, buffer, (len_ + int32(2)))
+					if m.exn != nil {
+						return int32(0)
+					}
 					s1 = m.kotlinWasmInternalGenExponent(d+1, s1_1, (kk - int32(1)))
+					if m.exn != nil {
+						return int32(0)
+					}
 					s0 = (length + s1)
 					length = s0
 					return (length + int32(2))
@@ -20564,25 +24751,42 @@ func (m *Instance) kotlinWasmInternalBufferWithOffsetMemoryCopy(d int, this *Kot
 	s1 = this.Buf
 	s2 = this.Off
 	m.kotlinWasmInternalCopyInto(d+1, s0_1, s1, (s2 + destAddr), startIdx, len_)
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
 func (m *Instance) kotlinWasmInternalBufferWithOffsetOffsetABitMore(d int, this *KotlinWasmInternalBufferWithOffset, anotherOff int32) *KotlinWasmInternalBufferWithOffset {
 	var s1 *KotlinWasmInternalWasmCharArray
 	var s2 int32
+	var s0 *KotlinWasmInternalBufferWithOffset
 	s1 = this.Buf
 	s2 = this.Off
-	return m.kotlinWasmInternalBufferWithOffsetInit(d+1, (*KotlinWasmInternalBufferWithOffset)(nil), s1, (s2 + anotherOff))
+	s0 = m.kotlinWasmInternalBufferWithOffsetInit(d+1, (*KotlinWasmInternalBufferWithOffset)(nil), s1, (s2 + anotherOff))
+	if m.exn != nil {
+		return (*KotlinWasmInternalBufferWithOffset)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinWasmInternalToULong(d int, this int32) int64 {
 	var tmp0, this_ int32
 	var s0 int64
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0 = this
 	this_ = tmp0
 	s0 = m.kotlinIntToLongImpl(d+1, this_)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B1
 B1:
 	return s0
@@ -20592,20 +24796,32 @@ func (m *Instance) kotlinWasmInternalNormalizedBoundaries(d int, f int64, e_ int
 	var frc, tmp0, tmp0_, this, tmp0__, this_, this__, tmp0___, tmp2___, this____, other_, tmp0_____, this_____, tmp0______, this______, tmp0_______, this_______, tmp0________, this________, smallestNormalizedSignificand, tmp0_________, tmp0__________, tmp0___________, this_________, tmp0____________, this__________, this___________, tmp0_____________, tmp2_________, this_____________, other___, this______________, tmp0_______________, this_______________, s0, s1 int64
 	var tmp2, bitCount, tmp2_, bitCount_, tmp2__, other, tmp0____, this___, exp, off, tmp2____, bitCount__, tmp2_____, bitCount___, m_, tmp2______, bitCount____, tmp2_______, bitCount_____, tmp2________, other__, tmp0______________, this____________, tmp2__________, bitCount______, tmp2___________, bitCount_______, s0_1 int32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return
+	}
 	tmp0_ = f
 	tmp2 = int32(1)
 	this = tmp0_
 	bitCount = tmp2
 	s0 = m.kotlinULongGetDataImpl(d+1, this)
+	if m.exn != nil {
+		return
+	}
 	tmp0__ = s0
 	tmp2_ = bitCount
 	this_ = tmp0__
 	bitCount_ = tmp2_
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount_)
+	if m.exn != nil {
+		return
+	}
 	s0 = (this_ << (uint64(s1) & 63))
 	goto B2
 B2:
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	goto B1
 B1:
 	tmp0 = s0
@@ -20616,6 +24832,9 @@ B1:
 	tmp0____ = other
 	this___ = tmp0____
 	s0_1 = m.kotlinUIntGetDataImpl(d+1, this___)
+	if m.exn != nil {
+		return
+	}
 	s0 = int64(uint32(s0_1))
 	goto B4
 B4:
@@ -20623,9 +24842,18 @@ B4:
 	this____ = tmp0___
 	other_ = tmp2___
 	s0 = m.kotlinULongGetDataImpl(d+1, this____)
+	if m.exn != nil {
+		return
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other_)
+	if m.exn != nil {
+		return
+	}
 	s0 = (s0 + s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	goto B5
 B5:
 	goto B3
@@ -20637,9 +24865,15 @@ B3:
 	tmp0______ = this_____
 	this______ = tmp0______
 	s0 = m.kotlinULongGetDataImpl(d+1, this______)
+	if m.exn != nil {
+		return
+	}
 	goto B7
 B7:
 	s0_1 = m.kotlinCountLeadingZeroBits(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	goto B6
 B6:
 	off = s0_1
@@ -20648,15 +24882,24 @@ B6:
 	this_______ = tmp0_______
 	bitCount__ = tmp2____
 	s0 = m.kotlinULongGetDataImpl(d+1, this_______)
+	if m.exn != nil {
+		return
+	}
 	tmp0________ = s0
 	tmp2_____ = bitCount__
 	this________ = tmp0________
 	bitCount___ = tmp2_____
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount___)
+	if m.exn != nil {
+		return
+	}
 	s0 = (this________ << (uint64(s1) & 63))
 	goto B9
 B9:
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	goto B8
 B8:
 	frc = s0
@@ -20669,20 +24912,32 @@ B8:
 	smallestNormalizedSignificand = s0
 	m_ = (int32(1) + rt.B2I(f == smallestNormalizedSignificand))
 	m.kotlinWasmInternalSetFrcPlus(d+1, frc)
+	if m.exn != nil {
+		return
+	}
 	tmp0___________ = f
 	tmp2______ = m_
 	this_________ = tmp0___________
 	bitCount____ = tmp2______
 	s0 = m.kotlinULongGetDataImpl(d+1, this_________)
+	if m.exn != nil {
+		return
+	}
 	tmp0____________ = s0
 	tmp2_______ = bitCount____
 	this__________ = tmp0____________
 	bitCount_____ = tmp2_______
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount_____)
+	if m.exn != nil {
+		return
+	}
 	s0 = (this__________ << (uint64(s1) & 63))
 	goto B12
 B12:
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	goto B11
 B11:
 	tmp0__________ = s0
@@ -20693,6 +24948,9 @@ B11:
 	tmp0______________ = other__
 	this____________ = tmp0______________
 	s0_1 = m.kotlinUIntGetDataImpl(d+1, this____________)
+	if m.exn != nil {
+		return
+	}
 	s0 = int64(uint32(s0_1))
 	goto B14
 B14:
@@ -20700,9 +24958,18 @@ B14:
 	this_____________ = tmp0_____________
 	other___ = tmp2_________
 	s0 = m.kotlinULongGetDataImpl(d+1, this_____________)
+	if m.exn != nil {
+		return
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other___)
+	if m.exn != nil {
+		return
+	}
 	s0 = (s0 - s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	goto B15
 B15:
 	goto B13
@@ -20712,19 +24979,34 @@ B13:
 	this______________ = tmp0_________
 	bitCount______ = tmp2__________
 	s0 = m.kotlinULongGetDataImpl(d+1, this______________)
+	if m.exn != nil {
+		return
+	}
 	tmp0_______________ = s0
 	tmp2___________ = bitCount______
 	this_______________ = tmp0_______________
 	bitCount_______ = tmp2___________
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount_______)
+	if m.exn != nil {
+		return
+	}
 	s0 = (this_______________ << (uint64(s1) & 63))
 	goto B17
 B17:
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	goto B16
 B16:
 	m.kotlinWasmInternalSetFrcMinus(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinWasmInternalSetExp(d+1, exp)
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
@@ -20736,14 +25018,23 @@ func (m *Instance) kotlinWasmInternalGetCachedPower(d int, minExp int32) {
 	var s0_3 *KotlinLongArray
 	var s0_5 *KotlinShortArray
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return
+	}
 	s0 = m.g24
 	s0_1 = m.kotlinFromBits(d+1, s0, int64(4599094494223104510))
+	if m.exn != nil {
+		return
+	}
 	c_ = s0_1
 	tmp0_ = (int32(-61) - minExp)
 	tmp2 = c_
 	this = tmp0_
 	other = tmp2
 	s0_1 = m.kotlinIntToDoubleImpl(d+1, this)
+	if m.exn != nil {
+		return
+	}
 	s0_1 = float64(s0_1 * other)
 	goto B1
 B1:
@@ -20752,29 +25043,65 @@ B1:
 	this_ = tmp0
 	other_ = tmp2_
 	s1 = m.kotlinIntToDoubleImpl(d+1, other_)
+	if m.exn != nil {
+		return
+	}
 	s0_1 = float64(this_ + s1)
 	goto B2
 B2:
 	dk = s0_1
 	s0_2 = m.kotlinDoubleToIntImpl(d+1, dk)
+	if m.exn != nil {
+		return
+	}
 	k = s0_2
 	s1 = m.kotlinIntToDoubleImpl(d+1, k)
+	if m.exn != nil {
+		return
+	}
 	s0_2 = (k + rt.B2I(rt.B2I(s1 == dk) == 0))
 	k = s0_2
 	index = ((k >> (uint32(3) & 31)) + int32(1))
 	m.kotlinWasmInternalSetK(d+1, (int32(348) - (index << (uint32(3) & 31))))
+	if m.exn != nil {
+		return
+	}
 	s0_3 = m.kotlinWasmInternalGetFRCPOWERS(d + 1)
+	if m.exn != nil {
+		return
+	}
 	s0_4 = m.kotlinLongArrayGet(d+1, s0_3, index)
+	if m.exn != nil {
+		return
+	}
 	tmp0__ = s0_4
 	this__ = tmp0__
 	s0_4 = m.kotlinULongInitImpl(d+1, this__)
+	if m.exn != nil {
+		return
+	}
 	goto B3
 B3:
 	m.kotlinWasmInternalSetFrcPow(d+1, s0_4)
+	if m.exn != nil {
+		return
+	}
 	s0_5 = m.kotlinWasmInternalGetEXPPOWERS(d + 1)
+	if m.exn != nil {
+		return
+	}
 	s0_2 = m.kotlinShortArrayGet(d+1, s0_5, index)
+	if m.exn != nil {
+		return
+	}
 	s0_2 = m.kotlinShortToIntImpl(d+1, s0_2)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinWasmInternalSetExpPow(d+1, s0_2)
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
@@ -20782,14 +25109,26 @@ func (m *Instance) kotlinWasmInternalUmul64f(d int, u int64, v int64) int64 {
 	var u0, tmp0, tmp2, this, other, v0, tmp0_, tmp2_, this_, other_, u1, tmp0__, this__, tmp0___, this___, v1, tmp0____, this____, tmp0_____, this_____, l, tmp0______, tmp2______, this______, other__, t, tmp0_______, tmp0________, tmp2_______, this_______, other___, tmp2________, tmp0_________, this________, tmp0__________, this_________, this__________, other____, w, tmp0___________, tmp0____________, tmp2___________, this___________, other_____, tmp2____________, tmp0_____________, tmp2_____________, this____________, other______, this_____________, other_______, tmp0______________, this______________, tmp0_______________, tmp2_______________, this________________, other_________, tmp0_________________, this_________________, tmp0__________________, this__________________, tmp0___________________, this___________________, tmp0____________________, this____________________, tmp0_____________________, tmp0______________________, tmp0_______________________, tmp2____________________, this_____________________, other__________, tmp2_____________________, this______________________, other___________, tmp2______________________, this_______________________, other____________, s0, s1 int64
 	var tmp2__, bitCount, tmp2___, bitCount_, tmp2____, bitCount__, tmp2_____, bitCount___, tmp2_________, bitCount____, tmp2__________, bitCount_____, tmp2______________, other________, tmp0________________, this_______________, tmp2________________, bitCount______, tmp2_________________, bitCount_______, tmp2__________________, bitCount________, tmp2___________________, bitCount_________, s0_1 int32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0 = u
 	tmp2 = int64(4294967295)
 	this = tmp0
 	other = tmp2
 	s0 = m.kotlinULongGetDataImpl(d+1, this)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 & s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B1
 B1:
 	u0 = s0
@@ -20798,9 +25137,18 @@ B1:
 	this_ = tmp0_
 	other_ = tmp2_
 	s0 = m.kotlinULongGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other_)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 & s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B2
 B2:
 	v0 = s0
@@ -20809,15 +25157,24 @@ B2:
 	this__ = tmp0__
 	bitCount = tmp2__
 	s0 = m.kotlinULongGetDataImpl(d+1, this__)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0___ = s0
 	tmp2___ = bitCount
 	this___ = tmp0___
 	bitCount_ = tmp2___
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount_)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = int64(uint64(this___) >> (uint64(s1) & 63))
 	goto B4
 B4:
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B3
 B3:
 	u1 = s0
@@ -20826,15 +25183,24 @@ B3:
 	this____ = tmp0____
 	bitCount__ = tmp2____
 	s0 = m.kotlinULongGetDataImpl(d+1, this____)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0_____ = s0
 	tmp2_____ = bitCount__
 	this_____ = tmp0_____
 	bitCount___ = tmp2_____
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount___)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = int64(uint64(this_____) >> (uint64(s1) & 63))
 	goto B6
 B6:
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B5
 B5:
 	v1 = s0
@@ -20843,9 +25209,18 @@ B5:
 	this______ = tmp0______
 	other__ = tmp2______
 	s0 = m.kotlinULongGetDataImpl(d+1, this______)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other__)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 * s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B7
 B7:
 	l = s0
@@ -20854,9 +25229,18 @@ B7:
 	this_______ = tmp0________
 	other___ = tmp2_______
 	s0 = m.kotlinULongGetDataImpl(d+1, this_______)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other___)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 * s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B8
 B8:
 	tmp0_______ = s0
@@ -20865,24 +25249,42 @@ B8:
 	this________ = tmp0_________
 	bitCount____ = tmp2_________
 	s0 = m.kotlinULongGetDataImpl(d+1, this________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0__________ = s0
 	tmp2__________ = bitCount____
 	this_________ = tmp0__________
 	bitCount_____ = tmp2__________
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount_____)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = int64(uint64(this_________) >> (uint64(s1) & 63))
 	goto B10
 B10:
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B9
 B9:
 	tmp2________ = s0
 	this__________ = tmp0_______
 	other____ = tmp2________
 	s0 = m.kotlinULongGetDataImpl(d+1, this__________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other____)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 + s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B11
 B11:
 	t = s0
@@ -20891,9 +25293,18 @@ B11:
 	this___________ = tmp0____________
 	other_____ = tmp2___________
 	s0 = m.kotlinULongGetDataImpl(d+1, this___________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other_____)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 * s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B12
 B12:
 	tmp0___________ = s0
@@ -20902,18 +25313,36 @@ B12:
 	this____________ = tmp0_____________
 	other______ = tmp2_____________
 	s0 = m.kotlinULongGetDataImpl(d+1, this____________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other______)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 & s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B13
 B13:
 	tmp2____________ = s0
 	this_____________ = tmp0___________
 	other_______ = tmp2____________
 	s0 = m.kotlinULongGetDataImpl(d+1, this_____________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other_______)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 + s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B14
 B14:
 	w = s0
@@ -20925,6 +25354,9 @@ B14:
 	tmp0________________ = other________
 	this_______________ = tmp0________________
 	s0_1 = m.kotlinUIntGetDataImpl(d+1, this_______________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = int64(uint32(s0_1))
 	goto B16
 B16:
@@ -20932,9 +25364,18 @@ B16:
 	this________________ = tmp0_______________
 	other_________ = tmp2_______________
 	s0 = m.kotlinULongGetDataImpl(d+1, this________________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other_________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 + s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B17
 B17:
 	goto B15
@@ -20945,15 +25386,24 @@ B15:
 	this_________________ = tmp0_________________
 	bitCount______ = tmp2________________
 	s0 = m.kotlinULongGetDataImpl(d+1, this_________________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0__________________ = s0
 	tmp2_________________ = bitCount______
 	this__________________ = tmp0__________________
 	bitCount_______ = tmp2_________________
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount_______)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = int64(uint64(this__________________) >> (uint64(s1) & 63))
 	goto B19
 B19:
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B18
 B18:
 	t = s0
@@ -20962,15 +25412,24 @@ B18:
 	this___________________ = tmp0___________________
 	bitCount________ = tmp2__________________
 	s0 = m.kotlinULongGetDataImpl(d+1, this___________________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0____________________ = s0
 	tmp2___________________ = bitCount________
 	this____________________ = tmp0____________________
 	bitCount_________ = tmp2___________________
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount_________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = int64(uint64(this____________________) >> (uint64(s1) & 63))
 	goto B21
 B21:
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B20
 B20:
 	w = s0
@@ -20979,9 +25438,18 @@ B20:
 	this_____________________ = tmp0_______________________
 	other__________ = tmp2____________________
 	s0 = m.kotlinULongGetDataImpl(d+1, this_____________________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other__________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 * s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B22
 B22:
 	tmp0______________________ = s0
@@ -20989,9 +25457,18 @@ B22:
 	this______________________ = tmp0______________________
 	other___________ = tmp2_____________________
 	s0 = m.kotlinULongGetDataImpl(d+1, this______________________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other___________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 + s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B23
 B23:
 	tmp0_____________________ = s0
@@ -20999,9 +25476,18 @@ B23:
 	this_______________________ = tmp0_____________________
 	other____________ = tmp2______________________
 	s0 = m.kotlinULongGetDataImpl(d+1, this_______________________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other____________)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = (s0 + s1)
 	s0 = m.kotlinULongInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B24
 B24:
 	return s0
@@ -21009,6 +25495,9 @@ B24:
 
 func (m *Instance) kotlinWasmInternalUmul64e(d int, e1 int32, e2 int32) int32 {
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return ((e1 + e2) + int32(64))
 }
 
@@ -21017,6 +25506,9 @@ func (m *Instance) kotlinWasmInternalGenDigits(d int, buffer *KotlinWasmInternal
 	var oneExp, tmp0, this, tmp2, bitCount, tmp2_, bitCount_, tmp2__, other, tmp0_____, this____, p1_, tmp2_____, bitCount__, tmp2______, bitCount___, kappa, tmp0___________, this___________, len_, d_, tmp0Subject, tABLESWITCHSELECTOR, unary, tmp0____________, this____________, tmp0_______________, this_____________, tmp2________, bitCount____, tmp2_________, bitCount_____, tmp2____________, bitCount______, tmp2_____________, bitCount_______, tmp2______________, other______, tmp0______________________, this_____________________, tmp2________________, other________, tmp0_________________________, this________________________, tmp2__________________, other__________, tmp0____________________________, this___________________________, tmp2____________________, bitCount________, tmp2_____________________, bitCount_________, tmp0________________________________, this_______________________________, unary_, tmp0_________________________________, this_________________________________, s0, s1_1, s2 int32
 	var s0_2 *KotlinWasmInternalWasmCharArray
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	delta = deltaInp
 	tmp0 = mpExp
 	this = tmp0
@@ -21029,15 +25521,24 @@ B1:
 	this_ = tmp0_
 	bitCount = tmp2
 	s0_1 = m.kotlinULongGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0__ = s0_1
 	tmp2_ = bitCount
 	this__ = tmp0__
 	bitCount_ = tmp2_
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = (this__ << (uint64(s1) & 63))
 	goto B3
 B3:
 	s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B2
 B2:
 	oneFrc = s0_1
@@ -21049,6 +25550,9 @@ B2:
 	tmp0_____ = other
 	this____ = tmp0_____
 	s0 = m.kotlinUIntGetDataImpl(d+1, this____)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = int64(uint32(s0))
 	goto B5
 B5:
@@ -21056,9 +25560,18 @@ B5:
 	this_____ = tmp0____
 	other_ = tmp2___
 	s0_1 = m.kotlinULongGetDataImpl(d+1, this_____)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = (s0_1 - s1)
 	s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B6
 B6:
 	goto B4
@@ -21069,9 +25582,18 @@ B4:
 	this______ = tmp0______
 	other__ = tmp2____
 	s0_1 = m.kotlinULongGetDataImpl(d+1, this______)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other__)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = (s0_1 - s1)
 	s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B7
 B7:
 	wpWFrc = s0_1
@@ -21080,21 +25602,36 @@ B7:
 	this_______ = tmp0________
 	bitCount__ = tmp2_____
 	s0_1 = m.kotlinULongGetDataImpl(d+1, this_______)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0_________ = s0_1
 	tmp2______ = bitCount__
 	this________ = tmp0_________
 	bitCount___ = tmp2______
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount___)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = int64(uint64(this________) >> (uint64(s1) & 63))
 	goto B9
 B9:
 	s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B8
 B8:
 	tmp0_______ = s0_1
 	this_________ = tmp0_______
 	s0_1 = m.kotlinULongGetDataImpl(d+1, this_________)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinLongToIntImpl(d+1, s0_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B10
 B10:
 	p1_ = s0
@@ -21103,18 +25640,33 @@ B10:
 	this__________ = tmp0__________
 	other___ = tmp2_______
 	s0_1 = m.kotlinULongGetDataImpl(d+1, this__________)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other___)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = (s0_1 & s1)
 	s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B11
 B11:
 	p2_ = s0_1
 	tmp0___________ = p1_
 	this___________ = tmp0___________
 	s0 = m.kotlinUIntInitImpl(d+1, this___________)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B12
 B12:
 	s0 = m.kotlinWasmInternalDecimalCount32(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	kappa = s0
 	len_ = sign
 L13:
@@ -21150,64 +25702,118 @@ L13:
 		}
 	B26:
 		s0 = m.kotlinIntDivImpl(d+1, p1_, int32(1000000000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		d_ = s0
 		s0 = m.kotlinIntRemImpl(d+1, p1_, int32(1000000000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		p1_ = s0
 		pow10 = int64(1000000000)
 		goto B15
 	B25:
 		s0 = m.kotlinIntDivImpl(d+1, p1_, int32(100000000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		d_ = s0
 		s0 = m.kotlinIntRemImpl(d+1, p1_, int32(100000000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		p1_ = s0
 		pow10 = int64(100000000)
 		goto B15
 	B24:
 		s0 = m.kotlinIntDivImpl(d+1, p1_, int32(10000000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		d_ = s0
 		s0 = m.kotlinIntRemImpl(d+1, p1_, int32(10000000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		p1_ = s0
 		pow10 = int64(10000000)
 		goto B15
 	B23:
 		s0 = m.kotlinIntDivImpl(d+1, p1_, int32(1000000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		d_ = s0
 		s0 = m.kotlinIntRemImpl(d+1, p1_, int32(1000000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		p1_ = s0
 		pow10 = int64(1000000)
 		goto B15
 	B22:
 		s0 = m.kotlinIntDivImpl(d+1, p1_, int32(100000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		d_ = s0
 		s0 = m.kotlinIntRemImpl(d+1, p1_, int32(100000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		p1_ = s0
 		pow10 = int64(100000)
 		goto B15
 	B21:
 		s0 = m.kotlinIntDivImpl(d+1, p1_, int32(10000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		d_ = s0
 		s0 = m.kotlinIntRemImpl(d+1, p1_, int32(10000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		p1_ = s0
 		pow10 = int64(10000)
 		goto B15
 	B20:
 		s0 = m.kotlinIntDivImpl(d+1, p1_, int32(1000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		d_ = s0
 		s0 = m.kotlinIntRemImpl(d+1, p1_, int32(1000))
+		if m.exn != nil {
+			return int32(0)
+		}
 		p1_ = s0
 		pow10 = int64(1000)
 		goto B15
 	B19:
 		s0 = m.kotlinIntDivImpl(d+1, p1_, int32(100))
+		if m.exn != nil {
+			return int32(0)
+		}
 		d_ = s0
 		s0 = m.kotlinIntRemImpl(d+1, p1_, int32(100))
+		if m.exn != nil {
+			return int32(0)
+		}
 		p1_ = s0
 		pow10 = int64(100)
 		goto B15
 	B18:
 		s0 = m.kotlinIntDivImpl(d+1, p1_, int32(10))
+		if m.exn != nil {
+			return int32(0)
+		}
 		d_ = s0
 		s0 = m.kotlinIntRemImpl(d+1, p1_, int32(10))
+		if m.exn != nil {
+			return int32(0)
+		}
 		p1_ = s0
 		pow10 = int64(10)
 		goto B15
@@ -21230,14 +25836,26 @@ L13:
 		B28:
 			len_ = s1_1
 			s2 = m.kotlinWasmInternalDigitToChar(d+1, d_)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s0_2.Elems[uint32(unary)] = int16(s2)
 		}
 		s0 = m.kotlinIntDecImpl(d+1, kappa)
+		if m.exn != nil {
+			return int32(0)
+		}
 		kappa = s0
 		tmp0_______________ = p1_
 		this_____________ = tmp0_______________
 		s0_1 = m.kotlinIntToLongImpl(d+1, this_____________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B29
 	B29:
 		tmp0______________ = s0_1
@@ -21245,15 +25863,24 @@ L13:
 		this______________ = tmp0______________
 		bitCount____ = tmp2________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this______________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp0________________ = s0_1
 		tmp2_________ = bitCount____
 		this_______________ = tmp0________________
 		bitCount_____ = tmp2_________
 		s1 = m.kotlinIntToLongImpl(d+1, bitCount_____)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = (this_______________ << (uint64(s1) & 63))
 		goto B31
 	B31:
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B30
 	B30:
 		tmp0_____________ = s0_1
@@ -21261,9 +25888,18 @@ L13:
 		this________________ = tmp0_____________
 		other____ = tmp2__________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other____)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = (s0_1 + s1)
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B32
 	B32:
 		tmp = s0_1
@@ -21272,13 +25908,28 @@ L13:
 		this_________________ = tmp0_________________
 		other_____ = tmp2___________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this_________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other_____)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinUlongCompare(d+1, s0_1, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B33
 	B33:
 		if s0 <= int32(0) {
 			s0 = m.kotlinWasmInternalGetK(d + 1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			m.kotlinWasmInternalSetK(d+1, (s0 + kappa))
+			if m.exn != nil {
+				return int32(0)
+			}
 			tmp0__________________ = pow10
 			tmp2____________ = oneExp
 			s0_2 = buffer
@@ -21288,18 +25939,30 @@ L13:
 			this__________________ = tmp0__________________
 			bitCount______ = tmp2____________
 			s4 = m.kotlinULongGetDataImpl(d+1, this__________________)
+			if m.exn != nil {
+				return int32(0)
+			}
 			tmp0___________________ = s4
 			tmp2_____________ = bitCount______
 			this___________________ = tmp0___________________
 			bitCount_______ = tmp2_____________
 			s5 = m.kotlinIntToLongImpl(d+1, bitCount_______)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s4 = (this___________________ << (uint64(s5) & 63))
 			goto B36
 		B36:
 			s4 = m.kotlinULongInitImpl(d+1, s4)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B35
 		B35:
 			m.kotlinWasmInternalGrisuRound(d+1, s0_2, s1_1, s2_1, s3, s4, wpWFrc)
+			if m.exn != nil {
+				return int32(0)
+			}
 			return len_
 		}
 		continue L13
@@ -21321,6 +25984,9 @@ L37:
 		tmp0______________________ = other______
 		this_____________________ = tmp0______________________
 		s0 = m.kotlinUIntGetDataImpl(d+1, this_____________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = int64(uint32(s0))
 		goto B40
 	B40:
@@ -21328,9 +25994,18 @@ L37:
 		this______________________ = tmp0_____________________
 		other_______ = tmp2_______________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this______________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other_______)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = (s0_1 * s1)
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B41
 	B41:
 		goto B39
@@ -21344,6 +26019,9 @@ L37:
 		tmp0_________________________ = other________
 		this________________________ = tmp0_________________________
 		s0 = m.kotlinUIntGetDataImpl(d+1, this________________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = int64(uint32(s0))
 		goto B43
 	B43:
@@ -21351,9 +26029,18 @@ L37:
 		this_________________________ = tmp0________________________
 		other_________ = tmp2_________________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this_________________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other_________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = (s0_1 * s1)
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B44
 	B44:
 		goto B42
@@ -21367,6 +26054,9 @@ L37:
 		tmp0____________________________ = other__________
 		this___________________________ = tmp0____________________________
 		s0 = m.kotlinUIntGetDataImpl(d+1, this___________________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = int64(uint32(s0))
 		goto B46
 	B46:
@@ -21374,9 +26064,18 @@ L37:
 		this____________________________ = tmp0___________________________
 		other___________ = tmp2___________________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this____________________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other___________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = (s0_1 * s1)
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B47
 	B47:
 		goto B45
@@ -21387,15 +26086,24 @@ L37:
 		this_____________________________ = tmp0_____________________________
 		bitCount________ = tmp2____________________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this_____________________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp0______________________________ = s0_1
 		tmp2_____________________ = bitCount________
 		this______________________________ = tmp0______________________________
 		bitCount_________ = tmp2_____________________
 		s1 = m.kotlinIntToLongImpl(d+1, bitCount_________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = int64(uint64(this______________________________) >> (uint64(s1) & 63))
 		goto B49
 	B49:
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B48
 	B48:
 		d__ = s0_1
@@ -21403,16 +26111,31 @@ L37:
 		tmp0________________________________ = len_
 		this_______________________________ = tmp0________________________________
 		s0_1 = m.kotlinIntToLongImpl(d+1, this_______________________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B50
 	B50:
 		tmp2______________________ = s0_1
 		this________________________________ = tmp0_______________________________
 		other____________ = tmp2______________________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this________________________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other____________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = (s0_1 | s1)
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B51
 	B51:
 		if rt.B2I(s0_1 == int64(0)) == 0 {
@@ -21428,10 +26151,19 @@ L37:
 			s1_1 = unary_
 			this__________________________________ = tmp0__________________________________
 			s2_1 = m.kotlinULongGetDataImpl(d+1, this__________________________________)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinLongToIntImpl(d+1, s2_1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B54
 		B54:
 			s2 = m.kotlinWasmInternalDigitToChar(d+1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s0_2.Elems[uint32(s1_1)] = int16(s2)
 		}
 		tmp0___________________________________ = p2_
@@ -21439,26 +26171,53 @@ L37:
 		this___________________________________ = tmp0___________________________________
 		other_____________ = tmp2_______________________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this___________________________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other_____________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = (s0_1 & s1)
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B55
 	B55:
 		p2_ = s0_1
 		s0 = m.kotlinIntDecImpl(d+1, kappa)
+		if m.exn != nil {
+			return int32(0)
+		}
 		kappa = s0
 		tmp0____________________________________ = p2_
 		tmp2________________________ = delta
 		this____________________________________ = tmp0____________________________________
 		other______________ = tmp2________________________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this____________________________________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other______________)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinUlongCompare(d+1, s0_1, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B56
 	B56:
 		if s0 < int32(0) {
 			s0 = m.kotlinWasmInternalGetK(d + 1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			m.kotlinWasmInternalSetK(d+1, (s0 + kappa))
+			if m.exn != nil {
+				return int32(0)
+			}
 			tmp0_____________________________________ = wpWFrc
 			tmp2_________________________ = unit
 			s0_2 = buffer
@@ -21469,12 +26228,24 @@ L37:
 			this_____________________________________ = tmp0_____________________________________
 			other_______________ = tmp2_________________________
 			s5 = m.kotlinULongGetDataImpl(d+1, this_____________________________________)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s6 = m.kotlinULongGetDataImpl(d+1, other_______________)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s5 = (s5 * s6)
 			s5 = m.kotlinULongInitImpl(d+1, s5)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B58
 		B58:
 			m.kotlinWasmInternalGrisuRound(d+1, s0_2, s1_1, s2_1, s3, s4, s5)
+			if m.exn != nil {
+				return int32(0)
+			}
 			return len_
 		}
 		continue L37
@@ -21489,14 +26260,18 @@ func (m *Instance) kotlinWasmInternalGenExponent(d int, buffer *KotlinWasmIntern
 		rt.Exhausted()
 	}
 	var k, sign, tmp0, this, inductionVariable, last, i, s0, s2 int32
-	var kStr *KotlinString
+	var kStr, s0_1 *KotlinString
 	var s1 *ClassVTable
 	var s1_1 *SpecialITable
-	var s1_2 any
+	var s1_2, fn1 any
 	var s1_3 *rt.Func
+	var own1 bool
 	var s0_2 *KotlinWasmInternalBufferWithOffset
 	var s2_1 *KotlinWasmInternalCharCodes
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	k = kInp
 	sign = rt.B2I(k < int32(0))
 	if sign != 0 {
@@ -21507,7 +26282,11 @@ func (m *Instance) kotlinWasmInternalGenExponent(d int, buffer *KotlinWasmIntern
 	B2:
 		k = s0
 	}
-	kStr = m.kotlinIntToStringImpl(d+1, k)
+	s0_1 = m.kotlinIntToStringImpl(d+1, k)
+	if m.exn != nil {
+		return int32(0)
+	}
+	kStr = s0_1
 	inductionVariable = int32(0)
 	s1 = rt.ViewAs[KotlinAny](kStr).Vtable
 	s1_1 = s1.SpecialITable
@@ -21516,8 +26295,19 @@ func (m *Instance) kotlinWasmInternalGenExponent(d int, buffer *KotlinWasmIntern
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable](s1_2).GetLength
-	s0 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](kStr))
+	fn1, own1 = rt.FnOwn(s1_3, rttFunc14, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) int32)(d+1, rt.ViewAs[KotlinAny](kStr))
+	} else {
+		s0 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, rt.ViewAs[KotlinAny](kStr))
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinIntDecImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	last = s0
 	if inductionVariable <= last {
 	L4:
@@ -21525,7 +26315,13 @@ func (m *Instance) kotlinWasmInternalGenExponent(d int, buffer *KotlinWasmIntern
 			i = inductionVariable
 			inductionVariable = (inductionVariable + int32(1))
 			s2 = m.kotlinStringGet(d+1, rt.ViewAs[KotlinAny](kStr), i)
+			if m.exn != nil {
+				return int32(0)
+			}
 			m.kotlinWasmInternalBufferWithOffsetSet(d+1, buffer, (i + int32(1)), s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			if inductionVariable <= last {
 				continue L4
 			}
@@ -21535,14 +26331,29 @@ func (m *Instance) kotlinWasmInternalGenExponent(d int, buffer *KotlinWasmIntern
 	s0_2 = buffer
 	if sign != 0 {
 		s2_1 = m.kotlinWasmInternalCharCodesMINUSGetInstance(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2 = s2_1.Code
 		s2 = m.kotlinIntToCharImpl(d+1, s2)
+		if m.exn != nil {
+			return int32(0)
+		}
 	} else {
 		s2_1 = m.kotlinWasmInternalCharCodesPLUSGetInstance(d + 1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2 = s2_1.Code
 		s2 = m.kotlinIntToCharImpl(d+1, s2)
+		if m.exn != nil {
+			return int32(0)
+		}
 	}
 	m.kotlinWasmInternalBufferWithOffsetSet(d+1, s0_2, int32(0), s2)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = kStr.Length
 	return (s0 + int32(1))
 }
@@ -21550,13 +26361,25 @@ func (m *Instance) kotlinWasmInternalGenExponent(d int, buffer *KotlinWasmIntern
 func (m *Instance) kotlinWasmInternalDecimalCount32(d int, value int32) int32 {
 	var tmp0, tmp2, this, other, tmp0_, tmp2_, this_, other_, tmp0__, tmp2__, this__, other__, tmp0___, tmp2___, this___, other___, tmp0____, tmp2____, this____, other____, tmp0_____, tmp2_____, this_____, other_____, tmp0______, tmp2______, this______, other______, tmp0_______, tmp2_______, this_______, other_______, tmp0________, tmp2________, this________, other________, s0, s1, s2 int32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0 = value
 	tmp2 = int32(100000)
 	this = tmp0
 	other = tmp2
 	s0 = m.kotlinUIntGetDataImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinUIntGetDataImpl(d+1, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinUintCompare(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B1
 B1:
 	if s0 < int32(0) {
@@ -21565,8 +26388,17 @@ B1:
 		this_ = tmp0_
 		other_ = tmp2_
 		s0 = m.kotlinUIntGetDataImpl(d+1, this_)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinUIntGetDataImpl(d+1, other_)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinUintCompare(d+1, s0, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B3
 	B3:
 		if s0 < int32(0) {
@@ -21575,8 +26407,17 @@ B1:
 			this__ = tmp0__
 			other__ = tmp2__
 			s1 = m.kotlinUIntGetDataImpl(d+1, this__)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinUIntGetDataImpl(d+1, other__)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1 = m.kotlinUintCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B5
 		B5:
 			s0 = (int32(1) + rt.B2I(s1 >= int32(0)))
@@ -21587,8 +26428,17 @@ B1:
 			this___ = tmp0___
 			other___ = tmp2___
 			s1 = m.kotlinUIntGetDataImpl(d+1, this___)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinUIntGetDataImpl(d+1, other___)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1 = m.kotlinUintCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B6
 		B6:
 			s0 = (int32(3) + rt.B2I(s1 >= int32(0)))
@@ -21597,8 +26447,17 @@ B1:
 			this____ = tmp0____
 			other____ = tmp2____
 			s1 = m.kotlinUIntGetDataImpl(d+1, this____)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinUIntGetDataImpl(d+1, other____)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1 = m.kotlinUintCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B7
 		B7:
 			s0 = (s0 + rt.B2I(s1 >= int32(0)))
@@ -21610,8 +26469,17 @@ B1:
 		this_____ = tmp0_____
 		other_____ = tmp2_____
 		s0 = m.kotlinUIntGetDataImpl(d+1, this_____)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinUIntGetDataImpl(d+1, other_____)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinUintCompare(d+1, s0, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B8
 	B8:
 		if s0 < int32(0) {
@@ -21620,8 +26488,17 @@ B1:
 			this______ = tmp0______
 			other______ = tmp2______
 			s1 = m.kotlinUIntGetDataImpl(d+1, this______)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinUIntGetDataImpl(d+1, other______)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1 = m.kotlinUintCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B10
 		B10:
 			s0 = (int32(6) + rt.B2I(s1 >= int32(0)))
@@ -21632,8 +26509,17 @@ B1:
 			this_______ = tmp0_______
 			other_______ = tmp2_______
 			s1 = m.kotlinUIntGetDataImpl(d+1, this_______)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinUIntGetDataImpl(d+1, other_______)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1 = m.kotlinUintCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B11
 		B11:
 			s0 = (int32(8) + rt.B2I(s1 >= int32(0)))
@@ -21642,8 +26528,17 @@ B1:
 			this________ = tmp0________
 			other________ = tmp2________
 			s1 = m.kotlinUIntGetDataImpl(d+1, this________)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinUIntGetDataImpl(d+1, other________)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1 = m.kotlinUintCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B12
 		B12:
 			s0 = (s0 + rt.B2I(s1 >= int32(0)))
@@ -21656,9 +26551,18 @@ func (m *Instance) kotlinWasmInternalDigitToChar(d int, input int32) int32 {
 	var s0 *KotlinWasmInternalCharCodes
 	var s0_1 int32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinWasmInternalCharCodes0GetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = s0.Code
 	s0_1 = m.kotlinIntToCharImpl(d+1, (s0_1 + input))
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0_1
 }
 
@@ -21666,6 +26570,9 @@ func (m *Instance) kotlinWasmInternalGrisuRound(d int, buffer *KotlinWasmInterna
 	var rest, tmp0, tmp2, this, other, tmp0_, tmp0__, tmp2_, this_, other_, tmp2__, this__, other__, tmp0___, tmp0____, tmp2___, this___, other___, tmp2____, this____, other____, tmp0_____, tmp0______, tmp2_____, this_____, other_____, tmp2______, tmp0_______, tmp0________, tmp2_______, this______, other______, tmp2________, this_______, other_______, this________, other________, tmp0___________, tmp2_________, this___________, other_________, s0_1, s1 int64
 	var lastp, digit, tmp0_________, this_________, tmp0__________, this__________, s0 int32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
+	if m.exn != nil {
+		return
+	}
 	rest = restInp
 	lastp = (len_ - int32(1))
 	s0 = int32(uint16(buffer.Elems[uint32(lastp)]))
@@ -21677,8 +26584,17 @@ L1:
 		this = tmp0
 		other = tmp2
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this)
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other)
+		if m.exn != nil {
+			return
+		}
 		s0 = m.kotlinUlongCompare(d+1, s0_1, s1)
+		if m.exn != nil {
+			return
+		}
 		goto B3
 	B3:
 		if s0 < int32(0) {
@@ -21687,9 +26603,18 @@ L1:
 			this_ = tmp0__
 			other_ = tmp2_
 			s0_1 = m.kotlinULongGetDataImpl(d+1, this_)
+			if m.exn != nil {
+				return
+			}
 			s1 = m.kotlinULongGetDataImpl(d+1, other_)
+			if m.exn != nil {
+				return
+			}
 			s0_1 = (s0_1 - s1)
 			s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+			if m.exn != nil {
+				return
+			}
 			goto B5
 		B5:
 			tmp0_ = s0_1
@@ -21697,8 +26622,17 @@ L1:
 			this__ = tmp0_
 			other__ = tmp2__
 			s0_1 = m.kotlinULongGetDataImpl(d+1, this__)
+			if m.exn != nil {
+				return
+			}
 			s1 = m.kotlinULongGetDataImpl(d+1, other__)
+			if m.exn != nil {
+				return
+			}
 			s0 = m.kotlinUlongCompare(d+1, s0_1, s1)
+			if m.exn != nil {
+				return
+			}
 			goto B6
 		B6:
 			s0 = rt.B2I(s0 >= int32(0))
@@ -21711,9 +26645,18 @@ L1:
 			this___ = tmp0____
 			other___ = tmp2___
 			s0_1 = m.kotlinULongGetDataImpl(d+1, this___)
+			if m.exn != nil {
+				return
+			}
 			s1 = m.kotlinULongGetDataImpl(d+1, other___)
+			if m.exn != nil {
+				return
+			}
 			s0_1 = (s0_1 + s1)
 			s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+			if m.exn != nil {
+				return
+			}
 			goto B8
 		B8:
 			tmp0___ = s0_1
@@ -21721,8 +26664,17 @@ L1:
 			this____ = tmp0___
 			other____ = tmp2____
 			s0_1 = m.kotlinULongGetDataImpl(d+1, this____)
+			if m.exn != nil {
+				return
+			}
 			s1 = m.kotlinULongGetDataImpl(d+1, other____)
+			if m.exn != nil {
+				return
+			}
 			s0 = m.kotlinUlongCompare(d+1, s0_1, s1)
+			if m.exn != nil {
+				return
+			}
 			goto B9
 		B9:
 			if s0 < int32(0) {
@@ -21733,9 +26685,18 @@ L1:
 				this_____ = tmp0______
 				other_____ = tmp2_____
 				s0_1 = m.kotlinULongGetDataImpl(d+1, this_____)
+				if m.exn != nil {
+					return
+				}
 				s1 = m.kotlinULongGetDataImpl(d+1, other_____)
+				if m.exn != nil {
+					return
+				}
 				s0_1 = (s0_1 - s1)
 				s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+				if m.exn != nil {
+					return
+				}
 				goto B11
 			B11:
 				tmp0_____ = s0_1
@@ -21744,9 +26705,18 @@ L1:
 				this______ = tmp0________
 				other______ = tmp2_______
 				s0_1 = m.kotlinULongGetDataImpl(d+1, this______)
+				if m.exn != nil {
+					return
+				}
 				s1 = m.kotlinULongGetDataImpl(d+1, other______)
+				if m.exn != nil {
+					return
+				}
 				s0_1 = (s0_1 + s1)
 				s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+				if m.exn != nil {
+					return
+				}
 				goto B12
 			B12:
 				tmp0_______ = s0_1
@@ -21754,17 +26724,35 @@ L1:
 				this_______ = tmp0_______
 				other_______ = tmp2________
 				s0_1 = m.kotlinULongGetDataImpl(d+1, this_______)
+				if m.exn != nil {
+					return
+				}
 				s1 = m.kotlinULongGetDataImpl(d+1, other_______)
+				if m.exn != nil {
+					return
+				}
 				s0_1 = (s0_1 - s1)
 				s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+				if m.exn != nil {
+					return
+				}
 				goto B13
 			B13:
 				tmp2______ = s0_1
 				this________ = tmp0_____
 				other________ = tmp2______
 				s0_1 = m.kotlinULongGetDataImpl(d+1, this________)
+				if m.exn != nil {
+					return
+				}
 				s1 = m.kotlinULongGetDataImpl(d+1, other________)
+				if m.exn != nil {
+					return
+				}
 				s0 = m.kotlinUlongCompare(d+1, s0_1, s1)
+				if m.exn != nil {
+					return
+				}
 				goto B14
 			B14:
 				s0 = rt.B2I(s0 > int32(0))
@@ -21783,6 +26771,9 @@ L1:
 		goto B16
 	B16:
 		s0 = m.kotlinIntToCharImpl(d+1, (s0 - int32(1)))
+		if m.exn != nil {
+			return
+		}
 		goto B15
 	B15:
 		digit = s0
@@ -21791,9 +26782,18 @@ L1:
 		this___________ = tmp0___________
 		other_________ = tmp2_________
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this___________)
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other_________)
+		if m.exn != nil {
+			return
+		}
 		s0_1 = (s0_1 + s1)
 		s0_1 = m.kotlinULongInitImpl(d+1, s0_1)
+		if m.exn != nil {
+			return
+		}
 		goto B17
 	B17:
 		rest = s0_1
@@ -21807,26 +26807,41 @@ L1:
 
 func (m *Instance) kotlinWasmInternalCharCodesPLUSGetInstance(d int) *KotlinWasmInternalCharCodes {
 	m.kotlinWasmInternalStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmInternalCharCodes)(nil)
+	}
 	return m.g35
 }
 
 func (m *Instance) kotlinWasmInternalCharCodesMINUSGetInstance(d int) *KotlinWasmInternalCharCodes {
 	m.kotlinWasmInternalStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmInternalCharCodes)(nil)
+	}
 	return m.g36
 }
 
 func (m *Instance) kotlinWasmInternalCharCodesDOTGetInstance(d int) *KotlinWasmInternalCharCodes {
 	m.kotlinWasmInternalStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmInternalCharCodes)(nil)
+	}
 	return m.g37
 }
 
 func (m *Instance) kotlinWasmInternalCharCodes0GetInstance(d int) *KotlinWasmInternalCharCodes {
 	m.kotlinWasmInternalStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmInternalCharCodes)(nil)
+	}
 	return m.g38
 }
 
 func (m *Instance) kotlinWasmInternalCharCodesEGetInstance(d int) *KotlinWasmInternalCharCodes {
 	m.kotlinWasmInternalStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmInternalCharCodes)(nil)
+	}
 	return m.g39
 }
 
@@ -21862,436 +26877,697 @@ func (m *Instance) kotlinWasmInternalInitPropertiesNumber2StringKt(d int) {
 		s2 = m.g306
 		this = tmp0__
 		s4_1 = m.kotlinULongGetDataImpl(d+1, this)
+		if m.exn != nil {
+			return
+		}
 		goto B3
 	B3:
 		tmp0___ = int64(-4994806998408183946)
 		this_ = tmp0___
 		s5 = m.kotlinULongGetDataImpl(d+1, this_)
+		if m.exn != nil {
+			return
+		}
 		goto B4
 	B4:
 		tmp0____ = int64(-8424269937281487754)
 		this__ = tmp0____
 		s6 = m.kotlinULongGetDataImpl(d+1, this__)
+		if m.exn != nil {
+			return
+		}
 		goto B5
 	B5:
 		tmp0_____ = int64(-3512093806901185046)
 		this___ = tmp0_____
 		s7 = m.kotlinULongGetDataImpl(d+1, this___)
+		if m.exn != nil {
+			return
+		}
 		goto B6
 	B6:
 		tmp0______ = int64(-7319562523736982739)
 		this____ = tmp0______
 		s8 = m.kotlinULongGetDataImpl(d+1, this____)
+		if m.exn != nil {
+			return
+		}
 		goto B7
 	B7:
 		tmp0_______ = int64(-1865951482774665761)
 		this_____ = tmp0_______
 		s9 = m.kotlinULongGetDataImpl(d+1, this_____)
+		if m.exn != nil {
+			return
+		}
 		goto B8
 	B8:
 		tmp0________ = int64(-6093090917745768758)
 		this______ = tmp0________
 		s10 = m.kotlinULongGetDataImpl(d+1, this______)
+		if m.exn != nil {
+			return
+		}
 		goto B9
 	B9:
 		tmp0_________ = int64(-38366372719436721)
 		this_______ = tmp0_________
 		s11 = m.kotlinULongGetDataImpl(d+1, this_______)
+		if m.exn != nil {
+			return
+		}
 		goto B10
 	B10:
 		tmp0__________ = int64(-4731433901725329908)
 		this________ = tmp0__________
 		s12 = m.kotlinULongGetDataImpl(d+1, this________)
+		if m.exn != nil {
+			return
+		}
 		goto B11
 	B11:
 		tmp0___________ = int64(-8228041688891786180)
 		this_________ = tmp0___________
 		s13 = m.kotlinULongGetDataImpl(d+1, this_________)
+		if m.exn != nil {
+			return
+		}
 		goto B12
 	B12:
 		tmp0____________ = int64(-3219690930897053053)
 		this__________ = tmp0____________
 		s14 = m.kotlinULongGetDataImpl(d+1, this__________)
+		if m.exn != nil {
+			return
+		}
 		goto B13
 	B13:
 		tmp0_____________ = int64(-7101705404292871755)
 		this___________ = tmp0_____________
 		s15 = m.kotlinULongGetDataImpl(d+1, this___________)
+		if m.exn != nil {
+			return
+		}
 		goto B14
 	B14:
 		tmp0______________ = int64(-1541319077368263733)
 		this____________ = tmp0______________
 		s16 = m.kotlinULongGetDataImpl(d+1, this____________)
+		if m.exn != nil {
+			return
+		}
 		goto B15
 	B15:
 		tmp0_______________ = int64(-5851220927660403859)
 		this_____________ = tmp0_______________
 		s17 = m.kotlinULongGetDataImpl(d+1, this_____________)
+		if m.exn != nil {
+			return
+		}
 		goto B16
 	B16:
 		tmp0________________ = int64(-9062348037703676329)
 		this______________ = tmp0________________
 		s18 = m.kotlinULongGetDataImpl(d+1, this______________)
+		if m.exn != nil {
+			return
+		}
 		goto B17
 	B17:
 		tmp0_________________ = int64(-4462904269766699465)
 		this_______________ = tmp0_________________
 		s19 = m.kotlinULongGetDataImpl(d+1, this_______________)
+		if m.exn != nil {
+			return
+		}
 		goto B18
 	B18:
 		tmp0__________________ = int64(-8027971522334779313)
 		this________________ = tmp0__________________
 		s20 = m.kotlinULongGetDataImpl(d+1, this________________)
+		if m.exn != nil {
+			return
+		}
 		goto B19
 	B19:
 		tmp0___________________ = int64(-2921563150702462265)
 		this_________________ = tmp0___________________
 		s21 = m.kotlinULongGetDataImpl(d+1, this_________________)
+		if m.exn != nil {
+			return
+		}
 		goto B20
 	B20:
 		tmp0____________________ = int64(-6879582898840692748)
 		this__________________ = tmp0____________________
 		s22 = m.kotlinULongGetDataImpl(d+1, this__________________)
+		if m.exn != nil {
+			return
+		}
 		goto B21
 	B21:
 		tmp0_____________________ = int64(-1210330751515841307)
 		this___________________ = tmp0_____________________
 		s23 = m.kotlinULongGetDataImpl(d+1, this___________________)
+		if m.exn != nil {
+			return
+		}
 		goto B22
 	B22:
 		tmp0______________________ = int64(-5604615407819967858)
 		this____________________ = tmp0______________________
 		s24 = m.kotlinULongGetDataImpl(d+1, this____________________)
+		if m.exn != nil {
+			return
+		}
 		goto B23
 	B23:
 		tmp0_______________________ = int64(-8878612607581929669)
 		this_____________________ = tmp0_______________________
 		s25 = m.kotlinULongGetDataImpl(d+1, this_____________________)
+		if m.exn != nil {
+			return
+		}
 		goto B24
 	B24:
 		tmp0________________________ = int64(-4189117143640191558)
 		this______________________ = tmp0________________________
 		s26 = m.kotlinULongGetDataImpl(d+1, this______________________)
+		if m.exn != nil {
+			return
+		}
 		goto B25
 	B25:
 		tmp0_________________________ = int64(-7823984217374209642)
 		this_______________________ = tmp0_________________________
 		s27 = m.kotlinULongGetDataImpl(d+1, this_______________________)
+		if m.exn != nil {
+			return
+		}
 		goto B26
 	B26:
 		tmp0__________________________ = int64(-2617598379430861436)
 		this________________________ = tmp0__________________________
 		s28 = m.kotlinULongGetDataImpl(d+1, this________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B27
 	B27:
 		tmp0___________________________ = int64(-6653111496142234890)
 		this_________________________ = tmp0___________________________
 		s29 = m.kotlinULongGetDataImpl(d+1, this_________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B28
 	B28:
 		tmp0____________________________ = int64(-872862063775190746)
 		this__________________________ = tmp0____________________________
 		s30 = m.kotlinULongGetDataImpl(d+1, this__________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B29
 	B29:
 		tmp0_____________________________ = int64(-5353181642124984136)
 		this___________________________ = tmp0_____________________________
 		s31 = m.kotlinULongGetDataImpl(d+1, this___________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B30
 	B30:
 		tmp0______________________________ = int64(-8691279853972075893)
 		this____________________________ = tmp0______________________________
 		s32 = m.kotlinULongGetDataImpl(d+1, this____________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B31
 	B31:
 		tmp0_______________________________ = int64(-3909969587797413805)
 		this_____________________________ = tmp0_______________________________
 		s33 = m.kotlinULongGetDataImpl(d+1, this_____________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B32
 	B32:
 		tmp0________________________________ = int64(-7616003081050118571)
 		this______________________________ = tmp0________________________________
 		s34 = m.kotlinULongGetDataImpl(d+1, this______________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B33
 	B33:
 		tmp0_________________________________ = int64(-2307682335666372931)
 		this_______________________________ = tmp0_________________________________
 		s35 = m.kotlinULongGetDataImpl(d+1, this_______________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B34
 	B34:
 		tmp0__________________________________ = int64(-6422206049907525489)
 		this________________________________ = tmp0__________________________________
 		s36 = m.kotlinULongGetDataImpl(d+1, this________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B35
 	B35:
 		tmp0___________________________________ = int64(-528786136287117932)
 		this_________________________________ = tmp0___________________________________
 		s37 = m.kotlinULongGetDataImpl(d+1, this_________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B36
 	B36:
 		tmp0____________________________________ = int64(-5096825099203863601)
 		this__________________________________ = tmp0____________________________________
 		s38 = m.kotlinULongGetDataImpl(d+1, this__________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B37
 	B37:
 		tmp0_____________________________________ = int64(-8500279345513818773)
 		this___________________________________ = tmp0_____________________________________
 		s39 = m.kotlinULongGetDataImpl(d+1, this___________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B38
 	B38:
 		tmp0______________________________________ = int64(-3625356651333078602)
 		this____________________________________ = tmp0______________________________________
 		s40 = m.kotlinULongGetDataImpl(d+1, this____________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B39
 	B39:
 		tmp0_______________________________________ = int64(-7403949918844649556)
 		this_____________________________________ = tmp0_______________________________________
 		s41 = m.kotlinULongGetDataImpl(d+1, this_____________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B40
 	B40:
 		tmp0________________________________________ = int64(-1991698500497491194)
 		this______________________________________ = tmp0________________________________________
 		s42 = m.kotlinULongGetDataImpl(d+1, this______________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B41
 	B41:
 		tmp0_________________________________________ = int64(-6186779746782440749)
 		this_______________________________________ = tmp0_________________________________________
 		s43 = m.kotlinULongGetDataImpl(d+1, this_______________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B42
 	B42:
 		tmp0__________________________________________ = int64(-177973607073265138)
 		this________________________________________ = tmp0__________________________________________
 		s44 = m.kotlinULongGetDataImpl(d+1, this________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B43
 	B43:
 		tmp0___________________________________________ = int64(-4835449396872013077)
 		this_________________________________________ = tmp0___________________________________________
 		s45 = m.kotlinULongGetDataImpl(d+1, this_________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B44
 	B44:
 		tmp0____________________________________________ = int64(-8305539271883716404)
 		this__________________________________________ = tmp0____________________________________________
 		s46 = m.kotlinULongGetDataImpl(d+1, this__________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B45
 	B45:
 		tmp0_____________________________________________ = int64(-3335171328526686932)
 		this___________________________________________ = tmp0_____________________________________________
 		s47 = m.kotlinULongGetDataImpl(d+1, this___________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B46
 	B46:
 		tmp0______________________________________________ = int64(-7187745005283311616)
 		this____________________________________________ = tmp0______________________________________________
 		s48 = m.kotlinULongGetDataImpl(d+1, this____________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B47
 	B47:
 		tmp0_______________________________________________ = int64(-1669528073709551616)
 		this_____________________________________________ = tmp0_______________________________________________
 		s49 = m.kotlinULongGetDataImpl(d+1, this_____________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B48
 	B48:
 		tmp0________________________________________________ = int64(-5946744073709551616)
 		this______________________________________________ = tmp0________________________________________________
 		s50 = m.kotlinULongGetDataImpl(d+1, this______________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B49
 	B49:
 		tmp0_________________________________________________ = int64(-9133518327554766460)
 		this_______________________________________________ = tmp0_________________________________________________
 		s51 = m.kotlinULongGetDataImpl(d+1, this_______________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B50
 	B50:
 		tmp0__________________________________________________ = int64(-4568956265895094861)
 		this________________________________________________ = tmp0__________________________________________________
 		s52 = m.kotlinULongGetDataImpl(d+1, this________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B51
 	B51:
 		tmp0___________________________________________________ = int64(-8106986416796705680)
 		this_________________________________________________ = tmp0___________________________________________________
 		s53 = m.kotlinULongGetDataImpl(d+1, this_________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B52
 	B52:
 		tmp0____________________________________________________ = int64(-3039304518611664792)
 		this__________________________________________________ = tmp0____________________________________________________
 		s54 = m.kotlinULongGetDataImpl(d+1, this__________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B53
 	B53:
 		tmp0_____________________________________________________ = int64(-6967307053960650171)
 		this___________________________________________________ = tmp0_____________________________________________________
 		s55 = m.kotlinULongGetDataImpl(d+1, this___________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B54
 	B54:
 		tmp0______________________________________________________ = int64(-1341049929119499481)
 		this____________________________________________________ = tmp0______________________________________________________
 		s56 = m.kotlinULongGetDataImpl(d+1, this____________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B55
 	B55:
 		tmp0_______________________________________________________ = int64(-5702008784649933400)
 		this_____________________________________________________ = tmp0_______________________________________________________
 		s57 = m.kotlinULongGetDataImpl(d+1, this_____________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B56
 	B56:
 		tmp0________________________________________________________ = int64(-8951176327949752869)
 		this______________________________________________________ = tmp0________________________________________________________
 		s58 = m.kotlinULongGetDataImpl(d+1, this______________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B57
 	B57:
 		tmp0_________________________________________________________ = int64(-4297245513042813542)
 		this_______________________________________________________ = tmp0_________________________________________________________
 		s59 = m.kotlinULongGetDataImpl(d+1, this_______________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B58
 	B58:
 		tmp0__________________________________________________________ = int64(-7904546130479028392)
 		this________________________________________________________ = tmp0__________________________________________________________
 		s60 = m.kotlinULongGetDataImpl(d+1, this________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B59
 	B59:
 		tmp0___________________________________________________________ = int64(-2737644984756826646)
 		this_________________________________________________________ = tmp0___________________________________________________________
 		s61 = m.kotlinULongGetDataImpl(d+1, this_________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B60
 	B60:
 		tmp0____________________________________________________________ = int64(-6742553186979055798)
 		this__________________________________________________________ = tmp0____________________________________________________________
 		s62 = m.kotlinULongGetDataImpl(d+1, this__________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B61
 	B61:
 		tmp0_____________________________________________________________ = int64(-1006140569036166267)
 		this___________________________________________________________ = tmp0_____________________________________________________________
 		s63 = m.kotlinULongGetDataImpl(d+1, this___________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B62
 	B62:
 		tmp0______________________________________________________________ = int64(-5452481866653427593)
 		this____________________________________________________________ = tmp0______________________________________________________________
 		s64 = m.kotlinULongGetDataImpl(d+1, this____________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B63
 	B63:
 		tmp0_______________________________________________________________ = int64(-8765264286586255934)
 		this_____________________________________________________________ = tmp0_______________________________________________________________
 		s65 = m.kotlinULongGetDataImpl(d+1, this_____________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B64
 	B64:
 		tmp0________________________________________________________________ = int64(-4020214983419339459)
 		this______________________________________________________________ = tmp0________________________________________________________________
 		s66 = m.kotlinULongGetDataImpl(d+1, this______________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B65
 	B65:
 		tmp0_________________________________________________________________ = int64(-7698142301602209613)
 		this_______________________________________________________________ = tmp0_________________________________________________________________
 		s67 = m.kotlinULongGetDataImpl(d+1, this_______________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B66
 	B66:
 		tmp0__________________________________________________________________ = int64(-2430079312244744221)
 		this________________________________________________________________ = tmp0__________________________________________________________________
 		s68 = m.kotlinULongGetDataImpl(d+1, this________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B67
 	B67:
 		tmp0___________________________________________________________________ = int64(-6513398903789220827)
 		this_________________________________________________________________ = tmp0___________________________________________________________________
 		s69 = m.kotlinULongGetDataImpl(d+1, this_________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B68
 	B68:
 		tmp0____________________________________________________________________ = int64(-664674077828931748)
 		this__________________________________________________________________ = tmp0____________________________________________________________________
 		s70 = m.kotlinULongGetDataImpl(d+1, this__________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B69
 	B69:
 		tmp0_____________________________________________________________________ = int64(-5198069505264599346)
 		this___________________________________________________________________ = tmp0_____________________________________________________________________
 		s71 = m.kotlinULongGetDataImpl(d+1, this___________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B70
 	B70:
 		tmp0______________________________________________________________________ = int64(-8575712306248138270)
 		this____________________________________________________________________ = tmp0______________________________________________________________________
 		s72 = m.kotlinULongGetDataImpl(d+1, this____________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B71
 	B71:
 		tmp0_______________________________________________________________________ = int64(-3737760522056206171)
 		this_____________________________________________________________________ = tmp0_______________________________________________________________________
 		s73 = m.kotlinULongGetDataImpl(d+1, this_____________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B72
 	B72:
 		tmp0________________________________________________________________________ = int64(-7487697328667536417)
 		this______________________________________________________________________ = tmp0________________________________________________________________________
 		s74 = m.kotlinULongGetDataImpl(d+1, this______________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B73
 	B73:
 		tmp0_________________________________________________________________________ = int64(-2116491865831296966)
 		this_______________________________________________________________________ = tmp0_________________________________________________________________________
 		s75 = m.kotlinULongGetDataImpl(d+1, this_______________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B74
 	B74:
 		tmp0__________________________________________________________________________ = int64(-6279758049420528746)
 		this________________________________________________________________________ = tmp0__________________________________________________________________________
 		s76 = m.kotlinULongGetDataImpl(d+1, this________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B75
 	B75:
 		tmp0___________________________________________________________________________ = int64(-316522074587315140)
 		this_________________________________________________________________________ = tmp0___________________________________________________________________________
 		s77 = m.kotlinULongGetDataImpl(d+1, this_________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B76
 	B76:
 		tmp0____________________________________________________________________________ = int64(-4938676049251384304)
 		this__________________________________________________________________________ = tmp0____________________________________________________________________________
 		s78 = m.kotlinULongGetDataImpl(d+1, this__________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B77
 	B77:
 		tmp0_____________________________________________________________________________ = int64(-8382449121214030822)
 		this___________________________________________________________________________ = tmp0_____________________________________________________________________________
 		s79 = m.kotlinULongGetDataImpl(d+1, this___________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B78
 	B78:
 		tmp0______________________________________________________________________________ = int64(-3449775934753242068)
 		this____________________________________________________________________________ = tmp0______________________________________________________________________________
 		s80 = m.kotlinULongGetDataImpl(d+1, this____________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B79
 	B79:
 		tmp0_______________________________________________________________________________ = int64(-7273132090830278359)
 		this_____________________________________________________________________________ = tmp0_______________________________________________________________________________
 		s81 = m.kotlinULongGetDataImpl(d+1, this_____________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B80
 	B80:
 		tmp0________________________________________________________________________________ = int64(-1796764746270372707)
 		this______________________________________________________________________________ = tmp0________________________________________________________________________________
 		s82 = m.kotlinULongGetDataImpl(d+1, this______________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B81
 	B81:
 		tmp0_________________________________________________________________________________ = int64(-6041542782089432023)
 		this_______________________________________________________________________________ = tmp0_________________________________________________________________________________
 		s83 = m.kotlinULongGetDataImpl(d+1, this_______________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B82
 	B82:
 		tmp0__________________________________________________________________________________ = int64(-9204148869281624187)
 		this________________________________________________________________________________ = tmp0__________________________________________________________________________________
 		s84 = m.kotlinULongGetDataImpl(d+1, this________________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B83
 	B83:
 		tmp0___________________________________________________________________________________ = int64(-4674203974643163859)
 		this_________________________________________________________________________________ = tmp0___________________________________________________________________________________
 		s85 = m.kotlinULongGetDataImpl(d+1, this_________________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B84
 	B84:
 		tmp0____________________________________________________________________________________ = int64(-8185402070463610993)
 		this__________________________________________________________________________________ = tmp0____________________________________________________________________________________
 		s86 = m.kotlinULongGetDataImpl(d+1, this__________________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B85
 	B85:
 		tmp0_____________________________________________________________________________________ = int64(-3156152948152813503)
 		this___________________________________________________________________________________ = tmp0_____________________________________________________________________________________
 		s87 = m.kotlinULongGetDataImpl(d+1, this___________________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B86
 	B86:
 		tmp0______________________________________________________________________________________ = int64(-7054365918152680535)
 		this____________________________________________________________________________________ = tmp0______________________________________________________________________________________
 		s88 = m.kotlinULongGetDataImpl(d+1, this____________________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B87
 	B87:
 		tmp0_______________________________________________________________________________________ = int64(-1470777745987373095)
 		this_____________________________________________________________________________________ = tmp0_______________________________________________________________________________________
 		s89 = m.kotlinULongGetDataImpl(d+1, this_____________________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B88
 	B88:
 		tmp0________________________________________________________________________________________ = int64(-5798663540173640085)
 		this______________________________________________________________________________________ = tmp0________________________________________________________________________________________
 		s90 = m.kotlinULongGetDataImpl(d+1, this______________________________________________________________________________________)
+		if m.exn != nil {
+			return
+		}
 		goto B89
 	B89:
 		s4_2 = NewKotlinWasmInternalWasmLongArray([]int64{s4_1, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37, s38, s39, s40, s41, s42, s43, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, s54, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79, s80, s81, s82, s83, s84, s85, s86, s87, s88, s89, s90})
@@ -22325,6 +27601,9 @@ func (m *Instance) kotlinWasmInternalGetBoxedBoolean(d int, x int32) *KotlinBool
 			it = tmp0_
 			m.g41 = it
 			s0_1 = m.kotlinUnitGetInstance(d + 1)
+			if m.exn != nil {
+				return (*KotlinBoolean)(nil)
+			}
 			goto B4
 		B4:
 			if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinBoolean)) {
@@ -22350,6 +27629,9 @@ func (m *Instance) kotlinWasmInternalGetBoxedBoolean(d int, x int32) *KotlinBool
 			it_ = tmp0___
 			m.g42 = it_
 			s0_1 = m.kotlinUnitGetInstance(d + 1)
+			if m.exn != nil {
+				return (*KotlinBoolean)(nil)
+			}
 			goto B7
 		B7:
 			if !(this_ == nil || (this_ != nil && rt.ObjRTT(this_) == rttKotlinBoolean)) {
@@ -22372,13 +27654,25 @@ func (m *Instance) kotlinWasmInternalNullableEquals(d int, lhs *KotlinAny, rhs *
 	var tmp *KotlinAny
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
+	var s0 int32
 	if lhs == nil {
 		return rt.B2I(rhs == nil)
 	}
 	tmp = lhs
 	s2 = tmp.Vtable
 	s2_1 = s2.Equals
-	return rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, tmp, rhs)
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc11, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny, *KotlinAny) int32)(d+1, tmp, rhs)
+	} else {
+		s0 = m.guard3(fn1.(func(int, *KotlinAny, *KotlinAny) int32), d+1, tmp, rhs)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinWasmInternalRangeCheck(d int, index int32, size int32) {
@@ -22391,7 +27685,11 @@ func (m *Instance) kotlinWasmInternalRangeCheck(d int, index int32, size int32) 
 	}
 	if s0 != 0 {
 		s0_1 = m.kotlinIndexOutOfBoundsExceptionInit(d+1, (*KotlinIndexOutOfBoundsException)(nil))
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	return
 }
@@ -22399,7 +27697,11 @@ func (m *Instance) kotlinWasmInternalRangeCheck(d int, index int32, size int32) 
 func (m *Instance) kotlinWasmInternalTHROWNPE(d int) {
 	var s0 *KotlinNullPointerException
 	s0 = m.kotlinNullPointerExceptionInit(d+1, (*KotlinNullPointerException)(nil))
-	panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+	if m.exn != nil {
+		return
+	}
+	m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+	return
 }
 
 func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, klass *KotlinAny, isNullable int32) {
@@ -22408,31 +27710,57 @@ func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, kla
 	}
 	var targetType, tmp1ElvisLhs, tmp0ElvisLhs, targetTypeWithNullability, message, valueType, tmp2ElvisLhs, tmp0ElvisLhs_, s0, s1_2, s2 *KotlinString
 	var tmp0, this, tmp0_, it, s0_3 *KotlinAny
-	var s1, s2_1 any
+	var s1, fn1, fn2, fn3, fn4, s2_1, fn5 any
 	var s1_1, s2_2 *rt.Func
+	var own1, own2, own3, own4, own5 bool
 	var s0_1 int32
 	var s0_2 *KotlinClassCastException
 	var s1_3 *KotlinWasmInternalKClassImpl
 	s1 = m.kotlinWasmInternalGetInterfaceVTable(d+1, klass, int64(6362707103299592704))
+	if m.exn != nil {
+		return
+	}
 	if !(rt.IsType(s1, rttClassITable15)) {
 		panic(rt.ErrCast)
 	}
 	s1_1 = rt.As[ClassITable15](s1).GetQualifiedName
-	s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, klass)
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc9, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, klass)
+	} else {
+		s0 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, klass)
+	}
+	if m.exn != nil {
+		return
+	}
 	tmp0ElvisLhs = s0
 	if tmp0ElvisLhs == nil {
 		s1 = m.kotlinWasmInternalGetInterfaceVTable(d+1, klass, int64(6362707103299592704))
+		if m.exn != nil {
+			return
+		}
 		if !(rt.IsType(s1, rttClassITable15)) {
 			panic(rt.ErrCast)
 		}
 		s1_1 = rt.As[ClassITable15](s1).GetSimpleName
-		s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, klass)
+		fn2, own2 = rt.FnOwn(s1_1, rttFunc9, m, false)
+		if own2 {
+			s0 = fn2.(func(int, *KotlinAny) *KotlinString)(d+1, klass)
+		} else {
+			s0 = m.guard4(fn2.(func(int, *KotlinAny) *KotlinString), d+1, klass)
+		}
+		if m.exn != nil {
+			return
+		}
 	} else {
 		s0 = tmp0ElvisLhs
 	}
 	tmp1ElvisLhs = s0
 	if tmp1ElvisLhs == nil {
 		s0 = m.stringLiteralLatin1(d+1, int32(142))
+		if m.exn != nil {
+			return
+		}
 	} else {
 		s0 = tmp1ElvisLhs
 	}
@@ -22444,39 +27772,86 @@ func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, kla
 	}
 	if s0_1 != 0 {
 		s1_2 = m.stringLiteralLatin1(d+1, int32(143))
+		if m.exn != nil {
+			return
+		}
 		s1_2 = m.kotlinStringPlus(d+1, s1_2, rt.ViewAs[KotlinAny](targetType))
+		if m.exn != nil {
+			return
+		}
 		s2 = m.stringLiteralLatin1(d+1, int32(144))
+		if m.exn != nil {
+			return
+		}
 		s1_2 = m.kotlinStringPlus(d+1, s1_2, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s0_2 = m.kotlinClassCastExceptionInit(d+1, (*KotlinClassCastException)(nil), s1_2)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return
 	}
 	if isNullable != 0 {
 		s1_2 = m.stringLiteralLatin1(d+1, int32(145))
+		if m.exn != nil {
+			return
+		}
 		s0 = m.kotlinStringPlus(d+1, targetType, rt.ViewAs[KotlinAny](s1_2))
+		if m.exn != nil {
+			return
+		}
 	} else {
 		s0 = targetType
 	}
 	targetTypeWithNullability = s0
 	if rt.B2I(obj == nil) == 0 {
 		s0_3 = m.kotlinWasmInternalGetKClassFromExpression(d+1, obj)
+		if m.exn != nil {
+			return
+		}
 		tmp0 = s0_3
 		this = tmp0
 		tmp0_ = this
 		it = tmp0_
 		s1 = m.kotlinWasmInternalGetInterfaceVTable(d+1, it, int64(6362707103299592704))
+		if m.exn != nil {
+			return
+		}
 		if !(rt.IsType(s1, rttClassITable15)) {
 			panic(rt.ErrCast)
 		}
 		s1_1 = rt.As[ClassITable15](s1).GetQualifiedName
-		s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, it)
+		fn3, own3 = rt.FnOwn(s1_1, rttFunc9, m, false)
+		if own3 {
+			s0 = fn3.(func(int, *KotlinAny) *KotlinString)(d+1, it)
+		} else {
+			s0 = m.guard4(fn3.(func(int, *KotlinAny) *KotlinString), d+1, it)
+		}
+		if m.exn != nil {
+			return
+		}
 		tmp0ElvisLhs_ = s0
 		if tmp0ElvisLhs_ == nil {
 			s1 = m.kotlinWasmInternalGetInterfaceVTable(d+1, it, int64(6362707103299592704))
+			if m.exn != nil {
+				return
+			}
 			if !(rt.IsType(s1, rttClassITable15)) {
 				panic(rt.ErrCast)
 			}
 			s1_1 = rt.As[ClassITable15](s1).GetSimpleName
-			s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, it)
+			fn4, own4 = rt.FnOwn(s1_1, rttFunc9, m, false)
+			if own4 {
+				s0 = fn4.(func(int, *KotlinAny) *KotlinString)(d+1, it)
+			} else {
+				s0 = m.guard4(fn4.(func(int, *KotlinAny) *KotlinString), d+1, it)
+			}
+			if m.exn != nil {
+				return
+			}
 		} else {
 			s0 = tmp0ElvisLhs_
 		}
@@ -22492,17 +27867,31 @@ func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, kla
 		tmp2ElvisLhs = s0
 		if tmp2ElvisLhs == nil {
 			s0 = m.stringLiteralLatin1(d+1, int32(142))
+			if m.exn != nil {
+				return
+			}
 		} else {
 			s0 = tmp2ElvisLhs
 		}
 		valueType = s0
 		s1_3 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g313))
 		s2_1 = m.kotlinWasmInternalGetInterfaceVTable(d+1, klass, int64(6362707103299592704))
+		if m.exn != nil {
+			return
+		}
 		if !(rt.IsType(s2_1, rttClassITable15)) {
 			panic(rt.ErrCast)
 		}
 		s2_2 = rt.As[ClassITable15](s2_1).Equals
-		s0_1 = rt.FnOfRef(s2_2, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, klass, rt.ViewAs[KotlinAny](s1_3))
+		fn5, own5 = rt.FnOwn(s2_2, rttFunc11, m, false)
+		if own5 {
+			s0_1 = fn5.(func(int, *KotlinAny, *KotlinAny) int32)(d+1, klass, rt.ViewAs[KotlinAny](s1_3))
+		} else {
+			s0_1 = m.guard3(fn5.(func(int, *KotlinAny, *KotlinAny) int32), d+1, klass, rt.ViewAs[KotlinAny](s1_3))
+		}
+		if m.exn != nil {
+			return
+		}
 		if s0_1 != 0 {
 			s0_1 = isNullable
 		} else {
@@ -22510,29 +27899,70 @@ func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, kla
 		}
 		if s0_1 != 0 {
 			s0 = m.stringLiteralLatin1(d+1, int32(146))
+			if m.exn != nil {
+				return
+			}
 			s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](valueType))
+			if m.exn != nil {
+				return
+			}
 		} else {
 			s0 = m.stringLiteralLatin1(d+1, int32(147))
+			if m.exn != nil {
+				return
+			}
 			s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](valueType))
+			if m.exn != nil {
+				return
+			}
 			s1_2 = m.stringLiteralLatin1(d+1, int32(148))
+			if m.exn != nil {
+				return
+			}
 			s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](s1_2))
+			if m.exn != nil {
+				return
+			}
 			s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](targetTypeWithNullability))
+			if m.exn != nil {
+				return
+			}
 			s1_2 = m.stringLiteralLatin1(d+1, int32(149))
+			if m.exn != nil {
+				return
+			}
 			s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](s1_2))
+			if m.exn != nil {
+				return
+			}
 		}
 	} else {
 		s0 = m.stringLiteralLatin1(d+1, int32(143))
+		if m.exn != nil {
+			return
+		}
 		s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](targetTypeWithNullability))
+		if m.exn != nil {
+			return
+		}
 	}
 	message = s0
 	s0_2 = m.kotlinClassCastExceptionInit(d+1, (*KotlinClassCastException)(nil), message)
-	panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+	if m.exn != nil {
+		return
+	}
+	m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+	return
 }
 
 func (m *Instance) kotlinWasmInternalThrowKotlinNothingValueException(d int) {
 	var s0 *KotlinKotlinNothingValueException
 	s0 = m.kotlinKotlinNothingValueExceptionInit(d+1, (*KotlinKotlinNothingValueException)(nil))
-	panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+	if m.exn != nil {
+		return
+	}
+	m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+	return
 }
 
 func (m *Instance) kotlinWasmInternalGetQualifiedName(d int, rtti any) *KotlinString {
@@ -22543,12 +27973,19 @@ func (m *Instance) kotlinWasmInternalGetQualifiedName(d int, rtti any) *KotlinSt
 	var tmp0, this *KotlinAny
 	var s1 *ClassVTable
 	var s1_1 *SpecialITable
-	var s1_2 any
+	var s1_2, fn1 any
 	var s1_3 *rt.Func
+	var own1 bool
 	var s0_1 int32
 	s0 = m.kotlinWasmInternalGetSimpleName(d+1, rtti)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	typeName = s0
 	s0 = m.kotlinWasmInternalGetPackageName(d+1, rtti)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	packageName = s0
 	tmp0 = rt.ViewAs[KotlinAny](packageName)
 	this = tmp0
@@ -22559,7 +27996,15 @@ func (m *Instance) kotlinWasmInternalGetQualifiedName(d int, rtti any) *KotlinSt
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable](s1_2).GetLength
-	s0_1 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this)
+	fn1, own1 = rt.FnOwn(s1_3, rttFunc14, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, *KotlinAny) int32)(d+1, this)
+	} else {
+		s0_1 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, this)
+	}
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_1 = rt.B2I(s0_1 == int32(0))
 	goto B1
 B1:
@@ -22567,8 +28012,17 @@ B1:
 		s0 = typeName
 	} else {
 		s1_4 = m.stringLiteralLatin1(d+1, int32(7))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0 = m.kotlinStringPlus(d+1, packageName, rt.ViewAs[KotlinAny](s1_4))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](typeName))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	}
 	return s0
 }
@@ -22579,6 +28033,9 @@ func (m *Instance) kotlinWasmInternalGetSimpleName(d int, rtti any) *KotlinStrin
 	}
 	var poolId int32
 	var s1 *rt.Func
+	var fn1 any
+	var own1 bool
+	var s0_1 *KotlinString
 	if !(rt.IsType(rtti, rttRTTI)) {
 		panic(rt.ErrCast)
 	}
@@ -22587,7 +28044,16 @@ func (m *Instance) kotlinWasmInternalGetSimpleName(d int, rtti any) *KotlinStrin
 		panic(rt.ErrCast)
 	}
 	s1 = rt.As[RTTI](rtti).SimpleNameStringLoader
-	return rt.FnOfRef(s1, rttFunc5).(func(int, int32) *KotlinString)(d+1, poolId)
+	fn1, own1 = rt.FnOwn(s1, rttFunc5, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, int32) *KotlinString)(d+1, poolId)
+	} else {
+		s0_1 = m.guard11(fn1.(func(int, int32) *KotlinString), d+1, poolId)
+	}
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinWasmInternalGetPackageName(d int, rtti any) *KotlinString {
@@ -22596,6 +28062,9 @@ func (m *Instance) kotlinWasmInternalGetPackageName(d int, rtti any) *KotlinStri
 	}
 	var poolId int32
 	var s1 *rt.Func
+	var fn1 any
+	var own1 bool
+	var s0_1 *KotlinString
 	if !(rt.IsType(rtti, rttRTTI)) {
 		panic(rt.ErrCast)
 	}
@@ -22604,7 +28073,16 @@ func (m *Instance) kotlinWasmInternalGetPackageName(d int, rtti any) *KotlinStri
 		panic(rt.ErrCast)
 	}
 	s1 = rt.As[RTTI](rtti).QualifierStringLoader
-	return rt.FnOfRef(s1, rttFunc5).(func(int, int32) *KotlinString)(d+1, poolId)
+	fn1, own1 = rt.FnOwn(s1, rttFunc5, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, int32) *KotlinString)(d+1, poolId)
+	} else {
+		s0_1 = m.guard11(fn1.(func(int, int32) *KotlinString), d+1, poolId)
+	}
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinWasmInternalIsAnonymousClass(d int, rtti any) int32 {
@@ -22651,6 +28129,9 @@ func (m *Instance) kotlinWasmInternalIsSupportedInterface(d int, obj *KotlinAny,
 	}
 	interfaceArray = s0_1
 	s0_2 = m.kotlinWasmInternalWasmArrayAnyIndexOfValue(d+1, interfaceArray, interfaceId)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return rt.B2I(rt.B2I(s0_2 == int32(-1)) == 0)
 }
 
@@ -22693,6 +28174,9 @@ func (m *Instance) kotlinWasmInternalGetInterfaceVTable(d int, obj *KotlinAny, i
 	s1 = obj.Rtti
 	s1_1 = s1.ImplementedIFaceIds
 	s1_2 = m.kotlinWasmInternalWasmArrayAnyIndexOfValue(d+1, s1_1, interfaceId)
+	if m.exn != nil {
+		return any(nil)
+	}
 	return s0.Elems[uint32(s1_2)]
 }
 
@@ -22707,11 +28191,23 @@ func (m *Instance) kotlinCollectionsCopyInto(d int, this *KotlinArray, destinati
 	_ = s0_2
 	s0 = m.g9
 	s3 = m.kotlinArrayGetSize(d+1, this)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	m.kotlinCollectionsCompanionCheckRangeIndexes(d+1, s0, startIndex, endIndex, s3)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	rangeSize = (endIndex - startIndex)
 	s0 = m.g9
 	s3 = m.kotlinArrayGetSize(d+1, destination)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	m.kotlinCollectionsCompanionCheckRangeIndexes(d+1, s0, destinationOffset, (destinationOffset + rangeSize), s3)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s0_1 = this.Storage
 	tmp0 = s0_1
 	s0_1 = destination.Storage
@@ -22726,6 +28222,9 @@ func (m *Instance) kotlinCollectionsCopyInto(d int, this *KotlinArray, destinati
 	length = tmp8
 	rt.ArrayCopy(destination_.Elems, destinationIndex, source.Elems, sourceIndex, length)
 	s0_2 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	goto B1
 B1:
 	return destination
@@ -22735,7 +28234,12 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements(d int, this *Kot
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinCollectionsCopyOfUninitializedElements2(d+1, this, int32(0), newSize)
+	var s0 *KotlinArray
+	s0 = m.kotlinCollectionsCopyOfUninitializedElements2(d+1, this, int32(0), newSize)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsFill(d int, this *KotlinArray, element *KotlinAny, fromIndex int32, toIndex int32) {
@@ -22746,7 +28250,13 @@ func (m *Instance) kotlinCollectionsFill(d int, this *KotlinArray, element *Kotl
 	var s0 *KotlinCollectionsCompanion2
 	s0 = m.g9
 	s3 = m.kotlinArrayGetSize(d+1, this)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinCollectionsCompanionCheckRangeIndexes(d+1, s0, fromIndex, toIndex, s3)
+	if m.exn != nil {
+		return
+	}
 	inductionVariable = fromIndex
 	if inductionVariable < toIndex {
 	L2:
@@ -22754,6 +28264,9 @@ func (m *Instance) kotlinCollectionsFill(d int, this *KotlinArray, element *Kotl
 			index = inductionVariable
 			inductionVariable = (inductionVariable + int32(1))
 			m.kotlinArraySet(d+1, this, index, element)
+			if m.exn != nil {
+				return
+			}
 			if inductionVariable < toIndex {
 				continue L2
 			}
@@ -22773,6 +28286,8 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements2(d int, this *Ko
 	var s1, s2_3 *KotlinInt
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1, fn2 any
+	var own1, own2 bool
 	var s1_1, s2_2, s0_1 *KotlinString
 	var s0 *KotlinIllegalArgumentException
 	var s0_3 *KotlinUnit
@@ -22783,13 +28298,34 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements2(d int, this *Ko
 		tmp = rt.ViewAs[KotlinAny](s1)
 		s2 = tmp.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own1 {
+			s1_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		} else {
+			s1_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp)
+		}
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
 		s2_2 = m.stringLiteralLatin1(d+1, int32(151))
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
 		s2_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), toIndex)
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_3))
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
 		s0 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return (*KotlinArray)(nil)
 	}
 	tmp0 = newSize
 	size = tmp0
@@ -22797,26 +28333,56 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements2(d int, this *Ko
 	value = tmp0_
 	if value == 0 {
 		s0_1 = m.stringLiteralLatin1(d+1, int32(21))
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
 		s0_2 = rt.ViewAs[KotlinAny](s0_1)
 		goto B5
 	B5:
 		message = s0_2
 		s2 = message.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		fn2, own2 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own2 {
+			s1_1 = fn2.(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		} else {
+			s1_1 = m.guard4(fn2.(func(int, *KotlinAny) *KotlinString), d+1, message)
+		}
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
 		s0 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return (*KotlinArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return (*KotlinArray)(nil)
 	}
 	s0_3 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	goto B3
 B3:
 	s0_4 = m.kotlinArrayInit(d+1, (*KotlinArray)(nil), size)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	goto B2
 B2:
 	result = s0_4
 	s5 = m.kotlinArrayGetSize(d+1, this)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s4 = m.kotlinRangesCoerceAtMost(d+1, toIndex, s5)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s0_4 = m.kotlinCollectionsCopyInto(d+1, this, result, int32(0), fromIndex, s4)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	return result
 }
 
@@ -22831,11 +28397,23 @@ func (m *Instance) kotlinCollectionsCopyInto2(d int, this *KotlinCharArray, dest
 	_ = s0_2
 	s0 = m.g9
 	s3 = m.kotlinCharArrayGetSize(d+1, this)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
 	m.kotlinCollectionsCompanionCheckRangeIndexes(d+1, s0, startIndex, endIndex, s3)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
 	rangeSize = (endIndex - startIndex)
 	s0 = m.g9
 	s3 = m.kotlinCharArrayGetSize(d+1, destination)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
 	m.kotlinCollectionsCompanionCheckRangeIndexes(d+1, s0, destinationOffset, (destinationOffset + rangeSize), s3)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
 	s0_1 = this.Storage
 	tmp0 = s0_1
 	s0_1 = destination.Storage
@@ -22850,6 +28428,9 @@ func (m *Instance) kotlinCollectionsCopyInto2(d int, this *KotlinCharArray, dest
 	length = tmp8
 	rt.ArrayCopy(destination_.Elems, destinationIndex, source.Elems, sourceIndex, length)
 	s0_2 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
 	goto B1
 B1:
 	return destination
@@ -22859,14 +28440,24 @@ func (m *Instance) kotlinCollectionsCopyOf(d int, this *KotlinCharArray, newSize
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinCollectionsCopyOfUninitializedElements3(d+1, this, newSize)
+	var s0 *KotlinCharArray
+	s0 = m.kotlinCollectionsCopyOfUninitializedElements3(d+1, this, newSize)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsCopyOfUninitializedElements3(d int, this *KotlinCharArray, newSize int32) *KotlinCharArray {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinCollectionsCopyOfUninitializedElements4(d+1, this, int32(0), newSize)
+	var s0 *KotlinCharArray
+	s0 = m.kotlinCollectionsCopyOfUninitializedElements4(d+1, this, int32(0), newSize)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsCopyOfUninitializedElements4(d int, this *KotlinCharArray, fromIndex int32, toIndex int32) *KotlinCharArray {
@@ -22879,6 +28470,8 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements4(d int, this *Ko
 	var s1, s2_3 *KotlinInt
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s1_1, s2_2 *KotlinString
 	var s0 *KotlinIllegalArgumentException
 	newSize = (toIndex - fromIndex)
@@ -22887,19 +28480,52 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements4(d int, this *Ko
 		tmp = rt.ViewAs[KotlinAny](s1)
 		s2 = tmp.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own1 {
+			s1_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		} else {
+			s1_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp)
+		}
+		if m.exn != nil {
+			return (*KotlinCharArray)(nil)
+		}
 		s2_2 = m.stringLiteralLatin1(d+1, int32(151))
+		if m.exn != nil {
+			return (*KotlinCharArray)(nil)
+		}
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
+		if m.exn != nil {
+			return (*KotlinCharArray)(nil)
+		}
 		s2_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), toIndex)
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_3))
+		if m.exn != nil {
+			return (*KotlinCharArray)(nil)
+		}
 		s0 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return (*KotlinCharArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return (*KotlinCharArray)(nil)
 	}
 	s0_1 = m.kotlinCharArrayInit(d+1, (*KotlinCharArray)(nil), newSize)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
 	result = s0_1
 	s5 = m.kotlinCharArrayGetSize(d+1, this)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
 	s4 = m.kotlinRangesCoerceAtMost(d+1, toIndex, s5)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
 	s0_1 = m.kotlinCollectionsCopyInto2(d+1, this, result, int32(0), fromIndex, s4)
+	if m.exn != nil {
+		return (*KotlinCharArray)(nil)
+	}
 	return result
 }
 
@@ -22907,14 +28533,24 @@ func (m *Instance) kotlinCollectionsCopyOf2(d int, this *KotlinIntArray, newSize
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinCollectionsCopyOfUninitializedElements5(d+1, this, newSize)
+	var s0 *KotlinIntArray
+	s0 = m.kotlinCollectionsCopyOfUninitializedElements5(d+1, this, newSize)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsCopyOfUninitializedElements5(d int, this *KotlinIntArray, newSize int32) *KotlinIntArray {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinCollectionsCopyOfUninitializedElements6(d+1, this, int32(0), newSize)
+	var s0 *KotlinIntArray
+	s0 = m.kotlinCollectionsCopyOfUninitializedElements6(d+1, this, int32(0), newSize)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsCopyOfUninitializedElements6(d int, this *KotlinIntArray, fromIndex int32, toIndex int32) *KotlinIntArray {
@@ -22927,6 +28563,8 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements6(d int, this *Ko
 	var s1, s2_3 *KotlinInt
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s1_1, s2_2 *KotlinString
 	var s0 *KotlinIllegalArgumentException
 	newSize = (toIndex - fromIndex)
@@ -22935,19 +28573,52 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements6(d int, this *Ko
 		tmp = rt.ViewAs[KotlinAny](s1)
 		s2 = tmp.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own1 {
+			s1_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		} else {
+			s1_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp)
+		}
+		if m.exn != nil {
+			return (*KotlinIntArray)(nil)
+		}
 		s2_2 = m.stringLiteralLatin1(d+1, int32(151))
+		if m.exn != nil {
+			return (*KotlinIntArray)(nil)
+		}
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
+		if m.exn != nil {
+			return (*KotlinIntArray)(nil)
+		}
 		s2_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), toIndex)
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_3))
+		if m.exn != nil {
+			return (*KotlinIntArray)(nil)
+		}
 		s0 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return (*KotlinIntArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return (*KotlinIntArray)(nil)
 	}
 	s0_1 = m.kotlinIntArrayInit(d+1, (*KotlinIntArray)(nil), newSize)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	result = s0_1
 	s5 = m.kotlinIntArrayGetSize(d+1, this)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	s4 = m.kotlinRangesCoerceAtMost(d+1, toIndex, s5)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	s0_1 = m.kotlinCollectionsCopyInto3(d+1, this, result, int32(0), fromIndex, s4)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	return result
 }
 
@@ -22962,11 +28633,23 @@ func (m *Instance) kotlinCollectionsCopyInto3(d int, this *KotlinIntArray, desti
 	_ = s0_2
 	s0 = m.g9
 	s3 = m.kotlinIntArrayGetSize(d+1, this)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	m.kotlinCollectionsCompanionCheckRangeIndexes(d+1, s0, startIndex, endIndex, s3)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	rangeSize = (endIndex - startIndex)
 	s0 = m.g9
 	s3 = m.kotlinIntArrayGetSize(d+1, destination)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	m.kotlinCollectionsCompanionCheckRangeIndexes(d+1, s0, destinationOffset, (destinationOffset + rangeSize), s3)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	s0_1 = this.Storage
 	tmp0 = s0_1
 	s0_1 = destination.Storage
@@ -22981,6 +28664,9 @@ func (m *Instance) kotlinCollectionsCopyInto3(d int, this *KotlinIntArray, desti
 	length = tmp8
 	rt.ArrayCopy(destination_.Elems, destinationIndex, source.Elems, sourceIndex, length)
 	s0_2 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinIntArray)(nil)
+	}
 	goto B1
 B1:
 	return destination
@@ -22990,14 +28676,24 @@ func (m *Instance) kotlinCollectionsCopyOf3(d int, this *KotlinByteArray, newSiz
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinCollectionsCopyOfUninitializedElements7(d+1, this, newSize)
+	var s0 *KotlinByteArray
+	s0 = m.kotlinCollectionsCopyOfUninitializedElements7(d+1, this, newSize)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsCopyOfUninitializedElements7(d int, this *KotlinByteArray, newSize int32) *KotlinByteArray {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinCollectionsCopyOfUninitializedElements8(d+1, this, int32(0), newSize)
+	var s0 *KotlinByteArray
+	s0 = m.kotlinCollectionsCopyOfUninitializedElements8(d+1, this, int32(0), newSize)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinCollectionsCopyOfUninitializedElements8(d int, this *KotlinByteArray, fromIndex int32, toIndex int32) *KotlinByteArray {
@@ -23010,6 +28706,8 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements8(d int, this *Ko
 	var s1, s2_3 *KotlinInt
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s1_1, s2_2 *KotlinString
 	var s0 *KotlinIllegalArgumentException
 	newSize = (toIndex - fromIndex)
@@ -23018,19 +28716,52 @@ func (m *Instance) kotlinCollectionsCopyOfUninitializedElements8(d int, this *Ko
 		tmp = rt.ViewAs[KotlinAny](s1)
 		s2 = tmp.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own1 {
+			s1_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp)
+		} else {
+			s1_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp)
+		}
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
 		s2_2 = m.stringLiteralLatin1(d+1, int32(151))
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_2))
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
 		s2_3 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), toIndex)
 		s1_1 = m.kotlinStringPlus(d+1, s1_1, rt.ViewAs[KotlinAny](s2_3))
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
 		s0 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return (*KotlinByteArray)(nil)
 	}
 	s0_1 = m.kotlinByteArrayInit(d+1, (*KotlinByteArray)(nil), newSize)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	result = s0_1
 	s5 = m.kotlinByteArrayGetSize(d+1, this)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	s4 = m.kotlinRangesCoerceAtMost(d+1, toIndex, s5)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	s0_1 = m.kotlinCollectionsCopyInto4(d+1, this, result, int32(0), fromIndex, s4)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	return result
 }
 
@@ -23045,11 +28776,23 @@ func (m *Instance) kotlinCollectionsCopyInto4(d int, this *KotlinByteArray, dest
 	_ = s0_2
 	s0 = m.g9
 	s3 = m.kotlinByteArrayGetSize(d+1, this)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	m.kotlinCollectionsCompanionCheckRangeIndexes(d+1, s0, startIndex, endIndex, s3)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	rangeSize = (endIndex - startIndex)
 	s0 = m.g9
 	s3 = m.kotlinByteArrayGetSize(d+1, destination)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	m.kotlinCollectionsCompanionCheckRangeIndexes(d+1, s0, destinationOffset, (destinationOffset + rangeSize), s3)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	s0_1 = this.Storage
 	tmp0 = s0_1
 	s0_1 = destination.Storage
@@ -23064,6 +28807,9 @@ func (m *Instance) kotlinCollectionsCopyInto4(d int, this *KotlinByteArray, dest
 	length = tmp8
 	rt.ArrayCopy(destination_.Elems, destinationIndex, source.Elems, sourceIndex, length)
 	s0_2 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	goto B1
 B1:
 	return destination
@@ -23074,12 +28820,13 @@ func (m *Instance) kotlinAssert(d int, value int32) {
 }
 
 func (m *Instance) kotlinAssert2(d int, value int32, lazyMessage *KotlinAny) {
-	var message *KotlinAny
+	var message, s0 *KotlinAny
 	var s1 *ClassVTable
 	var s1_1 *SpecialITable
 	var s1_2 *AnyArray
-	var s1_3 any
+	var s1_3, fn1 any
 	var s1_4 *rt.Func
+	var own1 bool
 	var s0_1 *KotlinAssertionError
 	if value == 0 {
 		s1 = lazyMessage.Vtable
@@ -23090,9 +28837,22 @@ func (m *Instance) kotlinAssert2(d int, value int32, lazyMessage *KotlinAny) {
 			panic(rt.ErrCast)
 		}
 		s1_4 = rt.As[ClassITable4](s1_3).Iterator
-		message = rt.FnOfRef(s1_4, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, lazyMessage)
+		fn1, own1 = rt.FnOwn(s1_4, rttFunc33, m, false)
+		if own1 {
+			s0 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, lazyMessage)
+		} else {
+			s0 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, lazyMessage)
+		}
+		if m.exn != nil {
+			return
+		}
+		message = s0
 		s0_1 = m.kotlinAssertionErrorInit(d+1, (*KotlinAssertionError)(nil), message)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	return
 }
@@ -23113,23 +28873,41 @@ func (m *Instance) kotlinFunction0Invoke(d int, this *KotlinAny) *KotlinAny {
 	}
 	var tmp0This *KotlinFunction0
 	var s0 *rt.Func
+	var fn1 any
+	var own1 bool
+	var s0_1 *KotlinAny
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinFunction0)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinFunction0](this)
 	s0 = tmp0This.Func
-	return rt.FnOfRef(s0, rttFunc231).(func(int) *KotlinAny)(d + 1)
+	fn1, own1 = rt.FnOwn(s0, rttFunc201, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int) *KotlinAny)(d + 1)
+	} else {
+		s0_1 = m.guard12(fn1.(func(int) *KotlinAny), d+1)
+	}
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinAssertLambdaInvoke(d int) *KotlinAny {
 	var s0 *KotlinString
 	s0 = m.stringLiteralLatin1(d+1, int32(153))
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0)
 }
 
 func (m *Instance) kotlinObjectInitializer7(d int) {
 	var s0 *KotlinFunction0
 	s0 = m.kotlinFunction0Init(d+1, (*KotlinFunction0)(nil), m.funcs[484])
+	if m.exn != nil {
+		return
+	}
 	m.g43 = rt.ViewAs[KotlinAny](s0)
 	return
 }
@@ -23143,7 +28921,13 @@ func (m *Instance) kotlinNoSuchElementExceptionInit(d int, this *KotlinNoSuchEle
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit(d+1, rt.ViewAs[KotlinRuntimeException](this))
+	if m.exn != nil {
+		return (*KotlinNoSuchElementException)(nil)
+	}
 	s0 = m.kotlinNoSuchElementExceptionInit2(d+1, this)
+	if m.exn != nil {
+		return (*KotlinNoSuchElementException)(nil)
+	}
 	return this
 }
 
@@ -23160,7 +28944,13 @@ func (m *Instance) kotlinIllegalStateExceptionInit(d int, this *KotlinIllegalSta
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit2(d+1, rt.ViewAs[KotlinRuntimeException](this), message)
+	if m.exn != nil {
+		return (*KotlinIllegalStateException)(nil)
+	}
 	s0 = m.kotlinIllegalStateExceptionInit2(d+1, this)
+	if m.exn != nil {
+		return (*KotlinIllegalStateException)(nil)
+	}
 	return this
 }
 
@@ -23177,7 +28967,13 @@ func (m *Instance) kotlinIllegalArgumentExceptionInit(d int, this *KotlinIllegal
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit2(d+1, rt.ViewAs[KotlinRuntimeException](this), message)
+	if m.exn != nil {
+		return (*KotlinIllegalArgumentException)(nil)
+	}
 	s0 = m.kotlinIllegalArgumentExceptionInit2(d+1, this)
+	if m.exn != nil {
+		return (*KotlinIllegalArgumentException)(nil)
+	}
 	return this
 }
 
@@ -23194,7 +28990,13 @@ func (m *Instance) kotlinArithmeticExceptionInit(d int, this *KotlinArithmeticEx
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit2(d+1, rt.ViewAs[KotlinRuntimeException](this), message)
+	if m.exn != nil {
+		return (*KotlinArithmeticException)(nil)
+	}
 	s0 = m.kotlinArithmeticExceptionInit2(d+1, this)
+	if m.exn != nil {
+		return (*KotlinArithmeticException)(nil)
+	}
 	return this
 }
 
@@ -23211,7 +29013,13 @@ func (m *Instance) kotlinIndexOutOfBoundsExceptionInit(d int, this *KotlinIndexO
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit(d+1, rt.ViewAs[KotlinRuntimeException](this))
+	if m.exn != nil {
+		return (*KotlinIndexOutOfBoundsException)(nil)
+	}
 	s0 = m.kotlinIndexOutOfBoundsExceptionInit3(d+1, this)
+	if m.exn != nil {
+		return (*KotlinIndexOutOfBoundsException)(nil)
+	}
 	return this
 }
 
@@ -23224,7 +29032,13 @@ func (m *Instance) kotlinIndexOutOfBoundsExceptionInit2(d int, this *KotlinIndex
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit2(d+1, rt.ViewAs[KotlinRuntimeException](this), message)
+	if m.exn != nil {
+		return (*KotlinIndexOutOfBoundsException)(nil)
+	}
 	s0 = m.kotlinIndexOutOfBoundsExceptionInit3(d+1, this)
+	if m.exn != nil {
+		return (*KotlinIndexOutOfBoundsException)(nil)
+	}
 	return this
 }
 
@@ -23241,6 +29055,8 @@ func (m *Instance) kotlinAssertionErrorInit(d int, this *KotlinAssertionError, m
 	var s1 *KotlinString
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s2_2 int32
 	var s2_3 *KotlinThrowable
 	var s0_1 *KotlinError
@@ -23256,7 +29072,15 @@ func (m *Instance) kotlinAssertionErrorInit(d int, this *KotlinAssertionError, m
 	} else {
 		s2 = tmp0SafeReceiver.Vtable
 		s2_1 = s2.ToString
-		s1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
+		fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own1 {
+			s1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
+		} else {
+			s1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp0SafeReceiver)
+		}
+		if m.exn != nil {
+			return (*KotlinAssertionError)(nil)
+		}
 	}
 	if message == nil {
 		s2_2 = int32(0)
@@ -23272,7 +29096,13 @@ func (m *Instance) kotlinAssertionErrorInit(d int, this *KotlinAssertionError, m
 		s2_3 = (*KotlinThrowable)(nil)
 	}
 	s0_1 = m.kotlinErrorInit2(d+1, rt.ViewAs[KotlinError](s0), s1, s2_3)
+	if m.exn != nil {
+		return (*KotlinAssertionError)(nil)
+	}
 	s0 = m.kotlinAssertionErrorInit2(d+1, this)
+	if m.exn != nil {
+		return (*KotlinAssertionError)(nil)
+	}
 	return this
 }
 
@@ -23289,7 +29119,13 @@ func (m *Instance) kotlinRuntimeExceptionInit(d int, this *KotlinRuntimeExceptio
 		this = s0
 	}
 	s0_1 = m.kotlinExceptionInit(d+1, rt.ViewAs[KotlinException](this))
+	if m.exn != nil {
+		return (*KotlinRuntimeException)(nil)
+	}
 	s0 = m.kotlinRuntimeExceptionInit3(d+1, this)
+	if m.exn != nil {
+		return (*KotlinRuntimeException)(nil)
+	}
 	return this
 }
 
@@ -23302,7 +29138,13 @@ func (m *Instance) kotlinRuntimeExceptionInit2(d int, this *KotlinRuntimeExcepti
 		this = s0
 	}
 	s0_1 = m.kotlinExceptionInit2(d+1, rt.ViewAs[KotlinException](this), message)
+	if m.exn != nil {
+		return (*KotlinRuntimeException)(nil)
+	}
 	s0 = m.kotlinRuntimeExceptionInit3(d+1, this)
+	if m.exn != nil {
+		return (*KotlinRuntimeException)(nil)
+	}
 	return this
 }
 
@@ -23319,7 +29161,13 @@ func (m *Instance) kotlinErrorInit(d int, this *KotlinError) *KotlinError {
 		this = s0
 	}
 	s0_1 = m.kotlinThrowableInit3(d+1, rt.ViewAs[KotlinThrowable](this))
+	if m.exn != nil {
+		return (*KotlinError)(nil)
+	}
 	s0 = m.kotlinErrorInit3(d+1, this)
+	if m.exn != nil {
+		return (*KotlinError)(nil)
+	}
 	return this
 }
 
@@ -23332,7 +29180,13 @@ func (m *Instance) kotlinErrorInit2(d int, this *KotlinError, message *KotlinStr
 		this = s0
 	}
 	s0_1 = m.kotlinThrowableInit(d+1, rt.ViewAs[KotlinThrowable](this), message, cause)
+	if m.exn != nil {
+		return (*KotlinError)(nil)
+	}
 	s0 = m.kotlinErrorInit3(d+1, this)
+	if m.exn != nil {
+		return (*KotlinError)(nil)
+	}
 	return this
 }
 
@@ -23349,7 +29203,13 @@ func (m *Instance) kotlinExceptionInit(d int, this *KotlinException) *KotlinExce
 		this = s0
 	}
 	s0_1 = m.kotlinThrowableInit3(d+1, rt.ViewAs[KotlinThrowable](this))
+	if m.exn != nil {
+		return (*KotlinException)(nil)
+	}
 	s0 = m.kotlinExceptionInit3(d+1, this)
+	if m.exn != nil {
+		return (*KotlinException)(nil)
+	}
 	return this
 }
 
@@ -23362,7 +29222,13 @@ func (m *Instance) kotlinExceptionInit2(d int, this *KotlinException, message *K
 		this = s0
 	}
 	s0_1 = m.kotlinThrowableInit2(d+1, rt.ViewAs[KotlinThrowable](this), message)
+	if m.exn != nil {
+		return (*KotlinException)(nil)
+	}
 	s0 = m.kotlinExceptionInit3(d+1, this)
+	if m.exn != nil {
+		return (*KotlinException)(nil)
+	}
 	return this
 }
 
@@ -23379,7 +29245,13 @@ func (m *Instance) kotlinUnsupportedOperationExceptionInit(d int, this *KotlinUn
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit(d+1, rt.ViewAs[KotlinRuntimeException](this))
+	if m.exn != nil {
+		return (*KotlinUnsupportedOperationException)(nil)
+	}
 	s0 = m.kotlinUnsupportedOperationExceptionInit2(d+1, this)
+	if m.exn != nil {
+		return (*KotlinUnsupportedOperationException)(nil)
+	}
 	return this
 }
 
@@ -23396,7 +29268,13 @@ func (m *Instance) kotlinOutOfMemoryErrorInit(d int, this *KotlinOutOfMemoryErro
 		this = s0
 	}
 	s0_1 = m.kotlinErrorInit(d+1, rt.ViewAs[KotlinError](this))
+	if m.exn != nil {
+		return (*KotlinOutOfMemoryError)(nil)
+	}
 	s0 = m.kotlinOutOfMemoryErrorInit2(d+1, this)
+	if m.exn != nil {
+		return (*KotlinOutOfMemoryError)(nil)
+	}
 	return this
 }
 
@@ -23413,7 +29291,13 @@ func (m *Instance) kotlinConcurrentModificationExceptionInit(d int, this *Kotlin
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit(d+1, rt.ViewAs[KotlinRuntimeException](this))
+	if m.exn != nil {
+		return (*KotlinConcurrentModificationException)(nil)
+	}
 	s0 = m.kotlinConcurrentModificationExceptionInit3(d+1, this)
+	if m.exn != nil {
+		return (*KotlinConcurrentModificationException)(nil)
+	}
 	return this
 }
 
@@ -23426,7 +29310,13 @@ func (m *Instance) kotlinConcurrentModificationExceptionInit2(d int, this *Kotli
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit2(d+1, rt.ViewAs[KotlinRuntimeException](this), message)
+	if m.exn != nil {
+		return (*KotlinConcurrentModificationException)(nil)
+	}
 	s0 = m.kotlinConcurrentModificationExceptionInit3(d+1, this)
+	if m.exn != nil {
+		return (*KotlinConcurrentModificationException)(nil)
+	}
 	return this
 }
 
@@ -23443,7 +29333,13 @@ func (m *Instance) kotlinClassCastExceptionInit(d int, this *KotlinClassCastExce
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit2(d+1, rt.ViewAs[KotlinRuntimeException](this), message)
+	if m.exn != nil {
+		return (*KotlinClassCastException)(nil)
+	}
 	s0 = m.kotlinClassCastExceptionInit2(d+1, this)
+	if m.exn != nil {
+		return (*KotlinClassCastException)(nil)
+	}
 	return this
 }
 
@@ -23460,7 +29356,13 @@ func (m *Instance) kotlinNullPointerExceptionInit(d int, this *KotlinNullPointer
 		this = s0
 	}
 	s0_1 = m.kotlinRuntimeExceptionInit(d+1, rt.ViewAs[KotlinRuntimeException](this))
+	if m.exn != nil {
+		return (*KotlinNullPointerException)(nil)
+	}
 	s0 = m.kotlinNullPointerExceptionInit2(d+1, this)
+	if m.exn != nil {
+		return (*KotlinNullPointerException)(nil)
+	}
 	return this
 }
 
@@ -23471,10 +29373,19 @@ func (m *Instance) kotlinNullPointerExceptionInit2(d int, this *KotlinNullPointe
 func (m *Instance) kotlinToBits(d int, this float32) int32 {
 	var s0 int32
 	s0 = m.kotlinIsNaN2(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 != 0 {
 		s0 = m.kotlinToRawBits2(d+1, math.Float32frombits(0x7fc00000))
+		if m.exn != nil {
+			return int32(0)
+		}
 	} else {
 		s0 = m.kotlinToRawBits2(d+1, this)
+		if m.exn != nil {
+			return int32(0)
+		}
 	}
 	return s0
 }
@@ -23483,10 +29394,19 @@ func (m *Instance) kotlinToBits2(d int, this float64) int64 {
 	var s0 int32
 	var s0_1 int64
 	s0 = m.kotlinIsNaN(d+1, this)
+	if m.exn != nil {
+		return int64(0)
+	}
 	if s0 != 0 {
 		s0_1 = m.kotlinToRawBits(d+1, math.Float64frombits(0x7ff8000000000000))
+		if m.exn != nil {
+			return int64(0)
+		}
 	} else {
 		s0_1 = m.kotlinToRawBits(d+1, this)
+		if m.exn != nil {
+			return int64(0)
+		}
 	}
 	return s0_1
 }
@@ -23498,6 +29418,9 @@ func (m *Instance) kotlinToRawBits(d int, this float64) int64 {
 func (m *Instance) kotlinIsFinite(d int, this float64) int32 {
 	var s0 int64
 	s0 = m.kotlinToRawBits(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return rt.B2I((s0 & int64(9223372036854775807)) < int64(9218868437227405312))
 }
 
@@ -23506,7 +29429,12 @@ func (m *Instance) kotlinIsNaN(d int, this float64) int32 {
 }
 
 func (m *Instance) kotlinCountLeadingZeroBits(d int, this int64) int32 {
-	return m.kotlinLongToIntImpl(d+1, int64(bits.LeadingZeros64(uint64(this))))
+	var s0 int32
+	s0 = m.kotlinLongToIntImpl(d+1, int64(bits.LeadingZeros64(uint64(this))))
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinFromBits(d int, this *KotlinCompanion8, bits_ int64) float64 {
@@ -23541,7 +29469,12 @@ func (m *Instance) kotlinUnitInit(d int, this *KotlinUnit) *KotlinUnit {
 }
 
 func (m *Instance) kotlinUnitToString(d int, this *KotlinAny) *KotlinString {
-	return m.stringLiteralLatin1(d+1, int32(169))
+	var s0 *KotlinString
+	s0 = m.stringLiteralLatin1(d+1, int32(169))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinUnitGetInstance(d int) *KotlinUnit {
@@ -23551,6 +29484,9 @@ func (m *Instance) kotlinUnitGetInstance(d int) *KotlinUnit {
 func (m *Instance) kotlinObjectInitializer8(d int) {
 	var s0 *KotlinUnit
 	s0 = m.kotlinUnitInit(d+1, (*KotlinUnit)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g44 = s0
 	return
 }
@@ -23575,9 +29511,15 @@ func (m *Instance) kotlinCollectionsResetRange(d int, this *KotlinArray, fromInd
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g275))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, (*KotlinAny)(nil), rt.ViewAs[KotlinAny](s2), int32(1))
+		if m.exn != nil {
+			return
+		}
 		panic(rt.ErrUnreachable)
 	}
 	m.kotlinCollectionsFill(d+1, s0, s1_1, fromIndex, toIndex)
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
@@ -23587,12 +29529,15 @@ func (m *Instance) kotlinMathSqrt(d int, x float64) float64 {
 
 func (m *Instance) kotlinMathGetSign(d int, this int64) int32 {
 	var tmp0, this_, tmp0_, tmp0__, this__, this___, s1, s0, s2 int64
-	var tmp2, bitCount, tmp2_, bitCount_ int32
+	var tmp2, bitCount, tmp2_, bitCount_, s0_1 int32
 	tmp0 = this
 	tmp2 = int32(63)
 	this_ = tmp0
 	bitCount = tmp2
 	s1 = m.kotlinIntToLongImpl(d+1, bitCount)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = (this_ >> (uint64(s1) & 63))
 	goto B1
 B1:
@@ -23606,11 +29551,18 @@ B2:
 	this___ = tmp0_
 	bitCount_ = tmp2_
 	s2 = m.kotlinIntToLongImpl(d+1, bitCount_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = int64(uint64(this___) >> (uint64(s2) & 63))
 	goto B3
 B3:
 	s0 = (s0 | s1)
-	return m.kotlinLongToIntImpl(d+1, s0)
+	s0_1 = m.kotlinLongToIntImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinMathAbs(d int, n int64) int64 {
@@ -23641,11 +29593,17 @@ func (m *Instance) kotlinWasmInternalKClassImplGetSimpleName(d int, this *Kotlin
 	tmp0This = rt.ViewAs[KotlinWasmInternalKClassImpl](this)
 	s0 = tmp0This.Rtti_2
 	s0_1 = m.kotlinWasmInternalIsAnonymousClass(d+1, s0)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	if s0_1 != 0 {
 		s0_2 = (*KotlinString)(nil)
 	} else {
 		s0 = tmp0This.Rtti_2
 		s0_2 = m.kotlinWasmInternalGetSimpleName(d+1, s0)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	}
 	return s0_2
 }
@@ -23664,17 +29622,26 @@ func (m *Instance) kotlinWasmInternalKClassImplGetQualifiedName(d int, this *Kot
 	tmp0This = rt.ViewAs[KotlinWasmInternalKClassImpl](this)
 	s0 = tmp0This.Rtti_2
 	s0_1 = m.kotlinWasmInternalIsAnonymousClass(d+1, s0)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	if s0_1 != 0 {
 		s0_1 = int32(1)
 	} else {
 		s0 = tmp0This.Rtti_2
 		s0_1 = m.kotlinWasmInternalIsLocalClass(d+1, s0)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	}
 	if s0_1 != 0 {
 		s0_2 = (*KotlinString)(nil)
 	} else {
 		s0 = tmp0This.Rtti_2
 		s0_2 = m.kotlinWasmInternalGetQualifiedName(d+1, s0)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	}
 	return s0_2
 }
@@ -23720,13 +29687,21 @@ func (m *Instance) kotlinWasmInternalKClassImplHashCode(d int, this *KotlinAny) 
 	var tmp0This *KotlinWasmInternalKClassImpl
 	var s0 any
 	var s0_1 *KotlinString
+	var s0_2 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinWasmInternalKClassImpl)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinWasmInternalKClassImpl](this)
 	s0 = tmp0This.Rtti_2
 	s0_1 = m.kotlinWasmInternalGetQualifiedName(d+1, s0)
-	return m.kotlinStringHashCode(d+1, rt.ViewAs[KotlinAny](s0_1))
+	if m.exn != nil {
+		return int32(0)
+	}
+	s0_2 = m.kotlinStringHashCode(d+1, rt.ViewAs[KotlinAny](s0_1))
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_2
 }
 
 func (m *Instance) kotlinWasmInternalKClassImplToString(d int, this *KotlinAny) *KotlinString {
@@ -23741,9 +29716,18 @@ func (m *Instance) kotlinWasmInternalKClassImplToString(d int, this *KotlinAny) 
 	}
 	tmp0This = rt.ViewAs[KotlinWasmInternalKClassImpl](this)
 	s0 = m.stringLiteralLatin1(d+1, int32(171))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1 = tmp0This.Rtti_2
 	s1_1 = m.kotlinWasmInternalGetQualifiedName(d+1, s1)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](s1_1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0
 }
 
@@ -23759,7 +29743,12 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetSimpleName(d int, thi
 }
 
 func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetSimpleName2(d int, this *KotlinAny) *KotlinString {
-	return m.kotlinWasmInternalKClassInterfaceImplGetSimpleName(d+1, this)
+	var s0 *KotlinString
+	s0 = m.kotlinWasmInternalKClassInterfaceImplGetSimpleName(d+1, this)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetQualifiedName(d int, this *KotlinAny) *KotlinString {
@@ -23772,8 +29761,9 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetQualifiedName(d int, 
 	var s0_1, s1_4 *KotlinString
 	var s1 *ClassVTable
 	var s1_1 *SpecialITable
-	var s1_2 any
+	var s1_2, fn1 any
 	var s1_3 *rt.Func
+	var own1 bool
 	var s0_2 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinWasmInternalKClassInterfaceImpl)) {
 		panic(rt.ErrCast)
@@ -23790,7 +29780,15 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetQualifiedName(d int, 
 		panic(rt.ErrCast)
 	}
 	s1_3 = rt.As[ClassITable](s1_2).GetLength
-	s0_2 = rt.FnOfRef(s1_3, rttFunc14).(func(int, *KotlinAny) int32)(d+1, this_)
+	fn1, own1 = rt.FnOwn(s1_3, rttFunc14, m, false)
+	if own1 {
+		s0_2 = fn1.(func(int, *KotlinAny) int32)(d+1, this_)
+	} else {
+		s0_2 = m.guard2(fn1.(func(int, *KotlinAny) int32), d+1, this_)
+	}
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_2 = rt.B2I(s0_2 == int32(0))
 	goto B1
 B1:
@@ -23801,10 +29799,19 @@ B1:
 		s0 = tmp0This.TypeData
 		s0_1 = s0.PackageName
 		s1_4 = m.stringLiteralLatin1(d+1, int32(7))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1_4))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s1_5 = tmp0This.TypeData
 		s1_4 = s1_5.TypeName
 		s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1_4))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	}
 	return s0_1
 }
@@ -23813,7 +29820,12 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetQualifiedName2(d int,
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.kotlinWasmInternalKClassInterfaceImplGetQualifiedName(d+1, this)
+	var s0 *KotlinString
+	s0 = m.kotlinWasmInternalKClassInterfaceImplGetQualifiedName(d+1, this)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinWasmInternalKClassInterfaceImplEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -23853,13 +29865,18 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplHashCode(d int, this *Ko
 	var tmp0This *KotlinWasmInternalKClassInterfaceImpl
 	var s0 *KotlinWasmInternalTypeInfoData
 	var s0_1 int64
+	var s0_2 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinWasmInternalKClassInterfaceImpl)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinWasmInternalKClassInterfaceImpl](this)
 	s0 = tmp0This.TypeData
 	s0_1 = s0.TypeId
-	return m.kotlinLongToIntImpl(d+1, s0_1)
+	s0_2 = m.kotlinLongToIntImpl(d+1, s0_1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_2
 }
 
 func (m *Instance) kotlinWasmInternalKClassInterfaceImplToString(d int, this *KotlinAny) *KotlinString {
@@ -23873,13 +29890,27 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplToString(d int, this *Ko
 	}
 	tmp0This = rt.ViewAs[KotlinWasmInternalKClassInterfaceImpl](this)
 	s0 = m.stringLiteralLatin1(d+1, int32(171))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1 = m.kotlinWasmInternalKClassInterfaceImplGetQualifiedName(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](s1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinWasmInternalGetKClassFromExpression(d int, e_ *KotlinAny) *KotlinAny {
-	return m.kotlinWasmInternalGetKClassForObject(d+1, e_)
+	var s0 *KotlinAny
+	s0 = m.kotlinWasmInternalGetKClassForObject(d+1, e_)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTextCharacterCodingExceptionInit(d int, this *KotlinTextCharacterCodingException, message *KotlinString) *KotlinTextCharacterCodingException {
@@ -23891,12 +29922,18 @@ func (m *Instance) kotlinTextCharacterCodingExceptionInit(d int, this *KotlinTex
 		this = s0
 	}
 	s0_1 = m.kotlinExceptionInit2(d+1, rt.ViewAs[KotlinException](this), message)
+	if m.exn != nil {
+		return (*KotlinTextCharacterCodingException)(nil)
+	}
 	return this
 }
 
 func (m *Instance) kotlinTextCompareTo(d int, this *KotlinString, other *KotlinString, ignoreCase int32) int32 {
 	var n1, n2, min_, tmp0, tmp2, a, b, inductionVariable, index, thisChar, otherChar, s0 int32
 	m.kotlinTextInitPropertiesStringsWasmKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if ignoreCase != 0 {
 		s0 = this.Length
 		n1 = s0
@@ -23924,21 +29961,42 @@ func (m *Instance) kotlinTextCompareTo(d int, this *KotlinString, other *KotlinS
 				index = inductionVariable
 				inductionVariable = (inductionVariable + int32(1))
 				s0 = m.kotlinStringGet(d+1, rt.ViewAs[KotlinAny](this), index)
+				if m.exn != nil {
+					return int32(0)
+				}
 				thisChar = s0
 				s0 = m.kotlinStringGet(d+1, rt.ViewAs[KotlinAny](other), index)
+				if m.exn != nil {
+					return int32(0)
+				}
 				otherChar = s0
 				if rt.B2I(thisChar == otherChar) == 0 {
 					s0 = m.kotlinTextUppercaseChar(d+1, thisChar)
+					if m.exn != nil {
+						return int32(0)
+					}
 					thisChar = s0
 					s0 = m.kotlinTextUppercaseChar(d+1, otherChar)
+					if m.exn != nil {
+						return int32(0)
+					}
 					otherChar = s0
 					if rt.B2I(thisChar == otherChar) == 0 {
 						s0 = m.kotlinTextLowercaseChar(d+1, thisChar)
+						if m.exn != nil {
+							return int32(0)
+						}
 						thisChar = s0
 						s0 = m.kotlinTextLowercaseChar(d+1, otherChar)
+						if m.exn != nil {
+							return int32(0)
+						}
 						otherChar = s0
 						if rt.B2I(thisChar == otherChar) == 0 {
 							s0 = m.kotlinCharCompareToImpl(d+1, thisChar, otherChar)
+							if m.exn != nil {
+								return int32(0)
+							}
 							return s0
 						}
 					}
@@ -23952,6 +30010,9 @@ func (m *Instance) kotlinTextCompareTo(d int, this *KotlinString, other *KotlinS
 		return (n1 - n2)
 	} else {
 		s0 = m.kotlinStringCompareTo(d+1, rt.ViewAs[KotlinAny](this), other)
+		if m.exn != nil {
+			return int32(0)
+		}
 		return s0
 	}
 }
@@ -23961,9 +30022,17 @@ func (m *Instance) kotlinTextEncodeToByteArray(d int, this *KotlinString) *Kotli
 		rt.Exhausted()
 	}
 	var s2 int32
+	var s0 *KotlinByteArray
 	m.kotlinTextInitPropertiesStringsWasmKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	s2 = this.Length
-	return m.kotlinTextEncodeUtf8(d+1, this, int32(0), s2, int32(0))
+	s0 = m.kotlinTextEncodeUtf8(d+1, this, int32(0), s2, int32(0))
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTextSamKotlinComparator0Init(d int, this *KotlinTextSamKotlinComparator0, function *KotlinAny) *KotlinTextSamKotlinComparator0 {
@@ -23992,8 +30061,9 @@ func (m *Instance) kotlinTextSamKotlinComparator0Equals(d int, this *KotlinAny, 
 	var tmp0This *KotlinTextSamKotlinComparator0
 	var tmp, tmp_, s0_1, s1_2 *KotlinAny
 	var s0 int32
-	var s1, s2 any
+	var s1, fn1, s2, fn2, fn3 any
 	var s1_1, s2_1 *rt.Func
+	var own1, own2, own3 bool
 	var s2_2 *ClassVTable
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinTextSamKotlinComparator0)) {
 		panic(rt.ErrCast)
@@ -24003,31 +30073,67 @@ func (m *Instance) kotlinTextSamKotlinComparator0Equals(d int, this *KotlinAny, 
 		s0 = int32(0)
 	} else {
 		s0 = m.kotlinWasmInternalIsSupportedInterface(d+1, other, int64(-7508909737077061068))
+		if m.exn != nil {
+			return int32(0)
+		}
 	}
 	if s0 != 0 {
 		if other == nil {
 			s0 = int32(0)
 		} else {
 			s0 = m.kotlinWasmInternalIsSupportedInterface(d+1, other, int64(-5643994456597899506))
+			if m.exn != nil {
+				return int32(0)
+			}
 		}
 		if s0 != 0 {
 			s1 = m.kotlinWasmInternalGetInterfaceVTable(d+1, rt.ViewAs[KotlinAny](tmp0This), int64(-5643994456597899506))
+			if m.exn != nil {
+				return int32(0)
+			}
 			if !(rt.IsType(s1, rttClassITable4)) {
 				panic(rt.ErrCast)
 			}
 			s1_1 = rt.As[ClassITable4](s1).Iterator
-			s0_1 = rt.FnOfRef(s1_1, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+			fn1, own1 = rt.FnOwn(s1_1, rttFunc33, m, false)
+			if own1 {
+				s0_1 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+			} else {
+				s0_1 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, rt.ViewAs[KotlinAny](tmp0This))
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 			tmp = s0_1
 			tmp_ = other
 			s2 = m.kotlinWasmInternalGetInterfaceVTable(d+1, tmp_, int64(-5643994456597899506))
+			if m.exn != nil {
+				return int32(0)
+			}
 			if !(rt.IsType(s2, rttClassITable4)) {
 				panic(rt.ErrCast)
 			}
 			s2_1 = rt.As[ClassITable4](s2).Iterator
-			s1_2 = rt.FnOfRef(s2_1, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
+			fn2, own2 = rt.FnOwn(s2_1, rttFunc33, m, false)
+			if own2 {
+				s1_2 = fn2.(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
+			} else {
+				s1_2 = m.guard1(fn2.(func(int, *KotlinAny) *KotlinAny), d+1, tmp_)
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2_2 = tmp.Vtable
 			s2_1 = s2_2.Equals
-			s0 = rt.FnOfRef(s2_1, rttFunc11).(func(int, *KotlinAny, *KotlinAny) int32)(d+1, tmp, s1_2)
+			fn3, own3 = rt.FnOwn(s2_1, rttFunc11, m, false)
+			if own3 {
+				s0 = fn3.(func(int, *KotlinAny, *KotlinAny) int32)(d+1, tmp, s1_2)
+			} else {
+				s0 = m.guard3(fn3.(func(int, *KotlinAny, *KotlinAny) int32), d+1, tmp, s1_2)
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 		} else {
 			s0 = int32(0)
 		}
@@ -24042,23 +30148,46 @@ func (m *Instance) kotlinTextSamKotlinComparator0HashCode(d int, this *KotlinAny
 		rt.Exhausted()
 	}
 	var tmp0This *KotlinTextSamKotlinComparator0
-	var tmp *KotlinAny
-	var s1 any
+	var tmp, s0 *KotlinAny
+	var s1, fn1, fn2 any
 	var s1_1 *rt.Func
+	var own1, own2 bool
 	var s1_2 *ClassVTable
+	var s0_1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinTextSamKotlinComparator0)) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinTextSamKotlinComparator0](this)
 	s1 = m.kotlinWasmInternalGetInterfaceVTable(d+1, rt.ViewAs[KotlinAny](tmp0This), int64(-5643994456597899506))
+	if m.exn != nil {
+		return int32(0)
+	}
 	if !(rt.IsType(s1, rttClassITable4)) {
 		panic(rt.ErrCast)
 	}
 	s1_1 = rt.As[ClassITable4](s1).Iterator
-	tmp = rt.FnOfRef(s1_1, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc33, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	} else {
+		s0 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, rt.ViewAs[KotlinAny](tmp0This))
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
+	tmp = s0
 	s1_2 = tmp.Vtable
 	s1_1 = s1_2.HashCode
-	return rt.FnOfRef(s1_1, rttFunc14).(func(int, *KotlinAny) int32)(d+1, tmp)
+	fn2, own2 = rt.FnOwn(s1_1, rttFunc14, m, false)
+	if own2 {
+		s0_1 = fn2.(func(int, *KotlinAny) int32)(d+1, tmp)
+	} else {
+		s0_1 = m.guard2(fn2.(func(int, *KotlinAny) int32), d+1, tmp)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinTextFunction2Init(d int, this *KotlinTextFunction2, func_ *rt.Func) *KotlinTextFunction2 {
@@ -24080,6 +30209,9 @@ func (m *Instance) kotlinTextSTRINGCASEINSENSITIVEORDERLambdaInvoke(d int, a *Ko
 	var s1 *KotlinWasmInternalKClassImpl
 	var s0_2 *KotlinInt
 	m.kotlinTextInitPropertiesStringsWasmKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	if a == nil {
 		s0 = int32(0)
 	} else {
@@ -24093,6 +30225,9 @@ func (m *Instance) kotlinTextSTRINGCASEINSENSITIVEORDERLambdaInvoke(d int, a *Ko
 	} else {
 		s1 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g328))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, a, rt.ViewAs[KotlinAny](s1), int32(0))
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	tmp0 = s0_1
@@ -24109,10 +30244,16 @@ func (m *Instance) kotlinTextSTRINGCASEINSENSITIVEORDERLambdaInvoke(d int, a *Ko
 	} else {
 		s1 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g328))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, b, rt.ViewAs[KotlinAny](s1), int32(0))
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	tmp1 = s0_1
 	s4 = m.kotlinTextCompareTo(d+1, tmp0, tmp1, int32(1))
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0_2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	return rt.ViewAs[KotlinAny](s0_2)
 }
@@ -24127,6 +30268,9 @@ func (m *Instance) kotlinTextInitPropertiesStringsWasmKt(d int) {
 		m.g47 = int32(1)
 		tmp = m.g46
 		s0_2 = m.kotlinTextSamKotlinComparator0Init(d+1, (*KotlinTextSamKotlinComparator0)(nil), tmp)
+		if m.exn != nil {
+			return
+		}
 		m.g45 = rt.ViewAs[KotlinAny](s0_2)
 	}
 	return
@@ -24135,12 +30279,18 @@ func (m *Instance) kotlinTextInitPropertiesStringsWasmKt(d int) {
 func (m *Instance) kotlinTextObjectInitializer(d int) {
 	var s0 *KotlinTextFunction2
 	s0 = m.kotlinTextFunction2Init(d+1, (*KotlinTextFunction2)(nil), m.funcs[558])
+	if m.exn != nil {
+		return
+	}
 	m.g46 = rt.ViewAs[KotlinAny](s0)
 	return
 }
 
 func (m *Instance) kotlinTextGetREPLACEMENTBYTESEQUENCE(d int) *KotlinByteArray {
 	m.kotlinTextInitPropertiesUtf8EncodingKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	return m.g48
 }
 
@@ -24154,10 +30304,15 @@ func (m *Instance) kotlinTextEncodeUtf8(d int, string_ *KotlinString, startIndex
 	var s0_1, s1_1 *KotlinString
 	var s2 *ClassVTable
 	var s2_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s0_3 *KotlinIllegalArgumentException
 	var s0_4 *KotlinUnit
 	_ = s0_4
 	m.kotlinTextInitPropertiesUtf8EncodingKt(d + 1)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	if startIndex >= int32(0) {
 		s1 = string_.Length
 		s0 = rt.B2I(endIndex <= s1)
@@ -24175,23 +30330,47 @@ func (m *Instance) kotlinTextEncodeUtf8(d int, string_ *KotlinString, startIndex
 	value_ = tmp0_
 	if value_ == 0 {
 		s0_1 = m.stringLiteralLatin1(d+1, int32(176))
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
 		s0_2 = rt.ViewAs[KotlinAny](s0_1)
 		goto B6
 	B6:
 		message = s0_2
 		s2 = message.Vtable
 		s2_1 = s2.ToString
-		s1_1 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		fn1, own1 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own1 {
+			s1_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, message)
+		} else {
+			s1_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, message)
+		}
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
 		s0_3 = m.kotlinIllegalArgumentExceptionInit(d+1, (*KotlinIllegalArgumentException)(nil), s1_1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+		return (*KotlinByteArray)(nil)
 	}
 	s0_4 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	goto B4
 B4:
 	s0_4 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	goto B3
 B3:
 	s0_5 = m.kotlinByteArrayInit(d+1, (*KotlinByteArray)(nil), ((endIndex - startIndex) * int32(3)))
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	bytes = s0_5
 	byteIndex = int32(0)
 	charIndex = startIndex
@@ -24209,6 +30388,9 @@ L7:
 	B9:
 		charIndex = s1
 		s0 = m.kotlinStringGet(d+1, rt.ViewAs[KotlinAny](s0_1), unary)
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
 		tmp0__ = s0
 		this_ = tmp0__
 		s0 = this_
@@ -24225,7 +30407,13 @@ L7:
 		B12:
 			byteIndex = s1
 			s2_2 = m.kotlinIntToByteImpl(d+1, code)
+			if m.exn != nil {
+				return (*KotlinByteArray)(nil)
+			}
 			m.kotlinByteArraySet(d+1, s0_5, unary_, s2_2)
+			if m.exn != nil {
+				return (*KotlinByteArray)(nil)
+			}
 		} else {
 			if code < int32(2048) {
 				unary__ = byteIndex
@@ -24237,7 +30425,13 @@ L7:
 			B14:
 				byteIndex = s1
 				s2_2 = m.kotlinIntToByteImpl(d+1, ((code >> (uint32(6) & 31)) | int32(192)))
+				if m.exn != nil {
+					return (*KotlinByteArray)(nil)
+				}
 				m.kotlinByteArraySet(d+1, s0_5, unary__, s2_2)
+				if m.exn != nil {
+					return (*KotlinByteArray)(nil)
+				}
 				unary___ = byteIndex
 				tmp0______ = unary___
 				s0_5 = bytes
@@ -24247,7 +30441,13 @@ L7:
 			B15:
 				byteIndex = s1
 				s2_2 = m.kotlinIntToByteImpl(d+1, ((code & int32(63)) | int32(128)))
+				if m.exn != nil {
+					return (*KotlinByteArray)(nil)
+				}
 				m.kotlinByteArraySet(d+1, s0_5, unary___, s2_2)
+				if m.exn != nil {
+					return (*KotlinByteArray)(nil)
+				}
 			} else {
 				if code < int32(55296) {
 					s0 = int32(1)
@@ -24264,7 +30464,13 @@ L7:
 				B18:
 					byteIndex = s1
 					s2_2 = m.kotlinIntToByteImpl(d+1, ((code >> (uint32(12) & 31)) | int32(224)))
+					if m.exn != nil {
+						return (*KotlinByteArray)(nil)
+					}
 					m.kotlinByteArraySet(d+1, s0_5, unary____, s2_2)
+					if m.exn != nil {
+						return (*KotlinByteArray)(nil)
+					}
 					unary_____ = byteIndex
 					tmp0________ = unary_____
 					s0_5 = bytes
@@ -24274,7 +30480,13 @@ L7:
 				B19:
 					byteIndex = s1
 					s2_2 = m.kotlinIntToByteImpl(d+1, (((code >> (uint32(6) & 31)) & int32(63)) | int32(128)))
+					if m.exn != nil {
+						return (*KotlinByteArray)(nil)
+					}
 					m.kotlinByteArraySet(d+1, s0_5, unary_____, s2_2)
+					if m.exn != nil {
+						return (*KotlinByteArray)(nil)
+					}
 					unary______ = byteIndex
 					tmp0_________ = unary______
 					s0_5 = bytes
@@ -24284,9 +30496,18 @@ L7:
 				B20:
 					byteIndex = s1
 					s2_2 = m.kotlinIntToByteImpl(d+1, ((code & int32(63)) | int32(128)))
+					if m.exn != nil {
+						return (*KotlinByteArray)(nil)
+					}
 					m.kotlinByteArraySet(d+1, s0_5, unary______, s2_2)
+					if m.exn != nil {
+						return (*KotlinByteArray)(nil)
+					}
 				} else {
 					s0 = m.kotlinTextCodePointFromSurrogate(d+1, string_, code, charIndex, endIndex, throwOnMalformed)
+					if m.exn != nil {
+						return (*KotlinByteArray)(nil)
+					}
 					codePoint = s0
 					if codePoint <= int32(0) {
 						unary_______ = byteIndex
@@ -24298,8 +30519,17 @@ L7:
 					B22:
 						byteIndex = s1
 						s2_3 = m.kotlinTextGetREPLACEMENTBYTESEQUENCE(d + 1)
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						s2_2 = m.kotlinByteArrayGet(d+1, s2_3, int32(0))
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						m.kotlinByteArraySet(d+1, s0_5, unary_______, s2_2)
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						unary________ = byteIndex
 						tmp0___________ = unary________
 						s0_5 = bytes
@@ -24309,8 +30539,17 @@ L7:
 					B23:
 						byteIndex = s1
 						s2_3 = m.kotlinTextGetREPLACEMENTBYTESEQUENCE(d + 1)
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						s2_2 = m.kotlinByteArrayGet(d+1, s2_3, int32(1))
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						m.kotlinByteArraySet(d+1, s0_5, unary________, s2_2)
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						unary_________ = byteIndex
 						tmp0____________ = unary_________
 						s0_5 = bytes
@@ -24320,8 +30559,17 @@ L7:
 					B24:
 						byteIndex = s1
 						s2_3 = m.kotlinTextGetREPLACEMENTBYTESEQUENCE(d + 1)
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						s2_2 = m.kotlinByteArrayGet(d+1, s2_3, int32(2))
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						m.kotlinByteArraySet(d+1, s0_5, unary_________, s2_2)
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 					} else {
 						unary__________ = byteIndex
 						tmp0_____________ = unary__________
@@ -24332,7 +30580,13 @@ L7:
 					B25:
 						byteIndex = s1
 						s2_2 = m.kotlinIntToByteImpl(d+1, ((codePoint >> (uint32(18) & 31)) | int32(240)))
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						m.kotlinByteArraySet(d+1, s0_5, unary__________, s2_2)
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						unary___________ = byteIndex
 						tmp0______________ = unary___________
 						s0_5 = bytes
@@ -24342,7 +30596,13 @@ L7:
 					B26:
 						byteIndex = s1
 						s2_2 = m.kotlinIntToByteImpl(d+1, (((codePoint >> (uint32(12) & 31)) & int32(63)) | int32(128)))
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						m.kotlinByteArraySet(d+1, s0_5, unary___________, s2_2)
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						unary____________ = byteIndex
 						tmp0_______________ = unary____________
 						s0_5 = bytes
@@ -24352,7 +30612,13 @@ L7:
 					B27:
 						byteIndex = s1
 						s2_2 = m.kotlinIntToByteImpl(d+1, (((codePoint >> (uint32(6) & 31)) & int32(63)) | int32(128)))
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						m.kotlinByteArraySet(d+1, s0_5, unary____________, s2_2)
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						unary_____________ = byteIndex
 						tmp0________________ = unary_____________
 						s0_5 = bytes
@@ -24362,7 +30628,13 @@ L7:
 					B28:
 						byteIndex = s1
 						s2_2 = m.kotlinIntToByteImpl(d+1, ((codePoint & int32(63)) | int32(128)))
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						m.kotlinByteArraySet(d+1, s0_5, unary_____________, s2_2)
+						if m.exn != nil {
+							return (*KotlinByteArray)(nil)
+						}
 						unary______________ = charIndex
 						tmp0_________________ = unary______________
 						this_______________ = tmp0_________________
@@ -24379,10 +30651,16 @@ L7:
 		break L7
 	}
 	s0 = m.kotlinByteArrayGetSize(d+1, bytes)
+	if m.exn != nil {
+		return (*KotlinByteArray)(nil)
+	}
 	if s0 == byteIndex {
 		s0_5 = bytes
 	} else {
 		s0_5 = m.kotlinCollectionsCopyOf3(d+1, bytes, byteIndex)
+		if m.exn != nil {
+			return (*KotlinByteArray)(nil)
+		}
 	}
 	return s0_5
 }
@@ -24393,6 +30671,9 @@ func (m *Instance) kotlinTextCodePointFromSurrogate(d int, string_ *KotlinString
 	}
 	var low, tmp0, this, s0 int32
 	m.kotlinTextInitPropertiesUtf8EncodingKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if int32(55296) <= high {
 		s0 = rt.B2I(high <= int32(56319))
 	} else {
@@ -24405,9 +30686,15 @@ func (m *Instance) kotlinTextCodePointFromSurrogate(d int, string_ *KotlinString
 	}
 	if s0 != 0 {
 		s0 = m.kotlinTextMalformed(d+1, int32(0), index, throwOnMalformed)
+		if m.exn != nil {
+			return int32(0)
+		}
 		return s0
 	}
 	s0 = m.kotlinStringGet(d+1, rt.ViewAs[KotlinAny](string_), index)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0 = s0
 	this = tmp0
 	s0 = this
@@ -24421,6 +30708,9 @@ B4:
 	}
 	if s0 == 0 {
 		s0 = m.kotlinTextMalformed(d+1, int32(0), index, throwOnMalformed)
+		if m.exn != nil {
+			return int32(0)
+		}
 		return s0
 	}
 	return ((int32(65536) + ((high & int32(1023)) << (uint32(10) & 31))) | (low & int32(1023)))
@@ -24435,12 +30725,25 @@ func (m *Instance) kotlinTextMalformed(d int, size int32, index int32, throwOnMa
 	var s2 *KotlinInt
 	var s0 *KotlinTextCharacterCodingException
 	m.kotlinTextInitPropertiesUtf8EncodingKt(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if throwOnMalformed != 0 {
 		s1 = m.stringLiteralLatin1(d+1, int32(177))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), (index - int32(1)))
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = m.kotlinTextCharacterCodingExceptionInit(d+1, (*KotlinTextCharacterCodingException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
+		if m.exn != nil {
+			return int32(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}}
+		return int32(0)
 	}
 	tmp0 = size
 	this = tmp0
@@ -24480,25 +30783,67 @@ func (m *Instance) kotlinTimeStaticInit(d int) {
 	}
 	m.g50 = int32(1)
 	s1 = m.stringLiteralLatin1(d+1, int32(178))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinTimeDurationUnitInit(d+1, (*KotlinTimeDurationUnit)(nil), s1, int32(0), float64(1))
+	if m.exn != nil {
+		return
+	}
 	m.g51 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(179))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinTimeDurationUnitInit(d+1, (*KotlinTimeDurationUnit)(nil), s1, int32(1), float64(1000))
+	if m.exn != nil {
+		return
+	}
 	m.g52 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(180))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinTimeDurationUnitInit(d+1, (*KotlinTimeDurationUnit)(nil), s1, int32(2), float64(1e+06))
+	if m.exn != nil {
+		return
+	}
 	m.g53 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(181))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinTimeDurationUnitInit(d+1, (*KotlinTimeDurationUnit)(nil), s1, int32(3), float64(1e+09))
+	if m.exn != nil {
+		return
+	}
 	m.g54 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(182))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinTimeDurationUnitInit(d+1, (*KotlinTimeDurationUnit)(nil), s1, int32(4), float64(6e+10))
+	if m.exn != nil {
+		return
+	}
 	m.g55 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(183))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinTimeDurationUnitInit(d+1, (*KotlinTimeDurationUnit)(nil), s1, int32(5), float64(3.6e+12))
+	if m.exn != nil {
+		return
+	}
 	m.g56 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(184))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinTimeDurationUnitInit(d+1, (*KotlinTimeDurationUnit)(nil), s1, int32(6), float64(8.64e+13))
+	if m.exn != nil {
+		return
+	}
 	m.g57 = s0_1
 	return
 }
@@ -24512,25 +30857,38 @@ func (m *Instance) kotlinTimeDurationUnitInit(d int, this *KotlinTimeDurationUni
 		this = s0
 	}
 	s0_1 = m.kotlinEnumInit(d+1, rt.ViewAs[KotlinEnum](this), name, ordinal)
+	if m.exn != nil {
+		return (*KotlinTimeDurationUnit)(nil)
+	}
 	this.Scale = scale
 	return this
 }
 
 func (m *Instance) kotlinTimeConvertDurationUnit(d int, value int64, sourceUnit *KotlinTimeDurationUnit, targetUnit *KotlinTimeDurationUnit) int64 {
-	var sourceCompareTarget int32
+	var sourceCompareTarget, s0_1 int32
 	var scale, result, s0_2, s1_1 int64
 	var s0, s1, s2 float64
 	s0 = sourceUnit.Scale
 	s1 = targetUnit.Scale
-	sourceCompareTarget = m.kotlinDoubleCompareToImpl(d+1, s0, s1)
+	s0_1 = m.kotlinDoubleCompareToImpl(d+1, s0, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	sourceCompareTarget = s0_1
 	if sourceCompareTarget > int32(0) {
 		s0 = sourceUnit.Scale
 		s1 = targetUnit.Scale
 		s0 = float64(s0 / s1)
 		s0_2 = m.kotlinDoubleToLongImpl(d+1, s0)
+		if m.exn != nil {
+			return int64(0)
+		}
 		scale = s0_2
 		result = (value * scale)
 		s0_2 = m.kotlinLongDivImpl(d+1, result, scale)
+		if m.exn != nil {
+			return int64(0)
+		}
 		if s0_2 == value {
 			s0_2 = result
 		} else {
@@ -24546,7 +30904,13 @@ func (m *Instance) kotlinTimeConvertDurationUnit(d int, value int64, sourceUnit 
 			s2 = sourceUnit.Scale
 			s1 = float64(s1 / s2)
 			s1_1 = m.kotlinDoubleToLongImpl(d+1, s1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0_2 = m.kotlinLongDivImpl(d+1, value, s1_1)
+			if m.exn != nil {
+				return int64(0)
+			}
 		} else {
 			s0_2 = value
 		}
@@ -24555,17 +30919,24 @@ func (m *Instance) kotlinTimeConvertDurationUnit(d int, value int64, sourceUnit 
 }
 
 func (m *Instance) kotlinTimeConvertDurationUnitOverflow(d int, value int64, sourceUnit *KotlinTimeDurationUnit, targetUnit *KotlinTimeDurationUnit) int64 {
-	var sourceCompareTarget int32
+	var sourceCompareTarget, s0_1 int32
 	var s0, s1, s2 float64
 	var s1_1, s0_2 int64
 	s0 = sourceUnit.Scale
 	s1 = targetUnit.Scale
-	sourceCompareTarget = m.kotlinDoubleCompareToImpl(d+1, s0, s1)
+	s0_1 = m.kotlinDoubleCompareToImpl(d+1, s0, s1)
+	if m.exn != nil {
+		return int64(0)
+	}
+	sourceCompareTarget = s0_1
 	if sourceCompareTarget > int32(0) {
 		s1 = sourceUnit.Scale
 		s2 = targetUnit.Scale
 		s1 = float64(s1 / s2)
 		s1_1 = m.kotlinDoubleToLongImpl(d+1, s1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0_2 = (value * s1_1)
 	} else {
 		if sourceCompareTarget < int32(0) {
@@ -24573,7 +30944,13 @@ func (m *Instance) kotlinTimeConvertDurationUnitOverflow(d int, value int64, sou
 			s2 = sourceUnit.Scale
 			s1 = float64(s1 / s2)
 			s1_1 = m.kotlinDoubleToLongImpl(d+1, s1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0_2 = m.kotlinLongDivImpl(d+1, value, s1_1)
+			if m.exn != nil {
+				return int64(0)
+			}
 		} else {
 			s0_2 = value
 		}
@@ -24583,36 +30960,57 @@ func (m *Instance) kotlinTimeConvertDurationUnitOverflow(d int, value int64, sou
 
 func (m *Instance) kotlinTimeDurationUnitNANOSECONDSGetInstance(d int) *KotlinTimeDurationUnit {
 	m.kotlinTimeStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinTimeDurationUnit)(nil)
+	}
 	return m.g51
 }
 
 func (m *Instance) kotlinTimeDurationUnitMICROSECONDSGetInstance(d int) *KotlinTimeDurationUnit {
 	m.kotlinTimeStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinTimeDurationUnit)(nil)
+	}
 	return m.g52
 }
 
 func (m *Instance) kotlinTimeDurationUnitMILLISECONDSGetInstance(d int) *KotlinTimeDurationUnit {
 	m.kotlinTimeStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinTimeDurationUnit)(nil)
+	}
 	return m.g53
 }
 
 func (m *Instance) kotlinTimeDurationUnitSECONDSGetInstance(d int) *KotlinTimeDurationUnit {
 	m.kotlinTimeStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinTimeDurationUnit)(nil)
+	}
 	return m.g54
 }
 
 func (m *Instance) kotlinTimeDurationUnitMINUTESGetInstance(d int) *KotlinTimeDurationUnit {
 	m.kotlinTimeStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinTimeDurationUnit)(nil)
+	}
 	return m.g55
 }
 
 func (m *Instance) kotlinTimeDurationUnitHOURSGetInstance(d int) *KotlinTimeDurationUnit {
 	m.kotlinTimeStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinTimeDurationUnit)(nil)
+	}
 	return m.g56
 }
 
 func (m *Instance) kotlinTimeDurationUnitDAYSGetInstance(d int) *KotlinTimeDurationUnit {
 	m.kotlinTimeStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinTimeDurationUnit)(nil)
+	}
 	return m.g57
 }
 
@@ -24652,31 +31050,55 @@ func (m *Instance) kotlinWasmUnsafePointerGetAddressImpl(d int, this int32) int3
 func (m *Instance) kotlinWasmUnsafePointerPlusImpl(d int, this int32, other int32) int32 {
 	var tmp0, tmp2, tmp0_, this_, this__, other_, s0, s1 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0 = s0
 	tmp0_ = other
 	this_ = tmp0_
 	s0 = m.kotlinUIntInitImpl(d+1, this_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B1
 B1:
 	tmp2 = s0
 	this__ = tmp0
 	other_ = tmp2
 	s0 = m.kotlinUIntGetDataImpl(d+1, this__)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinUIntGetDataImpl(d+1, other_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = (s0 + s1)
 	s0 = m.kotlinUIntInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B2
 B2:
 	s0 = m.kotlinWasmUnsafePointerInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinWasmUnsafePointerLoadByteImpl(d int, this int32) int32 {
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0 = s0
 	this_ = tmp0
 	s0 = m.kotlinUIntGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B1
 B1:
 	s0 = int32(int8(m.mem0.L8(uint64(uint32(s0)))))
@@ -24686,9 +31108,15 @@ B1:
 func (m *Instance) kotlinWasmUnsafePointerLoadShortImpl(d int, this int32) int32 {
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0 = s0
 	this_ = tmp0
 	s0 = m.kotlinUIntGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B1
 B1:
 	s0 = int32(int16(m.mem0.L16(uint64(uint32(s0)))))
@@ -24698,9 +31126,15 @@ B1:
 func (m *Instance) kotlinWasmUnsafePointerLoadIntImpl(d int, this int32) int32 {
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp0 = s0
 	this_ = tmp0
 	s0 = m.kotlinUIntGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B1
 B1:
 	s0 = int32(m.mem0.L32(uint64(uint32(s0))))
@@ -24711,9 +31145,15 @@ func (m *Instance) kotlinWasmUnsafePointerLoadLongImpl(d int, this int32) int64 
 	var tmp0, this_, s0 int32
 	var s0_1 int64
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp0 = s0
 	this_ = tmp0
 	s0 = m.kotlinUIntGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B1
 B1:
 	s0_1 = int64(m.mem0.L64(uint64(uint32(s0))))
@@ -24723,9 +31163,15 @@ B1:
 func (m *Instance) kotlinWasmUnsafePointerStoreByteImpl(d int, this int32, value int32) {
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
+	if m.exn != nil {
+		return
+	}
 	tmp0 = s0
 	this_ = tmp0
 	s0 = m.kotlinUIntGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return
+	}
 	goto B1
 B1:
 	m.mem0.S8(uint64(uint32(s0)), uint8(value))
@@ -24735,9 +31181,15 @@ B1:
 func (m *Instance) kotlinWasmUnsafePointerStoreIntImpl(d int, this int32, value int32) {
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
+	if m.exn != nil {
+		return
+	}
 	tmp0 = s0
 	this_ = tmp0
 	s0 = m.kotlinUIntGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return
+	}
 	goto B1
 B1:
 	m.mem0.S32(uint64(uint32(s0)), uint32(value))
@@ -24747,9 +31199,15 @@ B1:
 func (m *Instance) kotlinWasmUnsafePointerStoreLongImpl(d int, this int32, value int64) {
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
+	if m.exn != nil {
+		return
+	}
 	tmp0 = s0
 	this_ = tmp0
 	s0 = m.kotlinUIntGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return
+	}
 	goto B1
 B1:
 	m.mem0.S64(uint64(uint32(s0)), uint64(value))
@@ -24763,15 +31221,32 @@ func (m *Instance) kotlinWasmUnsafePointerToStringImpl(d int, this int32) *Kotli
 	var s0, s1_1 *KotlinString
 	var s1 *KotlinUInt
 	s0 = m.stringLiteralLatin1(d+1, int32(186))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1 = NewKotlinUInt(rt.ViewAs[ClassVTable](m.g177), m.g255, m.g298, int32(0), this)
 	s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](s1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1_1 = m.stringLiteralLatin1(d+1, int32(96))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](s1_1))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinWasmUnsafePointerHashCodeImpl(d int, this int32) int32 {
-	return m.kotlinUIntHashCodeImpl(d+1, this)
+	var s0 int32
+	s0 = m.kotlinUIntHashCodeImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinWasmUnsafePointerEqualsImpl(d int, this int32, other *KotlinAny) int32 {
@@ -24800,11 +31275,16 @@ func (m *Instance) kotlinWasmUnsafePointerToString(d int, this *KotlinAny) *Kotl
 		rt.Exhausted()
 	}
 	var tmp0This int32
+	var s0_1 *KotlinString
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinWasmUnsafePointer) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinWasmUnsafePointer](this).Address
-	return m.kotlinWasmUnsafePointerToStringImpl(d+1, tmp0This)
+	s0_1 = m.kotlinWasmUnsafePointerToStringImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinWasmUnsafePointerHashCode(d int, this *KotlinAny) int32 {
@@ -24815,6 +31295,9 @@ func (m *Instance) kotlinWasmUnsafePointerHashCode(d int, this *KotlinAny) int32
 	s0 = rt.ViewAs[KotlinWasmUnsafePointer](this).Address
 	tmp0This = s0
 	s0 = m.kotlinWasmUnsafePointerHashCodeImpl(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -24826,6 +31309,9 @@ func (m *Instance) kotlinWasmUnsafePointerEquals(d int, this *KotlinAny, other *
 	s0 = rt.ViewAs[KotlinWasmUnsafePointer](this).Address
 	tmp0This = s0
 	s0 = m.kotlinWasmUnsafePointerEqualsImpl(d+1, tmp0This, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
@@ -24838,6 +31324,9 @@ func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorInit(d int, this *Kotlin
 		this = s0
 	}
 	s0_1 = m.kotlinWasmUnsafeMemoryAllocatorInit(d+1, rt.ViewAs[KotlinWasmUnsafeMemoryAllocator](this))
+	if m.exn != nil {
+		return (*KotlinWasmUnsafeScopedMemoryAllocator)(nil)
+	}
 	this.Parent = parent
 	this.Destroyed = int8(0)
 	this.Suspended = int8(0)
@@ -24861,13 +31350,23 @@ func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorAllocate(d int, this *Ko
 	value = tmp0
 	if value == 0 {
 		s0_1 = m.stringLiteralLatin1(d+1, int32(190))
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B3
 	B3:
 		message = s0_1
 		s0_2 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), message)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return int32(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return int32(0)
 	}
 	s0_3 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B1
 B1:
 	s0 = int32(tmp0This.Suspended)
@@ -24875,13 +31374,23 @@ B1:
 	value_ = tmp0_
 	if value_ == 0 {
 		s0_1 = m.stringLiteralLatin1(d+1, int32(191))
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B6
 	B6:
 		message_ = s0_1
 		s0_2 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), message_)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return int32(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return int32(0)
 	}
 	s0_3 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B4
 B4:
 	align = int32(8)
@@ -24896,6 +31405,9 @@ B7:
 	result = s0
 	if result >= int32(0) {
 		s0 = m.kotlinIntRemImpl(d+1, result, align)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = rt.B2I(s0 == int32(0))
 	} else {
 		s0 = int32(0)
@@ -24904,23 +31416,40 @@ B7:
 	value__ = tmp0___
 	if value__ == 0 {
 		s0_1 = m.stringLiteralLatin1(d+1, int32(192))
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B11
 	B11:
 		message__ = s0_1
 		s0_2 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), message__)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return int32(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return int32(0)
 	}
 	s0_3 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B9
 B9:
 	s1 = tmp0This.AvailableAddress
 	s0 = (int32(2147483647) - s1)
 	if s0 < size {
 		s0_1 = m.stringLiteralLatin1(d+1, int32(193))
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp0____ = s0_1
 		message___ = tmp0____
 		s0_2 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), message___)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return int32(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return int32(0)
 	}
 	tmp0This.AvailableAddress = (result + size)
 	s0 = int32(m.mem0.Pages())
@@ -24929,14 +31458,24 @@ B9:
 	if s0 >= currentMaxSize {
 		s0 = tmp0This.AvailableAddress
 		s0 = m.kotlinIntDivImpl(d+1, (s0 - currentMaxSize), int32(65536))
+		if m.exn != nil {
+			return int32(0)
+		}
 		numPagesToGrow = (s0 + int32(2))
 		s0 = int32(m.mem0.Grow(uint64(uint32(numPagesToGrow))))
 		if s0 == int32(-1) {
 			s0_1 = m.stringLiteralLatin1(d+1, int32(194))
+			if m.exn != nil {
+				return int32(0)
+			}
 			tmp0_____ = s0_1
 			message____ = tmp0_____
 			s0_2 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), message____)
-			panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+			if m.exn != nil {
+				return int32(0)
+			}
+			m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+			return int32(0)
 		}
 	}
 	s0 = tmp0This.AvailableAddress
@@ -24946,26 +31485,46 @@ B9:
 	value___ = tmp0______
 	if value___ == 0 {
 		s1_1 = m.stringLiteralLatin1(d+1, int32(195))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_2 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), s1_1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return int32(0)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return int32(0)
 	}
 	s0_3 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B17
 B17:
 	tmp0_______ = result
 	this__ = tmp0_______
 	s0 = m.kotlinUIntInitImpl(d+1, this__)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B19
 B19:
 	s0 = m.kotlinWasmUnsafePointerInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return s0
 }
 
 func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorCreateChild(d int, this *KotlinWasmUnsafeScopedMemoryAllocator) *KotlinWasmUnsafeScopedMemoryAllocator {
-	var child *KotlinWasmUnsafeScopedMemoryAllocator
+	var child, s0 *KotlinWasmUnsafeScopedMemoryAllocator
 	var s1 int32
 	s1 = this.AvailableAddress
-	child = m.kotlinWasmUnsafeScopedMemoryAllocatorInit(d+1, (*KotlinWasmUnsafeScopedMemoryAllocator)(nil), s1, this)
+	s0 = m.kotlinWasmUnsafeScopedMemoryAllocatorInit(d+1, (*KotlinWasmUnsafeScopedMemoryAllocator)(nil), s1, this)
+	if m.exn != nil {
+		return (*KotlinWasmUnsafeScopedMemoryAllocator)(nil)
+	}
+	child = s0
 	this.Suspended = int8(1)
 	return child
 }
@@ -24997,13 +31556,23 @@ func (m *Instance) kotlinWasmUnsafeCreateAllocatorInTheNewScope(d int) *KotlinWa
 	value = tmp0
 	if value == 0 {
 		s0_1 = m.stringLiteralLatin1(d+1, int32(197))
+		if m.exn != nil {
+			return (*KotlinWasmUnsafeScopedMemoryAllocator)(nil)
+		}
 		goto B3
 	B3:
 		message = s0_1
 		s0_2 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), message)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+		if m.exn != nil {
+			return (*KotlinWasmUnsafeScopedMemoryAllocator)(nil)
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+		return (*KotlinWasmUnsafeScopedMemoryAllocator)(nil)
 	}
 	s0_3 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmUnsafeScopedMemoryAllocator)(nil)
+	}
 	goto B1
 B1:
 	s0 = m.g58
@@ -25012,10 +31581,16 @@ B1:
 		s0 = (*KotlinWasmUnsafeScopedMemoryAllocator)(nil)
 	} else {
 		s0 = m.kotlinWasmUnsafeScopedMemoryAllocatorCreateChild(d+1, tmp0SafeReceiver)
+		if m.exn != nil {
+			return (*KotlinWasmUnsafeScopedMemoryAllocator)(nil)
+		}
 	}
 	tmp1ElvisLhs = s0
 	if tmp1ElvisLhs == nil {
 		s0 = m.kotlinWasmUnsafeScopedMemoryAllocatorInit(d+1, (*KotlinWasmUnsafeScopedMemoryAllocator)(nil), int32(0), (*KotlinWasmUnsafeScopedMemoryAllocator)(nil))
+		if m.exn != nil {
+			return (*KotlinWasmUnsafeScopedMemoryAllocator)(nil)
+		}
 	} else {
 		s0 = tmp1ElvisLhs
 	}
@@ -25050,11 +31625,17 @@ func (m *Instance) kotlinStringPlus(d int, this *KotlinString, other *KotlinAny)
 	var s5, s6 int32
 	var s6_1 *KotlinWasmInternalWasmCharArray
 	s0 = m.kotlinToString(d+1, other)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	right = s0
 	s5 = this.Length
 	s6 = right.Length
 	s5 = (s5 + s6)
 	s6_1 = m.kotlinStringGetChars(d+1, right)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = NewKotlinString(rt.ViewAs[ClassVTable](m.g227), m.g269, m.g328, int32(0), this, s5, s6_1)
 	return s0
 }
@@ -25069,7 +31650,13 @@ func (m *Instance) kotlinStringGet(d int, this *KotlinAny, index int32) int32 {
 	tmp0This = rt.ViewAs[KotlinString](this)
 	s1 = tmp0This.Length
 	m.kotlinWasmInternalRangeCheck(d+1, index, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0 = m.kotlinStringGetChars(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return int32(uint16(s0.Elems[uint32(index)]))
 }
 
@@ -25108,6 +31695,9 @@ L1:
 		length = tmp8
 		rt.ArrayCopy(destination.Elems, destinationIndex, source.Elems, sourceIndex, length)
 		s0_2 = m.kotlinUnitGetInstance(d + 1)
+		if m.exn != nil {
+			return
+		}
 		goto B3
 	B3:
 		currentLeftString = currentLeftString.LeftIfInSum
@@ -25119,10 +31709,20 @@ L1:
 	value = tmp0_
 	if value == 0 {
 		s1 = m.stringLiteralLatin1(d+1, int32(195))
+		if m.exn != nil {
+			return
+		}
 		s0_4 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_4)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_4)}}
+		return
 	}
 	s0_2 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return
+	}
 	goto B4
 B4:
 	this.Chars = newArray
@@ -25135,6 +31735,9 @@ func (m *Instance) kotlinStringGetChars(d int, this *KotlinString) *KotlinWasmIn
 	s0 = this.LeftIfInSum
 	if rt.B2I(s0 == nil) == 0 {
 		m.kotlinStringFoldChars(d+1, this)
+		if m.exn != nil {
+			return (*KotlinWasmInternalWasmCharArray)(nil)
+		}
 	}
 	return this.Chars
 }
@@ -25154,10 +31757,16 @@ func (m *Instance) kotlinStringSubSequence(d int, this *KotlinAny, startIndex in
 	tmp0This = rt.ViewAs[KotlinString](this)
 	s3 = tmp0This.Length
 	m.kotlinStringCheckStringBounds(d+1, tmp0This, startIndex, endIndex, s3)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	newLength = (endIndex - startIndex)
 	s0 = NewKotlinWasmInternalWasmCharArray(rt.MakeSlice(newLength, int16(0)))
 	newChars = s0
 	s0 = m.kotlinStringGetChars(d+1, tmp0This)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	tmp0 = s0
 	tmp2 = newChars
 	tmp4 = startIndex
@@ -25170,9 +31779,15 @@ func (m *Instance) kotlinStringSubSequence(d int, this *KotlinAny, startIndex in
 	length = tmp8
 	rt.ArrayCopy(destination.Elems, destinationIndex, source.Elems, sourceIndex, length)
 	s0_1 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	goto B1
 B1:
 	s0_2 = m.kotlinCreateString(d+1, newChars)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	return rt.ViewAs[KotlinAny](s0_2)
 }
 
@@ -25191,29 +31806,76 @@ func (m *Instance) kotlinStringCheckStringBounds(d int, this *KotlinString, star
 	}
 	if s0 != 0 {
 		s1 = m.stringLiteralLatin1(d+1, int32(46))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), startIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(47))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), endIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(200))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), length)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinIndexOutOfBoundsExceptionInit2(d+1, (*KotlinIndexOutOfBoundsException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	if startIndex > endIndex {
 		s1 = m.stringLiteralLatin1(d+1, int32(46))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), startIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.stringLiteralLatin1(d+1, int32(48))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2_1))
+		if m.exn != nil {
+			return
+		}
 		s2 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), endIndex)
 		s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](s2))
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinIndexOutOfBoundsExceptionInit2(d+1, (*KotlinIndexOutOfBoundsException)(nil), s1)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	return
 }
@@ -25232,8 +31894,14 @@ func (m *Instance) kotlinStringCompareTo(d int, this *KotlinAny, other *KotlinSt
 		return int32(0)
 	}
 	s0 = m.kotlinStringGetChars(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
 	thisChars = s0
 	s0 = m.kotlinStringGetChars(d+1, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	otherChars = s0
 	s0_1 = int32(len(thisChars.Elems))
 	thisLength = s0_1
@@ -25280,6 +31948,9 @@ func (m *Instance) kotlinStringCompareTo(d int, this *KotlinAny, other *KotlinSt
 				return s0_1
 			}
 			s0_2 = m.kotlinUnitGetInstance(d + 1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B8
 		B8:
 			if inductionVariable < times {
@@ -25289,6 +31960,9 @@ func (m *Instance) kotlinStringCompareTo(d int, this *KotlinAny, other *KotlinSt
 		}
 	}
 	s0_2 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B3
 B3:
 	return (thisLength - otherLength)
@@ -25299,7 +31973,7 @@ func (m *Instance) kotlinStringCompareTo2(d int, this *KotlinAny, other *KotlinA
 		rt.Exhausted()
 	}
 	var s0 *KotlinAny
-	var s1 int32
+	var s1, s0_1 int32
 	var s1_1 *KotlinString
 	var s2 *KotlinWasmInternalKClassImpl
 	s0 = this
@@ -25316,9 +31990,16 @@ func (m *Instance) kotlinStringCompareTo2(d int, this *KotlinAny, other *KotlinA
 	} else {
 		s2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g328))
 		m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, other, rt.ViewAs[KotlinAny](s2), int32(0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
-	return m.kotlinStringCompareTo(d+1, s0, s1_1)
+	s0_1 = m.kotlinStringCompareTo(d+1, s0, s1_1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinStringEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
@@ -25385,11 +32066,17 @@ func (m *Instance) kotlinStringEquals(d int, this *KotlinAny, other *KotlinAny) 
 		return int32(0)
 	}
 	s0_2 = m.kotlinStringGetChars(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
 	thisChars = s0_2
 	if !(other == nil || (other != nil && rt.ObjRTT(other) == rttKotlinString)) {
 		panic(rt.ErrCast)
 	}
 	s0_2 = m.kotlinStringGetChars(d+1, rt.ViewAs[KotlinString](other))
+	if m.exn != nil {
+		return int32(0)
+	}
 	otherChars = s0_2
 	tmp0 = thisLength
 	times = tmp0
@@ -25408,6 +32095,9 @@ func (m *Instance) kotlinStringEquals(d int, this *KotlinAny, other *KotlinAny) 
 				return int32(0)
 			}
 			s0_3 = m.kotlinUnitGetInstance(d + 1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B15
 		B15:
 			if inductionVariable < times {
@@ -25417,6 +32107,9 @@ func (m *Instance) kotlinStringEquals(d int, this *KotlinAny, other *KotlinAny) 
 		}
 	}
 	s0_3 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B10
 B10:
 	return int32(1)
@@ -25434,7 +32127,7 @@ func (m *Instance) kotlinStringToString(d int, this *KotlinAny) *KotlinString {
 func (m *Instance) kotlinStringHashCode(d int, this *KotlinAny) int32 {
 	var tmp0This *KotlinString
 	var thisLength, hash, tmp0, times, inductionVariable, index, tmp0_, it, tmp0__, this_, s0, s1 int32
-	var thisChars *KotlinWasmInternalWasmCharArray
+	var thisChars, s0_1 *KotlinWasmInternalWasmCharArray
 	var s0_2 *KotlinUnit
 	_ = s0_2
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinString)) {
@@ -25451,7 +32144,11 @@ func (m *Instance) kotlinStringHashCode(d int, this *KotlinAny) int32 {
 	if thisLength == int32(0) {
 		return int32(0)
 	}
-	thisChars = m.kotlinStringGetChars(d+1, tmp0This)
+	s0_1 = m.kotlinStringGetChars(d+1, tmp0This)
+	if m.exn != nil {
+		return int32(0)
+	}
+	thisChars = s0_1
 	hash = int32(0)
 	tmp0 = thisLength
 	times = tmp0
@@ -25473,6 +32170,9 @@ func (m *Instance) kotlinStringHashCode(d int, this *KotlinAny) int32 {
 			s0 = (s0 + s1)
 			hash = s0
 			s0_2 = m.kotlinUnitGetInstance(d + 1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B8
 		B8:
 			if inductionVariable < times {
@@ -25482,6 +32182,9 @@ func (m *Instance) kotlinStringHashCode(d int, this *KotlinAny) int32 {
 		}
 	}
 	s0_2 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B3
 B3:
 	rt.ViewAs[KotlinAny](tmp0This).HashCode = hash
@@ -25492,6 +32195,9 @@ B3:
 func (m *Instance) kotlinObjectInitializer9(d int) {
 	var s0 *KotlinCompanion9
 	s0 = m.kotlinCompanionInit9(d+1, (*KotlinCompanion9)(nil))
+	if m.exn != nil {
+		return
+	}
 	m.g60 = s0
 	return
 }
@@ -25524,6 +32230,9 @@ func (m *Instance) kotlinThrowableInit2(d int, this *KotlinThrowable, message *K
 		this = s0
 	}
 	s0 = m.kotlinThrowableInit(d+1, this, message, (*KotlinThrowable)(nil))
+	if m.exn != nil {
+		return (*KotlinThrowable)(nil)
+	}
 	return this
 }
 
@@ -25534,6 +32243,9 @@ func (m *Instance) kotlinThrowableInit3(d int, this *KotlinThrowable) *KotlinThr
 		this = s0
 	}
 	s0 = m.kotlinThrowableInit(d+1, this, (*KotlinString)(nil), (*KotlinThrowable)(nil))
+	if m.exn != nil {
+		return (*KotlinThrowable)(nil)
+	}
 	return this
 }
 
@@ -25546,23 +32258,53 @@ func (m *Instance) kotlinThrowableToString(d int, this *KotlinAny) *KotlinString
 	var s0 *RTTI
 	var s1, s2 *ClassVTable4
 	var s1_1, s2_1 *rt.Func
+	var fn1, fn2 any
+	var own1, own2 bool
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinThrowable))) {
 		panic(rt.ErrCast)
 	}
 	tmp0This = rt.ViewAs[KotlinThrowable](this)
 	s0 = rt.ViewAs[KotlinAny](tmp0This).Rtti
 	s0_1 = m.kotlinWasmInternalGetSimpleName(d+1, rt.AnyOf(s0))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s = s0_1
 	s1 = rt.ViewAs[ClassVTable4](tmp0This.Vtable)
 	s1_1 = s1.GetMessage
-	s0_1 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc9, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+	} else {
+		s0_1 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, rt.ViewAs[KotlinAny](tmp0This))
+	}
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	if rt.B2I(s0_1 == nil) == 0 {
 		s1_2 = m.stringLiteralLatin1(d+1, int32(202))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_1 = m.kotlinStringPlus(d+1, s, rt.ViewAs[KotlinAny](s1_2))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s2 = rt.ViewAs[ClassVTable4](tmp0This.Vtable)
 		s2_1 = s2.GetMessage
-		s1_2 = rt.FnOfRef(s2_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+		fn2, own2 = rt.FnOwn(s2_1, rttFunc9, m, false)
+		if own2 {
+			s1_2 = fn2.(func(int, *KotlinAny) *KotlinString)(d+1, rt.ViewAs[KotlinAny](tmp0This))
+		} else {
+			s1_2 = m.guard4(fn2.(func(int, *KotlinAny) *KotlinString), d+1, rt.ViewAs[KotlinAny](tmp0This))
+		}
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1_2))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	} else {
 		s0_1 = s
 	}
@@ -25570,17 +32312,30 @@ func (m *Instance) kotlinThrowableToString(d int, this *KotlinAny) *KotlinString
 }
 
 func (m *Instance) kotlinWasmInternalUtoa32(d int, inputValue int32) *KotlinString {
-	var decimals int32
+	var decimals, s0_1 int32
 	var buf *KotlinWasmInternalWasmCharArray
 	var s0 *KotlinString
 	if inputValue == int32(0) {
 		s0 = m.stringLiteralLatin1(d+1, int32(203))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		return s0
 	}
-	decimals = m.kotlinWasmInternalDecimalCount32(d+1, inputValue)
+	s0_1 = m.kotlinWasmInternalDecimalCount32(d+1, inputValue)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	decimals = s0_1
 	buf = NewKotlinWasmInternalWasmCharArray(rt.MakeSlice(decimals, int16(0)))
 	m.kotlinWasmInternalUtoaDecSimple(d+1, buf, inputValue, decimals)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinCreateString(d+1, buf)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0
 }
 
@@ -25597,6 +32352,9 @@ func (m *Instance) kotlinWasmInternalUtoa64(d int, inputValue int64) *KotlinStri
 	tmp0__ = other
 	this_ = tmp0__
 	s0 = m.kotlinUIntGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_1 = int64(uint32(s0))
 	goto B2
 B2:
@@ -25604,8 +32362,17 @@ B2:
 	this__ = tmp0_
 	other_ = tmp2_
 	s0_1 = m.kotlinULongGetDataImpl(d+1, this__)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other_)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0 = m.kotlinUlongCompare(d+1, s0_1, s1)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	goto B3
 B3:
 	goto B1
@@ -25614,22 +32381,43 @@ B1:
 		tmp0___ = inputValue
 		this___ = tmp0___
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this___)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		tmp0____ = s0_1
 		this____ = tmp0____
 		s0 = m.kotlinLongToIntImpl(d+1, this____)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0 = m.kotlinUIntInitImpl(d+1, s0)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		goto B6
 	B6:
 		goto B5
 	B5:
 		s0_2 = m.kotlinWasmInternalUtoa32(d+1, s0)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		return s0_2
 	}
 	s0 = m.kotlinWasmInternalDecimalCount64High(d+1, inputValue)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	decimals = s0
 	buf = NewKotlinWasmInternalWasmCharArray(rt.MakeSlice(decimals, int16(0)))
 	m.kotlinWasmInternalUtoaDecSimple64(d+1, buf, inputValue, decimals)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	s0_2 = m.kotlinCreateString(d+1, buf)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0_2
 }
 
@@ -25641,6 +32429,9 @@ func (m *Instance) kotlinWasmInternalItoa32(d int, inputValue int32) *KotlinStri
 	var absValueString, s0 *KotlinString
 	if inputValue == int32(0) {
 		s0 = m.stringLiteralLatin1(d+1, int32(203))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		return s0
 	}
 	isNegative = rt.B2I(inputValue < int32(0))
@@ -25657,13 +32448,25 @@ func (m *Instance) kotlinWasmInternalItoa32(d int, inputValue int32) *KotlinStri
 	tmp0_ = absValue
 	this_ = tmp0_
 	s0_1 = m.kotlinUIntInitImpl(d+1, this_)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	goto B4
 B4:
 	s0 = m.kotlinWasmInternalUtoa32(d+1, s0_1)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	absValueString = s0
 	if isNegative != 0 {
 		s0 = m.stringLiteralLatin1(d+1, int32(204))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0 = m.kotlinStringPlus(d+1, s0, rt.ViewAs[KotlinAny](absValueString))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	} else {
 		s0 = absValueString
 	}
@@ -25674,20 +32477,33 @@ func (m *Instance) kotlinWasmInternalItoa64(d int, inputValue int64) *KotlinStri
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var tmp0, this *KotlinRangesIntRange
+	var tmp0, this, s0 *KotlinRangesIntRange
 	var tmp2, value, absValue, tmp0_, this_, tmp0__, this__, s0_3 int64
 	var isNegative, s0_1 int32
 	var absValueString, s0_2 *KotlinString
-	tmp0 = m.kotlinIntRangeToImpl(d+1, int32(-2147483648), int32(2147483647))
+	s0 = m.kotlinIntRangeToImpl(d+1, int32(-2147483648), int32(2147483647))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	tmp0 = s0
 	tmp2 = inputValue
 	this = tmp0
 	value = tmp2
 	s0_1 = m.kotlinRangesContains(d+1, rt.ViewAs[KotlinAny](this), value)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	goto B1
 B1:
 	if s0_1 != 0 {
 		s0_1 = m.kotlinLongToIntImpl(d+1, inputValue)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_2 = m.kotlinWasmInternalItoa32(d+1, s0_1)
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		return s0_2
 	}
 	isNegative = rt.B2I(inputValue < int64(0))
@@ -25704,13 +32520,25 @@ B1:
 	tmp0__ = absValue
 	this__ = tmp0__
 	s0_3 = m.kotlinULongInitImpl(d+1, this__)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	goto B5
 B5:
 	s0_2 = m.kotlinWasmInternalUtoa64(d+1, s0_3)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	absValueString = s0_2
 	if isNegative != 0 {
 		s0_2 = m.stringLiteralLatin1(d+1, int32(204))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 		s0_2 = m.kotlinStringPlus(d+1, s0_2, rt.ViewAs[KotlinAny](absValueString))
+		if m.exn != nil {
+			return (*KotlinString)(nil)
+		}
 	} else {
 		s0_2 = absValueString
 	}
@@ -25743,23 +32571,41 @@ L1:
 		num = t
 		unary = offset
 		s0 = m.kotlinIntDecImpl(d+1, unary)
+		if m.exn != nil {
+			return
+		}
 		offset = s0
 		tmp0__ = r_
 		s0_1 = buffer
 		s1 = offset
 		this__ = tmp0__
 		s2 = m.kotlinUIntGetDataImpl(d+1, this__)
+		if m.exn != nil {
+			return
+		}
 		goto B6
 	B6:
 		s2 = m.kotlinWasmInternalDigitToChar(d+1, s2)
+		if m.exn != nil {
+			return
+		}
 		s0_1.Elems[uint32(s1)] = int16(s2)
 		tmp0___ = num
 		tmp2__ = int32(0)
 		this___ = tmp0___
 		other__ = tmp2__
 		s0 = m.kotlinUIntGetDataImpl(d+1, this___)
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinUIntGetDataImpl(d+1, other__)
+		if m.exn != nil {
+			return
+		}
 		s0 = m.kotlinUintCompare(d+1, s0, s1)
+		if m.exn != nil {
+			return
+		}
 		goto B7
 	B7:
 		if s0 > int32(0) {
@@ -25778,8 +32624,17 @@ func (m *Instance) kotlinWasmInternalDecimalCount64High(d int, value int64) int3
 	this = tmp0
 	other = tmp2
 	s0 = m.kotlinULongGetDataImpl(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1 = m.kotlinULongGetDataImpl(d+1, other)
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_1 = m.kotlinUlongCompare(d+1, s0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B1
 B1:
 	if s0_1 < int32(0) {
@@ -25788,8 +32643,17 @@ B1:
 		this_ = tmp0_
 		other_ = tmp2_
 		s0 = m.kotlinULongGetDataImpl(d+1, this_)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other_)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = m.kotlinUlongCompare(d+1, s0, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B3
 	B3:
 		if s0_1 < int32(0) {
@@ -25798,8 +32662,17 @@ B1:
 			this__ = tmp0__
 			other__ = tmp2__
 			s1 = m.kotlinULongGetDataImpl(d+1, this__)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinULongGetDataImpl(d+1, other__)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1_1 = m.kotlinUlongCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B5
 		B5:
 			s0_1 = (int32(10) + rt.B2I(s1_1 >= int32(0)))
@@ -25808,8 +32681,17 @@ B1:
 			this___ = tmp0___
 			other___ = tmp2___
 			s1 = m.kotlinULongGetDataImpl(d+1, this___)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinULongGetDataImpl(d+1, other___)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1_1 = m.kotlinUlongCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B6
 		B6:
 			s0_1 = (s0_1 + rt.B2I(s1_1 >= int32(0)))
@@ -25820,8 +32702,17 @@ B1:
 			this____ = tmp0____
 			other____ = tmp2____
 			s1 = m.kotlinULongGetDataImpl(d+1, this____)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinULongGetDataImpl(d+1, other____)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1_1 = m.kotlinUlongCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B7
 		B7:
 			s0_1 = (int32(13) + rt.B2I(s1_1 >= int32(0)))
@@ -25830,8 +32721,17 @@ B1:
 			this_____ = tmp0_____
 			other_____ = tmp2_____
 			s1 = m.kotlinULongGetDataImpl(d+1, this_____)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinULongGetDataImpl(d+1, other_____)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1_1 = m.kotlinUlongCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B8
 		B8:
 			s0_1 = (s0_1 + rt.B2I(s1_1 >= int32(0)))
@@ -25843,8 +32743,17 @@ B1:
 		this______ = tmp0______
 		other______ = tmp2______
 		s0 = m.kotlinULongGetDataImpl(d+1, this______)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.kotlinULongGetDataImpl(d+1, other______)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0_1 = m.kotlinUlongCompare(d+1, s0, s1)
+		if m.exn != nil {
+			return int32(0)
+		}
 		goto B9
 	B9:
 		if s0_1 < int32(0) {
@@ -25853,8 +32762,17 @@ B1:
 			this_______ = tmp0_______
 			other_______ = tmp2_______
 			s1 = m.kotlinULongGetDataImpl(d+1, this_______)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinULongGetDataImpl(d+1, other_______)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1_1 = m.kotlinUlongCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B11
 		B11:
 			s0_1 = (int32(16) + rt.B2I(s1_1 >= int32(0)))
@@ -25865,8 +32783,17 @@ B1:
 			this________ = tmp0________
 			other________ = tmp2________
 			s1 = m.kotlinULongGetDataImpl(d+1, this________)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinULongGetDataImpl(d+1, other________)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1_1 = m.kotlinUlongCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B12
 		B12:
 			s0_1 = (int32(18) + rt.B2I(s1_1 >= int32(0)))
@@ -25875,8 +32802,17 @@ B1:
 			this_________ = tmp0_________
 			other_________ = tmp2_________
 			s1 = m.kotlinULongGetDataImpl(d+1, this_________)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s2 = m.kotlinULongGetDataImpl(d+1, other_________)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1_1 = m.kotlinUlongCompare(d+1, s1, s2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B13
 		B13:
 			s0_1 = (s0_1 + rt.B2I(s1_1 >= int32(0)))
@@ -25901,6 +32837,9 @@ L1:
 		tmp0__ = other
 		this_ = tmp0__
 		s0 = m.kotlinUIntGetDataImpl(d+1, this_)
+		if m.exn != nil {
+			return
+		}
 		s0_1 = int64(uint32(s0))
 		goto B5
 	B5:
@@ -25921,6 +32860,9 @@ L1:
 		tmp0_____ = other__
 		this____ = tmp0_____
 		s0 = m.kotlinUIntGetDataImpl(d+1, this____)
+		if m.exn != nil {
+			return
+		}
 		s0_1 = int64(uint32(s0))
 		goto B8
 	B8:
@@ -25936,16 +32878,28 @@ L1:
 		num = t
 		unary = offset
 		s0 = m.kotlinIntDecImpl(d+1, unary)
+		if m.exn != nil {
+			return
+		}
 		offset = s0
 		tmp0______ = r_
 		s0_2 = buffer
 		s1 = offset
 		this______ = tmp0______
 		s2 = m.kotlinULongGetDataImpl(d+1, this______)
+		if m.exn != nil {
+			return
+		}
 		s2_1 = m.kotlinLongToIntImpl(d+1, s2)
+		if m.exn != nil {
+			return
+		}
 		goto B10
 	B10:
 		s2_1 = m.kotlinWasmInternalDigitToChar(d+1, s2_1)
+		if m.exn != nil {
+			return
+		}
 		s0_2.Elems[uint32(s1)] = int16(s2_1)
 		tmp0_______ = num
 		tmp2____ = int32(0)
@@ -25955,6 +32909,9 @@ L1:
 		tmp0_________ = other____
 		this________ = tmp0_________
 		s0 = m.kotlinUIntGetDataImpl(d+1, this________)
+		if m.exn != nil {
+			return
+		}
 		s0_1 = int64(uint32(s0))
 		goto B12
 	B12:
@@ -25962,8 +32919,17 @@ L1:
 		this_________ = tmp0________
 		other_____ = tmp2_____
 		s0_1 = m.kotlinULongGetDataImpl(d+1, this_________)
+		if m.exn != nil {
+			return
+		}
 		s1_1 = m.kotlinULongGetDataImpl(d+1, other_____)
+		if m.exn != nil {
+			return
+		}
 		s0 = m.kotlinUlongCompare(d+1, s0_1, s1_1)
+		if m.exn != nil {
+			return
+		}
 		goto B13
 	B13:
 		goto B11
@@ -25989,8 +32955,17 @@ func (m *Instance) kotlinWasmWasiErrorInit(d int, this *KotlinWasmWasiError, err
 		this = s0
 	}
 	s1 = m.stringLiteralLatin1(d+1, int32(207))
+	if m.exn != nil {
+		return (*KotlinWasmWasiError)(nil)
+	}
 	s1 = m.kotlinStringPlus(d+1, s1, rt.ViewAs[KotlinAny](error_))
+	if m.exn != nil {
+		return (*KotlinWasmWasiError)(nil)
+	}
 	s0_1 = m.kotlinThrowableInit2(d+1, rt.ViewAs[KotlinThrowable](this), s1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiError)(nil)
+	}
 	this.Error = error_
 	return this
 }
@@ -26005,235 +32980,697 @@ func (m *Instance) kotlinWasmStaticInit(d int) {
 	}
 	m.g61 = int32(1)
 	s1 = m.stringLiteralLatin1(d+1, int32(208))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(0))
+	if m.exn != nil {
+		return
+	}
 	m.g62 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(209))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(1))
+	if m.exn != nil {
+		return
+	}
 	m.g63 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(210))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(2))
+	if m.exn != nil {
+		return
+	}
 	m.g64 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(211))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(3))
+	if m.exn != nil {
+		return
+	}
 	m.g65 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(212))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(4))
+	if m.exn != nil {
+		return
+	}
 	m.g66 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(213))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(5))
+	if m.exn != nil {
+		return
+	}
 	m.g67 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(214))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(6))
+	if m.exn != nil {
+		return
+	}
 	m.g68 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(215))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(7))
+	if m.exn != nil {
+		return
+	}
 	m.g69 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(216))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(8))
+	if m.exn != nil {
+		return
+	}
 	m.g70 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(217))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(9))
+	if m.exn != nil {
+		return
+	}
 	m.g71 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(218))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(10))
+	if m.exn != nil {
+		return
+	}
 	m.g72 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(219))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(11))
+	if m.exn != nil {
+		return
+	}
 	m.g73 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(220))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(12))
+	if m.exn != nil {
+		return
+	}
 	m.g74 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(221))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(13))
+	if m.exn != nil {
+		return
+	}
 	m.g75 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(222))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(14))
+	if m.exn != nil {
+		return
+	}
 	m.g76 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(223))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(15))
+	if m.exn != nil {
+		return
+	}
 	m.g77 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(224))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(16))
+	if m.exn != nil {
+		return
+	}
 	m.g78 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(225))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(17))
+	if m.exn != nil {
+		return
+	}
 	m.g79 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(226))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(18))
+	if m.exn != nil {
+		return
+	}
 	m.g80 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(227))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(19))
+	if m.exn != nil {
+		return
+	}
 	m.g81 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(228))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(20))
+	if m.exn != nil {
+		return
+	}
 	m.g82 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(229))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(21))
+	if m.exn != nil {
+		return
+	}
 	m.g83 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(230))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(22))
+	if m.exn != nil {
+		return
+	}
 	m.g84 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(231))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(23))
+	if m.exn != nil {
+		return
+	}
 	m.g85 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(232))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(24))
+	if m.exn != nil {
+		return
+	}
 	m.g86 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(233))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(25))
+	if m.exn != nil {
+		return
+	}
 	m.g87 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(234))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(26))
+	if m.exn != nil {
+		return
+	}
 	m.g88 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(235))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(27))
+	if m.exn != nil {
+		return
+	}
 	m.g89 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(236))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(28))
+	if m.exn != nil {
+		return
+	}
 	m.g90 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(237))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(29))
+	if m.exn != nil {
+		return
+	}
 	m.g91 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(238))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(30))
+	if m.exn != nil {
+		return
+	}
 	m.g92 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(239))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(31))
+	if m.exn != nil {
+		return
+	}
 	m.g93 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(240))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(32))
+	if m.exn != nil {
+		return
+	}
 	m.g94 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(241))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(33))
+	if m.exn != nil {
+		return
+	}
 	m.g95 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(242))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(34))
+	if m.exn != nil {
+		return
+	}
 	m.g96 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(243))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(35))
+	if m.exn != nil {
+		return
+	}
 	m.g97 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(244))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(36))
+	if m.exn != nil {
+		return
+	}
 	m.g98 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(245))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(37))
+	if m.exn != nil {
+		return
+	}
 	m.g99 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(246))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(38))
+	if m.exn != nil {
+		return
+	}
 	m.g100 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(247))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(39))
+	if m.exn != nil {
+		return
+	}
 	m.g101 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(248))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(40))
+	if m.exn != nil {
+		return
+	}
 	m.g102 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(249))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(41))
+	if m.exn != nil {
+		return
+	}
 	m.g103 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(250))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(42))
+	if m.exn != nil {
+		return
+	}
 	m.g104 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(251))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(43))
+	if m.exn != nil {
+		return
+	}
 	m.g105 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(252))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(44))
+	if m.exn != nil {
+		return
+	}
 	m.g106 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(253))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(45))
+	if m.exn != nil {
+		return
+	}
 	m.g107 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(254))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(46))
+	if m.exn != nil {
+		return
+	}
 	m.g108 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(255))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(47))
+	if m.exn != nil {
+		return
+	}
 	m.g109 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(256))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(48))
+	if m.exn != nil {
+		return
+	}
 	m.g110 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(257))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(49))
+	if m.exn != nil {
+		return
+	}
 	m.g111 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(258))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(50))
+	if m.exn != nil {
+		return
+	}
 	m.g112 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(259))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(51))
+	if m.exn != nil {
+		return
+	}
 	m.g113 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(260))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(52))
+	if m.exn != nil {
+		return
+	}
 	m.g114 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(261))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(53))
+	if m.exn != nil {
+		return
+	}
 	m.g115 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(262))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(54))
+	if m.exn != nil {
+		return
+	}
 	m.g116 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(263))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(55))
+	if m.exn != nil {
+		return
+	}
 	m.g117 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(264))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(56))
+	if m.exn != nil {
+		return
+	}
 	m.g118 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(265))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(57))
+	if m.exn != nil {
+		return
+	}
 	m.g119 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(266))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(58))
+	if m.exn != nil {
+		return
+	}
 	m.g120 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(267))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(59))
+	if m.exn != nil {
+		return
+	}
 	m.g121 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(268))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(60))
+	if m.exn != nil {
+		return
+	}
 	m.g122 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(269))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(61))
+	if m.exn != nil {
+		return
+	}
 	m.g123 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(270))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(62))
+	if m.exn != nil {
+		return
+	}
 	m.g124 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(271))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(63))
+	if m.exn != nil {
+		return
+	}
 	m.g125 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(272))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(64))
+	if m.exn != nil {
+		return
+	}
 	m.g126 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(273))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(65))
+	if m.exn != nil {
+		return
+	}
 	m.g127 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(274))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(66))
+	if m.exn != nil {
+		return
+	}
 	m.g128 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(275))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(67))
+	if m.exn != nil {
+		return
+	}
 	m.g129 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(276))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(68))
+	if m.exn != nil {
+		return
+	}
 	m.g130 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(277))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(69))
+	if m.exn != nil {
+		return
+	}
 	m.g131 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(278))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(70))
+	if m.exn != nil {
+		return
+	}
 	m.g132 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(279))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(71))
+	if m.exn != nil {
+		return
+	}
 	m.g133 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(280))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(72))
+	if m.exn != nil {
+		return
+	}
 	m.g134 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(281))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(73))
+	if m.exn != nil {
+		return
+	}
 	m.g135 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(282))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(74))
+	if m.exn != nil {
+		return
+	}
 	m.g136 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(283))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(75))
+	if m.exn != nil {
+		return
+	}
 	m.g137 = s0_1
 	s1 = m.stringLiteralLatin1(d+1, int32(284))
+	if m.exn != nil {
+		return
+	}
 	s0_1 = m.kotlinWasmWasiErrorCodeInit(d+1, (*KotlinWasmWasiErrorCode)(nil), s1, int32(76))
+	if m.exn != nil {
+		return
+	}
 	m.g138 = s0_1
 	return
 }
@@ -26242,83 +33679,317 @@ func (m *Instance) kotlinWasmValues(d int) *KotlinArray {
 	var s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37, s38, s39, s40, s41, s42, s43, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, s54, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79, s80 *KotlinWasmWasiErrorCode
 	var s4_1 *KotlinWasmInternalWasmAnyArray
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s4 = m.kotlinWasmWasiErrorCodeSUCCESSGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s5 = m.kotlinWasmWasiErrorCode2BIGGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s6 = m.kotlinWasmWasiErrorCodeACCESGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s7 = m.kotlinWasmWasiErrorCodeADDRINUSEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s8 = m.kotlinWasmWasiErrorCodeADDRNOTAVAILGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s9 = m.kotlinWasmWasiErrorCodeAFNOSUPPORTGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s10 = m.kotlinWasmWasiErrorCodeAGAINGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s11 = m.kotlinWasmWasiErrorCodeALREADYGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s12 = m.kotlinWasmWasiErrorCodeBADFGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s13 = m.kotlinWasmWasiErrorCodeBADMSGGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s14 = m.kotlinWasmWasiErrorCodeBUSYGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s15 = m.kotlinWasmWasiErrorCodeCANCELEDGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s16 = m.kotlinWasmWasiErrorCodeCHILDGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s17 = m.kotlinWasmWasiErrorCodeCONNABORTEDGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s18 = m.kotlinWasmWasiErrorCodeCONNREFUSEDGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s19 = m.kotlinWasmWasiErrorCodeCONNRESETGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s20 = m.kotlinWasmWasiErrorCodeDEADLKGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s21 = m.kotlinWasmWasiErrorCodeDESTADDRREQGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s22 = m.kotlinWasmWasiErrorCodeDOMGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s23 = m.kotlinWasmWasiErrorCodeDQUOTGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s24 = m.kotlinWasmWasiErrorCodeEXISTGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s25 = m.kotlinWasmWasiErrorCodeFAULTGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s26 = m.kotlinWasmWasiErrorCodeFBIGGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s27 = m.kotlinWasmWasiErrorCodeHOSTUNREACHGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s28 = m.kotlinWasmWasiErrorCodeIDRMGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s29 = m.kotlinWasmWasiErrorCodeILSEQGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s30 = m.kotlinWasmWasiErrorCodeINPROGRESSGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s31 = m.kotlinWasmWasiErrorCodeINTRGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s32 = m.kotlinWasmWasiErrorCodeINVALGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s33 = m.kotlinWasmWasiErrorCodeIOGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s34 = m.kotlinWasmWasiErrorCodeISCONNGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s35 = m.kotlinWasmWasiErrorCodeISDIRGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s36 = m.kotlinWasmWasiErrorCodeLOOPGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s37 = m.kotlinWasmWasiErrorCodeMFILEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s38 = m.kotlinWasmWasiErrorCodeMLINKGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s39 = m.kotlinWasmWasiErrorCodeMSGSIZEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s40 = m.kotlinWasmWasiErrorCodeMULTIHOPGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s41 = m.kotlinWasmWasiErrorCodeNAMETOOLONGGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s42 = m.kotlinWasmWasiErrorCodeNETDOWNGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s43 = m.kotlinWasmWasiErrorCodeNETRESETGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s44 = m.kotlinWasmWasiErrorCodeNETUNREACHGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s45 = m.kotlinWasmWasiErrorCodeNFILEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s46 = m.kotlinWasmWasiErrorCodeNOBUFSGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s47 = m.kotlinWasmWasiErrorCodeNODEVGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s48 = m.kotlinWasmWasiErrorCodeNOENTGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s49 = m.kotlinWasmWasiErrorCodeNOEXECGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s50 = m.kotlinWasmWasiErrorCodeNOLCKGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s51 = m.kotlinWasmWasiErrorCodeNOLINKGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s52 = m.kotlinWasmWasiErrorCodeNOMEMGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s53 = m.kotlinWasmWasiErrorCodeNOMSGGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s54 = m.kotlinWasmWasiErrorCodeNOPROTOOPTGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s55 = m.kotlinWasmWasiErrorCodeNOSPCGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s56 = m.kotlinWasmWasiErrorCodeNOSYSGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s57 = m.kotlinWasmWasiErrorCodeNOTCONNGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s58 = m.kotlinWasmWasiErrorCodeNOTDIRGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s59 = m.kotlinWasmWasiErrorCodeNOTEMPTYGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s60 = m.kotlinWasmWasiErrorCodeNOTRECOVERABLEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s61 = m.kotlinWasmWasiErrorCodeNOTSOCKGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s62 = m.kotlinWasmWasiErrorCodeNOTSUPGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s63 = m.kotlinWasmWasiErrorCodeNOTTYGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s64 = m.kotlinWasmWasiErrorCodeNXIOGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s65 = m.kotlinWasmWasiErrorCodeOVERFLOWGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s66 = m.kotlinWasmWasiErrorCodeOWNERDEADGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s67 = m.kotlinWasmWasiErrorCodePERMGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s68 = m.kotlinWasmWasiErrorCodePIPEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s69 = m.kotlinWasmWasiErrorCodePROTOGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s70 = m.kotlinWasmWasiErrorCodePROTONOSUPPORTGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s71 = m.kotlinWasmWasiErrorCodePROTOTYPEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s72 = m.kotlinWasmWasiErrorCodeRANGEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s73 = m.kotlinWasmWasiErrorCodeROFSGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s74 = m.kotlinWasmWasiErrorCodeSPIPEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s75 = m.kotlinWasmWasiErrorCodeSRCHGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s76 = m.kotlinWasmWasiErrorCodeSTALEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s77 = m.kotlinWasmWasiErrorCodeTIMEDOUTGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s78 = m.kotlinWasmWasiErrorCodeTXTBSYGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s79 = m.kotlinWasmWasiErrorCodeXDEVGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s80 = m.kotlinWasmWasiErrorCodeNOTCAPABLEGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinArray)(nil)
+	}
 	s4_1 = NewKotlinWasmInternalWasmAnyArray([]*KotlinAny{rt.ViewAs[KotlinAny](s4), rt.ViewAs[KotlinAny](s5), rt.ViewAs[KotlinAny](s6), rt.ViewAs[KotlinAny](s7), rt.ViewAs[KotlinAny](s8), rt.ViewAs[KotlinAny](s9), rt.ViewAs[KotlinAny](s10), rt.ViewAs[KotlinAny](s11), rt.ViewAs[KotlinAny](s12), rt.ViewAs[KotlinAny](s13), rt.ViewAs[KotlinAny](s14), rt.ViewAs[KotlinAny](s15), rt.ViewAs[KotlinAny](s16), rt.ViewAs[KotlinAny](s17), rt.ViewAs[KotlinAny](s18), rt.ViewAs[KotlinAny](s19), rt.ViewAs[KotlinAny](s20), rt.ViewAs[KotlinAny](s21), rt.ViewAs[KotlinAny](s22), rt.ViewAs[KotlinAny](s23), rt.ViewAs[KotlinAny](s24), rt.ViewAs[KotlinAny](s25), rt.ViewAs[KotlinAny](s26), rt.ViewAs[KotlinAny](s27), rt.ViewAs[KotlinAny](s28), rt.ViewAs[KotlinAny](s29), rt.ViewAs[KotlinAny](s30), rt.ViewAs[KotlinAny](s31), rt.ViewAs[KotlinAny](s32), rt.ViewAs[KotlinAny](s33), rt.ViewAs[KotlinAny](s34), rt.ViewAs[KotlinAny](s35), rt.ViewAs[KotlinAny](s36), rt.ViewAs[KotlinAny](s37), rt.ViewAs[KotlinAny](s38), rt.ViewAs[KotlinAny](s39), rt.ViewAs[KotlinAny](s40), rt.ViewAs[KotlinAny](s41), rt.ViewAs[KotlinAny](s42), rt.ViewAs[KotlinAny](s43), rt.ViewAs[KotlinAny](s44), rt.ViewAs[KotlinAny](s45), rt.ViewAs[KotlinAny](s46), rt.ViewAs[KotlinAny](s47), rt.ViewAs[KotlinAny](s48), rt.ViewAs[KotlinAny](s49), rt.ViewAs[KotlinAny](s50), rt.ViewAs[KotlinAny](s51), rt.ViewAs[KotlinAny](s52), rt.ViewAs[KotlinAny](s53), rt.ViewAs[KotlinAny](s54), rt.ViewAs[KotlinAny](s55), rt.ViewAs[KotlinAny](s56), rt.ViewAs[KotlinAny](s57), rt.ViewAs[KotlinAny](s58), rt.ViewAs[KotlinAny](s59), rt.ViewAs[KotlinAny](s60), rt.ViewAs[KotlinAny](s61), rt.ViewAs[KotlinAny](s62), rt.ViewAs[KotlinAny](s63), rt.ViewAs[KotlinAny](s64), rt.ViewAs[KotlinAny](s65), rt.ViewAs[KotlinAny](s66), rt.ViewAs[KotlinAny](s67), rt.ViewAs[KotlinAny](s68), rt.ViewAs[KotlinAny](s69), rt.ViewAs[KotlinAny](s70), rt.ViewAs[KotlinAny](s71), rt.ViewAs[KotlinAny](s72), rt.ViewAs[KotlinAny](s73), rt.ViewAs[KotlinAny](s74), rt.ViewAs[KotlinAny](s75), rt.ViewAs[KotlinAny](s76), rt.ViewAs[KotlinAny](s77), rt.ViewAs[KotlinAny](s78), rt.ViewAs[KotlinAny](s79), rt.ViewAs[KotlinAny](s80)})
 	return NewKotlinArray(rt.ViewAs[ClassVTable](m.g181), (*AnyArray)(nil), m.g301, int32(0), s4_1)
 }
@@ -26327,10 +33998,19 @@ func (m *Instance) kotlinWasmGetEntries(d int) *KotlinAny {
 	var s0 *KotlinAny
 	var s0_1 *KotlinArray
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = m.g139
 	if s0 == nil {
 		s0_1 = m.kotlinWasmValues(d + 1)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		s0 = m.kotlinEnumsEnumEntries(d+1, s0_1)
+		if m.exn != nil {
+			return (*KotlinAny)(nil)
+		}
 		m.g139 = s0
 	}
 	s0 = m.g139
@@ -26346,391 +34026,625 @@ func (m *Instance) kotlinWasmWasiErrorCodeInit(d int, this *KotlinWasmWasiErrorC
 		this = s0
 	}
 	s0_1 = m.kotlinEnumInit(d+1, rt.ViewAs[KotlinEnum](this), name, ordinal)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return this
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeSUCCESSGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g62
 }
 
 func (m *Instance) kotlinWasmWasiErrorCode2BIGGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g63
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeACCESGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g64
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeADDRINUSEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g65
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeADDRNOTAVAILGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g66
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeAFNOSUPPORTGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g67
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeAGAINGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g68
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeALREADYGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g69
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeBADFGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g70
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeBADMSGGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g71
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeBUSYGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g72
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeCANCELEDGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g73
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeCHILDGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g74
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeCONNABORTEDGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g75
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeCONNREFUSEDGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g76
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeCONNRESETGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g77
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeDEADLKGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g78
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeDESTADDRREQGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g79
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeDOMGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g80
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeDQUOTGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g81
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeEXISTGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g82
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeFAULTGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g83
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeFBIGGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g84
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeHOSTUNREACHGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g85
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeIDRMGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g86
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeILSEQGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g87
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeINPROGRESSGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g88
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeINTRGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g89
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeINVALGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g90
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeIOGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g91
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeISCONNGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g92
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeISDIRGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g93
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeLOOPGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g94
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeMFILEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g95
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeMLINKGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g96
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeMSGSIZEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g97
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeMULTIHOPGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g98
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNAMETOOLONGGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g99
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNETDOWNGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g100
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNETRESETGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g101
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNETUNREACHGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g102
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNFILEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g103
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOBUFSGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g104
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNODEVGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g105
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOENTGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g106
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOEXECGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g107
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOLCKGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g108
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOLINKGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g109
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOMEMGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g110
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOMSGGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g111
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOPROTOOPTGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g112
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOSPCGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g113
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOSYSGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g114
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTCONNGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g115
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTDIRGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g116
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTEMPTYGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g117
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTRECOVERABLEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g118
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTSOCKGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g119
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTSUPGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g120
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTTYGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g121
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNXIOGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g122
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeOVERFLOWGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g123
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeOWNERDEADGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g124
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodePERMGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g125
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodePIPEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g126
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodePROTOGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g127
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodePROTONOSUPPORTGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g128
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodePROTOTYPEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g129
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeRANGEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g130
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeROFSGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g131
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeSPIPEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g132
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeSRCHGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g133
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeSTALEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g134
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeTIMEDOUTGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g135
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeTXTBSYGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g136
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeXDEVGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g137
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTCAPABLEGetInstance(d int) *KotlinWasmWasiErrorCode {
 	m.kotlinWasmStaticInit(d + 1)
+	if m.exn != nil {
+		return (*KotlinWasmWasiErrorCode)(nil)
+	}
 	return m.g138
 }
 
@@ -26742,8 +34656,9 @@ func (m *Instance) kotlinWasmInternalInvokeOnExportedFunctionExit(d int) {
 	var s1 *ClassVTable
 	var s1_1 *SpecialITable
 	var s1_2 *AnyArray
-	var s1_3 any
+	var s1_3, fn1 any
 	var s1_4 *rt.Func
+	var own1 bool
 	s0 = m.g140
 	tmp0SafeReceiver = s0
 	if tmp0SafeReceiver == nil {
@@ -26756,7 +34671,15 @@ func (m *Instance) kotlinWasmInternalInvokeOnExportedFunctionExit(d int) {
 			panic(rt.ErrCast)
 		}
 		s1_4 = rt.As[ClassITable4](s1_3).Iterator
-		s0 = rt.FnOfRef(s1_4, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp0SafeReceiver)
+		fn1, own1 = rt.FnOwn(s1_4, rttFunc33, m, false)
+		if own1 {
+			s0 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, tmp0SafeReceiver)
+		} else {
+			s0 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, tmp0SafeReceiver)
+		}
+		if m.exn != nil {
+			return
+		}
 	}
 	return
 }
@@ -26769,15 +34692,28 @@ func (m *Instance) kotlinIoPrintln(d int, message *KotlinAny) {
 	var s0 *KotlinString
 	var s1 *ClassVTable
 	var s1_1 *rt.Func
+	var fn1 any
+	var own1 bool
 	tmp0SafeReceiver = message
 	if tmp0SafeReceiver == nil {
 		s0 = (*KotlinString)(nil)
 	} else {
 		s1 = tmp0SafeReceiver.Vtable
 		s1_1 = s1.ToString
-		s0 = rt.FnOfRef(s1_1, rttFunc9).(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
+		fn1, own1 = rt.FnOwn(s1_1, rttFunc9, m, false)
+		if own1 {
+			s0 = fn1.(func(int, *KotlinAny) *KotlinString)(d+1, tmp0SafeReceiver)
+		} else {
+			s0 = m.guard4(fn1.(func(int, *KotlinAny) *KotlinString), d+1, tmp0SafeReceiver)
+		}
+		if m.exn != nil {
+			return
+		}
 	}
 	m.kotlinIoPrintImpl(d+1, s0, int32(0), int32(1))
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
@@ -26792,54 +34728,59 @@ func (m *Instance) kotlinIoPrintImpl(d int, message *KotlinString, useErrorStrea
 	var s1 *KotlinByteArray
 	var s0_2 *KotlinUnit
 	var s0_4 *rt.Exception
-	var c0 int
 	_ = result
 	s0 = m.kotlinWasmUnsafeCreateAllocatorInTheNewScope(d + 1)
-	allocator = s0
-	c0 = func() (c int) {
-		defer func() {
-			if r := recover(); r != nil {
-				e := rt.Unwrap(r, 8)
-				_ = e
-				s0_4 = e
-				c = 1
-			}
-		}()
-		tmp0 = rt.ViewAs[KotlinWasmUnsafeMemoryAllocator](allocator)
-		allocator_ = tmp0
-		tmp0SafeReceiver = message
-		s0_1 = allocator_
-		if tmp0SafeReceiver == nil {
-			s1 = (*KotlinByteArray)(nil)
-		} else {
-			s1 = m.kotlinTextEncodeToByteArray(d+1, tmp0SafeReceiver)
-		}
-		m.kotlinIoWasiPrintImpl(d+1, s0_1, s1, newLine, useErrorStream)
-		s0_2 = m.g44
-		s0_3 = rt.ViewAs[KotlinAny](s0_2)
-		goto B6
-	B6:
-		return 2
-
-	}()
-	switch c0 {
-	case 1:
-		goto B4
-	case 2:
-		goto B2
+	if m.exn != nil {
+		return
 	}
+	allocator = s0
+	tmp0 = rt.ViewAs[KotlinWasmUnsafeMemoryAllocator](allocator)
+	allocator_ = tmp0
+	tmp0SafeReceiver = message
+	s0_1 = allocator_
+	if tmp0SafeReceiver == nil {
+		s1 = (*KotlinByteArray)(nil)
+	} else {
+		s1 = m.kotlinTextEncodeToByteArray(d+1, tmp0SafeReceiver)
+		if m.exn != nil {
+			goto H5
+		}
+	}
+	m.kotlinIoWasiPrintImpl(d+1, s0_1, s1, newLine, useErrorStream)
+	if m.exn != nil {
+		goto H5
+	}
+	s0_2 = m.g44
+	s0_3 = rt.ViewAs[KotlinAny](s0_2)
+	goto B6
+B6:
+	goto B2
+H5:
+	s0_4 = m.exn
+	m.exn = nil
+	goto B4
 B4:
 	m.kotlinWasmUnsafeScopedMemoryAllocatorDestroy(d+1, allocator)
+	if m.exn != nil {
+		return
+	}
 	s1_1 = allocator.Parent
 	m.g58 = s1_1
-	rt.ThrowRef(s0_4)
+	m.exn = rt.NonNullExn(s0_4)
+	return
 B2:
 	tmp = s0_3
 	m.kotlinWasmUnsafeScopedMemoryAllocatorDestroy(d+1, allocator)
+	if m.exn != nil {
+		return
+	}
 	s0 = allocator.Parent
 	m.g58 = s0
 	result = tmp
 	s0_2 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return
+	}
 	goto B1
 B1:
 	return
@@ -26855,10 +34796,11 @@ func (m *Instance) kotlinIoWasiPrintImpl(d int, allocator *KotlinWasmUnsafeMemor
 	var tmp, tmp_, s1_2 *KotlinAny
 	var s2 *ClassVTable43
 	var s2_1, s3_4 *rt.Func
+	var fn1, fn2, fn3, s3_3, fn4 any
+	var own1, own2, own3, own4 bool
 	var s1_1 *KotlinWasmWasiErrorCode
 	var s3_1 *ClassVTable
 	var s3_2 *SpecialITable
-	var s3_3 any
 	var s2_2 *KotlinWasmInternalKClassImpl
 	var s0_2 *KotlinWasmWasiError
 	tmp0SafeReceiver = data
@@ -26866,6 +34808,9 @@ func (m *Instance) kotlinIoWasiPrintImpl(d int, allocator *KotlinWasmUnsafeMemor
 		s0 = (*KotlinInt)(nil)
 	} else {
 		s4 = m.kotlinByteArrayGetSize(d+1, tmp0SafeReceiver)
+		if m.exn != nil {
+			return
+		}
 		s0 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	}
 	tmp1ElvisLhs = s0
@@ -26888,13 +34833,24 @@ func (m *Instance) kotlinIoWasiPrintImpl(d int, allocator *KotlinWasmUnsafeMemor
 	}
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0_1 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), bytesToWrite)
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc7, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), bytesToWrite)
+	} else {
+		s0_1 = m.guard5(fn1.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](allocator), bytesToWrite)
+	}
+	if m.exn != nil {
+		return
+	}
 	ptr = s0_1
 	if rt.B2I(data == nil) == 0 {
 		currentPtr = ptr
 		indexedObject = data
 		inductionVariable = int32(0)
 		s0_1 = m.kotlinByteArrayGetSize(d+1, indexedObject)
+		if m.exn != nil {
+			return
+		}
 		last = s0_1
 	L6:
 		for {
@@ -26902,10 +34858,19 @@ func (m *Instance) kotlinIoWasiPrintImpl(d int, allocator *KotlinWasmUnsafeMemor
 				goto B7
 			}
 			s0_1 = m.kotlinByteArrayGetWithoutBoundCheck(d+1, indexedObject, inductionVariable)
+			if m.exn != nil {
+				return
+			}
 			el = s0_1
 			inductionVariable = (inductionVariable + int32(1))
 			m.kotlinWasmUnsafePointerStoreByteImpl(d+1, currentPtr, el)
+			if m.exn != nil {
+				return
+			}
 			s0_1 = m.kotlinWasmUnsafePointerPlusImpl(d+1, currentPtr, int32(1))
+			if m.exn != nil {
+				return
+			}
 			currentPtr = s0_1
 			continue L6
 		B7:
@@ -26914,15 +34879,37 @@ func (m *Instance) kotlinIoWasiPrintImpl(d int, allocator *KotlinWasmUnsafeMemor
 	}
 	if newLine != 0 {
 		s0_1 = m.kotlinWasmUnsafePointerPlusImpl(d+1, ptr, dataSize)
+		if m.exn != nil {
+			return
+		}
 		m.kotlinWasmUnsafePointerStoreByteImpl(d+1, s0_1, int32(10))
+		if m.exn != nil {
+			return
+		}
 	}
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0_1 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(8))
+	fn2, own2 = rt.FnOwn(s2_1, rttFunc7, m, false)
+	if own2 {
+		s0_1 = fn2.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(8))
+	} else {
+		s0_1 = m.guard5(fn2.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](allocator), int32(8))
+	}
+	if m.exn != nil {
+		return
+	}
 	scatterPtr = s0_1
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0_1 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(4))
+	fn3, own3 = rt.FnOwn(s2_1, rttFunc7, m, false)
+	if own3 {
+		s0_1 = fn3.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(4))
+	} else {
+		s0_1 = m.guard5(fn3.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](allocator), int32(4))
+	}
+	if m.exn != nil {
+		return
+	}
 	rp0 = s0_1
 	if useErrorStream != 0 {
 		s0_1 = int32(2)
@@ -26937,53 +34924,110 @@ L10:
 			goto B11
 		}
 		s0_1 = m.kotlinWasmUnsafePointerPlusImpl(d+1, scatterPtr, int32(0))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, ptr)
+		if m.exn != nil {
+			return
+		}
 		tmp0 = s1
 		this = tmp0
 		s1 = m.kotlinUIntGetDataImpl(d+1, this)
+		if m.exn != nil {
+			return
+		}
 		goto B12
 	B12:
 		m.kotlinWasmUnsafePointerStoreIntImpl(d+1, s0_1, (s1 + written))
+		if m.exn != nil {
+			return
+		}
 		s0_1 = m.kotlinWasmUnsafePointerPlusImpl(d+1, scatterPtr, int32(4))
+		if m.exn != nil {
+			return
+		}
 		m.kotlinWasmUnsafePointerStoreIntImpl(d+1, s0_1, (bytesToWrite - written))
+		if m.exn != nil {
+			return
+		}
 		s1 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, scatterPtr)
+		if m.exn != nil {
+			return
+		}
 		tmp0_ = s1
 		s0_1 = descriptor
 		this_ = tmp0_
 		s1 = m.kotlinUIntGetDataImpl(d+1, this_)
+		if m.exn != nil {
+			return
+		}
 		goto B13
 	B13:
 		s3 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, rp0)
+		if m.exn != nil {
+			return
+		}
 		tmp0__ = s3
 		this__ = tmp0__
 		s3 = m.kotlinUIntGetDataImpl(d+1, this__)
+		if m.exn != nil {
+			return
+		}
 		goto B14
 	B14:
 		s0_1 = m.f0(d+1, s0_1, s1, int32(1), s3)
+		if m.exn != nil {
+			return
+		}
 		res = s0_1
 		s1_1 = m.kotlinWasmWasiErrorCodeAGAINGetInstance(d + 1)
+		if m.exn != nil {
+			return
+		}
 		s1 = rt.ViewAs[KotlinEnum](s1_1).Ordinal
 		s0_1 = rt.B2I(res == s1)
 		if s0_1 != 0 {
 			m.kotlinIoWasiWaitUntilEventImpl(d+1, allocator, descriptor, int32(2))
+			if m.exn != nil {
+				return
+			}
 			s1 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, scatterPtr)
+			if m.exn != nil {
+				return
+			}
 			tmp0___ = s1
 			s0_1 = descriptor
 			this___ = tmp0___
 			s1 = m.kotlinUIntGetDataImpl(d+1, this___)
+			if m.exn != nil {
+				return
+			}
 			goto B16
 		B16:
 			s3 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, rp0)
+			if m.exn != nil {
+				return
+			}
 			tmp0____ = s3
 			this____ = tmp0____
 			s3 = m.kotlinUIntGetDataImpl(d+1, this____)
+			if m.exn != nil {
+				return
+			}
 			goto B17
 		B17:
 			s0_1 = m.f0(d+1, s0_1, s1, int32(1), s3)
+			if m.exn != nil {
+				return
+			}
 			res = s0_1
 		}
 		if rt.B2I(res == int32(0)) == 0 {
 			s1_2 = m.kotlinWasmGetEntries(d + 1)
+			if m.exn != nil {
+				return
+			}
 			tmp_ = s1_2
 			s3_1 = tmp_.Vtable
 			s3_2 = s3_1.SpecialITable
@@ -26992,7 +35036,15 @@ L10:
 				panic(rt.ErrCast)
 			}
 			s3_4 = rt.As[ClassITable7](s3_3).Get
-			s1_2 = rt.FnOfRef(s3_4, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp_, res)
+			fn4, own4 = rt.FnOwn(s3_4, rttFunc76, m, false)
+			if own4 {
+				s1_2 = fn4.(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp_, res)
+			} else {
+				s1_2 = m.guard6(fn4.(func(int, *KotlinAny, int32) *KotlinAny), d+1, tmp_, res)
+			}
+			if m.exn != nil {
+				return
+			}
 			tmp = s1_2
 			if tmp == nil {
 				s1 = int32(0)
@@ -27007,12 +35059,22 @@ L10:
 			} else {
 				s2_2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g353))
 				m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp, rt.ViewAs[KotlinAny](s2_2), int32(0))
+				if m.exn != nil {
+					return
+				}
 				panic(rt.ErrUnreachable)
 			}
 			s0_2 = m.kotlinWasmWasiErrorInit(d+1, (*KotlinWasmWasiError)(nil), s1_1)
-			panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}})
+			if m.exn != nil {
+				return
+			}
+			m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_2)}}
+			return
 		}
 		s1 = m.kotlinWasmUnsafePointerLoadIntImpl(d+1, rp0)
+		if m.exn != nil {
+			return
+		}
 		s0_1 = (written + s1)
 		written = s0_1
 		continue L10
@@ -27029,12 +35091,13 @@ func (m *Instance) kotlinIoWasiWaitUntilEventImpl(d int, allocator *KotlinWasmUn
 	var subscriptionPtr, eventSize, eventPtr, rp0, ret, tmp0, this, tmp0_, this_, tmp0__, this__, eventsCount, tmp0___, value, tmp0____, value_, eventRet, eventType, tmp0_____, value__, s0, s1, s3 int32
 	var tmp, tmp_, tmp__, tmp___, s1_1 *KotlinAny
 	var message, message_, message__, s0_2 *KotlinString
-	var eventUserdata int64
+	var eventUserdata, s0_5 int64
 	var s2 *ClassVTable43
 	var s2_1, s3_4 *rt.Func
+	var fn1, fn2, fn3, s3_3, fn4, fn5 any
+	var own1, own2, own3, own4, own5 bool
 	var s3_1 *ClassVTable
 	var s3_2 *SpecialITable
-	var s3_3 any
 	var s1_2 *KotlinWasmWasiErrorCode
 	var s2_2 *KotlinWasmInternalKClassImpl
 	var s0_1 *KotlinWasmWasiError
@@ -27043,46 +35106,115 @@ func (m *Instance) kotlinIoWasiWaitUntilEventImpl(d int, allocator *KotlinWasmUn
 	_ = s0_4
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(20))
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc7, m, false)
+	if own1 {
+		s0 = fn1.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(20))
+	} else {
+		s0 = m.guard5(fn1.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](allocator), int32(20))
+	}
+	if m.exn != nil {
+		return
+	}
 	subscriptionPtr = s0
 	s0 = m.kotlinWasmUnsafePointerPlusImpl(d+1, subscriptionPtr, int32(0))
+	if m.exn != nil {
+		return
+	}
 	m.kotlinWasmUnsafePointerStoreLongImpl(d+1, s0, int64(0))
+	if m.exn != nil {
+		return
+	}
 	s0 = m.kotlinWasmUnsafePointerPlusImpl(d+1, subscriptionPtr, int32(8))
+	if m.exn != nil {
+		return
+	}
 	s1 = m.kotlinIntToByteImpl(d+1, fdEvent)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinWasmUnsafePointerStoreByteImpl(d+1, s0, s1)
+	if m.exn != nil {
+		return
+	}
 	s0 = m.kotlinWasmUnsafePointerPlusImpl(d+1, subscriptionPtr, int32(16))
+	if m.exn != nil {
+		return
+	}
 	m.kotlinWasmUnsafePointerStoreIntImpl(d+1, s0, descriptor)
+	if m.exn != nil {
+		return
+	}
 	eventSize = int32(26)
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), eventSize)
+	fn2, own2 = rt.FnOwn(s2_1, rttFunc7, m, false)
+	if own2 {
+		s0 = fn2.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), eventSize)
+	} else {
+		s0 = m.guard5(fn2.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](allocator), eventSize)
+	}
+	if m.exn != nil {
+		return
+	}
 	eventPtr = s0
 	s2 = rt.ViewAs[ClassVTable43](allocator.Vtable)
 	s2_1 = s2.Allocate
-	s0 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(4))
+	fn3, own3 = rt.FnOwn(s2_1, rttFunc7, m, false)
+	if own3 {
+		s0 = fn3.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator), int32(4))
+	} else {
+		s0 = m.guard5(fn3.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](allocator), int32(4))
+	}
+	if m.exn != nil {
+		return
+	}
 	rp0 = s0
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, subscriptionPtr)
+	if m.exn != nil {
+		return
+	}
 	tmp0 = s0
 	this = tmp0
 	s0 = m.kotlinUIntGetDataImpl(d+1, this)
+	if m.exn != nil {
+		return
+	}
 	goto B1
 B1:
 	s1 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, eventPtr)
+	if m.exn != nil {
+		return
+	}
 	tmp0_ = s1
 	this_ = tmp0_
 	s1 = m.kotlinUIntGetDataImpl(d+1, this_)
+	if m.exn != nil {
+		return
+	}
 	goto B2
 B2:
 	s3 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, rp0)
+	if m.exn != nil {
+		return
+	}
 	tmp0__ = s3
 	this__ = tmp0__
 	s3 = m.kotlinUIntGetDataImpl(d+1, this__)
+	if m.exn != nil {
+		return
+	}
 	goto B3
 B3:
 	s0 = m.f1(d+1, s0, s1, int32(1), s3)
+	if m.exn != nil {
+		return
+	}
 	ret = s0
 	if rt.B2I(ret == int32(0)) == 0 {
 		s1_1 = m.kotlinWasmGetEntries(d + 1)
+		if m.exn != nil {
+			return
+		}
 		tmp_ = s1_1
 		s3_1 = tmp_.Vtable
 		s3_2 = s3_1.SpecialITable
@@ -27091,7 +35223,15 @@ B3:
 			panic(rt.ErrCast)
 		}
 		s3_4 = rt.As[ClassITable7](s3_3).Get
-		s1_1 = rt.FnOfRef(s3_4, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp_, ret)
+		fn4, own4 = rt.FnOwn(s3_4, rttFunc76, m, false)
+		if own4 {
+			s1_1 = fn4.(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp_, ret)
+		} else {
+			s1_1 = m.guard6(fn4.(func(int, *KotlinAny, int32) *KotlinAny), d+1, tmp_, ret)
+		}
+		if m.exn != nil {
+			return
+		}
 		tmp = s1_1
 		if tmp == nil {
 			s1 = int32(0)
@@ -27106,47 +35246,96 @@ B3:
 		} else {
 			s2_2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g353))
 			m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp, rt.ViewAs[KotlinAny](s2_2), int32(0))
+			if m.exn != nil {
+				return
+			}
 			panic(rt.ErrUnreachable)
 		}
 		s0_1 = m.kotlinWasmWasiErrorInit(d+1, (*KotlinWasmWasiError)(nil), s1_2)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	s0 = m.kotlinWasmUnsafePointerLoadIntImpl(d+1, rp0)
+	if m.exn != nil {
+		return
+	}
 	eventsCount = s0
 	tmp0___ = rt.B2I(eventsCount == int32(1))
 	value = tmp0___
 	if value == 0 {
 		s0_2 = m.stringLiteralLatin1(d+1, int32(286))
+		if m.exn != nil {
+			return
+		}
 		goto B9
 	B9:
 		message = s0_2
 		s0_3 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), message)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+		return
 	}
 	s0_4 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return
+	}
 	goto B7
 B7:
 	s0 = m.kotlinWasmUnsafePointerPlusImpl(d+1, eventPtr, int32(0))
-	eventUserdata = m.kotlinWasmUnsafePointerLoadLongImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
+	s0_5 = m.kotlinWasmUnsafePointerLoadLongImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
+	eventUserdata = s0_5
 	tmp0____ = rt.B2I(eventUserdata == int64(0))
 	value_ = tmp0____
 	if value_ == 0 {
 		s0_2 = m.stringLiteralLatin1(d+1, int32(286))
+		if m.exn != nil {
+			return
+		}
 		goto B12
 	B12:
 		message_ = s0_2
 		s0_3 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), message_)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+		return
 	}
 	s0_4 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return
+	}
 	goto B10
 B10:
 	s0 = m.kotlinWasmUnsafePointerPlusImpl(d+1, eventPtr, int32(8))
+	if m.exn != nil {
+		return
+	}
 	s0 = m.kotlinWasmUnsafePointerLoadShortImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	s0 = m.kotlinShortToIntImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	eventRet = s0
 	if rt.B2I(eventRet == int32(0)) == 0 {
 		s1_1 = m.kotlinWasmGetEntries(d + 1)
+		if m.exn != nil {
+			return
+		}
 		tmp___ = s1_1
 		s3_1 = tmp___.Vtable
 		s3_2 = s3_1.SpecialITable
@@ -27155,7 +35344,15 @@ B10:
 			panic(rt.ErrCast)
 		}
 		s3_4 = rt.As[ClassITable7](s3_3).Get
-		s1_1 = rt.FnOfRef(s3_4, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp___, eventRet)
+		fn5, own5 = rt.FnOwn(s3_4, rttFunc76, m, false)
+		if own5 {
+			s1_1 = fn5.(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp___, eventRet)
+		} else {
+			s1_1 = m.guard6(fn5.(func(int, *KotlinAny, int32) *KotlinAny), d+1, tmp___, eventRet)
+		}
+		if m.exn != nil {
+			return
+		}
 		tmp__ = s1_1
 		if tmp__ == nil {
 			s1 = int32(0)
@@ -27170,26 +35367,52 @@ B10:
 		} else {
 			s2_2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g353))
 			m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp__, rt.ViewAs[KotlinAny](s2_2), int32(0))
+			if m.exn != nil {
+				return
+			}
 			panic(rt.ErrUnreachable)
 		}
 		s0_1 = m.kotlinWasmWasiErrorInit(d+1, (*KotlinWasmWasiError)(nil), s1_2)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_1)}}
+		return
 	}
 	s0 = m.kotlinWasmUnsafePointerPlusImpl(d+1, eventPtr, int32(10))
+	if m.exn != nil {
+		return
+	}
 	s0 = m.kotlinWasmUnsafePointerLoadByteImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	s0 = m.kotlinByteToIntImpl(d+1, s0)
+	if m.exn != nil {
+		return
+	}
 	eventType = s0
 	tmp0_____ = rt.B2I(eventType == fdEvent)
 	value__ = tmp0_____
 	if value__ == 0 {
 		s0_2 = m.stringLiteralLatin1(d+1, int32(286))
+		if m.exn != nil {
+			return
+		}
 		goto B18
 	B18:
 		message__ = s0_2
 		s0_3 = m.kotlinIllegalStateExceptionInit(d+1, (*KotlinIllegalStateException)(nil), message__)
-		panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+		if m.exn != nil {
+			return
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+		return
 	}
 	s0_4 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return
+	}
 	goto B16
 B16:
 	return
@@ -27200,8 +35423,16 @@ func (m *Instance) kotlinRandomDefaultPlatformRandom(d int) *KotlinRandomRandom 
 		rt.Exhausted()
 	}
 	var s0 int64
+	var s0_1 *KotlinRandomRandom
 	s0 = m.kotlinRandomWasiRandomGet(d + 1)
-	return m.kotlinRandomRandom(d+1, s0)
+	if m.exn != nil {
+		return (*KotlinRandomRandom)(nil)
+	}
+	s0_1 = m.kotlinRandomRandom(d+1, s0)
+	if m.exn != nil {
+		return (*KotlinRandomRandom)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) kotlinRandomWasiRandomGet(d int) int64 {
@@ -27215,90 +35446,125 @@ func (m *Instance) kotlinRandomWasiRandomGet(d int) int64 {
 	var memory, ret, tmp0_, this, s0_1, s1_1 int32
 	var s2 *ClassVTable43
 	var s2_1, s3_3 *rt.Func
+	var fn1, s3_2, fn2 any
+	var own1, own2 bool
 	var s3 *ClassVTable
 	var s3_1 *SpecialITable
-	var s3_2 any
 	var s1_2 *KotlinWasmWasiErrorCode
 	var s2_2 *KotlinWasmInternalKClassImpl
 	var s0_3 *KotlinWasmWasiError
 	var s0_4 *rt.Exception
-	var c0 int
 	_ = result
 	_ = tmp
 	s0 = m.kotlinWasmUnsafeCreateAllocatorInTheNewScope(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	allocator = s0
-	c0 = func() (c int) {
-		defer func() {
-			if r := recover(); r != nil {
-				e := rt.Unwrap(r, 12)
-				_ = e
-				s0_4 = e
-				c = 1
-			}
-		}()
-		tmp0 = rt.ViewAs[KotlinWasmUnsafeMemoryAllocator](allocator)
-		allocator_ = tmp0
-		s2 = rt.ViewAs[ClassVTable43](allocator_.Vtable)
-		s2_1 = s2.Allocate
-		s0_1 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator_), int32(8))
-		memory = s0_1
-		s0_1 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, memory)
-		tmp0_ = s0_1
-		this = tmp0_
-		s0_1 = m.kotlinUIntGetDataImpl(d+1, this)
-		goto B8
-	B8:
-		s0_1 = m.f2(d+1, s0_1, int32(8))
-		ret = s0_1
-		if ret == int32(0) {
-			s0_2 = m.kotlinWasmUnsafePointerLoadLongImpl(d+1, memory)
+	tmp0 = rt.ViewAs[KotlinWasmUnsafeMemoryAllocator](allocator)
+	allocator_ = tmp0
+	s2 = rt.ViewAs[ClassVTable43](allocator_.Vtable)
+	s2_1 = s2.Allocate
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc7, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator_), int32(8))
+	} else {
+		s0_1 = m.guard5(fn1.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](allocator_), int32(8))
+	}
+	if m.exn != nil {
+		goto H6
+	}
+	memory = s0_1
+	s0_1 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, memory)
+	if m.exn != nil {
+		goto H6
+	}
+	tmp0_ = s0_1
+	this = tmp0_
+	s0_1 = m.kotlinUIntGetDataImpl(d+1, this)
+	if m.exn != nil {
+		goto H6
+	}
+	goto B8
+B8:
+	s0_1 = m.f2(d+1, s0_1, int32(8))
+	if m.exn != nil {
+		goto H6
+	}
+	ret = s0_1
+	if ret == int32(0) {
+		s0_2 = m.kotlinWasmUnsafePointerLoadLongImpl(d+1, memory)
+		if m.exn != nil {
+			goto H6
+		}
+	} else {
+		s1 = m.kotlinWasmGetEntries(d + 1)
+		if m.exn != nil {
+			goto H6
+		}
+		tmp___ = s1
+		s3 = tmp___.Vtable
+		s3_1 = s3.SpecialITable
+		s3_2 = s3_1.F2
+		if !(rt.IsType(s3_2, rttClassITable7)) {
+			panic(rt.ErrCast)
+		}
+		s3_3 = rt.As[ClassITable7](s3_2).Get
+		fn2, own2 = rt.FnOwn(s3_3, rttFunc76, m, false)
+		if own2 {
+			s1 = fn2.(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp___, ret)
 		} else {
-			s1 = m.kotlinWasmGetEntries(d + 1)
-			tmp___ = s1
-			s3 = tmp___.Vtable
-			s3_1 = s3.SpecialITable
-			s3_2 = s3_1.F2
-			if !(rt.IsType(s3_2, rttClassITable7)) {
+			s1 = m.guard6(fn2.(func(int, *KotlinAny, int32) *KotlinAny), d+1, tmp___, ret)
+		}
+		if m.exn != nil {
+			goto H6
+		}
+		tmp__ = s1
+		if tmp__ == nil {
+			s1_1 = int32(0)
+		} else {
+			s1_1 = rt.B2I((tmp__ != nil && rt.ObjRTT(tmp__) == rttKotlinWasmWasiErrorCode))
+		}
+		if s1_1 != 0 {
+			if !(tmp__ == nil || (tmp__ != nil && rt.ObjRTT(tmp__) == rttKotlinWasmWasiErrorCode)) {
 				panic(rt.ErrCast)
 			}
-			s3_3 = rt.As[ClassITable7](s3_2).Get
-			s1 = rt.FnOfRef(s3_3, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp___, ret)
-			tmp__ = s1
-			if tmp__ == nil {
-				s1_1 = int32(0)
-			} else {
-				s1_1 = rt.B2I((tmp__ != nil && rt.ObjRTT(tmp__) == rttKotlinWasmWasiErrorCode))
+			s1_2 = rt.ViewAs[KotlinWasmWasiErrorCode](tmp__)
+		} else {
+			s2_2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g353))
+			m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp__, rt.ViewAs[KotlinAny](s2_2), int32(0))
+			if m.exn != nil {
+				goto H6
 			}
-			if s1_1 != 0 {
-				if !(tmp__ == nil || (tmp__ != nil && rt.ObjRTT(tmp__) == rttKotlinWasmWasiErrorCode)) {
-					panic(rt.ErrCast)
-				}
-				s1_2 = rt.ViewAs[KotlinWasmWasiErrorCode](tmp__)
-			} else {
-				s2_2 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g353))
-				m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp__, rt.ViewAs[KotlinAny](s2_2), int32(0))
-				panic(rt.ErrUnreachable)
-			}
-			s0_3 = m.kotlinWasmWasiErrorInit(d+1, (*KotlinWasmWasiError)(nil), s1_2)
-			panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}})
+			panic(rt.ErrUnreachable)
 		}
-		return 2
-
-	}()
-	switch c0 {
-	case 1:
-		goto B5
-	case 2:
-		goto B3
+		s0_3 = m.kotlinWasmWasiErrorInit(d+1, (*KotlinWasmWasiError)(nil), s1_2)
+		if m.exn != nil {
+			goto H6
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0_3)}}
+		goto H6
 	}
+	goto B3
+H6:
+	s0_4 = m.exn
+	m.exn = nil
+	goto B5
 B5:
 	m.kotlinWasmUnsafeScopedMemoryAllocatorDestroy(d+1, allocator)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1_3 = allocator.Parent
 	m.g58 = s1_3
-	rt.ThrowRef(s0_4)
+	m.exn = rt.NonNullExn(s0_4)
+	return int64(0)
 B3:
 	tmp_ = s0_2
 	m.kotlinWasmUnsafeScopedMemoryAllocatorDestroy(d+1, allocator)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = allocator.Parent
 	m.g58 = s0
 	return tmp_
@@ -27316,12 +35582,19 @@ func (m *Instance) kotlinTextInsertInt(d int, array *KotlinCharArray, start int3
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var valueString *KotlinString
+	var valueString, s0 *KotlinString
 	var length, s0_1 int32
-	valueString = m.kotlinIntToStringImpl(d+1, value)
+	s0 = m.kotlinIntToStringImpl(d+1, value)
+	if m.exn != nil {
+		return int32(0)
+	}
+	valueString = s0
 	s0_1 = valueString.Length
 	length = s0_1
 	s0_1 = m.kotlinTextInsertString2(d+1, array, start, valueString, int32(0), length)
+	if m.exn != nil {
+		return int32(0)
+	}
 	return length
 }
 
@@ -27346,9 +35619,15 @@ func (m *Instance) kotlinTextUnsafeStringFromCharArray(d int, array *KotlinCharA
 	length = tmp8
 	rt.ArrayCopy(destination.Elems, destinationIndex, source.Elems, sourceIndex, length)
 	s0_1 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	goto B1
 B1:
 	s0_2 = m.kotlinCreateString(d+1, copy_)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	return s0_2
 }
 
@@ -27361,6 +35640,9 @@ func (m *Instance) kotlinTextInsertString2(d int, array *KotlinCharArray, destin
 	tmp0_ = value
 	this = tmp0_
 	s0 = m.kotlinStringGetChars(d+1, this)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B1
 B1:
 	tmp0 = s0
@@ -27376,6 +35658,9 @@ B1:
 	length = tmp8
 	rt.ArrayCopy(destination.Elems, destinationIndex_, source.Elems, sourceIndex_, length)
 	s0_1 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B2
 B2:
 	return count
@@ -27394,6 +35679,9 @@ func (m *Instance) kotlinTimeMonotonicTimeSourceInit(d int, this *KotlinTimeMono
 	m.g141 = this
 	s0 = this
 	s1 = m.kotlinTimeClockTimeGet(d+1, int32(1))
+	if m.exn != nil {
+		return (*KotlinTimeMonotonicTimeSource)(nil)
+	}
 	goto B2
 B2:
 	s0.Zero = s1
@@ -27406,6 +35694,9 @@ func (m *Instance) kotlinTimeMonotonicTimeSourceRead(d int, this *KotlinTimeMono
 	}
 	var s0, s1 int64
 	s0 = m.kotlinTimeClockTimeGet(d+1, int32(1))
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B1
 B1:
 	s1 = this.Zero
@@ -27414,7 +35705,12 @@ B1:
 }
 
 func (m *Instance) kotlinTimeMonotonicTimeSourceToString(d int, this *KotlinAny) *KotlinString {
-	return m.stringLiteralLatin1(d+1, int32(288))
+	var s0 *KotlinString
+	s0 = m.stringLiteralLatin1(d+1, int32(288))
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) kotlinTimeMonotonicTimeSourceMarkNow(d int, this *KotlinAny) int64 {
@@ -27428,7 +35724,13 @@ func (m *Instance) kotlinTimeMonotonicTimeSourceMarkNow(d int, this *KotlinAny) 
 	}
 	tmp0This = rt.ViewAs[KotlinTimeMonotonicTimeSource](this)
 	s0 = m.kotlinTimeMonotonicTimeSourceRead(d+1, tmp0This)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = m.kotlinTimeValueTimeMarkInitImpl(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0
 }
 
@@ -27439,9 +35741,21 @@ func (m *Instance) kotlinTimeMonotonicTimeSourceElapsedFrom(d int, this *KotlinT
 	var s0, s1 int64
 	var s2 *KotlinTimeDurationUnit
 	s0 = m.kotlinTimeMonotonicTimeSourceRead(d+1, this)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinTimeValueTimeMarkGetReadingImpl(d+1, timeMark)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s2 = m.kotlinTimeDurationUnitNANOSECONDSGetInstance(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = m.kotlinTimeSaturatingDiff(d+1, s0, s1, s2)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0
 }
 
@@ -27452,9 +35766,21 @@ func (m *Instance) kotlinTimeMonotonicTimeSourceDifferenceBetween(d int, this *K
 	var s0, s1 int64
 	var s2 *KotlinTimeDurationUnit
 	s0 = m.kotlinTimeValueTimeMarkGetReadingImpl(d+1, one)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = m.kotlinTimeValueTimeMarkGetReadingImpl(d+1, another)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s2 = m.kotlinTimeDurationUnitNANOSECONDSGetInstance(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = m.kotlinTimeSaturatingOriginsDiff(d+1, s0, s1, s2)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0
 }
 
@@ -27466,6 +35792,9 @@ func (m *Instance) kotlinTimeMonotonicTimeSourceGetInstance(d int) *KotlinTimeMo
 	s0 = m.g141
 	if s0 == nil {
 		s0 = m.kotlinTimeMonotonicTimeSourceInit(d+1, (*KotlinTimeMonotonicTimeSource)(nil))
+		if m.exn != nil {
+			return (*KotlinTimeMonotonicTimeSource)(nil)
+		}
 	}
 	s0 = m.g141
 	return s0
@@ -27481,101 +35810,136 @@ func (m *Instance) kotlinTimeClockTimeGet(d int, clockId int32) int64 {
 	var rp0, ret, tmp0_, this, s0_1, s2_2, s5_1 int32
 	var s2 *ClassVTable43
 	var s2_1, s7_3 *rt.Func
+	var fn1, s7_2, fn2 any
+	var own1, own2 bool
 	var s0_2 *ClassVTable36
 	var s1 *AnyArray
 	var s2_3 *RTTI
 	var s4, s0_6 int64
 	var s7 *ClassVTable
 	var s7_1 *SpecialITable
-	var s7_2 any
 	var s5_2 *KotlinWasmWasiErrorCode
 	var s6 *KotlinWasmInternalKClassImpl
 	var s4_1 *KotlinWasmWasiError
 	var s0_3 *KotlinLong
 	var s0_5 *rt.Exception
-	var c0 int
 	s0 = m.kotlinWasmUnsafeCreateAllocatorInTheNewScope(d + 1)
+	if m.exn != nil {
+		return int64(0)
+	}
 	allocator = s0
-	c0 = func() (c int) {
-		defer func() {
-			if r := recover(); r != nil {
-				e := rt.Unwrap(r, 11)
-				_ = e
-				s0_5 = e
-				c = 1
-			}
-		}()
-		tmp0 = rt.ViewAs[KotlinWasmUnsafeMemoryAllocator](allocator)
-		allocator_ = tmp0
-		s2 = rt.ViewAs[ClassVTable43](allocator_.Vtable)
-		s2_1 = s2.Allocate
-		s0_1 = rt.FnOfRef(s2_1, rttFunc7).(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator_), int32(8))
-		rp0 = s0_1
-		s2_2 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, rp0)
-		tmp0_ = s2_2
-		s0_1 = clockId
-		this = tmp0_
-		s2_2 = m.kotlinUIntGetDataImpl(d+1, this)
-		goto B7
-	B7:
-		s0_1 = m.f3(d+1, s0_1, int64(1), s2_2)
-		ret = s0_1
-		s0_2 = m.g196
-		s1 = m.g260
-		s2_3 = m.g345
-		if ret == int32(0) {
-			s4 = m.kotlinWasmUnsafePointerLoadLongImpl(d+1, rp0)
+	tmp0 = rt.ViewAs[KotlinWasmUnsafeMemoryAllocator](allocator)
+	allocator_ = tmp0
+	s2 = rt.ViewAs[ClassVTable43](allocator_.Vtable)
+	s2_1 = s2.Allocate
+	fn1, own1 = rt.FnOwn(s2_1, rttFunc7, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, *KotlinAny, int32) int32)(d+1, rt.ViewAs[KotlinAny](allocator_), int32(8))
+	} else {
+		s0_1 = m.guard5(fn1.(func(int, *KotlinAny, int32) int32), d+1, rt.ViewAs[KotlinAny](allocator_), int32(8))
+	}
+	if m.exn != nil {
+		goto H5
+	}
+	rp0 = s0_1
+	s2_2 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, rp0)
+	if m.exn != nil {
+		goto H5
+	}
+	tmp0_ = s2_2
+	s0_1 = clockId
+	this = tmp0_
+	s2_2 = m.kotlinUIntGetDataImpl(d+1, this)
+	if m.exn != nil {
+		goto H5
+	}
+	goto B7
+B7:
+	s0_1 = m.f3(d+1, s0_1, int64(1), s2_2)
+	if m.exn != nil {
+		goto H5
+	}
+	ret = s0_1
+	s0_2 = m.g196
+	s1 = m.g260
+	s2_3 = m.g345
+	if ret == int32(0) {
+		s4 = m.kotlinWasmUnsafePointerLoadLongImpl(d+1, rp0)
+		if m.exn != nil {
+			goto H5
+		}
+	} else {
+		s5 = m.kotlinWasmGetEntries(d + 1)
+		if m.exn != nil {
+			goto H5
+		}
+		tmp__ = s5
+		s7 = tmp__.Vtable
+		s7_1 = s7.SpecialITable
+		s7_2 = s7_1.F2
+		if !(rt.IsType(s7_2, rttClassITable7)) {
+			panic(rt.ErrCast)
+		}
+		s7_3 = rt.As[ClassITable7](s7_2).Get
+		fn2, own2 = rt.FnOwn(s7_3, rttFunc76, m, false)
+		if own2 {
+			s5 = fn2.(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp__, ret)
 		} else {
-			s5 = m.kotlinWasmGetEntries(d + 1)
-			tmp__ = s5
-			s7 = tmp__.Vtable
-			s7_1 = s7.SpecialITable
-			s7_2 = s7_1.F2
-			if !(rt.IsType(s7_2, rttClassITable7)) {
+			s5 = m.guard6(fn2.(func(int, *KotlinAny, int32) *KotlinAny), d+1, tmp__, ret)
+		}
+		if m.exn != nil {
+			goto H5
+		}
+		tmp_ = s5
+		if tmp_ == nil {
+			s5_1 = int32(0)
+		} else {
+			s5_1 = rt.B2I((tmp_ != nil && rt.ObjRTT(tmp_) == rttKotlinWasmWasiErrorCode))
+		}
+		if s5_1 != 0 {
+			if !(tmp_ == nil || (tmp_ != nil && rt.ObjRTT(tmp_) == rttKotlinWasmWasiErrorCode)) {
 				panic(rt.ErrCast)
 			}
-			s7_3 = rt.As[ClassITable7](s7_2).Get
-			s5 = rt.FnOfRef(s7_3, rttFunc79).(func(int, *KotlinAny, int32) *KotlinAny)(d+1, tmp__, ret)
-			tmp_ = s5
-			if tmp_ == nil {
-				s5_1 = int32(0)
-			} else {
-				s5_1 = rt.B2I((tmp_ != nil && rt.ObjRTT(tmp_) == rttKotlinWasmWasiErrorCode))
+			s5_2 = rt.ViewAs[KotlinWasmWasiErrorCode](tmp_)
+		} else {
+			s6 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g353))
+			m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp_, rt.ViewAs[KotlinAny](s6), int32(0))
+			if m.exn != nil {
+				goto H5
 			}
-			if s5_1 != 0 {
-				if !(tmp_ == nil || (tmp_ != nil && rt.ObjRTT(tmp_) == rttKotlinWasmWasiErrorCode)) {
-					panic(rt.ErrCast)
-				}
-				s5_2 = rt.ViewAs[KotlinWasmWasiErrorCode](tmp_)
-			} else {
-				s6 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g353))
-				m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp_, rt.ViewAs[KotlinAny](s6), int32(0))
-				panic(rt.ErrUnreachable)
-			}
-			s4_1 = m.kotlinWasmWasiErrorInit(d+1, (*KotlinWasmWasiError)(nil), s5_2)
-			panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s4_1)}})
+			panic(rt.ErrUnreachable)
 		}
-		s0_3 = NewKotlinLong(rt.ViewAs[ClassVTable](s0_2), s1, s2_3, int32(0), s4)
-		s0_4 = rt.ViewAs[KotlinAny](s0_3)
-		goto B6
-	B6:
-		return 2
-
-	}()
-	switch c0 {
-	case 1:
-		goto B4
-	case 2:
-		goto B2
+		s4_1 = m.kotlinWasmWasiErrorInit(d+1, (*KotlinWasmWasiError)(nil), s5_2)
+		if m.exn != nil {
+			goto H5
+		}
+		m.exn = &rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s4_1)}}
+		goto H5
 	}
+	s0_3 = NewKotlinLong(rt.ViewAs[ClassVTable](s0_2), s1, s2_3, int32(0), s4)
+	s0_4 = rt.ViewAs[KotlinAny](s0_3)
+	goto B6
+B6:
+	goto B2
+H5:
+	s0_5 = m.exn
+	m.exn = nil
+	goto B4
 B4:
 	m.kotlinWasmUnsafeScopedMemoryAllocatorDestroy(d+1, allocator)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1_1 = allocator.Parent
 	m.g58 = s1_1
-	rt.ThrowRef(s0_5)
+	m.exn = rt.NonNullExn(s0_5)
+	return int64(0)
 B2:
 	tmp = s0_4
 	m.kotlinWasmUnsafeScopedMemoryAllocatorDestroy(d+1, allocator)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = allocator.Parent
 	m.g58 = s0
 	result = tmp
@@ -27612,10 +35976,22 @@ func (m *Instance) bottomUp(d int, depth int32) *Node {
 	var s0, s1, s2 *Node
 	if depth <= int32(0) {
 		s0 = m.nodeInit(d+1, (*Node)(nil), (*Node)(nil), (*Node)(nil))
+		if m.exn != nil {
+			return (*Node)(nil)
+		}
 	} else {
 		s1 = m.bottomUp(d+1, (depth - int32(1)))
+		if m.exn != nil {
+			return (*Node)(nil)
+		}
 		s2 = m.bottomUp(d+1, (depth - int32(1)))
+		if m.exn != nil {
+			return (*Node)(nil)
+		}
 		s0 = m.nodeInit(d+1, (*Node)(nil), s1, s2)
+		if m.exn != nil {
+			return (*Node)(nil)
+		}
 	}
 	return s0
 }
@@ -27647,6 +36023,9 @@ func (m *Instance) check(d int, n *Node) int32 {
 		tmp0_ = rt.ViewAs[Node](this)
 		it = tmp0_
 		s9 = m.check(d+1, it)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s5 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s9)
 		s5_1 = rt.ViewAs[KotlinAny](s5)
 		goto B3
@@ -27682,6 +36061,9 @@ func (m *Instance) check(d int, n *Node) int32 {
 		tmp0___ = rt.ViewAs[Node](this_)
 		it_ = tmp0___
 		s9 = m.check(d+1, it_)
+		if m.exn != nil {
+			return int32(0)
+		}
 		s5 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s9)
 		s5_1 = rt.ViewAs[KotlinAny](s5)
 		goto B7
@@ -27711,6 +36093,9 @@ func (m *Instance) binaryTrees(d int, maxDepth int32) int64 {
 	_ = i
 	total = int64(0)
 	s0 = m.bottomUp(d+1, maxDepth)
+	if m.exn != nil {
+		return int64(0)
+	}
 	long = s0
 	d_ = int32(4)
 L1:
@@ -27727,11 +36112,20 @@ L1:
 				inductionVariable = (inductionVariable + int32(1))
 				tmp0 = total
 				s0 = m.bottomUp(d+1, d_)
+				if m.exn != nil {
+					return int64(0)
+				}
 				s0_1 = m.check(d+1, s0)
+				if m.exn != nil {
+					return int64(0)
+				}
 				tmp2 = s0_1
 				this = tmp0
 				other = tmp2
 				s1 = m.kotlinIntToLongImpl(d+1, other)
+				if m.exn != nil {
+					return int64(0)
+				}
 				s0_2 = (this + s1)
 				goto B7
 			B7:
@@ -27749,10 +36143,16 @@ L1:
 	}
 	tmp0_ = total
 	s0_1 = m.check(d+1, long)
+	if m.exn != nil {
+		return int64(0)
+	}
 	tmp2_ = s0_1
 	this_ = tmp0_
 	other_ = tmp2_
 	s1 = m.kotlinIntToLongImpl(d+1, other_)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0_2 = (this_ + s1)
 	goto B8
 B8:
@@ -27790,20 +36190,35 @@ func (m *Instance) nbody(d int, steps int32) float64 {
 	_ = it
 	_ = s0_5
 	s4 = m.bodyInit(d+1, (*Body)(nil), float64(0), float64(0), float64(0), float64(0), float64(0), float64(0), float64(39.47))
+	if m.exn != nil {
+		return float64(0)
+	}
 	s7 = float64(1.16)
 	s8 = float64(0.1)
 	s11 = float64(0.02)
 	s5 = m.bodyInit(d+1, (*Body)(nil), float64(4.84), rt.F64Neg(s7), rt.F64Neg(s8), float64(0.606), float64(2.81), rt.F64Neg(s11), float64(0.037))
+	if m.exn != nil {
+		return float64(0)
+	}
 	s9 = float64(0.4)
 	s10 = float64(1.01)
 	s6 = m.bodyInit(d+1, (*Body)(nil), float64(8.34), float64(4.12), rt.F64Neg(s9), rt.F64Neg(s10), float64(1.82), float64(0.008), float64(0.011))
+	if m.exn != nil {
+		return float64(0)
+	}
 	s9 = float64(15.11)
 	s10 = float64(0.22)
 	s13 = float64(0.01)
 	s7_1 = m.bodyInit(d+1, (*Body)(nil), float64(12.89), rt.F64Neg(s9), rt.F64Neg(s10), float64(1.08), float64(0.868), rt.F64Neg(s13), float64(0.0017))
+	if m.exn != nil {
+		return float64(0)
+	}
 	s10 = float64(25.9)
 	s14 = float64(0.034)
 	s8_1 = m.bodyInit(d+1, (*Body)(nil), float64(15.37), rt.F64Neg(s10), float64(0.179), float64(0.979), float64(0.594), rt.F64Neg(s14), float64(0.002))
+	if m.exn != nil {
+		return float64(0)
+	}
 	s4_1 = NewKotlinWasmInternalWasmAnyArray([]*KotlinAny{rt.ViewAs[KotlinAny](s4), rt.ViewAs[KotlinAny](s5), rt.ViewAs[KotlinAny](s6), rt.ViewAs[KotlinAny](s7_1), rt.ViewAs[KotlinAny](s8_1)})
 	s0 = NewKotlinArray(rt.ViewAs[ClassVTable](m.g181), (*AnyArray)(nil), m.g301, int32(0), s4_1)
 	tmp0 = s0
@@ -27824,7 +36239,13 @@ B1:
 			it = tmp0__
 			inductionVariable_ = int32(0)
 			s0_1 = m.kotlinArrayGetSize(d+1, bodies)
+			if m.exn != nil {
+				return float64(0)
+			}
 			s0_1 = m.kotlinIntDecImpl(d+1, s0_1)
+			if m.exn != nil {
+				return float64(0)
+			}
 			last = s0_1
 			if inductionVariable_ <= last {
 			L9:
@@ -27832,6 +36253,9 @@ B1:
 					i = inductionVariable_
 					inductionVariable_ = (inductionVariable_ + int32(1))
 					s0_2 = m.kotlinArrayGetWithoutBoundCheck(d+1, bodies, i)
+					if m.exn != nil {
+						return float64(0)
+					}
 					tmp = s0_2
 					if tmp == nil {
 						s0_1 = int32(0)
@@ -27846,11 +36270,17 @@ B1:
 					} else {
 						s1 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g332))
 						m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp, rt.ViewAs[KotlinAny](s1), int32(0))
+						if m.exn != nil {
+							return float64(0)
+						}
 						panic(rt.ErrUnreachable)
 					}
 					a = s0_3
 					inductionVariable__ = (i + int32(1))
 					s0_1 = m.kotlinArrayGetSize(d+1, bodies)
+					if m.exn != nil {
+						return float64(0)
+					}
 					last_ = s0_1
 					if inductionVariable__ < last_ {
 					L15:
@@ -27858,6 +36288,9 @@ B1:
 							j = inductionVariable__
 							inductionVariable__ = (inductionVariable__ + int32(1))
 							s0_2 = m.kotlinArrayGet(d+1, bodies, j)
+							if m.exn != nil {
+								return float64(0)
+							}
 							tmp_ = s0_2
 							if tmp_ == nil {
 								s0_1 = int32(0)
@@ -27872,6 +36305,9 @@ B1:
 							} else {
 								s1 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g332))
 								m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp_, rt.ViewAs[KotlinAny](s1), int32(0))
+								if m.exn != nil {
+									return float64(0)
+								}
 								panic(rt.ErrUnreachable)
 							}
 							b = s0_3
@@ -27889,6 +36325,9 @@ B1:
 							dz = s0_4
 							d2 = float64(float64(float64(dx*dx)+float64(dy*dy)) + float64(dz*dz))
 							s2 = m.kotlinMathSqrt(d+1, d2)
+							if m.exn != nil {
+								return float64(0)
+							}
 							s1_1 = float64(d2 * s2)
 							s0_4 = float64(fconst0 / s1_1)
 							mag = s0_4
@@ -27943,6 +36382,9 @@ B1:
 			indexedObject = bodies
 			inductionVariable___ = int32(0)
 			s0_1 = m.kotlinArrayGetSize(d+1, indexedObject)
+			if m.exn != nil {
+				return float64(0)
+			}
 			last__ = s0_1
 		L20:
 			for {
@@ -27950,6 +36392,9 @@ B1:
 					goto B21
 				}
 				s0_2 = m.kotlinArrayGetWithoutBoundCheck(d+1, indexedObject, inductionVariable___)
+				if m.exn != nil {
+					return float64(0)
+				}
 				tmp__ = s0_2
 				if tmp__ == nil {
 					s0_1 = int32(0)
@@ -27964,6 +36409,9 @@ B1:
 				} else {
 					s1 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g332))
 					m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp__, rt.ViewAs[KotlinAny](s1), int32(0))
+					if m.exn != nil {
+						return float64(0)
+					}
 					panic(rt.ErrUnreachable)
 				}
 				b_ = s0_3
@@ -27991,6 +36439,9 @@ B1:
 				break L20
 			}
 			s0_5 = m.kotlinUnitGetInstance(d + 1)
+			if m.exn != nil {
+				return float64(0)
+			}
 			goto B7
 		B7:
 			if inductionVariable < times {
@@ -28000,15 +36451,24 @@ B1:
 		}
 	}
 	s0_5 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return float64(0)
+	}
 	goto B2
 B2:
 	tmp0___ = bodies
 	this = tmp0___
 	s0_4 = m.kotlinIntToDoubleImpl(d+1, int32(0))
+	if m.exn != nil {
+		return float64(0)
+	}
 	sum = s0_4
 	indexedObject_ = this
 	inductionVariable____ = int32(0)
 	s0_1 = m.kotlinArrayGetSize(d+1, indexedObject_)
+	if m.exn != nil {
+		return float64(0)
+	}
 	last___ = s0_1
 L25:
 	for {
@@ -28016,6 +36476,9 @@ L25:
 			goto B26
 		}
 		s0_2 = m.kotlinArrayGetWithoutBoundCheck(d+1, indexedObject_, inductionVariable____)
+		if m.exn != nil {
+			return float64(0)
+		}
 		element = s0_2
 		inductionVariable____ = (inductionVariable____ + int32(1))
 		if !(element == nil || (element != nil && rt.ObjRTT(element) == rttBody)) {
@@ -28130,8 +36593,9 @@ func (m *Instance) virtualCalls(d int, n int32) float64 {
 	var s7, s8 *KotlinString
 	var s5 *KotlinWasmInternalTypeInfoData
 	var s1_1 *KotlinWasmInternalKClassInterfaceImpl
-	var s2_5 any
+	var s2_5, fn1 any
 	var s2_6 *rt.Func
+	var own1 bool
 	var s0_4 *KotlinUnit
 	_ = it
 	_ = s0_4
@@ -28140,6 +36604,9 @@ func (m *Instance) virtualCalls(d int, n int32) float64 {
 	tmp0 = tmp_
 	size = tmp0
 	s0 = m.kotlinArrayInit(d+1, (*KotlinArray)(nil), size)
+	if m.exn != nil {
+		return float64(0)
+	}
 	goto B1
 B1:
 	tmp__ = s0
@@ -28152,6 +36619,9 @@ L2:
 		s0 = tmp__
 		s1 = tmp___
 		s2 = m.kotlinIntRemImpl(d+1, tmp___, int32(3))
+		if m.exn != nil {
+			return float64(0)
+		}
 		tmp0Subject = s2
 		tABLESWITCHSELECTOR = tmp0Subject
 		switch tABLESWITCHSELECTOR {
@@ -28167,22 +36637,43 @@ L2:
 		}
 	B8:
 		s3 = m.kotlinIntToDoubleImpl(d+1, tmp___)
+		if m.exn != nil {
+			return float64(0)
+		}
 		s2_2 = m.circleInit(d+1, (*Circle)(nil), s3)
+		if m.exn != nil {
+			return float64(0)
+		}
 		s2_1 = rt.ViewAs[KotlinAny](s2_2)
 		goto B5
 	B7:
 		s3 = m.kotlinIntToDoubleImpl(d+1, tmp___)
+		if m.exn != nil {
+			return float64(0)
+		}
 		s2_3 = m.rectInit(d+1, (*Rect)(nil), s3, float64(2))
+		if m.exn != nil {
+			return float64(0)
+		}
 		s2_1 = rt.ViewAs[KotlinAny](s2_3)
 		goto B5
 	B6:
 		s3 = m.kotlinIntToDoubleImpl(d+1, tmp___)
+		if m.exn != nil {
+			return float64(0)
+		}
 		s2_4 = m.triInit(d+1, (*Tri)(nil), s3, float64(3))
+		if m.exn != nil {
+			return float64(0)
+		}
 		s2_1 = rt.ViewAs[KotlinAny](s2_4)
 	B5:
 		goto B4
 	B4:
 		m.kotlinArraySet(d+1, s0, s1, s2_1)
+		if m.exn != nil {
+			return float64(0)
+		}
 		tmp0_ = tmp
 		this = tmp0_
 		s0_1 = (this + int32(1))
@@ -28208,6 +36699,9 @@ L2:
 			indexedObject = shapes
 			inductionVariable_ = int32(0)
 			s0_1 = m.kotlinArrayGetSize(d+1, indexedObject)
+			if m.exn != nil {
+				return float64(0)
+			}
 			last = s0_1
 		L16:
 			for {
@@ -28215,30 +36709,59 @@ L2:
 					goto B17
 				}
 				s0_2 = m.kotlinArrayGetWithoutBoundCheck(d+1, indexedObject, inductionVariable_)
+				if m.exn != nil {
+					return float64(0)
+				}
 				tmp____ = s0_2
 				if tmp____ == nil {
 					s0_1 = int32(0)
 				} else {
 					s0_1 = m.kotlinWasmInternalIsSupportedInterface(d+1, tmp____, int64(-3488622521098678436))
+					if m.exn != nil {
+						return float64(0)
+					}
 				}
 				if s0_1 != 0 {
 					s0_2 = tmp____
 				} else {
 					s7 = m.stringLiteralLatin1(d+1, int32(3))
+					if m.exn != nil {
+						return float64(0)
+					}
 					s8 = m.stringLiteralLatin1(d+1, int32(294))
+					if m.exn != nil {
+						return float64(0)
+					}
 					s5 = m.kotlinWasmInternalTypeInfoDataInit(d+1, (*KotlinWasmInternalTypeInfoData)(nil), int64(-3488622521098678436), s7, s8)
+					if m.exn != nil {
+						return float64(0)
+					}
 					s1_1 = NewKotlinWasmInternalKClassInterfaceImpl(rt.ViewAs[ClassVTable](m.g219), m.g265, m.g322, int32(0), s5)
 					m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp____, rt.ViewAs[KotlinAny](s1_1), int32(0))
+					if m.exn != nil {
+						return float64(0)
+					}
 					panic(rt.ErrUnreachable)
 				}
 				s = s0_2
 				inductionVariable_ = (inductionVariable_ + int32(1))
 				s2_5 = m.kotlinWasmInternalGetInterfaceVTable(d+1, s, int64(-3488622521098678436))
+				if m.exn != nil {
+					return float64(0)
+				}
 				if !(rt.IsType(s2_5, rttClassITable16)) {
 					panic(rt.ErrCast)
 				}
 				s2_6 = rt.As[ClassITable16](s2_5).Area
-				s1_2 = rt.FnOfRef(s2_6, rttFunc318).(func(int, *KotlinAny) float64)(d+1, s)
+				fn1, own1 = rt.FnOwn(s2_6, rttFunc266, m, false)
+				if own1 {
+					s1_2 = fn1.(func(int, *KotlinAny) float64)(d+1, s)
+				} else {
+					s1_2 = m.guard13(fn1.(func(int, *KotlinAny) float64), d+1, s)
+				}
+				if m.exn != nil {
+					return float64(0)
+				}
 				s0_3 = float64(sum + s1_2)
 				sum = s0_3
 				continue L16
@@ -28246,6 +36769,9 @@ L2:
 				break L16
 			}
 			s0_4 = m.kotlinUnitGetInstance(d + 1)
+			if m.exn != nil {
+				return float64(0)
+			}
 			goto B15
 		B15:
 			if inductionVariable < times {
@@ -28255,6 +36781,9 @@ L2:
 		}
 	}
 	s0_4 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return float64(0)
+	}
 	goto B10
 B10:
 	return sum
@@ -28264,7 +36793,7 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var m_ *KotlinCollectionsHashMap
+	var m_, s0 *KotlinCollectionsHashMap
 	var inductionVariable, i, v, s5, s4_1, s0_7, s1_8 int32
 	var k, k_, s0_1, s7, s8 *KotlinString
 	var tmp0, tmp2, tmp4, tmp, this, key, value, iterator, tmp0_, this_, tmp_, destruct, tmp__, iSINTERFACEPARAMETER, tmp0__, this__, tmp___, tmp0___, this___, tmp____, s4, s0_4 *KotlinAny
@@ -28276,13 +36805,18 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 	var s5_1, s1_7 *KotlinWasmInternalKClassImpl
 	var s3, s1_2, s0_8 *ClassVTable
 	var s3_1, s1_3, s0_9 *SpecialITable
-	var s3_2, s1_4, s0_10 any
+	var s3_2, fn1, s1_4, fn2, fn3, fn4, fn5, s0_10, fn6, fn7 any
 	var s3_3, s1_5 *rt.Func
+	var own1, own2, own3, own4, own5, own6, own7 bool
 	var s0_5 *KotlinUnit
 	var s5_2 *KotlinWasmInternalTypeInfoData
 	var s1_6 *KotlinWasmInternalKClassInterfaceImpl
 	_ = s0_5
-	m_ = m.kotlinCollectionsHashMapInit2(d+1, (*KotlinCollectionsHashMap)(nil))
+	s0 = m.kotlinCollectionsHashMapInit2(d+1, (*KotlinCollectionsHashMap)(nil))
+	if m.exn != nil {
+		return int32(0)
+	}
+	m_ = s0
 	inductionVariable = int32(0)
 	if inductionVariable < n {
 	L2:
@@ -28290,13 +36824,25 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 			i = inductionVariable
 			inductionVariable = (inductionVariable + int32(1))
 			s0_1 = m.stringLiteralLatin1(d+1, int32(295))
+			if m.exn != nil {
+				return int32(0)
+			}
 			s5 = m.kotlinIntRemImpl(d+1, i, int32(1000))
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s5)
 			s0_1 = m.kotlinStringPlus(d+1, s0_1, rt.ViewAs[KotlinAny](s1))
+			if m.exn != nil {
+				return int32(0)
+			}
 			k = s0_1
 			tmp0 = rt.ViewAs[KotlinAny](m_)
 			tmp2 = rt.ViewAs[KotlinAny](k)
 			s4 = m.kotlinCollectionsHashMapGet(d+1, rt.ViewAs[KotlinAny](m_), rt.ViewAs[KotlinAny](k))
+			if m.exn != nil {
+				return int32(0)
+			}
 			tmp = s4
 			s0_2 = m.g194
 			s1_1 = m.g259
@@ -28314,6 +36860,9 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 			} else {
 				s5_1 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g344))
 				m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp, rt.ViewAs[KotlinAny](s5_1), int32(1))
+				if m.exn != nil {
+					return int32(0)
+				}
 				panic(rt.ErrUnreachable)
 			}
 			tmp0ElvisLhs = s4_2
@@ -28334,8 +36883,19 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 				panic(rt.ErrCast)
 			}
 			s3_3 = rt.As[ClassITable10](s3_2).Put
-			s0_4 = rt.FnOfRef(s3_3, rttFunc48).(func(int, *KotlinAny, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, this, key, value)
+			fn1, own1 = rt.FnOwn(s3_3, rttFunc47, m, false)
+			if own1 {
+				s0_4 = fn1.(func(int, *KotlinAny, *KotlinAny, *KotlinAny) *KotlinAny)(d+1, this, key, value)
+			} else {
+				s0_4 = m.guard14(fn1.(func(int, *KotlinAny, *KotlinAny, *KotlinAny) *KotlinAny), d+1, this, key, value)
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 			s0_5 = m.kotlinUnitGetInstance(d + 1)
+			if m.exn != nil {
+				return int32(0)
+			}
 			goto B8
 		B8:
 			if inductionVariable < n {
@@ -28345,6 +36905,9 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 		}
 	}
 	s0_6 = m.kotlinTextStringBuilderInit2(d+1, (*KotlinTextStringBuilder)(nil))
+	if m.exn != nil {
+		return int32(0)
+	}
 	sb = s0_6
 	tmp0_ = rt.ViewAs[KotlinAny](m_)
 	this_ = tmp0_
@@ -28355,7 +36918,15 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 		panic(rt.ErrCast)
 	}
 	s1_5 = rt.As[ClassITable10](s1_4).GetEntries
-	s0_4 = rt.FnOfRef(s1_5, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
+	fn2, own2 = rt.FnOwn(s1_5, rttFunc33, m, false)
+	if own2 {
+		s0_4 = fn2.(func(int, *KotlinAny) *KotlinAny)(d+1, this_)
+	} else {
+		s0_4 = m.guard1(fn2.(func(int, *KotlinAny) *KotlinAny), d+1, this_)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	tmp_ = s0_4
 	s1_2 = tmp_.Vtable
 	s1_3 = s1_2.SpecialITable
@@ -28364,7 +36935,15 @@ func (m *Instance) stringsAndMaps(d int, n int32) int32 {
 		panic(rt.ErrCast)
 	}
 	s1_5 = rt.As[ClassITable4](s1_4).Iterator
-	s0_4 = rt.FnOfRef(s1_5, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
+	fn3, own3 = rt.FnOwn(s1_5, rttFunc33, m, false)
+	if own3 {
+		s0_4 = fn3.(func(int, *KotlinAny) *KotlinAny)(d+1, tmp_)
+	} else {
+		s0_4 = m.guard1(fn3.(func(int, *KotlinAny) *KotlinAny), d+1, tmp_)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B9
 B9:
 	iterator = s0_4
@@ -28377,7 +36956,15 @@ L10:
 			panic(rt.ErrCast)
 		}
 		s1_5 = rt.As[ClassITable6](s1_4).HasNext
-		s0_7 = rt.FnOfRef(s1_5, rttFunc14).(func(int, *KotlinAny) int32)(d+1, iterator)
+		fn4, own4 = rt.FnOwn(s1_5, rttFunc14, m, false)
+		if own4 {
+			s0_7 = fn4.(func(int, *KotlinAny) int32)(d+1, iterator)
+		} else {
+			s0_7 = m.guard2(fn4.(func(int, *KotlinAny) int32), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0_7 == 0 {
 			goto B11
 		}
@@ -28388,7 +36975,15 @@ L10:
 			panic(rt.ErrCast)
 		}
 		s1_5 = rt.As[ClassITable6](s1_4).Next
-		s0_4 = rt.FnOfRef(s1_5, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		fn5, own5 = rt.FnOwn(s1_5, rttFunc33, m, false)
+		if own5 {
+			s0_4 = fn5.(func(int, *KotlinAny) *KotlinAny)(d+1, iterator)
+		} else {
+			s0_4 = m.guard1(fn5.(func(int, *KotlinAny) *KotlinAny), d+1, iterator)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp__ = s0_4
 		if tmp__ == nil {
 			s0_7 = int32(0)
@@ -28410,10 +37005,22 @@ L10:
 			s0_4 = tmp__
 		} else {
 			s7 = m.stringLiteralLatin1(d+1, int32(296))
+			if m.exn != nil {
+				return int32(0)
+			}
 			s8 = m.stringLiteralLatin1(d+1, int32(297))
+			if m.exn != nil {
+				return int32(0)
+			}
 			s5_2 = m.kotlinWasmInternalTypeInfoDataInit(d+1, (*KotlinWasmInternalTypeInfoData)(nil), int64(5118875815870821461), s7, s8)
+			if m.exn != nil {
+				return int32(0)
+			}
 			s1_6 = NewKotlinWasmInternalKClassInterfaceImpl(rt.ViewAs[ClassVTable](m.g219), m.g265, m.g322, int32(0), s5_2)
 			m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp__, rt.ViewAs[KotlinAny](s1_6), int32(0))
+			if m.exn != nil {
+				return int32(0)
+			}
 			panic(rt.ErrUnreachable)
 		}
 		destruct = s0_4
@@ -28426,7 +37033,15 @@ L10:
 			panic(rt.ErrCast)
 		}
 		s1_5 = rt.As[ClassITable8](s1_4).GetKey
-		s0_4 = rt.FnOfRef(s1_5, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this__)
+		fn6, own6 = rt.FnOwn(s1_5, rttFunc33, m, false)
+		if own6 {
+			s0_4 = fn6.(func(int, *KotlinAny) *KotlinAny)(d+1, this__)
+		} else {
+			s0_4 = m.guard1(fn6.(func(int, *KotlinAny) *KotlinAny), d+1, this__)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp___ = s0_4
 		if tmp___ == nil {
 			s0_7 = int32(0)
@@ -28441,6 +37056,9 @@ L10:
 		} else {
 			s1_7 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g328))
 			m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp___, rt.ViewAs[KotlinAny](s1_7), int32(0))
+			if m.exn != nil {
+				return int32(0)
+			}
 			panic(rt.ErrUnreachable)
 		}
 		goto B16
@@ -28455,7 +37073,15 @@ L10:
 			panic(rt.ErrCast)
 		}
 		s1_5 = rt.As[ClassITable8](s1_4).GetValue
-		s0_4 = rt.FnOfRef(s1_5, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, this___)
+		fn7, own7 = rt.FnOwn(s1_5, rttFunc33, m, false)
+		if own7 {
+			s0_4 = fn7.(func(int, *KotlinAny) *KotlinAny)(d+1, this___)
+		} else {
+			s0_4 = m.guard1(fn7.(func(int, *KotlinAny) *KotlinAny), d+1, this___)
+		}
+		if m.exn != nil {
+			return int32(0)
+		}
 		tmp____ = s0_4
 		if tmp____ == nil {
 			s0_7 = int32(0)
@@ -28470,21 +37096,36 @@ L10:
 		} else {
 			s1_7 = NewKotlinWasmInternalKClassImpl(rt.ViewAs[ClassVTable](m.g218), m.g264, m.g321, int32(0), rt.AnyOf(m.g344))
 			m.kotlinWasmInternalTHROWCCEWITHINFO(d+1, tmp____, rt.ViewAs[KotlinAny](s1_7), int32(0))
+			if m.exn != nil {
+				return int32(0)
+			}
 			panic(rt.ErrUnreachable)
 		}
 		goto B19
 	B19:
 		v = s0_7
 		s0_7 = m.kotlinIntRemImpl(d+1, v, int32(7))
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0_7 == int32(0) {
 			s0_6 = m.kotlinTextStringBuilderAppend9(d+1, sb, k_)
+			if m.exn != nil {
+				return int32(0)
+			}
 		}
 		continue L10
 	B11:
 		break L10
 	}
 	s0_7 = m.kotlinTextStringBuilderGetLength(d+1, rt.ViewAs[KotlinAny](sb))
+	if m.exn != nil {
+		return int32(0)
+	}
 	s1_8 = m.kotlinCollectionsHashMapGetSize(d+1, rt.ViewAs[KotlinAny](m_))
+	if m.exn != nil {
+		return int32(0)
+	}
 	s0_7 = (s0_7 + s1_8)
 	return s0_7
 }
@@ -28498,7 +37139,13 @@ func (m *Instance) fib(d int, n int32) int32 {
 		s0 = n
 	} else {
 		s0 = m.fib(d+1, (n - int32(1)))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s1 = m.fib(d+1, (n - int32(2)))
+		if m.exn != nil {
+			return int32(0)
+		}
 		s0 = (s0 + s1)
 	}
 	return s0
@@ -28508,21 +37155,26 @@ func (m *Instance) timed(d int, name *KotlinString, f *KotlinAny) {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var t, tmp0, this, s5 int64
-	var r_ *KotlinAny
+	var t, tmp0, this, s0_1, s5 int64
+	var r_, s0_2 *KotlinAny
 	var tmp2, other, s5_1 float64
 	var s0 *KotlinTimeMonotonic
 	var s1 *ClassVTable
 	var s1_1 *SpecialITable
 	var s1_2, s2 *AnyArray
-	var s1_3 any
+	var s1_3, fn1 any
 	var s1_4 *rt.Func
+	var own1 bool
 	var s1_5, s0_3 *KotlinString
 	var s1_6 *ClassVTable37
 	var s3 *RTTI
 	var s1_7 *KotlinDouble
 	s0 = m.g16
-	t = m.kotlinTimeMonotonicMarkNow(d+1, rt.ViewAs[KotlinAny](s0))
+	s0_1 = m.kotlinTimeMonotonicMarkNow(d+1, rt.ViewAs[KotlinAny](s0))
+	if m.exn != nil {
+		return
+	}
+	t = s0_1
 	s1 = f.Vtable
 	s1_1 = s1.SpecialITable
 	s1_2 = s1_1.F22
@@ -28531,11 +37183,32 @@ func (m *Instance) timed(d int, name *KotlinString, f *KotlinAny) {
 		panic(rt.ErrCast)
 	}
 	s1_4 = rt.As[ClassITable4](s1_3).Iterator
-	r_ = rt.FnOfRef(s1_4, rttFunc33).(func(int, *KotlinAny) *KotlinAny)(d+1, f)
+	fn1, own1 = rt.FnOwn(s1_4, rttFunc33, m, false)
+	if own1 {
+		s0_2 = fn1.(func(int, *KotlinAny) *KotlinAny)(d+1, f)
+	} else {
+		s0_2 = m.guard1(fn1.(func(int, *KotlinAny) *KotlinAny), d+1, f)
+	}
+	if m.exn != nil {
+		return
+	}
+	r_ = s0_2
 	s1_5 = m.stringLiteralLatin1(d+1, int32(298))
+	if m.exn != nil {
+		return
+	}
 	s0_3 = m.kotlinStringPlus(d+1, name, rt.ViewAs[KotlinAny](s1_5))
+	if m.exn != nil {
+		return
+	}
 	s5 = m.kotlinTimeValueTimeMarkElapsedNowImpl(d+1, t)
+	if m.exn != nil {
+		return
+	}
 	s5 = m.kotlinTimeDurationGetInWholeMicrosecondsImpl(d+1, s5)
+	if m.exn != nil {
+		return
+	}
 	tmp0 = s5
 	tmp2 = float64(1000)
 	s1_6 = m.g198
@@ -28544,15 +37217,33 @@ func (m *Instance) timed(d int, name *KotlinString, f *KotlinAny) {
 	this = tmp0
 	other = tmp2
 	s5_1 = m.kotlinLongToDoubleImpl(d+1, this)
+	if m.exn != nil {
+		return
+	}
 	s5_1 = float64(s5_1 / other)
 	goto B1
 B1:
 	s1_7 = NewKotlinDouble(rt.ViewAs[ClassVTable](s1_6), s2, s3, int32(0), s5_1)
 	s0_3 = m.kotlinStringPlus(d+1, s0_3, rt.ViewAs[KotlinAny](s1_7))
+	if m.exn != nil {
+		return
+	}
 	s1_5 = m.stringLiteralLatin1(d+1, int32(299))
+	if m.exn != nil {
+		return
+	}
 	s0_3 = m.kotlinStringPlus(d+1, s0_3, rt.ViewAs[KotlinAny](s1_5))
+	if m.exn != nil {
+		return
+	}
 	s0_3 = m.kotlinStringPlus(d+1, s0_3, r_)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinIoPrintln(d+1, rt.ViewAs[KotlinAny](s0_3))
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
@@ -28565,54 +37256,80 @@ func (m *Instance) main(d int) {
 	var s1 *KotlinAny
 	var s0_2 *KotlinUnit
 	var s0_3 *rt.Exception
-	var c0 int
 	_ = s0_2
 	currentIsNotFirstWasmExportCall = m.g25
-	c0 = func() (c int) {
-		defer func() {
-			if r := recover(); r != nil {
-				e := rt.Unwrap(r, 5)
-				_ = e
-				s0_3 = e
-				c = 1
-			}
-		}()
-		m.g25 = int32(1)
-		s0_1 = m.stringLiteralLatin1(d+1, int32(300))
-		s1 = m.g142
-		m.timed(d+1, s0_1, s1)
-		s0_1 = m.stringLiteralLatin1(d+1, int32(301))
-		s1 = m.g143
-		m.timed(d+1, s0_1, s1)
-		s0_1 = m.stringLiteralLatin1(d+1, int32(302))
-		s1 = m.g144
-		m.timed(d+1, s0_1, s1)
-		s0_1 = m.stringLiteralLatin1(d+1, int32(303))
-		s1 = m.g145
-		m.timed(d+1, s0_1, s1)
-		s0_1 = m.stringLiteralLatin1(d+1, int32(304))
-		s1 = m.g146
-		m.timed(d+1, s0_1, s1)
-		s0_2 = m.kotlinUnitGetInstance(d + 1)
-		return 2
-
-	}()
-	switch c0 {
-	case 1:
-		goto B3
-	case 2:
-		goto B1
+	m.g25 = int32(1)
+	s0_1 = m.stringLiteralLatin1(d+1, int32(300))
+	if m.exn != nil {
+		goto H4
 	}
+	s1 = m.g142
+	m.timed(d+1, s0_1, s1)
+	if m.exn != nil {
+		goto H4
+	}
+	s0_1 = m.stringLiteralLatin1(d+1, int32(301))
+	if m.exn != nil {
+		goto H4
+	}
+	s1 = m.g143
+	m.timed(d+1, s0_1, s1)
+	if m.exn != nil {
+		goto H4
+	}
+	s0_1 = m.stringLiteralLatin1(d+1, int32(302))
+	if m.exn != nil {
+		goto H4
+	}
+	s1 = m.g144
+	m.timed(d+1, s0_1, s1)
+	if m.exn != nil {
+		goto H4
+	}
+	s0_1 = m.stringLiteralLatin1(d+1, int32(303))
+	if m.exn != nil {
+		goto H4
+	}
+	s1 = m.g145
+	m.timed(d+1, s0_1, s1)
+	if m.exn != nil {
+		goto H4
+	}
+	s0_1 = m.stringLiteralLatin1(d+1, int32(304))
+	if m.exn != nil {
+		goto H4
+	}
+	s1 = m.g146
+	m.timed(d+1, s0_1, s1)
+	if m.exn != nil {
+		goto H4
+	}
+	s0_2 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		goto H4
+	}
+	goto B1
+H4:
+	s0_3 = m.exn
+	m.exn = nil
+	goto B3
 B3:
 	m.g25 = currentIsNotFirstWasmExportCall
 	if currentIsNotFirstWasmExportCall == 0 {
 		m.kotlinWasmInternalInvokeOnExportedFunctionExit(d + 1)
+		if m.exn != nil {
+			return
+		}
 	}
-	rt.ThrowRef(s0_3)
+	m.exn = rt.NonNullExn(s0_3)
+	return
 B1:
 	m.g25 = currentIsNotFirstWasmExportCall
 	if currentIsNotFirstWasmExportCall == 0 {
 		m.kotlinWasmInternalInvokeOnExportedFunctionExit(d + 1)
+		if m.exn != nil {
+			return
+		}
 	}
 	return
 }
@@ -28621,6 +37338,9 @@ func (m *Instance) mainLambdaInvoke(d int) *KotlinAny {
 	var s4 int64
 	var s0 *KotlinLong
 	s4 = m.binaryTrees(d+1, int32(16))
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = NewKotlinLong(rt.ViewAs[ClassVTable](m.g196), m.g260, m.g345, int32(0), s4)
 	return rt.ViewAs[KotlinAny](s0)
 }
@@ -28632,6 +37352,9 @@ func (m *Instance) mainLambdaInvoke2(d int) *KotlinAny {
 	var s4 float64
 	var s0 *KotlinDouble
 	s4 = m.nbody(d+1, int32(2000000))
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = NewKotlinDouble(rt.ViewAs[ClassVTable](m.g198), m.g261, m.g346, int32(0), s4)
 	return rt.ViewAs[KotlinAny](s0)
 }
@@ -28643,6 +37366,9 @@ func (m *Instance) mainLambdaInvoke3(d int) *KotlinAny {
 	var s4 float64
 	var s0 *KotlinDouble
 	s4 = m.virtualCalls(d+1, int32(20000))
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = NewKotlinDouble(rt.ViewAs[ClassVTable](m.g198), m.g261, m.g346, int32(0), s4)
 	return rt.ViewAs[KotlinAny](s0)
 }
@@ -28654,6 +37380,9 @@ func (m *Instance) mainLambdaInvoke4(d int) *KotlinAny {
 	var s4 int32
 	var s0 *KotlinInt
 	s4 = m.stringsAndMaps(d+1, int32(2000000))
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	return rt.ViewAs[KotlinAny](s0)
 }
@@ -28662,6 +37391,9 @@ func (m *Instance) mainLambdaInvoke5(d int) *KotlinAny {
 	var s4 int32
 	var s0 *KotlinInt
 	s4 = m.fib(d+1, int32(32))
+	if m.exn != nil {
+		return (*KotlinAny)(nil)
+	}
 	s0 = NewKotlinInt(rt.ViewAs[ClassVTable](m.g194), m.g259, m.g344, int32(0), s4)
 	return rt.ViewAs[KotlinAny](s0)
 }
@@ -28669,14 +37401,29 @@ func (m *Instance) mainLambdaInvoke5(d int) *KotlinAny {
 func (m *Instance) objectInitializer(d int) {
 	var s0 *KotlinFunction0
 	s0 = m.kotlinFunction0Init(d+1, (*KotlinFunction0)(nil), m.funcs[746])
+	if m.exn != nil {
+		return
+	}
 	m.g142 = rt.ViewAs[KotlinAny](s0)
 	s0 = m.kotlinFunction0Init(d+1, (*KotlinFunction0)(nil), m.funcs[747])
+	if m.exn != nil {
+		return
+	}
 	m.g143 = rt.ViewAs[KotlinAny](s0)
 	s0 = m.kotlinFunction0Init(d+1, (*KotlinFunction0)(nil), m.funcs[748])
+	if m.exn != nil {
+		return
+	}
 	m.g144 = rt.ViewAs[KotlinAny](s0)
 	s0 = m.kotlinFunction0Init(d+1, (*KotlinFunction0)(nil), m.funcs[749])
+	if m.exn != nil {
+		return
+	}
 	m.g145 = rt.ViewAs[KotlinAny](s0)
 	s0 = m.kotlinFunction0Init(d+1, (*KotlinFunction0)(nil), m.funcs[750])
+	if m.exn != nil {
+		return
+	}
 	m.g146 = rt.ViewAs[KotlinAny](s0)
 	return
 }
@@ -28686,22 +37433,73 @@ func (m *Instance) fieldInitialize(d int) {
 	s0 = NewLongArray(rt.DecI64(rt.DataBytes(m.data1, int32(0), int32(305), 8)))
 	m.g147 = s0
 	m.kotlinCollectionsObjectInitializer(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinCollectionsObjectInitializer2(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinCollectionsObjectInitializer3(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinRandomObjectInitializer(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinRangesObjectInitializer(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinTimeObjectInitializer(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinObjectInitializer(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinObjectInitializer2(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinObjectInitializer3(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinObjectInitializer4(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinObjectInitializer5(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinObjectInitializer6(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinObjectInitializer7(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinObjectInitializer8(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinTextObjectInitializer(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.kotlinObjectInitializer9(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.objectInitializer(d + 1)
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
@@ -28734,6 +37532,9 @@ L3:
 	}
 B2:
 	s0 = m.kotlinCreateString(d+1, charArray)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	temporary = s0
 	m.g148.Elems[uint32(poolId)] = temporary
 	s0 = temporary
@@ -28757,6 +37558,9 @@ func (m *Instance) stringLiteralUtf16(d int, poolId int32) *KotlinString {
 	startAddress = int32(addressAndLength)
 	s0_3 = NewKotlinWasmInternalWasmCharArray(rt.DecI16(rt.DataBytes(m.data0, startAddress, length, 2)))
 	s0 = m.kotlinCreateString(d+1, s0_3)
+	if m.exn != nil {
+		return (*KotlinString)(nil)
+	}
 	temporary = s0
 	m.g148.Elems[uint32(poolId)] = temporary
 	s0 = temporary
@@ -28768,8 +37572,1646 @@ func (m *Instance) initializeModule(d int) {
 	var s0 *KotlinUnit
 	_ = s0
 	s0 = m.kotlinUnitGetInstance(d + 1)
+	if m.exn != nil {
+		return
+	}
 	m.fieldInitialize(d + 1)
+	if m.exn != nil {
+		return
+	}
 	return
+}
+
+func (m *Instance) kotlinCollectionsAbstractMutableSetEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsAbstractMutableSetEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsAbstractMutableSetHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsAbstractMutableSetHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsEntriesItrNextEntry(d int, p0 *KotlinAny) *KotlinCollectionsEntryRef {
+	r0 := m.kotlinCollectionsEntriesItrNext(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsEntriesItrNext2Entry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsEntriesItrNext2(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsEntriesItrHasNextEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsEntriesItrHasNext(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsEntryRefGetKeyEntry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsEntryRefGetKey(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsEntryRefGetValueEntry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsEntryRefGetValue(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsEntryRefEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsEntryRefEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsEntryRefHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsEntryRefHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsEntryRefToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinCollectionsEntryRefToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapGetSizeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsHashMapGetSize(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapIsEmptyEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsHashMapIsEmpty(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapGetEntry(d int, p0 *KotlinAny, p1 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsHashMapGet(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapPutEntry(d int, p0 *KotlinAny, p1 *KotlinAny, p2 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsHashMapPut(d, p0, p1, p2)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapGetEntriesEntry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsHashMapGetEntries(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapGetEntries2Entry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsHashMapGetEntries2(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsHashMapEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsHashMapHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinCollectionsHashMapToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapEntrySetIteratorEntry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsHashMapEntrySetIterator(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapEntrySetIterator2Entry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsHashMapEntrySetIterator2(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapEntrySetBaseGetSizeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsHashMapEntrySetBaseGetSize(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapEntrySetBaseIsEmptyEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsHashMapEntrySetBaseIsEmpty(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContainsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsHashMapEntrySetBaseContains(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContains2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsHashMapEntrySetBaseContains2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContainsAllEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsHashMapEntrySetBaseContainsAll(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextStringBuilderGetLengthEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinTextStringBuilderGetLength(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextStringBuilderGetEntry(d int, p0 *KotlinAny, p1 int32) int32 {
+	r0 := m.kotlinTextStringBuilderGet(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextStringBuilderSubSequenceEntry(d int, p0 *KotlinAny, p1 int32, p2 int32) *KotlinAny {
+	r0 := m.kotlinTextStringBuilderSubSequence(d, p0, p1, p2)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextStringBuilderAppendEntry(d int, p0 *KotlinAny, p1 int32) *KotlinTextStringBuilder {
+	r0 := m.kotlinTextStringBuilderAppend(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextStringBuilderAppend2Entry(d int, p0 *KotlinAny, p1 int32) *KotlinAny {
+	r0 := m.kotlinTextStringBuilderAppend2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextStringBuilderAppend3Entry(d int, p0 *KotlinAny, p1 *KotlinAny) *KotlinTextStringBuilder {
+	r0 := m.kotlinTextStringBuilderAppend3(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextStringBuilderAppend4Entry(d int, p0 *KotlinAny, p1 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinTextStringBuilderAppend4(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextStringBuilderAppend5Entry(d int, p0 *KotlinAny, p1 *KotlinAny, p2 int32, p3 int32) *KotlinTextStringBuilder {
+	r0 := m.kotlinTextStringBuilderAppend5(d, p0, p1, p2, p3)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextStringBuilderToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinTextStringBuilderToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsAbstractCollectionContainsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsAbstractCollectionContains(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsAbstractCollectionContainsAllEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsAbstractCollectionContainsAll(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsAbstractCollectionIsEmptyEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsAbstractCollectionIsEmpty(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsAbstractCollectionToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinCollectionsAbstractCollectionToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsFunction1Bound1AInvokeEntry(d int, p0 *KotlinAny, p1 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsFunction1Bound1AInvoke(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsAbstractCollectionToStringLambdaInvokeEntry(d int, p0 *KotlinAny, p1 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsAbstractCollectionToStringLambdaInvoke(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsIteratorImplHasNextEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsIteratorImplHasNext(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsIteratorImplNextEntry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsIteratorImplNext(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsAbstractListIteratorEntry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsAbstractListIterator(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsAbstractListEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsAbstractListEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsAbstractListHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsAbstractListHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsIntIteratorNextEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCollectionsIntIteratorNext(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCollectionsIntIteratorNext2Entry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinCollectionsIntIteratorNext2(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinEnumsEnumEntriesListGetSizeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinEnumsEnumEntriesListGetSize(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinEnumsEnumEntriesListGetEntry(d int, p0 *KotlinAny, p1 int32) *KotlinEnum {
+	r0 := m.kotlinEnumsEnumEntriesListGet(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinEnumsEnumEntriesListGet2Entry(d int, p0 *KotlinAny, p1 int32) *KotlinAny {
+	r0 := m.kotlinEnumsEnumEntriesListGet2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinEnumsEnumEntriesListContainsEntry(d int, p0 *KotlinAny, p1 *KotlinEnum) int32 {
+	r0 := m.kotlinEnumsEnumEntriesListContains(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinEnumsEnumEntriesListContains2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinEnumsEnumEntriesListContains2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRandomDefaultNextBitsEntry(d int, p0 *KotlinAny, p1 int32) int32 {
+	r0 := m.kotlinRandomDefaultNextBits(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRandomDefaultNextIntEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinRandomDefaultNextInt(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRandomDefaultNextInt2Entry(d int, p0 *KotlinAny, p1 int32, p2 int32) int32 {
+	r0 := m.kotlinRandomDefaultNextInt2(d, p0, p1, p2)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRandomRandomNextInt2Entry(d int, p0 *KotlinAny, p1 int32, p2 int32) int32 {
+	r0 := m.kotlinRandomRandomNextInt2(d, p0, p1, p2)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRandomXorWowRandomNextIntEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinRandomXorWowRandomNextInt(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRandomXorWowRandomNextBitsEntry(d int, p0 *KotlinAny, p1 int32) int32 {
+	r0 := m.kotlinRandomXorWowRandomNextBits(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntRangeGetStartEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntRangeGetStart(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntRangeGetStart2Entry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinRangesIntRangeGetStart2(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntRangeGetEndInclusiveEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntRangeGetEndInclusive(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntRangeGetEndInclusive2Entry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinRangesIntRangeGetEndInclusive2(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntRangeContainsEntry(d int, p0 *KotlinAny, p1 int32) int32 {
+	r0 := m.kotlinRangesIntRangeContains(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntRangeContains2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntRangeContains2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntRangeIsEmptyEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntRangeIsEmpty(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntRangeEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntRangeEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntRangeHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntRangeHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntRangeToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinRangesIntRangeToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntProgressionIteratorHasNextEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntProgressionIteratorHasNext(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntProgressionIteratorNextIntEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntProgressionIteratorNextInt(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntProgressionIteratorEntry(d int, p0 *KotlinAny) *KotlinCollectionsIntIterator {
+	r0 := m.kotlinRangesIntProgressionIterator(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntProgressionIterator2Entry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinRangesIntProgressionIterator2(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntProgressionIsEmptyEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntProgressionIsEmpty(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntProgressionEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntProgressionEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntProgressionHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinRangesIntProgressionHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinRangesIntProgressionToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinRangesIntProgressionToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeDurationCompareToEntry(d int, p0 *KotlinAny, p1 int64) int32 {
+	r0 := m.kotlinTimeDurationCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeDurationCompareTo2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinTimeDurationCompareTo2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeDurationToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinTimeDurationToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeDurationHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinTimeDurationHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeDurationEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinTimeDurationEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeValueTimeMarkMinusEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int64 {
+	r0 := m.kotlinTimeValueTimeMarkMinus(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeValueTimeMarkToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinTimeValueTimeMarkToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeValueTimeMarkHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinTimeValueTimeMarkHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeValueTimeMarkEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinTimeValueTimeMarkEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeValueTimeMarkCompareToEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinTimeValueTimeMarkCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeMonotonicMarkNowEntry(d int, p0 *KotlinAny) int64 {
+	r0 := m.kotlinTimeMonotonicMarkNow(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeMonotonicToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinTimeMonotonicToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeComparableTimeMarkCompareToEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinTimeComparableTimeMarkCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinUIntCompareToEntry(d int, p0 *KotlinAny, p1 int32) int32 {
+	r0 := m.kotlinUIntCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinUIntCompareTo2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinUIntCompareTo2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinUIntToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinUIntToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinUIntHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinUIntHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinUIntEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinUIntEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinULongCompareToEntry(d int, p0 *KotlinAny, p1 int64) int32 {
+	r0 := m.kotlinULongCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinULongCompareTo2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinULongCompareTo2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinULongToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinULongToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinULongHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinULongHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinULongEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinULongEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinAnyEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinAnyEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinAnyHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinAnyHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinAnyToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinAnyToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinBooleanCompareToEntry(d int, p0 *KotlinAny, p1 int32) int32 {
+	r0 := m.kotlinBooleanCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinBooleanCompareTo2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinBooleanCompareTo2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinBooleanToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinBooleanToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinBooleanEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinBooleanEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinBooleanHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinBooleanHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCharCompareToEntry(d int, p0 *KotlinAny, p1 int32) int32 {
+	r0 := m.kotlinCharCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCharCompareTo2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCharCompareTo2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCharToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinCharToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCharEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinCharEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinCharHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinCharHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinEnumCompareToEntry(d int, p0 *KotlinAny, p1 *KotlinEnum) int32 {
+	r0 := m.kotlinEnumCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinEnumCompareTo2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinEnumCompareTo2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinEnumEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinEnumEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinEnumHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinEnumHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinEnumToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinEnumToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinIntCompareToEntry(d int, p0 *KotlinAny, p1 int32) int32 {
+	r0 := m.kotlinIntCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinIntCompareTo2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinIntCompareTo2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinIntToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinIntToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinIntEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinIntEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinIntHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinIntHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinLongCompareToEntry(d int, p0 *KotlinAny, p1 int64) int32 {
+	r0 := m.kotlinLongCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinLongCompareTo2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinLongCompareTo2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinLongToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinLongToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinLongEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinLongEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinLongHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinLongHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinDoubleCompareToEntry(d int, p0 *KotlinAny, p1 float64) int32 {
+	r0 := m.kotlinDoubleCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinDoubleCompareTo2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinDoubleCompareTo2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinDoubleToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinDoubleToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinDoubleEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinDoubleEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinDoubleHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinDoubleHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinFunction0InvokeEntry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinFunction0Invoke(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinAssertLambdaInvokeEntry(d int) *KotlinAny {
+	r0 := m.kotlinAssertLambdaInvoke(d)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinUnitToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinUnitToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassImplGetSimpleNameEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinWasmInternalKClassImplGetSimpleName(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassImplGetQualifiedNameEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinWasmInternalKClassImplGetQualifiedName(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassImplEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinWasmInternalKClassImplEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassImplHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinWasmInternalKClassImplHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassImplToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinWasmInternalKClassImplToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetSimpleNameEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinWasmInternalKClassInterfaceImplGetSimpleName(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetSimpleName2Entry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinWasmInternalKClassInterfaceImplGetSimpleName2(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetQualifiedNameEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinWasmInternalKClassInterfaceImplGetQualifiedName(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetQualifiedName2Entry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinWasmInternalKClassInterfaceImplGetQualifiedName2(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassInterfaceImplEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinWasmInternalKClassInterfaceImplEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassInterfaceImplHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinWasmInternalKClassInterfaceImplHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmInternalKClassInterfaceImplToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinWasmInternalKClassInterfaceImplToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextSamKotlinComparator0GetFunctionDelegateEntry(d int, p0 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinTextSamKotlinComparator0GetFunctionDelegate(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextSamKotlinComparator0EqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinTextSamKotlinComparator0Equals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextSamKotlinComparator0HashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinTextSamKotlinComparator0HashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTextSTRINGCASEINSENSITIVEORDERLambdaInvokeEntry(d int, p0 *KotlinAny, p1 *KotlinAny) *KotlinAny {
+	r0 := m.kotlinTextSTRINGCASEINSENSITIVEORDERLambdaInvoke(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmUnsafePointerToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinWasmUnsafePointerToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmUnsafePointerHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinWasmUnsafePointerHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmUnsafePointerEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinWasmUnsafePointerEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorAllocateEntry(d int, p0 *KotlinAny, p1 int32) int32 {
+	r0 := m.kotlinWasmUnsafeScopedMemoryAllocatorAllocate(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinStringGetLengthEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinStringGetLength(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinStringGetEntry(d int, p0 *KotlinAny, p1 int32) int32 {
+	r0 := m.kotlinStringGet(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinStringSubSequenceEntry(d int, p0 *KotlinAny, p1 int32, p2 int32) *KotlinAny {
+	r0 := m.kotlinStringSubSequence(d, p0, p1, p2)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinStringCompareToEntry(d int, p0 *KotlinAny, p1 *KotlinString) int32 {
+	r0 := m.kotlinStringCompareTo(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinStringCompareTo2Entry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinStringCompareTo2(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinStringEqualsEntry(d int, p0 *KotlinAny, p1 *KotlinAny) int32 {
+	r0 := m.kotlinStringEquals(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinStringToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinStringToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinStringHashCodeEntry(d int, p0 *KotlinAny) int32 {
+	r0 := m.kotlinStringHashCode(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinThrowableGetMessageEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinThrowableGetMessage(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinThrowableToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinThrowableToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeMonotonicTimeSourceToStringEntry(d int, p0 *KotlinAny) *KotlinString {
+	r0 := m.kotlinTimeMonotonicTimeSourceToString(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) kotlinTimeMonotonicTimeSourceMarkNowEntry(d int, p0 *KotlinAny) int64 {
+	r0 := m.kotlinTimeMonotonicTimeSourceMarkNow(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) circleAreaEntry(d int, p0 *KotlinAny) float64 {
+	r0 := m.circleArea(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) rectAreaEntry(d int, p0 *KotlinAny) float64 {
+	r0 := m.rectArea(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) triAreaEntry(d int, p0 *KotlinAny) float64 {
+	r0 := m.triArea(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) mainEntry(d int) {
+	m.main(d)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return
+}
+
+func (m *Instance) mainLambdaInvokeEntry(d int) *KotlinAny {
+	r0 := m.mainLambdaInvoke(d)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) mainLambdaInvoke2Entry(d int) *KotlinAny {
+	r0 := m.mainLambdaInvoke2(d)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) mainLambdaInvoke3Entry(d int) *KotlinAny {
+	r0 := m.mainLambdaInvoke3(d)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) mainLambdaInvoke4Entry(d int) *KotlinAny {
+	r0 := m.mainLambdaInvoke4(d)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) mainLambdaInvoke5Entry(d int) *KotlinAny {
+	r0 := m.mainLambdaInvoke5(d)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) stringLiteralLatin1Entry(d int, p0 int32) *KotlinString {
+	r0 := m.stringLiteralLatin1(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) stringLiteralUtf16Entry(d int, p0 int32) *KotlinString {
+	r0 := m.stringLiteralUtf16(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) initializeModuleEntry(d int) {
+	m.initializeModule(d)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return
+}
+
+// catchExn is deferred around calls that may panic with a wasm exception
+// (host imports, foreign function references); it makes it pending.
+func (m *Instance) catchExn() {
+	if r := recover(); r != nil {
+		if e, ok := r.(*rt.Exception); ok {
+			m.exn = e
+			return
+		}
+		panic(r)
+	}
 }
 
 func (m *Instance) constExpr1() *StringArray {
@@ -29969,11 +40411,86 @@ func (m *Instance) constExpr226() *RTTI {
 	return NewRTTI(s0, m.g363, int32(9), int32(29), int64(-7693720338758653978), int32(0), m.funcs[753], m.funcs[753])
 }
 
+func (m *Instance) guard0(fn func(int, *KotlinAny, *KotlinAny) *KotlinAny, d int, a0 *KotlinAny, a1 *KotlinAny) *KotlinAny {
+	defer m.catchExn()
+	return fn(d, a0, a1)
+}
+
+func (m *Instance) guard1(fn func(int, *KotlinAny) *KotlinAny, d int, a0 *KotlinAny) *KotlinAny {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard2(fn func(int, *KotlinAny) int32, d int, a0 *KotlinAny) int32 {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard3(fn func(int, *KotlinAny, *KotlinAny) int32, d int, a0 *KotlinAny, a1 *KotlinAny) int32 {
+	defer m.catchExn()
+	return fn(d, a0, a1)
+}
+
+func (m *Instance) guard4(fn func(int, *KotlinAny) *KotlinString, d int, a0 *KotlinAny) *KotlinString {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard5(fn func(int, *KotlinAny, int32) int32, d int, a0 *KotlinAny, a1 int32) int32 {
+	defer m.catchExn()
+	return fn(d, a0, a1)
+}
+
+func (m *Instance) guard6(fn func(int, *KotlinAny, int32) *KotlinAny, d int, a0 *KotlinAny, a1 int32) *KotlinAny {
+	defer m.catchExn()
+	return fn(d, a0, a1)
+}
+
+func (m *Instance) guard7(fn func(int, *KotlinAny, int32, int32) int32, d int, a0 *KotlinAny, a1 int32, a2 int32) int32 {
+	defer m.catchExn()
+	return fn(d, a0, a1, a2)
+}
+
+func (m *Instance) guard8(fn func(int, *KotlinAny) *KotlinCollectionsIntIterator, d int, a0 *KotlinAny) *KotlinCollectionsIntIterator {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard9(fn func(int, *KotlinAny, int32, int32) *KotlinAny, d int, a0 *KotlinAny, a1 int32, a2 int32) *KotlinAny {
+	defer m.catchExn()
+	return fn(d, a0, a1, a2)
+}
+
+func (m *Instance) guard10(fn func(int, *KotlinAny, *KotlinAny) int64, d int, a0 *KotlinAny, a1 *KotlinAny) int64 {
+	defer m.catchExn()
+	return fn(d, a0, a1)
+}
+
+func (m *Instance) guard11(fn func(int, int32) *KotlinString, d int, a0 int32) *KotlinString {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard12(fn func(int) *KotlinAny, d int) *KotlinAny {
+	defer m.catchExn()
+	return fn(d)
+}
+
 var fconst0 = math.Float64frombits(0x3f847ae147ae147b)
 
 var fconst1 = math.Float64frombits(0x400921f9f01b866e)
 
 var fconst2 = math.Float64frombits(0x3fe0000000000000)
+
+func (m *Instance) guard13(fn func(int, *KotlinAny) float64, d int, a0 *KotlinAny) float64 {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard14(fn func(int, *KotlinAny, *KotlinAny, *KotlinAny) *KotlinAny, d int, a0 *KotlinAny, a1 *KotlinAny, a2 *KotlinAny) *KotlinAny {
+	defer m.catchExn()
+	return fn(d, a0, a1, a2)
+}
 
 // NewDynamic instantiates the module, resolving each import by calling
 // resolve(module, name). Function imports must be *rt.Func values (e.g.
@@ -29984,7 +40501,7 @@ func NewDynamic(resolve func(module, name string) any) (*Instance, error) {
 		var v any
 		_ = v
 		v = resolve("wasi_snapshot_preview1", "fd_write")
-		if f, ok := v.(*rt.Func); !ok || f == nil || !f.Type.SubOf(rttFunc605) {
+		if f, ok := v.(*rt.Func); !ok || f == nil || !f.Type.SubOf(rttFunc531) {
 			panic(rt.LinkErr("wasi_snapshot_preview1", "fd_write", "incompatible import type"))
 		} else if fn, ok := f.Fn.(func(int, int32, int32, int32, int32) int32); !ok {
 			panic(rt.LinkErr("wasi_snapshot_preview1", "fd_write", "incompatible import type"))
@@ -29993,7 +40510,7 @@ func NewDynamic(resolve func(module, name string) any) (*Instance, error) {
 			h.refs[0] = f
 		}
 		v = resolve("wasi_snapshot_preview1", "poll_oneoff")
-		if f, ok := v.(*rt.Func); !ok || f == nil || !f.Type.SubOf(rttFunc605) {
+		if f, ok := v.(*rt.Func); !ok || f == nil || !f.Type.SubOf(rttFunc531) {
 			panic(rt.LinkErr("wasi_snapshot_preview1", "poll_oneoff", "incompatible import type"))
 		} else if fn, ok := f.Fn.(func(int, int32, int32, int32, int32) int32); !ok {
 			panic(rt.LinkErr("wasi_snapshot_preview1", "poll_oneoff", "incompatible import type"))
@@ -30002,7 +40519,7 @@ func NewDynamic(resolve func(module, name string) any) (*Instance, error) {
 			h.refs[1] = f
 		}
 		v = resolve("wasi_snapshot_preview1", "random_get")
-		if f, ok := v.(*rt.Func); !ok || f == nil || !f.Type.SubOf(rttFunc372) {
+		if f, ok := v.(*rt.Func); !ok || f == nil || !f.Type.SubOf(rttFunc298) {
 			panic(rt.LinkErr("wasi_snapshot_preview1", "random_get", "incompatible import type"))
 		} else if fn, ok := f.Fn.(func(int, int32, int32) int32); !ok {
 			panic(rt.LinkErr("wasi_snapshot_preview1", "random_get", "incompatible import type"))
@@ -30011,7 +40528,7 @@ func NewDynamic(resolve func(module, name string) any) (*Instance, error) {
 			h.refs[2] = f
 		}
 		v = resolve("wasi_snapshot_preview1", "clock_time_get")
-		if f, ok := v.(*rt.Func); !ok || f == nil || !f.Type.SubOf(rttFunc616) {
+		if f, ok := v.(*rt.Func); !ok || f == nil || !f.Type.SubOf(rttFunc542) {
 			panic(rt.LinkErr("wasi_snapshot_preview1", "clock_time_get", "incompatible import type"))
 		} else if fn, ok := f.Fn.(func(int, int32, int64, int32) int32); !ok {
 			panic(rt.LinkErr("wasi_snapshot_preview1", "clock_time_get", "incompatible import type"))

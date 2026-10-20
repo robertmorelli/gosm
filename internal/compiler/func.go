@@ -64,6 +64,8 @@ type ctrl struct {
 	legacy *legacyTry
 	// tail call pseudo target
 	tailCall string
+	// exception handler (try_table / legacy try) is targeted
+	handlerUsed bool
 }
 
 func (t *ctrl) labelTypes() []wasm.ValType {
@@ -106,6 +108,7 @@ type fn struct {
 
 	needDelegateDefer bool
 	ntail             int
+	nguard            int
 	dropped           map[string]bool
 }
 
@@ -559,9 +562,7 @@ func (f *fn) instr(in *wasm.Instr) {
 	case wasm.OpThrow:
 		f.throw(in.A)
 	case wasm.OpThrowRef:
-		e := f.pop()
-		f.emit("rt.ThrowRef(%s)", f.ex(e))
-		f.setUnreachable()
+		f.throwRef()
 	case wasm.OpBr:
 		f.branch(in.A)
 		f.setUnreachable()
@@ -811,167 +812,6 @@ func (f *fn) brTable(in *wasm.Instr) {
 	f.emit("default:")
 	f.branch(def)
 	f.emit("}")
-	f.setUnreachable()
-}
-
-// --- try_table ---
-
-func (f *fn) beginTryTable(in *wasm.Instr) {
-	params, results := f.blockSig(in.Block)
-	f.spillAll(false)
-	t := &ctrl{
-		kind:    ctrlTry,
-		params:  params,
-		results: results,
-		base:    f.height() - len(params),
-		closure: f.closure,
-		label:   f.newLabel("B"),
-		catches: in.Catch,
-	}
-	// params must be in slots (the closure captures them by reference)
-	for i, p := range params {
-		h := t.base + i
-		e := f.stack[h]
-		s := f.slot(h, f.c.goType(p))
-		if !(e.kind == kSlot && e.expr == s) {
-			f.emit("%s = %s", s, f.c.conv(f.ex(e), e.t, p))
-			f.stack[h] = entry{t: p, expr: s, kind: kSlot, slots: []string{s}, maxH: h}
-		}
-	}
-	f.ctrls = append(f.ctrls, t)
-	t.parentW = f.w
-	f.w = &strings.Builder{}
-	f.closure++
-	f.tryStack = append(f.tryStack, t)
-	// Catch clause targets are relative to the try_table's enclosing block,
-	// i.e. as seen from inside the body they are one level deeper. Resolve
-	// them now so they get exit codes.
-	for _, cc := range t.catches {
-		target := f.ctrls[len(f.ctrls)-2-int(cc.Label)]
-		f.exitCode(t, target)
-	}
-}
-
-func (f *fn) exitCode(tc *ctrl, target *ctrl) int {
-	for _, x := range tc.exits {
-		if x.target == target {
-			return x.code
-		}
-	}
-	code := len(tc.exits) + 1
-	tc.exits = append(tc.exits, exitTarget{target, code})
-	return code
-}
-
-func (f *fn) endTryTable(t *ctrl) {
-	c := f.c
-	if !t.unreachable {
-		vals := f.stack[len(f.stack)-len(t.results):]
-		f.assignTo(t.base, t.results, vals)
-		t.endReached = true
-	}
-	body := f.w.String()
-	f.w = t.parentW
-	f.closure--
-	f.tryStack = f.tryStack[:len(f.tryStack)-1]
-	f.ctrls = f.ctrls[:len(f.ctrls)-1]
-
-	// handler
-	var h strings.Builder
-	hw := f.w
-	f.w = &h
-	f.emit("defer func() {")
-	f.emit("if r := recover(); r != nil {")
-	f.emit("e := rt.Unwrap(r, %d)", f.tryID(t))
-	f.emit("_ = e")
-	hasAll := false
-	for _, cc := range t.catches {
-		target := f.ctrls[len(f.ctrls)-1-int(cc.Label)]
-		code := f.exitCode(t, target)
-		ts := target.labelTypes()
-		switch cc.Kind {
-		case wasm.CatchPlain, wasm.CatchRef:
-			f.emit("if e.Tag == %s {", c.tagRef(cc.Tag))
-			tft := c.m.Types[c.m.TagTypeIdx(cc.Tag)].Comp.Func
-			for i, p := range tft.Params {
-				s := f.catchDest(target, i)
-				f.emit("%s = %s", s, c.conv(fmt.Sprintf("e.Values[%d].(%s)", i, c.goType(p)), p, ts[i]))
-			}
-			if cc.Kind == wasm.CatchRef {
-				f.emit("%s = e", f.catchDest(target, len(tft.Params)))
-			}
-			f.emit("c = %d", code)
-			f.emit("return")
-			f.emit("}")
-		case wasm.CatchAll, wasm.CatchAllRef:
-			if cc.Kind == wasm.CatchAllRef {
-				f.emit("%s = e", f.catchDest(target, 0))
-			}
-			f.emit("c = %d", code)
-			hasAll = true
-		}
-		if target.kind != ctrlLoop && target.kind != ctrlFunc {
-			target.endReached = true
-		}
-		if hasAll {
-			break
-		}
-	}
-	if !hasAll {
-		f.emit("panic(r)")
-	}
-	f.emit("}")
-	f.emit("}()")
-	f.w = hw
-
-	cvar := fmt.Sprintf("c%d", len(f.tryStack))
-	f.declare(cvar, "int")
-	f.emit("%s = func() (c int) {", cvar)
-	f.w.WriteString(h.String())
-	f.w.WriteString(body)
-	f.emit("return 0")
-	f.emit("}()")
-	if len(t.exits) > 0 {
-		f.emit("switch %s {", cvar)
-		for _, x := range t.exits {
-			f.emit("case %d:", x.code)
-			if x.target == t {
-				t.used = true
-				f.emit("goto %s", t.label)
-			} else {
-				f.jump(x.target)
-			}
-		}
-		f.emit("}")
-	}
-	if t.used {
-		f.emit("%s:", t.label)
-	}
-	f.finishBlock(t)
-}
-
-// catchDest is the variable receiving the i-th value delivered to target.
-func (f *fn) catchDest(target *ctrl, i int) string {
-	if target.kind == ctrlFunc {
-		f.ensureRetVars()
-		return f.retVars[i]
-	}
-	return f.slot(target.base+i, f.c.goType(target.labelTypes()[i]))
-}
-
-func (f *fn) throw(tag uint32) {
-	c := f.c
-	tft := c.m.Types[c.m.TagTypeIdx(tag)].Comp.Func
-	vals := f.popN(len(tft.Params))
-	var args []string
-	for i, p := range tft.Params {
-		args = append(args, c.conv(f.ex(vals[i]), vals[i].t, p))
-	}
-	if len(args) == 0 {
-		f.emit("panic(&rt.Exception{Tag: %s})", c.tagRef(tag))
-	} else {
-		f.emit("panic(&rt.Exception{Tag: %s, Values: []any{%s}})", c.tagRef(tag), strings.Join(args, ", "))
-	}
 	f.setUnreachable()
 }
 

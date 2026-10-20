@@ -388,6 +388,7 @@ func (f *fn) emitCall(callee, tailCallee string, ft *wasm.FuncType, args []strin
 	if c.usesTramp && !host {
 		f.emit("for m.tail != nil {\nt := m.tail.(func(int)%s)\nm.tail = nil\n%st(d + 1)\n}", goResults(c, ft.Results), assign)
 	}
+	f.checkExn()
 	for i, r := range ft.Results {
 		f.pushSlotVar(r, outs[i])
 	}
@@ -537,6 +538,10 @@ func (f *fn) callIndirect(typeIdx, table uint32, tail bool) {
 	} else {
 		ie = f.u64(idx)
 	}
+	if c.usesExn && !tail {
+		f.guardedIndirect(fmt.Sprintf("%s.Get(%s)", c.tableRef(table), ie), typeIdx, ft, args, true)
+		return
+	}
 	callee := fmt.Sprintf("rt.FnOf(%s.Get(%s), %s).(%s)", c.tableRef(table), ie, c.info(typeIdx).rtt, f.goFuncType(ft))
 	tcallee := fmt.Sprintf("rt.FnOfTail(%s.Get(%s), %s, m, true).(%s)", c.tableRef(table), ie, c.info(typeIdx).rtt, f.goFuncType(ft))
 	f.emitCall(callee, tcallee, ft, args, tail, true, false)
@@ -547,6 +552,10 @@ func (f *fn) callRef(typeIdx uint32, tail bool) {
 	ft := &c.m.Types[typeIdx].Comp.Func
 	r := f.pop()
 	args := f.args(ft)
+	if c.usesExn && !tail {
+		f.guardedIndirect(f.ex(r), typeIdx, ft, args, false)
+		return
+	}
 	callee := fmt.Sprintf("rt.FnOfRef(%s, %s).(%s)", f.ex(r), c.info(typeIdx).rtt, f.goFuncType(ft))
 	tcallee := fmt.Sprintf("rt.FnOfTail(%s, %s, m, false).(%s)", f.ex(r), c.info(typeIdx).rtt, f.goFuncType(ft))
 	f.emitCall(callee, tcallee, ft, args, tail, true, false)
@@ -566,4 +575,35 @@ func (c *compiler) floatConstVar(bits uint64, is64 bool) string {
 		fmt.Fprintf(&c.extra, "var %s = math.Float32frombits(0x%08x)\n\n", v, uint32(bits))
 	}
 	return v
+}
+
+// guardedIndirect emits an indirect call in a module with exception
+// handlers: functions of this instance are called raw (exceptions arrive in
+// m.exn); others go through a guard that converts exception panics.
+func (f *fn) guardedIndirect(fexpr string, typeIdx uint32, ft *wasm.FuncType, args []string, table bool) {
+	c := f.c
+	f.nguard++
+	fv, own := fmt.Sprintf("fn%d", f.nguard), fmt.Sprintf("own%d", f.nguard)
+	f.declare(fv, "any")
+	f.declare(own, "bool")
+	f.emit("%s, %s = rt.FnOwn(%s, %s, m, %v)", fv, own, fexpr, c.info(typeIdx).rtt, table)
+	h := f.height()
+	var outs []string
+	for i, r := range ft.Results {
+		outs = append(outs, f.slot(h+i, c.goType(r)))
+	}
+	assign := ""
+	if len(outs) > 0 {
+		assign = strings.Join(outs, ", ") + " = "
+	}
+	sig := f.goFuncType(ft)
+	all := strings.Join(append([]string{"d + 1"}, args...), ", ")
+	f.emit("if %s {\n%s%s.(%s)(%s)\n} else {\n%sm.%s(%s.(%s), %s)\n}", own, assign, fv, sig, all, assign, c.guardName(ft), fv, sig, all)
+	if c.usesTramp {
+		f.emit("for m.tail != nil {\nt := m.tail.(func(int)%s)\nm.tail = nil\n%st(d + 1)\n}", goResults(c, ft.Results), assign)
+	}
+	f.checkExn()
+	for i, r := range ft.Results {
+		f.pushSlotVar(r, outs[i])
+	}
 }

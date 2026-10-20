@@ -331,3 +331,27 @@ func IsFuncType(f *Func, t *RTT) bool {
 
 // HostRef is a convenience wrapper for opaque host references.
 type HostRef struct{ V any }
+
+// FnOwn resolves a function reference called through type t from code of
+// instance owner. It returns the raw function and true when f belongs to
+// owner and has exactly type t (exceptions then arrive as pending state),
+// otherwise the ordinary entry point and false. table selects the trap for
+// a null entry.
+func FnOwn(f *Func, t *RTT, owner any, table bool) (any, bool) {
+	if f == nil {
+		if table {
+			panic(ErrUninitElem)
+		}
+		panic(ErrNullFunc)
+	}
+	if f.Type == t {
+		if f.Raw != nil && f.Owner == owner {
+			return f.Raw, true
+		}
+		return f.Fn, false
+	}
+	if !f.Type.SubOf(t) {
+		panic(ErrIndirectType)
+	}
+	return f.As(t), false
+}

@@ -179,3 +179,11 @@ func UndelegateFrame() {
 		panic(r)
 	}
 }
+
+// NonNullExn implements the null check of throw_ref.
+func NonNullExn(e *Exception) *Exception {
+	if e == nil {
+		panic(ErrNullExn)
+	}
+	return e
+}

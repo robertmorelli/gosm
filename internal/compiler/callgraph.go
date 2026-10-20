@@ -139,9 +139,6 @@ func (c *compiler) computeTailCalls() {
 			case wasm.OpReturnCallIndirect, wasm.OpReturnCallRef:
 				c.usesTramp = true
 			case wasm.OpReturnCall:
-				if depth != 0 {
-					c.usesTramp = true
-				}
 				if int(in.A) != f {
 					edges[f] = append(edges[f], int(in.A))
 				}

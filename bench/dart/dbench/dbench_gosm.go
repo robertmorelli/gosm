@@ -1327,6 +1327,7 @@ type Instance struct {
 	tag0    *rt.Tag
 	tag1    *rt.Tag
 	jsCache rt.JSCache
+	exn     *rt.Exception // pending wasm exception
 	elem0   []*rt.Func
 	elem1   []*rt.Func
 	elem2   []*rt.Func
@@ -1446,77 +1447,77 @@ func (m *Instance) init() {
 	m.tag0 = m.host.M_WebAssembly_JSTag()
 	rt.CheckTagImport(m.tag0, rttFunc52)
 	m.tag1 = &rt.Tag{Type: rttFunc61}
-	m.funcs[22] = &rt.Func{Type: rttFunc56, Fn: m.setThisModule, Name: ""}
-	m.funcs[24] = &rt.Func{Type: rttFunc56, Fn: m.invokeMain, Name: ""}
-	m.funcs[25] = &rt.Func{Type: rttFunc53, Fn: m.wasmI16ArrayGet, Name: ""}
-	m.funcs[26] = &rt.Func{Type: rttFunc72, Fn: m.wasmI16ArraySet, Name: ""}
-	m.funcs[30] = &rt.Func{Type: rttFunc11, Fn: m.f30, Name: ""}
-	m.funcs[31] = &rt.Func{Type: rttFunc11, Fn: m.f31, Name: ""}
-	m.funcs[32] = &rt.Func{Type: rttFunc11, Fn: m.f32, Name: ""}
-	m.funcs[33] = &rt.Func{Type: rttFunc11, Fn: m.f33, Name: ""}
-	m.funcs[34] = &rt.Func{Type: rttFunc11, Fn: m.f34, Name: ""}
-	m.funcs[38] = &rt.Func{Type: rttFunc11, Fn: m.f38, Name: ""}
-	m.funcs[40] = &rt.Func{Type: rttFunc31, Fn: m.f40, Name: ""}
-	m.funcs[41] = &rt.Func{Type: rttFunc11, Fn: m.f41, Name: ""}
-	m.funcs[43] = &rt.Func{Type: rttFunc11, Fn: m.f43, Name: ""}
-	m.funcs[45] = &rt.Func{Type: rttFunc58, Fn: m.f45, Name: ""}
-	m.funcs[47] = &rt.Func{Type: rttFunc33, Fn: m.f47, Name: ""}
-	m.funcs[48] = &rt.Func{Type: rttFunc33, Fn: m.f48, Name: ""}
-	m.funcs[49] = &rt.Func{Type: rttFunc31, Fn: m.f49, Name: ""}
-	m.funcs[50] = &rt.Func{Type: rttFunc31, Fn: m.f50, Name: ""}
-	m.funcs[51] = &rt.Func{Type: rttFunc45, Fn: m.f51, Name: ""}
-	m.funcs[52] = &rt.Func{Type: rttFunc45, Fn: m.f52, Name: ""}
-	m.funcs[53] = &rt.Func{Type: rttFunc31, Fn: m.f53, Name: ""}
-	m.funcs[54] = &rt.Func{Type: rttFunc33, Fn: m.f54, Name: ""}
-	m.funcs[56] = &rt.Func{Type: rttFunc11, Fn: m.f56, Name: ""}
-	m.funcs[59] = &rt.Func{Type: rttFunc34, Fn: m.f59, Name: ""}
-	m.funcs[61] = &rt.Func{Type: rttFunc11, Fn: m.f61, Name: ""}
-	m.funcs[64] = &rt.Func{Type: rttFunc33, Fn: m.f64, Name: ""}
-	m.funcs[65] = &rt.Func{Type: rttFunc31, Fn: m.f65, Name: ""}
-	m.funcs[67] = &rt.Func{Type: rttFunc11, Fn: m.f67, Name: ""}
-	m.funcs[69] = &rt.Func{Type: rttFunc11, Fn: m.f69, Name: ""}
-	m.funcs[70] = &rt.Func{Type: rttFunc11, Fn: m.f70, Name: ""}
-	m.funcs[71] = &rt.Func{Type: rttFunc34, Fn: m.f71, Name: ""}
-	m.funcs[79] = &rt.Func{Type: rttFunc11, Fn: m.f79, Name: ""}
-	m.funcs[80] = &rt.Func{Type: rttFunc11, Fn: m.f80, Name: ""}
-	m.funcs[82] = &rt.Func{Type: rttFunc11, Fn: m.f82, Name: ""}
-	m.funcs[83] = &rt.Func{Type: rttFunc34, Fn: m.f83, Name: ""}
-	m.funcs[84] = &rt.Func{Type: rttFunc45, Fn: m.f84, Name: ""}
-	m.funcs[85] = &rt.Func{Type: rttFunc33, Fn: m.f85, Name: ""}
-	m.funcs[86] = &rt.Func{Type: rttFunc11, Fn: m.f86, Name: ""}
-	m.funcs[90] = &rt.Func{Type: rttFunc18, Fn: m.f90, Name: ""}
-	m.funcs[92] = &rt.Func{Type: rttFunc18, Fn: m.f92, Name: ""}
-	m.funcs[93] = &rt.Func{Type: rttFunc18, Fn: m.f93, Name: ""}
-	m.funcs[94] = &rt.Func{Type: rttFunc18, Fn: m.f94, Name: ""}
-	m.funcs[95] = &rt.Func{Type: rttFunc18, Fn: m.f95, Name: ""}
-	m.funcs[97] = &rt.Func{Type: rttFunc18, Fn: m.f97, Name: ""}
-	m.funcs[98] = &rt.Func{Type: rttFunc18, Fn: m.f98, Name: ""}
-	m.funcs[111] = &rt.Func{Type: rttFunc20, Fn: m.f111, Name: ""}
-	m.funcs[112] = &rt.Func{Type: rttFunc20, Fn: m.f112, Name: ""}
-	m.funcs[113] = &rt.Func{Type: rttFunc20, Fn: m.f113, Name: ""}
-	m.funcs[114] = &rt.Func{Type: rttFunc20, Fn: m.f114, Name: ""}
-	m.funcs[115] = &rt.Func{Type: rttFunc20, Fn: m.f115, Name: ""}
-	m.funcs[116] = &rt.Func{Type: rttFunc20, Fn: m.f116, Name: ""}
-	m.funcs[117] = &rt.Func{Type: rttFunc20, Fn: m.f117, Name: ""}
-	m.funcs[118] = &rt.Func{Type: rttFunc20, Fn: m.f118, Name: ""}
-	m.funcs[119] = &rt.Func{Type: rttFunc20, Fn: m.f119, Name: ""}
-	m.funcs[120] = &rt.Func{Type: rttFunc20, Fn: m.f120, Name: ""}
-	m.funcs[121] = &rt.Func{Type: rttFunc20, Fn: m.f121, Name: ""}
-	m.funcs[122] = &rt.Func{Type: rttFunc25, Fn: m.f122, Name: ""}
-	m.funcs[123] = &rt.Func{Type: rttFunc25, Fn: m.f123, Name: ""}
-	m.funcs[124] = &rt.Func{Type: rttFunc25, Fn: m.f124, Name: ""}
-	m.funcs[125] = &rt.Func{Type: rttFunc25, Fn: m.f125, Name: ""}
-	m.funcs[126] = &rt.Func{Type: rttFunc25, Fn: m.f126, Name: ""}
-	m.funcs[127] = &rt.Func{Type: rttFunc25, Fn: m.f127, Name: ""}
-	m.funcs[128] = &rt.Func{Type: rttFunc25, Fn: m.f128, Name: ""}
-	m.funcs[129] = &rt.Func{Type: rttFunc25, Fn: m.f129, Name: ""}
-	m.funcs[139] = &rt.Func{Type: rttFunc11, Fn: m.f139, Name: ""}
-	m.funcs[140] = &rt.Func{Type: rttFunc31, Fn: m.f140, Name: ""}
-	m.funcs[141] = &rt.Func{Type: rttFunc11, Fn: m.f141, Name: ""}
-	m.funcs[142] = &rt.Func{Type: rttFunc34, Fn: m.f142, Name: ""}
-	m.funcs[143] = &rt.Func{Type: rttFunc46, Fn: m.f143, Name: ""}
-	m.funcs[144] = &rt.Func{Type: rttFunc46, Fn: m.f144, Name: ""}
-	m.funcs[145] = &rt.Func{Type: rttFunc46, Fn: m.f145, Name: ""}
+	m.funcs[22] = &rt.Func{Type: rttFunc56, Fn: m.setThisModuleEntry, Raw: m.setThisModule, Owner: m, Name: ""}
+	m.funcs[24] = &rt.Func{Type: rttFunc56, Fn: m.invokeMainEntry, Raw: m.invokeMain, Owner: m, Name: ""}
+	m.funcs[25] = &rt.Func{Type: rttFunc53, Fn: m.wasmI16ArrayGetEntry, Raw: m.wasmI16ArrayGet, Owner: m, Name: ""}
+	m.funcs[26] = &rt.Func{Type: rttFunc72, Fn: m.wasmI16ArraySetEntry, Raw: m.wasmI16ArraySet, Owner: m, Name: ""}
+	m.funcs[30] = &rt.Func{Type: rttFunc11, Fn: m.f30Entry, Raw: m.f30, Owner: m, Name: ""}
+	m.funcs[31] = &rt.Func{Type: rttFunc11, Fn: m.f31Entry, Raw: m.f31, Owner: m, Name: ""}
+	m.funcs[32] = &rt.Func{Type: rttFunc11, Fn: m.f32Entry, Raw: m.f32, Owner: m, Name: ""}
+	m.funcs[33] = &rt.Func{Type: rttFunc11, Fn: m.f33Entry, Raw: m.f33, Owner: m, Name: ""}
+	m.funcs[34] = &rt.Func{Type: rttFunc11, Fn: m.f34Entry, Raw: m.f34, Owner: m, Name: ""}
+	m.funcs[38] = &rt.Func{Type: rttFunc11, Fn: m.f38Entry, Raw: m.f38, Owner: m, Name: ""}
+	m.funcs[40] = &rt.Func{Type: rttFunc31, Fn: m.f40Entry, Raw: m.f40, Owner: m, Name: ""}
+	m.funcs[41] = &rt.Func{Type: rttFunc11, Fn: m.f41Entry, Raw: m.f41, Owner: m, Name: ""}
+	m.funcs[43] = &rt.Func{Type: rttFunc11, Fn: m.f43Entry, Raw: m.f43, Owner: m, Name: ""}
+	m.funcs[45] = &rt.Func{Type: rttFunc58, Fn: m.f45Entry, Raw: m.f45, Owner: m, Name: ""}
+	m.funcs[47] = &rt.Func{Type: rttFunc33, Fn: m.f47Entry, Raw: m.f47, Owner: m, Name: ""}
+	m.funcs[48] = &rt.Func{Type: rttFunc33, Fn: m.f48Entry, Raw: m.f48, Owner: m, Name: ""}
+	m.funcs[49] = &rt.Func{Type: rttFunc31, Fn: m.f49Entry, Raw: m.f49, Owner: m, Name: ""}
+	m.funcs[50] = &rt.Func{Type: rttFunc31, Fn: m.f50Entry, Raw: m.f50, Owner: m, Name: ""}
+	m.funcs[51] = &rt.Func{Type: rttFunc45, Fn: m.f51Entry, Raw: m.f51, Owner: m, Name: ""}
+	m.funcs[52] = &rt.Func{Type: rttFunc45, Fn: m.f52Entry, Raw: m.f52, Owner: m, Name: ""}
+	m.funcs[53] = &rt.Func{Type: rttFunc31, Fn: m.f53Entry, Raw: m.f53, Owner: m, Name: ""}
+	m.funcs[54] = &rt.Func{Type: rttFunc33, Fn: m.f54Entry, Raw: m.f54, Owner: m, Name: ""}
+	m.funcs[56] = &rt.Func{Type: rttFunc11, Fn: m.f56Entry, Raw: m.f56, Owner: m, Name: ""}
+	m.funcs[59] = &rt.Func{Type: rttFunc34, Fn: m.f59Entry, Raw: m.f59, Owner: m, Name: ""}
+	m.funcs[61] = &rt.Func{Type: rttFunc11, Fn: m.f61Entry, Raw: m.f61, Owner: m, Name: ""}
+	m.funcs[64] = &rt.Func{Type: rttFunc33, Fn: m.f64Entry, Raw: m.f64, Owner: m, Name: ""}
+	m.funcs[65] = &rt.Func{Type: rttFunc31, Fn: m.f65Entry, Raw: m.f65, Owner: m, Name: ""}
+	m.funcs[67] = &rt.Func{Type: rttFunc11, Fn: m.f67Entry, Raw: m.f67, Owner: m, Name: ""}
+	m.funcs[69] = &rt.Func{Type: rttFunc11, Fn: m.f69Entry, Raw: m.f69, Owner: m, Name: ""}
+	m.funcs[70] = &rt.Func{Type: rttFunc11, Fn: m.f70Entry, Raw: m.f70, Owner: m, Name: ""}
+	m.funcs[71] = &rt.Func{Type: rttFunc34, Fn: m.f71Entry, Raw: m.f71, Owner: m, Name: ""}
+	m.funcs[79] = &rt.Func{Type: rttFunc11, Fn: m.f79Entry, Raw: m.f79, Owner: m, Name: ""}
+	m.funcs[80] = &rt.Func{Type: rttFunc11, Fn: m.f80Entry, Raw: m.f80, Owner: m, Name: ""}
+	m.funcs[82] = &rt.Func{Type: rttFunc11, Fn: m.f82Entry, Raw: m.f82, Owner: m, Name: ""}
+	m.funcs[83] = &rt.Func{Type: rttFunc34, Fn: m.f83Entry, Raw: m.f83, Owner: m, Name: ""}
+	m.funcs[84] = &rt.Func{Type: rttFunc45, Fn: m.f84Entry, Raw: m.f84, Owner: m, Name: ""}
+	m.funcs[85] = &rt.Func{Type: rttFunc33, Fn: m.f85Entry, Raw: m.f85, Owner: m, Name: ""}
+	m.funcs[86] = &rt.Func{Type: rttFunc11, Fn: m.f86Entry, Raw: m.f86, Owner: m, Name: ""}
+	m.funcs[90] = &rt.Func{Type: rttFunc18, Fn: m.f90Entry, Raw: m.f90, Owner: m, Name: ""}
+	m.funcs[92] = &rt.Func{Type: rttFunc18, Fn: m.f92Entry, Raw: m.f92, Owner: m, Name: ""}
+	m.funcs[93] = &rt.Func{Type: rttFunc18, Fn: m.f93Entry, Raw: m.f93, Owner: m, Name: ""}
+	m.funcs[94] = &rt.Func{Type: rttFunc18, Fn: m.f94Entry, Raw: m.f94, Owner: m, Name: ""}
+	m.funcs[95] = &rt.Func{Type: rttFunc18, Fn: m.f95Entry, Raw: m.f95, Owner: m, Name: ""}
+	m.funcs[97] = &rt.Func{Type: rttFunc18, Fn: m.f97Entry, Raw: m.f97, Owner: m, Name: ""}
+	m.funcs[98] = &rt.Func{Type: rttFunc18, Fn: m.f98Entry, Raw: m.f98, Owner: m, Name: ""}
+	m.funcs[111] = &rt.Func{Type: rttFunc20, Fn: m.f111Entry, Raw: m.f111, Owner: m, Name: ""}
+	m.funcs[112] = &rt.Func{Type: rttFunc20, Fn: m.f112Entry, Raw: m.f112, Owner: m, Name: ""}
+	m.funcs[113] = &rt.Func{Type: rttFunc20, Fn: m.f113Entry, Raw: m.f113, Owner: m, Name: ""}
+	m.funcs[114] = &rt.Func{Type: rttFunc20, Fn: m.f114Entry, Raw: m.f114, Owner: m, Name: ""}
+	m.funcs[115] = &rt.Func{Type: rttFunc20, Fn: m.f115Entry, Raw: m.f115, Owner: m, Name: ""}
+	m.funcs[116] = &rt.Func{Type: rttFunc20, Fn: m.f116Entry, Raw: m.f116, Owner: m, Name: ""}
+	m.funcs[117] = &rt.Func{Type: rttFunc20, Fn: m.f117Entry, Raw: m.f117, Owner: m, Name: ""}
+	m.funcs[118] = &rt.Func{Type: rttFunc20, Fn: m.f118Entry, Raw: m.f118, Owner: m, Name: ""}
+	m.funcs[119] = &rt.Func{Type: rttFunc20, Fn: m.f119Entry, Raw: m.f119, Owner: m, Name: ""}
+	m.funcs[120] = &rt.Func{Type: rttFunc20, Fn: m.f120Entry, Raw: m.f120, Owner: m, Name: ""}
+	m.funcs[121] = &rt.Func{Type: rttFunc20, Fn: m.f121Entry, Raw: m.f121, Owner: m, Name: ""}
+	m.funcs[122] = &rt.Func{Type: rttFunc25, Fn: m.f122Entry, Raw: m.f122, Owner: m, Name: ""}
+	m.funcs[123] = &rt.Func{Type: rttFunc25, Fn: m.f123Entry, Raw: m.f123, Owner: m, Name: ""}
+	m.funcs[124] = &rt.Func{Type: rttFunc25, Fn: m.f124Entry, Raw: m.f124, Owner: m, Name: ""}
+	m.funcs[125] = &rt.Func{Type: rttFunc25, Fn: m.f125Entry, Raw: m.f125, Owner: m, Name: ""}
+	m.funcs[126] = &rt.Func{Type: rttFunc25, Fn: m.f126Entry, Raw: m.f126, Owner: m, Name: ""}
+	m.funcs[127] = &rt.Func{Type: rttFunc25, Fn: m.f127Entry, Raw: m.f127, Owner: m, Name: ""}
+	m.funcs[128] = &rt.Func{Type: rttFunc25, Fn: m.f128Entry, Raw: m.f128, Owner: m, Name: ""}
+	m.funcs[129] = &rt.Func{Type: rttFunc25, Fn: m.f129Entry, Raw: m.f129, Owner: m, Name: ""}
+	m.funcs[139] = &rt.Func{Type: rttFunc11, Fn: m.f139Entry, Raw: m.f139, Owner: m, Name: ""}
+	m.funcs[140] = &rt.Func{Type: rttFunc31, Fn: m.f140Entry, Raw: m.f140, Owner: m, Name: ""}
+	m.funcs[141] = &rt.Func{Type: rttFunc11, Fn: m.f141Entry, Raw: m.f141, Owner: m, Name: ""}
+	m.funcs[142] = &rt.Func{Type: rttFunc34, Fn: m.f142Entry, Raw: m.f142, Owner: m, Name: ""}
+	m.funcs[143] = &rt.Func{Type: rttFunc46, Fn: m.f143Entry, Raw: m.f143, Owner: m, Name: ""}
+	m.funcs[144] = &rt.Func{Type: rttFunc46, Fn: m.f144Entry, Raw: m.f144, Owner: m, Name: ""}
+	m.funcs[145] = &rt.Func{Type: rttFunc46, Fn: m.f145Entry, Raw: m.f145, Owner: m, Name: ""}
 	m.g54 = m.constExpr1()
 	m.g55 = m.constExpr2()
 	m.g56 = m.constExpr3()
@@ -1756,27 +1757,27 @@ func (m *Instance) init() {
 	m.elem47 = nil
 	m.tab0.Init(rt.U32(int32(864)), m.elem48, 0, 1)
 	m.elem48 = nil
-	m.f23(0)
+	m.f23Entry(0)
 }
 
 // SetThisModule calls the exported function "$setThisModule".
 func (m *Instance) SetThisModule(p0 any) {
-	m.setThisModule(0, p0)
+	m.setThisModuleEntry(0, p0)
 }
 
 // InvokeMain calls the exported function "$invokeMain".
 func (m *Instance) InvokeMain(p0 any) {
-	m.invokeMain(0, p0)
+	m.invokeMainEntry(0, p0)
 }
 
 // WasmI16ArrayGet calls the exported function "$wasmI16ArrayGet".
 func (m *Instance) WasmI16ArrayGet(p0 any, p1 int32) int32 {
-	return m.wasmI16ArrayGet(0, p0, p1)
+	return m.wasmI16ArrayGetEntry(0, p0, p1)
 }
 
 // WasmI16ArraySet calls the exported function "$wasmI16ArraySet".
 func (m *Instance) WasmI16ArraySet(p0 any, p1 int32, p2 int32) {
-	m.wasmI16ArraySet(0, p0, p1, p2)
+	m.wasmI16ArraySetEntry(0, p0, p1, p2)
 }
 
 // Exports returns the module's exports by name: *rt.Func, *rt.Memory,
@@ -1791,30 +1792,37 @@ func (m *Instance) Exports() map[string]any {
 }
 
 func (m *Instance) f0(d int, p0 float64) any {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__290(p0)
 }
 
 func (m *Instance) f1(d int, p0 int32, p1 int32) any {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__288(p0, p1)
 }
 
 func (m *Instance) f2(d int, p0 int64, p1 int32) any {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__289(p0, p1)
 }
 
 func (m *Instance) f3(d int, p0 any) any {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__33(p0)
 }
 
 func (m *Instance) f4(d int, p0 any) {
+	defer m.catchExn()
 	m.host.M_dart2wasm__34(p0)
 }
 
 func (m *Instance) f5(d int, p0 any) int32 {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__161(p0)
 }
 
 func (m *Instance) f6(d int, p0 any) float64 {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__168(p0)
 }
 
@@ -1839,42 +1847,52 @@ func (m *Instance) f11(d int, p0 any) int32 {
 }
 
 func (m *Instance) f12(d int, p0 any, p1 any, p2 int32) float64 {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__43(p0, p1, p2)
 }
 
 func (m *Instance) f13(d int) any {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__9()
 }
 
 func (m *Instance) f14(d int) int32 {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__10()
 }
 
 func (m *Instance) f15(d int) float64 {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__11()
 }
 
 func (m *Instance) f16(d int) float64 {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__12()
 }
 
 func (m *Instance) f17(d int, p0 any) any {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__18(p0)
 }
 
 func (m *Instance) f18(d int, p0 any) any {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__19(p0)
 }
 
 func (m *Instance) f19(d int, p0 any) any {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__20(p0)
 }
 
 func (m *Instance) f20(d int, p0 any) any {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__134(p0)
 }
 
 func (m *Instance) f21(d int) any {
+	defer m.catchExn()
 	return m.host.M_dart2wasm__137()
 }
 
@@ -1901,73 +1919,87 @@ func (m *Instance) invokeMain(d int, p0 any) {
 	}
 	var l1, l2, s0 *Struct0
 	var l3, l4, s1_1 *Struct1
-	var l5, s0_1, s1_2 any
-	var l6, s0_2 *Struct39
+	var l5, s1_2 any
+	var l6 *Struct39
 	var s1 *Struct30
-	var x3 *rt.Exception
+	var x2 *rt.Exception
 	var s1_3 *Struct15
-	var c3 int
-	c3 = func() (c int) {
-		defer func() {
-			if r := recover(); r != nil {
-				e := rt.Unwrap(r, 3)
-				if e.Tag == m.tag1 {
-					x3 = e
-					c = -1
-					return
-				}
-				if e.Tag == m.tag0 {
-					x3 = e
-					c = -2
-					return
-				}
-				panic(r)
-			}
-		}()
-		s1 = NewStruct30(int32(43), int32(0), m.g123, m.g62)
-		m.f91(d+1, m.g122, s1)
-		s1 = NewStruct30(int32(43), int32(0), m.g125, m.g87)
-		m.f91(d+1, m.g124, s1)
-		s1 = NewStruct30(int32(43), int32(0), m.g127, m.g87)
-		m.f91(d+1, m.g126, s1)
-		s1 = NewStruct30(int32(43), int32(0), m.g129, m.g62)
-		m.f91(d+1, m.g128, s1)
-		s1 = NewStruct30(int32(43), int32(0), m.g131, m.g62)
-		m.f91(d+1, m.g130, s1)
-		return 1
-
-	}()
-	switch c3 {
-	case -1:
-		s0 = x3.Values[0].(*Struct0)
-		s1_1 = x3.Values[1].(*Struct1)
-		l3 = s1_1
-		l1 = s0
-		s0 = l1
-		s1_1 = l3
-		goto B1
-	case -2:
-		s0_1 = x3.Values[0].(any)
-		l5 = s0_1
-		s0_2 = NewStruct39(int32(60), int32(0), (*Struct15)(nil), l5)
-		l6 = s0_2
-		s1_2 = l6.F3
-		s1_2 = m.f18(d+1, s1_2)
-		s1_3 = m.f68(d+1, s1_2)
-		s0 = rt.ViewAs[Struct0](l6)
-		s1_1 = rt.ViewAs[Struct1](s1_3)
-		goto B1
-	case 1:
+	s1 = NewStruct30(int32(43), int32(0), m.g123, m.g62)
+	m.f91(d+1, m.g122, s1)
+	if m.exn != nil {
+		goto H2
+	}
+	s1 = NewStruct30(int32(43), int32(0), m.g125, m.g87)
+	m.f91(d+1, m.g124, s1)
+	if m.exn != nil {
+		goto H2
+	}
+	s1 = NewStruct30(int32(43), int32(0), m.g127, m.g87)
+	m.f91(d+1, m.g126, s1)
+	if m.exn != nil {
+		goto H2
+	}
+	s1 = NewStruct30(int32(43), int32(0), m.g129, m.g62)
+	m.f91(d+1, m.g128, s1)
+	if m.exn != nil {
+		goto H2
+	}
+	s1 = NewStruct30(int32(43), int32(0), m.g131, m.g62)
+	m.f91(d+1, m.g130, s1)
+	if m.exn != nil {
+		goto H2
+	}
+	return
+C2_1:
+	s0 = x2.Values[0].(*Struct0)
+	s1_1 = x2.Values[1].(*Struct1)
+	l3 = s1_1
+	l1 = s0
+	s0 = l1
+	s1_1 = l3
+	goto B1
+C2_2:
+	l5 = x2.Values[0].(any)
+	l6 = NewStruct39(int32(60), int32(0), (*Struct15)(nil), l5)
+	s1_2 = l6.F3
+	s1_2 = m.f18(d+1, s1_2)
+	if m.exn != nil {
 		return
 	}
+	s1_3 = m.f68(d+1, s1_2)
+	if m.exn != nil {
+		return
+	}
+	s0 = rt.ViewAs[Struct0](l6)
+	s1_1 = rt.ViewAs[Struct1](s1_3)
+	goto B1
+H2:
+	if m.exn.Tag == m.tag1 {
+		x2 = m.exn
+		m.exn = nil
+		goto C2_1
+	}
+	if m.exn.Tag == m.tag0 {
+		x2 = m.exn
+		m.exn = nil
+		goto C2_2
+	}
+	return
 B1:
 	l3 = s1_1
 	l1 = s0
 	l2 = l1
 	l4 = l3
 	m.f28(d+1, l2)
+	if m.exn != nil {
+		return
+	}
 	m.f28(d+1, rt.ViewAs[Struct0](l4))
-	panic(&rt.Exception{Tag: m.tag1, Values: []any{l2, l4}})
+	if m.exn != nil {
+		return
+	}
+	m.exn = &rt.Exception{Tag: m.tag1, Values: []any{l2, l4}}
+	return
 }
 
 func (m *Instance) wasmI16ArrayGet(d int, p0 any, p1 int32) int32 {
@@ -1992,8 +2024,17 @@ func (m *Instance) f27(d int, p0 *Struct1) {
 	var s1 any
 	var s1_1 *Struct15
 	s1 = m.f13(d + 1)
+	if m.exn != nil {
+		return
+	}
 	s1_1 = m.f68(d+1, s1)
+	if m.exn != nil {
+		return
+	}
 	m.f81(d+1, p0, s1_1)
+	if m.exn != nil {
+		return
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -2003,8 +2044,12 @@ func (m *Instance) f28(d int, p0 *Struct0) {
 	}
 	var s0, s1 int32
 	var s0_1 *Struct2
-	var s0_2 any
+	var fn1, s0_2 any
+	var own1 bool
 	s0 = m.f29(d+1, p0)
+	if m.exn != nil {
+		return
+	}
 	if s0 != 0 {
 		if !(p0 != nil && rt.ObjRTT(p0) == rttStruct2) {
 			panic(rt.ErrCast)
@@ -2012,10 +2057,21 @@ func (m *Instance) f28(d int, p0 *Struct0) {
 		s0_1 = rt.ViewAs[Struct2](p0)
 	} else {
 		s1 = p0.F0
-		s0_1 = rt.FnOf(m.tab0.Get(uint64(uint32((s1+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, p0)
+		fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 + int32(266))))), rttFunc11, m, true)
+		if own1 {
+			s0_1 = fn1.(func(int, *Struct0) *Struct2)(d+1, p0)
+		} else {
+			s0_1 = m.guard0(fn1.(func(int, *Struct0) *Struct2), d+1, p0)
+		}
+		if m.exn != nil {
+			return
+		}
 	}
 	s0_2 = s0_1.F2
 	m.f4(d+1, s0_2)
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
@@ -2048,6 +2104,8 @@ func (m *Instance) f31(d int, p0 *Struct0) *Struct2 {
 	var s2, s0_1, s1_2 int32
 	var s1 *Struct7
 	var s0_2, s1_1 *Array9
+	var fn1 any
+	var own1 bool
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct10) {
 		panic(rt.ErrCast)
 	}
@@ -2055,15 +2113,30 @@ func (m *Instance) f31(d int, p0 *Struct0) *Struct2 {
 	s2 = l2.F2
 	s1 = NewStruct7(int32(84), int64(s2))
 	s0 = m.f36(d+1, m.g113, rt.ViewAs[Struct0](s1))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l1 = s0
 	s0_1 = m.f29(d+1, rt.ViewAs[Struct0](l1))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0 = m.f66(d+1, m.g55, l1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l1 = s0
 	s0_2 = l2.F3
 	s0_1 = int32(len(s0_2.Elems))
 	if s0_1 != 0 {
 		s0_1 = m.f29(d+1, rt.ViewAs[Struct0](m.g70))
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		s0 = m.f66(d+1, l1, m.g70)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		l1 = s0
 	L2:
 		for {
@@ -2073,15 +2146,35 @@ func (m *Instance) f31(d int, p0 *Struct0) *Struct2 {
 			if s0_1 != 0 {
 				if l4 > int64(0) {
 					s0_1 = m.f29(d+1, rt.ViewAs[Struct0](m.g56))
+					if m.exn != nil {
+						return (*Struct2)(nil)
+					}
 					s0 = m.f66(d+1, l1, m.g56)
+					if m.exn != nil {
+						return (*Struct2)(nil)
+					}
 					l1 = s0
 				}
 				s0_2 = l2.F3
 				l3 = s0_2.Elems[uint32(int32(l4))]
 				s0_1 = m.f29(d+1, rt.ViewAs[Struct0](l3))
+				if m.exn != nil {
+					return (*Struct2)(nil)
+				}
 				s2 = l3.F0
-				s1_3 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, rt.ViewAs[Struct0](l3))
+				fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(266))))), rttFunc11, m, true)
+				if own1 {
+					s1_3 = fn1.(func(int, *Struct0) *Struct2)(d+1, rt.ViewAs[Struct0](l3))
+				} else {
+					s1_3 = m.guard0(fn1.(func(int, *Struct0) *Struct2), d+1, rt.ViewAs[Struct0](l3))
+				}
+				if m.exn != nil {
+					return (*Struct2)(nil)
+				}
 				s0 = m.f66(d+1, l1, s1_3)
+				if m.exn != nil {
+					return (*Struct2)(nil)
+				}
 				l1 = s0
 				l4 = (l4 + int64(1))
 				continue L2
@@ -2089,7 +2182,13 @@ func (m *Instance) f31(d int, p0 *Struct0) *Struct2 {
 			break L2
 		}
 		s0_1 = m.f29(d+1, rt.ViewAs[Struct0](m.g71))
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		s0 = m.f66(d+1, l1, m.g71)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		l1 = s0
 	}
 	return l1
@@ -2101,6 +2200,7 @@ func (m *Instance) f32(d int, p0 *Struct0) *Struct2 {
 	}
 	var l1, l2 int64
 	var s0_1 any
+	var s0_2 *Struct2
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct7) {
 		panic(rt.ErrCast)
 	}
@@ -2108,11 +2208,21 @@ func (m *Instance) f32(d int, p0 *Struct0) *Struct2 {
 	l2 = (l1 >> (uint64(31) & 63))
 	if (rt.B2I(l2 != int64(-1)) & rt.B2I(rt.B2I(l2 == 0) == 0)) == 0 {
 		s0_1 = m.f1(d+1, int32(l1), int32(10))
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		goto B1
 	}
 	s0_1 = m.f2(d+1, l1, int32(10))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 B1:
-	return m.f35(d+1, s0_1)
+	s0_2 = m.f35(d+1, s0_1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	return s0_2
 }
 
 func (m *Instance) f33(d int, p0 *Struct0) *Struct2 {
@@ -2192,7 +2302,13 @@ L5:
 	l9 = rt.ViewAs[Struct12](p0)
 	s0 = l9.F1
 	s0_1 = m.f0(d+1, s0)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0_2 = m.f35(d+1, s0_1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l8 = s0_2
 	s0 = l9.F1
 	l7 = s0
@@ -2297,6 +2413,9 @@ B13:
 	} else {
 		if l7 < float64(0) {
 			s2_2 = m.f42(d+1, m.g81)
+			if m.exn != nil {
+				return (*Struct2)(nil)
+			}
 			if s2_2 > float64(1) {
 				s0 = float64(l7 + fconst1)
 			} else {
@@ -2317,16 +2436,28 @@ B13:
 	}
 	s0_1 = l8.F2
 	s0 = m.f12(d+1, s0_1, m.g8.V, int32(0))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l7 = s0
 	if (int64(math.Float64bits(l7)) & int64(9218868437227405312)) == int64(9218868437227405312) {
 		s0_5 = m.f39(d + 1)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		m.f27(d+1, rt.ViewAs[Struct1](s0_5))
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	if rt.I64TruncSatF64S(l7) != int64(-1) {
 		goto B12
 	}
 	s0_2 = m.f36(d+1, l8, rt.ViewAs[Struct0](m.g97))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l8 = s0_2
 B12:
 	s0_6 = m.g69
@@ -2341,7 +2472,13 @@ B12:
 B11:
 	s0_8 = NewStruct7(int32(84), l1)
 	s0_9 = m.f44(d+1, s0_8)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	m.f27(d+1, rt.ViewAs[Struct1](s0_9))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -2362,12 +2499,19 @@ func (m *Instance) f36(d int, p0 *Struct2, p1 *Struct0) *Struct2 {
 	}
 	var l2 *Struct0
 	var s0, s1, s2 int32
-	var s0_1, s1_2 any
-	var s1_1 *Struct2
+	var s0_1, fn1, s1_2 any
+	var s1_1, s0_2 *Struct2
+	var own1 bool
 	_ = s0
 	s0 = m.f29(d+1, rt.ViewAs[Struct0](p0))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0_1 = p0.F2
 	s1 = m.f29(d+1, p1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	if s1 != 0 {
 		if !(p1 != nil && rt.ObjRTT(p1) == rttStruct2) {
 			panic(rt.ErrCast)
@@ -2379,7 +2523,15 @@ func (m *Instance) f36(d int, p0 *Struct2, p1 *Struct0) *Struct2 {
 		}
 		l2 = p1
 		s2 = l2.F0
-		s1_1 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, l2)
+		fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(266))))), rttFunc11, m, true)
+		if own1 {
+			s1_1 = fn1.(func(int, *Struct0) *Struct2)(d+1, l2)
+		} else {
+			s1_1 = m.guard0(fn1.(func(int, *Struct0) *Struct2), d+1, l2)
+		}
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		goto B2
 	B3:
 		s1_1 = m.g57
@@ -2387,7 +2539,14 @@ func (m *Instance) f36(d int, p0 *Struct2, p1 *Struct0) *Struct2 {
 	}
 	s1_2 = s1_1.F2
 	s0_1 = m.f8(d+1, s0_1, s1_2)
-	return m.f35(d+1, s0_1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	s0_2 = m.f35(d+1, s0_1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	return s0_2
 }
 
 func (m *Instance) f37(d int) {
@@ -2395,6 +2554,9 @@ func (m *Instance) f37(d int) {
 		rt.Exhausted()
 	}
 	m.f27(d+1, rt.ViewAs[Struct1](m.g100))
+	if m.exn != nil {
+		return
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -2404,14 +2566,28 @@ func (m *Instance) f38(d int, p0 *Struct0) *Struct2 {
 	}
 	var l1 *Struct1
 	var s2 int32
-	var s1 *Struct2
+	var fn1 any
+	var own1 bool
+	var s1, s0 *Struct2
 	if !(p0 != nil && rt.ObjRTT(p0).SubOf(rttStruct1)) {
 		panic(rt.ErrCast)
 	}
 	l1 = rt.ViewAs[Struct1](p0)
 	s2 = l1.F0
-	s1 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(743))))), rttFunc31).(func(int, *Struct1) *Struct2)(d+1, l1)
-	return m.f36(d+1, m.g99, rt.ViewAs[Struct0](s1))
+	fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(743))))), rttFunc31, m, true)
+	if own1 {
+		s1 = fn1.(func(int, *Struct1) *Struct2)(d+1, l1)
+	} else {
+		s1 = m.guard1(fn1.(func(int, *Struct1) *Struct2), d+1, l1)
+	}
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	s0 = m.f36(d+1, m.g99, rt.ViewAs[Struct0](s1))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) f39(d int) *Struct23 {
@@ -2443,52 +2619,134 @@ func (m *Instance) f43(d int, p0 *Struct0) *Struct2 {
 	var l2, l3, l4, l5, s0 *Struct2
 	var l6, s0_1 *Struct0
 	var s1, s0_2 int32
-	var s0_3, s1_1, s2 any
+	var fn1, fn2, fn3, fn4, fn5, fn6, s0_3, s1_1, s2 any
+	var own1, own2, own3, own4, own5, own6 bool
 	if !(p0 != nil && rt.ObjRTT(p0).SubOf(rttStruct1)) {
 		panic(rt.ErrCast)
 	}
 	l1 = rt.ViewAs[Struct1](p0)
 	s1 = l1.F0
-	s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s1+int32(732))))), rttFunc58).(func(int, *Struct1) *Struct2)(d+1, l1)
+	fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 + int32(732))))), rttFunc58, m, true)
+	if own1 {
+		s0 = fn1.(func(int, *Struct1) *Struct2)(d+1, l1)
+	} else {
+		s0 = m.guard1(fn1.(func(int, *Struct1) *Struct2), d+1, l1)
+	}
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l2 = m.g55
 	s1 = l1.F0
-	s0_1 = rt.FnOf(m.tab0.Get(uint64(uint32((s1+int32(724))))), rttFunc33).(func(int, *Struct1) *Struct0)(d+1, l1)
+	fn2, own2 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 + int32(724))))), rttFunc33, m, true)
+	if own2 {
+		s0_1 = fn2.(func(int, *Struct1) *Struct0)(d+1, l1)
+	} else {
+		s0_1 = m.guard2(fn2.(func(int, *Struct1) *Struct0), d+1, l1)
+	}
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l6 = s0_1
 	if l6 == nil {
 		s0 = m.g55
 	} else {
 		s0 = m.f36(d+1, m.g67, l6)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 	}
 	l3 = s0
 	s1 = l1.F0
-	s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s1+int32(666))))), rttFunc31).(func(int, *Struct1) *Struct2)(d+1, l1)
+	fn3, own3 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 + int32(666))))), rttFunc31, m, true)
+	if own3 {
+		s0 = fn3.(func(int, *Struct1) *Struct2)(d+1, l1)
+	} else {
+		s0 = m.guard1(fn3.(func(int, *Struct1) *Struct2), d+1, l1)
+	}
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0 = m.f46(d+1, s0, rt.ViewAs[Struct1](l2), l3)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l2 = s0
 	s1 = l1.F0
-	s0_2 = rt.FnOf(m.tab0.Get(uint64(uint32((s1+int32(735))))), rttFunc45).(func(int, *Struct1) int32)(d+1, l1)
+	fn4, own4 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 + int32(735))))), rttFunc45, m, true)
+	if own4 {
+		s0_2 = fn4.(func(int, *Struct1) int32)(d+1, l1)
+	} else {
+		s0_2 = m.guard3(fn4.(func(int, *Struct1) int32), d+1, l1)
+	}
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	if s0_2 == 0 {
 		return l2
 	}
 	s1 = l1.F0
-	s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s1+int32(741))))), rttFunc31).(func(int, *Struct1) *Struct2)(d+1, l1)
+	fn5, own5 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 + int32(741))))), rttFunc31, m, true)
+	if own5 {
+		s0 = fn5.(func(int, *Struct1) *Struct2)(d+1, l1)
+	} else {
+		s0 = m.guard1(fn5.(func(int, *Struct1) *Struct2), d+1, l1)
+	}
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l4 = s0
 	s1 = l1.F0
-	s0_1 = rt.FnOf(m.tab0.Get(uint64(uint32((s1+int32(738))))), rttFunc33).(func(int, *Struct1) *Struct0)(d+1, l1)
+	fn6, own6 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 + int32(738))))), rttFunc33, m, true)
+	if own6 {
+		s0_1 = fn6.(func(int, *Struct1) *Struct0)(d+1, l1)
+	} else {
+		s0_1 = m.guard2(fn6.(func(int, *Struct1) *Struct0), d+1, l1)
+	}
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0 = m.f55(d+1, s0_1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l5 = s0
 	s0_2 = m.f29(d+1, rt.ViewAs[Struct0](l2))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0_2 = m.f29(d+1, rt.ViewAs[Struct0](l4))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0_2 = m.f29(d+1, rt.ViewAs[Struct0](m.g67))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l3 = m.g67
 	s0_2 = m.f29(d+1, rt.ViewAs[Struct0](l5))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0_3 = l2.F2
 	s1_1 = l4.F2
 	s0_3 = m.f8(d+1, s0_3, s1_1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s1_1 = l3.F2
 	s2 = l5.F2
 	s1_1 = m.f8(d+1, s1_1, s2)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0_3 = m.f8(d+1, s0_3, s1_1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0 = m.f35(d+1, s0_3)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	return s0
 }
 
@@ -2506,9 +2764,16 @@ func (m *Instance) f46(d int, p0 *Struct2, p1 *Struct1, p2 *Struct2) *Struct2 {
 	}
 	var l3, s0_1 *Struct2
 	var s0, s1 int32
-	var s0_2, s1_1 any
+	var fn1, s0_2, s1_1 any
+	var own1 bool
 	s0 = m.f29(d+1, rt.ViewAs[Struct0](p0))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0 = m.f29(d+1, rt.ViewAs[Struct0](p1))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	if s0 != 0 {
 		if !(p1 != nil && rt.ObjRTT(p1) == rttStruct2) {
 			panic(rt.ErrCast)
@@ -2516,16 +2781,36 @@ func (m *Instance) f46(d int, p0 *Struct2, p1 *Struct1, p2 *Struct2) *Struct2 {
 		s0_1 = rt.ViewAs[Struct2](p1)
 	} else {
 		s1 = p1.F0
-		s0_1 = rt.FnOf(m.tab0.Get(uint64(uint32((s1+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, rt.ViewAs[Struct0](p1))
+		fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 + int32(266))))), rttFunc11, m, true)
+		if own1 {
+			s0_1 = fn1.(func(int, *Struct0) *Struct2)(d+1, rt.ViewAs[Struct0](p1))
+		} else {
+			s0_1 = m.guard0(fn1.(func(int, *Struct0) *Struct2), d+1, rt.ViewAs[Struct0](p1))
+		}
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 	}
 	l3 = s0_1
 	s0 = m.f29(d+1, rt.ViewAs[Struct0](p2))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0_2 = p0.F2
 	s1_1 = l3.F2
 	s0_2 = m.f8(d+1, s0_2, s1_1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s1_1 = p2.F2
 	s0_2 = m.f8(d+1, s0_2, s1_1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0_1 = m.f35(d+1, s0_2)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	return s0_1
 }
 
@@ -2551,7 +2836,12 @@ func (m *Instance) f49(d int, p0 *Struct1) *Struct2 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.f36(d+1, m.g111, rt.ViewAs[Struct0](m.g112))
+	var s0 *Struct2
+	s0 = m.f36(d+1, m.g111, rt.ViewAs[Struct0](m.g112))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) f50(d int, p0 *Struct1) *Struct2 {
@@ -2559,6 +2849,9 @@ func (m *Instance) f50(d int, p0 *Struct1) *Struct2 {
 		rt.Exhausted()
 	}
 	m.f62(d + 1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -2571,6 +2864,9 @@ func (m *Instance) f52(d int, p0 *Struct1) int32 {
 		rt.Exhausted()
 	}
 	m.f62(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -2587,8 +2883,9 @@ func (m *Instance) f55(d int, p0 *Struct0) *Struct2 {
 		rt.Exhausted()
 	}
 	var l1 *Struct0
-	var l2, s0_2 any
+	var l2, fn1, s0_2 any
 	var s0, s1 int32
+	var own1 bool
 	var s0_1 *Struct2
 	var s0_3 *Struct40
 	if p0 == nil {
@@ -2624,7 +2921,15 @@ B2:
 	}
 	l1 = p0
 	s1 = l1.F0
-	s0_1 = rt.FnOf(m.tab0.Get(uint64(uint32((s1+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, l1)
+	fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 + int32(266))))), rttFunc11, m, true)
+	if own1 {
+		s0_1 = fn1.(func(int, *Struct0) *Struct2)(d+1, l1)
+	} else {
+		s0_1 = m.guard0(fn1.(func(int, *Struct0) *Struct2), d+1, l1)
+	}
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	goto B7
 B8:
 	s0_1 = m.g57
@@ -2642,17 +2947,35 @@ B1:
 		}
 		s0_2 = rt.ViewAs[Struct2](l1).F2
 		s0_2 = m.f3(d+1, s0_2)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		l2 = s0_2
 		s0 = m.f11(d+1, l2)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		if s0 == 0 {
 			s0_3 = m.f44(d+1, (*Struct7)(nil))
+			if m.exn != nil {
+				return (*Struct2)(nil)
+			}
 			m.f27(d+1, rt.ViewAs[Struct1](s0_3))
+			if m.exn != nil {
+				return (*Struct2)(nil)
+			}
 			panic(rt.ErrUnreachable)
 		}
 		s0_1 = m.f35(d+1, l2)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		return s0_1
 	}
 	s0_1 = m.f57(d+1, l1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	return s0_1
 }
 
@@ -2660,7 +2983,12 @@ func (m *Instance) f56(d int, p0 *Struct0) *Struct2 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.f57(d+1, p0)
+	var s0 *Struct2
+	s0 = m.f57(d+1, p0)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) f57(d int, p0 *Struct0) *Struct2 {
@@ -2668,8 +2996,16 @@ func (m *Instance) f57(d int, p0 *Struct0) *Struct2 {
 		rt.Exhausted()
 	}
 	var s1 *Struct4
+	var s0 *Struct2
 	s1 = m.f58(d+1, p0)
-	return m.f46(d+1, m.g101, rt.ViewAs[Struct1](s1), m.g102)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	s0 = m.f46(d+1, m.g101, rt.ViewAs[Struct1](s1), m.g102)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) f58(d int, p0 *Struct0) *Struct4 {
@@ -2677,6 +3013,8 @@ func (m *Instance) f58(d int, p0 *Struct0) *Struct4 {
 		rt.Exhausted()
 	}
 	var l1, s0, s2 int32
+	var fn1, fn2, fn3 any
+	var own1, own2, own3 bool
 	var s1 *Array9
 	var s0_1 *Struct10
 	var s0_2 *Struct29
@@ -2684,8 +3022,19 @@ func (m *Instance) f58(d int, p0 *Struct0) *Struct4 {
 	l1 = s0
 	if l1 >= int32(110) {
 		s2 = p0.F0
-		s1 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(393))))), rttFunc34).(func(int, *Struct0) *Array9)(d+1, p0)
+		fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(393))))), rttFunc34, m, true)
+		if own1 {
+			s1 = fn1.(func(int, *Struct0) *Array9)(d+1, p0)
+		} else {
+			s1 = m.guard4(fn1.(func(int, *Struct0) *Array9), d+1, p0)
+		}
+		if m.exn != nil {
+			return (*Struct4)(nil)
+		}
 		s0_1 = m.f60(d+1, l1, s1)
+		if m.exn != nil {
+			return (*Struct4)(nil)
+		}
 		return rt.ViewAs[Struct4](s0_1)
 	}
 	if l1 == int32(1) {
@@ -2717,8 +3066,19 @@ func (m *Instance) f58(d int, p0 *Struct0) *Struct4 {
 	s0 = p0.F0
 	if uint32((s0 - int32(29))) < uint32(3) {
 		s2 = p0.F0
-		s1 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(393))))), rttFunc34).(func(int, *Struct0) *Array9)(d+1, p0)
+		fn2, own2 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(393))))), rttFunc34, m, true)
+		if own2 {
+			s1 = fn2.(func(int, *Struct0) *Array9)(d+1, p0)
+		} else {
+			s1 = m.guard4(fn2.(func(int, *Struct0) *Array9), d+1, p0)
+		}
+		if m.exn != nil {
+			return (*Struct4)(nil)
+		}
 		s0_1 = m.f60(d+1, int32(193), s1)
+		if m.exn != nil {
+			return (*Struct4)(nil)
+		}
 		return rt.ViewAs[Struct4](s0_1)
 	}
 	s0 = p0.F0
@@ -2726,8 +3086,19 @@ func (m *Instance) f58(d int, p0 *Struct0) *Struct4 {
 		return rt.ViewAs[Struct4](m.g65)
 	}
 	s2 = p0.F0
-	s1 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(393))))), rttFunc34).(func(int, *Struct0) *Array9)(d+1, p0)
+	fn3, own3 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(393))))), rttFunc34, m, true)
+	if own3 {
+		s1 = fn3.(func(int, *Struct0) *Array9)(d+1, p0)
+	} else {
+		s1 = m.guard4(fn3.(func(int, *Struct0) *Array9), d+1, p0)
+	}
+	if m.exn != nil {
+		return (*Struct4)(nil)
+	}
 	s0_1 = m.f60(d+1, l1, s1)
+	if m.exn != nil {
+		return (*Struct4)(nil)
+	}
 	return rt.ViewAs[Struct4](s0_1)
 }
 
@@ -2754,6 +3125,9 @@ func (m *Instance) f62(d int) {
 		rt.Exhausted()
 	}
 	m.f27(d+1, rt.ViewAs[Struct1](m.g108))
+	if m.exn != nil {
+		return
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -2762,6 +3136,9 @@ func (m *Instance) f63(d int) {
 		rt.Exhausted()
 	}
 	m.f27(d+1, rt.ViewAs[Struct1](m.g109))
+	if m.exn != nil {
+		return
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -2770,6 +3147,9 @@ func (m *Instance) f64(d int, p0 *Struct1) *Struct0 {
 		rt.Exhausted()
 	}
 	m.f27(d+1, rt.ViewAs[Struct1](m.g110))
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -2779,10 +3159,18 @@ func (m *Instance) f65(d int, p0 *Struct1) *Struct2 {
 
 func (m *Instance) f66(d int, p0 *Struct2, p1 *Struct2) *Struct2 {
 	var s0, s1 any
+	var s0_1 *Struct2
 	s0 = p0.F2
 	s1 = p1.F2
 	s0 = m.f8(d+1, s0, s1)
-	return m.f35(d+1, s0)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	s0_1 = m.f35(d+1, s0)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) f67(d int, p0 *Struct0) *Struct2 {
@@ -2801,7 +3189,13 @@ func (m *Instance) f67(d int, p0 *Struct0) *Struct2 {
 	if l3 == nil {
 		s0_1 = l1.F2
 		s0_1 = m.f19(d+1, s0_1)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		s0 = m.f35(d+1, s0_1)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		l2 = s0
 		s0 = l1.F3
 		if s0 == nil {
@@ -2809,6 +3203,9 @@ func (m *Instance) f67(d int, p0 *Struct0) *Struct2 {
 			s0 = l2
 		} else {
 			m.f27(d+1, rt.ViewAs[Struct1](m.g114))
+			if m.exn != nil {
+				return (*Struct2)(nil)
+			}
 			panic(rt.ErrUnreachable)
 		}
 	} else {
@@ -2829,12 +3226,20 @@ func (m *Instance) f69(d int, p0 *Struct0) *Struct2 {
 		rt.Exhausted()
 	}
 	var s0 any
+	var s0_1 *Struct2
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct39) {
 		panic(rt.ErrCast)
 	}
 	s0 = rt.ViewAs[Struct39](p0).F3
 	s0 = m.f17(d+1, s0)
-	return m.f35(d+1, s0)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	s0_1 = m.f35(d+1, s0)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	return s0_1
 }
 
 func (m *Instance) f70(d int, p0 *Struct0) *Struct2 {
@@ -2847,11 +3252,11 @@ func (m *Instance) f70(d int, p0 *Struct0) *Struct2 {
 	var s0, s2_1 int32
 	var s2 *Struct4
 	var s4 int64
-	var s0_4 any
+	var s0_4, fn1, fn2, fn3 any
 	var s1, s0_5 *Struct0
-	var x4 *rt.Exception
+	var own1, own2, own3 bool
+	var x3 *rt.Exception
 	var s1_2 *Struct1
-	var c4 int
 	_ = s0_5
 	_ = s1_2
 	l1 = m.g84
@@ -2860,128 +3265,213 @@ func (m *Instance) f70(d int, p0 *Struct0) *Struct2 {
 	}
 	l3 = rt.ViewAs[Struct5](p0)
 	s0 = m.f73(d+1, rt.ViewAs[Struct1](l3))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	if s0 != 0 {
 		s0_1 = m.f46(d+1, m.g84, rt.ViewAs[Struct1](m.g115), m.g85)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		goto B1
 	}
 	s0_2 = m.f88(d + 1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	m.f74(d+1, s0_2, rt.ViewAs[Struct1](l3))
-	c4 = func() (c int) {
-		defer func() {
-			if r := recover(); r != nil {
-				e := rt.Unwrap(r, 4)
-				if e.Tag == m.tag1 {
-					x4 = e
-					c = -1
-					return
-				}
-				if e.Tag == m.tag0 {
-					x4 = e
-					c = -2
-					return
-				}
-				panic(r)
-			}
-		}()
-		s2 = l3.F4
-		s4 = l3.F2
-		l2 = NewStruct16(int32(91), int32(0), s2, l3, s4, int64(0), (*Struct0)(nil))
-		s0 = m.f84(d+1, rt.ViewAs[Struct1](l2))
-		if s0 != 0 {
-			s0_4 = m.g27.V
-			if rt.EfaceKey(s0_4) == m.jsCache.Key {
-				s0 = int32(len(m.jsCache.ASCII))
-			} else {
-				s0 = m.jsCache.LengthSlow(s0_4)
-			}
-			if int64(uint32(s0)) == 0 {
-			L7:
-				for {
-					s0_1 = l1
-					s1 = m.f85(d+1, rt.ViewAs[Struct1](l2))
-					if s1 == nil {
-						goto B9
-					}
-					p0 = s1
-					s2_1 = p0.F0
-					s1_1 = rt.FnOf(m.tab0.Get(uint64(uint32((s2_1+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, p0)
-					goto B8
-				B9:
-					s1_1 = m.g57
-				B8:
-					s0_1 = m.f66(d+1, s0_1, s1_1)
-					l1 = s0_1
-					s0 = m.f84(d+1, rt.ViewAs[Struct1](l2))
-					if s0 != 0 {
-						continue L7
-					}
-					break L7
-				}
-			} else {
-				s0_1 = m.g84
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	s2 = l3.F4
+	s4 = l3.F2
+	l2 = NewStruct16(int32(91), int32(0), s2, l3, s4, int64(0), (*Struct0)(nil))
+	s0 = m.f84(d+1, rt.ViewAs[Struct1](l2))
+	if m.exn != nil {
+		goto H3
+	}
+	if s0 != 0 {
+		s0_4 = m.g27.V
+		if rt.EfaceKey(s0_4) == m.jsCache.Key {
+			s0 = int32(len(m.jsCache.ASCII))
+		} else {
+			s0 = m.jsCache.LengthSlow(s0_4)
+		}
+		if int64(uint32(s0)) == 0 {
+		L6:
+			for {
+				s0_1 = l1
 				s1 = m.f85(d+1, rt.ViewAs[Struct1](l2))
+				if m.exn != nil {
+					goto H3
+				}
 				if s1 == nil {
-					goto B11
+					goto B8
 				}
 				p0 = s1
 				s2_1 = p0.F0
-				s1_1 = rt.FnOf(m.tab0.Get(uint64(uint32((s2_1+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, p0)
-				goto B10
-			B11:
-				s1_1 = m.g57
-			B10:
-				s0_1 = m.f66(d+1, s0_1, s1_1)
-				l1 = s0_1
-			L12:
-				for {
-					s0 = m.f84(d+1, rt.ViewAs[Struct1](l2))
-					if s0 != 0 {
-						s0_1 = m.f66(d+1, l1, m.g56)
-						s1 = m.f85(d+1, rt.ViewAs[Struct1](l2))
-						if s1 == nil {
-							goto B15
-						}
-						p0 = s1
-						s2_1 = p0.F0
-						s1_1 = rt.FnOf(m.tab0.Get(uint64(uint32((s2_1+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, p0)
-						goto B14
-					B15:
-						s1_1 = m.g57
-					B14:
-						s0_1 = m.f66(d+1, s0_1, s1_1)
-						l1 = s0_1
-						continue L12
-					}
-					break L12
+				fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2_1 + int32(266))))), rttFunc11, m, true)
+				if own1 {
+					s1_1 = fn1.(func(int, *Struct0) *Struct2)(d+1, p0)
+				} else {
+					s1_1 = m.guard0(fn1.(func(int, *Struct0) *Struct2), d+1, p0)
 				}
+				if m.exn != nil {
+					goto H3
+				}
+				goto B7
+			B8:
+				s1_1 = m.g57
+			B7:
+				s0_1 = m.f66(d+1, s0_1, s1_1)
+				if m.exn != nil {
+					goto H3
+				}
+				l1 = s0_1
+				s0 = m.f84(d+1, rt.ViewAs[Struct1](l2))
+				if m.exn != nil {
+					goto H3
+				}
+				if s0 != 0 {
+					continue L6
+				}
+				break L6
 			}
-			s0_1 = l1
 		} else {
 			s0_1 = m.g84
+			s1 = m.f85(d+1, rt.ViewAs[Struct1](l2))
+			if m.exn != nil {
+				goto H3
+			}
+			if s1 == nil {
+				goto B10
+			}
+			p0 = s1
+			s2_1 = p0.F0
+			fn2, own2 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2_1 + int32(266))))), rttFunc11, m, true)
+			if own2 {
+				s1_1 = fn2.(func(int, *Struct0) *Struct2)(d+1, p0)
+			} else {
+				s1_1 = m.guard0(fn2.(func(int, *Struct0) *Struct2), d+1, p0)
+			}
+			if m.exn != nil {
+				goto H3
+			}
+			goto B9
+		B10:
+			s1_1 = m.g57
+		B9:
+			s0_1 = m.f66(d+1, s0_1, s1_1)
+			if m.exn != nil {
+				goto H3
+			}
+			l1 = s0_1
+		L11:
+			for {
+				s0 = m.f84(d+1, rt.ViewAs[Struct1](l2))
+				if m.exn != nil {
+					goto H3
+				}
+				if s0 != 0 {
+					s0_1 = m.f66(d+1, l1, m.g56)
+					if m.exn != nil {
+						goto H3
+					}
+					s1 = m.f85(d+1, rt.ViewAs[Struct1](l2))
+					if m.exn != nil {
+						goto H3
+					}
+					if s1 == nil {
+						goto B14
+					}
+					p0 = s1
+					s2_1 = p0.F0
+					fn3, own3 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2_1 + int32(266))))), rttFunc11, m, true)
+					if own3 {
+						s1_1 = fn3.(func(int, *Struct0) *Struct2)(d+1, p0)
+					} else {
+						s1_1 = m.guard0(fn3.(func(int, *Struct0) *Struct2), d+1, p0)
+					}
+					if m.exn != nil {
+						goto H3
+					}
+					goto B13
+				B14:
+					s1_1 = m.g57
+				B13:
+					s0_1 = m.f66(d+1, s0_1, s1_1)
+					if m.exn != nil {
+						goto H3
+					}
+					l1 = s0_1
+					continue L11
+				}
+				break L11
+			}
 		}
-		l4 = s0_1
-		return 0
-	}()
-	switch c4 {
-	case -1:
-		s0_5 = x4.Values[0].(*Struct0)
-		s1_2 = x4.Values[1].(*Struct1)
-		s0_2 = m.f88(d + 1)
-		m.f75(d+1, s0_2)
-		panic(x4)
-	case -2:
-		s0_4 = x4.Values[0].(any)
-		s0_2 = m.f88(d + 1)
-		m.f75(d+1, s0_2)
-		panic(x4)
+		s0_1 = l1
+	} else {
+		s0_1 = m.g84
 	}
+	l4 = s0_1
+	goto B3
+C3_1:
+	s0_5 = x3.Values[0].(*Struct0)
+	s1_2 = x3.Values[1].(*Struct1)
 	s0_2 = m.f88(d + 1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	m.f75(d+1, s0_2)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	m.exn = x3
+	return (*Struct2)(nil)
+C3_2:
+	s0_4 = x3.Values[0].(any)
+	s0_2 = m.f88(d + 1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	m.f75(d+1, s0_2)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	m.exn = x3
+	return (*Struct2)(nil)
+H3:
+	if m.exn.Tag == m.tag1 {
+		x3 = m.exn
+		m.exn = nil
+		goto C3_1
+	}
+	if m.exn.Tag == m.tag0 {
+		x3 = m.exn
+		m.exn = nil
+		goto C3_2
+	}
+	return (*Struct2)(nil)
+B3:
+	s0_2 = m.f88(d + 1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	m.f75(d+1, s0_2)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0 = m.f29(d+1, rt.ViewAs[Struct0](m.g85))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	if l4 == nil {
 		panic(rt.ErrNullRef)
 	}
 	s0_1 = m.f66(d+1, l4, m.g85)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 B1:
 	return s0_1
 }
@@ -3002,6 +3492,9 @@ func (m *Instance) f72(d int, p0 *Struct4, p1 int64, p2 int64) *Struct5 {
 	var s3 *Array3
 	if (rt.B2I(p2 <= int64(2147483647)) & rt.B2I(p2 >= int64(0))) == 0 {
 		m.f37(d + 1)
+		if m.exn != nil {
+			return (*Struct5)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	s3 = NewArray3(rt.MakeSlice(int32(p2), (*Struct0)(nil)))
@@ -3013,11 +3506,15 @@ func (m *Instance) f73(d int, p0 *Struct1) int32 {
 		rt.Exhausted()
 	}
 	var l1, s1 int64
-	var l2 *Struct5
+	var l2, s0 *Struct5
 	var s0_1 int32
 	var s1_1 *Array3
 	var s1_2 *Struct0
-	l2 = m.f88(d + 1)
+	s0 = m.f88(d + 1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	l2 = s0
 L1:
 	for {
 		s1 = l2.F2
@@ -3027,11 +3524,17 @@ L1:
 			s0_1 = rt.B2I(uint64(l1) >= uint64(s1))
 			if s0_1 != 0 {
 				m.f63(d + 1)
+				if m.exn != nil {
+					return int32(0)
+				}
 				panic(rt.ErrUnreachable)
 			}
 			s1_1 = l2.F3
 			s1_2 = s1_1.Elems[uint32(int32(l1))]
 			s0_1 = m.f89(d+1, rt.ViewAs[Struct0](p0), s1_2)
+			if m.exn != nil {
+				return int32(0)
+			}
 			if s0_1 != 0 {
 				return int32(1)
 			} else {
@@ -3050,8 +3553,14 @@ func (m *Instance) f74(d int, p0 *Struct5, p1 *Struct1) {
 	s0 = p0.F2
 	l2 = s0
 	s0 = m.f77(d+1, p0)
+	if m.exn != nil {
+		return
+	}
 	if s0 == l2 {
 		s0 = m.f77(d+1, p0)
+		if m.exn != nil {
+			return
+		}
 		s0_1 = NewArray3(rt.MakeSlice(int32(((s0 << (uint64(1) & 63)) | int64(3))), (*Struct0)(nil)))
 		l3 = s0_1
 		s2 = p0.F3
@@ -3078,11 +3587,17 @@ func (m *Instance) f75(d int, p0 *Struct5) {
 	s0_1 = rt.B2I(uint64(l1) >= uint64(s1))
 	if s0_1 != 0 {
 		m.f63(d + 1)
+		if m.exn != nil {
+			return
+		}
 		panic(rt.ErrUnreachable)
 	}
 	s0 = p0.F2
 	if s0 < l1 {
 		m.f76(d + 1)
+		if m.exn != nil {
+			return
+		}
 		panic(rt.ErrUnreachable)
 	}
 	s1 = p0.F2
@@ -3104,6 +3619,9 @@ func (m *Instance) f75(d int, p0 *Struct5) {
 		}
 		if uint64(l1) > uint64(2147483647) {
 			m.f37(d + 1)
+			if m.exn != nil {
+				return
+			}
 			panic(rt.ErrUnreachable)
 		}
 		s0_2 = NewArray3(rt.MakeSlice(int32(l1), (*Struct0)(nil)))
@@ -3126,6 +3644,9 @@ func (m *Instance) f76(d int) {
 		rt.Exhausted()
 	}
 	m.f27(d+1, rt.ViewAs[Struct1](m.g116))
+	if m.exn != nil {
+		return
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -3141,13 +3662,23 @@ func (m *Instance) f78(d int) {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var l0 *Struct15
+	var l0, s2_1 *Struct15
 	var s2 any
 	var s0 *Struct23
 	s2 = m.f13(d + 1)
-	l0 = m.f68(d+1, s2)
+	if m.exn != nil {
+		return
+	}
+	s2_1 = m.f68(d+1, s2)
+	if m.exn != nil {
+		return
+	}
+	l0 = s2_1
 	s0 = NewStruct23(int32(59), int32(0), l0)
 	m.f81(d+1, rt.ViewAs[Struct1](s0), l0)
+	if m.exn != nil {
+		return
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -3156,11 +3687,19 @@ func (m *Instance) f79(d int, p0 *Struct0) *Struct2 {
 		rt.Exhausted()
 	}
 	var s1 *Struct4
+	var s0 *Struct2
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct30) {
 		panic(rt.ErrCast)
 	}
 	s1 = m.f58(d+1, rt.ViewAs[Struct0](rt.ViewAs[Struct30](p0)))
-	return m.f36(d+1, m.g118, rt.ViewAs[Struct0](s1))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	s0 = m.f36(d+1, m.g118, rt.ViewAs[Struct0](s1))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) f80(d int, p0 *Struct0) *Struct2 {
@@ -3173,6 +3712,8 @@ func (m *Instance) f80(d int, p0 *Struct0) *Struct2 {
 	var l4, s1_2 *Struct10
 	var l5 int64
 	var s1, s0_1, s2 int32
+	var fn1 any
+	var own1 bool
 	_ = s1
 	_ = s0_1
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct29) {
@@ -3180,26 +3721,58 @@ func (m *Instance) f80(d int, p0 *Struct0) *Struct2 {
 	}
 	l3 = rt.ViewAs[Struct29](p0)
 	s1 = m.f29(d+1, rt.ViewAs[Struct0](m.g86))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0 = m.f66(d+1, m.g55, m.g86)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	l1 = s0
 L1:
 	for {
 		if l5 < int64(0) {
 			if l5 > int64(0) {
 				s0_1 = m.f29(d+1, rt.ViewAs[Struct0](m.g56))
+				if m.exn != nil {
+					return (*Struct2)(nil)
+				}
 				s0 = m.f66(d+1, l1, m.g56)
+				if m.exn != nil {
+					return (*Struct2)(nil)
+				}
 				l1 = s0
 			}
 			if l5 == 0 {
 				s0_1 = m.f29(d+1, rt.ViewAs[Struct0](m.g84))
+				if m.exn != nil {
+					return (*Struct2)(nil)
+				}
 				s0 = m.f66(d+1, l1, m.g84)
+				if m.exn != nil {
+					return (*Struct2)(nil)
+				}
 				l1 = s0
 			}
 			l2 = m.g54.Elems[uint32(int32(l5))]
 			s0_1 = m.f29(d+1, rt.ViewAs[Struct0](l2))
+			if m.exn != nil {
+				return (*Struct2)(nil)
+			}
 			s2 = l2.F0
-			s1_1 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, rt.ViewAs[Struct0](l2))
+			fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(266))))), rttFunc11, m, true)
+			if own1 {
+				s1_1 = fn1.(func(int, *Struct0) *Struct2)(d+1, rt.ViewAs[Struct0](l2))
+			} else {
+				s1_1 = m.guard0(fn1.(func(int, *Struct0) *Struct2), d+1, rt.ViewAs[Struct0](l2))
+			}
+			if m.exn != nil {
+				return (*Struct2)(nil)
+			}
 			s0 = m.f66(d+1, l1, s1_1)
+			if m.exn != nil {
+				return (*Struct2)(nil)
+			}
 			l1 = s0
 			l5 = (l5 + int64(1))
 			continue L1
@@ -3207,9 +3780,21 @@ L1:
 		break L1
 	}
 	s0_1 = m.f29(d+1, rt.ViewAs[Struct0](m.g66))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0 = m.f66(d+1, l1, m.g66)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s1 = m.f29(d+1, rt.ViewAs[Struct0](m.g117))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0 = m.f66(d+1, s0, m.g117)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	if l3 == m.g62 {
 		s1_2 = m.g61
 	} else {
@@ -3217,8 +3802,17 @@ L1:
 	}
 	l4 = s1_2
 	s1 = m.f29(d+1, rt.ViewAs[Struct0](l4))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s1_1 = m.f31(d+1, rt.ViewAs[Struct0](l4))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	s0 = m.f66(d+1, s0, s1_1)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	return s0
 }
 
@@ -3237,7 +3831,8 @@ func (m *Instance) f81(d int, p0 *Struct1, p1 *Struct15) {
 	}
 	s0 = rt.ViewAs[Struct1](l2)
 B1:
-	panic(&rt.Exception{Tag: m.tag1, Values: []any{rt.ViewAs[Struct0](s0), rt.ViewAs[Struct1](p1)}})
+	m.exn = &rt.Exception{Tag: m.tag1, Values: []any{rt.ViewAs[Struct0](s0), rt.ViewAs[Struct1](p1)}}
+	return
 }
 
 func (m *Instance) f82(d int, p0 *Struct0) *Struct2 {
@@ -3275,7 +3870,13 @@ func (m *Instance) f84(d int, p0 *Struct1) int32 {
 	if s0_2 != 0 {
 		s0 = l1.F3
 		s0_3 = m.f87(d+1, rt.ViewAs[Struct1](s0))
+		if m.exn != nil {
+			return int32(0)
+		}
 		m.f27(d+1, rt.ViewAs[Struct1](s0_3))
+		if m.exn != nil {
+			return int32(0)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	s0_1 = l1.F5
@@ -3306,6 +3907,9 @@ func (m *Instance) f85(d int, p0 *Struct1) *Struct0 {
 	l1 = rt.ViewAs[Struct16](p0).F6
 	if l1 == nil {
 		m.f76(d + 1)
+		if m.exn != nil {
+			return (*Struct0)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	return l1
@@ -3316,13 +3920,20 @@ func (m *Instance) f86(d int, p0 *Struct0) *Struct2 {
 		rt.Exhausted()
 	}
 	var s1 *Struct1
-	var s1_1 *Struct2
+	var s1_1, s0 *Struct2
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct41) {
 		panic(rt.ErrCast)
 	}
 	s1 = rt.ViewAs[Struct41](p0).F3
 	s1_1 = m.f55(d+1, rt.ViewAs[Struct0](s1))
-	return m.f46(d+1, m.g120, rt.ViewAs[Struct1](s1_1), m.g121)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	s0 = m.f46(d+1, m.g120, rt.ViewAs[Struct1](s1_1), m.g121)
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
+	return s0
 }
 
 func (m *Instance) f87(d int, p0 *Struct1) *Struct41 {
@@ -3339,6 +3950,9 @@ func (m *Instance) f88(d int) *Struct5 {
 		goto B1
 	}
 	s0 = m.f72(d+1, rt.ViewAs[Struct4](m.g60), int64(0), int64(0))
+	if m.exn != nil {
+		return (*Struct5)(nil)
+	}
 	m.g76 = s0
 	s0 = m.g76
 	if s0 == nil {
@@ -3405,6 +4019,9 @@ func (m *Instance) f90(d int, p0 any) *Struct0 {
 	var s0_2 *Struct7
 	var s0_3 *Struct40
 	s0 = m.f147(d+1, int64(16))
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
 	l5 = s0
 	l2 = int64(4)
 L1:
@@ -3418,7 +4035,13 @@ L1:
 			if l1 < int64(0) {
 				s0_2 = NewStruct7(int32(84), l1)
 				s0_3 = m.f44(d+1, s0_2)
+				if m.exn != nil {
+					return (*Struct0)(nil)
+				}
 				m.f27(d+1, rt.ViewAs[Struct1](s0_3))
+				if m.exn != nil {
+					return (*Struct0)(nil)
+				}
 				panic(rt.ErrUnreachable)
 			}
 			s0_1 = int64(0)
@@ -3429,7 +4052,13 @@ L1:
 			for {
 				if l1 < l4 {
 					s0 = m.f147(d+1, l2)
+					if m.exn != nil {
+						return (*Struct0)(nil)
+					}
 					s0_1 = m.f148(d+1, s0)
+					if m.exn != nil {
+						return (*Struct0)(nil)
+					}
 					l3 = (s0_1 + l3)
 					l1 = (l1 + int64(1))
 					continue L6
@@ -3442,6 +4071,9 @@ L1:
 		break L1
 	}
 	s1 = m.f148(d+1, l5)
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
 	s0_2 = NewStruct7(int32(84), (s1 + l3))
 	return rt.ViewAs[Struct0](s0_2)
 }
@@ -3455,24 +4087,46 @@ func (m *Instance) f91(d int, p0 *Struct2, p1 *Struct30) {
 	var l5 *Array3
 	var s1 *Struct19
 	var s1_1 *rt.Func
+	var fn1, fn2 any
+	var own1, own2 bool
 	var s4 *Struct7
 	var s4_1, s3_1 float64
 	var s2 *Struct12
 	var s0_3, s2_1 int32
 	var s0_4, s1_3 *Struct2
 	s0 = m.f96(d + 1)
+	if m.exn != nil {
+		return
+	}
 	s0 = m.f99(d + 1)
+	if m.exn != nil {
+		return
+	}
 	l2 = s0
 	s1 = p1.F2
 	s1_1 = s1.F0
-	s0_1 = rt.FnOfRef(s1_1, rttFunc18).(func(int, any) *Struct0)(d+1, rt.AnyOf(m.g58))
+	fn1, own1 = rt.FnOwn(s1_1, rttFunc18, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, any) *Struct0)(d+1, rt.AnyOf(m.g58))
+	} else {
+		s0_1 = m.guard5(fn1.(func(int, any) *Struct0), d+1, rt.AnyOf(m.g58))
+	}
+	if m.exn != nil {
+		return
+	}
 	if s0_1 == nil {
 		panic(rt.ErrNullRef)
 	}
 	l4 = s0_1
 	s3 = m.f99(d + 1)
+	if m.exn != nil {
+		return
+	}
 	l2 = (s3 - l2)
 	s5 = m.f96(d + 1)
+	if m.exn != nil {
+		return
+	}
 	if s5 == int64(1000000) {
 		s3 = l2
 	} else {
@@ -3480,6 +4134,9 @@ func (m *Instance) f91(d int, p0 *Struct2, p1 *Struct30) {
 	}
 	s4 = NewStruct7(int32(84), int64(1000))
 	s4_1 = m.f42(d+1, s4)
+	if m.exn != nil {
+		return
+	}
 	s3_1 = float64(float64(s3) / s4_1)
 	s2 = NewStruct12(int32(85), s3_1)
 	l5 = NewArray3([]*Struct0{rt.ViewAs[Struct0](p0), rt.ViewAs[Struct0](m.g75), rt.ViewAs[Struct0](s2), rt.ViewAs[Struct0](m.g132), l4})
@@ -3496,12 +4153,23 @@ L1:
 			}
 			l4 = s1_2
 			s2_1 = l4.F0
-			s1_3 = rt.FnOf(m.tab0.Get(uint64(uint32((s2_1+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, l4)
+			fn2, own2 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2_1 + int32(266))))), rttFunc11, m, true)
+			if own2 {
+				s1_3 = fn2.(func(int, *Struct0) *Struct2)(d+1, l4)
+			} else {
+				s1_3 = m.guard0(fn2.(func(int, *Struct0) *Struct2), d+1, l4)
+			}
+			if m.exn != nil {
+				return
+			}
 			goto B3
 		B4:
 			s1_3 = m.g57
 		B3:
 			s0_4 = m.f66(d+1, s0_4, s1_3)
+			if m.exn != nil {
+				return
+			}
 			p0 = s0_4
 			l3 = (l3 + int64(1))
 			continue L1
@@ -3509,6 +4177,9 @@ L1:
 		break L1
 	}
 	m.f28(d+1, rt.ViewAs[Struct0](p0))
+	if m.exn != nil {
+		return
+	}
 	return
 }
 
@@ -3526,10 +4197,25 @@ func (m *Instance) f92(d int, p0 any) *Struct0 {
 	var s0_5 *Struct41
 	var s0_7 *Struct12
 	s2 = m.f146(d+1, float64(0), float64(0), float64(0), float64(0), float64(0), float64(0), float64(39.47))
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
 	s3 = m.f146(d+1, float64(4.84), float64(-1.16), float64(-0.1), float64(0.606), float64(2.81), float64(-0.02), float64(0.037))
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
 	s4 = m.f146(d+1, float64(8.34), float64(4.12), float64(-0.4), float64(-1.01), float64(1.82), float64(0.008), float64(0.011))
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
 	s5 = m.f146(d+1, float64(12.89), float64(-15.11), float64(-0.22), float64(1.08), float64(0.868), float64(-0.01), float64(0.0017))
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
 	s6 = m.f146(d+1, float64(15.37), float64(-25.9), float64(0.179), float64(0.979), float64(0.594), float64(-0.034), float64(0.002))
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
 	s2_1 = NewArray3([]*Struct0{rt.ViewAs[Struct0](s2), rt.ViewAs[Struct0](s3), rt.ViewAs[Struct0](s4), rt.ViewAs[Struct0](s5), rt.ViewAs[Struct0](s6)})
 	l5 = s2_1
 	s2_2 = int32(len(l5.Elems))
@@ -3546,6 +4232,9 @@ L1:
 					s0_2 = l3.F2
 					if uint64(s0_2) <= uint64(l7) {
 						m.f63(d + 1)
+						if m.exn != nil {
+							return (*Struct0)(nil)
+						}
 						panic(rt.ErrUnreachable)
 					}
 					s0_3 = l3.F3
@@ -3564,6 +4253,9 @@ L1:
 							s0_1 = rt.B2I(uint64(l6) >= uint64(s1))
 							if s0_1 != 0 {
 								m.f63(d + 1)
+								if m.exn != nil {
+									return (*Struct0)(nil)
+								}
 								panic(rt.ErrUnreachable)
 							}
 							s1_1 = l1.F2
@@ -3635,7 +4327,13 @@ L1:
 				s0_1 = rt.B2I(l7 != s1)
 				if s0_1 != 0 {
 					s0_5 = m.f87(d+1, rt.ViewAs[Struct1](l3))
+					if m.exn != nil {
+						return (*Struct0)(nil)
+					}
 					m.f27(d+1, rt.ViewAs[Struct1](s0_5))
+					if m.exn != nil {
+						return (*Struct0)(nil)
+					}
 					panic(rt.ErrUnreachable)
 				}
 				if l6 >= l7 {
@@ -3652,6 +4350,9 @@ L1:
 				if s0_1 != 0 {
 					if l4 == nil {
 						m.f76(d + 1)
+						if m.exn != nil {
+							return (*Struct0)(nil)
+						}
 						panic(rt.ErrUnreachable)
 					} else {
 						if !(l4 != nil && rt.ObjRTT(l4) == rttStruct6) {
@@ -3690,7 +4391,13 @@ L15:
 		s0_1 = rt.B2I(l7 != s1)
 		if s0_1 != 0 {
 			s0_5 = m.f87(d+1, rt.ViewAs[Struct1](l3))
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			m.f27(d+1, rt.ViewAs[Struct1](s0_5))
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			panic(rt.ErrUnreachable)
 		}
 		if l6 >= l7 {
@@ -3707,6 +4414,9 @@ L15:
 		if s0_1 != 0 {
 			if l4 == nil {
 				m.f76(d + 1)
+				if m.exn != nil {
+					return (*Struct0)(nil)
+				}
 				panic(rt.ErrUnreachable)
 			} else {
 				if !(l4 != nil && rt.ObjRTT(l4) == rttStruct6) {
@@ -3734,15 +4444,21 @@ func (m *Instance) f93(d int, p0 any) *Struct0 {
 	}
 	var l1, l2, l3, s1, s2 int64
 	var l4, s1_2 float64
-	var l5 *Struct5
+	var l5, s0 *Struct5
 	var l6 *Struct0
 	var l7 *Struct1
 	var s0_1, s1_1, s2_2 int32
 	var s0_2 *Array3
 	var s2_1 *Struct24
 	var s0_4 *Struct41
+	var fn1 any
+	var own1 bool
 	var s0_7 *Struct12
-	l5 = m.f72(d+1, rt.ViewAs[Struct4](m.g143), int64(1000), int64(1000))
+	s0 = m.f72(d+1, rt.ViewAs[Struct4](m.g143), int64(1000), int64(1000))
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
+	l5 = s0
 L1:
 	for {
 		s1 = l5.F2
@@ -3750,11 +4466,17 @@ L1:
 		if s0_1 != 0 {
 			s0_2 = l5.F3
 			s2 = m.f101(d+1, l1, int64(3))
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			s1_1 = int32(l1)
 			if s2 == 0 {
 				s2_1 = NewStruct24(int32(126), int32(0), float64(l1))
 			} else {
 				s2 = m.f101(d+1, l1, int64(3))
+				if m.exn != nil {
+					return (*Struct0)(nil)
+				}
 				if s2 == int64(1) {
 					s2_1 = NewStruct24(int32(125), int32(0), float64(l1))
 				} else {
@@ -3778,7 +4500,13 @@ L5:
 				s0_1 = rt.B2I(l3 != s1)
 				if s0_1 != 0 {
 					s0_4 = m.f87(d+1, rt.ViewAs[Struct1](l5))
+					if m.exn != nil {
+						return (*Struct0)(nil)
+					}
 					m.f27(d+1, rt.ViewAs[Struct1](s0_4))
+					if m.exn != nil {
+						return (*Struct0)(nil)
+					}
 					panic(rt.ErrUnreachable)
 				}
 				if l1 >= l3 {
@@ -3794,6 +4522,9 @@ L5:
 				if s0_1 != 0 {
 					if l6 == nil {
 						m.f76(d + 1)
+						if m.exn != nil {
+							return (*Struct0)(nil)
+						}
 						panic(rt.ErrUnreachable)
 					}
 					if !(l6 != nil && rt.ObjRTT(l6).SubOf(rttStruct1)) {
@@ -3801,7 +4532,15 @@ L5:
 					}
 					l7 = rt.ViewAs[Struct1](l6)
 					s2_2 = l7.F0
-					s1_2 = rt.FnOf(m.tab0.Get(uint64(uint32((s2_2+int32(474))))), rttFunc46).(func(int, *Struct1) float64)(d+1, l7)
+					fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2_2 + int32(474))))), rttFunc46, m, true)
+					if own1 {
+						s1_2 = fn1.(func(int, *Struct1) float64)(d+1, l7)
+					} else {
+						s1_2 = m.guard6(fn1.(func(int, *Struct1) float64), d+1, l7)
+					}
+					if m.exn != nil {
+						return (*Struct0)(nil)
+					}
 					l4 = float64(l4 + s1_2)
 					continue L7
 				}
@@ -3839,8 +4578,14 @@ L1:
 	for {
 		if l3 < int64(2000000) {
 			s3 = m.f101(d+1, l3, int64(1000))
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			s2 = NewStruct7(int32(84), s3)
 			s1 = m.f36(d+1, m.g135, rt.ViewAs[Struct0](s2))
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			l8 = s1
 			s0 = l7
 			s1 = l8
@@ -3850,11 +4595,20 @@ L1:
 			l4 = (l2 - int64(1))
 			l5 = int64(uint64(l2) >> (uint64(1) & 63))
 			s4_2 = m.f104(d+1, rt.ViewAs[Struct0](l8))
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			l1 = s4_2
 			s5 = l7.F3
 			s4_2 = m.f106(d+1, l1, s5, l2)
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			l6 = s4_2
 			s4_2 = m.f108(d+1, l1, l4)
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			l2 = s4_2
 			s4 = l7.F2
 			s4_1 = s4.Elems[uint32(int32(l2))]
@@ -3869,6 +4623,9 @@ L1:
 							l1 = (l1 << (uint64(1) & 63))
 							s5_2 = s5_1.Elems[uint32(int32(l1))]
 							s4_1 = m.f109(d+1, rt.ViewAs[Struct0](l8), s5_2)
+							if m.exn != nil {
+								return (*Struct0)(nil)
+							}
 							if s4_1 != 0 {
 								s4_3 = l7.F4
 								s4_4 = s4_3.Elems[uint32(int32((l1 + int64(1))))]
@@ -3877,6 +4634,9 @@ L1:
 						}
 					}
 					s4_2 = m.f110(d+1, l2, l4)
+					if m.exn != nil {
+						return (*Struct0)(nil)
+					}
 					l2 = s4_2
 					s4 = l7.F2
 					s4_1 = s4.Elems[uint32(int32(l2))]
@@ -3890,6 +4650,9 @@ L1:
 			l10 = s4_4
 			s5_2 = m.g64
 			s5_3 = m.f89(d+1, s5_2, l10)
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			if s5_3 != 0 {
 				s3_1 = (*Struct0)(nil)
 			} else {
@@ -3906,7 +4669,13 @@ L1:
 			}
 			s2 = NewStruct7(int32(84), (s3 + l3))
 			s3 = m.f104(d+1, rt.ViewAs[Struct0](l8))
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			m.f105(d+1, s0, rt.ViewAs[Struct0](s1), rt.ViewAs[Struct0](s2), s3)
+			if m.exn != nil {
+				return (*Struct0)(nil)
+			}
 			l3 = (l3 + int64(1))
 			continue L1
 		}
@@ -3916,6 +4685,9 @@ L1:
 	l9.F0 = l12
 	s1_2 = NewStruct95(rt.AnyOf(l9), m.g90)
 	m.f102(d+1, l7, rt.ViewAs[Struct36](s1_2))
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
 	s1 = l12.F0
 	s1_3 = s1.F2
 	if rt.EfaceKey(s1_3) == m.jsCache.Key {
@@ -3933,6 +4705,9 @@ func (m *Instance) f95(d int, p0 any) *Struct0 {
 	var s1 int64
 	var s0 *Struct7
 	s1 = m.f100(d+1, int64(32))
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
 	s0 = NewStruct7(int32(84), s1)
 	return rt.ViewAs[Struct0](s0)
 }
@@ -3947,6 +4722,9 @@ func (m *Instance) f96(d int) int64 {
 	s0 = m.g88
 	if s0 == 0 {
 		s0 = m.f14(d + 1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		if s0 != 0 {
 			s0_1 = int64(1000)
 		} else {
@@ -3965,13 +4743,23 @@ func (m *Instance) f97(d int, p0 any) *Struct0 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var l1 float64
+	var l1, s0 float64
 	var s0_1 *Struct23
 	var s0_2 *Struct7
-	l1 = m.f15(d + 1)
+	s0 = m.f15(d + 1)
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
+	l1 = s0
 	if (int64(math.Float64bits(l1)) & int64(9218868437227405312)) == int64(9218868437227405312) {
 		s0_1 = m.f39(d + 1)
+		if m.exn != nil {
+			return (*Struct0)(nil)
+		}
 		m.f27(d+1, rt.ViewAs[Struct1](s0_1))
+		if m.exn != nil {
+			return (*Struct0)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	s0_2 = NewStruct7(int32(84), rt.I64TruncSatF64S(l1))
@@ -3982,13 +4770,23 @@ func (m *Instance) f98(d int, p0 any) *Struct0 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var l1 float64
+	var l1, s0 float64
 	var s0_1 *Struct23
 	var s0_2 *Struct7
-	l1 = m.f16(d + 1)
+	s0 = m.f16(d + 1)
+	if m.exn != nil {
+		return (*Struct0)(nil)
+	}
+	l1 = s0
 	if (int64(math.Float64bits(l1)) & int64(9218868437227405312)) == int64(9218868437227405312) {
 		s0_1 = m.f39(d + 1)
+		if m.exn != nil {
+			return (*Struct0)(nil)
+		}
 		m.f27(d+1, rt.ViewAs[Struct1](s0_1))
+		if m.exn != nil {
+			return (*Struct0)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	s0_2 = NewStruct7(int32(84), rt.I64TruncSatF64S(l1))
@@ -4003,6 +4801,8 @@ func (m *Instance) f99(d int) int64 {
 	var s1 *Struct30
 	var s1_1 *Struct19
 	var s1_2 *rt.Func
+	var fn1 any
+	var own1 bool
 	var s0_1 *Struct0
 	s0 = m.g58
 	s1 = m.g63
@@ -4018,7 +4818,15 @@ func (m *Instance) f99(d int) int64 {
 B1:
 	s1_1 = s1.F2
 	s1_2 = s1_1.F0
-	s0_1 = rt.FnOfRef(s1_2, rttFunc18).(func(int, any) *Struct0)(d+1, rt.AnyOf(s0))
+	fn1, own1 = rt.FnOwn(s1_2, rttFunc18, m, false)
+	if own1 {
+		s0_1 = fn1.(func(int, any) *Struct0)(d+1, rt.AnyOf(s0))
+	} else {
+		s0_1 = m.guard5(fn1.(func(int, any) *Struct0), d+1, rt.AnyOf(s0))
+	}
+	if m.exn != nil {
+		return int64(0)
+	}
 	if !(s0_1 != nil && rt.ObjRTT(s0_1) == rttStruct7) {
 		panic(rt.ErrCast)
 	}
@@ -4034,7 +4842,13 @@ func (m *Instance) f100(d int, p0 int64) int64 {
 		s0 = p0
 	} else {
 		s0 = m.f100(d+1, (p0 - int64(1)))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s1 = m.f100(d+1, (p0 - int64(2)))
+		if m.exn != nil {
+			return int64(0)
+		}
 		s0 = (s0 + s1)
 	}
 	return s0
@@ -4051,6 +4865,9 @@ func (m *Instance) f101(d int, p0 int64, p1 int64) int64 {
 		if p1 == 0 {
 			s1 = NewStruct1(int32(62), int32(0))
 			m.f27(d+1, s1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			panic(rt.ErrUnreachable)
 		}
 		s1_1 = rt.I64DivS(p0, p1)
@@ -4079,10 +4896,11 @@ func (m *Instance) f102(d int, p0 *Struct14, p1 *Struct36) {
 	var l4 *Struct26
 	var l5, l6, l8, s0_2 *Struct0
 	var l7, s1_3 *Array3
-	var l9 any
+	var l9, fn1, fn2 any
 	var l10, l11, l12, s0_1, s1_2 int64
 	var s0_3, s1_1 int32
 	var s0_5 *Struct27
+	var own1, own2 bool
 	var s0_8 *Struct41
 	l7 = p0.F4
 	s0_1 = p0.F5
@@ -4095,6 +4913,9 @@ L1:
 			s0_2 = l7.Elems[uint32(int32(l10))]
 			l5 = s0_2
 			s0_3 = m.f103(d+1, l5)
+			if m.exn != nil {
+				return
+			}
 			if s0_3 == 0 {
 				l9 = p1.F0
 				s0_2 = l7.Elems[uint32(int32((l10 + int64(1))))]
@@ -4110,6 +4931,9 @@ L1:
 					}
 					s0_1 = rt.ViewAs[Struct7](l6).F1
 					s0_1 = m.f101(d+1, s0_1, int64(7))
+					if m.exn != nil {
+						return
+					}
 					if s0_1 == 0 {
 						if !(rt.IsType(l9, rttStruct35)) {
 							panic(rt.ErrCast)
@@ -4120,8 +4944,14 @@ L1:
 						}
 						l2 = s0_6
 						s0_3 = m.f29(d+1, rt.ViewAs[Struct0](l3))
+						if m.exn != nil {
+							return
+						}
 						s1 = l2.F0
 						s1 = m.f66(d+1, s1, l3)
+						if m.exn != nil {
+							return
+						}
 						l2.F0 = s1
 					}
 				} else {
@@ -4134,20 +4964,32 @@ L1:
 						s0_6 = l4.F0
 						l2 = s0_6
 						s0_3 = m.f29(d+1, rt.ViewAs[Struct0](m.g56))
+						if m.exn != nil {
+							return
+						}
 						s1 = l2.F0
 						s1 = m.f66(d+1, s1, m.g56)
+						if m.exn != nil {
+							return
+						}
 						l2.F0 = s1
 					}
 					l4.F1 = int32(0)
 					s0_6 = l4.F0
 					l2 = s0_6
 					s0_3 = m.f29(d+1, l5)
+					if m.exn != nil {
+						return
+					}
 					if s0_3 != 0 {
 						s1 = l2.F0
 						if !(l5 != nil && rt.ObjRTT(l5) == rttStruct2) {
 							panic(rt.ErrCast)
 						}
 						s1 = m.f66(d+1, s1, rt.ViewAs[Struct2](l5))
+						if m.exn != nil {
+							return
+						}
 						l2.F0 = s1
 					} else {
 						if l5 == nil {
@@ -4155,7 +4997,15 @@ L1:
 						}
 						l8 = l5
 						s1_1 = l8.F0
-						s0_7 = rt.FnOf(m.tab0.Get(uint64(uint32((s1_1+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, l8)
+						fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1_1 + int32(266))))), rttFunc11, m, true)
+						if own1 {
+							s0_7 = fn1.(func(int, *Struct0) *Struct2)(d+1, l8)
+						} else {
+							s0_7 = m.guard0(fn1.(func(int, *Struct0) *Struct2), d+1, l8)
+						}
+						if m.exn != nil {
+							return
+						}
 						goto B8
 					B9:
 						s0_7 = m.g57
@@ -4163,23 +5013,38 @@ L1:
 						l3 = s0_7
 						s1 = l2.F0
 						s1 = m.f66(d+1, s1, l3)
+						if m.exn != nil {
+							return
+						}
 						l2.F0 = s1
 					}
 					s0_6 = l4.F0
 					l2 = s0_6
 					s0_3 = m.f29(d+1, rt.ViewAs[Struct0](m.g67))
+					if m.exn != nil {
+						return
+					}
 					s1 = l2.F0
 					s1 = m.f66(d+1, s1, m.g67)
+					if m.exn != nil {
+						return
+					}
 					l2.F0 = s1
 					s0_6 = l4.F0
 					l2 = s0_6
 					s0_3 = m.f29(d+1, l6)
+					if m.exn != nil {
+						return
+					}
 					if s0_3 != 0 {
 						s1 = l2.F0
 						if !(l6 != nil && rt.ObjRTT(l6) == rttStruct2) {
 							panic(rt.ErrCast)
 						}
 						s1 = m.f66(d+1, s1, rt.ViewAs[Struct2](l6))
+						if m.exn != nil {
+							return
+						}
 						l2.F0 = s1
 					} else {
 						if l6 == nil {
@@ -4187,7 +5052,15 @@ L1:
 						}
 						l8 = l6
 						s1_1 = l8.F0
-						s0_7 = rt.FnOf(m.tab0.Get(uint64(uint32((s1_1+int32(266))))), rttFunc11).(func(int, *Struct0) *Struct2)(d+1, l8)
+						fn2, own2 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1_1 + int32(266))))), rttFunc11, m, true)
+						if own2 {
+							s0_7 = fn2.(func(int, *Struct0) *Struct2)(d+1, l8)
+						} else {
+							s0_7 = m.guard0(fn2.(func(int, *Struct0) *Struct2), d+1, l8)
+						}
+						if m.exn != nil {
+							return
+						}
 						goto B11
 					B12:
 						s0_7 = m.g57
@@ -4195,6 +5068,9 @@ L1:
 						l3 = s0_7
 						s1 = l2.F0
 						s1 = m.f66(d+1, s1, l3)
+						if m.exn != nil {
+							return
+						}
 						l2.F0 = s1
 					}
 				}
@@ -4204,7 +5080,13 @@ L1:
 				s0_3 = (s0_3 & rt.B2I(s1_3 == l7))
 				if s0_3 == 0 {
 					s0_8 = m.f87(d+1, rt.ViewAs[Struct1](p0))
+					if m.exn != nil {
+						return
+					}
 					m.f27(d+1, rt.ViewAs[Struct1](s0_8))
+					if m.exn != nil {
+						return
+					}
 					panic(rt.ErrUnreachable)
 				}
 			}
@@ -4218,8 +5100,13 @@ L1:
 
 func (m *Instance) f103(d int, p0 *Struct0) int32 {
 	var s1 *Struct0
+	var s0 int32
 	s1 = m.g64
-	return m.f89(d+1, p0, s1)
+	s0 = m.f89(d+1, p0, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
+	return s0
 }
 
 func (m *Instance) f104(d int, p0 *Struct0) int64 {
@@ -4228,13 +5115,23 @@ func (m *Instance) f104(d int, p0 *Struct0) int64 {
 	}
 	var l1 *Struct0
 	var s1 int32
+	var fn1 any
+	var own1 bool
 	var s0 int64
 	if p0 == nil {
 		goto B2
 	}
 	l1 = p0
 	s1 = l1.F0
-	s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s1-int32(1))))), rttFunc25).(func(int, *Struct0) int64)(d+1, l1)
+	fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 - int32(1))))), rttFunc25, m, true)
+	if own1 {
+		s0 = fn1.(func(int, *Struct0) int64)(d+1, l1)
+	} else {
+		s0 = m.guard7(fn1.(func(int, *Struct0) int64), d+1, l1)
+	}
+	if m.exn != nil {
+		return int64(0)
+	}
 	goto B1
 B2:
 	s0 = int64(2011)
@@ -4259,12 +5156,18 @@ func (m *Instance) f105(d int, p0 *Struct14, p1 *Struct0, p2 *Struct0, p3 int64)
 	s2_1 = int32(len(s2.Elems))
 	l4 = int64(uint32(s2_1))
 	s0 = m.f106(d+1, p3, s1, l4)
+	if m.exn != nil {
+		return
+	}
 	l7 = s0
 	s0_1 = p0.F2
 	l11 = s0_1
 	l8 = int64(uint64(l4) >> (uint64(1) & 63))
 	l9 = (l4 - int64(1))
 	s0 = m.f108(d+1, p3, l9)
+	if m.exn != nil {
+		return
+	}
 	l4 = s0
 	l6 = int64(-1)
 	s0_2 = l11.Elems[uint32(int32(l4))]
@@ -4286,6 +5189,9 @@ L2:
 					s2_2 = p0.F4
 					s2_3 = s2_2.Elems[uint32(int32(l5))]
 					s1_1 = m.f109(d+1, p1, s2_3)
+					if m.exn != nil {
+						return
+					}
 					if s1_1 != 0 {
 						s0 = (l5 + int64(1))
 						goto B1
@@ -4293,6 +5199,9 @@ L2:
 				}
 			}
 			s1 = m.f110(d+1, l4, l9)
+			if m.exn != nil {
+				return
+			}
 			l4 = s1
 			s0_2 = l11.Elems[uint32(int32(l4))]
 			l5 = int64(uint32(s0_2))
@@ -4324,6 +5233,9 @@ B1:
 				s3 = p0.F4
 				s4 = p0.F5
 				s0_4 = m.f107(d+1, p0, int64(uint32(s1_1)), s2_4, s3, s4)
+				if m.exn != nil {
+					return
+				}
 			} else {
 				s1_2 = p0.F2
 				s1_1 = int32(len(s1_2.Elems))
@@ -4331,8 +5243,14 @@ B1:
 				s3 = p0.F4
 				s4 = p0.F5
 				s0_4 = m.f107(d+1, p0, (int64(uint32(s1_1)) << (uint64(1) & 63)), (s2_4 >> (uint64(1) & 63)), s3, s4)
+				if m.exn != nil {
+					return
+				}
 			}
 			m.f105(d+1, p0, p1, p2, p3)
+			if m.exn != nil {
+				return
+			}
 		} else {
 			s0_1 = p0.F2
 			s3_1 = p0.F5
@@ -4389,10 +5307,19 @@ L2:
 		if p1 < p4 {
 			l5 = p3.Elems[uint32(int32(p1))]
 			s0_1 = m.f103(d+1, l5)
+			if m.exn != nil {
+				return any(nil)
+			}
 			if s0_1 == 0 {
 				s2 = p3.Elems[uint32(int32((p1 + int64(1))))]
 				s3 = m.f104(d+1, l5)
+				if m.exn != nil {
+					return any(nil)
+				}
 				m.f105(d+1, p0, l5, s2, s3)
+				if m.exn != nil {
+					return any(nil)
+				}
 			}
 			p1 = (p1 + int64(2))
 			continue L2
@@ -4413,6 +5340,8 @@ func (m *Instance) f109(d int, p0 *Struct0, p1 *Struct0) int32 {
 	}
 	var l2 *Struct0
 	var s2, s0 int32
+	var fn1 any
+	var own1 bool
 	if p1 == nil {
 		goto B2
 	}
@@ -4424,7 +5353,15 @@ func (m *Instance) f109(d int, p0 *Struct0, p1 *Struct0) int32 {
 		panic(rt.ErrNullRef)
 	}
 	s2 = l2.F0
-	s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(126))))), rttFunc20).(func(int, *Struct0, *Struct0) int32)(d+1, l2, p1)
+	fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(126))))), rttFunc20, m, true)
+	if own1 {
+		s0 = fn1.(func(int, *Struct0, *Struct0) int32)(d+1, l2, p1)
+	} else {
+		s0 = m.guard8(fn1.(func(int, *Struct0, *Struct0) int32), d+1, l2, p1)
+	}
+	if m.exn != nil {
+		return int32(0)
+	}
 	goto B1
 B2:
 	s0 = rt.B2I(p0 == p1)
@@ -4462,6 +5399,9 @@ func (m *Instance) f113(d int, p0 *Struct0, p1 *Struct0) int32 {
 	}
 	s1 = rt.ViewAs[Struct2](p1).F2
 	s0 = m.f9(d+1, s0_1, s1)
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 == 0 {
 		goto B2
 	}
@@ -4491,6 +5431,8 @@ func (m *Instance) f115(d int, p0 *Struct0, p1 *Struct0) int32 {
 	var l5, s1_2 *Struct4
 	var s0, s1, s2 int32
 	var s1_1, s0_1 *Array9
+	var fn1 any
+	var own1 bool
 	s0 = p1.F0
 	if s0 != int32(10) {
 		return int32(0)
@@ -4520,7 +5462,15 @@ L3:
 			s1_1 = l4.F3
 			s1_2 = s1_1.Elems[uint32(int32(l2))]
 			s2 = l5.F0
-			s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(126))))), rttFunc20).(func(int, *Struct0, *Struct0) int32)(d+1, rt.ViewAs[Struct0](l5), rt.ViewAs[Struct0](s1_2))
+			fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(126))))), rttFunc20, m, true)
+			if own1 {
+				s0 = fn1.(func(int, *Struct0, *Struct0) int32)(d+1, rt.ViewAs[Struct0](l5), rt.ViewAs[Struct0](s1_2))
+			} else {
+				s0 = m.guard8(fn1.(func(int, *Struct0, *Struct0) int32), d+1, rt.ViewAs[Struct0](l5), rt.ViewAs[Struct0](s1_2))
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 			if s0 != 0 {
 				l2 = (l2 + int64(1))
 				continue L3
@@ -4541,6 +5491,8 @@ func (m *Instance) f116(d int, p0 *Struct0, p1 *Struct0) int32 {
 	var l3, s0_2 *Struct4
 	var s0, s2 int32
 	var s0_1, s1 *Struct10
+	var fn1, fn2 any
+	var own1, own2 bool
 	s0 = p1.F0
 	if s0 != int32(12) {
 		goto B1
@@ -4556,6 +5508,9 @@ func (m *Instance) f116(d int, p0 *Struct0, p1 *Struct0) int32 {
 		s1 = m.g82
 	}
 	s0 = m.f115(d+1, rt.ViewAs[Struct0](s0_1), rt.ViewAs[Struct0](s1))
+	if m.exn != nil {
+		return int32(0)
+	}
 	if s0 == 0 {
 		goto B1
 	}
@@ -4565,7 +5520,15 @@ L2:
 			s0_2 = m.g54.Elems[uint32(int32(l2))]
 			l3 = s0_2
 			s2 = l3.F0
-			s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(126))))), rttFunc20).(func(int, *Struct0, *Struct0) int32)(d+1, rt.ViewAs[Struct0](l3), rt.ViewAs[Struct0](l3))
+			fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(126))))), rttFunc20, m, true)
+			if own1 {
+				s0 = fn1.(func(int, *Struct0, *Struct0) int32)(d+1, rt.ViewAs[Struct0](l3), rt.ViewAs[Struct0](l3))
+			} else {
+				s0 = m.guard8(fn1.(func(int, *Struct0, *Struct0) int32), d+1, rt.ViewAs[Struct0](l3), rt.ViewAs[Struct0](l3))
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 			if s0 == 0 {
 				goto B1
 			}
@@ -4581,7 +5544,15 @@ L4:
 			s0_2 = m.g54.Elems[uint32(int32(l2))]
 			l3 = s0_2
 			s2 = l3.F0
-			s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s2+int32(126))))), rttFunc20).(func(int, *Struct0, *Struct0) int32)(d+1, rt.ViewAs[Struct0](l3), rt.ViewAs[Struct0](l3))
+			fn2, own2 = rt.FnOwn(m.tab0.Get(uint64(uint32((s2 + int32(126))))), rttFunc20, m, true)
+			if own2 {
+				s0 = fn2.(func(int, *Struct0, *Struct0) int32)(d+1, rt.ViewAs[Struct0](l3), rt.ViewAs[Struct0](l3))
+			} else {
+				s0 = m.guard8(fn2.(func(int, *Struct0, *Struct0) int32), d+1, rt.ViewAs[Struct0](l3), rt.ViewAs[Struct0](l3))
+			}
+			if m.exn != nil {
+				return int32(0)
+			}
 			if s0 == 0 {
 				goto B1
 			}
@@ -4702,7 +5673,12 @@ func (m *Instance) f122(d int, p0 *Struct0) int64 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	return m.f131(d+1, p0)
+	var s0 int64
+	s0 = m.f131(d+1, p0)
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0
 }
 
 func (m *Instance) f123(d int, p0 *Struct0) int64 {
@@ -4771,15 +5747,26 @@ func (m *Instance) f125(d int, p0 *Struct0) int64 {
 	var l3, l4, s0 int64
 	var s1, s0_1 int32
 	var s1_1, s0_2 *Array9
+	var fn1 any
+	var own1 bool
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct10) {
 		panic(rt.ErrCast)
 	}
 	l1 = rt.ViewAs[Struct10](p0)
 	s0 = m.f134(d+1, int64(10))
+	if m.exn != nil {
+		return int64(0)
+	}
 	s1 = l1.F2
 	s0 = (s0 ^ int64(s1))
 	s0 = m.f134(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = m.f134(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	l3 = s0
 L1:
 	for {
@@ -4790,8 +5777,19 @@ L1:
 			s0_2 = l1.F3
 			l2 = s0_2.Elems[uint32(int32(l4))]
 			s1 = l2.F0
-			s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s1-int32(1))))), rttFunc25).(func(int, *Struct0) int64)(d+1, rt.ViewAs[Struct0](l2))
+			fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 - int32(1))))), rttFunc25, m, true)
+			if own1 {
+				s0 = fn1.(func(int, *Struct0) int64)(d+1, rt.ViewAs[Struct0](l2))
+			} else {
+				s0 = m.guard7(fn1.(func(int, *Struct0) int64), d+1, rt.ViewAs[Struct0](l2))
+			}
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.f134(d+1, (s0 ^ l3))
+			if m.exn != nil {
+				return int64(0)
+			}
 			l3 = s0
 			l4 = (l4 + int64(1))
 			continue L1
@@ -4809,12 +5807,17 @@ func (m *Instance) f126(d int, p0 *Struct0) int64 {
 	var l3, s0_1 *Struct4
 	var l4 *Struct29
 	var s1 int32
+	var fn1, fn2 any
+	var own1, own2 bool
 	var s0_2 *Struct10
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct29) {
 		panic(rt.ErrCast)
 	}
 	l4 = rt.ViewAs[Struct29](p0)
 	s0 = m.f134(d+1, int64(12))
+	if m.exn != nil {
+		return int64(0)
+	}
 	l2 = s0
 L1:
 	for {
@@ -4822,8 +5825,19 @@ L1:
 			s0_1 = m.g54.Elems[uint32(int32(l1))]
 			l3 = s0_1
 			s1 = l3.F0
-			s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s1-int32(1))))), rttFunc25).(func(int, *Struct0) int64)(d+1, rt.ViewAs[Struct0](l3))
+			fn1, own1 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 - int32(1))))), rttFunc25, m, true)
+			if own1 {
+				s0 = fn1.(func(int, *Struct0) int64)(d+1, rt.ViewAs[Struct0](l3))
+			} else {
+				s0 = m.guard7(fn1.(func(int, *Struct0) int64), d+1, rt.ViewAs[Struct0](l3))
+			}
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.f134(d+1, (s0 ^ l2))
+			if m.exn != nil {
+				return int64(0)
+			}
 			l2 = s0
 			l1 = (l1 + int64(1))
 			continue L1
@@ -4831,6 +5845,9 @@ L1:
 		break L1
 	}
 	s0 = m.f134(d+1, l2)
+	if m.exn != nil {
+		return int64(0)
+	}
 	l1 = s0
 	if l4 == m.g62 {
 		s0_2 = m.g61
@@ -4838,7 +5855,13 @@ L1:
 		s0_2 = m.g82
 	}
 	s0 = m.f125(d+1, rt.ViewAs[Struct0](s0_2))
+	if m.exn != nil {
+		return int64(0)
+	}
 	s0 = m.f134(d+1, (s0 ^ l1))
+	if m.exn != nil {
+		return int64(0)
+	}
 	l2 = s0
 	l1 = int64(0)
 L3:
@@ -4847,8 +5870,19 @@ L3:
 			s0_1 = m.g54.Elems[uint32(int32(l1))]
 			l3 = s0_1
 			s1 = l3.F0
-			s0 = rt.FnOf(m.tab0.Get(uint64(uint32((s1-int32(1))))), rttFunc25).(func(int, *Struct0) int64)(d+1, rt.ViewAs[Struct0](l3))
+			fn2, own2 = rt.FnOwn(m.tab0.Get(uint64(uint32((s1 - int32(1))))), rttFunc25, m, true)
+			if own2 {
+				s0 = fn2.(func(int, *Struct0) int64)(d+1, rt.ViewAs[Struct0](l3))
+			} else {
+				s0 = m.guard7(fn2.(func(int, *Struct0) int64), d+1, rt.ViewAs[Struct0](l3))
+			}
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0 = m.f134(d+1, (s0 ^ l2))
+			if m.exn != nil {
+				return int64(0)
+			}
 			l2 = s0
 			l1 = (l1 + int64(1))
 			continue L3
@@ -4856,6 +5890,9 @@ L3:
 		break L3
 	}
 	s0 = m.f134(d+1, l2)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0
 }
 
@@ -4863,10 +5900,15 @@ func (m *Instance) f127(d int, p0 *Struct0) int64 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
+	var s0 int64
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct30) {
 		panic(rt.ErrCast)
 	}
-	return m.f131(d+1, rt.ViewAs[Struct0](rt.ViewAs[Struct30](p0)))
+	s0 = m.f131(d+1, rt.ViewAs[Struct0](rt.ViewAs[Struct30](p0)))
+	if m.exn != nil {
+		return int64(0)
+	}
+	return s0
 }
 
 func (m *Instance) f128(d int, p0 *Struct0) int64 {
@@ -4876,6 +5918,9 @@ func (m *Instance) f128(d int, p0 *Struct0) int64 {
 	}
 	s0 = rt.ViewAs[Struct7](p0).F1
 	s0 = m.f130(d+1, s0)
+	if m.exn != nil {
+		return int64(0)
+	}
 	return s0
 }
 
@@ -4889,6 +5934,9 @@ func (m *Instance) f129(d int, p0 *Struct0) int64 {
 	l1 = rt.I64TruncSatF64S(l2)
 	if (rt.B2I(l1 == int64(9223372036854775807)) | rt.B2I(l2 != float64(l1))) == 0 {
 		s0_1 = m.f130(d+1, l1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		goto B1
 	}
 	l1 = int64(math.Float64bits(l2))
@@ -4924,16 +5972,43 @@ func (m *Instance) f131(d int, p0 *Struct0) int64 {
 				goto B3
 			}
 			s0_1 = m.f135(d + 1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			m.f132(d+1, s0_1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0_1 = m.f135(d + 1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0_2 = m.f133(d+1, s0_1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0_2 = m.f134(d+1, s0_2)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0_1 = NewStruct21(s0_2)
 			l1 = s0_1
 			m.f132(d+1, l1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			m.f132(d+1, l1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			m.f132(d+1, l1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			m.f132(d+1, l1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			m.g77 = l1
 			s0_1 = m.g77
 			if s0_1 == nil {
@@ -4942,6 +6017,9 @@ func (m *Instance) f131(d int, p0 *Struct0) int64 {
 		B3:
 			l1 = s0_1
 			m.f132(d+1, l1)
+			if m.exn != nil {
+				return int64(0)
+			}
 			s0_2 = l1.F0
 			l2 = (s0_2 & int64(1073741823))
 			if l2 == 0 {
@@ -4961,6 +6039,9 @@ func (m *Instance) f131(d int, p0 *Struct0) int64 {
 func (m *Instance) f132(d int, p0 *Struct21) {
 	var s1, s2 int64
 	s1 = m.f133(d+1, p0)
+	if m.exn != nil {
+		return
+	}
 	s2 = p0.F0
 	s1 = ((s1 * int64(4294957665)) + int64(uint64(s2)>>(uint64(32)&63)))
 	p0.F0 = s1
@@ -4996,37 +6077,79 @@ func (m *Instance) f135(d int) *Struct21 {
 		goto B1
 	}
 	s0_1 = m.f136(d + 1)
+	if m.exn != nil {
+		return (*Struct21)(nil)
+	}
 	s0_2 = s0_1.F0
 	s0_2 = m.f20(d+1, s0_2)
+	if m.exn != nil {
+		return (*Struct21)(nil)
+	}
 	l0 = s0_2
 	s0_3 = m.f137(d+1, l0)
+	if m.exn != nil {
+		return (*Struct21)(nil)
+	}
 	if s0_3 != 0 {
 		m.f138(d + 1)
+		if m.exn != nil {
+			return (*Struct21)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	} else {
 		s0_4 = m.f6(d+1, l0)
+		if m.exn != nil {
+			return (*Struct21)(nil)
+		}
 	}
 	l1 = float64(s0_4 * fconst3)
 	if (int64(math.Float64bits(l1)) & int64(9218868437227405312)) == int64(9218868437227405312) {
 		s0_5 = m.f39(d + 1)
+		if m.exn != nil {
+			return (*Struct21)(nil)
+		}
 		m.f27(d+1, rt.ViewAs[Struct1](s0_5))
+		if m.exn != nil {
+			return (*Struct21)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	s0_1 = m.f136(d + 1)
+	if m.exn != nil {
+		return (*Struct21)(nil)
+	}
 	s0_2 = s0_1.F0
 	s0_2 = m.f20(d+1, s0_2)
+	if m.exn != nil {
+		return (*Struct21)(nil)
+	}
 	l0 = s0_2
 	s0_3 = m.f137(d+1, l0)
+	if m.exn != nil {
+		return (*Struct21)(nil)
+	}
 	if s0_3 != 0 {
 		m.f138(d + 1)
+		if m.exn != nil {
+			return (*Struct21)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	} else {
 		s0_4 = m.f6(d+1, l0)
+		if m.exn != nil {
+			return (*Struct21)(nil)
+		}
 	}
 	l2 = float64(s0_4 * fconst3)
 	if (int64(math.Float64bits(l2)) & int64(9218868437227405312)) == int64(9218868437227405312) {
 		s0_5 = m.f39(d + 1)
+		if m.exn != nil {
+			return (*Struct21)(nil)
+		}
 		m.f27(d+1, rt.ViewAs[Struct1](s0_5))
+		if m.exn != nil {
+			return (*Struct21)(nil)
+		}
 		panic(rt.ErrUnreachable)
 	}
 	s0 = NewStruct21((rt.I64TruncSatF64S(l1) | (rt.I64TruncSatF64S(l2) << (uint64(32) & 63))))
@@ -5043,15 +6166,22 @@ func (m *Instance) f136(d int) *Struct32 {
 	if d > rt.MaxCallDepth {
 		rt.Exhausted()
 	}
-	var l0 any
+	var l0, s0_1 any
 	var s0 *Struct32
 	var s0_2 int32
 	s0 = m.g79
 	if s0 != nil {
 		goto B1
 	}
-	l0 = m.f21(d + 1)
+	s0_1 = m.f21(d + 1)
+	if m.exn != nil {
+		return (*Struct32)(nil)
+	}
+	l0 = s0_1
 	s0_2 = m.f137(d+1, l0)
+	if m.exn != nil {
+		return (*Struct32)(nil)
+	}
 	if s0_2 != 0 {
 		s0 = (*Struct32)(nil)
 	} else {
@@ -5061,6 +6191,9 @@ func (m *Instance) f136(d int) *Struct32 {
 		goto B2
 	}
 	m.f78(d + 1)
+	if m.exn != nil {
+		return (*Struct32)(nil)
+	}
 	panic(rt.ErrUnreachable)
 B2:
 	m.g79 = s0
@@ -5079,6 +6212,9 @@ func (m *Instance) f137(d int, p0 any) int32 {
 	var s0 int32
 	if rt.B2I(p0 == nil) == 0 {
 		s0 = m.f5(d+1, p0)
+		if m.exn != nil {
+			return int32(0)
+		}
 		if s0 == 0 {
 			goto B2
 		}
@@ -5096,6 +6232,9 @@ func (m *Instance) f138(d int) {
 		rt.Exhausted()
 	}
 	m.f27(d+1, rt.ViewAs[Struct1](m.g136))
+	if m.exn != nil {
+		return
+	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -5118,11 +6257,10 @@ func (m *Instance) f141(d int, p0 *Struct0) *Struct2 {
 	var s0_1, s1 *Struct2
 	var s0_4 *Struct5
 	var s1_1 *Struct105
-	var x3 *rt.Exception
+	var x2 *rt.Exception
 	var s0_5 *Struct0
 	var s1_2 *Struct1
 	var s0_6 any
-	var c3 int
 	_ = s0_5
 	_ = s1_2
 	_ = s0_6
@@ -5131,58 +6269,95 @@ func (m *Instance) f141(d int, p0 *Struct0) *Struct2 {
 	}
 	l2 = rt.ViewAs[Struct14](p0)
 	s0 = m.f73(d+1, rt.ViewAs[Struct1](l2))
+	if m.exn != nil {
+		return (*Struct2)(nil)
+	}
 	if s0 != 0 {
 		s0_1 = m.g141
 	} else {
 		l1 = NewStruct8(m.g55)
 		l3 = NewStruct26(l1, int32(0))
-		c3 = func() (c int) {
-			defer func() {
-				if r := recover(); r != nil {
-					e := rt.Unwrap(r, 3)
-					if e.Tag == m.tag1 {
-						x3 = e
-						c = -1
-						return
-					}
-					if e.Tag == m.tag0 {
-						x3 = e
-						c = -2
-						return
-					}
-					panic(r)
-				}
-			}()
-			s0_4 = m.f88(d + 1)
-			m.f74(d+1, s0_4, rt.ViewAs[Struct1](l2))
-			s0 = m.f29(d+1, rt.ViewAs[Struct0](m.g73))
-			s1 = l1.F0
-			s1 = m.f66(d+1, s1, m.g73)
-			l1.F0 = s1
-			l3.F1 = int32(1)
-			s1_1 = NewStruct105(rt.AnyOf(l3), m.g142)
-			m.f102(d+1, l2, rt.ViewAs[Struct36](s1_1))
-			s0 = m.f29(d+1, rt.ViewAs[Struct0](m.g74))
-			s1 = l1.F0
-			s1 = m.f66(d+1, s1, m.g74)
-			l1.F0 = s1
-			return 0
-		}()
-		switch c3 {
-		case -1:
-			s0_5 = x3.Values[0].(*Struct0)
-			s1_2 = x3.Values[1].(*Struct1)
-			s0_4 = m.f88(d + 1)
-			m.f75(d+1, s0_4)
-			panic(x3)
-		case -2:
-			s0_6 = x3.Values[0].(any)
-			s0_4 = m.f88(d + 1)
-			m.f75(d+1, s0_4)
-			panic(x3)
-		}
 		s0_4 = m.f88(d + 1)
+		if m.exn != nil {
+			goto H2
+		}
+		m.f74(d+1, s0_4, rt.ViewAs[Struct1](l2))
+		if m.exn != nil {
+			goto H2
+		}
+		s0 = m.f29(d+1, rt.ViewAs[Struct0](m.g73))
+		if m.exn != nil {
+			goto H2
+		}
+		s1 = l1.F0
+		s1 = m.f66(d+1, s1, m.g73)
+		if m.exn != nil {
+			goto H2
+		}
+		l1.F0 = s1
+		l3.F1 = int32(1)
+		s1_1 = NewStruct105(rt.AnyOf(l3), m.g142)
+		m.f102(d+1, l2, rt.ViewAs[Struct36](s1_1))
+		if m.exn != nil {
+			goto H2
+		}
+		s0 = m.f29(d+1, rt.ViewAs[Struct0](m.g74))
+		if m.exn != nil {
+			goto H2
+		}
+		s1 = l1.F0
+		s1 = m.f66(d+1, s1, m.g74)
+		if m.exn != nil {
+			goto H2
+		}
+		l1.F0 = s1
+		goto B2
+	C2_1:
+		s0_5 = x2.Values[0].(*Struct0)
+		s1_2 = x2.Values[1].(*Struct1)
+		s0_4 = m.f88(d + 1)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		m.f75(d+1, s0_4)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
+		m.exn = x2
+		return (*Struct2)(nil)
+	C2_2:
+		s0_6 = x2.Values[0].(any)
+		s0_4 = m.f88(d + 1)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
+		m.f75(d+1, s0_4)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
+		m.exn = x2
+		return (*Struct2)(nil)
+	H2:
+		if m.exn.Tag == m.tag1 {
+			x2 = m.exn
+			m.exn = nil
+			goto C2_1
+		}
+		if m.exn.Tag == m.tag0 {
+			x2 = m.exn
+			m.exn = nil
+			goto C2_2
+		}
+		return (*Struct2)(nil)
+	B2:
+		s0_4 = m.f88(d + 1)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
+		m.f75(d+1, s0_4)
+		if m.exn != nil {
+			return (*Struct2)(nil)
+		}
 		s0_1 = l1.F0
 	}
 	return s0_1
@@ -5237,7 +6412,13 @@ func (m *Instance) f147(d int, p0 int64) *Struct22 {
 	} else {
 		p0 = (p0 - int64(1))
 		s0 = m.f147(d+1, p0)
+		if m.exn != nil {
+			return (*Struct22)(nil)
+		}
 		s1 = m.f147(d+1, p0)
+		if m.exn != nil {
+			return (*Struct22)(nil)
+		}
 		s0 = NewStruct22(s0, s1)
 	}
 	return s0
@@ -5258,9 +6439,15 @@ func (m *Instance) f148(d int, p0 *Struct22) int64 {
 			goto B2
 		}
 		m.f78(d + 1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		panic(rt.ErrUnreachable)
 	B2:
 		s0_1 = m.f148(d+1, s0)
+		if m.exn != nil {
+			return int64(0)
+		}
 	}
 	s1 = p0.F1
 	s0_1 = (s0_1 + int64(1))
@@ -5272,12 +6459,678 @@ func (m *Instance) f148(d int, p0 *Struct22) int64 {
 			goto B4
 		}
 		m.f78(d + 1)
+		if m.exn != nil {
+			return int64(0)
+		}
 		panic(rt.ErrUnreachable)
 	B4:
 		s1_1 = m.f148(d+1, s1)
+		if m.exn != nil {
+			return int64(0)
+		}
 	}
 	s0_1 = (s0_1 + s1_1)
 	return s0_1
+}
+
+func (m *Instance) setThisModuleEntry(d int, p0 any) {
+	m.setThisModule(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return
+}
+
+func (m *Instance) f23Entry(d int) {
+	m.f23(d)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return
+}
+
+func (m *Instance) invokeMainEntry(d int, p0 any) {
+	m.invokeMain(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return
+}
+
+func (m *Instance) wasmI16ArrayGetEntry(d int, p0 any, p1 int32) int32 {
+	r0 := m.wasmI16ArrayGet(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) wasmI16ArraySetEntry(d int, p0 any, p1 int32, p2 int32) {
+	m.wasmI16ArraySet(d, p0, p1, p2)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return
+}
+
+func (m *Instance) f30Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f30(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f31Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f31(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f32Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f32(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f33Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f33(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f34Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f34(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f38Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f38(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f40Entry(d int, p0 *Struct1) *Struct2 {
+	r0 := m.f40(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f41Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f41(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f43Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f43(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f45Entry(d int, p0 *Struct1) *Struct2 {
+	r0 := m.f45(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f47Entry(d int, p0 *Struct1) *Struct0 {
+	r0 := m.f47(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f48Entry(d int, p0 *Struct1) *Struct0 {
+	r0 := m.f48(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f49Entry(d int, p0 *Struct1) *Struct2 {
+	r0 := m.f49(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f50Entry(d int, p0 *Struct1) *Struct2 {
+	r0 := m.f50(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f51Entry(d int, p0 *Struct1) int32 {
+	r0 := m.f51(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f52Entry(d int, p0 *Struct1) int32 {
+	r0 := m.f52(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f53Entry(d int, p0 *Struct1) *Struct2 {
+	r0 := m.f53(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f54Entry(d int, p0 *Struct1) *Struct0 {
+	r0 := m.f54(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f56Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f56(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f59Entry(d int, p0 *Struct0) *Array9 {
+	r0 := m.f59(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f61Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f61(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f64Entry(d int, p0 *Struct1) *Struct0 {
+	r0 := m.f64(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f65Entry(d int, p0 *Struct1) *Struct2 {
+	r0 := m.f65(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f67Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f67(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f69Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f69(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f70Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f70(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f71Entry(d int, p0 *Struct0) *Array9 {
+	r0 := m.f71(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f79Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f79(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f80Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f80(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f82Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f82(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f83Entry(d int, p0 *Struct0) *Array9 {
+	r0 := m.f83(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f84Entry(d int, p0 *Struct1) int32 {
+	r0 := m.f84(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f85Entry(d int, p0 *Struct1) *Struct0 {
+	r0 := m.f85(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f86Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f86(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f90Entry(d int, p0 any) *Struct0 {
+	r0 := m.f90(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f92Entry(d int, p0 any) *Struct0 {
+	r0 := m.f92(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f93Entry(d int, p0 any) *Struct0 {
+	r0 := m.f93(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f94Entry(d int, p0 any) *Struct0 {
+	r0 := m.f94(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f95Entry(d int, p0 any) *Struct0 {
+	r0 := m.f95(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f97Entry(d int, p0 any) *Struct0 {
+	r0 := m.f97(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f98Entry(d int, p0 any) *Struct0 {
+	r0 := m.f98(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f111Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f111(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f112Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f112(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f113Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f113(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f114Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f114(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f115Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f115(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f116Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f116(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f117Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f117(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f118Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f118(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f119Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f119(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f120Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f120(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f121Entry(d int, p0 *Struct0, p1 *Struct0) int32 {
+	r0 := m.f121(d, p0, p1)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f122Entry(d int, p0 *Struct0) int64 {
+	r0 := m.f122(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f123Entry(d int, p0 *Struct0) int64 {
+	r0 := m.f123(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f124Entry(d int, p0 *Struct0) int64 {
+	r0 := m.f124(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f125Entry(d int, p0 *Struct0) int64 {
+	r0 := m.f125(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f126Entry(d int, p0 *Struct0) int64 {
+	r0 := m.f126(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f127Entry(d int, p0 *Struct0) int64 {
+	r0 := m.f127(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f128Entry(d int, p0 *Struct0) int64 {
+	r0 := m.f128(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f129Entry(d int, p0 *Struct0) int64 {
+	r0 := m.f129(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f139Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f139(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f140Entry(d int, p0 *Struct1) *Struct2 {
+	r0 := m.f140(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f141Entry(d int, p0 *Struct0) *Struct2 {
+	r0 := m.f141(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f142Entry(d int, p0 *Struct0) *Array9 {
+	r0 := m.f142(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f143Entry(d int, p0 *Struct1) float64 {
+	r0 := m.f143(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f144Entry(d int, p0 *Struct1) float64 {
+	r0 := m.f144(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+func (m *Instance) f145Entry(d int, p0 *Struct1) float64 {
+	r0 := m.f145(d, p0)
+	if e := m.exn; e != nil {
+		m.exn = nil
+		panic(e)
+	}
+	return r0
+}
+
+// catchExn is deferred around calls that may panic with a wasm exception
+// (host imports, foreign function references); it makes it pending.
+func (m *Instance) catchExn() {
+	if r := recover(); r != nil {
+		if e, ok := r.(*rt.Exception); ok {
+			m.exn = e
+			return
+		}
+		panic(r)
+	}
 }
 
 func (m *Instance) constExpr1() *Array9 {
@@ -5620,11 +7473,56 @@ func (m *Instance) constExpr82() *Struct10 {
 	return NewStruct10(int32(10), int32(0), int32(127), m.g54)
 }
 
+func (m *Instance) guard0(fn func(int, *Struct0) *Struct2, d int, a0 *Struct0) *Struct2 {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
 var fconst0 = math.Float64frombits(0x3ff0000000000000)
 
 var fconst1 = math.Float64frombits(0xbff0000000000000)
 
+func (m *Instance) guard1(fn func(int, *Struct1) *Struct2, d int, a0 *Struct1) *Struct2 {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard2(fn func(int, *Struct1) *Struct0, d int, a0 *Struct1) *Struct0 {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard3(fn func(int, *Struct1) int32, d int, a0 *Struct1) int32 {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard4(fn func(int, *Struct0) *Array9, d int, a0 *Struct0) *Array9 {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard5(fn func(int, any) *Struct0, d int, a0 any) *Struct0 {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
 var fconst2 = math.Float64frombits(0x3f847ae147ae147b)
+
+func (m *Instance) guard6(fn func(int, *Struct1) float64, d int, a0 *Struct1) float64 {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard7(fn func(int, *Struct0) int64, d int, a0 *Struct0) int64 {
+	defer m.catchExn()
+	return fn(d, a0)
+}
+
+func (m *Instance) guard8(fn func(int, *Struct0, *Struct0) int32, d int, a0 *Struct0, a1 *Struct0) int32 {
+	defer m.catchExn()
+	return fn(d, a0, a1)
+}
 
 var fconst3 = math.Float64frombits(0x41efffffffe00000)
 

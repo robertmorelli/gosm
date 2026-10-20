@@ -57,6 +57,8 @@ type compiler struct {
 	fconsts     map[string]string
 	recursive   []bool
 	usesTramp   bool
+	usesExn     bool
+	guards      map[string]string
 	tailComp    []int
 	tailCyclic  map[int]bool
 }
@@ -107,6 +109,7 @@ func CompileModules(srcs []Source, opts Options) (src []byte, err error) {
 			members:  map[string]bool{},
 			imports:  map[string]bool{},
 			fconsts:  map[string]string{},
+			guards:   map[string]string{},
 		}
 		if multi {
 			name := exportIdent(sm.Name)
@@ -142,11 +145,13 @@ func CompileModules(srcs []Source, opts Options) (src []byte, err error) {
 		c.assignNames()
 		c.computeRecursive()
 		c.computeTailCalls()
+		c.computeExn()
 		var w strings.Builder
 		c.writeHost(&w)
 		c.writeInstance(&w)
 		c.writeFuncs(&w)
 		c.writeEntries(&w)
+		c.writeExnSupport(&w)
 		w.WriteString(c.extra.String())
 		if c.opts.HostType == "" {
 			c.writeDynamic(&w)
@@ -198,7 +203,7 @@ func (c *compiler) assignNames() {
 	c.strConst = map[uint32]string{}
 	c.refFuncs = map[uint32]bool{}
 	c.exportFns = map[uint32]bool{}
-	for _, n := range []string{"host", "funcs", "init", "Exports", "jsCache", "tail"} {
+	for _, n := range []string{"host", "funcs", "init", "Exports", "jsCache", "tail", "exn", "catchExn"} {
 		c.members[n] = true
 	}
 	// host method names
@@ -611,6 +616,9 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 	if c.usesTramp {
 		w.WriteString("\ttail any // pending trampolined tail call\n")
 	}
+	if c.usesExn {
+		w.WriteString("\texn *rt.Exception // pending wasm exception\n")
+	}
 	for i := range m.Datas {
 		fmt.Fprintf(w, "\tdata%d []byte\n", i)
 	}
@@ -684,7 +692,7 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 			if n, ok := m.Names.Funcs[uint32(i)]; ok {
 				name = n
 			}
-			if c.usesTramp {
+			if c.usesTramp || c.usesExn {
 				fmt.Fprintf(&b, "m.funcs[%d] = &rt.Func{Type: %s, Fn: m.%s, Raw: m.%s, Owner: m, Name: %q%s}\n", i, c.info(m.FuncTypeIdx(uint32(i))).rtt, c.entryName(uint32(i)), c.funcNames[i], name, c.funcViews(uint32(i)))
 			} else {
 				fmt.Fprintf(&b, "m.funcs[%d] = &rt.Func{Type: %s, Fn: m.%s, Name: %q%s}\n", i, c.info(m.FuncTypeIdx(uint32(i))).rtt, c.funcNames[i], name, c.funcViews(uint32(i)))
@@ -919,6 +927,9 @@ func (c *compiler) writeFuncs(w *strings.Builder) {
 			if len(ft.Results) > 0 {
 				body = "return " + body
 			}
+			if c.usesExn {
+				body = "defer m.catchExn()\n" + body
+			}
 		}
 		fmt.Fprintf(w, "func (m *Instance) %s%s {\n\t%s\n}\n\n", c.funcNames[fi], c.sigGo(ft, nil, true), body)
 		fi++
@@ -998,7 +1009,7 @@ func (c *compiler) funcViews(fi uint32) string {
 // exports, function references): with trampolined tail calls it is a
 // wrapper that runs pending tail calls to completion.
 func (c *compiler) entryName(fi uint32) string {
-	if !c.usesTramp || int(fi) < c.m.NumImportedFuncs {
+	if !(c.usesTramp || c.usesExn) || int(fi) < c.m.NumImportedFuncs {
 		return c.funcNames[fi]
 	}
 	return c.funcNames[fi] + "Entry"
@@ -1006,7 +1017,7 @@ func (c *compiler) entryName(fi uint32) string {
 
 // writeEntries emits the trampolining entry wrappers.
 func (c *compiler) writeEntries(w *strings.Builder) {
-	if !c.usesTramp {
+	if !(c.usesTramp || c.usesExn) {
 		return
 	}
 	m := c.m
@@ -1042,8 +1053,15 @@ func (c *compiler) writeEntries(w *strings.Builder) {
 		if len(outs) > 0 {
 			loopAssign = strings.Join(outs, ", ") + " = "
 		}
-		fmt.Fprintf(w, "func (m *Instance) %s%s {\n%sm.%s(%s)\nfor m.tail != nil {\nt := m.tail.(func(int)%s)\nm.tail = nil\n%st(d)\n}\n%s\n}\n\n",
-			c.entryName(fi), c.sigGo(ft, nil, true), assign, c.funcNames[fi], strings.Join(args, ", "), goResults(c, ft.Results), loopAssign, ret)
+		loop := ""
+		if c.usesTramp {
+			loop = fmt.Sprintf("for m.tail != nil {\nt := m.tail.(func(int)%s)\nm.tail = nil\n%st(d)\n}\n", goResults(c, ft.Results), loopAssign)
+		}
+		if c.usesExn {
+			loop += "if e := m.exn; e != nil {\nm.exn = nil\npanic(e)\n}\n"
+		}
+		fmt.Fprintf(w, "func (m *Instance) %s%s {\n%sm.%s(%s)\n%s%s\n}\n\n",
+			c.entryName(fi), c.sigGo(ft, nil, true), assign, c.funcNames[fi], strings.Join(args, ", "), loop, ret)
 	}
 }
 
