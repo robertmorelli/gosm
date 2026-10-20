@@ -980,7 +980,7 @@ func (f *fn) finish(header string, body string) string {
 	var b strings.Builder
 	b.WriteString(header)
 	b.WriteString(" {\n")
-	if f.idx >= 0 {
+	if f.idx >= 0 && f.c.recursive[f.idx] {
 		b.WriteString("if d > rt.MaxCallDepth {\nrt.Exhausted()\n}\n")
 	}
 	if f.needDelegateDefer {

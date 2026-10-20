@@ -18,7 +18,7 @@ var (
 
 var rttStruct0 = rt.NewRTT(rt.KStruct, nil, false, "g25931a91152659cab017ec01.0", func(p unsafe.Pointer) any { return (*Struct0)(p) })
 
-// Struct0 is the wasm struct type sub open () struct(i32).
+// Struct0 is the wasm struct type (sub (struct (field i32))).
 type Struct0 struct {
 	rt.Object
 	F0 int32
@@ -40,7 +40,7 @@ func newStruct0Default() *Struct0 {
 
 var rttStruct1 = rt.NewRTT(rt.KStruct, rttStruct0, true, "gf8df5ca656701335cc7efccd.0", func(p unsafe.Pointer) any { return (*Struct1)(p) })
 
-// Struct1 is the wasm struct type sub final (<g25931a91152659cab017ec01.0>) struct(i32,ref null extern).
+// Struct1 is the wasm struct type (sub Struct0 (struct (field i32) (field (ref null extern)))), a subtype of Struct0.
 type Struct1 struct {
 	Struct0
 	F1 any
@@ -63,7 +63,7 @@ func newStruct1Default() *Struct1 {
 
 var rttStruct2 = rt.NewRTT(rt.KStruct, rttStruct0, true, "g1379fe5e6d9f248307d422c3.0", func(p unsafe.Pointer) any { return (*Struct2)(p) })
 
-// Struct2 is the wasm struct type sub final (<g25931a91152659cab017ec01.0>) struct(i32,ref null extern,mut ref null <gf8df5ca656701335cc7efccd.0>).
+// Struct2 is the wasm struct type (sub Struct0 (struct (field i32) (field (ref null extern)) (field (mut (ref null $1))))), a subtype of Struct0.
 type Struct2 struct {
 	Struct0
 	F1 any
@@ -88,7 +88,7 @@ func newStruct2Default() *Struct2 {
 
 var rttArray3 = rt.NewRTT(rt.KArray, nil, true, "gf8c5dd5462c12ede680515f6.0", nil)
 
-// Array3 is the wasm array type sub final () array(mut ref null <g25931a91152659cab017ec01.0>).
+// Array3 is the wasm array type (array (mut (ref null $0))).
 type Array3 struct {
 	Elems []*Struct0
 }
@@ -106,7 +106,7 @@ func NewArray3(elems []*Struct0) *Array3 {
 
 var rttStruct4 = rt.NewRTT(rt.KStruct, rttStruct0, true, "g1f08a2044225df4249f594a1.0", func(p unsafe.Pointer) any { return (*Struct4)(p) })
 
-// Struct4 is the wasm struct type sub final (<g25931a91152659cab017ec01.0>) struct(i32,mut i64,mut ref <gf8c5dd5462c12ede680515f6.0>).
+// Struct4 is the wasm struct type (sub Struct0 (struct (field i32) (field (mut i64)) (field (mut (ref $3))))), a subtype of Struct0.
 type Struct4 struct {
 	Struct0
 	F1 int64
@@ -131,7 +131,7 @@ func newStruct4Default() *Struct4 {
 
 var rttStruct5 = rt.NewRTT(rt.KStruct, rttStruct0, true, "g32b92959fd1effbe6769983a.0", func(p unsafe.Pointer) any { return (*Struct5)(p) })
 
-// Struct5 is the wasm struct type sub final (<g25931a91152659cab017ec01.0>) struct(i32,i64).
+// Struct5 is the wasm struct type (sub Struct0 (struct (field i32) (field i64))), a subtype of Struct0.
 type Struct5 struct {
 	Struct0
 	F1 int64
@@ -156,7 +156,7 @@ var rttFunc6 = rt.CanonRTT(rt.KFunc, nil, true, "g1e9c51f5060b46161b35dd1b.0")
 
 var rttStruct7 = rt.NewRTT(rt.KStruct, rttStruct0, false, "gbd293964fd06da71d80f2d96.0", func(p unsafe.Pointer) any { return (*Struct7)(p) })
 
-// Struct7 is the wasm struct type sub open (<g25931a91152659cab017ec01.0>) struct(i32,mut ref null <g1379fe5e6d9f248307d422c3.0>).
+// Struct7 is the wasm struct type (sub Struct0 (struct (field i32) (field (mut (ref null $2))))), a subtype of Struct0.
 type Struct7 struct {
 	Struct0
 	F1 *Struct2
@@ -179,7 +179,7 @@ func newStruct7Default() *Struct7 {
 
 var rttStruct8 = rt.NewRTT(rt.KStruct, rttStruct7, false, "g9f1c01731f22b4dc8758d6e7.0", func(p unsafe.Pointer) any { return (*Struct8)(p) })
 
-// Struct8 is the wasm struct type sub open (<gbd293964fd06da71d80f2d96.0>) struct(i32,mut ref null <g1379fe5e6d9f248307d422c3.0>,i32,ref null <g32b92959fd1effbe6769983a.0>,ref null <gf8df5ca656701335cc7efccd.0>,ref <g25931a91152659cab....
+// Struct8 is the wasm struct type (sub Struct7 (struct (field i32) (field (mut (ref null $2))) (field i32) (field (ref null $5)) (field (ref null $1)) (field (ref $0)))), a subtype of Struct7.
 type Struct8 struct {
 	Struct7
 	F2 int32
@@ -209,7 +209,7 @@ func newStruct8Default() *Struct8 {
 
 var rttStruct9 = rt.NewRTT(rt.KStruct, rttStruct0, true, "g5822d55e281411ce507a327d.0", func(p unsafe.Pointer) any { return (*Struct9)(p) })
 
-// Struct9 is the wasm struct type sub final (<g25931a91152659cab017ec01.0>) struct(i32,ref <g1f08a2044225df4249f594a1.0>,i64,mut i64,mut ref null <g25931a91152659cab017ec01.0>).
+// Struct9 is the wasm struct type (sub Struct0 (struct (field i32) (field (ref $4)) (field i64) (field (mut i64)) (field (mut (ref null $0))))), a subtype of Struct0.
 type Struct9 struct {
 	Struct0
 	F1 *Struct4
@@ -238,7 +238,7 @@ func newStruct9Default() *Struct9 {
 
 var rttArray10 = rt.NewRTT(rt.KArray, nil, true, "gd6c6c2804e2baf45b4b20136.0", nil)
 
-// Array10 is the wasm array type sub final () array(mut ref <g25931a91152659cab017ec01.0>).
+// Array10 is the wasm array type (array (mut (ref $0))).
 type Array10 struct {
 	Elems []*Struct0
 }
@@ -256,7 +256,7 @@ func NewArray10(elems []*Struct0) *Array10 {
 
 var rttStruct11 = rt.NewRTT(rt.KStruct, rttStruct0, true, "g7d9899d2d5e4b37fc56201f5.0", func(p unsafe.Pointer) any { return (*Struct11)(p) })
 
-// Struct11 is the wasm struct type sub final (<g25931a91152659cab017ec01.0>) struct(i32,i32,i32,ref <gd6c6c2804e2baf45b4b20136.0>).
+// Struct11 is the wasm struct type (sub Struct0 (struct (field i32) (field i32) (field i32) (field (ref $10)))), a subtype of Struct0.
 type Struct11 struct {
 	Struct0
 	F1 int32
@@ -283,7 +283,7 @@ func newStruct11Default() *Struct11 {
 
 var rttStruct12 = rt.NewRTT(rt.KStruct, rttStruct0, true, "g03e3dcd7045b3d4e4397dbfd.0", func(p unsafe.Pointer) any { return (*Struct12)(p) })
 
-// Struct12 is the wasm struct type sub final (<g25931a91152659cab017ec01.0>) struct(i32,f64).
+// Struct12 is the wasm struct type (sub Struct0 (struct (field i32) (field f64))), a subtype of Struct0.
 type Struct12 struct {
 	Struct0
 	F1 float64
@@ -306,7 +306,7 @@ func newStruct12Default() *Struct12 {
 
 var rttArray13 = rt.NewRTT(rt.KArray, nil, true, "g4af61440a35b2f9e0599e616.0", nil)
 
-// Array13 is the wasm array type sub final () array(mut ref <gf8df5ca656701335cc7efccd.0>).
+// Array13 is the wasm array type (array (mut (ref $1))).
 type Array13 struct {
 	Elems []*Struct1
 }
@@ -324,7 +324,7 @@ func NewArray13(elems []*Struct1) *Array13 {
 
 var rttStruct14 = rt.NewRTT(rt.KStruct, nil, true, "ge03f6d45a4a8d2b5f80ecd48.0", nil)
 
-// Struct14 is the wasm struct type sub final () struct(f64,f64).
+// Struct14 is the wasm struct type (struct (field f64) (field f64)).
 type Struct14 struct {
 	F0 float64
 	F1 float64
@@ -349,7 +349,7 @@ var rttFunc15 = rt.CanonRTT(rt.KFunc, nil, true, "gc00cc6c17d32cd200535c54b.0")
 
 var rttStruct16 = rt.NewRTT(rt.KStruct, rttStruct8, true, "g900adb3c81210dfafb541d2c.0", func(p unsafe.Pointer) any { return (*Struct16)(p) })
 
-// Struct16 is the wasm struct type sub final (<g9f1c01731f22b4dc8758d6e7.0>) struct(i32,mut ref null <g1379fe5e6d9f248307d422c3.0>,i32,ref <g32b92959fd1effbe6769983a.0>,ref <gf8df5ca656701335cc7efccd.0>,ref <gf8df5ca656701335cc7efccd.0....
+// Struct16 is the wasm struct type (sub Struct8 (struct (field i32) (field (mut (ref null $2))) (field i32) (field (ref $5)) (field (ref $1)) (field (ref $1)) (field i64))), a subtype of Struct8.
 type Struct16 struct {
 	Struct8
 	F6 int64
@@ -377,7 +377,7 @@ func newStruct16Default() *Struct16 {
 
 var rttArray17 = rt.NewRTT(rt.KArray, nil, true, "gb46f91a0701b7bea7ad00599.0", nil)
 
-// Array17 is the wasm array type sub final () array(mut i64).
+// Array17 is the wasm array type (array (mut i64)).
 type Array17 struct {
 	Elems []int64
 }
@@ -395,7 +395,7 @@ func NewArray17(elems []int64) *Array17 {
 
 var rttStruct18 = rt.NewRTT(rt.KStruct, rttStruct0, true, "g9c41b988ddf206f0078422f1.0", func(p unsafe.Pointer) any { return (*Struct18)(p) })
 
-// Struct18 is the wasm struct type sub final (<g25931a91152659cab017ec01.0>) struct(i32,mut ref null <g1379fe5e6d9f248307d422c3.0>,ref null extern).
+// Struct18 is the wasm struct type (sub Struct0 (struct (field i32) (field (mut (ref null $2))) (field (ref null extern)))), a subtype of Struct0.
 type Struct18 struct {
 	Struct0
 	F1 *Struct2
@@ -422,7 +422,7 @@ var rttFunc19 = rt.CanonRTT(rt.KFunc, nil, true, "g3be4622794896dbda1b8e930.0")
 
 var rttArray20 = rt.NewRTT(rt.KArray, nil, true, "ge5e1c8e2b83b19ec39c889a5.0", nil)
 
-// Array20 is the wasm array type sub final () array(mut i16).
+// Array20 is the wasm array type (array (mut i16)).
 type Array20 struct {
 	Elems []int16
 }
@@ -444,7 +444,7 @@ var rttFunc22 = rt.CanonRTT(rt.KFunc, nil, true, "g9381fbbd17af33af75b86aa2.0")
 
 var rttStruct23 = rt.NewRTT(rt.KStruct, rttStruct8, true, "gc37567087704f79aca21382c.0", func(p unsafe.Pointer) any { return (*Struct23)(p) })
 
-// Struct23 is the wasm struct type sub final (<g9f1c01731f22b4dc8758d6e7.0>) struct(i32,mut ref null <g1379fe5e6d9f248307d422c3.0>,i32,ref <g32b92959fd1effbe6769983a.0>,ref null none,ref <gf8df5ca656701335cc7efccd.0>,ref <g32b92959fd1e....
+// Struct23 is the wasm struct type (sub Struct8 (struct (field i32) (field (mut (ref null $2))) (field i32) (field (ref $5)) (field (ref null none)) (field (ref $1)) (field (ref $5)))), a subtype of Struct8.
 type Struct23 struct {
 	Struct8
 	F6 *Struct5
@@ -472,7 +472,7 @@ func newStruct23Default() *Struct23 {
 
 var rttStruct24 = rt.NewRTT(rt.KStruct, rttStruct7, true, "gce4b625436fe694eae317fa5.0", func(p unsafe.Pointer) any { return (*Struct24)(p) })
 
-// Struct24 is the wasm struct type sub final (<gbd293964fd06da71d80f2d96.0>) struct(i32,mut ref null <g1379fe5e6d9f248307d422c3.0>,ref <gf8df5ca656701335cc7efccd.0>).
+// Struct24 is the wasm struct type (sub Struct7 (struct (field i32) (field (mut (ref null $2))) (field (ref $1)))), a subtype of Struct7.
 type Struct24 struct {
 	Struct7
 	F2 *Struct1
@@ -496,7 +496,7 @@ func newStruct24Default() *Struct24 {
 
 var rttStruct25 = rt.NewRTT(rt.KStruct, rttStruct7, true, "g84c0056e37568d37a0cef24a.0", func(p unsafe.Pointer) any { return (*Struct25)(p) })
 
-// Struct25 is the wasm struct type sub final (<gbd293964fd06da71d80f2d96.0>) struct(i32,mut ref null <g1379fe5e6d9f248307d422c3.0>,ref <g1f08a2044225df4249f594a1.0>).
+// Struct25 is the wasm struct type (sub Struct7 (struct (field i32) (field (mut (ref null $2))) (field (ref $4)))), a subtype of Struct7.
 type Struct25 struct {
 	Struct7
 	F2 *Struct4
@@ -598,7 +598,7 @@ var rttFunc64 = rt.CanonRTT(rt.KFunc, nil, true, "ge380a091dd5f45ce7d850ca5.0")
 
 var rttStruct65 = rt.NewRTT(rt.KStruct, nil, true, "ga06839a9f8a37b992ad56ef9.0", nil)
 
-// Struct65 is the wasm struct type sub final () struct().
+// Struct65 is the wasm struct type (struct).
 type Struct65 struct {
 }
 
@@ -646,392 +646,393 @@ type Host interface {
 
 // Instance is an instantiated module.
 type Instance struct {
-	host   Host
-	funcs  []*rt.Func
-	tab0   *rt.Table[*rt.Func]
-	g0     *rt.Global[any]
-	g1     *rt.Global[any]
-	g2     *rt.Global[any]
-	g3     *rt.Global[any]
-	g4     *rt.Global[any]
-	g5     *rt.Global[any]
-	g6     *rt.Global[any]
-	g7     *rt.Global[any]
-	g8     *rt.Global[any]
-	g9     *rt.Global[any]
-	g10    *rt.Global[any]
-	g11    *rt.Global[any]
-	g12    *rt.Global[any]
-	g13    *rt.Global[any]
-	g14    *rt.Global[any]
-	g15    *rt.Global[any]
-	g16    *rt.Global[any]
-	g17    *rt.Global[any]
-	g18    *rt.Global[any]
-	g19    *rt.Global[any]
-	g20    *rt.Global[any]
-	g21    *rt.Global[any]
-	g22    *rt.Global[any]
-	g23    *rt.Global[any]
-	g24    *rt.Global[any]
-	g25    *rt.Global[any]
-	g26    *rt.Global[any]
-	g27    *rt.Global[any]
-	g28    *rt.Global[any]
-	g29    *rt.Global[any]
-	g30    *rt.Global[any]
-	g31    *rt.Global[any]
-	g32    *rt.Global[any]
-	g33    *rt.Global[any]
-	g34    *rt.Global[any]
-	g35    *rt.Global[any]
-	g36    *rt.Global[any]
-	g37    *rt.Global[any]
-	g38    *rt.Global[any]
-	g39    *rt.Global[any]
-	g40    *rt.Global[any]
-	g41    *rt.Global[any]
-	g42    *rt.Global[any]
-	g43    *rt.Global[any]
-	g44    *rt.Global[any]
-	g45    *rt.Global[any]
-	g46    *rt.Global[any]
-	g47    *rt.Global[any]
-	g48    *rt.Global[any]
-	g49    *rt.Global[any]
-	g50    *rt.Global[any]
-	g51    *rt.Global[any]
-	g52    *rt.Global[any]
-	g53    *rt.Global[any]
-	g54    *rt.Global[any]
-	g55    *rt.Global[any]
-	g56    *rt.Global[any]
-	g57    *rt.Global[any]
-	g58    *rt.Global[any]
-	g59    *rt.Global[any]
-	g60    *rt.Global[any]
-	g61    *rt.Global[any]
-	g62    *rt.Global[any]
-	g63    *rt.Global[any]
-	g64    *rt.Global[any]
-	g65    *rt.Global[any]
-	g66    *rt.Global[any]
-	g67    *rt.Global[any]
-	g68    *rt.Global[any]
-	g69    *rt.Global[any]
-	g70    *rt.Global[any]
-	g71    *rt.Global[any]
-	g72    *rt.Global[any]
-	g73    *rt.Global[any]
-	g74    *rt.Global[any]
-	g75    *rt.Global[any]
-	g76    *rt.Global[any]
-	g77    *rt.Global[any]
-	g78    *rt.Global[any]
-	g79    *rt.Global[any]
-	g80    *rt.Global[any]
-	g81    *rt.Global[any]
-	g82    *rt.Global[any]
-	g83    *rt.Global[any]
-	g84    *rt.Global[any]
-	g85    *rt.Global[any]
-	g86    *rt.Global[any]
-	g87    *rt.Global[any]
-	g88    *rt.Global[any]
-	g89    *rt.Global[any]
-	g90    *rt.Global[any]
-	g91    *rt.Global[any]
-	g92    *rt.Global[any]
-	g93    *rt.Global[any]
-	g94    *rt.Global[any]
-	g95    *rt.Global[any]
-	g96    *rt.Global[any]
-	g97    *rt.Global[any]
-	g98    *rt.Global[any]
-	g99    *rt.Global[any]
-	g100   *rt.Global[any]
-	g101   *rt.Global[any]
-	g102   *rt.Global[any]
-	g103   *rt.Global[any]
-	g104   *rt.Global[any]
-	g105   *rt.Global[any]
-	g106   *rt.Global[any]
-	g107   *rt.Global[any]
-	g108   *rt.Global[any]
-	g109   *rt.Global[any]
-	g110   *rt.Global[any]
-	g111   *rt.Global[any]
-	g112   *rt.Global[any]
-	g113   *rt.Global[any]
-	g114   *rt.Global[any]
-	g115   *rt.Global[any]
-	g116   *rt.Global[any]
-	g117   *rt.Global[any]
-	g118   *rt.Global[any]
-	g119   *rt.Global[any]
-	g120   *rt.Global[any]
-	g121   *rt.Global[any]
-	g122   *rt.Global[any]
-	g123   *rt.Global[any]
-	g124   *rt.Global[any]
-	g125   *rt.Global[any]
-	g126   *rt.Global[any]
-	g127   *rt.Global[any]
-	g128   *rt.Global[any]
-	g129   *rt.Global[any]
-	g130   *rt.Global[any]
-	g131   *rt.Global[any]
-	g132   *rt.Global[any]
-	g133   *rt.Global[any]
-	g134   *rt.Global[any]
-	g135   *rt.Global[any]
-	g136   *rt.Global[any]
-	g137   *rt.Global[any]
-	g138   *rt.Global[any]
-	g139   *rt.Global[any]
-	g140   *rt.Global[any]
-	g141   *rt.Global[any]
-	g142   *rt.Global[any]
-	g143   *rt.Global[any]
-	g144   *rt.Global[any]
-	g145   *rt.Global[any]
-	g146   *rt.Global[any]
-	g147   *rt.Global[any]
-	g148   *rt.Global[any]
-	g149   *rt.Global[any]
-	g150   *rt.Global[any]
-	g151   *rt.Global[any]
-	g152   *rt.Global[any]
-	g153   *rt.Global[any]
-	g154   *rt.Global[any]
-	g155   *rt.Global[any]
-	g156   *rt.Global[any]
-	g157   *rt.Global[any]
-	g158   *rt.Global[any]
-	g159   *rt.Global[any]
-	g160   *rt.Global[any]
-	g161   *rt.Global[any]
-	g162   *rt.Global[any]
-	g163   *rt.Global[any]
-	g164   *rt.Global[any]
-	g165   *rt.Global[any]
-	g166   *rt.Global[any]
-	g167   *rt.Global[any]
-	g168   *rt.Global[any]
-	g169   *rt.Global[any]
-	g170   *rt.Global[any]
-	g171   *rt.Global[any]
-	g172   *rt.Global[any]
-	g173   *rt.Global[any]
-	g174   *rt.Global[any]
-	g175   *rt.Global[any]
-	g176   *rt.Global[any]
-	g177   *rt.Global[any]
-	g178   *rt.Global[any]
-	g179   *rt.Global[any]
-	g180   *rt.Global[any]
-	g181   *rt.Global[any]
-	g182   *rt.Global[any]
-	g183   *rt.Global[any]
-	g184   *rt.Global[any]
-	g185   *rt.Global[any]
-	g186   *rt.Global[any]
-	g187   *rt.Global[any]
-	g188   *rt.Global[any]
-	g189   *rt.Global[any]
-	g190   *rt.Global[any]
-	g191   *rt.Global[any]
-	g192   *rt.Global[any]
-	g193   *rt.Global[any]
-	g194   *rt.Global[any]
-	g195   *rt.Global[any]
-	g196   *rt.Global[any]
-	g197   *rt.Global[any]
-	g198   *rt.Global[any]
-	g199   *rt.Global[any]
-	g200   *rt.Global[any]
-	g201   *rt.Global[any]
-	g202   *rt.Global[any]
-	g203   *rt.Global[any]
-	g204   *rt.Global[any]
-	g205   *rt.Global[any]
-	g206   *rt.Global[any]
-	g207   *rt.Global[any]
-	g208   *rt.Global[any]
-	g209   *rt.Global[any]
-	g210   *rt.Global[any]
-	g211   *rt.Global[any]
-	g212   *rt.Global[any]
-	g213   *rt.Global[any]
-	g214   *rt.Global[any]
-	g215   *rt.Global[any]
-	g216   *rt.Global[any]
-	g217   *rt.Global[any]
-	g218   *rt.Global[any]
-	g219   *rt.Global[any]
-	g220   *rt.Global[any]
-	g221   *rt.Global[any]
-	g222   *rt.Global[any]
-	g223   *rt.Global[any]
-	g224   *rt.Global[any]
-	g225   *rt.Global[any]
-	g226   *rt.Global[any]
-	g227   *rt.Global[any]
-	g228   *rt.Global[any]
-	g229   *rt.Global[any]
-	g230   *rt.Global[any]
-	g231   *rt.Global[any]
-	g232   *rt.Global[any]
-	g233   *rt.Global[any]
-	g234   *rt.Global[any]
-	g235   *rt.Global[any]
-	g236   *rt.Global[any]
-	g237   *rt.Global[any]
-	g238   *rt.Global[any]
-	g239   *rt.Global[any]
-	g240   *rt.Global[any]
-	g241   *rt.Global[any]
-	g242   *rt.Global[any]
-	g243   *rt.Global[any]
-	g244   *rt.Global[any]
-	g245   *rt.Global[any]
-	g246   *rt.Global[any]
-	g247   *rt.Global[any]
-	g248   *rt.Global[any]
-	g249   *rt.Global[any]
-	g250   *rt.Global[any]
-	g251   *rt.Global[any]
-	g252   *rt.Global[any]
-	g253   *rt.Global[any]
-	g254   *rt.Global[any]
-	g255   *rt.Global[any]
-	g256   *rt.Global[any]
-	g257   *rt.Global[any]
-	g258   *rt.Global[any]
-	g259   *rt.Global[any]
-	g260   *rt.Global[any]
-	g261   *rt.Global[any]
-	g262   *rt.Global[any]
-	g263   *rt.Global[any]
-	g264   *rt.Global[any]
-	g265   *rt.Global[any]
-	g266   *rt.Global[any]
-	g267   *rt.Global[any]
-	g268   *rt.Global[any]
-	g269   *rt.Global[any]
-	g270   *rt.Global[any]
-	g271   *rt.Global[any]
-	g272   *rt.Global[any]
-	g273   *rt.Global[any]
-	g274   *rt.Global[any]
-	g275   *rt.Global[any]
-	g276   *rt.Global[any]
-	g277   *rt.Global[any]
-	g278   *rt.Global[any]
-	g279   *Array10
-	g280   *Struct11
-	g281   *Struct1
-	g282   *Struct1
-	g283   *Struct1
-	g284   *Struct1
-	g285   *Struct1
-	g286   *Struct1
-	g287   *Struct1
-	g288   *Struct0
-	g289   *Struct11
-	g290   *Struct11
-	g291   *Struct11
-	g292   *Struct11
-	g293   *Struct1
-	g294   *Struct1
-	g295   *Array10
-	g296   *Struct1
-	g297   *Struct1
-	g298   *Struct1
-	g299   *Struct1
-	g300   *Struct1
-	g301   *Struct1
-	g302   *Struct1
-	g303   *Struct1
-	g304   *Struct1
-	g305   *Struct1
-	g306   *Struct1
-	g307   int64
-	g308   *Struct1
-	g309   *Struct1
-	g310   *Struct1
-	g311   *Struct1
-	g312   *Struct0
-	g313   *Struct1
-	g314   *Struct1
-	g315   *Struct1
-	g316   *Struct1
-	g317   *Struct1
-	g318   *Struct1
-	g319   *Struct1
-	g320   *Struct1
-	g321   *Struct1
-	g322   *Struct1
-	g323   *Array13
-	g324   *Array17
-	g325   *Struct1
-	g326   *Struct1
-	g327   *Struct1
-	g328   *Struct1
-	g329   *Struct1
-	g330   *Array13
-	g331   *Struct1
-	g332   *Struct1
-	g333   *Struct1
-	g334   *Struct1
-	g335   *Array3
-	g336   *Struct1
-	g337   *Struct1
-	g338   *Struct1
-	g339   *Struct1
-	g340   *Struct1
-	g341   *Struct1
-	g342   *Struct1
-	g343   *Struct4
-	g344   *Struct1
-	g345   *Struct1
-	tag0   *rt.Tag
-	tag1   *rt.Tag
-	elem0  []*rt.Func
-	elem1  []*rt.Func
-	elem2  []*rt.Func
-	elem3  []*rt.Func
-	elem4  []*rt.Func
-	elem5  []*rt.Func
-	elem6  []*rt.Func
-	elem7  []*rt.Func
-	elem8  []*rt.Func
-	elem9  []*rt.Func
-	elem10 []*rt.Func
-	elem11 []*rt.Func
-	elem12 []*rt.Func
-	elem13 []*rt.Func
-	elem14 []*rt.Func
-	elem15 []*rt.Func
-	elem16 []*rt.Func
-	elem17 []*rt.Func
-	elem18 []*rt.Func
-	elem19 []*rt.Func
-	elem20 []*rt.Func
-	elem21 []*rt.Func
-	elem22 []*rt.Func
-	elem23 []*rt.Func
-	elem24 []*rt.Func
-	elem25 []*rt.Func
-	elem26 []*rt.Func
-	elem27 []*rt.Func
-	elem28 []*rt.Func
-	elem29 []*rt.Func
-	elem30 []*rt.Func
-	elem31 []*rt.Func
-	elem32 []*rt.Func
-	elem33 []*rt.Func
-	elem34 []*rt.Func
+	host    Host
+	funcs   []*rt.Func
+	tab0    *rt.Table[*rt.Func]
+	g0      *rt.Global[any]
+	g1      *rt.Global[any]
+	g2      *rt.Global[any]
+	g3      *rt.Global[any]
+	g4      *rt.Global[any]
+	g5      *rt.Global[any]
+	g6      *rt.Global[any]
+	g7      *rt.Global[any]
+	g8      *rt.Global[any]
+	g9      *rt.Global[any]
+	g10     *rt.Global[any]
+	g11     *rt.Global[any]
+	g12     *rt.Global[any]
+	g13     *rt.Global[any]
+	g14     *rt.Global[any]
+	g15     *rt.Global[any]
+	g16     *rt.Global[any]
+	g17     *rt.Global[any]
+	g18     *rt.Global[any]
+	g19     *rt.Global[any]
+	g20     *rt.Global[any]
+	g21     *rt.Global[any]
+	g22     *rt.Global[any]
+	g23     *rt.Global[any]
+	g24     *rt.Global[any]
+	g25     *rt.Global[any]
+	g26     *rt.Global[any]
+	g27     *rt.Global[any]
+	g28     *rt.Global[any]
+	g29     *rt.Global[any]
+	g30     *rt.Global[any]
+	g31     *rt.Global[any]
+	g32     *rt.Global[any]
+	g33     *rt.Global[any]
+	g34     *rt.Global[any]
+	g35     *rt.Global[any]
+	g36     *rt.Global[any]
+	g37     *rt.Global[any]
+	g38     *rt.Global[any]
+	g39     *rt.Global[any]
+	g40     *rt.Global[any]
+	g41     *rt.Global[any]
+	g42     *rt.Global[any]
+	g43     *rt.Global[any]
+	g44     *rt.Global[any]
+	g45     *rt.Global[any]
+	g46     *rt.Global[any]
+	g47     *rt.Global[any]
+	g48     *rt.Global[any]
+	g49     *rt.Global[any]
+	g50     *rt.Global[any]
+	g51     *rt.Global[any]
+	g52     *rt.Global[any]
+	g53     *rt.Global[any]
+	g54     *rt.Global[any]
+	g55     *rt.Global[any]
+	g56     *rt.Global[any]
+	g57     *rt.Global[any]
+	g58     *rt.Global[any]
+	g59     *rt.Global[any]
+	g60     *rt.Global[any]
+	g61     *rt.Global[any]
+	g62     *rt.Global[any]
+	g63     *rt.Global[any]
+	g64     *rt.Global[any]
+	g65     *rt.Global[any]
+	g66     *rt.Global[any]
+	g67     *rt.Global[any]
+	g68     *rt.Global[any]
+	g69     *rt.Global[any]
+	g70     *rt.Global[any]
+	g71     *rt.Global[any]
+	g72     *rt.Global[any]
+	g73     *rt.Global[any]
+	g74     *rt.Global[any]
+	g75     *rt.Global[any]
+	g76     *rt.Global[any]
+	g77     *rt.Global[any]
+	g78     *rt.Global[any]
+	g79     *rt.Global[any]
+	g80     *rt.Global[any]
+	g81     *rt.Global[any]
+	g82     *rt.Global[any]
+	g83     *rt.Global[any]
+	g84     *rt.Global[any]
+	g85     *rt.Global[any]
+	g86     *rt.Global[any]
+	g87     *rt.Global[any]
+	g88     *rt.Global[any]
+	g89     *rt.Global[any]
+	g90     *rt.Global[any]
+	g91     *rt.Global[any]
+	g92     *rt.Global[any]
+	g93     *rt.Global[any]
+	g94     *rt.Global[any]
+	g95     *rt.Global[any]
+	g96     *rt.Global[any]
+	g97     *rt.Global[any]
+	g98     *rt.Global[any]
+	g99     *rt.Global[any]
+	g100    *rt.Global[any]
+	g101    *rt.Global[any]
+	g102    *rt.Global[any]
+	g103    *rt.Global[any]
+	g104    *rt.Global[any]
+	g105    *rt.Global[any]
+	g106    *rt.Global[any]
+	g107    *rt.Global[any]
+	g108    *rt.Global[any]
+	g109    *rt.Global[any]
+	g110    *rt.Global[any]
+	g111    *rt.Global[any]
+	g112    *rt.Global[any]
+	g113    *rt.Global[any]
+	g114    *rt.Global[any]
+	g115    *rt.Global[any]
+	g116    *rt.Global[any]
+	g117    *rt.Global[any]
+	g118    *rt.Global[any]
+	g119    *rt.Global[any]
+	g120    *rt.Global[any]
+	g121    *rt.Global[any]
+	g122    *rt.Global[any]
+	g123    *rt.Global[any]
+	g124    *rt.Global[any]
+	g125    *rt.Global[any]
+	g126    *rt.Global[any]
+	g127    *rt.Global[any]
+	g128    *rt.Global[any]
+	g129    *rt.Global[any]
+	g130    *rt.Global[any]
+	g131    *rt.Global[any]
+	g132    *rt.Global[any]
+	g133    *rt.Global[any]
+	g134    *rt.Global[any]
+	g135    *rt.Global[any]
+	g136    *rt.Global[any]
+	g137    *rt.Global[any]
+	g138    *rt.Global[any]
+	g139    *rt.Global[any]
+	g140    *rt.Global[any]
+	g141    *rt.Global[any]
+	g142    *rt.Global[any]
+	g143    *rt.Global[any]
+	g144    *rt.Global[any]
+	g145    *rt.Global[any]
+	g146    *rt.Global[any]
+	g147    *rt.Global[any]
+	g148    *rt.Global[any]
+	g149    *rt.Global[any]
+	g150    *rt.Global[any]
+	g151    *rt.Global[any]
+	g152    *rt.Global[any]
+	g153    *rt.Global[any]
+	g154    *rt.Global[any]
+	g155    *rt.Global[any]
+	g156    *rt.Global[any]
+	g157    *rt.Global[any]
+	g158    *rt.Global[any]
+	g159    *rt.Global[any]
+	g160    *rt.Global[any]
+	g161    *rt.Global[any]
+	g162    *rt.Global[any]
+	g163    *rt.Global[any]
+	g164    *rt.Global[any]
+	g165    *rt.Global[any]
+	g166    *rt.Global[any]
+	g167    *rt.Global[any]
+	g168    *rt.Global[any]
+	g169    *rt.Global[any]
+	g170    *rt.Global[any]
+	g171    *rt.Global[any]
+	g172    *rt.Global[any]
+	g173    *rt.Global[any]
+	g174    *rt.Global[any]
+	g175    *rt.Global[any]
+	g176    *rt.Global[any]
+	g177    *rt.Global[any]
+	g178    *rt.Global[any]
+	g179    *rt.Global[any]
+	g180    *rt.Global[any]
+	g181    *rt.Global[any]
+	g182    *rt.Global[any]
+	g183    *rt.Global[any]
+	g184    *rt.Global[any]
+	g185    *rt.Global[any]
+	g186    *rt.Global[any]
+	g187    *rt.Global[any]
+	g188    *rt.Global[any]
+	g189    *rt.Global[any]
+	g190    *rt.Global[any]
+	g191    *rt.Global[any]
+	g192    *rt.Global[any]
+	g193    *rt.Global[any]
+	g194    *rt.Global[any]
+	g195    *rt.Global[any]
+	g196    *rt.Global[any]
+	g197    *rt.Global[any]
+	g198    *rt.Global[any]
+	g199    *rt.Global[any]
+	g200    *rt.Global[any]
+	g201    *rt.Global[any]
+	g202    *rt.Global[any]
+	g203    *rt.Global[any]
+	g204    *rt.Global[any]
+	g205    *rt.Global[any]
+	g206    *rt.Global[any]
+	g207    *rt.Global[any]
+	g208    *rt.Global[any]
+	g209    *rt.Global[any]
+	g210    *rt.Global[any]
+	g211    *rt.Global[any]
+	g212    *rt.Global[any]
+	g213    *rt.Global[any]
+	g214    *rt.Global[any]
+	g215    *rt.Global[any]
+	g216    *rt.Global[any]
+	g217    *rt.Global[any]
+	g218    *rt.Global[any]
+	g219    *rt.Global[any]
+	g220    *rt.Global[any]
+	g221    *rt.Global[any]
+	g222    *rt.Global[any]
+	g223    *rt.Global[any]
+	g224    *rt.Global[any]
+	g225    *rt.Global[any]
+	g226    *rt.Global[any]
+	g227    *rt.Global[any]
+	g228    *rt.Global[any]
+	g229    *rt.Global[any]
+	g230    *rt.Global[any]
+	g231    *rt.Global[any]
+	g232    *rt.Global[any]
+	g233    *rt.Global[any]
+	g234    *rt.Global[any]
+	g235    *rt.Global[any]
+	g236    *rt.Global[any]
+	g237    *rt.Global[any]
+	g238    *rt.Global[any]
+	g239    *rt.Global[any]
+	g240    *rt.Global[any]
+	g241    *rt.Global[any]
+	g242    *rt.Global[any]
+	g243    *rt.Global[any]
+	g244    *rt.Global[any]
+	g245    *rt.Global[any]
+	g246    *rt.Global[any]
+	g247    *rt.Global[any]
+	g248    *rt.Global[any]
+	g249    *rt.Global[any]
+	g250    *rt.Global[any]
+	g251    *rt.Global[any]
+	g252    *rt.Global[any]
+	g253    *rt.Global[any]
+	g254    *rt.Global[any]
+	g255    *rt.Global[any]
+	g256    *rt.Global[any]
+	g257    *rt.Global[any]
+	g258    *rt.Global[any]
+	g259    *rt.Global[any]
+	g260    *rt.Global[any]
+	g261    *rt.Global[any]
+	g262    *rt.Global[any]
+	g263    *rt.Global[any]
+	g264    *rt.Global[any]
+	g265    *rt.Global[any]
+	g266    *rt.Global[any]
+	g267    *rt.Global[any]
+	g268    *rt.Global[any]
+	g269    *rt.Global[any]
+	g270    *rt.Global[any]
+	g271    *rt.Global[any]
+	g272    *rt.Global[any]
+	g273    *rt.Global[any]
+	g274    *rt.Global[any]
+	g275    *rt.Global[any]
+	g276    *rt.Global[any]
+	g277    *rt.Global[any]
+	g278    *rt.Global[any]
+	g279    *Array10
+	g280    *Struct11
+	g281    *Struct1
+	g282    *Struct1
+	g283    *Struct1
+	g284    *Struct1
+	g285    *Struct1
+	g286    *Struct1
+	g287    *Struct1
+	g288    *Struct0
+	g289    *Struct11
+	g290    *Struct11
+	g291    *Struct11
+	g292    *Struct11
+	g293    *Struct1
+	g294    *Struct1
+	g295    *Array10
+	g296    *Struct1
+	g297    *Struct1
+	g298    *Struct1
+	g299    *Struct1
+	g300    *Struct1
+	g301    *Struct1
+	g302    *Struct1
+	g303    *Struct1
+	g304    *Struct1
+	g305    *Struct1
+	g306    *Struct1
+	g307    int64
+	g308    *Struct1
+	g309    *Struct1
+	g310    *Struct1
+	g311    *Struct1
+	g312    *Struct0
+	g313    *Struct1
+	g314    *Struct1
+	g315    *Struct1
+	g316    *Struct1
+	g317    *Struct1
+	g318    *Struct1
+	g319    *Struct1
+	g320    *Struct1
+	g321    *Struct1
+	g322    *Struct1
+	g323    *Array13
+	g324    *Array17
+	g325    *Struct1
+	g326    *Struct1
+	g327    *Struct1
+	g328    *Struct1
+	g329    *Struct1
+	g330    *Array13
+	g331    *Struct1
+	g332    *Struct1
+	g333    *Struct1
+	g334    *Struct1
+	g335    *Array3
+	g336    *Struct1
+	g337    *Struct1
+	g338    *Struct1
+	g339    *Struct1
+	g340    *Struct1
+	g341    *Struct1
+	g342    *Struct1
+	g343    *Struct4
+	g344    *Struct1
+	g345    *Struct1
+	tag0    *rt.Tag
+	tag1    *rt.Tag
+	jsCache rt.JSCache
+	elem0   []*rt.Func
+	elem1   []*rt.Func
+	elem2   []*rt.Func
+	elem3   []*rt.Func
+	elem4   []*rt.Func
+	elem5   []*rt.Func
+	elem6   []*rt.Func
+	elem7   []*rt.Func
+	elem8   []*rt.Func
+	elem9   []*rt.Func
+	elem10  []*rt.Func
+	elem11  []*rt.Func
+	elem12  []*rt.Func
+	elem13  []*rt.Func
+	elem14  []*rt.Func
+	elem15  []*rt.Func
+	elem16  []*rt.Func
+	elem17  []*rt.Func
+	elem18  []*rt.Func
+	elem19  []*rt.Func
+	elem20  []*rt.Func
+	elem21  []*rt.Func
+	elem22  []*rt.Func
+	elem23  []*rt.Func
+	elem24  []*rt.Func
+	elem25  []*rt.Func
+	elem26  []*rt.Func
+	elem27  []*rt.Func
+	elem28  []*rt.Func
+	elem29  []*rt.Func
+	elem30  []*rt.Func
+	elem31  []*rt.Func
+	elem32  []*rt.Func
+	elem33  []*rt.Func
+	elem34  []*rt.Func
 }
 
 // New instantiates the module. host may be nil if the module has no imports.
@@ -1590,7 +1591,7 @@ func (m *Instance) f5(d int, p0 any, p1 any) any {
 }
 
 func (m *Instance) f6(d int, p0 any) int32 {
-	return rt.JSLength(p0)
+	return m.jsCache.Length(p0)
 }
 
 func (m *Instance) f7(d int, p0 any) int32 {
@@ -1618,16 +1619,10 @@ func (m *Instance) f12(d int, p0 any) any {
 }
 
 func (m *Instance) setThisModule(d int, p0 any) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return
 }
 
 func (m *Instance) f14(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Array13
 	var s0_1 *Array17
 	s0 = NewArray13(rt.MakeSlice(int32(16), m.g301))
@@ -1741,9 +1736,6 @@ B1:
 }
 
 func (m *Instance) wasmI16ArrayGet(d int, p0 any, p1 int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	if !(rt.IsType(p0, rttArray20)) {
 		panic(rt.ErrCast)
 	}
@@ -1751,9 +1743,6 @@ func (m *Instance) wasmI16ArrayGet(d int, p0 any, p1 int32) int32 {
 }
 
 func (m *Instance) wasmI16ArraySet(d int, p0 any, p1 int32, p2 int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	if !(rt.IsType(p0, rttArray20)) {
 		panic(rt.ErrCast)
 	}
@@ -1796,9 +1785,6 @@ func (m *Instance) f19(d int, p0 *Struct0) {
 }
 
 func (m *Instance) f20(d int, p0 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	if p0 == nil {
 		goto B2
@@ -1813,16 +1799,10 @@ B1:
 }
 
 func (m *Instance) f21(d int, p0 *Struct0) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	panic(rt.ErrUnreachable)
 }
 
 func (m *Instance) f22(d int, p0 *Struct0) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l1, l3, s0, s1_2 *Struct1
 	var l2 *Struct11
 	var l4 int64
@@ -2061,7 +2041,11 @@ B13:
 		goto B12
 	}
 	s0_1 = l8.F1
-	s0_4 = m.f6(d+1, s0_1)
+	if rt.EfaceKey(s0_1) == m.jsCache.Key {
+		s0_4 = int32(len(m.jsCache.ASCII))
+	} else {
+		s0_4 = m.jsCache.LengthSlow(s0_1)
+	}
 	s0_1 = l8.F1
 	s0 = m.f8(d+1, s0_1, m.g19.V, int32(0))
 	l7 = s0
@@ -2153,16 +2137,10 @@ func (m *Instance) f25(d int, p0 *Struct0) *Struct1 {
 }
 
 func (m *Instance) f26(d int, p0 *Struct0) *Struct8 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct8(int32(51), (*Struct2)(nil), int32(0), (*Struct5)(nil), (*Struct1)(nil), p0)
 }
 
 func (m *Instance) f27(d int, p0 *Struct0) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct1) {
 		panic(rt.ErrCast)
 	}
@@ -2170,9 +2148,6 @@ func (m *Instance) f27(d int, p0 *Struct0) *Struct1 {
 }
 
 func (m *Instance) f28(d int, p0 any) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct1(int32(4), p0)
 }
 
@@ -2255,16 +2230,10 @@ func (m *Instance) f31(d int, p0 *Struct8) *Struct1 {
 }
 
 func (m *Instance) f32(d int, p0 *Struct8) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g282
 }
 
 func (m *Instance) f33(d int, p0 *Struct8) *Struct0 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Struct5
 	s0 = p0.F3
 	return rt.ViewAs[Struct0](s0)
@@ -2464,23 +2433,14 @@ func (m *Instance) f38(d int, p0 *Struct0) *Struct0 {
 }
 
 func (m *Instance) f39(d int, p0 *Struct0) *Array10 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g295
 }
 
 func (m *Instance) f40(d int, p0 int32, p1 *Array10) *Struct11 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct11(int32(10), int32(0), p0, p1)
 }
 
 func (m *Instance) f41(d int, p0 *Struct0) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Struct1
 	if p0 == m.g288 {
 		s0 = m.g294
@@ -2516,16 +2476,10 @@ func (m *Instance) f43(d int, p0 *Struct0) *Struct1 {
 }
 
 func (m *Instance) f44(d int, p0 *Struct0) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g308
 }
 
 func (m *Instance) f45(d int, p0 *Struct8) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g322
 }
 
@@ -2557,9 +2511,6 @@ func (m *Instance) f46(d int, p0 *Struct8) *Struct1 {
 }
 
 func (m *Instance) f47(d int, p0 *Struct8) *Struct0 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l1 *Struct5
 	l1 = p0.F3
 	if l1 == nil {
@@ -2570,9 +2521,6 @@ B1:
 }
 
 func (m *Instance) f48(d int, p0 *Struct0) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g315
 }
 
@@ -2613,9 +2561,6 @@ L1:
 }
 
 func (m *Instance) f50(d int, p0 *Struct7, p1 *Struct2) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Struct2
 	s0 = p0.F1
 	if s0 == nil {
@@ -2625,9 +2570,6 @@ func (m *Instance) f50(d int, p0 *Struct7, p1 *Struct2) {
 }
 
 func (m *Instance) f51(d int, p0 *Struct0) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct24) {
 		panic(rt.ErrCast)
 	}
@@ -2635,9 +2577,6 @@ func (m *Instance) f51(d int, p0 *Struct0) *Struct1 {
 }
 
 func (m *Instance) f52(d int, p0 *Struct1, p1 *Struct1) *Struct1 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0, s1 any
 	s0 = p0.F1
 	s1 = p1.F1
@@ -2683,9 +2622,6 @@ func (m *Instance) f53(d int, p0 *Struct0) *Struct1 {
 }
 
 func (m *Instance) f54(d int, p0 any) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct2(int32(32), p0, (*Struct1)(nil))
 }
 
@@ -2719,11 +2655,10 @@ func (m *Instance) f57(d int, p0 *Struct0) *Struct1 {
 	var l6, s2, s0_4 *Array3
 	var l7, l8, s1, s0_3, s4, s2_2 int64
 	var s0_1, s1_1, s2_3 int32
-	var s2_1, s1_2, s0_6 *Struct0
+	var s2_1, s1_2, s0_7 *Struct0
+	var s0_6 any
 	var x9 *rt.Exception
-	var s0_7 any
 	var c9 int
-	_ = s0_6
 	_ = s0_7
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct4) {
 		panic(rt.ErrCast)
@@ -2799,7 +2734,12 @@ B2:
 		l3 = NewStruct9(int32(87), l4, s2_2, int64(0), (*Struct0)(nil))
 		s0_1 = m.f65(d+1, rt.ViewAs[Struct0](l3))
 		if s0_1 != 0 {
-			s0_1 = m.f6(d+1, m.g36.V)
+			s0_6 = m.g36.V
+			if rt.EfaceKey(s0_6) == m.jsCache.Key {
+				s0_1 = int32(len(m.jsCache.ASCII))
+			} else {
+				s0_1 = m.jsCache.LengthSlow(s0_6)
+			}
 			if int64(uint32(s0_1)) == 0 {
 			L12:
 				for {
@@ -2870,13 +2810,13 @@ B2:
 	}()
 	switch c9 {
 	case -1:
-		s0_6 = x9.Values[0].(*Struct0)
+		s0_7 = x9.Values[0].(*Struct0)
 		s1_2 = x9.Values[1].(*Struct0)
 		s0 = m.f68(d + 1)
 		m.f59(d+1, s0)
 		panic(x9)
 	case -2:
-		s0_7 = x9.Values[0].(any)
+		s0_6 = x9.Values[0].(any)
 		s0 = m.f68(d + 1)
 		m.f59(d+1, s0)
 		panic(x9)
@@ -2893,9 +2833,6 @@ B1:
 }
 
 func (m *Instance) f58(d int, p0 *Struct0) *Array10 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewArray10([]*Struct0{m.g288})
 }
 
@@ -2999,9 +2936,6 @@ B1:
 }
 
 func (m *Instance) f62(d int, p0 *Struct4) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Array3
 	var s0_1 int32
 	s0 = p0.F2
@@ -3039,9 +2973,6 @@ func (m *Instance) f63(d int, p0 *Struct8) *Struct1 {
 }
 
 func (m *Instance) f64(d int, p0 *Struct8) *Struct0 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *Struct5
 	var s1_1 int64
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct16) {
@@ -3126,9 +3057,6 @@ func (m *Instance) f67(d int, p0 *Struct0) *Struct1 {
 }
 
 func (m *Instance) f68(d int) *Struct4 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Struct4
 	var s2 *Array3
 	s0 = m.g343

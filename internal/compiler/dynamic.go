@@ -31,11 +31,11 @@ func (c *compiler) builtinBody(name string, ft *wasm.FuncType) string {
 	case "fromCodePoint":
 		return "return rt.JSFromCodePoint(p0)"
 	case "charCodeAt":
-		return "return rt.JSCharCodeAt(p0, p1)"
+		return "return m.jsCache.CharCodeAt(p0, p1)"
 	case "codePointAt":
-		return "return rt.JSCodePointAt(p0, p1)"
+		return "return m.jsCache.CodePointAt(p0, p1)"
 	case "length":
-		return "return rt.JSLength(p0)"
+		return "return m.jsCache.Length(p0)"
 	case "concat":
 		return "return rt.JSConcat(p0, p1)"
 	case "substring":

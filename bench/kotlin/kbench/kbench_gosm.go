@@ -18,7 +18,7 @@ var (
 
 var rttAnyArray = rt.NewRTT(rt.KArray, nil, true, "g04216d06681e37b0cae8058f.0", nil)
 
-// AnyArray is the wasm array type sub final () array(ref null any).
+// AnyArray is the wasm array type (array (ref null any)).
 type AnyArray struct {
 	Elems []any
 }
@@ -36,7 +36,7 @@ func NewAnyArray(elems []any) *AnyArray {
 
 var rttSpecialITable = rt.NewRTT(rt.KStruct, nil, true, "g108eb2fdd25a141caeb4110c.0", nil)
 
-// SpecialITable is the wasm struct type sub final () struct(ref null any,ref null any,ref null any,ref null any,ref null any,ref null any,ref null any,ref null any,ref null any,ref null any,ref null any,ref null any,ref null any,ref null an....
+// SpecialITable is the wasm struct type (struct (field $ (ref null any)) (field $ (ref null any)) (field $ (ref null any)) (field $ (ref null any)) (field $ (ref null any)) (field $ (ref null any)) (field $ (ref null any)) ...).
 type SpecialITable struct {
 	F0  any
 	F1  any
@@ -101,7 +101,7 @@ func newSpecialITableDefault() *SpecialITable {
 
 var rttMixinType = rt.NewRTT(rt.KStruct, nil, true, "g108eb2fdd25a141caeb4110c.1", nil)
 
-// MixinType is the wasm struct type sub final () struct(f64,ref null extern,ref null noextern,i32,ref null i31,ref null any,i16,ref null noextern,ref null func,f64,ref null any,ref null eq,i8,ref null struct,ref null array,ref null arra....
+// MixinType is the wasm struct type (struct (field $ f64) (field $ (ref null extern)) (field $ (ref null noextern)) (field $ i32) (field $ (ref null i31)) (field $ (ref null any)) (field $ i16) (field $ (ref null noextern)) ...).
 type MixinType struct {
 	F0  float64
 	F1  any
@@ -152,7 +152,7 @@ func newMixinTypeDefault() *MixinType {
 
 var rttLongArray = rt.NewRTT(rt.KArray, nil, true, "g2de4d1fef94e2ee76930a8e5.0", nil)
 
-// LongArray is the wasm array type sub final () array(i64).
+// LongArray is the wasm array type (array i64).
 type LongArray struct {
 	Elems []int64
 }
@@ -170,7 +170,7 @@ func NewLongArray(elems []int64) *LongArray {
 
 var rttKotlinWasmInternalWasmCharArray = rt.NewRTT(rt.KArray, nil, true, "ge5e1c8e2b83b19ec39c889a5.0", nil)
 
-// KotlinWasmInternalWasmCharArray is the wasm array type sub final () array(mut i16).
+// KotlinWasmInternalWasmCharArray is the wasm array type (array (mut i16)).
 type KotlinWasmInternalWasmCharArray struct {
 	Elems []int16
 }
@@ -198,7 +198,7 @@ var rttFunc9 = rt.CanonRTT(rt.KFunc, nil, true, "g484ce41559fcc92541197c08.4")
 
 var rttKotlinAny = rt.NewRTT(rt.KStruct, nil, false, "g484ce41559fcc92541197c08.5", func(p unsafe.Pointer) any { return (*KotlinAny)(p) })
 
-// KotlinAny is the wasm struct type sub open () struct(ref rec.7,ref null <g04216d06681e37b0cae8058f.0>,ref rec.8,mut i32).
+// KotlinAny is the wasm struct type (sub (struct (field $vtable (ref $12)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))).
 type KotlinAny struct {
 	rt.Object
 	Vtable   *ClassVTable
@@ -208,13 +208,13 @@ type KotlinAny struct {
 }
 
 // NewKotlinAny allocates a KotlinAny.
-func NewKotlinAny(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinAny {
+func NewKotlinAny(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinAny {
 	p := &KotlinAny{}
 	p.RTT = rttKotlinAny
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -228,7 +228,7 @@ var rttFunc11 = rt.CanonRTT(rt.KFunc, nil, true, "g484ce41559fcc92541197c08.6")
 
 var rttClassVTable = rt.NewRTT(rt.KStruct, nil, false, "g484ce41559fcc92541197c08.7", func(p unsafe.Pointer) any { return (*ClassVTable)(p) })
 
-// ClassVTable is the wasm struct type sub open () struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null rec.6,ref null rec.9,ref null rec.4).
+// ClassVTable is the wasm struct type (sub (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)))).
 type ClassVTable struct {
 	rt.Object
 	SpecialITable *SpecialITable
@@ -238,13 +238,13 @@ type ClassVTable struct {
 }
 
 // NewClassVTable allocates a ClassVTable.
-func NewClassVTable(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func) *ClassVTable {
+func NewClassVTable(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func) *ClassVTable {
 	p := &ClassVTable{}
 	p.RTT = rttClassVTable
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
 	return p
 }
 
@@ -256,7 +256,7 @@ func newClassVTableDefault() *ClassVTable {
 
 var rttRTTI = rt.NewRTT(rt.KStruct, nil, true, "g484ce41559fcc92541197c08.8", nil)
 
-// RTTI is the wasm struct type sub final () struct(ref null <g2de4d1fef94e2ee76930a8e5.0>,ref null rec.8,i32,i32,i64,i32,ref null rec.0,ref null rec.0).
+// RTTI is the wasm struct type (struct (field $implementedIFaceIds (ref null $3)) (field $superClassRtti (ref null $13)) (field $packageNamePoolId i32) (field $simpleNamePoolId i32) (field $klassId i64) ...).
 type RTTI struct {
 	ImplementedIFaceIds    *LongArray
 	SuperClassRtti         *RTTI
@@ -271,16 +271,16 @@ type RTTI struct {
 func (*RTTI) WasmType() *rt.RTT { return rttRTTI }
 
 // NewRTTI allocates a RTTI.
-func NewRTTI(f0 *LongArray, f1 *RTTI, f2 int32, f3 int32, f4 int64, f5 int32, f6 *rt.Func, f7 *rt.Func) *RTTI {
+func NewRTTI(implementedIFaceIds *LongArray, superClassRtti *RTTI, packageNamePoolId int32, simpleNamePoolId int32, klassId int64, typeInfoFlag int32, qualifierStringLoader *rt.Func, simpleNameStringLoader *rt.Func) *RTTI {
 	p := &RTTI{}
-	p.ImplementedIFaceIds = f0
-	p.SuperClassRtti = f1
-	p.PackageNamePoolId = f2
-	p.SimpleNamePoolId = f3
-	p.KlassId = f4
-	p.TypeInfoFlag = f5
-	p.QualifierStringLoader = f6
-	p.SimpleNameStringLoader = f7
+	p.ImplementedIFaceIds = implementedIFaceIds
+	p.SuperClassRtti = superClassRtti
+	p.PackageNamePoolId = packageNamePoolId
+	p.SimpleNamePoolId = simpleNamePoolId
+	p.KlassId = klassId
+	p.TypeInfoFlag = typeInfoFlag
+	p.QualifierStringLoader = qualifierStringLoader
+	p.SimpleNameStringLoader = simpleNameStringLoader
 	return p
 }
 
@@ -293,7 +293,7 @@ var rttFunc14 = rt.CanonRTT(rt.KFunc, nil, true, "g484ce41559fcc92541197c08.9")
 
 var rttClassVTable2 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g484ce41559fcc92541197c08.10", func(p unsafe.Pointer) any { return (*ClassVTable2)(p) })
 
-// ClassVTable2 is the wasm struct type sub final (rec.7) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null rec.6,ref null rec.9,ref null rec.4,ref null rec.9,ref null rec.2,ref null rec.1,ref null rec.3,ref null rec.6).
+// ClassVTable2 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-length> (ref null $14)) ...)), a subtype of ClassVTable.
 type ClassVTable2 struct {
 	ClassVTable
 	GetLength   *rt.Func
@@ -304,18 +304,18 @@ type ClassVTable2 struct {
 }
 
 // NewClassVTable2 allocates a ClassVTable2.
-func NewClassVTable2(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func) *ClassVTable2 {
+func NewClassVTable2(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getLength *rt.Func, get *rt.Func, subSequence *rt.Func, compareTo *rt.Func, compareTo2 *rt.Func) *ClassVTable2 {
 	p := &ClassVTable2{}
 	p.RTT = rttClassVTable2
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetLength = f4
-	p.Get = f5
-	p.SubSequence = f6
-	p.CompareTo = f7
-	p.CompareTo_2 = f8
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetLength = getLength
+	p.Get = get
+	p.SubSequence = subSequence
+	p.CompareTo = compareTo
+	p.CompareTo_2 = compareTo2
 	return p
 }
 
@@ -327,7 +327,7 @@ func newClassVTable2Default() *ClassVTable2 {
 
 var rttKotlinString = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g484ce41559fcc92541197c08.11", func(p unsafe.Pointer) any { return (*KotlinString)(p) })
 
-// KotlinString is the wasm struct type sub final (rec.5) struct(ref rec.10,ref null <g04216d06681e37b0cae8058f.0>,ref rec.8,mut i32,mut ref null rec.11,mut i32,mut ref null <ge5e1c8e2b83b19ec39c889a5.0>).
+// KotlinString is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $15)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $leftIfInSum (mut (ref null $16))) (field $length (mut i32)) ...)), a subtype of KotlinAny.
 type KotlinString struct {
 	KotlinAny
 	LeftIfInSum *KotlinString
@@ -336,16 +336,16 @@ type KotlinString struct {
 }
 
 // NewKotlinString allocates a KotlinString.
-func NewKotlinString(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 int32, f6 *KotlinWasmInternalWasmCharArray) *KotlinString {
+func NewKotlinString(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, leftIfInSum *KotlinString, length int32, chars *KotlinWasmInternalWasmCharArray) *KotlinString {
 	p := &KotlinString{}
 	p.RTT = rttKotlinString
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.LeftIfInSum = f4
-	p.Length = f5
-	p.Chars = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.LeftIfInSum = leftIfInSum
+	p.Length = length
+	p.Chars = chars
 	return p
 }
 
@@ -357,7 +357,7 @@ func newKotlinStringDefault() *KotlinString {
 
 var rttMixinType2 = rt.NewRTT(rt.KStruct, nil, true, "g484ce41559fcc92541197c08.12", nil)
 
-// MixinType2 is the wasm struct type sub final () struct(i32,ref null noextern,i64,i32,ref null any,ref null none,ref null i31,ref null extern,ref null i31,ref null i31,ref null array,ref null eq,ref null any,f64,ref null func,ref null i....
+// MixinType2 is the wasm struct type (struct (field $ i32) (field $ (ref null noextern)) (field $ i64) (field $ i32) (field $ (ref null any)) (field $ (ref null none)) (field $ (ref null i31)) (field $ (ref null extern)) ...).
 type MixinType2 struct {
 	F0  int32
 	F1  any
@@ -408,19 +408,19 @@ func newMixinType2Default() *MixinType2 {
 
 var rttClassVTable3 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "g29e42c9f04f1487399ac8b46.0", func(p unsafe.Pointer) any { return (*ClassVTable3)(p) })
 
-// ClassVTable3 is the wasm struct type sub open (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable3 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)))), a subtype of ClassVTable.
 type ClassVTable3 struct {
 	ClassVTable
 }
 
 // NewClassVTable3 allocates a ClassVTable3.
-func NewClassVTable3(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func) *ClassVTable3 {
+func NewClassVTable3(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func) *ClassVTable3 {
 	p := &ClassVTable3{}
 	p.RTT = rttClassVTable3
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
 	return p
 }
 
@@ -432,19 +432,19 @@ func newClassVTable3Default() *ClassVTable3 {
 
 var rttKotlinNumber = rt.NewRTT(rt.KStruct, rttKotlinAny, false, "gc510a44a2f2106182b678836.0", func(p unsafe.Pointer) any { return (*KotlinNumber)(p) })
 
-// KotlinNumber is the wasm struct type sub open (<g484ce41559fcc92541197c08.5>) struct(ref <g29e42c9f04f1487399ac8b46.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinNumber is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $18)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinNumber struct {
 	KotlinAny
 }
 
 // NewKotlinNumber allocates a KotlinNumber.
-func NewKotlinNumber(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinNumber {
+func NewKotlinNumber(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinNumber {
 	p := &KotlinNumber{}
 	p.RTT = rttKotlinNumber
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -456,7 +456,7 @@ func newKotlinNumberDefault() *KotlinNumber {
 
 var rttMixinType3 = rt.NewRTT(rt.KStruct, nil, true, "gc510a44a2f2106182b678836.1", nil)
 
-// MixinType3 is the wasm struct type sub final () struct(v128,ref null eq,i16,ref null eq,i8,f32,i8,f32,i64,i32,ref null i31,ref null func,i64,ref null noextern,ref null extern,ref null extern).
+// MixinType3 is the wasm struct type (struct (field $ v128) (field $ (ref null eq)) (field $ i16) (field $ (ref null eq)) (field $ i8) (field $ f32) (field $ i8) (field $ f32) (field $ i64) (field $ i32) ...).
 type MixinType3 struct {
 	F0  rt.V128
 	F1  any
@@ -507,21 +507,21 @@ func newMixinType3Default() *MixinType3 {
 
 var rttClassVTable4 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "ga3485604d22e5394954141b6.0", func(p unsafe.Pointer) any { return (*ClassVTable4)(p) })
 
-// ClassVTable4 is the wasm struct type sub open (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable4 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-message> (ref null $9)))), a subtype of ClassVTable.
 type ClassVTable4 struct {
 	ClassVTable
 	GetMessage *rt.Func
 }
 
 // NewClassVTable4 allocates a ClassVTable4.
-func NewClassVTable4(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable4 {
+func NewClassVTable4(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getMessage *rt.Func) *ClassVTable4 {
 	p := &ClassVTable4{}
 	p.RTT = rttClassVTable4
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetMessage = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetMessage = getMessage
 	return p
 }
 
@@ -533,7 +533,7 @@ func newClassVTable4Default() *ClassVTable4 {
 
 var rttKotlinThrowable = rt.NewRTT(rt.KStruct, rttKotlinAny, false, "gdcb9abcca805dabf9871e389.0", func(p unsafe.Pointer) any { return (*KotlinThrowable)(p) })
 
-// KotlinThrowable is the wasm struct type sub open (<g484ce41559fcc92541197c08.5>) struct(ref <ga3485604d22e5394954141b6.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinThrowable is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $21)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinAny.
 type KotlinThrowable struct {
 	KotlinAny
 	Message                  *KotlinString
@@ -542,16 +542,16 @@ type KotlinThrowable struct {
 }
 
 // NewKotlinThrowable allocates a KotlinThrowable.
-func NewKotlinThrowable(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinThrowable {
+func NewKotlinThrowable(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinThrowable {
 	p := &KotlinThrowable{}
 	p.RTT = rttKotlinThrowable
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -563,7 +563,7 @@ func newKotlinThrowableDefault() *KotlinThrowable {
 
 var rttMixinType4 = rt.NewRTT(rt.KStruct, nil, true, "gdcb9abcca805dabf9871e389.1", nil)
 
-// MixinType4 is the wasm struct type sub final () struct(v128,ref null noextern,v128,ref null array,ref null i31,f64,i8,ref null extern,f32,ref null noextern,ref null none,ref null any,i16,ref null any,i64,ref null noextern).
+// MixinType4 is the wasm struct type (struct (field $ v128) (field $ (ref null noextern)) (field $ v128) (field $ (ref null array)) (field $ (ref null i31)) (field $ f64) (field $ i8) (field $ (ref null extern)) ...).
 type MixinType4 struct {
 	F0  rt.V128
 	F1  any
@@ -614,20 +614,20 @@ func newMixinType4Default() *MixinType4 {
 
 var rttClassVTable5 = rt.NewRTT(rt.KStruct, rttClassVTable4, false, "g8362a062748c99fdda00a1e6.0", func(p unsafe.Pointer) any { return (*ClassVTable5)(p) })
 
-// ClassVTable5 is the wasm struct type sub open (<ga3485604d22e5394954141b6.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable5 is the wasm struct type (sub ClassVTable4 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-message> (ref null $9)))), a subtype of ClassVTable4.
 type ClassVTable5 struct {
 	ClassVTable4
 }
 
 // NewClassVTable5 allocates a ClassVTable5.
-func NewClassVTable5(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable5 {
+func NewClassVTable5(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getMessage *rt.Func) *ClassVTable5 {
 	p := &ClassVTable5{}
 	p.RTT = rttClassVTable5
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetMessage = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetMessage = getMessage
 	return p
 }
 
@@ -639,22 +639,22 @@ func newClassVTable5Default() *ClassVTable5 {
 
 var rttKotlinException = rt.NewRTT(rt.KStruct, rttKotlinThrowable, false, "g87df9e98f308d0cc3906cecb.0", func(p unsafe.Pointer) any { return (*KotlinException)(p) })
 
-// KotlinException is the wasm struct type sub open (<gdcb9abcca805dabf9871e389.0>) struct(ref <g8362a062748c99fdda00a1e6.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinException is the wasm struct type (sub KotlinThrowable (struct (field $vtable (ref $24)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinThrowable.
 type KotlinException struct {
 	KotlinThrowable
 }
 
 // NewKotlinException allocates a KotlinException.
-func NewKotlinException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinException {
+func NewKotlinException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinException {
 	p := &KotlinException{}
 	p.RTT = rttKotlinException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -666,7 +666,7 @@ func newKotlinExceptionDefault() *KotlinException {
 
 var rttMixinType5 = rt.NewRTT(rt.KStruct, nil, true, "g87df9e98f308d0cc3906cecb.1", nil)
 
-// MixinType5 is the wasm struct type sub final () struct(ref null noextern,ref null eq,i64,f32,ref null none,f32,f64,i8,f64,ref null extern,f32,ref null any,ref null extern,f64,ref null any,i64,ref null i31).
+// MixinType5 is the wasm struct type (struct (field $ (ref null noextern)) (field $ (ref null eq)) (field $ i64) (field $ f32) (field $ (ref null none)) (field $ f32) (field $ f64) (field $ i8) (field $ f64) ...).
 type MixinType5 struct {
 	F0  any
 	F1  any
@@ -719,20 +719,20 @@ func newMixinType5Default() *MixinType5 {
 
 var rttClassVTable6 = rt.NewRTT(rt.KStruct, rttClassVTable5, false, "g6005f80bb5e051d3f43984d7.0", func(p unsafe.Pointer) any { return (*ClassVTable6)(p) })
 
-// ClassVTable6 is the wasm struct type sub open (<g8362a062748c99fdda00a1e6.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable6 is the wasm struct type (sub ClassVTable5 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-message> (ref null $9)))), a subtype of ClassVTable5.
 type ClassVTable6 struct {
 	ClassVTable5
 }
 
 // NewClassVTable6 allocates a ClassVTable6.
-func NewClassVTable6(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable6 {
+func NewClassVTable6(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getMessage *rt.Func) *ClassVTable6 {
 	p := &ClassVTable6{}
 	p.RTT = rttClassVTable6
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetMessage = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetMessage = getMessage
 	return p
 }
 
@@ -744,22 +744,22 @@ func newClassVTable6Default() *ClassVTable6 {
 
 var rttKotlinRuntimeException = rt.NewRTT(rt.KStruct, rttKotlinException, false, "g834f71b66be60fc9018a3aa1.0", func(p unsafe.Pointer) any { return (*KotlinRuntimeException)(p) })
 
-// KotlinRuntimeException is the wasm struct type sub open (<g87df9e98f308d0cc3906cecb.0>) struct(ref <g6005f80bb5e051d3f43984d7.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinRuntimeException is the wasm struct type (sub KotlinException (struct (field $vtable (ref $27)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinException.
 type KotlinRuntimeException struct {
 	KotlinException
 }
 
 // NewKotlinRuntimeException allocates a KotlinRuntimeException.
-func NewKotlinRuntimeException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinRuntimeException {
+func NewKotlinRuntimeException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinRuntimeException {
 	p := &KotlinRuntimeException{}
 	p.RTT = rttKotlinRuntimeException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -771,7 +771,7 @@ func newKotlinRuntimeExceptionDefault() *KotlinRuntimeException {
 
 var rttMixinType6 = rt.NewRTT(rt.KStruct, nil, true, "g834f71b66be60fc9018a3aa1.1", nil)
 
-// MixinType6 is the wasm struct type sub final () struct(ref null none,v128,i32,v128,i16,f64,ref null extern,ref null struct,ref null array,f64,f64,f32,i8,v128,f64,ref null func,ref null i31).
+// MixinType6 is the wasm struct type (struct (field $ (ref null none)) (field $ v128) (field $ i32) (field $ v128) (field $ i16) (field $ f64) (field $ (ref null extern)) (field $ (ref null struct)) ...).
 type MixinType6 struct {
 	F0  any
 	F1  rt.V128
@@ -824,20 +824,20 @@ func newMixinType6Default() *MixinType6 {
 
 var rttClassVTable7 = rt.NewRTT(rt.KStruct, rttClassVTable6, true, "ge70850a0cbdc9684bec1f913.0", func(p unsafe.Pointer) any { return (*ClassVTable7)(p) })
 
-// ClassVTable7 is the wasm struct type sub final (<g6005f80bb5e051d3f43984d7.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable7 is the wasm struct type (sub ClassVTable6 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-message> (ref null $9)))), a subtype of ClassVTable6.
 type ClassVTable7 struct {
 	ClassVTable6
 }
 
 // NewClassVTable7 allocates a ClassVTable7.
-func NewClassVTable7(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable7 {
+func NewClassVTable7(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getMessage *rt.Func) *ClassVTable7 {
 	p := &ClassVTable7{}
 	p.RTT = rttClassVTable7
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetMessage = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetMessage = getMessage
 	return p
 }
 
@@ -849,22 +849,22 @@ func newClassVTable7Default() *ClassVTable7 {
 
 var rttKotlinKotlinNothingValueException = rt.NewRTT(rt.KStruct, rttKotlinRuntimeException, true, "g624d28b21765c66055759b70.0", func(p unsafe.Pointer) any { return (*KotlinKotlinNothingValueException)(p) })
 
-// KotlinKotlinNothingValueException is the wasm struct type sub final (<g834f71b66be60fc9018a3aa1.0>) struct(ref <ge70850a0cbdc9684bec1f913.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197....
+// KotlinKotlinNothingValueException is the wasm struct type (sub KotlinRuntimeException (struct (field $vtable (ref $30)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinRuntimeException.
 type KotlinKotlinNothingValueException struct {
 	KotlinRuntimeException
 }
 
 // NewKotlinKotlinNothingValueException allocates a KotlinKotlinNothingValueException.
-func NewKotlinKotlinNothingValueException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinKotlinNothingValueException {
+func NewKotlinKotlinNothingValueException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinKotlinNothingValueException {
 	p := &KotlinKotlinNothingValueException{}
 	p.RTT = rttKotlinKotlinNothingValueException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -876,7 +876,7 @@ func newKotlinKotlinNothingValueExceptionDefault() *KotlinKotlinNothingValueExce
 
 var rttMixinType7 = rt.NewRTT(rt.KStruct, nil, true, "g624d28b21765c66055759b70.1", nil)
 
-// MixinType7 is the wasm struct type sub final () struct(i64,ref null func,ref null noextern,i64,ref null struct,f64,v128,i32,i64,ref null eq,ref null struct,ref null extern,i64,ref null i31,v128,ref null noextern).
+// MixinType7 is the wasm struct type (struct (field $ i64) (field $ (ref null func)) (field $ (ref null noextern)) (field $ i64) (field $ (ref null struct)) (field $ f64) (field $ v128) (field $ i32) ...).
 type MixinType7 struct {
 	F0  int64
 	F1  *rt.Func
@@ -929,7 +929,7 @@ var rttFunc33 = rt.CanonRTT(rt.KFunc, nil, true, "gf043a1c0bdfa4f1e471c52ab.0")
 
 var rttClassVTable8 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "g9e2ad2de0d6a7780dbbfb4d4.0", func(p unsafe.Pointer) any { return (*ClassVTable8)(p) })
 
-// ClassVTable8 is the wasm struct type sub open (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable8 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-size> (ref null $14)) ...)), a subtype of ClassVTable.
 type ClassVTable8 struct {
 	ClassVTable
 	GetSize     *rt.Func
@@ -940,18 +940,18 @@ type ClassVTable8 struct {
 }
 
 // NewClassVTable8 allocates a ClassVTable8.
-func NewClassVTable8(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func) *ClassVTable8 {
+func NewClassVTable8(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSize *rt.Func, iterator *rt.Func, contains *rt.Func, containsAll *rt.Func, isEmpty *rt.Func) *ClassVTable8 {
 	p := &ClassVTable8{}
 	p.RTT = rttClassVTable8
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSize = f4
-	p.Iterator = f5
-	p.Contains = f6
-	p.ContainsAll = f7
-	p.IsEmpty = f8
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSize = getSize
+	p.Iterator = iterator
+	p.Contains = contains
+	p.ContainsAll = containsAll
+	p.IsEmpty = isEmpty
 	return p
 }
 
@@ -963,19 +963,19 @@ func newClassVTable8Default() *ClassVTable8 {
 
 var rttKotlinCollectionsAbstractCollection = rt.NewRTT(rt.KStruct, rttKotlinAny, false, "gbd310f4a2975e2a5f2731680.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsAbstractCollection)(p) })
 
-// KotlinCollectionsAbstractCollection is the wasm struct type sub open (<g484ce41559fcc92541197c08.5>) struct(ref <g9e2ad2de0d6a7780dbbfb4d4.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCollectionsAbstractCollection is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $34)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinCollectionsAbstractCollection struct {
 	KotlinAny
 }
 
 // NewKotlinCollectionsAbstractCollection allocates a KotlinCollectionsAbstractCollection.
-func NewKotlinCollectionsAbstractCollection(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCollectionsAbstractCollection {
+func NewKotlinCollectionsAbstractCollection(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCollectionsAbstractCollection {
 	p := &KotlinCollectionsAbstractCollection{}
 	p.RTT = rttKotlinCollectionsAbstractCollection
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -987,7 +987,7 @@ func newKotlinCollectionsAbstractCollectionDefault() *KotlinCollectionsAbstractC
 
 var rttMixinType8 = rt.NewRTT(rt.KStruct, nil, true, "gbd310f4a2975e2a5f2731680.1", nil)
 
-// MixinType8 is the wasm struct type sub final () struct(ref null none,ref null noextern,i16,ref null eq,ref null i31,ref null func,v128,i16,i16,ref null any,ref null noextern,ref null array,ref null none,ref null func,ref null array,i8).
+// MixinType8 is the wasm struct type (struct (field $ (ref null none)) (field $ (ref null noextern)) (field $ i16) (field $ (ref null eq)) (field $ (ref null i31)) (field $ (ref null func)) (field $ v128) ...).
 type MixinType8 struct {
 	F0  any
 	F1  any
@@ -1038,26 +1038,26 @@ func newMixinType8Default() *MixinType8 {
 
 var rttClassVTable9 = rt.NewRTT(rt.KStruct, rttClassVTable8, false, "gcefc8a2c21ef20cbf7c71f47.0", func(p unsafe.Pointer) any { return (*ClassVTable9)(p) })
 
-// ClassVTable9 is the wasm struct type sub open (<g9e2ad2de0d6a7780dbbfb4d4.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable9 is the wasm struct type (sub ClassVTable8 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-size> (ref null $14)) ...)), a subtype of ClassVTable8.
 type ClassVTable9 struct {
 	ClassVTable8
 	Iterator_2 *rt.Func
 }
 
 // NewClassVTable9 allocates a ClassVTable9.
-func NewClassVTable9(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func) *ClassVTable9 {
+func NewClassVTable9(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSize *rt.Func, iterator *rt.Func, contains *rt.Func, containsAll *rt.Func, isEmpty *rt.Func, iterator2 *rt.Func) *ClassVTable9 {
 	p := &ClassVTable9{}
 	p.RTT = rttClassVTable9
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSize = f4
-	p.Iterator = f5
-	p.Contains = f6
-	p.ContainsAll = f7
-	p.IsEmpty = f8
-	p.Iterator_2 = f9
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSize = getSize
+	p.Iterator = iterator
+	p.Contains = contains
+	p.ContainsAll = containsAll
+	p.IsEmpty = isEmpty
+	p.Iterator_2 = iterator2
 	return p
 }
 
@@ -1069,19 +1069,19 @@ func newClassVTable9Default() *ClassVTable9 {
 
 var rttKotlinCollectionsAbstractMutableCollection = rt.NewRTT(rt.KStruct, rttKotlinCollectionsAbstractCollection, false, "g4ce83c136d92efd5dba14764.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsAbstractMutableCollection)(p) })
 
-// KotlinCollectionsAbstractMutableCollection is the wasm struct type sub open (<gbd310f4a2975e2a5f2731680.0>) struct(ref <gcefc8a2c21ef20cbf7c71f47.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCollectionsAbstractMutableCollection is the wasm struct type (sub KotlinCollectionsAbstractCollection (struct (field $vtable (ref $37)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinCollectionsAbstractCollection.
 type KotlinCollectionsAbstractMutableCollection struct {
 	KotlinCollectionsAbstractCollection
 }
 
 // NewKotlinCollectionsAbstractMutableCollection allocates a KotlinCollectionsAbstractMutableCollection.
-func NewKotlinCollectionsAbstractMutableCollection(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCollectionsAbstractMutableCollection {
+func NewKotlinCollectionsAbstractMutableCollection(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCollectionsAbstractMutableCollection {
 	p := &KotlinCollectionsAbstractMutableCollection{}
 	p.RTT = rttKotlinCollectionsAbstractMutableCollection
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -1093,7 +1093,7 @@ func newKotlinCollectionsAbstractMutableCollectionDefault() *KotlinCollectionsAb
 
 var rttMixinType9 = rt.NewRTT(rt.KStruct, nil, true, "g4ce83c136d92efd5dba14764.1", nil)
 
-// MixinType9 is the wasm struct type sub final () struct(ref null none,ref null i31,i64,i8,ref null eq,v128,ref null extern,ref null none,i16,i8,v128,i8,ref null any,f32,f64,f64).
+// MixinType9 is the wasm struct type (struct (field $ (ref null none)) (field $ (ref null i31)) (field $ i64) (field $ i8) (field $ (ref null eq)) (field $ v128) (field $ (ref null extern)) (field $ (ref null none)) ...).
 type MixinType9 struct {
 	F0  any
 	F1  any
@@ -1144,25 +1144,25 @@ func newMixinType9Default() *MixinType9 {
 
 var rttClassVTable10 = rt.NewRTT(rt.KStruct, rttClassVTable9, false, "g38d841a8037ae0498df05106.0", func(p unsafe.Pointer) any { return (*ClassVTable10)(p) })
 
-// ClassVTable10 is the wasm struct type sub open (<gcefc8a2c21ef20cbf7c71f47.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable10 is the wasm struct type (sub ClassVTable9 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-size> (ref null $14)) ...)), a subtype of ClassVTable9.
 type ClassVTable10 struct {
 	ClassVTable9
 }
 
 // NewClassVTable10 allocates a ClassVTable10.
-func NewClassVTable10(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func) *ClassVTable10 {
+func NewClassVTable10(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSize *rt.Func, iterator *rt.Func, contains *rt.Func, containsAll *rt.Func, isEmpty *rt.Func, iterator2 *rt.Func) *ClassVTable10 {
 	p := &ClassVTable10{}
 	p.RTT = rttClassVTable10
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSize = f4
-	p.Iterator = f5
-	p.Contains = f6
-	p.ContainsAll = f7
-	p.IsEmpty = f8
-	p.Iterator_2 = f9
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSize = getSize
+	p.Iterator = iterator
+	p.Contains = contains
+	p.ContainsAll = containsAll
+	p.IsEmpty = isEmpty
+	p.Iterator_2 = iterator2
 	return p
 }
 
@@ -1174,19 +1174,19 @@ func newClassVTable10Default() *ClassVTable10 {
 
 var rttKotlinCollectionsAbstractMutableSet = rt.NewRTT(rt.KStruct, rttKotlinCollectionsAbstractMutableCollection, false, "gcba2a751c39fa307a6b432f8.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsAbstractMutableSet)(p) })
 
-// KotlinCollectionsAbstractMutableSet is the wasm struct type sub open (<g4ce83c136d92efd5dba14764.0>) struct(ref <g38d841a8037ae0498df05106.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCollectionsAbstractMutableSet is the wasm struct type (sub KotlinCollectionsAbstractMutableCollection (struct (field $vtable (ref $40)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinCollectionsAbstractMutableCollection.
 type KotlinCollectionsAbstractMutableSet struct {
 	KotlinCollectionsAbstractMutableCollection
 }
 
 // NewKotlinCollectionsAbstractMutableSet allocates a KotlinCollectionsAbstractMutableSet.
-func NewKotlinCollectionsAbstractMutableSet(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCollectionsAbstractMutableSet {
+func NewKotlinCollectionsAbstractMutableSet(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCollectionsAbstractMutableSet {
 	p := &KotlinCollectionsAbstractMutableSet{}
 	p.RTT = rttKotlinCollectionsAbstractMutableSet
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -1198,7 +1198,7 @@ func newKotlinCollectionsAbstractMutableSetDefault() *KotlinCollectionsAbstractM
 
 var rttMixinType10 = rt.NewRTT(rt.KStruct, nil, true, "gcba2a751c39fa307a6b432f8.1", nil)
 
-// MixinType10 is the wasm struct type sub final () struct(ref null any,ref null i31,ref null none,ref null none,ref null eq,i32,ref null none,ref null func,i32,ref null any,ref null any,f64,ref null none,ref null i31,i8,f64).
+// MixinType10 is the wasm struct type (struct (field $ (ref null any)) (field $ (ref null i31)) (field $ (ref null none)) (field $ (ref null none)) (field $ (ref null eq)) (field $ i32) (field $ (ref null none)) ...).
 type MixinType10 struct {
 	F0  any
 	F1  any
@@ -1249,19 +1249,19 @@ func newMixinType10Default() *MixinType10 {
 
 var rttClassVTable11 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "ge18205e74c18fff7605922de.0", func(p unsafe.Pointer) any { return (*ClassVTable11)(p) })
 
-// ClassVTable11 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable11 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)))), a subtype of ClassVTable.
 type ClassVTable11 struct {
 	ClassVTable
 }
 
 // NewClassVTable11 allocates a ClassVTable11.
-func NewClassVTable11(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func) *ClassVTable11 {
+func NewClassVTable11(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func) *ClassVTable11 {
 	p := &ClassVTable11{}
 	p.RTT = rttClassVTable11
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
 	return p
 }
 
@@ -1273,7 +1273,7 @@ func newClassVTable11Default() *ClassVTable11 {
 
 var rttKotlinCollectionsCompanion = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g7ca056df5c3b6f8e99d54a6c.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsCompanion)(p) })
 
-// KotlinCollectionsCompanion is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32,mut i32,mut i32,mut i32).
+// KotlinCollectionsCompanion is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $43)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $MAGIC (mut i32)) (field $INITIAL_CAPACITY (mut i32)) ...)), a subtype of KotlinAny.
 type KotlinCollectionsCompanion struct {
 	KotlinAny
 	MAGIC                   int32
@@ -1283,17 +1283,17 @@ type KotlinCollectionsCompanion struct {
 }
 
 // NewKotlinCollectionsCompanion allocates a KotlinCollectionsCompanion.
-func NewKotlinCollectionsCompanion(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32, f5 int32, f6 int32, f7 int32) *KotlinCollectionsCompanion {
+func NewKotlinCollectionsCompanion(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, mAGIC int32, iNITIALCAPACITY int32, iNITIALMAXPROBEDISTANCE int32, tOMBSTONE int32) *KotlinCollectionsCompanion {
 	p := &KotlinCollectionsCompanion{}
 	p.RTT = rttKotlinCollectionsCompanion
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.MAGIC = f4
-	p.INITIALCAPACITY = f5
-	p.INITIALMAXPROBEDISTANCE = f6
-	p.TOMBSTONE = f7
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.MAGIC = mAGIC
+	p.INITIALCAPACITY = iNITIALCAPACITY
+	p.INITIALMAXPROBEDISTANCE = iNITIALMAXPROBEDISTANCE
+	p.TOMBSTONE = tOMBSTONE
 	return p
 }
 
@@ -1305,7 +1305,7 @@ func newKotlinCollectionsCompanionDefault() *KotlinCollectionsCompanion {
 
 var rttMixinType11 = rt.NewRTT(rt.KStruct, nil, true, "g7ca056df5c3b6f8e99d54a6c.1", nil)
 
-// MixinType11 is the wasm struct type sub final () struct(v128,ref null func,ref null i31,i8,ref null func,ref null extern,f64,i64,i64,i32,i32,f32,i64,ref null extern,i16,ref null eq).
+// MixinType11 is the wasm struct type (struct (field $ v128) (field $ (ref null func)) (field $ (ref null i31)) (field $ i8) (field $ (ref null func)) (field $ (ref null extern)) (field $ f64) (field $ i64) ...).
 type MixinType11 struct {
 	F0  rt.V128
 	F1  *rt.Func
@@ -1360,7 +1360,7 @@ var rttFunc48 = rt.CanonRTT(rt.KFunc, nil, true, "gb149bba08f59d4b5641589cb.0")
 
 var rttClassVTable12 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g3aa09ffd573885512d31b12a.0", func(p unsafe.Pointer) any { return (*ClassVTable12)(p) })
 
-// ClassVTable12 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable12 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-size> (ref null $14)) ...)), a subtype of ClassVTable.
 type ClassVTable12 struct {
 	ClassVTable
 	GetSize      *rt.Func
@@ -1372,19 +1372,19 @@ type ClassVTable12 struct {
 }
 
 // NewClassVTable12 allocates a ClassVTable12.
-func NewClassVTable12(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func) *ClassVTable12 {
+func NewClassVTable12(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSize *rt.Func, isEmpty *rt.Func, get *rt.Func, put *rt.Func, getEntries *rt.Func, getEntries2 *rt.Func) *ClassVTable12 {
 	p := &ClassVTable12{}
 	p.RTT = rttClassVTable12
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSize = f4
-	p.IsEmpty = f5
-	p.Get = f6
-	p.Put = f7
-	p.GetEntries = f8
-	p.GetEntries_2 = f9
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSize = getSize
+	p.IsEmpty = isEmpty
+	p.Get = get
+	p.Put = put
+	p.GetEntries = getEntries
+	p.GetEntries_2 = getEntries2
 	return p
 }
 
@@ -1396,7 +1396,7 @@ func newClassVTable12Default() *ClassVTable12 {
 
 var rttKotlinWasmInternalWasmAnyArray = rt.NewRTT(rt.KArray, nil, true, "g1b6bc2a33e91dde315a1b546.0", nil)
 
-// KotlinWasmInternalWasmAnyArray is the wasm array type sub final () array(mut ref null <g484ce41559fcc92541197c08.5>).
+// KotlinWasmInternalWasmAnyArray is the wasm array type (array (mut (ref null $10))).
 type KotlinWasmInternalWasmAnyArray struct {
 	Elems []*KotlinAny
 }
@@ -1414,21 +1414,21 @@ func NewKotlinWasmInternalWasmAnyArray(elems []*KotlinAny) *KotlinWasmInternalWa
 
 var rttKotlinArray = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gfe520f0e4bfbc62cede02f79.0", func(p unsafe.Pointer) any { return (*KotlinArray)(p) })
 
-// KotlinArray is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g1b6bc2a33e91dde315a1b....
+// KotlinArray is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $50)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $storage (mut (ref null $51))))), a subtype of KotlinAny.
 type KotlinArray struct {
 	KotlinAny
 	Storage *KotlinWasmInternalWasmAnyArray
 }
 
 // NewKotlinArray allocates a KotlinArray.
-func NewKotlinArray(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinWasmInternalWasmAnyArray) *KotlinArray {
+func NewKotlinArray(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, storage *KotlinWasmInternalWasmAnyArray) *KotlinArray {
 	p := &KotlinArray{}
 	p.RTT = rttKotlinArray
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Storage = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Storage = storage
 	return p
 }
 
@@ -1440,7 +1440,7 @@ func newKotlinArrayDefault() *KotlinArray {
 
 var rttMixinType12 = rt.NewRTT(rt.KStruct, nil, true, "gfe520f0e4bfbc62cede02f79.1", nil)
 
-// MixinType12 is the wasm struct type sub final () struct(i64,i32,f64,ref null struct,i8,i16,ref null none,ref null none,f64,ref null any,ref null i31,ref null i31,i8,ref null any,ref null i31,ref null extern).
+// MixinType12 is the wasm struct type (struct (field $ i64) (field $ i32) (field $ f64) (field $ (ref null struct)) (field $ i8) (field $ i16) (field $ (ref null none)) (field $ (ref null none)) (field $ f64) ...).
 type MixinType12 struct {
 	F0  int64
 	F1  int32
@@ -1491,7 +1491,7 @@ func newMixinType12Default() *MixinType12 {
 
 var rttKotlinWasmInternalWasmIntArray = rt.NewRTT(rt.KArray, nil, true, "ga797807a9518b0bf3ea5520c.0", nil)
 
-// KotlinWasmInternalWasmIntArray is the wasm array type sub final () array(mut i32).
+// KotlinWasmInternalWasmIntArray is the wasm array type (array (mut i32)).
 type KotlinWasmInternalWasmIntArray struct {
 	Elems []int32
 }
@@ -1509,21 +1509,21 @@ func NewKotlinWasmInternalWasmIntArray(elems []int32) *KotlinWasmInternalWasmInt
 
 var rttKotlinIntArray = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g3feb110e0c91981dc94b2369.0", func(p unsafe.Pointer) any { return (*KotlinIntArray)(p) })
 
-// KotlinIntArray is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <ga797807a9518b0bf3ea55....
+// KotlinIntArray is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $54)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $storage (mut (ref null $55))))), a subtype of KotlinAny.
 type KotlinIntArray struct {
 	KotlinAny
 	Storage *KotlinWasmInternalWasmIntArray
 }
 
 // NewKotlinIntArray allocates a KotlinIntArray.
-func NewKotlinIntArray(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinWasmInternalWasmIntArray) *KotlinIntArray {
+func NewKotlinIntArray(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, storage *KotlinWasmInternalWasmIntArray) *KotlinIntArray {
 	p := &KotlinIntArray{}
 	p.RTT = rttKotlinIntArray
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Storage = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Storage = storage
 	return p
 }
 
@@ -1535,7 +1535,7 @@ func newKotlinIntArrayDefault() *KotlinIntArray {
 
 var rttMixinType13 = rt.NewRTT(rt.KStruct, nil, true, "g3feb110e0c91981dc94b2369.1", nil)
 
-// MixinType13 is the wasm struct type sub final () struct(v128,i64,f64,v128,i16,ref null none,ref null none,v128,ref null none,ref null array,ref null i31,i8,ref null eq,ref null noextern,v128,f64).
+// MixinType13 is the wasm struct type (struct (field $ v128) (field $ i64) (field $ f64) (field $ v128) (field $ i16) (field $ (ref null none)) (field $ (ref null none)) (field $ v128) (field $ (ref null none)) ...).
 type MixinType13 struct {
 	F0  rt.V128
 	F1  int64
@@ -1586,25 +1586,25 @@ func newMixinType13Default() *MixinType13 {
 
 var rttClassVTable13 = rt.NewRTT(rt.KStruct, rttClassVTable10, true, "g59dab8908f372e1f320a7262.0", func(p unsafe.Pointer) any { return (*ClassVTable13)(p) })
 
-// ClassVTable13 is the wasm struct type sub final (<g38d841a8037ae0498df05106.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable13 is the wasm struct type (sub ClassVTable10 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-size> (ref null $14)) ...)), a subtype of ClassVTable10.
 type ClassVTable13 struct {
 	ClassVTable10
 }
 
 // NewClassVTable13 allocates a ClassVTable13.
-func NewClassVTable13(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func) *ClassVTable13 {
+func NewClassVTable13(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSize *rt.Func, iterator *rt.Func, contains *rt.Func, containsAll *rt.Func, isEmpty *rt.Func, iterator2 *rt.Func) *ClassVTable13 {
 	p := &ClassVTable13{}
 	p.RTT = rttClassVTable13
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSize = f4
-	p.Iterator = f5
-	p.Contains = f6
-	p.ContainsAll = f7
-	p.IsEmpty = f8
-	p.Iterator_2 = f9
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSize = getSize
+	p.Iterator = iterator
+	p.Contains = contains
+	p.ContainsAll = containsAll
+	p.IsEmpty = isEmpty
+	p.Iterator_2 = iterator2
 	return p
 }
 
@@ -1616,19 +1616,19 @@ func newClassVTable13Default() *ClassVTable13 {
 
 var rttKotlinCollectionsHashMapKeys = rt.NewRTT(rt.KStruct, rttKotlinCollectionsAbstractMutableSet, true, "gc6bdd472df34ee6bf07ec420.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsHashMapKeys)(p) })
 
-// KotlinCollectionsHashMapKeys is the wasm struct type sub final (<gcba2a751c39fa307a6b432f8.0>) struct(ref <g59dab8908f372e1f320a7262.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCollectionsHashMapKeys is the wasm struct type (sub KotlinCollectionsAbstractMutableSet (struct (field $vtable (ref $58)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinCollectionsAbstractMutableSet.
 type KotlinCollectionsHashMapKeys struct {
 	KotlinCollectionsAbstractMutableSet
 }
 
 // NewKotlinCollectionsHashMapKeys allocates a KotlinCollectionsHashMapKeys.
-func NewKotlinCollectionsHashMapKeys(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCollectionsHashMapKeys {
+func NewKotlinCollectionsHashMapKeys(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCollectionsHashMapKeys {
 	p := &KotlinCollectionsHashMapKeys{}
 	p.RTT = rttKotlinCollectionsHashMapKeys
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -1640,7 +1640,7 @@ func newKotlinCollectionsHashMapKeysDefault() *KotlinCollectionsHashMapKeys {
 
 var rttMixinType14 = rt.NewRTT(rt.KStruct, nil, true, "gc6bdd472df34ee6bf07ec420.1", nil)
 
-// MixinType14 is the wasm struct type sub final () struct(i8,ref null noextern,i16,f32,ref null struct,i64,i16,i8,ref null none,f64,ref null extern,ref null array,i16,ref null array,f32,ref null any,ref null i31).
+// MixinType14 is the wasm struct type (struct (field $ i8) (field $ (ref null noextern)) (field $ i16) (field $ f32) (field $ (ref null struct)) (field $ i64) (field $ i16) (field $ i8) (field $ (ref null none)) ...).
 type MixinType14 struct {
 	F0  int8
 	F1  any
@@ -1693,25 +1693,25 @@ func newMixinType14Default() *MixinType14 {
 
 var rttClassVTable14 = rt.NewRTT(rt.KStruct, rttClassVTable9, true, "g9e660f2711963bfe6cb5a8e8.0", func(p unsafe.Pointer) any { return (*ClassVTable14)(p) })
 
-// ClassVTable14 is the wasm struct type sub final (<gcefc8a2c21ef20cbf7c71f47.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable14 is the wasm struct type (sub ClassVTable9 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-size> (ref null $14)) ...)), a subtype of ClassVTable9.
 type ClassVTable14 struct {
 	ClassVTable9
 }
 
 // NewClassVTable14 allocates a ClassVTable14.
-func NewClassVTable14(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func) *ClassVTable14 {
+func NewClassVTable14(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSize *rt.Func, iterator *rt.Func, contains *rt.Func, containsAll *rt.Func, isEmpty *rt.Func, iterator2 *rt.Func) *ClassVTable14 {
 	p := &ClassVTable14{}
 	p.RTT = rttClassVTable14
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSize = f4
-	p.Iterator = f5
-	p.Contains = f6
-	p.ContainsAll = f7
-	p.IsEmpty = f8
-	p.Iterator_2 = f9
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSize = getSize
+	p.Iterator = iterator
+	p.Contains = contains
+	p.ContainsAll = containsAll
+	p.IsEmpty = isEmpty
+	p.Iterator_2 = iterator2
 	return p
 }
 
@@ -1723,19 +1723,19 @@ func newClassVTable14Default() *ClassVTable14 {
 
 var rttKotlinCollectionsHashMapValues = rt.NewRTT(rt.KStruct, rttKotlinCollectionsAbstractMutableCollection, true, "g7c76b465c2a0d0dd3982518c.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsHashMapValues)(p) })
 
-// KotlinCollectionsHashMapValues is the wasm struct type sub final (<g4ce83c136d92efd5dba14764.0>) struct(ref <g9e660f2711963bfe6cb5a8e8.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCollectionsHashMapValues is the wasm struct type (sub KotlinCollectionsAbstractMutableCollection (struct (field $vtable (ref $61)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinCollectionsAbstractMutableCollection.
 type KotlinCollectionsHashMapValues struct {
 	KotlinCollectionsAbstractMutableCollection
 }
 
 // NewKotlinCollectionsHashMapValues allocates a KotlinCollectionsHashMapValues.
-func NewKotlinCollectionsHashMapValues(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCollectionsHashMapValues {
+func NewKotlinCollectionsHashMapValues(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCollectionsHashMapValues {
 	p := &KotlinCollectionsHashMapValues{}
 	p.RTT = rttKotlinCollectionsHashMapValues
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -1747,7 +1747,7 @@ func newKotlinCollectionsHashMapValuesDefault() *KotlinCollectionsHashMapValues 
 
 var rttMixinType15 = rt.NewRTT(rt.KStruct, nil, true, "g7c76b465c2a0d0dd3982518c.1", nil)
 
-// MixinType15 is the wasm struct type sub final () struct(ref null func,ref null eq,ref null eq,f64,ref null func,ref null array,ref null noextern,ref null func,ref null noextern,ref null array,i64,f64,i8,f64,ref null i31,ref null array).
+// MixinType15 is the wasm struct type (struct (field $ (ref null func)) (field $ (ref null eq)) (field $ (ref null eq)) (field $ f64) (field $ (ref null func)) (field $ (ref null array)) (field $ (ref null noextern)) ...).
 type MixinType15 struct {
 	F0  *rt.Func
 	F1  any
@@ -1798,27 +1798,27 @@ func newMixinType15Default() *MixinType15 {
 
 var rttClassVTable15 = rt.NewRTT(rt.KStruct, rttClassVTable10, false, "g00da20f2b1cc3072cc014ef2.0", func(p unsafe.Pointer) any { return (*ClassVTable15)(p) })
 
-// ClassVTable15 is the wasm struct type sub open (<g38d841a8037ae0498df05106.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable15 is the wasm struct type (sub ClassVTable10 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-size> (ref null $14)) ...)), a subtype of ClassVTable10.
 type ClassVTable15 struct {
 	ClassVTable10
 	Contains_2 *rt.Func
 }
 
 // NewClassVTable15 allocates a ClassVTable15.
-func NewClassVTable15(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func, f10 *rt.Func) *ClassVTable15 {
+func NewClassVTable15(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSize *rt.Func, iterator *rt.Func, contains *rt.Func, containsAll *rt.Func, isEmpty *rt.Func, iterator2 *rt.Func, contains2 *rt.Func) *ClassVTable15 {
 	p := &ClassVTable15{}
 	p.RTT = rttClassVTable15
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSize = f4
-	p.Iterator = f5
-	p.Contains = f6
-	p.ContainsAll = f7
-	p.IsEmpty = f8
-	p.Iterator_2 = f9
-	p.Contains_2 = f10
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSize = getSize
+	p.Iterator = iterator
+	p.Contains = contains
+	p.ContainsAll = containsAll
+	p.IsEmpty = isEmpty
+	p.Iterator_2 = iterator2
+	p.Contains_2 = contains2
 	return p
 }
 
@@ -1830,26 +1830,26 @@ func newClassVTable15Default() *ClassVTable15 {
 
 var rttClassVTable16 = rt.NewRTT(rt.KStruct, rttClassVTable15, true, "g94dbf80f0be618077b942d40.0", func(p unsafe.Pointer) any { return (*ClassVTable16)(p) })
 
-// ClassVTable16 is the wasm struct type sub final (<g00da20f2b1cc3072cc014ef2.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable16 is the wasm struct type (sub ClassVTable15 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-size> (ref null $14)) ...)), a subtype of ClassVTable15.
 type ClassVTable16 struct {
 	ClassVTable15
 }
 
 // NewClassVTable16 allocates a ClassVTable16.
-func NewClassVTable16(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func, f10 *rt.Func) *ClassVTable16 {
+func NewClassVTable16(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSize *rt.Func, iterator *rt.Func, contains *rt.Func, containsAll *rt.Func, isEmpty *rt.Func, iterator2 *rt.Func, contains2 *rt.Func) *ClassVTable16 {
 	p := &ClassVTable16{}
 	p.RTT = rttClassVTable16
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSize = f4
-	p.Iterator = f5
-	p.Contains = f6
-	p.ContainsAll = f7
-	p.IsEmpty = f8
-	p.Iterator_2 = f9
-	p.Contains_2 = f10
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSize = getSize
+	p.Iterator = iterator
+	p.Contains = contains
+	p.ContainsAll = containsAll
+	p.IsEmpty = isEmpty
+	p.Iterator_2 = iterator2
+	p.Contains_2 = contains2
 	return p
 }
 
@@ -1861,7 +1861,7 @@ func newClassVTable16Default() *ClassVTable16 {
 
 var rttKotlinCollectionsHashMap = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g76ee00eb79c24ff8bb62c4c5.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsHashMap)(p) })
 
-// KotlinCollectionsHashMap is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g3aa09ffd573885512d31b12a.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <gfe520f0e4bfbc62cede02....
+// KotlinCollectionsHashMap is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $49)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $keysArray (mut (ref null $52))) (field $valuesArray (mut (ref null $52))) ...)), a subtype of KotlinAny.
 type KotlinCollectionsHashMap struct {
 	KotlinAny
 	KeysArray        *KotlinArray
@@ -1880,26 +1880,26 @@ type KotlinCollectionsHashMap struct {
 }
 
 // NewKotlinCollectionsHashMap allocates a KotlinCollectionsHashMap.
-func NewKotlinCollectionsHashMap(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinArray, f5 *KotlinArray, f6 *KotlinIntArray, f7 *KotlinIntArray, f8 int32, f9 int32, f10 int32, f11 int32, f12 int32, f13 *KotlinCollectionsHashMapKeys, f14 *KotlinCollectionsHashMapValues, f15 *KotlinCollectionsHashMapEntrySet, f16 int8) *KotlinCollectionsHashMap {
+func NewKotlinCollectionsHashMap(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, keysArray *KotlinArray, valuesArray *KotlinArray, presenceArray *KotlinIntArray, hashArray *KotlinIntArray, maxProbeDistance int32, length int32, hashShift int32, modCount int32, size int32, keysView *KotlinCollectionsHashMapKeys, valuesView *KotlinCollectionsHashMapValues, entriesView *KotlinCollectionsHashMapEntrySet, isReadOnly int8) *KotlinCollectionsHashMap {
 	p := &KotlinCollectionsHashMap{}
 	p.RTT = rttKotlinCollectionsHashMap
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.KeysArray = f4
-	p.ValuesArray = f5
-	p.PresenceArray = f6
-	p.HashArray = f7
-	p.MaxProbeDistance = f8
-	p.Length = f9
-	p.HashShift = f10
-	p.ModCount = f11
-	p.Size = f12
-	p.KeysView = f13
-	p.ValuesView = f14
-	p.EntriesView = f15
-	p.IsReadOnly = f16
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.KeysArray = keysArray
+	p.ValuesArray = valuesArray
+	p.PresenceArray = presenceArray
+	p.HashArray = hashArray
+	p.MaxProbeDistance = maxProbeDistance
+	p.Length = length
+	p.HashShift = hashShift
+	p.ModCount = modCount
+	p.Size = size
+	p.KeysView = keysView
+	p.ValuesView = valuesView
+	p.EntriesView = entriesView
+	p.IsReadOnly = isReadOnly
 	return p
 }
 
@@ -1911,21 +1911,21 @@ func newKotlinCollectionsHashMapDefault() *KotlinCollectionsHashMap {
 
 var rttKotlinCollectionsHashMapEntrySetBase = rt.NewRTT(rt.KStruct, rttKotlinCollectionsAbstractMutableSet, false, "g76ee00eb79c24ff8bb62c4c5.1", func(p unsafe.Pointer) any { return (*KotlinCollectionsHashMapEntrySetBase)(p) })
 
-// KotlinCollectionsHashMapEntrySetBase is the wasm struct type sub open (<gcba2a751c39fa307a6b432f8.0>) struct(ref <g00da20f2b1cc3072cc014ef2.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null rec.0).
+// KotlinCollectionsHashMapEntrySetBase is the wasm struct type (sub KotlinCollectionsAbstractMutableSet (struct (field $vtable (ref $64)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $backing (mut (ref null $66))))), a subtype of KotlinCollectionsAbstractMutableSet.
 type KotlinCollectionsHashMapEntrySetBase struct {
 	KotlinCollectionsAbstractMutableSet
 	Backing *KotlinCollectionsHashMap
 }
 
 // NewKotlinCollectionsHashMapEntrySetBase allocates a KotlinCollectionsHashMapEntrySetBase.
-func NewKotlinCollectionsHashMapEntrySetBase(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinCollectionsHashMap) *KotlinCollectionsHashMapEntrySetBase {
+func NewKotlinCollectionsHashMapEntrySetBase(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, backing *KotlinCollectionsHashMap) *KotlinCollectionsHashMapEntrySetBase {
 	p := &KotlinCollectionsHashMapEntrySetBase{}
 	p.RTT = rttKotlinCollectionsHashMapEntrySetBase
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Backing = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Backing = backing
 	return p
 }
 
@@ -1937,20 +1937,20 @@ func newKotlinCollectionsHashMapEntrySetBaseDefault() *KotlinCollectionsHashMapE
 
 var rttKotlinCollectionsHashMapEntrySet = rt.NewRTT(rt.KStruct, rttKotlinCollectionsHashMapEntrySetBase, true, "g76ee00eb79c24ff8bb62c4c5.2", func(p unsafe.Pointer) any { return (*KotlinCollectionsHashMapEntrySet)(p) })
 
-// KotlinCollectionsHashMapEntrySet is the wasm struct type sub final (rec.1) struct(ref <g94dbf80f0be618077b942d40.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null rec.0).
+// KotlinCollectionsHashMapEntrySet is the wasm struct type (sub KotlinCollectionsHashMapEntrySetBase (struct (field $vtable (ref $65)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $backing (mut (ref null $66))))), a subtype of KotlinCollectionsHashMapEntrySetBase.
 type KotlinCollectionsHashMapEntrySet struct {
 	KotlinCollectionsHashMapEntrySetBase
 }
 
 // NewKotlinCollectionsHashMapEntrySet allocates a KotlinCollectionsHashMapEntrySet.
-func NewKotlinCollectionsHashMapEntrySet(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinCollectionsHashMap) *KotlinCollectionsHashMapEntrySet {
+func NewKotlinCollectionsHashMapEntrySet(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, backing *KotlinCollectionsHashMap) *KotlinCollectionsHashMapEntrySet {
 	p := &KotlinCollectionsHashMapEntrySet{}
 	p.RTT = rttKotlinCollectionsHashMapEntrySet
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Backing = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Backing = backing
 	return p
 }
 
@@ -1962,7 +1962,7 @@ func newKotlinCollectionsHashMapEntrySetDefault() *KotlinCollectionsHashMapEntry
 
 var rttMixinType16 = rt.NewRTT(rt.KStruct, nil, true, "g76ee00eb79c24ff8bb62c4c5.3", nil)
 
-// MixinType16 is the wasm struct type sub final () struct(f64,f32,ref null noextern,i16,i32,ref null array,f64,i8,i64,ref null eq,i16,ref null array,ref null i31,i32,v128,i8).
+// MixinType16 is the wasm struct type (struct (field $ f64) (field $ f32) (field $ (ref null noextern)) (field $ i16) (field $ i32) (field $ (ref null array)) (field $ f64) (field $ i8) (field $ i64) ...).
 type MixinType16 struct {
 	F0  float64
 	F1  float32
@@ -2013,7 +2013,7 @@ func newMixinType16Default() *MixinType16 {
 
 var rttKotlinCollectionsItr = rt.NewRTT(rt.KStruct, rttKotlinAny, false, "g3ed589eae95dac0b1e76a60d.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsItr)(p) })
 
-// KotlinCollectionsItr is the wasm struct type sub open (<g484ce41559fcc92541197c08.5>) struct(ref <g29e42c9f04f1487399ac8b46.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g76ee00eb79c24ff8bb62c4....
+// KotlinCollectionsItr is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $46)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $map (mut (ref null $66))) (field $index (mut i32)) ...)), a subtype of KotlinAny.
 type KotlinCollectionsItr struct {
 	KotlinAny
 	Map              *KotlinCollectionsHashMap
@@ -2023,17 +2023,17 @@ type KotlinCollectionsItr struct {
 }
 
 // NewKotlinCollectionsItr allocates a KotlinCollectionsItr.
-func NewKotlinCollectionsItr(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinCollectionsHashMap, f5 int32, f6 int32, f7 int32) *KotlinCollectionsItr {
+func NewKotlinCollectionsItr(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, map_ *KotlinCollectionsHashMap, index int32, lastIndex int32, expectedModCount int32) *KotlinCollectionsItr {
 	p := &KotlinCollectionsItr{}
 	p.RTT = rttKotlinCollectionsItr
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Map = f4
-	p.Index = f5
-	p.LastIndex = f6
-	p.ExpectedModCount = f7
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Map = map_
+	p.Index = index
+	p.LastIndex = lastIndex
+	p.ExpectedModCount = expectedModCount
 	return p
 }
 
@@ -2045,7 +2045,7 @@ func newKotlinCollectionsItrDefault() *KotlinCollectionsItr {
 
 var rttMixinType17 = rt.NewRTT(rt.KStruct, nil, true, "g3ed589eae95dac0b1e76a60d.1", nil)
 
-// MixinType17 is the wasm struct type sub final () struct(i64,f32,ref null array,i8,ref null array,f32,i32,ref null none,i8,ref null array,ref null i31,i8,i8,f32,v128,ref null i31).
+// MixinType17 is the wasm struct type (struct (field $ i64) (field $ f32) (field $ (ref null array)) (field $ i8) (field $ (ref null array)) (field $ f32) (field $ i32) (field $ (ref null none)) (field $ i8) ...).
 type MixinType17 struct {
 	F0  int64
 	F1  float32
@@ -2096,7 +2096,7 @@ func newMixinType17Default() *MixinType17 {
 
 var rttClassVTable17 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "ga1a36ab85934746f240deffa.0", func(p unsafe.Pointer) any { return (*ClassVTable17)(p) })
 
-// ClassVTable17 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable17 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-key> (ref null $33)) ...)), a subtype of ClassVTable.
 type ClassVTable17 struct {
 	ClassVTable
 	GetKey   *rt.Func
@@ -2104,15 +2104,15 @@ type ClassVTable17 struct {
 }
 
 // NewClassVTable17 allocates a ClassVTable17.
-func NewClassVTable17(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func) *ClassVTable17 {
+func NewClassVTable17(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getKey *rt.Func, getValue *rt.Func) *ClassVTable17 {
 	p := &ClassVTable17{}
 	p.RTT = rttClassVTable17
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetKey = f4
-	p.GetValue = f5
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetKey = getKey
+	p.GetValue = getValue
 	return p
 }
 
@@ -2124,7 +2124,7 @@ func newClassVTable17Default() *ClassVTable17 {
 
 var rttKotlinCollectionsEntryRef = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g2d1fa2334820976179cb448a.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsEntryRef)(p) })
 
-// KotlinCollectionsEntryRef is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ga1a36ab85934746f240deffa.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g76ee00eb79c24ff8bb62c....
+// KotlinCollectionsEntryRef is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $72)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $map (mut (ref null $66))) (field $index (mut i32)) ...)), a subtype of KotlinAny.
 type KotlinCollectionsEntryRef struct {
 	KotlinAny
 	Map              *KotlinCollectionsHashMap
@@ -2133,16 +2133,16 @@ type KotlinCollectionsEntryRef struct {
 }
 
 // NewKotlinCollectionsEntryRef allocates a KotlinCollectionsEntryRef.
-func NewKotlinCollectionsEntryRef(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinCollectionsHashMap, f5 int32, f6 int32) *KotlinCollectionsEntryRef {
+func NewKotlinCollectionsEntryRef(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, map_ *KotlinCollectionsHashMap, index int32, expectedModCount int32) *KotlinCollectionsEntryRef {
 	p := &KotlinCollectionsEntryRef{}
 	p.RTT = rttKotlinCollectionsEntryRef
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Map = f4
-	p.Index = f5
-	p.ExpectedModCount = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Map = map_
+	p.Index = index
+	p.ExpectedModCount = expectedModCount
 	return p
 }
 
@@ -2154,7 +2154,7 @@ func newKotlinCollectionsEntryRefDefault() *KotlinCollectionsEntryRef {
 
 var rttMixinType18 = rt.NewRTT(rt.KStruct, nil, true, "g2d1fa2334820976179cb448a.1", nil)
 
-// MixinType18 is the wasm struct type sub final () struct(ref null func,ref null i31,ref null eq,i16,v128,i16,ref null array,ref null extern,ref null func,i16,ref null eq,i16,ref null extern,ref null struct,i16,v128).
+// MixinType18 is the wasm struct type (struct (field $ (ref null func)) (field $ (ref null i31)) (field $ (ref null eq)) (field $ i16) (field $ v128) (field $ i16) (field $ (ref null array)) (field $ (ref null extern)) ...).
 type MixinType18 struct {
 	F0  *rt.Func
 	F1  any
@@ -2207,7 +2207,7 @@ var rttFunc75 = rt.CanonRTT(rt.KFunc, nil, true, "gcde95dbb1a5d82fd154a79bc.0")
 
 var rttClassVTable18 = rt.NewRTT(rt.KStruct, rttClassVTable3, true, "g23192d3540231edcb5209990.0", func(p unsafe.Pointer) any { return (*ClassVTable18)(p) })
 
-// ClassVTable18 is the wasm struct type sub final (<g29e42c9f04f1487399ac8b46.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable18 is the wasm struct type (sub ClassVTable3 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $next (ref null $75)) ...)), a subtype of ClassVTable3.
 type ClassVTable18 struct {
 	ClassVTable3
 	Next    *rt.Func
@@ -2216,16 +2216,16 @@ type ClassVTable18 struct {
 }
 
 // NewClassVTable18 allocates a ClassVTable18.
-func NewClassVTable18(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func) *ClassVTable18 {
+func NewClassVTable18(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, next *rt.Func, next2 *rt.Func, hasNext *rt.Func) *ClassVTable18 {
 	p := &ClassVTable18{}
 	p.RTT = rttClassVTable18
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Next = f4
-	p.Next_2 = f5
-	p.HasNext = f6
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Next = next
+	p.Next_2 = next2
+	p.HasNext = hasNext
 	return p
 }
 
@@ -2237,23 +2237,23 @@ func newClassVTable18Default() *ClassVTable18 {
 
 var rttKotlinCollectionsEntriesItr = rt.NewRTT(rt.KStruct, rttKotlinCollectionsItr, true, "g02133f1fe9ba45d6e7102faf.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsEntriesItr)(p) })
 
-// KotlinCollectionsEntriesItr is the wasm struct type sub final (<g3ed589eae95dac0b1e76a60d.0>) struct(ref <g23192d3540231edcb5209990.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g76ee00eb79c24ff8bb62c....
+// KotlinCollectionsEntriesItr is the wasm struct type (sub KotlinCollectionsItr (struct (field $vtable (ref $76)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $map (mut (ref null $66))) (field $index (mut i32)) ...)), a subtype of KotlinCollectionsItr.
 type KotlinCollectionsEntriesItr struct {
 	KotlinCollectionsItr
 }
 
 // NewKotlinCollectionsEntriesItr allocates a KotlinCollectionsEntriesItr.
-func NewKotlinCollectionsEntriesItr(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinCollectionsHashMap, f5 int32, f6 int32, f7 int32) *KotlinCollectionsEntriesItr {
+func NewKotlinCollectionsEntriesItr(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, map_ *KotlinCollectionsHashMap, index int32, lastIndex int32, expectedModCount int32) *KotlinCollectionsEntriesItr {
 	p := &KotlinCollectionsEntriesItr{}
 	p.RTT = rttKotlinCollectionsEntriesItr
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Map = f4
-	p.Index = f5
-	p.LastIndex = f6
-	p.ExpectedModCount = f7
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Map = map_
+	p.Index = index
+	p.LastIndex = lastIndex
+	p.ExpectedModCount = expectedModCount
 	return p
 }
 
@@ -2265,7 +2265,7 @@ func newKotlinCollectionsEntriesItrDefault() *KotlinCollectionsEntriesItr {
 
 var rttMixinType19 = rt.NewRTT(rt.KStruct, nil, true, "g02133f1fe9ba45d6e7102faf.1", nil)
 
-// MixinType19 is the wasm struct type sub final () struct(i8,ref null noextern,i32,ref null extern,ref null extern,ref null noextern,i64,ref null i31,ref null none,i32,ref null noextern,ref null array,ref null eq,f64,f32,i8).
+// MixinType19 is the wasm struct type (struct (field $ i8) (field $ (ref null noextern)) (field $ i32) (field $ (ref null extern)) (field $ (ref null extern)) (field $ (ref null noextern)) (field $ i64) ...).
 type MixinType19 struct {
 	F0  int8
 	F1  any
@@ -2318,21 +2318,21 @@ var rttFunc79 = rt.CanonRTT(rt.KFunc, nil, true, "gb0a5ef0016c7f4741e879f43.0")
 
 var rttKotlinCharArray = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g8fda0063846403cb4f851dd8.0", func(p unsafe.Pointer) any { return (*KotlinCharArray)(p) })
 
-// KotlinCharArray is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <ge5e1c8e2b83b19ec39c88....
+// KotlinCharArray is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $80)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $storage (mut (ref null $4))))), a subtype of KotlinAny.
 type KotlinCharArray struct {
 	KotlinAny
 	Storage *KotlinWasmInternalWasmCharArray
 }
 
 // NewKotlinCharArray allocates a KotlinCharArray.
-func NewKotlinCharArray(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinWasmInternalWasmCharArray) *KotlinCharArray {
+func NewKotlinCharArray(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, storage *KotlinWasmInternalWasmCharArray) *KotlinCharArray {
 	p := &KotlinCharArray{}
 	p.RTT = rttKotlinCharArray
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Storage = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Storage = storage
 	return p
 }
 
@@ -2344,7 +2344,7 @@ func newKotlinCharArrayDefault() *KotlinCharArray {
 
 var rttMixinType20 = rt.NewRTT(rt.KStruct, nil, true, "g8fda0063846403cb4f851dd8.1", nil)
 
-// MixinType20 is the wasm struct type sub final () struct(f32,ref null func,ref null func,i8,ref null eq,f64,ref null eq,ref null array,ref null i31,f32,ref null i31,ref null eq,ref null noextern,ref null func,ref null array,f32).
+// MixinType20 is the wasm struct type (struct (field $ f32) (field $ (ref null func)) (field $ (ref null func)) (field $ i8) (field $ (ref null eq)) (field $ f64) (field $ (ref null eq)) (field $ (ref null array)) ...).
 type MixinType20 struct {
 	F0  float32
 	F1  *rt.Func
@@ -2401,7 +2401,7 @@ var rttFunc85 = rt.CanonRTT(rt.KFunc, nil, true, "g2a62bcd81c13c6289fdb6b98.2")
 
 var rttClassVTable19 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g2a62bcd81c13c6289fdb6b98.3", func(p unsafe.Pointer) any { return (*ClassVTable19)(p) })
 
-// ClassVTable19 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable19 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-length> (ref null $14)) ...)), a subtype of ClassVTable.
 type ClassVTable19 struct {
 	ClassVTable
 	GetLength   *rt.Func
@@ -2415,21 +2415,21 @@ type ClassVTable19 struct {
 }
 
 // NewClassVTable19 allocates a ClassVTable19.
-func NewClassVTable19(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func, f10 *rt.Func, f11 *rt.Func) *ClassVTable19 {
+func NewClassVTable19(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getLength *rt.Func, get *rt.Func, subSequence *rt.Func, f7 *rt.Func, append2 *rt.Func, append3 *rt.Func, append4 *rt.Func, append5 *rt.Func) *ClassVTable19 {
 	p := &ClassVTable19{}
 	p.RTT = rttClassVTable19
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetLength = f4
-	p.Get = f5
-	p.SubSequence = f6
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetLength = getLength
+	p.Get = get
+	p.SubSequence = subSequence
 	p.Append = f7
-	p.Append_2 = f8
-	p.Append_3 = f9
-	p.Append_4 = f10
-	p.Append_5 = f11
+	p.Append_2 = append2
+	p.Append_3 = append3
+	p.Append_4 = append4
+	p.Append_5 = append5
 	return p
 }
 
@@ -2441,7 +2441,7 @@ func newClassVTable19Default() *ClassVTable19 {
 
 var rttKotlinTextStringBuilder = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g2a62bcd81c13c6289fdb6b98.4", func(p unsafe.Pointer) any { return (*KotlinTextStringBuilder)(p) })
 
-// KotlinTextStringBuilder is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref rec.3,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g8fda0063846403cb4f851dd8.0>,mut i32).
+// KotlinTextStringBuilder is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $86)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $array (mut (ref null $81))) (field $_length (mut i32)))), a subtype of KotlinAny.
 type KotlinTextStringBuilder struct {
 	KotlinAny
 	Array  *KotlinCharArray
@@ -2449,15 +2449,15 @@ type KotlinTextStringBuilder struct {
 }
 
 // NewKotlinTextStringBuilder allocates a KotlinTextStringBuilder.
-func NewKotlinTextStringBuilder(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinCharArray, f5 int32) *KotlinTextStringBuilder {
+func NewKotlinTextStringBuilder(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, array *KotlinCharArray, length int32) *KotlinTextStringBuilder {
 	p := &KotlinTextStringBuilder{}
 	p.RTT = rttKotlinTextStringBuilder
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Array = f4
-	p.Length = f5
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Array = array
+	p.Length = length
 	return p
 }
 
@@ -2469,7 +2469,7 @@ func newKotlinTextStringBuilderDefault() *KotlinTextStringBuilder {
 
 var rttMixinType21 = rt.NewRTT(rt.KStruct, nil, true, "g2a62bcd81c13c6289fdb6b98.5", nil)
 
-// MixinType21 is the wasm struct type sub final () struct(ref null eq,ref null none,i8,i16,v128,f32,i64,f32,ref null struct,i64,i8,i16,ref null struct,ref null none,ref null extern,f32,ref null i31).
+// MixinType21 is the wasm struct type (struct (field $ (ref null eq)) (field $ (ref null none)) (field $ i8) (field $ i16) (field $ v128) (field $ f32) (field $ i64) (field $ f32) (field $ (ref null struct)) ...).
 type MixinType21 struct {
 	F0  any
 	F1  any
@@ -2522,21 +2522,21 @@ func newMixinType21Default() *MixinType21 {
 
 var rttClassVTable20 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g0e300551d5c2bfea6d8a52dc.0", func(p unsafe.Pointer) any { return (*ClassVTable20)(p) })
 
-// ClassVTable20 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable20 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $invoke (ref null $47)))), a subtype of ClassVTable.
 type ClassVTable20 struct {
 	ClassVTable
 	Invoke *rt.Func
 }
 
 // NewClassVTable20 allocates a ClassVTable20.
-func NewClassVTable20(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable20 {
+func NewClassVTable20(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, invoke *rt.Func) *ClassVTable20 {
 	p := &ClassVTable20{}
 	p.RTT = rttClassVTable20
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Invoke = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Invoke = invoke
 	return p
 }
 
@@ -2548,7 +2548,7 @@ func newClassVTable20Default() *ClassVTable20 {
 
 var rttKotlinCollectionsFunction1Bound1A = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gbae95af9c02484e3369ae754.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsFunction1Bound1A)(p) })
 
-// KotlinCollectionsFunction1Bound1A is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g0e300551d5c2bfea6d8a52dc.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <gaccc512e52a36d17d2b4a....
+// KotlinCollectionsFunction1Bound1A is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $89)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $func (mut (ref null $47))) (field $f$0 (mut (ref null $10))))), a subtype of KotlinAny.
 type KotlinCollectionsFunction1Bound1A struct {
 	KotlinAny
 	Func *rt.Func
@@ -2556,15 +2556,15 @@ type KotlinCollectionsFunction1Bound1A struct {
 }
 
 // NewKotlinCollectionsFunction1Bound1A allocates a KotlinCollectionsFunction1Bound1A.
-func NewKotlinCollectionsFunction1Bound1A(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *rt.Func, f5 *KotlinAny) *KotlinCollectionsFunction1Bound1A {
+func NewKotlinCollectionsFunction1Bound1A(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, func_ *rt.Func, f0 *KotlinAny) *KotlinCollectionsFunction1Bound1A {
 	p := &KotlinCollectionsFunction1Bound1A{}
 	p.RTT = rttKotlinCollectionsFunction1Bound1A
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Func = f4
-	p.F0 = f5
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Func = func_
+	p.F0 = f0
 	return p
 }
 
@@ -2576,7 +2576,7 @@ func newKotlinCollectionsFunction1Bound1ADefault() *KotlinCollectionsFunction1Bo
 
 var rttMixinType22 = rt.NewRTT(rt.KStruct, nil, true, "gbae95af9c02484e3369ae754.1", nil)
 
-// MixinType22 is the wasm struct type sub final () struct(ref null func,i32,f32,ref null array,ref null any,ref null any,ref null none,i32,ref null func,i64,f64,f32,v128,ref null array,i32,ref null eq,ref null i31).
+// MixinType22 is the wasm struct type (struct (field $ (ref null func)) (field $ i32) (field $ f32) (field $ (ref null array)) (field $ (ref null any)) (field $ (ref null any)) (field $ (ref null none)) ...).
 type MixinType22 struct {
 	F0  *rt.Func
 	F1  int32
@@ -2629,7 +2629,7 @@ func newMixinType22Default() *MixinType22 {
 
 var rttClassVTable21 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "gede703c567621d50795d14ac.0", func(p unsafe.Pointer) any { return (*ClassVTable21)(p) })
 
-// ClassVTable21 is the wasm struct type sub open (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable21 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $hasNext (ref null $14)) ...)), a subtype of ClassVTable.
 type ClassVTable21 struct {
 	ClassVTable
 	HasNext *rt.Func
@@ -2637,15 +2637,15 @@ type ClassVTable21 struct {
 }
 
 // NewClassVTable21 allocates a ClassVTable21.
-func NewClassVTable21(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func) *ClassVTable21 {
+func NewClassVTable21(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, hasNext *rt.Func, next *rt.Func) *ClassVTable21 {
 	p := &ClassVTable21{}
 	p.RTT = rttClassVTable21
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.HasNext = f4
-	p.Next = f5
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.HasNext = hasNext
+	p.Next = next
 	return p
 }
 
@@ -2657,26 +2657,26 @@ func newClassVTable21Default() *ClassVTable21 {
 
 var rttClassVTable22 = rt.NewRTT(rt.KStruct, rttClassVTable8, false, "gaf8423901ecc4e3982239ac0.0", func(p unsafe.Pointer) any { return (*ClassVTable22)(p) })
 
-// ClassVTable22 is the wasm struct type sub open (<g9e2ad2de0d6a7780dbbfb4d4.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable22 is the wasm struct type (sub ClassVTable8 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-size> (ref null $14)) ...)), a subtype of ClassVTable8.
 type ClassVTable22 struct {
 	ClassVTable8
 	Get *rt.Func
 }
 
 // NewClassVTable22 allocates a ClassVTable22.
-func NewClassVTable22(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func) *ClassVTable22 {
+func NewClassVTable22(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSize *rt.Func, iterator *rt.Func, contains *rt.Func, containsAll *rt.Func, isEmpty *rt.Func, get *rt.Func) *ClassVTable22 {
 	p := &ClassVTable22{}
 	p.RTT = rttClassVTable22
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSize = f4
-	p.Iterator = f5
-	p.Contains = f6
-	p.ContainsAll = f7
-	p.IsEmpty = f8
-	p.Get = f9
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSize = getSize
+	p.Iterator = iterator
+	p.Contains = contains
+	p.ContainsAll = containsAll
+	p.IsEmpty = isEmpty
+	p.Get = get
 	return p
 }
 
@@ -2688,19 +2688,19 @@ func newClassVTable22Default() *ClassVTable22 {
 
 var rttKotlinCollectionsAbstractList = rt.NewRTT(rt.KStruct, rttKotlinCollectionsAbstractCollection, false, "gc1a8824d60c1fd74f358cea9.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsAbstractList)(p) })
 
-// KotlinCollectionsAbstractList is the wasm struct type sub open (<gbd310f4a2975e2a5f2731680.0>) struct(ref <gaf8423901ecc4e3982239ac0.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCollectionsAbstractList is the wasm struct type (sub KotlinCollectionsAbstractCollection (struct (field $vtable (ref $93)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinCollectionsAbstractCollection.
 type KotlinCollectionsAbstractList struct {
 	KotlinCollectionsAbstractCollection
 }
 
 // NewKotlinCollectionsAbstractList allocates a KotlinCollectionsAbstractList.
-func NewKotlinCollectionsAbstractList(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCollectionsAbstractList {
+func NewKotlinCollectionsAbstractList(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCollectionsAbstractList {
 	p := &KotlinCollectionsAbstractList{}
 	p.RTT = rttKotlinCollectionsAbstractList
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -2712,7 +2712,7 @@ func newKotlinCollectionsAbstractListDefault() *KotlinCollectionsAbstractList {
 
 var rttMixinType23 = rt.NewRTT(rt.KStruct, nil, true, "gc1a8824d60c1fd74f358cea9.1", nil)
 
-// MixinType23 is the wasm struct type sub final () struct(i64,i8,ref null struct,i8,ref null any,ref null extern,f64,f64,ref null noextern,ref null array,i64,ref null eq,i16,f64,ref null noextern,ref null i31).
+// MixinType23 is the wasm struct type (struct (field $ i64) (field $ i8) (field $ (ref null struct)) (field $ i8) (field $ (ref null any)) (field $ (ref null extern)) (field $ f64) (field $ f64) (field $ (ref null noextern)) ...).
 type MixinType23 struct {
 	F0  int64
 	F1  int8
@@ -2763,7 +2763,7 @@ func newMixinType23Default() *MixinType23 {
 
 var rttKotlinCollectionsIteratorImpl = rt.NewRTT(rt.KStruct, rttKotlinAny, false, "g24dfbd98b61a8fcc66b4dff8.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsIteratorImpl)(p) })
 
-// KotlinCollectionsIteratorImpl is the wasm struct type sub open (<g484ce41559fcc92541197c08.5>) struct(ref <gede703c567621d50795d14ac.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32,mut ref null <gc1a8824d60c1fd....
+// KotlinCollectionsIteratorImpl is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $92)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $index (mut i32)) (field $$this (mut (ref null $94))))), a subtype of KotlinAny.
 type KotlinCollectionsIteratorImpl struct {
 	KotlinAny
 	Index int32
@@ -2771,15 +2771,15 @@ type KotlinCollectionsIteratorImpl struct {
 }
 
 // NewKotlinCollectionsIteratorImpl allocates a KotlinCollectionsIteratorImpl.
-func NewKotlinCollectionsIteratorImpl(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32, f5 *KotlinCollectionsAbstractList) *KotlinCollectionsIteratorImpl {
+func NewKotlinCollectionsIteratorImpl(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, index int32, this *KotlinCollectionsAbstractList) *KotlinCollectionsIteratorImpl {
 	p := &KotlinCollectionsIteratorImpl{}
 	p.RTT = rttKotlinCollectionsIteratorImpl
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Index = f4
-	p.This = f5
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Index = index
+	p.This = this
 	return p
 }
 
@@ -2791,7 +2791,7 @@ func newKotlinCollectionsIteratorImplDefault() *KotlinCollectionsIteratorImpl {
 
 var rttMixinType24 = rt.NewRTT(rt.KStruct, nil, true, "g24dfbd98b61a8fcc66b4dff8.1", nil)
 
-// MixinType24 is the wasm struct type sub final () struct(ref null any,i64,ref null noextern,i32,ref null noextern,v128,ref null func,i8,ref null eq,ref null extern,v128,ref null any,ref null array,ref null func,f32,ref null noextern,ref ....
+// MixinType24 is the wasm struct type (struct (field $ (ref null any)) (field $ i64) (field $ (ref null noextern)) (field $ i32) (field $ (ref null noextern)) (field $ v128) (field $ (ref null func)) ...).
 type MixinType24 struct {
 	F0  any
 	F1  int64
@@ -2844,21 +2844,21 @@ func newMixinType24Default() *MixinType24 {
 
 var rttKotlinCollectionsCompanion2 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gd668c6918eaffd2dc02a5139.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsCompanion2)(p) })
 
-// KotlinCollectionsCompanion2 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32).
+// KotlinCollectionsCompanion2 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $98)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $maxArraySize (mut i32)))), a subtype of KotlinAny.
 type KotlinCollectionsCompanion2 struct {
 	KotlinAny
 	MaxArraySize int32
 }
 
 // NewKotlinCollectionsCompanion2 allocates a KotlinCollectionsCompanion2.
-func NewKotlinCollectionsCompanion2(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32) *KotlinCollectionsCompanion2 {
+func NewKotlinCollectionsCompanion2(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, maxArraySize int32) *KotlinCollectionsCompanion2 {
 	p := &KotlinCollectionsCompanion2{}
 	p.RTT = rttKotlinCollectionsCompanion2
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.MaxArraySize = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.MaxArraySize = maxArraySize
 	return p
 }
 
@@ -2870,7 +2870,7 @@ func newKotlinCollectionsCompanion2Default() *KotlinCollectionsCompanion2 {
 
 var rttMixinType25 = rt.NewRTT(rt.KStruct, nil, true, "gd668c6918eaffd2dc02a5139.1", nil)
 
-// MixinType25 is the wasm struct type sub final () struct(i8,ref null none,f32,f32,i8,i8,ref null any,ref null extern,i8,ref null any,v128,f32,ref null any,ref null i31,i8,i8).
+// MixinType25 is the wasm struct type (struct (field $ i8) (field $ (ref null none)) (field $ f32) (field $ f32) (field $ i8) (field $ i8) (field $ (ref null any)) (field $ (ref null extern)) (field $ i8) ...).
 type MixinType25 struct {
 	F0  int8
 	F1  any
@@ -2921,19 +2921,19 @@ func newMixinType25Default() *MixinType25 {
 
 var rttKotlinCollectionsCompanion3 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g8ca5927bba3586a31024e8fa.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsCompanion3)(p) })
 
-// KotlinCollectionsCompanion3 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCollectionsCompanion3 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $101)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinCollectionsCompanion3 struct {
 	KotlinAny
 }
 
 // NewKotlinCollectionsCompanion3 allocates a KotlinCollectionsCompanion3.
-func NewKotlinCollectionsCompanion3(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCollectionsCompanion3 {
+func NewKotlinCollectionsCompanion3(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCollectionsCompanion3 {
 	p := &KotlinCollectionsCompanion3{}
 	p.RTT = rttKotlinCollectionsCompanion3
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -2945,7 +2945,7 @@ func newKotlinCollectionsCompanion3Default() *KotlinCollectionsCompanion3 {
 
 var rttMixinType26 = rt.NewRTT(rt.KStruct, nil, true, "g8ca5927bba3586a31024e8fa.1", nil)
 
-// MixinType26 is the wasm struct type sub final () struct(ref null any,i8,ref null noextern,ref null struct,ref null func,i64,f32,ref null any,ref null noextern,ref null any,i32,ref null extern,i16,ref null array,ref null array,ref null n....
+// MixinType26 is the wasm struct type (struct (field $ (ref null any)) (field $ i8) (field $ (ref null noextern)) (field $ (ref null struct)) (field $ (ref null func)) (field $ i64) (field $ f32) (field $ (ref null any)) ...).
 type MixinType26 struct {
 	F0  any
 	F1  int8
@@ -2998,7 +2998,7 @@ func newMixinType26Default() *MixinType26 {
 
 var rttClassVTable23 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "ge231ef1640548742b7a95464.0", func(p unsafe.Pointer) any { return (*ClassVTable23)(p) })
 
-// ClassVTable23 is the wasm struct type sub open (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable23 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $next (ref null $14)) ...)), a subtype of ClassVTable.
 type ClassVTable23 struct {
 	ClassVTable
 	Next    *rt.Func
@@ -3008,17 +3008,17 @@ type ClassVTable23 struct {
 }
 
 // NewClassVTable23 allocates a ClassVTable23.
-func NewClassVTable23(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func) *ClassVTable23 {
+func NewClassVTable23(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, next *rt.Func, next2 *rt.Func, nextInt *rt.Func, hasNext *rt.Func) *ClassVTable23 {
 	p := &ClassVTable23{}
 	p.RTT = rttClassVTable23
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Next = f4
-	p.Next_2 = f5
-	p.NextInt = f6
-	p.HasNext = f7
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Next = next
+	p.Next_2 = next2
+	p.NextInt = nextInt
+	p.HasNext = hasNext
 	return p
 }
 
@@ -3030,19 +3030,19 @@ func newClassVTable23Default() *ClassVTable23 {
 
 var rttKotlinCollectionsIntIterator = rt.NewRTT(rt.KStruct, rttKotlinAny, false, "g8dc10fe4820f60146985c2bd.0", func(p unsafe.Pointer) any { return (*KotlinCollectionsIntIterator)(p) })
 
-// KotlinCollectionsIntIterator is the wasm struct type sub open (<g484ce41559fcc92541197c08.5>) struct(ref <ge231ef1640548742b7a95464.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCollectionsIntIterator is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $104)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinCollectionsIntIterator struct {
 	KotlinAny
 }
 
 // NewKotlinCollectionsIntIterator allocates a KotlinCollectionsIntIterator.
-func NewKotlinCollectionsIntIterator(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCollectionsIntIterator {
+func NewKotlinCollectionsIntIterator(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCollectionsIntIterator {
 	p := &KotlinCollectionsIntIterator{}
 	p.RTT = rttKotlinCollectionsIntIterator
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -3054,7 +3054,7 @@ func newKotlinCollectionsIntIteratorDefault() *KotlinCollectionsIntIterator {
 
 var rttMixinType27 = rt.NewRTT(rt.KStruct, nil, true, "g8dc10fe4820f60146985c2bd.1", nil)
 
-// MixinType27 is the wasm struct type sub final () struct(ref null struct,i64,v128,ref null none,f32,i32,ref null any,ref null eq,ref null any,ref null noextern,i32,ref null any,ref null array,f64,ref null any,i64,ref null i31).
+// MixinType27 is the wasm struct type (struct (field $ (ref null struct)) (field $ i64) (field $ v128) (field $ (ref null none)) (field $ f32) (field $ i32) (field $ (ref null any)) (field $ (ref null eq)) ...).
 type MixinType27 struct {
 	F0  any
 	F1  int64
@@ -3109,7 +3109,7 @@ var rttFunc107 = rt.CanonRTT(rt.KFunc, nil, true, "g3a5e257473e4b2b15f19905f.0")
 
 var rttClassVTable24 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "g3a5e257473e4b2b15f19905f.1", func(p unsafe.Pointer) any { return (*ClassVTable24)(p) })
 
-// ClassVTable24 is the wasm struct type sub open (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable24 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $compareTo (ref null $107)) ...)), a subtype of ClassVTable.
 type ClassVTable24 struct {
 	ClassVTable
 	CompareTo   *rt.Func
@@ -3117,15 +3117,15 @@ type ClassVTable24 struct {
 }
 
 // NewClassVTable24 allocates a ClassVTable24.
-func NewClassVTable24(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func) *ClassVTable24 {
+func NewClassVTable24(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, compareTo *rt.Func, compareTo2 *rt.Func) *ClassVTable24 {
 	p := &ClassVTable24{}
 	p.RTT = rttClassVTable24
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.CompareTo = f4
-	p.CompareTo_2 = f5
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.CompareTo = compareTo
+	p.CompareTo_2 = compareTo2
 	return p
 }
 
@@ -3137,7 +3137,7 @@ func newClassVTable24Default() *ClassVTable24 {
 
 var rttKotlinEnum = rt.NewRTT(rt.KStruct, rttKotlinAny, false, "g3a5e257473e4b2b15f19905f.2", func(p unsafe.Pointer) any { return (*KotlinEnum)(p) })
 
-// KotlinEnum is the wasm struct type sub open (<g484ce41559fcc92541197c08.5>) struct(ref rec.1,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c08.11>,mut i32).
+// KotlinEnum is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $108)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $name (mut (ref null $16))) (field $ordinal (mut i32)))), a subtype of KotlinAny.
 type KotlinEnum struct {
 	KotlinAny
 	Name    *KotlinString
@@ -3145,15 +3145,15 @@ type KotlinEnum struct {
 }
 
 // NewKotlinEnum allocates a KotlinEnum.
-func NewKotlinEnum(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 int32) *KotlinEnum {
+func NewKotlinEnum(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, name *KotlinString, ordinal int32) *KotlinEnum {
 	p := &KotlinEnum{}
 	p.RTT = rttKotlinEnum
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Name = f4
-	p.Ordinal = f5
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Name = name
+	p.Ordinal = ordinal
 	return p
 }
 
@@ -3165,7 +3165,7 @@ func newKotlinEnumDefault() *KotlinEnum {
 
 var rttMixinType28 = rt.NewRTT(rt.KStruct, nil, true, "g3a5e257473e4b2b15f19905f.3", nil)
 
-// MixinType28 is the wasm struct type sub final () struct(i64,v128,i32,ref null extern,v128,ref null noextern,i32,ref null extern,i8,ref null extern,ref null i31,ref null array,i16,ref null eq,ref null extern,ref null i31).
+// MixinType28 is the wasm struct type (struct (field $ i64) (field $ v128) (field $ i32) (field $ (ref null extern)) (field $ v128) (field $ (ref null noextern)) (field $ i32) (field $ (ref null extern)) ...).
 type MixinType28 struct {
 	F0  int64
 	F1  rt.V128
@@ -3218,7 +3218,7 @@ var rttFunc111 = rt.CanonRTT(rt.KFunc, nil, true, "gc674ad0c95b06064a9e74145.0")
 
 var rttClassVTable25 = rt.NewRTT(rt.KStruct, rttClassVTable22, true, "gc0c8ede28175138a74c66e58.0", func(p unsafe.Pointer) any { return (*ClassVTable25)(p) })
 
-// ClassVTable25 is the wasm struct type sub final (<gaf8423901ecc4e3982239ac0.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable25 is the wasm struct type (sub ClassVTable22 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-size> (ref null $14)) ...)), a subtype of ClassVTable22.
 type ClassVTable25 struct {
 	ClassVTable22
 	Get_2      *rt.Func
@@ -3226,21 +3226,21 @@ type ClassVTable25 struct {
 }
 
 // NewClassVTable25 allocates a ClassVTable25.
-func NewClassVTable25(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func, f10 *rt.Func, f11 *rt.Func) *ClassVTable25 {
+func NewClassVTable25(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSize *rt.Func, iterator *rt.Func, contains *rt.Func, containsAll *rt.Func, isEmpty *rt.Func, get *rt.Func, get2 *rt.Func, contains2 *rt.Func) *ClassVTable25 {
 	p := &ClassVTable25{}
 	p.RTT = rttClassVTable25
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSize = f4
-	p.Iterator = f5
-	p.Contains = f6
-	p.ContainsAll = f7
-	p.IsEmpty = f8
-	p.Get = f9
-	p.Get_2 = f10
-	p.Contains_2 = f11
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSize = getSize
+	p.Iterator = iterator
+	p.Contains = contains
+	p.ContainsAll = containsAll
+	p.IsEmpty = isEmpty
+	p.Get = get
+	p.Get_2 = get2
+	p.Contains_2 = contains2
 	return p
 }
 
@@ -3252,21 +3252,21 @@ func newClassVTable25Default() *ClassVTable25 {
 
 var rttKotlinEnumsEnumEntriesList = rt.NewRTT(rt.KStruct, rttKotlinCollectionsAbstractList, true, "gebdb1331e83e71d3488e6a52.0", func(p unsafe.Pointer) any { return (*KotlinEnumsEnumEntriesList)(p) })
 
-// KotlinEnumsEnumEntriesList is the wasm struct type sub final (<gc1a8824d60c1fd74f358cea9.0>) struct(ref <gc0c8ede28175138a74c66e58.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <gfe520f0e4bfbc62cede02....
+// KotlinEnumsEnumEntriesList is the wasm struct type (sub KotlinCollectionsAbstractList (struct (field $vtable (ref $112)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $entries (mut (ref null $52))))), a subtype of KotlinCollectionsAbstractList.
 type KotlinEnumsEnumEntriesList struct {
 	KotlinCollectionsAbstractList
 	Entries *KotlinArray
 }
 
 // NewKotlinEnumsEnumEntriesList allocates a KotlinEnumsEnumEntriesList.
-func NewKotlinEnumsEnumEntriesList(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinArray) *KotlinEnumsEnumEntriesList {
+func NewKotlinEnumsEnumEntriesList(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, entries *KotlinArray) *KotlinEnumsEnumEntriesList {
 	p := &KotlinEnumsEnumEntriesList{}
 	p.RTT = rttKotlinEnumsEnumEntriesList
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Entries = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Entries = entries
 	return p
 }
 
@@ -3278,7 +3278,7 @@ func newKotlinEnumsEnumEntriesListDefault() *KotlinEnumsEnumEntriesList {
 
 var rttMixinType29 = rt.NewRTT(rt.KStruct, nil, true, "gebdb1331e83e71d3488e6a52.1", nil)
 
-// MixinType29 is the wasm struct type sub final () struct(v128,ref null eq,i8,ref null func,ref null array,ref null any,i64,ref null none,f64,i8,ref null noextern,ref null array,f64,ref null struct,v128,ref null noextern,ref null i31).
+// MixinType29 is the wasm struct type (struct (field $ v128) (field $ (ref null eq)) (field $ i8) (field $ (ref null func)) (field $ (ref null array)) (field $ (ref null any)) (field $ i64) (field $ (ref null none)) ...).
 type MixinType29 struct {
 	F0  rt.V128
 	F1  any
@@ -3333,7 +3333,7 @@ var rttFunc115 = rt.CanonRTT(rt.KFunc, nil, true, "gd3ee076b87d75954a08eb0db.0")
 
 var rttClassVTable26 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "gf13e3c5e13bccc2525163c65.0", func(p unsafe.Pointer) any { return (*ClassVTable26)(p) })
 
-// ClassVTable26 is the wasm struct type sub open (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable26 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $nextBits (ref null $7)) ...)), a subtype of ClassVTable.
 type ClassVTable26 struct {
 	ClassVTable
 	NextBits  *rt.Func
@@ -3342,16 +3342,16 @@ type ClassVTable26 struct {
 }
 
 // NewClassVTable26 allocates a ClassVTable26.
-func NewClassVTable26(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func) *ClassVTable26 {
+func NewClassVTable26(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, nextBits *rt.Func, nextInt *rt.Func, nextInt2 *rt.Func) *ClassVTable26 {
 	p := &ClassVTable26{}
 	p.RTT = rttClassVTable26
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.NextBits = f4
-	p.NextInt = f5
-	p.NextInt_2 = f6
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.NextBits = nextBits
+	p.NextInt = nextInt
+	p.NextInt_2 = nextInt2
 	return p
 }
 
@@ -3363,19 +3363,19 @@ func newClassVTable26Default() *ClassVTable26 {
 
 var rttKotlinRandomRandom = rt.NewRTT(rt.KStruct, rttKotlinAny, false, "g4ec74f468ae8dada73361930.0", func(p unsafe.Pointer) any { return (*KotlinRandomRandom)(p) })
 
-// KotlinRandomRandom is the wasm struct type sub open (<g484ce41559fcc92541197c08.5>) struct(ref <gf13e3c5e13bccc2525163c65.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinRandomRandom is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $116)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinRandomRandom struct {
 	KotlinAny
 }
 
 // NewKotlinRandomRandom allocates a KotlinRandomRandom.
-func NewKotlinRandomRandom(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinRandomRandom {
+func NewKotlinRandomRandom(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinRandomRandom {
 	p := &KotlinRandomRandom{}
 	p.RTT = rttKotlinRandomRandom
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -3387,7 +3387,7 @@ func newKotlinRandomRandomDefault() *KotlinRandomRandom {
 
 var rttMixinType30 = rt.NewRTT(rt.KStruct, nil, true, "g4ec74f468ae8dada73361930.1", nil)
 
-// MixinType30 is the wasm struct type sub final () struct(ref null eq,ref null func,ref null noextern,i32,ref null i31,ref null func,ref null any,ref null array,i16,ref null extern,ref null i31,ref null extern,ref null func,ref null exter....
+// MixinType30 is the wasm struct type (struct (field $ (ref null eq)) (field $ (ref null func)) (field $ (ref null noextern)) (field $ i32) (field $ (ref null i31)) (field $ (ref null func)) (field $ (ref null any)) ...).
 type MixinType30 struct {
 	F0  any
 	F1  *rt.Func
@@ -3438,22 +3438,22 @@ func newMixinType30Default() *MixinType30 {
 
 var rttClassVTable27 = rt.NewRTT(rt.KStruct, rttClassVTable26, true, "g5732f0e02d53b4b554c384f6.0", func(p unsafe.Pointer) any { return (*ClassVTable27)(p) })
 
-// ClassVTable27 is the wasm struct type sub final (<gf13e3c5e13bccc2525163c65.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable27 is the wasm struct type (sub ClassVTable26 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $nextBits (ref null $7)) ...)), a subtype of ClassVTable26.
 type ClassVTable27 struct {
 	ClassVTable26
 }
 
 // NewClassVTable27 allocates a ClassVTable27.
-func NewClassVTable27(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func) *ClassVTable27 {
+func NewClassVTable27(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, nextBits *rt.Func, nextInt *rt.Func, nextInt2 *rt.Func) *ClassVTable27 {
 	p := &ClassVTable27{}
 	p.RTT = rttClassVTable27
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.NextBits = f4
-	p.NextInt = f5
-	p.NextInt_2 = f6
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.NextBits = nextBits
+	p.NextInt = nextInt
+	p.NextInt_2 = nextInt2
 	return p
 }
 
@@ -3465,21 +3465,21 @@ func newClassVTable27Default() *ClassVTable27 {
 
 var rttKotlinRandomDefault = rt.NewRTT(rt.KStruct, rttKotlinRandomRandom, true, "g58426595b5541008cf23b4f7.0", func(p unsafe.Pointer) any { return (*KotlinRandomDefault)(p) })
 
-// KotlinRandomDefault is the wasm struct type sub final (<g4ec74f468ae8dada73361930.0>) struct(ref <g5732f0e02d53b4b554c384f6.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g4ec74f468ae8dada73361....
+// KotlinRandomDefault is the wasm struct type (sub KotlinRandomRandom (struct (field $vtable (ref $119)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $defaultRandom (mut (ref null $117))))), a subtype of KotlinRandomRandom.
 type KotlinRandomDefault struct {
 	KotlinRandomRandom
 	DefaultRandom *KotlinRandomRandom
 }
 
 // NewKotlinRandomDefault allocates a KotlinRandomDefault.
-func NewKotlinRandomDefault(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinRandomRandom) *KotlinRandomDefault {
+func NewKotlinRandomDefault(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, defaultRandom *KotlinRandomRandom) *KotlinRandomDefault {
 	p := &KotlinRandomDefault{}
 	p.RTT = rttKotlinRandomDefault
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.DefaultRandom = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.DefaultRandom = defaultRandom
 	return p
 }
 
@@ -3491,7 +3491,7 @@ func newKotlinRandomDefaultDefault() *KotlinRandomDefault {
 
 var rttMixinType31 = rt.NewRTT(rt.KStruct, nil, true, "g58426595b5541008cf23b4f7.1", nil)
 
-// MixinType31 is the wasm struct type sub final () struct(i32,ref null extern,i8,ref null i31,i32,ref null array,ref null noextern,ref null array,i8,i16,f32,i64,ref null extern,ref null noextern,i16,i64).
+// MixinType31 is the wasm struct type (struct (field $ i32) (field $ (ref null extern)) (field $ i8) (field $ (ref null i31)) (field $ i32) (field $ (ref null array)) (field $ (ref null noextern)) (field $ (ref null array)) ...).
 type MixinType31 struct {
 	F0  int32
 	F1  any
@@ -3542,21 +3542,21 @@ func newMixinType31Default() *MixinType31 {
 
 var rttKotlinRandomCompanion = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gedb185bcb400c33e8e3d77dc.0", func(p unsafe.Pointer) any { return (*KotlinRandomCompanion)(p) })
 
-// KotlinRandomCompanion is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i64).
+// KotlinRandomCompanion is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $122)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $serialVersionUID (mut i64)))), a subtype of KotlinAny.
 type KotlinRandomCompanion struct {
 	KotlinAny
 	SerialVersionUID int64
 }
 
 // NewKotlinRandomCompanion allocates a KotlinRandomCompanion.
-func NewKotlinRandomCompanion(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int64) *KotlinRandomCompanion {
+func NewKotlinRandomCompanion(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, serialVersionUID int64) *KotlinRandomCompanion {
 	p := &KotlinRandomCompanion{}
 	p.RTT = rttKotlinRandomCompanion
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.SerialVersionUID = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.SerialVersionUID = serialVersionUID
 	return p
 }
 
@@ -3568,7 +3568,7 @@ func newKotlinRandomCompanionDefault() *KotlinRandomCompanion {
 
 var rttMixinType32 = rt.NewRTT(rt.KStruct, nil, true, "gedb185bcb400c33e8e3d77dc.1", nil)
 
-// MixinType32 is the wasm struct type sub final () struct(ref null i31,v128,i64,i16,ref null func,ref null struct,ref null array,ref null none,ref null extern,ref null any,ref null noextern,ref null noextern,i64,ref null noextern,f64,i16).
+// MixinType32 is the wasm struct type (struct (field $ (ref null i31)) (field $ v128) (field $ i64) (field $ i16) (field $ (ref null func)) (field $ (ref null struct)) (field $ (ref null array)) (field $ (ref null none)) ...).
 type MixinType32 struct {
 	F0  any
 	F1  rt.V128
@@ -3619,7 +3619,7 @@ func newMixinType32Default() *MixinType32 {
 
 var rttKotlinRandomXorWowRandom = rt.NewRTT(rt.KStruct, rttKotlinRandomRandom, true, "g48fa1e484325f6057faf0605.0", func(p unsafe.Pointer) any { return (*KotlinRandomXorWowRandom)(p) })
 
-// KotlinRandomXorWowRandom is the wasm struct type sub final (<g4ec74f468ae8dada73361930.0>) struct(ref <g5732f0e02d53b4b554c384f6.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32,mut i32,mut i32,mut i32,mut ....
+// KotlinRandomXorWowRandom is the wasm struct type (sub KotlinRandomRandom (struct (field $vtable (ref $125)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $x (mut i32)) (field $y (mut i32)) (field $z (mut i32)) ...)), a subtype of KotlinRandomRandom.
 type KotlinRandomXorWowRandom struct {
 	KotlinRandomRandom
 	X      int32
@@ -3631,19 +3631,19 @@ type KotlinRandomXorWowRandom struct {
 }
 
 // NewKotlinRandomXorWowRandom allocates a KotlinRandomXorWowRandom.
-func NewKotlinRandomXorWowRandom(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32, f5 int32, f6 int32, f7 int32, f8 int32, f9 int32) *KotlinRandomXorWowRandom {
+func NewKotlinRandomXorWowRandom(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, x int32, y int32, z int32, w int32, v int32, addend int32) *KotlinRandomXorWowRandom {
 	p := &KotlinRandomXorWowRandom{}
 	p.RTT = rttKotlinRandomXorWowRandom
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.X = f4
-	p.Y = f5
-	p.Z = f6
-	p.W = f7
-	p.V = f8
-	p.Addend = f9
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.X = x
+	p.Y = y
+	p.Z = z
+	p.W = w
+	p.V = v
+	p.Addend = addend
 	return p
 }
 
@@ -3655,7 +3655,7 @@ func newKotlinRandomXorWowRandomDefault() *KotlinRandomXorWowRandom {
 
 var rttMixinType33 = rt.NewRTT(rt.KStruct, nil, true, "g48fa1e484325f6057faf0605.1", nil)
 
-// MixinType33 is the wasm struct type sub final () struct(ref null i31,ref null eq,f32,v128,ref null noextern,ref null eq,f32,ref null extern,ref null any,ref null noextern,f64,ref null array,ref null none,ref null array,ref null func).
+// MixinType33 is the wasm struct type (struct (field $ (ref null i31)) (field $ (ref null eq)) (field $ f32) (field $ v128) (field $ (ref null noextern)) (field $ (ref null eq)) (field $ f32) (field $ (ref null extern)) ...).
 type MixinType33 struct {
 	F0  any
 	F1  any
@@ -3706,7 +3706,7 @@ var rttFunc129 = rt.CanonRTT(rt.KFunc, nil, true, "gcfcdf3d40167b2122cce1e74.0")
 
 var rttClassVTable28 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "ga7d841391dc731abf7c9e17f.0", func(p unsafe.Pointer) any { return (*ClassVTable28)(p) })
 
-// ClassVTable28 is the wasm struct type sub open (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable28 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $iterator (ref null $129)) ...)), a subtype of ClassVTable.
 type ClassVTable28 struct {
 	ClassVTable
 	Iterator   *rt.Func
@@ -3715,16 +3715,16 @@ type ClassVTable28 struct {
 }
 
 // NewClassVTable28 allocates a ClassVTable28.
-func NewClassVTable28(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func) *ClassVTable28 {
+func NewClassVTable28(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, iterator *rt.Func, iterator2 *rt.Func, isEmpty *rt.Func) *ClassVTable28 {
 	p := &ClassVTable28{}
 	p.RTT = rttClassVTable28
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Iterator = f4
-	p.Iterator_2 = f5
-	p.IsEmpty = f6
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Iterator = iterator
+	p.Iterator_2 = iterator2
+	p.IsEmpty = isEmpty
 	return p
 }
 
@@ -3736,7 +3736,7 @@ func newClassVTable28Default() *ClassVTable28 {
 
 var rttKotlinRangesIntProgression = rt.NewRTT(rt.KStruct, rttKotlinAny, false, "g972a3313d9dfbb91b24a9d40.0", func(p unsafe.Pointer) any { return (*KotlinRangesIntProgression)(p) })
 
-// KotlinRangesIntProgression is the wasm struct type sub open (<g484ce41559fcc92541197c08.5>) struct(ref <ga7d841391dc731abf7c9e17f.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32,mut i32,mut i32).
+// KotlinRangesIntProgression is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $130)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $first (mut i32)) (field $last (mut i32)) ...)), a subtype of KotlinAny.
 type KotlinRangesIntProgression struct {
 	KotlinAny
 	First int32
@@ -3745,16 +3745,16 @@ type KotlinRangesIntProgression struct {
 }
 
 // NewKotlinRangesIntProgression allocates a KotlinRangesIntProgression.
-func NewKotlinRangesIntProgression(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32, f5 int32, f6 int32) *KotlinRangesIntProgression {
+func NewKotlinRangesIntProgression(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, first int32, last int32, step int32) *KotlinRangesIntProgression {
 	p := &KotlinRangesIntProgression{}
 	p.RTT = rttKotlinRangesIntProgression
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.First = f4
-	p.Last = f5
-	p.Step = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.First = first
+	p.Last = last
+	p.Step = step
 	return p
 }
 
@@ -3766,7 +3766,7 @@ func newKotlinRangesIntProgressionDefault() *KotlinRangesIntProgression {
 
 var rttMixinType34 = rt.NewRTT(rt.KStruct, nil, true, "g972a3313d9dfbb91b24a9d40.1", nil)
 
-// MixinType34 is the wasm struct type sub final () struct(ref null any,ref null noextern,ref null func,i64,f32,v128,i64,v128,ref null struct,v128,ref null eq,ref null extern,i64,ref null array,ref null none,i64,ref null i31).
+// MixinType34 is the wasm struct type (struct (field $ (ref null any)) (field $ (ref null noextern)) (field $ (ref null func)) (field $ i64) (field $ f32) (field $ v128) (field $ i64) (field $ v128) (field $ (ref null struct)) ...).
 type MixinType34 struct {
 	F0  any
 	F1  any
@@ -3819,7 +3819,7 @@ func newMixinType34Default() *MixinType34 {
 
 var rttClassVTable29 = rt.NewRTT(rt.KStruct, rttClassVTable28, true, "g269f6c93237da35256bd198f.0", func(p unsafe.Pointer) any { return (*ClassVTable29)(p) })
 
-// ClassVTable29 is the wasm struct type sub final (<ga7d841391dc731abf7c9e17f.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable29 is the wasm struct type (sub ClassVTable28 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $iterator (ref null $129)) ...)), a subtype of ClassVTable28.
 type ClassVTable29 struct {
 	ClassVTable28
 	GetStart          *rt.Func
@@ -3831,22 +3831,22 @@ type ClassVTable29 struct {
 }
 
 // NewClassVTable29 allocates a ClassVTable29.
-func NewClassVTable29(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func, f8 *rt.Func, f9 *rt.Func, f10 *rt.Func, f11 *rt.Func, f12 *rt.Func) *ClassVTable29 {
+func NewClassVTable29(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, iterator *rt.Func, iterator2 *rt.Func, isEmpty *rt.Func, getStart *rt.Func, getStart2 *rt.Func, getEndInclusive *rt.Func, getEndInclusive2 *rt.Func, contains *rt.Func, contains2 *rt.Func) *ClassVTable29 {
 	p := &ClassVTable29{}
 	p.RTT = rttClassVTable29
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Iterator = f4
-	p.Iterator_2 = f5
-	p.IsEmpty = f6
-	p.GetStart = f7
-	p.GetStart_2 = f8
-	p.GetEndInclusive = f9
-	p.GetEndInclusive_2 = f10
-	p.Contains = f11
-	p.Contains_2 = f12
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Iterator = iterator
+	p.Iterator_2 = iterator2
+	p.IsEmpty = isEmpty
+	p.GetStart = getStart
+	p.GetStart_2 = getStart2
+	p.GetEndInclusive = getEndInclusive
+	p.GetEndInclusive_2 = getEndInclusive2
+	p.Contains = contains
+	p.Contains_2 = contains2
 	return p
 }
 
@@ -3858,22 +3858,22 @@ func newClassVTable29Default() *ClassVTable29 {
 
 var rttKotlinRangesIntRange = rt.NewRTT(rt.KStruct, rttKotlinRangesIntProgression, true, "g3131c9b1c036ab60e653d23c.0", func(p unsafe.Pointer) any { return (*KotlinRangesIntRange)(p) })
 
-// KotlinRangesIntRange is the wasm struct type sub final (<g972a3313d9dfbb91b24a9d40.0>) struct(ref <g269f6c93237da35256bd198f.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32,mut i32,mut i32).
+// KotlinRangesIntRange is the wasm struct type (sub KotlinRangesIntProgression (struct (field $vtable (ref $133)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $first (mut i32)) (field $last (mut i32)) ...)), a subtype of KotlinRangesIntProgression.
 type KotlinRangesIntRange struct {
 	KotlinRangesIntProgression
 }
 
 // NewKotlinRangesIntRange allocates a KotlinRangesIntRange.
-func NewKotlinRangesIntRange(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32, f5 int32, f6 int32) *KotlinRangesIntRange {
+func NewKotlinRangesIntRange(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, first int32, last int32, step int32) *KotlinRangesIntRange {
 	p := &KotlinRangesIntRange{}
 	p.RTT = rttKotlinRangesIntRange
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.First = f4
-	p.Last = f5
-	p.Step = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.First = first
+	p.Last = last
+	p.Step = step
 	return p
 }
 
@@ -3885,7 +3885,7 @@ func newKotlinRangesIntRangeDefault() *KotlinRangesIntRange {
 
 var rttMixinType35 = rt.NewRTT(rt.KStruct, nil, true, "g3131c9b1c036ab60e653d23c.1", nil)
 
-// MixinType35 is the wasm struct type sub final () struct(ref null struct,i64,i64,ref null func,ref null i31,i64,i32,f64,i32,f32,i32,i16,ref null i31,i8,ref null any,i8).
+// MixinType35 is the wasm struct type (struct (field $ (ref null struct)) (field $ i64) (field $ i64) (field $ (ref null func)) (field $ (ref null i31)) (field $ i64) (field $ i32) (field $ f64) (field $ i32) ...).
 type MixinType35 struct {
 	F0  any
 	F1  int64
@@ -3936,21 +3936,21 @@ func newMixinType35Default() *MixinType35 {
 
 var rttKotlinRangesCompanion = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gdc3c7e57d823095ab115c8f9.0", func(p unsafe.Pointer) any { return (*KotlinRangesCompanion)(p) })
 
-// KotlinRangesCompanion is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g3131c9b1c036ab60e653d....
+// KotlinRangesCompanion is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $128)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $EMPTY (mut (ref null $134))))), a subtype of KotlinAny.
 type KotlinRangesCompanion struct {
 	KotlinAny
 	EMPTY *KotlinRangesIntRange
 }
 
 // NewKotlinRangesCompanion allocates a KotlinRangesCompanion.
-func NewKotlinRangesCompanion(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinRangesIntRange) *KotlinRangesCompanion {
+func NewKotlinRangesCompanion(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, eMPTY *KotlinRangesIntRange) *KotlinRangesCompanion {
 	p := &KotlinRangesCompanion{}
 	p.RTT = rttKotlinRangesCompanion
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.EMPTY = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.EMPTY = eMPTY
 	return p
 }
 
@@ -3962,7 +3962,7 @@ func newKotlinRangesCompanionDefault() *KotlinRangesCompanion {
 
 var rttMixinType36 = rt.NewRTT(rt.KStruct, nil, true, "gdc3c7e57d823095ab115c8f9.1", nil)
 
-// MixinType36 is the wasm struct type sub final () struct(ref null none,ref null none,i32,ref null none,ref null none,i64,ref null struct,i32,ref null i31,ref null any,ref null array,ref null struct,v128,i16,ref null any,f64).
+// MixinType36 is the wasm struct type (struct (field $ (ref null none)) (field $ (ref null none)) (field $ i32) (field $ (ref null none)) (field $ (ref null none)) (field $ i64) (field $ (ref null struct)) ...).
 type MixinType36 struct {
 	F0  any
 	F1  any
@@ -4013,23 +4013,23 @@ func newMixinType36Default() *MixinType36 {
 
 var rttClassVTable30 = rt.NewRTT(rt.KStruct, rttClassVTable23, true, "g997df35a488431bd5bdb221c.0", func(p unsafe.Pointer) any { return (*ClassVTable30)(p) })
 
-// ClassVTable30 is the wasm struct type sub final (<ge231ef1640548742b7a95464.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable30 is the wasm struct type (sub ClassVTable23 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $next (ref null $14)) ...)), a subtype of ClassVTable23.
 type ClassVTable30 struct {
 	ClassVTable23
 }
 
 // NewClassVTable30 allocates a ClassVTable30.
-func NewClassVTable30(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func) *ClassVTable30 {
+func NewClassVTable30(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, next *rt.Func, next2 *rt.Func, nextInt *rt.Func, hasNext *rt.Func) *ClassVTable30 {
 	p := &ClassVTable30{}
 	p.RTT = rttClassVTable30
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Next = f4
-	p.Next_2 = f5
-	p.NextInt = f6
-	p.HasNext = f7
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Next = next
+	p.Next_2 = next2
+	p.NextInt = nextInt
+	p.HasNext = hasNext
 	return p
 }
 
@@ -4041,7 +4041,7 @@ func newClassVTable30Default() *ClassVTable30 {
 
 var rttKotlinRangesIntProgressionIterator = rt.NewRTT(rt.KStruct, rttKotlinCollectionsIntIterator, true, "g438e416aa267776e41cc8e2e.0", func(p unsafe.Pointer) any { return (*KotlinRangesIntProgressionIterator)(p) })
 
-// KotlinRangesIntProgressionIterator is the wasm struct type sub final (<g8dc10fe4820f60146985c2bd.0>) struct(ref <g997df35a488431bd5bdb221c.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32,mut i32,mut i8,mut i32).
+// KotlinRangesIntProgressionIterator is the wasm struct type (sub KotlinCollectionsIntIterator (struct (field $vtable (ref $138)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $step (mut i32)) (field $finalElement (mut i32)) ...)), a subtype of KotlinCollectionsIntIterator.
 type KotlinRangesIntProgressionIterator struct {
 	KotlinCollectionsIntIterator
 	Step         int32
@@ -4051,17 +4051,17 @@ type KotlinRangesIntProgressionIterator struct {
 }
 
 // NewKotlinRangesIntProgressionIterator allocates a KotlinRangesIntProgressionIterator.
-func NewKotlinRangesIntProgressionIterator(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32, f5 int32, f6 int8, f7 int32) *KotlinRangesIntProgressionIterator {
+func NewKotlinRangesIntProgressionIterator(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, step int32, finalElement int32, hasNext int8, next int32) *KotlinRangesIntProgressionIterator {
 	p := &KotlinRangesIntProgressionIterator{}
 	p.RTT = rttKotlinRangesIntProgressionIterator
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Step = f4
-	p.FinalElement = f5
-	p.HasNext = f6
-	p.Next = f7
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Step = step
+	p.FinalElement = finalElement
+	p.HasNext = hasNext
+	p.Next = next
 	return p
 }
 
@@ -4073,7 +4073,7 @@ func newKotlinRangesIntProgressionIteratorDefault() *KotlinRangesIntProgressionI
 
 var rttMixinType37 = rt.NewRTT(rt.KStruct, nil, true, "g438e416aa267776e41cc8e2e.1", nil)
 
-// MixinType37 is the wasm struct type sub final () struct(ref null none,i32,ref null func,i16,ref null i31,ref null eq,f64,f32,ref null noextern,ref null func,i16,i8,f32,ref null array,i32,ref null none).
+// MixinType37 is the wasm struct type (struct (field $ (ref null none)) (field $ i32) (field $ (ref null func)) (field $ i16) (field $ (ref null i31)) (field $ (ref null eq)) (field $ f64) (field $ f32) ...).
 type MixinType37 struct {
 	F0  any
 	F1  int32
@@ -4124,19 +4124,19 @@ func newMixinType37Default() *MixinType37 {
 
 var rttKotlinRangesCompanion2 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gc372ff11e476dd151c4d5b6e.0", func(p unsafe.Pointer) any { return (*KotlinRangesCompanion2)(p) })
 
-// KotlinRangesCompanion2 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinRangesCompanion2 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $141)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinRangesCompanion2 struct {
 	KotlinAny
 }
 
 // NewKotlinRangesCompanion2 allocates a KotlinRangesCompanion2.
-func NewKotlinRangesCompanion2(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinRangesCompanion2 {
+func NewKotlinRangesCompanion2(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinRangesCompanion2 {
 	p := &KotlinRangesCompanion2{}
 	p.RTT = rttKotlinRangesCompanion2
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -4148,7 +4148,7 @@ func newKotlinRangesCompanion2Default() *KotlinRangesCompanion2 {
 
 var rttMixinType38 = rt.NewRTT(rt.KStruct, nil, true, "gc372ff11e476dd151c4d5b6e.1", nil)
 
-// MixinType38 is the wasm struct type sub final () struct(ref null eq,i8,f64,ref null func,i16,v128,f64,ref null func,ref null struct,ref null eq,ref null struct,ref null array,i32,v128,i64,ref null none,ref null i31).
+// MixinType38 is the wasm struct type (struct (field $ (ref null eq)) (field $ i8) (field $ f64) (field $ (ref null func)) (field $ i16) (field $ v128) (field $ f64) (field $ (ref null func)) (field $ (ref null struct)) ...).
 type MixinType38 struct {
 	F0  any
 	F1  int8
@@ -4201,7 +4201,7 @@ func newMixinType38Default() *MixinType38 {
 
 var rttKotlinTimeCompanion = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g71c982ac34075eb0a6a87656.0", func(p unsafe.Pointer) any { return (*KotlinTimeCompanion)(p) })
 
-// KotlinTimeCompanion is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i64,mut i64,mut i64,mut i64,mut ....
+// KotlinTimeCompanion is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $144)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $ZERO (mut i64)) (field $INFINITE (mut i64)) ...)), a subtype of KotlinAny.
 type KotlinTimeCompanion struct {
 	KotlinAny
 	ZERO            int64
@@ -4212,18 +4212,18 @@ type KotlinTimeCompanion struct {
 }
 
 // NewKotlinTimeCompanion allocates a KotlinTimeCompanion.
-func NewKotlinTimeCompanion(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int64, f5 int64, f6 int64, f7 int64, f8 int64) *KotlinTimeCompanion {
+func NewKotlinTimeCompanion(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, zERO int64, iNFINITE int64, nEGINFINITE int64, iNVALIDRAWVALUE int64, iNVALID int64) *KotlinTimeCompanion {
 	p := &KotlinTimeCompanion{}
 	p.RTT = rttKotlinTimeCompanion
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.ZERO = f4
-	p.INFINITE = f5
-	p.NEGINFINITE = f6
-	p.INVALIDRAWVALUE = f7
-	p.INVALID = f8
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.ZERO = zERO
+	p.INFINITE = iNFINITE
+	p.NEGINFINITE = nEGINFINITE
+	p.INVALIDRAWVALUE = iNVALIDRAWVALUE
+	p.INVALID = iNVALID
 	return p
 }
 
@@ -4235,7 +4235,7 @@ func newKotlinTimeCompanionDefault() *KotlinTimeCompanion {
 
 var rttMixinType39 = rt.NewRTT(rt.KStruct, nil, true, "g71c982ac34075eb0a6a87656.1", nil)
 
-// MixinType39 is the wasm struct type sub final () struct(i8,f32,i16,ref null none,i8,f32,ref null struct,f64,ref null none,ref null noextern,ref null struct,ref null func,ref null func,ref null any,f64,ref null eq,ref null i31).
+// MixinType39 is the wasm struct type (struct (field $ i8) (field $ f32) (field $ i16) (field $ (ref null none)) (field $ i8) (field $ f32) (field $ (ref null struct)) (field $ f64) (field $ (ref null none)) ...).
 type MixinType39 struct {
 	F0  int8
 	F1  float32
@@ -4290,7 +4290,7 @@ var rttFunc147 = rt.CanonRTT(rt.KFunc, nil, true, "g83a59473676bff2745a6a99f.0")
 
 var rttClassVTable31 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g0c123a20ea44683becff541d.0", func(p unsafe.Pointer) any { return (*ClassVTable31)(p) })
 
-// ClassVTable31 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable31 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $compareTo (ref null $147)) ...)), a subtype of ClassVTable.
 type ClassVTable31 struct {
 	ClassVTable
 	CompareTo   *rt.Func
@@ -4298,15 +4298,15 @@ type ClassVTable31 struct {
 }
 
 // NewClassVTable31 allocates a ClassVTable31.
-func NewClassVTable31(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func) *ClassVTable31 {
+func NewClassVTable31(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, compareTo *rt.Func, compareTo2 *rt.Func) *ClassVTable31 {
 	p := &ClassVTable31{}
 	p.RTT = rttClassVTable31
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.CompareTo = f4
-	p.CompareTo_2 = f5
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.CompareTo = compareTo
+	p.CompareTo_2 = compareTo2
 	return p
 }
 
@@ -4318,21 +4318,21 @@ func newClassVTable31Default() *ClassVTable31 {
 
 var rttKotlinTimeDuration = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g9b6ee78ddb9aba5c2ad0cec6.0", func(p unsafe.Pointer) any { return (*KotlinTimeDuration)(p) })
 
-// KotlinTimeDuration is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g0c123a20ea44683becff541d.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i64).
+// KotlinTimeDuration is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $148)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $rawValue (mut i64)))), a subtype of KotlinAny.
 type KotlinTimeDuration struct {
 	KotlinAny
 	RawValue int64
 }
 
 // NewKotlinTimeDuration allocates a KotlinTimeDuration.
-func NewKotlinTimeDuration(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int64) *KotlinTimeDuration {
+func NewKotlinTimeDuration(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, rawValue int64) *KotlinTimeDuration {
 	p := &KotlinTimeDuration{}
 	p.RTT = rttKotlinTimeDuration
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.RawValue = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.RawValue = rawValue
 	return p
 }
 
@@ -4344,7 +4344,7 @@ func newKotlinTimeDurationDefault() *KotlinTimeDuration {
 
 var rttMixinType40 = rt.NewRTT(rt.KStruct, nil, true, "g9b6ee78ddb9aba5c2ad0cec6.1", nil)
 
-// MixinType40 is the wasm struct type sub final () struct(ref null noextern,i64,i64,ref null none,ref null none,v128,ref null func,i32,ref null none,f64,ref null any,f32,v128,ref null struct,ref null eq,ref null i31).
+// MixinType40 is the wasm struct type (struct (field $ (ref null noextern)) (field $ i64) (field $ i64) (field $ (ref null none)) (field $ (ref null none)) (field $ v128) (field $ (ref null func)) (field $ i32) ...).
 type MixinType40 struct {
 	F0  any
 	F1  int64
@@ -4397,7 +4397,7 @@ var rttFunc151 = rt.CanonRTT(rt.KFunc, nil, true, "g6f63472313d837a6684dac56.0")
 
 var rttClassVTable32 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "ge80af908b3ce303feae88c0c.0", func(p unsafe.Pointer) any { return (*ClassVTable32)(p) })
 
-// ClassVTable32 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable32 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $minus (ref null $151)) ...)), a subtype of ClassVTable.
 type ClassVTable32 struct {
 	ClassVTable
 	Minus       *rt.Func
@@ -4406,16 +4406,16 @@ type ClassVTable32 struct {
 }
 
 // NewClassVTable32 allocates a ClassVTable32.
-func NewClassVTable32(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func) *ClassVTable32 {
+func NewClassVTable32(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, minus *rt.Func, compareTo *rt.Func, compareTo2 *rt.Func) *ClassVTable32 {
 	p := &ClassVTable32{}
 	p.RTT = rttClassVTable32
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Minus = f4
-	p.CompareTo = f5
-	p.CompareTo_2 = f6
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Minus = minus
+	p.CompareTo = compareTo
+	p.CompareTo_2 = compareTo2
 	return p
 }
 
@@ -4427,21 +4427,21 @@ func newClassVTable32Default() *ClassVTable32 {
 
 var rttKotlinTimeValueTimeMark = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g27150792a5368cace6f37749.0", func(p unsafe.Pointer) any { return (*KotlinTimeValueTimeMark)(p) })
 
-// KotlinTimeValueTimeMark is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge80af908b3ce303feae88c0c.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i64).
+// KotlinTimeValueTimeMark is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $152)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $reading (mut i64)))), a subtype of KotlinAny.
 type KotlinTimeValueTimeMark struct {
 	KotlinAny
 	Reading int64
 }
 
 // NewKotlinTimeValueTimeMark allocates a KotlinTimeValueTimeMark.
-func NewKotlinTimeValueTimeMark(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int64) *KotlinTimeValueTimeMark {
+func NewKotlinTimeValueTimeMark(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, reading int64) *KotlinTimeValueTimeMark {
 	p := &KotlinTimeValueTimeMark{}
 	p.RTT = rttKotlinTimeValueTimeMark
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Reading = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Reading = reading
 	return p
 }
 
@@ -4453,7 +4453,7 @@ func newKotlinTimeValueTimeMarkDefault() *KotlinTimeValueTimeMark {
 
 var rttMixinType41 = rt.NewRTT(rt.KStruct, nil, true, "g27150792a5368cace6f37749.1", nil)
 
-// MixinType41 is the wasm struct type sub final () struct(ref null struct,i16,ref null any,i8,ref null eq,ref null array,ref null i31,f32,i16,i64,ref null extern,f64,ref null eq,f64,ref null array,ref null i31).
+// MixinType41 is the wasm struct type (struct (field $ (ref null struct)) (field $ i16) (field $ (ref null any)) (field $ i8) (field $ (ref null eq)) (field $ (ref null array)) (field $ (ref null i31)) ...).
 type MixinType41 struct {
 	F0  any
 	F1  int16
@@ -4506,21 +4506,21 @@ var rttFunc155 = rt.CanonRTT(rt.KFunc, nil, true, "g108fb47b2515ca163a67194c.0")
 
 var rttClassVTable33 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g039e66cdca5083b039c960eb.0", func(p unsafe.Pointer) any { return (*ClassVTable33)(p) })
 
-// ClassVTable33 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable33 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $markNow (ref null $155)))), a subtype of ClassVTable.
 type ClassVTable33 struct {
 	ClassVTable
 	MarkNow *rt.Func
 }
 
 // NewClassVTable33 allocates a ClassVTable33.
-func NewClassVTable33(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable33 {
+func NewClassVTable33(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, markNow *rt.Func) *ClassVTable33 {
 	p := &ClassVTable33{}
 	p.RTT = rttClassVTable33
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.MarkNow = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.MarkNow = markNow
 	return p
 }
 
@@ -4532,19 +4532,19 @@ func newClassVTable33Default() *ClassVTable33 {
 
 var rttKotlinTimeMonotonic = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g98db69f726f270920a3079f7.0", func(p unsafe.Pointer) any { return (*KotlinTimeMonotonic)(p) })
 
-// KotlinTimeMonotonic is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g039e66cdca5083b039c960eb.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinTimeMonotonic is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $156)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinTimeMonotonic struct {
 	KotlinAny
 }
 
 // NewKotlinTimeMonotonic allocates a KotlinTimeMonotonic.
-func NewKotlinTimeMonotonic(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinTimeMonotonic {
+func NewKotlinTimeMonotonic(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinTimeMonotonic {
 	p := &KotlinTimeMonotonic{}
 	p.RTT = rttKotlinTimeMonotonic
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -4556,7 +4556,7 @@ func newKotlinTimeMonotonicDefault() *KotlinTimeMonotonic {
 
 var rttMixinType42 = rt.NewRTT(rt.KStruct, nil, true, "g98db69f726f270920a3079f7.1", nil)
 
-// MixinType42 is the wasm struct type sub final () struct(ref null any,ref null i31,i32,i8,ref null func,i16,v128,ref null array,ref null none,ref null eq,ref null noextern,v128,ref null none,f64,ref null any,ref null func).
+// MixinType42 is the wasm struct type (struct (field $ (ref null any)) (field $ (ref null i31)) (field $ i32) (field $ i8) (field $ (ref null func)) (field $ i16) (field $ v128) (field $ (ref null array)) ...).
 type MixinType42 struct {
 	F0  any
 	F1  any
@@ -4607,7 +4607,7 @@ func newMixinType42Default() *MixinType42 {
 
 var rttKotlinCompanion = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gbc36f78a63e9c963b1e7d8e5.0", func(p unsafe.Pointer) any { return (*KotlinCompanion)(p) })
 
-// KotlinCompanion is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32,mut i32,mut i32,mut i32).
+// KotlinCompanion is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $159)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $MIN_VALUE (mut i32)) (field $MAX_VALUE (mut i32)) ...)), a subtype of KotlinAny.
 type KotlinCompanion struct {
 	KotlinAny
 	MINVALUE  int32
@@ -4617,17 +4617,17 @@ type KotlinCompanion struct {
 }
 
 // NewKotlinCompanion allocates a KotlinCompanion.
-func NewKotlinCompanion(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32, f5 int32, f6 int32, f7 int32) *KotlinCompanion {
+func NewKotlinCompanion(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, mINVALUE int32, mAXVALUE int32, sIZEBYTES int32, sIZEBITS int32) *KotlinCompanion {
 	p := &KotlinCompanion{}
 	p.RTT = rttKotlinCompanion
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.MINVALUE = f4
-	p.MAXVALUE = f5
-	p.SIZEBYTES = f6
-	p.SIZEBITS = f7
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.MINVALUE = mINVALUE
+	p.MAXVALUE = mAXVALUE
+	p.SIZEBYTES = sIZEBYTES
+	p.SIZEBITS = sIZEBITS
 	return p
 }
 
@@ -4639,7 +4639,7 @@ func newKotlinCompanionDefault() *KotlinCompanion {
 
 var rttMixinType43 = rt.NewRTT(rt.KStruct, nil, true, "gbc36f78a63e9c963b1e7d8e5.1", nil)
 
-// MixinType43 is the wasm struct type sub final () struct(v128,i64,i16,i32,i64,i32,ref null struct,ref null array,f64,ref null array,i64,ref null extern,ref null noextern,v128,v128,ref null eq,ref null i31).
+// MixinType43 is the wasm struct type (struct (field $ v128) (field $ i64) (field $ i16) (field $ i32) (field $ i64) (field $ i32) (field $ (ref null struct)) (field $ (ref null array)) (field $ f64) ...).
 type MixinType43 struct {
 	F0  rt.V128
 	F1  int64
@@ -4692,7 +4692,7 @@ func newMixinType43Default() *MixinType43 {
 
 var rttClassVTable34 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g0c291bca15670b3b379b10a6.0", func(p unsafe.Pointer) any { return (*ClassVTable34)(p) })
 
-// ClassVTable34 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable34 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $compareTo (ref null $7)) ...)), a subtype of ClassVTable.
 type ClassVTable34 struct {
 	ClassVTable
 	CompareTo   *rt.Func
@@ -4700,15 +4700,15 @@ type ClassVTable34 struct {
 }
 
 // NewClassVTable34 allocates a ClassVTable34.
-func NewClassVTable34(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func) *ClassVTable34 {
+func NewClassVTable34(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, compareTo *rt.Func, compareTo2 *rt.Func) *ClassVTable34 {
 	p := &ClassVTable34{}
 	p.RTT = rttClassVTable34
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.CompareTo = f4
-	p.CompareTo_2 = f5
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.CompareTo = compareTo
+	p.CompareTo_2 = compareTo2
 	return p
 }
 
@@ -4720,21 +4720,21 @@ func newClassVTable34Default() *ClassVTable34 {
 
 var rttKotlinUInt = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g5e4ae727441f5eaf70b44a80.0", func(p unsafe.Pointer) any { return (*KotlinUInt)(p) })
 
-// KotlinUInt is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g0c291bca15670b3b379b10a6.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32).
+// KotlinUInt is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $162)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $data (mut i32)))), a subtype of KotlinAny.
 type KotlinUInt struct {
 	KotlinAny
 	Data int32
 }
 
 // NewKotlinUInt allocates a KotlinUInt.
-func NewKotlinUInt(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32) *KotlinUInt {
+func NewKotlinUInt(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, data int32) *KotlinUInt {
 	p := &KotlinUInt{}
 	p.RTT = rttKotlinUInt
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Data = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Data = data
 	return p
 }
 
@@ -4746,7 +4746,7 @@ func newKotlinUIntDefault() *KotlinUInt {
 
 var rttMixinType44 = rt.NewRTT(rt.KStruct, nil, true, "g5e4ae727441f5eaf70b44a80.1", nil)
 
-// MixinType44 is the wasm struct type sub final () struct(i16,i8,f64,i8,ref null extern,ref null i31,ref null none,ref null array,ref null func,ref null noextern,i32,ref null any,ref null struct,v128,f32,i16).
+// MixinType44 is the wasm struct type (struct (field $ i16) (field $ i8) (field $ f64) (field $ i8) (field $ (ref null extern)) (field $ (ref null i31)) (field $ (ref null none)) (field $ (ref null array)) ...).
 type MixinType44 struct {
 	F0  int16
 	F1  int8
@@ -4797,7 +4797,7 @@ func newMixinType44Default() *MixinType44 {
 
 var rttKotlinCompanion2 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g3c9cb73bc3bee144b8168439.0", func(p unsafe.Pointer) any { return (*KotlinCompanion2)(p) })
 
-// KotlinCompanion2 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i64,mut i64,mut i32,mut i32).
+// KotlinCompanion2 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $165)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $MIN_VALUE (mut i64)) (field $MAX_VALUE (mut i64)) ...)), a subtype of KotlinAny.
 type KotlinCompanion2 struct {
 	KotlinAny
 	MINVALUE  int64
@@ -4807,17 +4807,17 @@ type KotlinCompanion2 struct {
 }
 
 // NewKotlinCompanion2 allocates a KotlinCompanion2.
-func NewKotlinCompanion2(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int64, f5 int64, f6 int32, f7 int32) *KotlinCompanion2 {
+func NewKotlinCompanion2(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, mINVALUE int64, mAXVALUE int64, sIZEBYTES int32, sIZEBITS int32) *KotlinCompanion2 {
 	p := &KotlinCompanion2{}
 	p.RTT = rttKotlinCompanion2
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.MINVALUE = f4
-	p.MAXVALUE = f5
-	p.SIZEBYTES = f6
-	p.SIZEBITS = f7
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.MINVALUE = mINVALUE
+	p.MAXVALUE = mAXVALUE
+	p.SIZEBYTES = sIZEBYTES
+	p.SIZEBITS = sIZEBITS
 	return p
 }
 
@@ -4829,7 +4829,7 @@ func newKotlinCompanion2Default() *KotlinCompanion2 {
 
 var rttMixinType45 = rt.NewRTT(rt.KStruct, nil, true, "g3c9cb73bc3bee144b8168439.1", nil)
 
-// MixinType45 is the wasm struct type sub final () struct(ref null eq,ref null func,ref null struct,i32,ref null noextern,ref null struct,ref null array,i64,i16,i8,v128,v128,ref null eq,f64,f64,f64,ref null i31).
+// MixinType45 is the wasm struct type (struct (field $ (ref null eq)) (field $ (ref null func)) (field $ (ref null struct)) (field $ i32) (field $ (ref null noextern)) (field $ (ref null struct)) (field $ (ref null array)) ...).
 type MixinType45 struct {
 	F0  any
 	F1  *rt.Func
@@ -4882,21 +4882,21 @@ func newMixinType45Default() *MixinType45 {
 
 var rttKotlinULong = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g435b82888a37f266213f6fab.0", func(p unsafe.Pointer) any { return (*KotlinULong)(p) })
 
-// KotlinULong is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g0c123a20ea44683becff541d.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i64).
+// KotlinULong is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $168)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $data (mut i64)))), a subtype of KotlinAny.
 type KotlinULong struct {
 	KotlinAny
 	Data int64
 }
 
 // NewKotlinULong allocates a KotlinULong.
-func NewKotlinULong(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int64) *KotlinULong {
+func NewKotlinULong(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, data int64) *KotlinULong {
 	p := &KotlinULong{}
 	p.RTT = rttKotlinULong
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Data = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Data = data
 	return p
 }
 
@@ -4908,7 +4908,7 @@ func newKotlinULongDefault() *KotlinULong {
 
 var rttMixinType46 = rt.NewRTT(rt.KStruct, nil, true, "g435b82888a37f266213f6fab.1", nil)
 
-// MixinType46 is the wasm struct type sub final () struct(i8,ref null eq,ref null eq,f64,f32,f64,i64,i8,i32,ref null func,ref null array,ref null none,ref null extern,f32,i64,ref null struct,ref null i31).
+// MixinType46 is the wasm struct type (struct (field $ i8) (field $ (ref null eq)) (field $ (ref null eq)) (field $ f64) (field $ f32) (field $ f64) (field $ i64) (field $ i8) (field $ i32) (field $ (ref null func)) ...).
 type MixinType46 struct {
 	F0  int8
 	F1  any
@@ -4961,7 +4961,7 @@ func newMixinType46Default() *MixinType46 {
 
 var rttKotlinWasmInternalWasmByteArray = rt.NewRTT(rt.KArray, nil, true, "g5b0a0ed7f639cd2bc106825f.0", nil)
 
-// KotlinWasmInternalWasmByteArray is the wasm array type sub final () array(mut i8).
+// KotlinWasmInternalWasmByteArray is the wasm array type (array (mut i8)).
 type KotlinWasmInternalWasmByteArray struct {
 	Elems []int8
 }
@@ -4979,21 +4979,21 @@ func NewKotlinWasmInternalWasmByteArray(elems []int8) *KotlinWasmInternalWasmByt
 
 var rttKotlinByteArray = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g604e9a9efc281379c4fb8639.0", func(p unsafe.Pointer) any { return (*KotlinByteArray)(p) })
 
-// KotlinByteArray is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g5b0a0ed7f639cd2bc1068....
+// KotlinByteArray is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $171)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $storage (mut (ref null $172))))), a subtype of KotlinAny.
 type KotlinByteArray struct {
 	KotlinAny
 	Storage *KotlinWasmInternalWasmByteArray
 }
 
 // NewKotlinByteArray allocates a KotlinByteArray.
-func NewKotlinByteArray(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinWasmInternalWasmByteArray) *KotlinByteArray {
+func NewKotlinByteArray(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, storage *KotlinWasmInternalWasmByteArray) *KotlinByteArray {
 	p := &KotlinByteArray{}
 	p.RTT = rttKotlinByteArray
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Storage = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Storage = storage
 	return p
 }
 
@@ -5005,7 +5005,7 @@ func newKotlinByteArrayDefault() *KotlinByteArray {
 
 var rttMixinType47 = rt.NewRTT(rt.KStruct, nil, true, "g604e9a9efc281379c4fb8639.1", nil)
 
-// MixinType47 is the wasm struct type sub final () struct(ref null func,ref null eq,ref null extern,ref null extern,ref null func,ref null extern,ref null eq,i64,ref null array,ref null func,f32,ref null array,ref null none,f32,i64,ref nu....
+// MixinType47 is the wasm struct type (struct (field $ (ref null func)) (field $ (ref null eq)) (field $ (ref null extern)) (field $ (ref null extern)) (field $ (ref null func)) (field $ (ref null extern)) ...).
 type MixinType47 struct {
 	F0  *rt.Func
 	F1  any
@@ -5056,21 +5056,21 @@ func newMixinType47Default() *MixinType47 {
 
 var rttKotlinShortArray = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gc8940848a27f3b13447153b2.0", func(p unsafe.Pointer) any { return (*KotlinShortArray)(p) })
 
-// KotlinShortArray is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <ge5e1c8e2b83b19ec39c88....
+// KotlinShortArray is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $175)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $storage (mut (ref null $176))))), a subtype of KotlinAny.
 type KotlinShortArray struct {
 	KotlinAny
 	Storage *KotlinWasmInternalWasmCharArray
 }
 
 // NewKotlinShortArray allocates a KotlinShortArray.
-func NewKotlinShortArray(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinWasmInternalWasmCharArray) *KotlinShortArray {
+func NewKotlinShortArray(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, storage *KotlinWasmInternalWasmCharArray) *KotlinShortArray {
 	p := &KotlinShortArray{}
 	p.RTT = rttKotlinShortArray
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Storage = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Storage = storage
 	return p
 }
 
@@ -5082,7 +5082,7 @@ func newKotlinShortArrayDefault() *KotlinShortArray {
 
 var rttMixinType48 = rt.NewRTT(rt.KStruct, nil, true, "gc8940848a27f3b13447153b2.1", nil)
 
-// MixinType48 is the wasm struct type sub final () struct(ref null eq,v128,ref null any,ref null noextern,ref null array,f64,f64,ref null any,ref null eq,ref null eq,i64,ref null struct,ref null i31,f32,ref null i31,i8).
+// MixinType48 is the wasm struct type (struct (field $ (ref null eq)) (field $ v128) (field $ (ref null any)) (field $ (ref null noextern)) (field $ (ref null array)) (field $ f64) (field $ f64) (field $ (ref null any)) ...).
 type MixinType48 struct {
 	F0  any
 	F1  rt.V128
@@ -5133,7 +5133,7 @@ func newMixinType48Default() *MixinType48 {
 
 var rttKotlinWasmInternalWasmLongArray = rt.NewRTT(rt.KArray, nil, true, "gb46f91a0701b7bea7ad00599.0", nil)
 
-// KotlinWasmInternalWasmLongArray is the wasm array type sub final () array(mut i64).
+// KotlinWasmInternalWasmLongArray is the wasm array type (array (mut i64)).
 type KotlinWasmInternalWasmLongArray struct {
 	Elems []int64
 }
@@ -5151,21 +5151,21 @@ func NewKotlinWasmInternalWasmLongArray(elems []int64) *KotlinWasmInternalWasmLo
 
 var rttKotlinLongArray = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "ga199da6dc92ee2f51c174ab1.0", func(p unsafe.Pointer) any { return (*KotlinLongArray)(p) })
 
-// KotlinLongArray is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <gb46f91a0701b7bea7ad00....
+// KotlinLongArray is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $179)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $storage (mut (ref null $180))))), a subtype of KotlinAny.
 type KotlinLongArray struct {
 	KotlinAny
 	Storage *KotlinWasmInternalWasmLongArray
 }
 
 // NewKotlinLongArray allocates a KotlinLongArray.
-func NewKotlinLongArray(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinWasmInternalWasmLongArray) *KotlinLongArray {
+func NewKotlinLongArray(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, storage *KotlinWasmInternalWasmLongArray) *KotlinLongArray {
 	p := &KotlinLongArray{}
 	p.RTT = rttKotlinLongArray
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Storage = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Storage = storage
 	return p
 }
 
@@ -5177,7 +5177,7 @@ func newKotlinLongArrayDefault() *KotlinLongArray {
 
 var rttMixinType49 = rt.NewRTT(rt.KStruct, nil, true, "ga199da6dc92ee2f51c174ab1.1", nil)
 
-// MixinType49 is the wasm struct type sub final () struct(ref null array,f64,i8,i64,ref null extern,ref null eq,ref null noextern,ref null any,ref null array,f32,ref null func,ref null any,v128,ref null extern,ref null none,ref null struc....
+// MixinType49 is the wasm struct type (struct (field $ (ref null array)) (field $ f64) (field $ i8) (field $ i64) (field $ (ref null extern)) (field $ (ref null eq)) (field $ (ref null noextern)) (field $ (ref null any)) ...).
 type MixinType49 struct {
 	F0  any
 	F1  float64
@@ -5230,19 +5230,19 @@ func newMixinType49Default() *MixinType49 {
 
 var rttKotlinCompanion3 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gfefe9c6fd3a8c19021c3d516.0", func(p unsafe.Pointer) any { return (*KotlinCompanion3)(p) })
 
-// KotlinCompanion3 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCompanion3 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $183)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinCompanion3 struct {
 	KotlinAny
 }
 
 // NewKotlinCompanion3 allocates a KotlinCompanion3.
-func NewKotlinCompanion3(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCompanion3 {
+func NewKotlinCompanion3(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCompanion3 {
 	p := &KotlinCompanion3{}
 	p.RTT = rttKotlinCompanion3
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -5254,7 +5254,7 @@ func newKotlinCompanion3Default() *KotlinCompanion3 {
 
 var rttMixinType50 = rt.NewRTT(rt.KStruct, nil, true, "gfefe9c6fd3a8c19021c3d516.1", nil)
 
-// MixinType50 is the wasm struct type sub final () struct(ref null eq,i16,ref null array,ref null extern,v128,ref null array,ref null any,i64,i32,ref null eq,ref null any,f64,ref null struct,v128,ref null none,f32,ref null i31).
+// MixinType50 is the wasm struct type (struct (field $ (ref null eq)) (field $ i16) (field $ (ref null array)) (field $ (ref null extern)) (field $ v128) (field $ (ref null array)) (field $ (ref null any)) ...).
 type MixinType50 struct {
 	F0  any
 	F1  int16
@@ -5307,21 +5307,21 @@ func newMixinType50Default() *MixinType50 {
 
 var rttKotlinBoolean = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g49f9b6ac17489a84bd1bf6ad.0", func(p unsafe.Pointer) any { return (*KotlinBoolean)(p) })
 
-// KotlinBoolean is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g0c291bca15670b3b379b10a6.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i8).
+// KotlinBoolean is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $186)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $value (mut i8)))), a subtype of KotlinAny.
 type KotlinBoolean struct {
 	KotlinAny
 	Value int8
 }
 
 // NewKotlinBoolean allocates a KotlinBoolean.
-func NewKotlinBoolean(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int8) *KotlinBoolean {
+func NewKotlinBoolean(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, value int8) *KotlinBoolean {
 	p := &KotlinBoolean{}
 	p.RTT = rttKotlinBoolean
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Value = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Value = value
 	return p
 }
 
@@ -5333,7 +5333,7 @@ func newKotlinBooleanDefault() *KotlinBoolean {
 
 var rttMixinType51 = rt.NewRTT(rt.KStruct, nil, true, "g49f9b6ac17489a84bd1bf6ad.1", nil)
 
-// MixinType51 is the wasm struct type sub final () struct(ref null struct,i8,ref null i31,ref null noextern,f64,ref null eq,ref null array,ref null noextern,ref null none,i8,ref null eq,ref null array,i64,ref null none,f64,f32).
+// MixinType51 is the wasm struct type (struct (field $ (ref null struct)) (field $ i8) (field $ (ref null i31)) (field $ (ref null noextern)) (field $ f64) (field $ (ref null eq)) (field $ (ref null array)) ...).
 type MixinType51 struct {
 	F0  any
 	F1  int8
@@ -5384,7 +5384,7 @@ func newMixinType51Default() *MixinType51 {
 
 var rttKotlinCompanion4 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g1484c2a289b3cfccfd6f13bb.0", func(p unsafe.Pointer) any { return (*KotlinCompanion4)(p) })
 
-// KotlinCompanion4 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i16,mut i16,mut i16,mut i16,mut ....
+// KotlinCompanion4 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $189)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $MIN_VALUE (mut i16)) (field $MAX_VALUE (mut i16)) ...)), a subtype of KotlinAny.
 type KotlinCompanion4 struct {
 	KotlinAny
 	MINVALUE                  int16
@@ -5405,28 +5405,28 @@ type KotlinCompanion4 struct {
 }
 
 // NewKotlinCompanion4 allocates a KotlinCompanion4.
-func NewKotlinCompanion4(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int16, f5 int16, f6 int16, f7 int16, f8 int16, f9 int16, f10 int16, f11 int16, f12 int32, f13 int32, f14 int32, f15 int32, f16 int32, f17 int32, f18 int32) *KotlinCompanion4 {
+func NewKotlinCompanion4(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, mINVALUE int16, mAXVALUE int16, mINHIGHSURROGATE int16, mAXHIGHSURROGATE int16, mINLOWSURROGATE int16, mAXLOWSURROGATE int16, mINSURROGATE int16, mAXSURROGATE int16, sIZEBYTES int32, sIZEBITS int32, mINSUPPLEMENTARYCODEPOINT int32, mINCODEPOINT int32, mAXCODEPOINT int32, mINRADIX int32, mAXRADIX int32) *KotlinCompanion4 {
 	p := &KotlinCompanion4{}
 	p.RTT = rttKotlinCompanion4
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.MINVALUE = f4
-	p.MAXVALUE = f5
-	p.MINHIGHSURROGATE = f6
-	p.MAXHIGHSURROGATE = f7
-	p.MINLOWSURROGATE = f8
-	p.MAXLOWSURROGATE = f9
-	p.MINSURROGATE = f10
-	p.MAXSURROGATE = f11
-	p.SIZEBYTES = f12
-	p.SIZEBITS = f13
-	p.MINSUPPLEMENTARYCODEPOINT = f14
-	p.MINCODEPOINT = f15
-	p.MAXCODEPOINT = f16
-	p.MINRADIX = f17
-	p.MAXRADIX = f18
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.MINVALUE = mINVALUE
+	p.MAXVALUE = mAXVALUE
+	p.MINHIGHSURROGATE = mINHIGHSURROGATE
+	p.MAXHIGHSURROGATE = mAXHIGHSURROGATE
+	p.MINLOWSURROGATE = mINLOWSURROGATE
+	p.MAXLOWSURROGATE = mAXLOWSURROGATE
+	p.MINSURROGATE = mINSURROGATE
+	p.MAXSURROGATE = mAXSURROGATE
+	p.SIZEBYTES = sIZEBYTES
+	p.SIZEBITS = sIZEBITS
+	p.MINSUPPLEMENTARYCODEPOINT = mINSUPPLEMENTARYCODEPOINT
+	p.MINCODEPOINT = mINCODEPOINT
+	p.MAXCODEPOINT = mAXCODEPOINT
+	p.MINRADIX = mINRADIX
+	p.MAXRADIX = mAXRADIX
 	return p
 }
 
@@ -5438,7 +5438,7 @@ func newKotlinCompanion4Default() *KotlinCompanion4 {
 
 var rttMixinType52 = rt.NewRTT(rt.KStruct, nil, true, "g1484c2a289b3cfccfd6f13bb.1", nil)
 
-// MixinType52 is the wasm struct type sub final () struct(ref null eq,v128,i16,i8,ref null eq,ref null eq,ref null none,i8,f32,ref null i31,ref null i31,ref null extern,ref null func,i32,ref null i31,ref null extern).
+// MixinType52 is the wasm struct type (struct (field $ (ref null eq)) (field $ v128) (field $ i16) (field $ i8) (field $ (ref null eq)) (field $ (ref null eq)) (field $ (ref null none)) (field $ i8) (field $ f32) ...).
 type MixinType52 struct {
 	F0  any
 	F1  rt.V128
@@ -5489,21 +5489,21 @@ func newMixinType52Default() *MixinType52 {
 
 var rttKotlinChar = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g5030a3db0d28de55dfaf65ac.0", func(p unsafe.Pointer) any { return (*KotlinChar)(p) })
 
-// KotlinChar is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g0c291bca15670b3b379b10a6.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i16).
+// KotlinChar is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $192)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $value (mut i16)))), a subtype of KotlinAny.
 type KotlinChar struct {
 	KotlinAny
 	Value int16
 }
 
 // NewKotlinChar allocates a KotlinChar.
-func NewKotlinChar(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int16) *KotlinChar {
+func NewKotlinChar(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, value int16) *KotlinChar {
 	p := &KotlinChar{}
 	p.RTT = rttKotlinChar
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Value = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Value = value
 	return p
 }
 
@@ -5515,7 +5515,7 @@ func newKotlinCharDefault() *KotlinChar {
 
 var rttMixinType53 = rt.NewRTT(rt.KStruct, nil, true, "g5030a3db0d28de55dfaf65ac.1", nil)
 
-// MixinType53 is the wasm struct type sub final () struct(ref null array,ref null any,v128,ref null array,ref null i31,ref null eq,ref null any,ref null func,f32,ref null none,i32,i16,ref null none,i16,f64,i8).
+// MixinType53 is the wasm struct type (struct (field $ (ref null array)) (field $ (ref null any)) (field $ v128) (field $ (ref null array)) (field $ (ref null i31)) (field $ (ref null eq)) (field $ (ref null any)) ...).
 type MixinType53 struct {
 	F0  any
 	F1  any
@@ -5566,19 +5566,19 @@ func newMixinType53Default() *MixinType53 {
 
 var rttKotlinCompanion5 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g50419379d35571195a7a5ad0.0", func(p unsafe.Pointer) any { return (*KotlinCompanion5)(p) })
 
-// KotlinCompanion5 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCompanion5 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $195)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinCompanion5 struct {
 	KotlinAny
 }
 
 // NewKotlinCompanion5 allocates a KotlinCompanion5.
-func NewKotlinCompanion5(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCompanion5 {
+func NewKotlinCompanion5(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCompanion5 {
 	p := &KotlinCompanion5{}
 	p.RTT = rttKotlinCompanion5
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -5590,7 +5590,7 @@ func newKotlinCompanion5Default() *KotlinCompanion5 {
 
 var rttMixinType54 = rt.NewRTT(rt.KStruct, nil, true, "g50419379d35571195a7a5ad0.1", nil)
 
-// MixinType54 is the wasm struct type sub final () struct(ref null array,ref null any,ref null array,ref null struct,ref null none,ref null none,ref null i31,i32,i16,ref null array,i16,ref null noextern,ref null eq,ref null struct,ref nul....
+// MixinType54 is the wasm struct type (struct (field $ (ref null array)) (field $ (ref null any)) (field $ (ref null array)) (field $ (ref null struct)) (field $ (ref null none)) (field $ (ref null none)) ...).
 type MixinType54 struct {
 	F0  any
 	F1  any
@@ -5641,19 +5641,19 @@ func newMixinType54Default() *MixinType54 {
 
 var rttKotlinNothing = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gf18b75959d2c1b287989c878.0", func(p unsafe.Pointer) any { return (*KotlinNothing)(p) })
 
-// KotlinNothing is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinNothing is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $198)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinNothing struct {
 	KotlinAny
 }
 
 // NewKotlinNothing allocates a KotlinNothing.
-func NewKotlinNothing(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinNothing {
+func NewKotlinNothing(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinNothing {
 	p := &KotlinNothing{}
 	p.RTT = rttKotlinNothing
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -5665,7 +5665,7 @@ func newKotlinNothingDefault() *KotlinNothing {
 
 var rttMixinType55 = rt.NewRTT(rt.KStruct, nil, true, "gf18b75959d2c1b287989c878.1", nil)
 
-// MixinType55 is the wasm struct type sub final () struct(i32,ref null any,ref null any,i32,i16,f32,ref null struct,v128,v128,f64,v128,ref null eq,i16,i32,ref null extern,ref null struct,ref null i31).
+// MixinType55 is the wasm struct type (struct (field $ i32) (field $ (ref null any)) (field $ (ref null any)) (field $ i32) (field $ i16) (field $ f32) (field $ (ref null struct)) (field $ v128) (field $ v128) ...).
 type MixinType55 struct {
 	F0  int32
 	F1  any
@@ -5718,7 +5718,7 @@ func newMixinType55Default() *MixinType55 {
 
 var rttKotlinCompanion6 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gc2b95b9b3422b41912f08cb7.0", func(p unsafe.Pointer) any { return (*KotlinCompanion6)(p) })
 
-// KotlinCompanion6 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32,mut i32,mut i32,mut i32).
+// KotlinCompanion6 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $201)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $MIN_VALUE (mut i32)) (field $MAX_VALUE (mut i32)) ...)), a subtype of KotlinAny.
 type KotlinCompanion6 struct {
 	KotlinAny
 	MINVALUE  int32
@@ -5728,17 +5728,17 @@ type KotlinCompanion6 struct {
 }
 
 // NewKotlinCompanion6 allocates a KotlinCompanion6.
-func NewKotlinCompanion6(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32, f5 int32, f6 int32, f7 int32) *KotlinCompanion6 {
+func NewKotlinCompanion6(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, mINVALUE int32, mAXVALUE int32, sIZEBYTES int32, sIZEBITS int32) *KotlinCompanion6 {
 	p := &KotlinCompanion6{}
 	p.RTT = rttKotlinCompanion6
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.MINVALUE = f4
-	p.MAXVALUE = f5
-	p.SIZEBYTES = f6
-	p.SIZEBITS = f7
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.MINVALUE = mINVALUE
+	p.MAXVALUE = mAXVALUE
+	p.SIZEBYTES = sIZEBYTES
+	p.SIZEBITS = sIZEBITS
 	return p
 }
 
@@ -5750,7 +5750,7 @@ func newKotlinCompanion6Default() *KotlinCompanion6 {
 
 var rttMixinType56 = rt.NewRTT(rt.KStruct, nil, true, "gc2b95b9b3422b41912f08cb7.1", nil)
 
-// MixinType56 is the wasm struct type sub final () struct(ref null struct,v128,ref null none,i8,v128,ref null extern,f32,i32,i8,i64,ref null any,i8,i64,f64,f64,i16,ref null i31).
+// MixinType56 is the wasm struct type (struct (field $ (ref null struct)) (field $ v128) (field $ (ref null none)) (field $ i8) (field $ v128) (field $ (ref null extern)) (field $ f32) (field $ i32) (field $ i8) ...).
 type MixinType56 struct {
 	F0  any
 	F1  rt.V128
@@ -5803,7 +5803,7 @@ func newMixinType56Default() *MixinType56 {
 
 var rttClassVTable35 = rt.NewRTT(rt.KStruct, rttClassVTable3, true, "g03bf5c2f98838cbd92445a53.0", func(p unsafe.Pointer) any { return (*ClassVTable35)(p) })
 
-// ClassVTable35 is the wasm struct type sub final (<g29e42c9f04f1487399ac8b46.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable35 is the wasm struct type (sub ClassVTable3 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $compareTo (ref null $7)) ...)), a subtype of ClassVTable3.
 type ClassVTable35 struct {
 	ClassVTable3
 	CompareTo   *rt.Func
@@ -5811,15 +5811,15 @@ type ClassVTable35 struct {
 }
 
 // NewClassVTable35 allocates a ClassVTable35.
-func NewClassVTable35(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func) *ClassVTable35 {
+func NewClassVTable35(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, compareTo *rt.Func, compareTo2 *rt.Func) *ClassVTable35 {
 	p := &ClassVTable35{}
 	p.RTT = rttClassVTable35
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.CompareTo = f4
-	p.CompareTo_2 = f5
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.CompareTo = compareTo
+	p.CompareTo_2 = compareTo2
 	return p
 }
 
@@ -5831,21 +5831,21 @@ func newClassVTable35Default() *ClassVTable35 {
 
 var rttKotlinInt = rt.NewRTT(rt.KStruct, rttKotlinNumber, true, "gc3a5e8db2e53f16fa568bdb9.0", func(p unsafe.Pointer) any { return (*KotlinInt)(p) })
 
-// KotlinInt is the wasm struct type sub final (<gc510a44a2f2106182b678836.0>) struct(ref <g03bf5c2f98838cbd92445a53.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32).
+// KotlinInt is the wasm struct type (sub KotlinNumber (struct (field $vtable (ref $204)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $value (mut i32)))), a subtype of KotlinNumber.
 type KotlinInt struct {
 	KotlinNumber
 	Value int32
 }
 
 // NewKotlinInt allocates a KotlinInt.
-func NewKotlinInt(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32) *KotlinInt {
+func NewKotlinInt(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, value int32) *KotlinInt {
 	p := &KotlinInt{}
 	p.RTT = rttKotlinInt
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Value = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Value = value
 	return p
 }
 
@@ -5857,7 +5857,7 @@ func newKotlinIntDefault() *KotlinInt {
 
 var rttMixinType57 = rt.NewRTT(rt.KStruct, nil, true, "gc3a5e8db2e53f16fa568bdb9.1", nil)
 
-// MixinType57 is the wasm struct type sub final () struct(ref null i31,ref null func,ref null struct,f64,ref null eq,ref null none,ref null i31,ref null struct,f32,ref null struct,f64,ref null func,i32,ref null extern,i32,i64).
+// MixinType57 is the wasm struct type (struct (field $ (ref null i31)) (field $ (ref null func)) (field $ (ref null struct)) (field $ f64) (field $ (ref null eq)) (field $ (ref null none)) (field $ (ref null i31)) ...).
 type MixinType57 struct {
 	F0  any
 	F1  *rt.Func
@@ -5908,7 +5908,7 @@ func newMixinType57Default() *MixinType57 {
 
 var rttKotlinCompanion7 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g79e21928f2fb5972924190fd.0", func(p unsafe.Pointer) any { return (*KotlinCompanion7)(p) })
 
-// KotlinCompanion7 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i64,mut i64,mut i32,mut i32).
+// KotlinCompanion7 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $207)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $MIN_VALUE (mut i64)) (field $MAX_VALUE (mut i64)) ...)), a subtype of KotlinAny.
 type KotlinCompanion7 struct {
 	KotlinAny
 	MINVALUE  int64
@@ -5918,17 +5918,17 @@ type KotlinCompanion7 struct {
 }
 
 // NewKotlinCompanion7 allocates a KotlinCompanion7.
-func NewKotlinCompanion7(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int64, f5 int64, f6 int32, f7 int32) *KotlinCompanion7 {
+func NewKotlinCompanion7(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, mINVALUE int64, mAXVALUE int64, sIZEBYTES int32, sIZEBITS int32) *KotlinCompanion7 {
 	p := &KotlinCompanion7{}
 	p.RTT = rttKotlinCompanion7
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.MINVALUE = f4
-	p.MAXVALUE = f5
-	p.SIZEBYTES = f6
-	p.SIZEBITS = f7
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.MINVALUE = mINVALUE
+	p.MAXVALUE = mAXVALUE
+	p.SIZEBYTES = sIZEBYTES
+	p.SIZEBITS = sIZEBITS
 	return p
 }
 
@@ -5940,7 +5940,7 @@ func newKotlinCompanion7Default() *KotlinCompanion7 {
 
 var rttMixinType58 = rt.NewRTT(rt.KStruct, nil, true, "g79e21928f2fb5972924190fd.1", nil)
 
-// MixinType58 is the wasm struct type sub final () struct(ref null noextern,ref null array,ref null func,f32,i64,ref null none,ref null func,f64,ref null func,ref null any,ref null i31,f64,f32,ref null none,ref null func,i8).
+// MixinType58 is the wasm struct type (struct (field $ (ref null noextern)) (field $ (ref null array)) (field $ (ref null func)) (field $ f32) (field $ i64) (field $ (ref null none)) (field $ (ref null func)) ...).
 type MixinType58 struct {
 	F0  any
 	F1  any
@@ -5991,7 +5991,7 @@ func newMixinType58Default() *MixinType58 {
 
 var rttClassVTable36 = rt.NewRTT(rt.KStruct, rttClassVTable3, true, "g7c2a64cd3136220325336aec.0", func(p unsafe.Pointer) any { return (*ClassVTable36)(p) })
 
-// ClassVTable36 is the wasm struct type sub final (<g29e42c9f04f1487399ac8b46.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable36 is the wasm struct type (sub ClassVTable3 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $compareTo (ref null $147)) ...)), a subtype of ClassVTable3.
 type ClassVTable36 struct {
 	ClassVTable3
 	CompareTo   *rt.Func
@@ -5999,15 +5999,15 @@ type ClassVTable36 struct {
 }
 
 // NewClassVTable36 allocates a ClassVTable36.
-func NewClassVTable36(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func) *ClassVTable36 {
+func NewClassVTable36(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, compareTo *rt.Func, compareTo2 *rt.Func) *ClassVTable36 {
 	p := &ClassVTable36{}
 	p.RTT = rttClassVTable36
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.CompareTo = f4
-	p.CompareTo_2 = f5
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.CompareTo = compareTo
+	p.CompareTo_2 = compareTo2
 	return p
 }
 
@@ -6019,21 +6019,21 @@ func newClassVTable36Default() *ClassVTable36 {
 
 var rttKotlinLong = rt.NewRTT(rt.KStruct, rttKotlinNumber, true, "gfc65ea43a3e30713db794326.0", func(p unsafe.Pointer) any { return (*KotlinLong)(p) })
 
-// KotlinLong is the wasm struct type sub final (<gc510a44a2f2106182b678836.0>) struct(ref <g7c2a64cd3136220325336aec.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i64).
+// KotlinLong is the wasm struct type (sub KotlinNumber (struct (field $vtable (ref $210)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $value (mut i64)))), a subtype of KotlinNumber.
 type KotlinLong struct {
 	KotlinNumber
 	Value int64
 }
 
 // NewKotlinLong allocates a KotlinLong.
-func NewKotlinLong(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int64) *KotlinLong {
+func NewKotlinLong(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, value int64) *KotlinLong {
 	p := &KotlinLong{}
 	p.RTT = rttKotlinLong
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Value = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Value = value
 	return p
 }
 
@@ -6045,7 +6045,7 @@ func newKotlinLongDefault() *KotlinLong {
 
 var rttMixinType59 = rt.NewRTT(rt.KStruct, nil, true, "gfc65ea43a3e30713db794326.1", nil)
 
-// MixinType59 is the wasm struct type sub final () struct(f32,f64,i8,v128,ref null any,ref null struct,ref null eq,v128,v128,i32,i8,ref null array,ref null none,ref null eq,v128,ref null none,ref null i31).
+// MixinType59 is the wasm struct type (struct (field $ f32) (field $ f64) (field $ i8) (field $ v128) (field $ (ref null any)) (field $ (ref null struct)) (field $ (ref null eq)) (field $ v128) (field $ v128) ...).
 type MixinType59 struct {
 	F0  float32
 	F1  float64
@@ -6098,7 +6098,7 @@ func newMixinType59Default() *MixinType59 {
 
 var rttKotlinCompanion8 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g193852a466ba56fa299dc69f.0", func(p unsafe.Pointer) any { return (*KotlinCompanion8)(p) })
 
-// KotlinCompanion8 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut f64,mut f64,mut f64,mut f64,mut ....
+// KotlinCompanion8 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $213)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $MIN_VALUE (mut f64)) (field $MAX_VALUE (mut f64)) ...)), a subtype of KotlinAny.
 type KotlinCompanion8 struct {
 	KotlinAny
 	MINVALUE         float64
@@ -6111,20 +6111,20 @@ type KotlinCompanion8 struct {
 }
 
 // NewKotlinCompanion8 allocates a KotlinCompanion8.
-func NewKotlinCompanion8(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 float64, f5 float64, f6 float64, f7 float64, f8 float64, f9 int32, f10 int32) *KotlinCompanion8 {
+func NewKotlinCompanion8(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, mINVALUE float64, mAXVALUE float64, pOSITIVEINFINITY float64, nEGATIVEINFINITY float64, naN float64, sIZEBYTES int32, sIZEBITS int32) *KotlinCompanion8 {
 	p := &KotlinCompanion8{}
 	p.RTT = rttKotlinCompanion8
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.MINVALUE = f4
-	p.MAXVALUE = f5
-	p.POSITIVEINFINITY = f6
-	p.NEGATIVEINFINITY = f7
-	p.NaN = f8
-	p.SIZEBYTES = f9
-	p.SIZEBITS = f10
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.MINVALUE = mINVALUE
+	p.MAXVALUE = mAXVALUE
+	p.POSITIVEINFINITY = pOSITIVEINFINITY
+	p.NEGATIVEINFINITY = nEGATIVEINFINITY
+	p.NaN = naN
+	p.SIZEBYTES = sIZEBYTES
+	p.SIZEBITS = sIZEBITS
 	return p
 }
 
@@ -6136,7 +6136,7 @@ func newKotlinCompanion8Default() *KotlinCompanion8 {
 
 var rttMixinType60 = rt.NewRTT(rt.KStruct, nil, true, "g193852a466ba56fa299dc69f.1", nil)
 
-// MixinType60 is the wasm struct type sub final () struct(ref null noextern,ref null noextern,f32,f32,ref null noextern,ref null struct,ref null noextern,f64,ref null noextern,i64,ref null array,ref null i31,ref null i31,ref null eq,ref n....
+// MixinType60 is the wasm struct type (struct (field $ (ref null noextern)) (field $ (ref null noextern)) (field $ f32) (field $ f32) (field $ (ref null noextern)) (field $ (ref null struct)) (field $ (ref null noextern)) ...).
 type MixinType60 struct {
 	F0  any
 	F1  any
@@ -6189,7 +6189,7 @@ var rttFunc216 = rt.CanonRTT(rt.KFunc, nil, true, "g01b6ed94185c67564418104f.0")
 
 var rttClassVTable37 = rt.NewRTT(rt.KStruct, rttClassVTable3, true, "gb55a0a97ecb875deaa64cac4.0", func(p unsafe.Pointer) any { return (*ClassVTable37)(p) })
 
-// ClassVTable37 is the wasm struct type sub final (<g29e42c9f04f1487399ac8b46.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable37 is the wasm struct type (sub ClassVTable3 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $compareTo (ref null $216)) ...)), a subtype of ClassVTable3.
 type ClassVTable37 struct {
 	ClassVTable3
 	CompareTo   *rt.Func
@@ -6197,15 +6197,15 @@ type ClassVTable37 struct {
 }
 
 // NewClassVTable37 allocates a ClassVTable37.
-func NewClassVTable37(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func) *ClassVTable37 {
+func NewClassVTable37(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, compareTo *rt.Func, compareTo2 *rt.Func) *ClassVTable37 {
 	p := &ClassVTable37{}
 	p.RTT = rttClassVTable37
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.CompareTo = f4
-	p.CompareTo_2 = f5
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.CompareTo = compareTo
+	p.CompareTo_2 = compareTo2
 	return p
 }
 
@@ -6217,21 +6217,21 @@ func newClassVTable37Default() *ClassVTable37 {
 
 var rttKotlinDouble = rt.NewRTT(rt.KStruct, rttKotlinNumber, true, "gdca99ace52d0e295f653e010.0", func(p unsafe.Pointer) any { return (*KotlinDouble)(p) })
 
-// KotlinDouble is the wasm struct type sub final (<gc510a44a2f2106182b678836.0>) struct(ref <gb55a0a97ecb875deaa64cac4.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut f64).
+// KotlinDouble is the wasm struct type (sub KotlinNumber (struct (field $vtable (ref $217)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $value (mut f64)))), a subtype of KotlinNumber.
 type KotlinDouble struct {
 	KotlinNumber
 	Value float64
 }
 
 // NewKotlinDouble allocates a KotlinDouble.
-func NewKotlinDouble(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 float64) *KotlinDouble {
+func NewKotlinDouble(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, value float64) *KotlinDouble {
 	p := &KotlinDouble{}
 	p.RTT = rttKotlinDouble
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Value = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Value = value
 	return p
 }
 
@@ -6243,7 +6243,7 @@ func newKotlinDoubleDefault() *KotlinDouble {
 
 var rttMixinType61 = rt.NewRTT(rt.KStruct, nil, true, "gdca99ace52d0e295f653e010.1", nil)
 
-// MixinType61 is the wasm struct type sub final () struct(v128,i16,ref null array,v128,ref null func,ref null eq,ref null noextern,ref null noextern,f32,ref null i31,ref null i31,f64,f64,i64,f64,ref null array).
+// MixinType61 is the wasm struct type (struct (field $ v128) (field $ i16) (field $ (ref null array)) (field $ v128) (field $ (ref null func)) (field $ (ref null eq)) (field $ (ref null noextern)) (field $ (ref null noextern)) ...).
 type MixinType61 struct {
 	F0  rt.V128
 	F1  int16
@@ -6294,21 +6294,21 @@ func newMixinType61Default() *MixinType61 {
 
 var rttClassVTable38 = rt.NewRTT(rt.KStruct, rttClassVTable24, true, "g25497c38e62afcd49b3c0a7a.0", func(p unsafe.Pointer) any { return (*ClassVTable38)(p) })
 
-// ClassVTable38 is the wasm struct type sub final (<g3a5e257473e4b2b15f19905f.1>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable38 is the wasm struct type (sub ClassVTable24 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $compareTo (ref null $107)) ...)), a subtype of ClassVTable24.
 type ClassVTable38 struct {
 	ClassVTable24
 }
 
 // NewClassVTable38 allocates a ClassVTable38.
-func NewClassVTable38(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func) *ClassVTable38 {
+func NewClassVTable38(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, compareTo *rt.Func, compareTo2 *rt.Func) *ClassVTable38 {
 	p := &ClassVTable38{}
 	p.RTT = rttClassVTable38
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.CompareTo = f4
-	p.CompareTo_2 = f5
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.CompareTo = compareTo
+	p.CompareTo_2 = compareTo2
 	return p
 }
 
@@ -6320,23 +6320,23 @@ func newClassVTable38Default() *ClassVTable38 {
 
 var rttKotlinWasmInternalCharCodes = rt.NewRTT(rt.KStruct, rttKotlinEnum, true, "g0c2ba24c132c59d053d5b36d.0", func(p unsafe.Pointer) any { return (*KotlinWasmInternalCharCodes)(p) })
 
-// KotlinWasmInternalCharCodes is the wasm struct type sub final (<g3a5e257473e4b2b15f19905f.2>) struct(ref <g25497c38e62afcd49b3c0a7a.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197....
+// KotlinWasmInternalCharCodes is the wasm struct type (sub KotlinEnum (struct (field $vtable (ref $220)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $name (mut (ref null $16))) (field $ordinal (mut i32)) ...)), a subtype of KotlinEnum.
 type KotlinWasmInternalCharCodes struct {
 	KotlinEnum
 	Code int32
 }
 
 // NewKotlinWasmInternalCharCodes allocates a KotlinWasmInternalCharCodes.
-func NewKotlinWasmInternalCharCodes(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 int32, f6 int32) *KotlinWasmInternalCharCodes {
+func NewKotlinWasmInternalCharCodes(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, name *KotlinString, ordinal int32, code int32) *KotlinWasmInternalCharCodes {
 	p := &KotlinWasmInternalCharCodes{}
 	p.RTT = rttKotlinWasmInternalCharCodes
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Name = f4
-	p.Ordinal = f5
-	p.Code = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Name = name
+	p.Ordinal = ordinal
+	p.Code = code
 	return p
 }
 
@@ -6348,7 +6348,7 @@ func newKotlinWasmInternalCharCodesDefault() *KotlinWasmInternalCharCodes {
 
 var rttMixinType62 = rt.NewRTT(rt.KStruct, nil, true, "g0c2ba24c132c59d053d5b36d.1", nil)
 
-// MixinType62 is the wasm struct type sub final () struct(ref null i31,ref null array,ref null eq,ref null eq,i16,i64,i32,ref null any,ref null extern,ref null extern,i32,f32,ref null none,i16,ref null func,ref null eq).
+// MixinType62 is the wasm struct type (struct (field $ (ref null i31)) (field $ (ref null array)) (field $ (ref null eq)) (field $ (ref null eq)) (field $ i16) (field $ i64) (field $ i32) (field $ (ref null any)) ...).
 type MixinType62 struct {
 	F0  any
 	F1  any
@@ -6399,7 +6399,7 @@ func newMixinType62Default() *MixinType62 {
 
 var rttKotlinWasmInternalBufferWithOffset = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g8d2633c82fbc17fbab7076bf.0", func(p unsafe.Pointer) any { return (*KotlinWasmInternalBufferWithOffset)(p) })
 
-// KotlinWasmInternalBufferWithOffset is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <ge5e1c8e2b83b19ec39c88....
+// KotlinWasmInternalBufferWithOffset is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $223)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $buf (mut (ref null $4))) (field $off (mut i32)))), a subtype of KotlinAny.
 type KotlinWasmInternalBufferWithOffset struct {
 	KotlinAny
 	Buf *KotlinWasmInternalWasmCharArray
@@ -6407,15 +6407,15 @@ type KotlinWasmInternalBufferWithOffset struct {
 }
 
 // NewKotlinWasmInternalBufferWithOffset allocates a KotlinWasmInternalBufferWithOffset.
-func NewKotlinWasmInternalBufferWithOffset(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinWasmInternalWasmCharArray, f5 int32) *KotlinWasmInternalBufferWithOffset {
+func NewKotlinWasmInternalBufferWithOffset(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, buf *KotlinWasmInternalWasmCharArray, off int32) *KotlinWasmInternalBufferWithOffset {
 	p := &KotlinWasmInternalBufferWithOffset{}
 	p.RTT = rttKotlinWasmInternalBufferWithOffset
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Buf = f4
-	p.Off = f5
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Buf = buf
+	p.Off = off
 	return p
 }
 
@@ -6427,7 +6427,7 @@ func newKotlinWasmInternalBufferWithOffsetDefault() *KotlinWasmInternalBufferWit
 
 var rttMixinType63 = rt.NewRTT(rt.KStruct, nil, true, "g8d2633c82fbc17fbab7076bf.1", nil)
 
-// MixinType63 is the wasm struct type sub final () struct(i8,ref null extern,ref null i31,v128,i64,ref null any,ref null extern,i16,ref null struct,i16,v128,f64,i8,ref null array,ref null func,ref null none).
+// MixinType63 is the wasm struct type (struct (field $ i8) (field $ (ref null extern)) (field $ (ref null i31)) (field $ v128) (field $ i64) (field $ (ref null any)) (field $ (ref null extern)) (field $ i16) ...).
 type MixinType63 struct {
 	F0  int8
 	F1  any
@@ -6478,7 +6478,7 @@ func newMixinType63Default() *MixinType63 {
 
 var rttKotlinWasmInternalTypeInfoData = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gb1c262cc485b3432c265d540.0", func(p unsafe.Pointer) any { return (*KotlinWasmInternalTypeInfoData)(p) })
 
-// KotlinWasmInternalTypeInfoData is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i64,mut ref null <g484ce41559fcc....
+// KotlinWasmInternalTypeInfoData is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $226)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $typeId (mut i64)) (field $packageName (mut (ref null $16))) ...)), a subtype of KotlinAny.
 type KotlinWasmInternalTypeInfoData struct {
 	KotlinAny
 	TypeId      int64
@@ -6487,16 +6487,16 @@ type KotlinWasmInternalTypeInfoData struct {
 }
 
 // NewKotlinWasmInternalTypeInfoData allocates a KotlinWasmInternalTypeInfoData.
-func NewKotlinWasmInternalTypeInfoData(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int64, f5 *KotlinString, f6 *KotlinString) *KotlinWasmInternalTypeInfoData {
+func NewKotlinWasmInternalTypeInfoData(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, typeId int64, packageName *KotlinString, typeName *KotlinString) *KotlinWasmInternalTypeInfoData {
 	p := &KotlinWasmInternalTypeInfoData{}
 	p.RTT = rttKotlinWasmInternalTypeInfoData
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.TypeId = f4
-	p.PackageName = f5
-	p.TypeName = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.TypeId = typeId
+	p.PackageName = packageName
+	p.TypeName = typeName
 	return p
 }
 
@@ -6508,7 +6508,7 @@ func newKotlinWasmInternalTypeInfoDataDefault() *KotlinWasmInternalTypeInfoData 
 
 var rttMixinType64 = rt.NewRTT(rt.KStruct, nil, true, "gb1c262cc485b3432c265d540.1", nil)
 
-// MixinType64 is the wasm struct type sub final () struct(ref null any,ref null eq,f32,i16,ref null none,i32,ref null extern,ref null extern,i64,ref null noextern,i8,ref null func,ref null i31,i64,ref null noextern,ref null any).
+// MixinType64 is the wasm struct type (struct (field $ (ref null any)) (field $ (ref null eq)) (field $ f32) (field $ i16) (field $ (ref null none)) (field $ i32) (field $ (ref null extern)) (field $ (ref null extern)) ...).
 type MixinType64 struct {
 	F0  any
 	F1  any
@@ -6559,21 +6559,21 @@ func newMixinType64Default() *MixinType64 {
 
 var rttClassVTable39 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "gafc1ca1daad9c241361d237e.0", func(p unsafe.Pointer) any { return (*ClassVTable39)(p) })
 
-// ClassVTable39 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable39 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $invoke (ref null $33)))), a subtype of ClassVTable.
 type ClassVTable39 struct {
 	ClassVTable
 	Invoke *rt.Func
 }
 
 // NewClassVTable39 allocates a ClassVTable39.
-func NewClassVTable39(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable39 {
+func NewClassVTable39(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, invoke *rt.Func) *ClassVTable39 {
 	p := &ClassVTable39{}
 	p.RTT = rttClassVTable39
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Invoke = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Invoke = invoke
 	return p
 }
 
@@ -6587,21 +6587,21 @@ var rttFunc231 = rt.CanonRTT(rt.KFunc, nil, true, "g636c7bac45c31e4e809d6b5e.0")
 
 var rttKotlinFunction0 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g9e5ae0cf095dcb42ccb65d59.0", func(p unsafe.Pointer) any { return (*KotlinFunction0)(p) })
 
-// KotlinFunction0 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <gafc1ca1daad9c241361d237e.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g636c7bac45c31e4e809d6....
+// KotlinFunction0 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $230)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $func (mut (ref null $231))))), a subtype of KotlinAny.
 type KotlinFunction0 struct {
 	KotlinAny
 	Func *rt.Func
 }
 
 // NewKotlinFunction0 allocates a KotlinFunction0.
-func NewKotlinFunction0(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *rt.Func) *KotlinFunction0 {
+func NewKotlinFunction0(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, func_ *rt.Func) *KotlinFunction0 {
 	p := &KotlinFunction0{}
 	p.RTT = rttKotlinFunction0
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Func = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Func = func_
 	return p
 }
 
@@ -6613,7 +6613,7 @@ func newKotlinFunction0Default() *KotlinFunction0 {
 
 var rttMixinType65 = rt.NewRTT(rt.KStruct, nil, true, "g9e5ae0cf095dcb42ccb65d59.1", nil)
 
-// MixinType65 is the wasm struct type sub final () struct(ref null none,i8,i16,ref null extern,ref null i31,ref null eq,i64,ref null extern,f64,i16,ref null none,ref null struct,ref null array,ref null struct,ref null any,ref null noexter....
+// MixinType65 is the wasm struct type (struct (field $ (ref null none)) (field $ i8) (field $ i16) (field $ (ref null extern)) (field $ (ref null i31)) (field $ (ref null eq)) (field $ i64) (field $ (ref null extern)) ...).
 type MixinType65 struct {
 	F0  any
 	F1  int8
@@ -6664,20 +6664,20 @@ func newMixinType65Default() *MixinType65 {
 
 var rttClassVTable40 = rt.NewRTT(rt.KStruct, rttClassVTable6, false, "g8207bc9d11505cc90892bd37.0", func(p unsafe.Pointer) any { return (*ClassVTable40)(p) })
 
-// ClassVTable40 is the wasm struct type sub open (<g6005f80bb5e051d3f43984d7.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable40 is the wasm struct type (sub ClassVTable6 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-message> (ref null $9)))), a subtype of ClassVTable6.
 type ClassVTable40 struct {
 	ClassVTable6
 }
 
 // NewClassVTable40 allocates a ClassVTable40.
-func NewClassVTable40(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable40 {
+func NewClassVTable40(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getMessage *rt.Func) *ClassVTable40 {
 	p := &ClassVTable40{}
 	p.RTT = rttClassVTable40
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetMessage = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetMessage = getMessage
 	return p
 }
 
@@ -6689,22 +6689,22 @@ func newClassVTable40Default() *ClassVTable40 {
 
 var rttKotlinNoSuchElementException = rt.NewRTT(rt.KStruct, rttKotlinRuntimeException, false, "gbfe3b9f477ea0324244ef3ee.0", func(p unsafe.Pointer) any { return (*KotlinNoSuchElementException)(p) })
 
-// KotlinNoSuchElementException is the wasm struct type sub open (<g834f71b66be60fc9018a3aa1.0>) struct(ref <g8207bc9d11505cc90892bd37.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinNoSuchElementException is the wasm struct type (sub KotlinRuntimeException (struct (field $vtable (ref $234)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinRuntimeException.
 type KotlinNoSuchElementException struct {
 	KotlinRuntimeException
 }
 
 // NewKotlinNoSuchElementException allocates a KotlinNoSuchElementException.
-func NewKotlinNoSuchElementException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinNoSuchElementException {
+func NewKotlinNoSuchElementException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinNoSuchElementException {
 	p := &KotlinNoSuchElementException{}
 	p.RTT = rttKotlinNoSuchElementException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -6716,7 +6716,7 @@ func newKotlinNoSuchElementExceptionDefault() *KotlinNoSuchElementException {
 
 var rttMixinType66 = rt.NewRTT(rt.KStruct, nil, true, "gbfe3b9f477ea0324244ef3ee.1", nil)
 
-// MixinType66 is the wasm struct type sub final () struct(ref null func,ref null extern,ref null array,i32,i64,i64,ref null struct,ref null struct,f64,ref null noextern,f32,f64,v128,i8,ref null none,ref null i31).
+// MixinType66 is the wasm struct type (struct (field $ (ref null func)) (field $ (ref null extern)) (field $ (ref null array)) (field $ i32) (field $ i64) (field $ i64) (field $ (ref null struct)) (field $ (ref null struct)) ...).
 type MixinType66 struct {
 	F0  *rt.Func
 	F1  any
@@ -6767,22 +6767,22 @@ func newMixinType66Default() *MixinType66 {
 
 var rttKotlinIllegalStateException = rt.NewRTT(rt.KStruct, rttKotlinRuntimeException, false, "g2f2b2410424147ba0234e944.0", func(p unsafe.Pointer) any { return (*KotlinIllegalStateException)(p) })
 
-// KotlinIllegalStateException is the wasm struct type sub open (<g834f71b66be60fc9018a3aa1.0>) struct(ref <g8207bc9d11505cc90892bd37.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinIllegalStateException is the wasm struct type (sub KotlinRuntimeException (struct (field $vtable (ref $237)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinRuntimeException.
 type KotlinIllegalStateException struct {
 	KotlinRuntimeException
 }
 
 // NewKotlinIllegalStateException allocates a KotlinIllegalStateException.
-func NewKotlinIllegalStateException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinIllegalStateException {
+func NewKotlinIllegalStateException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinIllegalStateException {
 	p := &KotlinIllegalStateException{}
 	p.RTT = rttKotlinIllegalStateException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -6794,7 +6794,7 @@ func newKotlinIllegalStateExceptionDefault() *KotlinIllegalStateException {
 
 var rttMixinType67 = rt.NewRTT(rt.KStruct, nil, true, "g2f2b2410424147ba0234e944.1", nil)
 
-// MixinType67 is the wasm struct type sub final () struct(ref null array,ref null func,ref null func,ref null array,ref null none,ref null i31,i8,v128,v128,ref null eq,ref null noextern,ref null noextern,ref null func,ref null noextern,i8....
+// MixinType67 is the wasm struct type (struct (field $ (ref null array)) (field $ (ref null func)) (field $ (ref null func)) (field $ (ref null array)) (field $ (ref null none)) (field $ (ref null i31)) ...).
 type MixinType67 struct {
 	F0  any
 	F1  *rt.Func
@@ -6845,22 +6845,22 @@ func newMixinType67Default() *MixinType67 {
 
 var rttKotlinIllegalArgumentException = rt.NewRTT(rt.KStruct, rttKotlinRuntimeException, false, "gada97137127c6de364b2b05c.0", func(p unsafe.Pointer) any { return (*KotlinIllegalArgumentException)(p) })
 
-// KotlinIllegalArgumentException is the wasm struct type sub open (<g834f71b66be60fc9018a3aa1.0>) struct(ref <g8207bc9d11505cc90892bd37.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinIllegalArgumentException is the wasm struct type (sub KotlinRuntimeException (struct (field $vtable (ref $240)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinRuntimeException.
 type KotlinIllegalArgumentException struct {
 	KotlinRuntimeException
 }
 
 // NewKotlinIllegalArgumentException allocates a KotlinIllegalArgumentException.
-func NewKotlinIllegalArgumentException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinIllegalArgumentException {
+func NewKotlinIllegalArgumentException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinIllegalArgumentException {
 	p := &KotlinIllegalArgumentException{}
 	p.RTT = rttKotlinIllegalArgumentException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -6872,7 +6872,7 @@ func newKotlinIllegalArgumentExceptionDefault() *KotlinIllegalArgumentException 
 
 var rttMixinType68 = rt.NewRTT(rt.KStruct, nil, true, "gada97137127c6de364b2b05c.1", nil)
 
-// MixinType68 is the wasm struct type sub final () struct(ref null none,ref null noextern,ref null i31,ref null func,ref null eq,ref null extern,f32,v128,ref null func,ref null extern,ref null struct,ref null none,ref null none,f64,ref nu....
+// MixinType68 is the wasm struct type (struct (field $ (ref null none)) (field $ (ref null noextern)) (field $ (ref null i31)) (field $ (ref null func)) (field $ (ref null eq)) (field $ (ref null extern)) ...).
 type MixinType68 struct {
 	F0  any
 	F1  any
@@ -6923,22 +6923,22 @@ func newMixinType68Default() *MixinType68 {
 
 var rttKotlinArithmeticException = rt.NewRTT(rt.KStruct, rttKotlinRuntimeException, false, "g1575f26431ae32b3b78d1599.0", func(p unsafe.Pointer) any { return (*KotlinArithmeticException)(p) })
 
-// KotlinArithmeticException is the wasm struct type sub open (<g834f71b66be60fc9018a3aa1.0>) struct(ref <g8207bc9d11505cc90892bd37.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinArithmeticException is the wasm struct type (sub KotlinRuntimeException (struct (field $vtable (ref $243)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinRuntimeException.
 type KotlinArithmeticException struct {
 	KotlinRuntimeException
 }
 
 // NewKotlinArithmeticException allocates a KotlinArithmeticException.
-func NewKotlinArithmeticException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinArithmeticException {
+func NewKotlinArithmeticException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinArithmeticException {
 	p := &KotlinArithmeticException{}
 	p.RTT = rttKotlinArithmeticException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -6950,7 +6950,7 @@ func newKotlinArithmeticExceptionDefault() *KotlinArithmeticException {
 
 var rttMixinType69 = rt.NewRTT(rt.KStruct, nil, true, "g1575f26431ae32b3b78d1599.1", nil)
 
-// MixinType69 is the wasm struct type sub final () struct(v128,ref null noextern,f64,i32,ref null struct,ref null func,ref null eq,v128,f64,ref null noextern,i64,ref null none,ref null none,i32,i64,i8,ref null i31).
+// MixinType69 is the wasm struct type (struct (field $ v128) (field $ (ref null noextern)) (field $ f64) (field $ i32) (field $ (ref null struct)) (field $ (ref null func)) (field $ (ref null eq)) (field $ v128) ...).
 type MixinType69 struct {
 	F0  rt.V128
 	F1  any
@@ -7003,22 +7003,22 @@ func newMixinType69Default() *MixinType69 {
 
 var rttKotlinIndexOutOfBoundsException = rt.NewRTT(rt.KStruct, rttKotlinRuntimeException, false, "g30b2c62ae4ed8ec681d2f103.0", func(p unsafe.Pointer) any { return (*KotlinIndexOutOfBoundsException)(p) })
 
-// KotlinIndexOutOfBoundsException is the wasm struct type sub open (<g834f71b66be60fc9018a3aa1.0>) struct(ref <g8207bc9d11505cc90892bd37.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinIndexOutOfBoundsException is the wasm struct type (sub KotlinRuntimeException (struct (field $vtable (ref $246)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinRuntimeException.
 type KotlinIndexOutOfBoundsException struct {
 	KotlinRuntimeException
 }
 
 // NewKotlinIndexOutOfBoundsException allocates a KotlinIndexOutOfBoundsException.
-func NewKotlinIndexOutOfBoundsException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinIndexOutOfBoundsException {
+func NewKotlinIndexOutOfBoundsException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinIndexOutOfBoundsException {
 	p := &KotlinIndexOutOfBoundsException{}
 	p.RTT = rttKotlinIndexOutOfBoundsException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -7030,7 +7030,7 @@ func newKotlinIndexOutOfBoundsExceptionDefault() *KotlinIndexOutOfBoundsExceptio
 
 var rttMixinType70 = rt.NewRTT(rt.KStruct, nil, true, "g30b2c62ae4ed8ec681d2f103.1", nil)
 
-// MixinType70 is the wasm struct type sub final () struct(i32,ref null any,ref null none,ref null eq,v128,ref null eq,v128,i8,ref null i31,f64,v128,ref null none,ref null noextern,i32,f32,ref null func).
+// MixinType70 is the wasm struct type (struct (field $ i32) (field $ (ref null any)) (field $ (ref null none)) (field $ (ref null eq)) (field $ v128) (field $ (ref null eq)) (field $ v128) (field $ i8) ...).
 type MixinType70 struct {
 	F0  int32
 	F1  any
@@ -7081,22 +7081,22 @@ func newMixinType70Default() *MixinType70 {
 
 var rttKotlinError = rt.NewRTT(rt.KStruct, rttKotlinThrowable, false, "g8acd3c76458ce6512f9fa12b.0", func(p unsafe.Pointer) any { return (*KotlinError)(p) })
 
-// KotlinError is the wasm struct type sub open (<gdcb9abcca805dabf9871e389.0>) struct(ref <g8362a062748c99fdda00a1e6.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinError is the wasm struct type (sub KotlinThrowable (struct (field $vtable (ref $249)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinThrowable.
 type KotlinError struct {
 	KotlinThrowable
 }
 
 // NewKotlinError allocates a KotlinError.
-func NewKotlinError(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinError {
+func NewKotlinError(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinError {
 	p := &KotlinError{}
 	p.RTT = rttKotlinError
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -7108,7 +7108,7 @@ func newKotlinErrorDefault() *KotlinError {
 
 var rttMixinType71 = rt.NewRTT(rt.KStruct, nil, true, "g8acd3c76458ce6512f9fa12b.1", nil)
 
-// MixinType71 is the wasm struct type sub final () struct(ref null struct,i16,i32,f64,ref null extern,ref null array,i8,ref null noextern,ref null i31,i8,f64,f64,ref null func,ref null struct,i64,ref null array).
+// MixinType71 is the wasm struct type (struct (field $ (ref null struct)) (field $ i16) (field $ i32) (field $ f64) (field $ (ref null extern)) (field $ (ref null array)) (field $ i8) (field $ (ref null noextern)) ...).
 type MixinType71 struct {
 	F0  any
 	F1  int16
@@ -7159,22 +7159,22 @@ func newMixinType71Default() *MixinType71 {
 
 var rttKotlinAssertionError = rt.NewRTT(rt.KStruct, rttKotlinError, false, "g35d89cbb9f37192adde1921c.0", func(p unsafe.Pointer) any { return (*KotlinAssertionError)(p) })
 
-// KotlinAssertionError is the wasm struct type sub open (<g8acd3c76458ce6512f9fa12b.0>) struct(ref <g6005f80bb5e051d3f43984d7.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinAssertionError is the wasm struct type (sub KotlinError (struct (field $vtable (ref $252)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinError.
 type KotlinAssertionError struct {
 	KotlinError
 }
 
 // NewKotlinAssertionError allocates a KotlinAssertionError.
-func NewKotlinAssertionError(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinAssertionError {
+func NewKotlinAssertionError(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinAssertionError {
 	p := &KotlinAssertionError{}
 	p.RTT = rttKotlinAssertionError
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -7186,7 +7186,7 @@ func newKotlinAssertionErrorDefault() *KotlinAssertionError {
 
 var rttMixinType72 = rt.NewRTT(rt.KStruct, nil, true, "g35d89cbb9f37192adde1921c.1", nil)
 
-// MixinType72 is the wasm struct type sub final () struct(ref null i31,ref null eq,ref null array,ref null none,ref null eq,i8,ref null noextern,f64,ref null extern,ref null i31,ref null array,ref null struct,ref null i31,f64,ref null fun....
+// MixinType72 is the wasm struct type (struct (field $ (ref null i31)) (field $ (ref null eq)) (field $ (ref null array)) (field $ (ref null none)) (field $ (ref null eq)) (field $ i8) (field $ (ref null noextern)) ...).
 type MixinType72 struct {
 	F0  any
 	F1  any
@@ -7235,22 +7235,22 @@ func newMixinType72Default() *MixinType72 {
 
 var rttKotlinUnsupportedOperationException = rt.NewRTT(rt.KStruct, rttKotlinRuntimeException, false, "g94b8d709822cfc841a24359e.0", func(p unsafe.Pointer) any { return (*KotlinUnsupportedOperationException)(p) })
 
-// KotlinUnsupportedOperationException is the wasm struct type sub open (<g834f71b66be60fc9018a3aa1.0>) struct(ref <g8207bc9d11505cc90892bd37.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinUnsupportedOperationException is the wasm struct type (sub KotlinRuntimeException (struct (field $vtable (ref $255)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinRuntimeException.
 type KotlinUnsupportedOperationException struct {
 	KotlinRuntimeException
 }
 
 // NewKotlinUnsupportedOperationException allocates a KotlinUnsupportedOperationException.
-func NewKotlinUnsupportedOperationException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinUnsupportedOperationException {
+func NewKotlinUnsupportedOperationException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinUnsupportedOperationException {
 	p := &KotlinUnsupportedOperationException{}
 	p.RTT = rttKotlinUnsupportedOperationException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -7262,7 +7262,7 @@ func newKotlinUnsupportedOperationExceptionDefault() *KotlinUnsupportedOperation
 
 var rttMixinType73 = rt.NewRTT(rt.KStruct, nil, true, "g94b8d709822cfc841a24359e.1", nil)
 
-// MixinType73 is the wasm struct type sub final () struct(ref null func,i16,ref null noextern,ref null none,i32,ref null func,i32,i64,ref null i31,ref null struct,ref null array,ref null i31,ref null none,ref null extern,ref null any,ref ....
+// MixinType73 is the wasm struct type (struct (field $ (ref null func)) (field $ i16) (field $ (ref null noextern)) (field $ (ref null none)) (field $ i32) (field $ (ref null func)) (field $ i32) (field $ i64) ...).
 type MixinType73 struct {
 	F0  *rt.Func
 	F1  int16
@@ -7313,22 +7313,22 @@ func newMixinType73Default() *MixinType73 {
 
 var rttKotlinOutOfMemoryError = rt.NewRTT(rt.KStruct, rttKotlinError, false, "gec8a804531130ef7b108b761.0", func(p unsafe.Pointer) any { return (*KotlinOutOfMemoryError)(p) })
 
-// KotlinOutOfMemoryError is the wasm struct type sub open (<g8acd3c76458ce6512f9fa12b.0>) struct(ref <g6005f80bb5e051d3f43984d7.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinOutOfMemoryError is the wasm struct type (sub KotlinError (struct (field $vtable (ref $258)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinError.
 type KotlinOutOfMemoryError struct {
 	KotlinError
 }
 
 // NewKotlinOutOfMemoryError allocates a KotlinOutOfMemoryError.
-func NewKotlinOutOfMemoryError(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinOutOfMemoryError {
+func NewKotlinOutOfMemoryError(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinOutOfMemoryError {
 	p := &KotlinOutOfMemoryError{}
 	p.RTT = rttKotlinOutOfMemoryError
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -7340,7 +7340,7 @@ func newKotlinOutOfMemoryErrorDefault() *KotlinOutOfMemoryError {
 
 var rttMixinType74 = rt.NewRTT(rt.KStruct, nil, true, "gec8a804531130ef7b108b761.1", nil)
 
-// MixinType74 is the wasm struct type sub final () struct(ref null func,i64,ref null array,i64,v128,ref null struct,ref null eq,i8,i8,ref null array,ref null struct,ref null array,i16,f64,ref null noextern,v128,ref null i31).
+// MixinType74 is the wasm struct type (struct (field $ (ref null func)) (field $ i64) (field $ (ref null array)) (field $ i64) (field $ v128) (field $ (ref null struct)) (field $ (ref null eq)) (field $ i8) ...).
 type MixinType74 struct {
 	F0  *rt.Func
 	F1  int64
@@ -7393,22 +7393,22 @@ func newMixinType74Default() *MixinType74 {
 
 var rttKotlinConcurrentModificationException = rt.NewRTT(rt.KStruct, rttKotlinRuntimeException, false, "g7cd6bc16bf9549707a248e77.0", func(p unsafe.Pointer) any { return (*KotlinConcurrentModificationException)(p) })
 
-// KotlinConcurrentModificationException is the wasm struct type sub open (<g834f71b66be60fc9018a3aa1.0>) struct(ref <g8207bc9d11505cc90892bd37.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinConcurrentModificationException is the wasm struct type (sub KotlinRuntimeException (struct (field $vtable (ref $261)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinRuntimeException.
 type KotlinConcurrentModificationException struct {
 	KotlinRuntimeException
 }
 
 // NewKotlinConcurrentModificationException allocates a KotlinConcurrentModificationException.
-func NewKotlinConcurrentModificationException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinConcurrentModificationException {
+func NewKotlinConcurrentModificationException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinConcurrentModificationException {
 	p := &KotlinConcurrentModificationException{}
 	p.RTT = rttKotlinConcurrentModificationException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -7420,7 +7420,7 @@ func newKotlinConcurrentModificationExceptionDefault() *KotlinConcurrentModifica
 
 var rttMixinType75 = rt.NewRTT(rt.KStruct, nil, true, "g7cd6bc16bf9549707a248e77.1", nil)
 
-// MixinType75 is the wasm struct type sub final () struct(f64,ref null noextern,ref null struct,i32,ref null any,i32,i64,f32,ref null noextern,ref null eq,ref null noextern,ref null extern,f64,i64,i16,ref null i31).
+// MixinType75 is the wasm struct type (struct (field $ f64) (field $ (ref null noextern)) (field $ (ref null struct)) (field $ i32) (field $ (ref null any)) (field $ i32) (field $ i64) (field $ f32) (field $ (ref null noextern)) ...).
 type MixinType75 struct {
 	F0  float64
 	F1  any
@@ -7471,22 +7471,22 @@ func newMixinType75Default() *MixinType75 {
 
 var rttKotlinClassCastException = rt.NewRTT(rt.KStruct, rttKotlinRuntimeException, false, "gf8746f15387a2721558a5825.0", func(p unsafe.Pointer) any { return (*KotlinClassCastException)(p) })
 
-// KotlinClassCastException is the wasm struct type sub open (<g834f71b66be60fc9018a3aa1.0>) struct(ref <g8207bc9d11505cc90892bd37.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinClassCastException is the wasm struct type (sub KotlinRuntimeException (struct (field $vtable (ref $264)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinRuntimeException.
 type KotlinClassCastException struct {
 	KotlinRuntimeException
 }
 
 // NewKotlinClassCastException allocates a KotlinClassCastException.
-func NewKotlinClassCastException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinClassCastException {
+func NewKotlinClassCastException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinClassCastException {
 	p := &KotlinClassCastException{}
 	p.RTT = rttKotlinClassCastException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -7498,7 +7498,7 @@ func newKotlinClassCastExceptionDefault() *KotlinClassCastException {
 
 var rttMixinType76 = rt.NewRTT(rt.KStruct, nil, true, "gf8746f15387a2721558a5825.1", nil)
 
-// MixinType76 is the wasm struct type sub final () struct(ref null any,i64,ref null extern,ref null i31,v128,ref null noextern,i8,ref null array,f64,ref null func,ref null func,f32,i32,i16,f32).
+// MixinType76 is the wasm struct type (struct (field $ (ref null any)) (field $ i64) (field $ (ref null extern)) (field $ (ref null i31)) (field $ v128) (field $ (ref null noextern)) (field $ i8) (field $ (ref null array)) ...).
 type MixinType76 struct {
 	F0  any
 	F1  int64
@@ -7547,22 +7547,22 @@ func newMixinType76Default() *MixinType76 {
 
 var rttKotlinNullPointerException = rt.NewRTT(rt.KStruct, rttKotlinRuntimeException, false, "g8b9ca03a02253f0326878aae.0", func(p unsafe.Pointer) any { return (*KotlinNullPointerException)(p) })
 
-// KotlinNullPointerException is the wasm struct type sub open (<g834f71b66be60fc9018a3aa1.0>) struct(ref <g8207bc9d11505cc90892bd37.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinNullPointerException is the wasm struct type (sub KotlinRuntimeException (struct (field $vtable (ref $267)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinRuntimeException.
 type KotlinNullPointerException struct {
 	KotlinRuntimeException
 }
 
 // NewKotlinNullPointerException allocates a KotlinNullPointerException.
-func NewKotlinNullPointerException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinNullPointerException {
+func NewKotlinNullPointerException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinNullPointerException {
 	p := &KotlinNullPointerException{}
 	p.RTT = rttKotlinNullPointerException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -7574,7 +7574,7 @@ func newKotlinNullPointerExceptionDefault() *KotlinNullPointerException {
 
 var rttMixinType77 = rt.NewRTT(rt.KStruct, nil, true, "g8b9ca03a02253f0326878aae.1", nil)
 
-// MixinType77 is the wasm struct type sub final () struct(f32,i64,i16,ref null i31,ref null noextern,i32,ref null i31,ref null none,i32,ref null noextern,ref null i31,ref null noextern,ref null none,ref null array,ref null struct,ref null....
+// MixinType77 is the wasm struct type (struct (field $ f32) (field $ i64) (field $ i16) (field $ (ref null i31)) (field $ (ref null noextern)) (field $ i32) (field $ (ref null i31)) (field $ (ref null none)) ...).
 type MixinType77 struct {
 	F0  float32
 	F1  int64
@@ -7625,19 +7625,19 @@ func newMixinType77Default() *MixinType77 {
 
 var rttKotlinUnit = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g571ed3a68ddc446671fae819.0", func(p unsafe.Pointer) any { return (*KotlinUnit)(p) })
 
-// KotlinUnit is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinUnit is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $270)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinUnit struct {
 	KotlinAny
 }
 
 // NewKotlinUnit allocates a KotlinUnit.
-func NewKotlinUnit(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinUnit {
+func NewKotlinUnit(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinUnit {
 	p := &KotlinUnit{}
 	p.RTT = rttKotlinUnit
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -7649,7 +7649,7 @@ func newKotlinUnitDefault() *KotlinUnit {
 
 var rttMixinType78 = rt.NewRTT(rt.KStruct, nil, true, "g571ed3a68ddc446671fae819.1", nil)
 
-// MixinType78 is the wasm struct type sub final () struct(v128,i16,ref null eq,ref null eq,i16,f32,ref null noextern,i8,ref null array,i32,f32,i8,i32,f32,i16,f32,ref null i31).
+// MixinType78 is the wasm struct type (struct (field $ v128) (field $ i16) (field $ (ref null eq)) (field $ (ref null eq)) (field $ i16) (field $ f32) (field $ (ref null noextern)) (field $ i8) (field $ (ref null array)) ...).
 type MixinType78 struct {
 	F0  rt.V128
 	F1  int16
@@ -7702,7 +7702,7 @@ func newMixinType78Default() *MixinType78 {
 
 var rttClassVTable41 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g14324eed90ae892aa7720acc.0", func(p unsafe.Pointer) any { return (*ClassVTable41)(p) })
 
-// ClassVTable41 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable41 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-simpleName> (ref null $9)) ...)), a subtype of ClassVTable.
 type ClassVTable41 struct {
 	ClassVTable
 	GetSimpleName    *rt.Func
@@ -7710,15 +7710,15 @@ type ClassVTable41 struct {
 }
 
 // NewClassVTable41 allocates a ClassVTable41.
-func NewClassVTable41(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func) *ClassVTable41 {
+func NewClassVTable41(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSimpleName *rt.Func, getQualifiedName *rt.Func) *ClassVTable41 {
 	p := &ClassVTable41{}
 	p.RTT = rttClassVTable41
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSimpleName = f4
-	p.GetQualifiedName = f5
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSimpleName = getSimpleName
+	p.GetQualifiedName = getQualifiedName
 	return p
 }
 
@@ -7730,21 +7730,21 @@ func newClassVTable41Default() *ClassVTable41 {
 
 var rttKotlinWasmInternalKClassImpl = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g7f98b6cf95b01947bb4507a4.0", func(p unsafe.Pointer) any { return (*KotlinWasmInternalKClassImpl)(p) })
 
-// KotlinWasmInternalKClassImpl is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g14324eed90ae892aa7720acc.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null struct).
+// KotlinWasmInternalKClassImpl is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $273)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $rtti (mut (ref null struct))))), a subtype of KotlinAny.
 type KotlinWasmInternalKClassImpl struct {
 	KotlinAny
 	Rtti_2 any
 }
 
 // NewKotlinWasmInternalKClassImpl allocates a KotlinWasmInternalKClassImpl.
-func NewKotlinWasmInternalKClassImpl(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 any) *KotlinWasmInternalKClassImpl {
+func NewKotlinWasmInternalKClassImpl(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, rtti2 any) *KotlinWasmInternalKClassImpl {
 	p := &KotlinWasmInternalKClassImpl{}
 	p.RTT = rttKotlinWasmInternalKClassImpl
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Rtti_2 = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Rtti_2 = rtti2
 	return p
 }
 
@@ -7756,7 +7756,7 @@ func newKotlinWasmInternalKClassImplDefault() *KotlinWasmInternalKClassImpl {
 
 var rttMixinType79 = rt.NewRTT(rt.KStruct, nil, true, "g7f98b6cf95b01947bb4507a4.1", nil)
 
-// MixinType79 is the wasm struct type sub final () struct(i64,ref null any,i16,ref null func,f64,i32,ref null eq,ref null any,ref null i31,i64,i32,ref null extern,i64,f64,ref null i31,ref null array).
+// MixinType79 is the wasm struct type (struct (field $ i64) (field $ (ref null any)) (field $ i16) (field $ (ref null func)) (field $ f64) (field $ i32) (field $ (ref null eq)) (field $ (ref null any)) ...).
 type MixinType79 struct {
 	F0  int64
 	F1  any
@@ -7807,7 +7807,7 @@ func newMixinType79Default() *MixinType79 {
 
 var rttClassVTable42 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "gc87618396ff2482bbeb05d0c.0", func(p unsafe.Pointer) any { return (*ClassVTable42)(p) })
 
-// ClassVTable42 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable42 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-simpleName> (ref null $9)) ...)), a subtype of ClassVTable.
 type ClassVTable42 struct {
 	ClassVTable
 	GetSimpleName      *rt.Func
@@ -7817,17 +7817,17 @@ type ClassVTable42 struct {
 }
 
 // NewClassVTable42 allocates a ClassVTable42.
-func NewClassVTable42(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func, f5 *rt.Func, f6 *rt.Func, f7 *rt.Func) *ClassVTable42 {
+func NewClassVTable42(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getSimpleName *rt.Func, getSimpleName2 *rt.Func, getQualifiedName *rt.Func, getQualifiedName2 *rt.Func) *ClassVTable42 {
 	p := &ClassVTable42{}
 	p.RTT = rttClassVTable42
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetSimpleName = f4
-	p.GetSimpleName_2 = f5
-	p.GetQualifiedName = f6
-	p.GetQualifiedName_2 = f7
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetSimpleName = getSimpleName
+	p.GetSimpleName_2 = getSimpleName2
+	p.GetQualifiedName = getQualifiedName
+	p.GetQualifiedName_2 = getQualifiedName2
 	return p
 }
 
@@ -7839,21 +7839,21 @@ func newClassVTable42Default() *ClassVTable42 {
 
 var rttKotlinWasmInternalKClassInterfaceImpl = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "ge24f6678ce13d6a3774a20a5.0", func(p unsafe.Pointer) any { return (*KotlinWasmInternalKClassInterfaceImpl)(p) })
 
-// KotlinWasmInternalKClassInterfaceImpl is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <gc87618396ff2482bbeb05d0c.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <gb1c262cc485b3432c265d....
+// KotlinWasmInternalKClassInterfaceImpl is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $276)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $typeData (mut (ref null $227))))), a subtype of KotlinAny.
 type KotlinWasmInternalKClassInterfaceImpl struct {
 	KotlinAny
 	TypeData *KotlinWasmInternalTypeInfoData
 }
 
 // NewKotlinWasmInternalKClassInterfaceImpl allocates a KotlinWasmInternalKClassInterfaceImpl.
-func NewKotlinWasmInternalKClassInterfaceImpl(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinWasmInternalTypeInfoData) *KotlinWasmInternalKClassInterfaceImpl {
+func NewKotlinWasmInternalKClassInterfaceImpl(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, typeData *KotlinWasmInternalTypeInfoData) *KotlinWasmInternalKClassInterfaceImpl {
 	p := &KotlinWasmInternalKClassInterfaceImpl{}
 	p.RTT = rttKotlinWasmInternalKClassInterfaceImpl
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.TypeData = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.TypeData = typeData
 	return p
 }
 
@@ -7865,7 +7865,7 @@ func newKotlinWasmInternalKClassInterfaceImplDefault() *KotlinWasmInternalKClass
 
 var rttMixinType80 = rt.NewRTT(rt.KStruct, nil, true, "ge24f6678ce13d6a3774a20a5.1", nil)
 
-// MixinType80 is the wasm struct type sub final () struct(ref null array,ref null eq,ref null array,i64,f64,ref null noextern,v128,f64,ref null eq,ref null eq,i16,ref null struct,i32,f64,ref null noextern,f32,ref null i31).
+// MixinType80 is the wasm struct type (struct (field $ (ref null array)) (field $ (ref null eq)) (field $ (ref null array)) (field $ i64) (field $ f64) (field $ (ref null noextern)) (field $ v128) (field $ f64) ...).
 type MixinType80 struct {
 	F0  any
 	F1  any
@@ -7918,22 +7918,22 @@ func newMixinType80Default() *MixinType80 {
 
 var rttKotlinTextCharacterCodingException = rt.NewRTT(rt.KStruct, rttKotlinException, false, "g2d84875696c6f558e82007bf.0", func(p unsafe.Pointer) any { return (*KotlinTextCharacterCodingException)(p) })
 
-// KotlinTextCharacterCodingException is the wasm struct type sub open (<g87df9e98f308d0cc3906cecb.0>) struct(ref <g6005f80bb5e051d3f43984d7.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197c....
+// KotlinTextCharacterCodingException is the wasm struct type (sub KotlinException (struct (field $vtable (ref $279)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinException.
 type KotlinTextCharacterCodingException struct {
 	KotlinException
 }
 
 // NewKotlinTextCharacterCodingException allocates a KotlinTextCharacterCodingException.
-func NewKotlinTextCharacterCodingException(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny) *KotlinTextCharacterCodingException {
+func NewKotlinTextCharacterCodingException(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny) *KotlinTextCharacterCodingException {
 	p := &KotlinTextCharacterCodingException{}
 	p.RTT = rttKotlinTextCharacterCodingException
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	return p
 }
 
@@ -7945,7 +7945,7 @@ func newKotlinTextCharacterCodingExceptionDefault() *KotlinTextCharacterCodingEx
 
 var rttMixinType81 = rt.NewRTT(rt.KStruct, nil, true, "g2d84875696c6f558e82007bf.1", nil)
 
-// MixinType81 is the wasm struct type sub final () struct(i8,f32,i64,i64,f32,ref null func,ref null struct,ref null any,ref null eq,ref null array,i16,ref null extern,ref null struct,i32,ref null array,ref null struct,ref null i31).
+// MixinType81 is the wasm struct type (struct (field $ i8) (field $ f32) (field $ i64) (field $ i64) (field $ f32) (field $ (ref null func)) (field $ (ref null struct)) (field $ (ref null any)) (field $ (ref null eq)) ...).
 type MixinType81 struct {
 	F0  int8
 	F1  float32
@@ -7998,21 +7998,21 @@ func newMixinType81Default() *MixinType81 {
 
 var rttKotlinTextSamKotlinComparator0 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "ge48efa795416faad5d1cd188.0", func(p unsafe.Pointer) any { return (*KotlinTextSamKotlinComparator0)(p) })
 
-// KotlinTextSamKotlinComparator0 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <gafc1ca1daad9c241361d237e.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197....
+// KotlinTextSamKotlinComparator0 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $282)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $function (mut (ref null $10))))), a subtype of KotlinAny.
 type KotlinTextSamKotlinComparator0 struct {
 	KotlinAny
 	Function *KotlinAny
 }
 
 // NewKotlinTextSamKotlinComparator0 allocates a KotlinTextSamKotlinComparator0.
-func NewKotlinTextSamKotlinComparator0(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinAny) *KotlinTextSamKotlinComparator0 {
+func NewKotlinTextSamKotlinComparator0(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, function *KotlinAny) *KotlinTextSamKotlinComparator0 {
 	p := &KotlinTextSamKotlinComparator0{}
 	p.RTT = rttKotlinTextSamKotlinComparator0
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Function = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Function = function
 	return p
 }
 
@@ -8024,7 +8024,7 @@ func newKotlinTextSamKotlinComparator0Default() *KotlinTextSamKotlinComparator0 
 
 var rttMixinType82 = rt.NewRTT(rt.KStruct, nil, true, "ge48efa795416faad5d1cd188.1", nil)
 
-// MixinType82 is the wasm struct type sub final () struct(ref null func,ref null none,i64,ref null noextern,ref null func,ref null any,ref null any,i32,ref null none,i16,i8,ref null i31,ref null eq,v128,ref null func,ref null func).
+// MixinType82 is the wasm struct type (struct (field $ (ref null func)) (field $ (ref null none)) (field $ i64) (field $ (ref null noextern)) (field $ (ref null func)) (field $ (ref null any)) (field $ (ref null any)) ...).
 type MixinType82 struct {
 	F0  *rt.Func
 	F1  any
@@ -8075,21 +8075,21 @@ func newMixinType82Default() *MixinType82 {
 
 var rttKotlinTextFunction2 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "gac46f78d48d5a46f331eade4.0", func(p unsafe.Pointer) any { return (*KotlinTextFunction2)(p) })
 
-// KotlinTextFunction2 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <gaccc512e52a36d17d2b4a....
+// KotlinTextFunction2 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $285)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $func (mut (ref null $47))))), a subtype of KotlinAny.
 type KotlinTextFunction2 struct {
 	KotlinAny
 	Func *rt.Func
 }
 
 // NewKotlinTextFunction2 allocates a KotlinTextFunction2.
-func NewKotlinTextFunction2(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *rt.Func) *KotlinTextFunction2 {
+func NewKotlinTextFunction2(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, func_ *rt.Func) *KotlinTextFunction2 {
 	p := &KotlinTextFunction2{}
 	p.RTT = rttKotlinTextFunction2
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Func = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Func = func_
 	return p
 }
 
@@ -8101,7 +8101,7 @@ func newKotlinTextFunction2Default() *KotlinTextFunction2 {
 
 var rttMixinType83 = rt.NewRTT(rt.KStruct, nil, true, "gac46f78d48d5a46f331eade4.1", nil)
 
-// MixinType83 is the wasm struct type sub final () struct(ref null noextern,v128,ref null func,ref null struct,ref null extern,ref null any,ref null array,ref null func,i16,ref null eq,ref null func,ref null noextern,ref null extern,ref n....
+// MixinType83 is the wasm struct type (struct (field $ (ref null noextern)) (field $ v128) (field $ (ref null func)) (field $ (ref null struct)) (field $ (ref null extern)) (field $ (ref null any)) (field $ (ref null array)) ...).
 type MixinType83 struct {
 	F0  any
 	F1  rt.V128
@@ -8154,23 +8154,23 @@ func newMixinType83Default() *MixinType83 {
 
 var rttKotlinTimeDurationUnit = rt.NewRTT(rt.KStruct, rttKotlinEnum, true, "g0bef3bbb9d51c4a74adad31c.0", func(p unsafe.Pointer) any { return (*KotlinTimeDurationUnit)(p) })
 
-// KotlinTimeDurationUnit is the wasm struct type sub final (<g3a5e257473e4b2b15f19905f.2>) struct(ref <g25497c38e62afcd49b3c0a7a.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197....
+// KotlinTimeDurationUnit is the wasm struct type (sub KotlinEnum (struct (field $vtable (ref $288)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $name (mut (ref null $16))) (field $ordinal (mut i32)) ...)), a subtype of KotlinEnum.
 type KotlinTimeDurationUnit struct {
 	KotlinEnum
 	Scale float64
 }
 
 // NewKotlinTimeDurationUnit allocates a KotlinTimeDurationUnit.
-func NewKotlinTimeDurationUnit(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 int32, f6 float64) *KotlinTimeDurationUnit {
+func NewKotlinTimeDurationUnit(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, name *KotlinString, ordinal int32, scale float64) *KotlinTimeDurationUnit {
 	p := &KotlinTimeDurationUnit{}
 	p.RTT = rttKotlinTimeDurationUnit
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Name = f4
-	p.Ordinal = f5
-	p.Scale = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Name = name
+	p.Ordinal = ordinal
+	p.Scale = scale
 	return p
 }
 
@@ -8182,7 +8182,7 @@ func newKotlinTimeDurationUnitDefault() *KotlinTimeDurationUnit {
 
 var rttMixinType84 = rt.NewRTT(rt.KStruct, nil, true, "g0bef3bbb9d51c4a74adad31c.1", nil)
 
-// MixinType84 is the wasm struct type sub final () struct(v128,ref null i31,ref null array,ref null array,i64,v128,v128,ref null noextern,ref null none,i32,ref null none,ref null struct,ref null eq,ref null extern,i32,ref null func).
+// MixinType84 is the wasm struct type (struct (field $ v128) (field $ (ref null i31)) (field $ (ref null array)) (field $ (ref null array)) (field $ i64) (field $ v128) (field $ v128) (field $ (ref null noextern)) ...).
 type MixinType84 struct {
 	F0  rt.V128
 	F1  any
@@ -8233,21 +8233,21 @@ func newMixinType84Default() *MixinType84 {
 
 var rttKotlinWasmUnsafePointer = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g8ca0bcc4e695d5d434725fb1.0", func(p unsafe.Pointer) any { return (*KotlinWasmUnsafePointer)(p) })
 
-// KotlinWasmUnsafePointer is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i32).
+// KotlinWasmUnsafePointer is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $291)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $address (mut i32)))), a subtype of KotlinAny.
 type KotlinWasmUnsafePointer struct {
 	KotlinAny
 	Address int32
 }
 
 // NewKotlinWasmUnsafePointer allocates a KotlinWasmUnsafePointer.
-func NewKotlinWasmUnsafePointer(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int32) *KotlinWasmUnsafePointer {
+func NewKotlinWasmUnsafePointer(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, address int32) *KotlinWasmUnsafePointer {
 	p := &KotlinWasmUnsafePointer{}
 	p.RTT = rttKotlinWasmUnsafePointer
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Address = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Address = address
 	return p
 }
 
@@ -8259,7 +8259,7 @@ func newKotlinWasmUnsafePointerDefault() *KotlinWasmUnsafePointer {
 
 var rttMixinType85 = rt.NewRTT(rt.KStruct, nil, true, "g8ca0bcc4e695d5d434725fb1.1", nil)
 
-// MixinType85 is the wasm struct type sub final () struct(ref null struct,i32,ref null eq,ref null struct,f64,ref null i31,ref null i31,ref null array,ref null extern,ref null array,ref null noextern,ref null array,ref null func,ref null ....
+// MixinType85 is the wasm struct type (struct (field $ (ref null struct)) (field $ i32) (field $ (ref null eq)) (field $ (ref null struct)) (field $ f64) (field $ (ref null i31)) (field $ (ref null i31)) ...).
 type MixinType85 struct {
 	F0  any
 	F1  int32
@@ -8310,21 +8310,21 @@ func newMixinType85Default() *MixinType85 {
 
 var rttClassVTable43 = rt.NewRTT(rt.KStruct, rttClassVTable, false, "g2d3068d7b8e25ebfbcf9fed5.0", func(p unsafe.Pointer) any { return (*ClassVTable43)(p) })
 
-// ClassVTable43 is the wasm struct type sub open (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08....
+// ClassVTable43 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $allocate (ref null $7)))), a subtype of ClassVTable.
 type ClassVTable43 struct {
 	ClassVTable
 	Allocate *rt.Func
 }
 
 // NewClassVTable43 allocates a ClassVTable43.
-func NewClassVTable43(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable43 {
+func NewClassVTable43(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, allocate *rt.Func) *ClassVTable43 {
 	p := &ClassVTable43{}
 	p.RTT = rttClassVTable43
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Allocate = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Allocate = allocate
 	return p
 }
 
@@ -8336,19 +8336,19 @@ func newClassVTable43Default() *ClassVTable43 {
 
 var rttKotlinWasmUnsafeMemoryAllocator = rt.NewRTT(rt.KStruct, rttKotlinAny, false, "g52fd6a251b36ad51de0a36d1.0", func(p unsafe.Pointer) any { return (*KotlinWasmUnsafeMemoryAllocator)(p) })
 
-// KotlinWasmUnsafeMemoryAllocator is the wasm struct type sub open (<g484ce41559fcc92541197c08.5>) struct(ref <g2d3068d7b8e25ebfbcf9fed5.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinWasmUnsafeMemoryAllocator is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $294)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinWasmUnsafeMemoryAllocator struct {
 	KotlinAny
 }
 
 // NewKotlinWasmUnsafeMemoryAllocator allocates a KotlinWasmUnsafeMemoryAllocator.
-func NewKotlinWasmUnsafeMemoryAllocator(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinWasmUnsafeMemoryAllocator {
+func NewKotlinWasmUnsafeMemoryAllocator(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinWasmUnsafeMemoryAllocator {
 	p := &KotlinWasmUnsafeMemoryAllocator{}
 	p.RTT = rttKotlinWasmUnsafeMemoryAllocator
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -8360,7 +8360,7 @@ func newKotlinWasmUnsafeMemoryAllocatorDefault() *KotlinWasmUnsafeMemoryAllocato
 
 var rttMixinType86 = rt.NewRTT(rt.KStruct, nil, true, "g52fd6a251b36ad51de0a36d1.1", nil)
 
-// MixinType86 is the wasm struct type sub final () struct(ref null array,ref null extern,ref null struct,i16,ref null struct,ref null func,ref null func,ref null extern,ref null array,ref null none,ref null extern,ref null func,i16,ref nu....
+// MixinType86 is the wasm struct type (struct (field $ (ref null array)) (field $ (ref null extern)) (field $ (ref null struct)) (field $ i16) (field $ (ref null struct)) (field $ (ref null func)) (field $ (ref null func)) ...).
 type MixinType86 struct {
 	F0  any
 	F1  any
@@ -8413,20 +8413,20 @@ func newMixinType86Default() *MixinType86 {
 
 var rttClassVTable44 = rt.NewRTT(rt.KStruct, rttClassVTable43, true, "gb214210da884718f36ffdde7.0", func(p unsafe.Pointer) any { return (*ClassVTable44)(p) })
 
-// ClassVTable44 is the wasm struct type sub final (<g2d3068d7b8e25ebfbcf9fed5.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable44 is the wasm struct type (sub ClassVTable43 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $allocate (ref null $7)))), a subtype of ClassVTable43.
 type ClassVTable44 struct {
 	ClassVTable43
 }
 
 // NewClassVTable44 allocates a ClassVTable44.
-func NewClassVTable44(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable44 {
+func NewClassVTable44(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, allocate *rt.Func) *ClassVTable44 {
 	p := &ClassVTable44{}
 	p.RTT = rttClassVTable44
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Allocate = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Allocate = allocate
 	return p
 }
 
@@ -8438,7 +8438,7 @@ func newClassVTable44Default() *ClassVTable44 {
 
 var rttKotlinWasmUnsafeScopedMemoryAllocator = rt.NewRTT(rt.KStruct, rttKotlinWasmUnsafeMemoryAllocator, true, "g2cb4e7ccce575a8b3deb0e24.0", func(p unsafe.Pointer) any { return (*KotlinWasmUnsafeScopedMemoryAllocator)(p) })
 
-// KotlinWasmUnsafeScopedMemoryAllocator is the wasm struct type sub final (<g52fd6a251b36ad51de0a36d1.0>) struct(ref <gb214210da884718f36ffdde7.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null rec.0,mut i8,mut i8,mut....
+// KotlinWasmUnsafeScopedMemoryAllocator is the wasm struct type (sub KotlinWasmUnsafeMemoryAllocator (struct (field $vtable (ref $297)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $parent (mut (ref null $298))) (field $destroyed (mut i8)) ...)), a subtype of KotlinWasmUnsafeMemoryAllocator.
 type KotlinWasmUnsafeScopedMemoryAllocator struct {
 	KotlinWasmUnsafeMemoryAllocator
 	Parent           *KotlinWasmUnsafeScopedMemoryAllocator
@@ -8448,17 +8448,17 @@ type KotlinWasmUnsafeScopedMemoryAllocator struct {
 }
 
 // NewKotlinWasmUnsafeScopedMemoryAllocator allocates a KotlinWasmUnsafeScopedMemoryAllocator.
-func NewKotlinWasmUnsafeScopedMemoryAllocator(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinWasmUnsafeScopedMemoryAllocator, f5 int8, f6 int8, f7 int32) *KotlinWasmUnsafeScopedMemoryAllocator {
+func NewKotlinWasmUnsafeScopedMemoryAllocator(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, parent *KotlinWasmUnsafeScopedMemoryAllocator, destroyed int8, suspended int8, availableAddress int32) *KotlinWasmUnsafeScopedMemoryAllocator {
 	p := &KotlinWasmUnsafeScopedMemoryAllocator{}
 	p.RTT = rttKotlinWasmUnsafeScopedMemoryAllocator
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Parent = f4
-	p.Destroyed = f5
-	p.Suspended = f6
-	p.AvailableAddress = f7
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Parent = parent
+	p.Destroyed = destroyed
+	p.Suspended = suspended
+	p.AvailableAddress = availableAddress
 	return p
 }
 
@@ -8470,7 +8470,7 @@ func newKotlinWasmUnsafeScopedMemoryAllocatorDefault() *KotlinWasmUnsafeScopedMe
 
 var rttMixinType87 = rt.NewRTT(rt.KStruct, nil, true, "g2cb4e7ccce575a8b3deb0e24.1", nil)
 
-// MixinType87 is the wasm struct type sub final () struct(ref null eq,ref null func,ref null struct,v128,ref null struct,ref null noextern,i16,i8,i64,f64,ref null none,ref null extern,f32,i32,i64,ref null i31).
+// MixinType87 is the wasm struct type (struct (field $ (ref null eq)) (field $ (ref null func)) (field $ (ref null struct)) (field $ v128) (field $ (ref null struct)) (field $ (ref null noextern)) (field $ i16) ...).
 type MixinType87 struct {
 	F0  any
 	F1  *rt.Func
@@ -8521,19 +8521,19 @@ func newMixinType87Default() *MixinType87 {
 
 var rttKotlinCompanion9 = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g3e3cec3b7e1ac67b6dc547c5.0", func(p unsafe.Pointer) any { return (*KotlinCompanion9)(p) })
 
-// KotlinCompanion9 is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32).
+// KotlinCompanion9 is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $300)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)))), a subtype of KotlinAny.
 type KotlinCompanion9 struct {
 	KotlinAny
 }
 
 // NewKotlinCompanion9 allocates a KotlinCompanion9.
-func NewKotlinCompanion9(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32) *KotlinCompanion9 {
+func NewKotlinCompanion9(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32) *KotlinCompanion9 {
 	p := &KotlinCompanion9{}
 	p.RTT = rttKotlinCompanion9
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	return p
 }
 
@@ -8545,7 +8545,7 @@ func newKotlinCompanion9Default() *KotlinCompanion9 {
 
 var rttMixinType88 = rt.NewRTT(rt.KStruct, nil, true, "g3e3cec3b7e1ac67b6dc547c5.1", nil)
 
-// MixinType88 is the wasm struct type sub final () struct(ref null any,i8,ref null struct,i16,f64,ref null i31,ref null extern,ref null none,ref null array,ref null noextern,ref null func,ref null i31,ref null none,i32,v128,v128).
+// MixinType88 is the wasm struct type (struct (field $ (ref null any)) (field $ i8) (field $ (ref null struct)) (field $ i16) (field $ f64) (field $ (ref null i31)) (field $ (ref null extern)) (field $ (ref null none)) ...).
 type MixinType88 struct {
 	F0  any
 	F1  int8
@@ -8596,20 +8596,20 @@ func newMixinType88Default() *MixinType88 {
 
 var rttClassVTable45 = rt.NewRTT(rt.KStruct, rttClassVTable4, true, "g0dbc00ad8d67a3a480f49b45.0", func(p unsafe.Pointer) any { return (*ClassVTable45)(p) })
 
-// ClassVTable45 is the wasm struct type sub final (<ga3485604d22e5394954141b6.0>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable45 is the wasm struct type (sub ClassVTable4 (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $<get-message> (ref null $9)))), a subtype of ClassVTable4.
 type ClassVTable45 struct {
 	ClassVTable4
 }
 
 // NewClassVTable45 allocates a ClassVTable45.
-func NewClassVTable45(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable45 {
+func NewClassVTable45(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, getMessage *rt.Func) *ClassVTable45 {
 	p := &ClassVTable45{}
 	p.RTT = rttClassVTable45
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.GetMessage = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.GetMessage = getMessage
 	return p
 }
 
@@ -8621,21 +8621,21 @@ func newClassVTable45Default() *ClassVTable45 {
 
 var rttKotlinWasmWasiErrorCode = rt.NewRTT(rt.KStruct, rttKotlinEnum, true, "g7f4abfea2b965bc29874de19.0", func(p unsafe.Pointer) any { return (*KotlinWasmWasiErrorCode)(p) })
 
-// KotlinWasmWasiErrorCode is the wasm struct type sub final (<g3a5e257473e4b2b15f19905f.2>) struct(ref <g25497c38e62afcd49b3c0a7a.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197....
+// KotlinWasmWasiErrorCode is the wasm struct type (sub KotlinEnum (struct (field $vtable (ref $304)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $name (mut (ref null $16))) (field $ordinal (mut i32)))), a subtype of KotlinEnum.
 type KotlinWasmWasiErrorCode struct {
 	KotlinEnum
 }
 
 // NewKotlinWasmWasiErrorCode allocates a KotlinWasmWasiErrorCode.
-func NewKotlinWasmWasiErrorCode(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 int32) *KotlinWasmWasiErrorCode {
+func NewKotlinWasmWasiErrorCode(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, name *KotlinString, ordinal int32) *KotlinWasmWasiErrorCode {
 	p := &KotlinWasmWasiErrorCode{}
 	p.RTT = rttKotlinWasmWasiErrorCode
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Name = f4
-	p.Ordinal = f5
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Name = name
+	p.Ordinal = ordinal
 	return p
 }
 
@@ -8647,7 +8647,7 @@ func newKotlinWasmWasiErrorCodeDefault() *KotlinWasmWasiErrorCode {
 
 var rttMixinType89 = rt.NewRTT(rt.KStruct, nil, true, "g7f4abfea2b965bc29874de19.1", nil)
 
-// MixinType89 is the wasm struct type sub final () struct(f64,i32,ref null extern,ref null struct,i8,ref null struct,ref null i31,ref null none,f32,f64,ref null extern,ref null func,f64,ref null eq,ref null struct,f32).
+// MixinType89 is the wasm struct type (struct (field $ f64) (field $ i32) (field $ (ref null extern)) (field $ (ref null struct)) (field $ i8) (field $ (ref null struct)) (field $ (ref null i31)) (field $ (ref null none)) ...).
 type MixinType89 struct {
 	F0  float64
 	F1  int32
@@ -8698,23 +8698,23 @@ func newMixinType89Default() *MixinType89 {
 
 var rttKotlinWasmWasiError = rt.NewRTT(rt.KStruct, rttKotlinThrowable, true, "g6276417da6d318b79df8f82d.0", func(p unsafe.Pointer) any { return (*KotlinWasmWasiError)(p) })
 
-// KotlinWasmWasiError is the wasm struct type sub final (<gdcb9abcca805dabf9871e389.0>) struct(ref <g0dbc00ad8d67a3a480f49b45.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null <g484ce41559fcc92541197....
+// KotlinWasmWasiError is the wasm struct type (sub KotlinThrowable (struct (field $vtable (ref $303)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $message (mut (ref null $16))) (field $cause (mut (ref null $22))) ...)), a subtype of KotlinThrowable.
 type KotlinWasmWasiError struct {
 	KotlinThrowable
 	Error *KotlinWasmWasiErrorCode
 }
 
 // NewKotlinWasmWasiError allocates a KotlinWasmWasiError.
-func NewKotlinWasmWasiError(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *KotlinString, f5 *KotlinThrowable, f6 *KotlinAny, f7 *KotlinWasmWasiErrorCode) *KotlinWasmWasiError {
+func NewKotlinWasmWasiError(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, message *KotlinString, cause *KotlinThrowable, suppressedExceptionsList *KotlinAny, f7 *KotlinWasmWasiErrorCode) *KotlinWasmWasiError {
 	p := &KotlinWasmWasiError{}
 	p.RTT = rttKotlinWasmWasiError
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Message = f4
-	p.Cause = f5
-	p.SuppressedExceptionsList = f6
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Message = message
+	p.Cause = cause
+	p.SuppressedExceptionsList = suppressedExceptionsList
 	p.Error = f7
 	return p
 }
@@ -8727,7 +8727,7 @@ func newKotlinWasmWasiErrorDefault() *KotlinWasmWasiError {
 
 var rttMixinType90 = rt.NewRTT(rt.KStruct, nil, true, "g6276417da6d318b79df8f82d.1", nil)
 
-// MixinType90 is the wasm struct type sub final () struct(f64,ref null extern,ref null eq,v128,f64,v128,ref null struct,i16,f32,ref null func,ref null eq,i16,f64,i32,ref null eq,ref null struct,ref null i31).
+// MixinType90 is the wasm struct type (struct (field $ f64) (field $ (ref null extern)) (field $ (ref null eq)) (field $ v128) (field $ f64) (field $ v128) (field $ (ref null struct)) (field $ i16) (field $ f32) ...).
 type MixinType90 struct {
 	F0  float64
 	F1  any
@@ -8780,21 +8780,21 @@ func newMixinType90Default() *MixinType90 {
 
 var rttKotlinTimeMonotonicTimeSource = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g3d5de4c75cb7e4eb820e149f.0", func(p unsafe.Pointer) any { return (*KotlinTimeMonotonicTimeSource)(p) })
 
-// KotlinTimeMonotonicTimeSource is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g039e66cdca5083b039c960eb.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut i64).
+// KotlinTimeMonotonicTimeSource is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $309)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $zero (mut i64)))), a subtype of KotlinAny.
 type KotlinTimeMonotonicTimeSource struct {
 	KotlinAny
 	Zero int64
 }
 
 // NewKotlinTimeMonotonicTimeSource allocates a KotlinTimeMonotonicTimeSource.
-func NewKotlinTimeMonotonicTimeSource(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 int64) *KotlinTimeMonotonicTimeSource {
+func NewKotlinTimeMonotonicTimeSource(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, zero int64) *KotlinTimeMonotonicTimeSource {
 	p := &KotlinTimeMonotonicTimeSource{}
 	p.RTT = rttKotlinTimeMonotonicTimeSource
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Zero = f4
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Zero = zero
 	return p
 }
 
@@ -8806,7 +8806,7 @@ func newKotlinTimeMonotonicTimeSourceDefault() *KotlinTimeMonotonicTimeSource {
 
 var rttMixinType91 = rt.NewRTT(rt.KStruct, nil, true, "g3d5de4c75cb7e4eb820e149f.1", nil)
 
-// MixinType91 is the wasm struct type sub final () struct(ref null array,i64,f64,i32,ref null eq,i16,v128,ref null noextern,ref null extern,i16,ref null struct,i8,f64,ref null i31,ref null eq,f32).
+// MixinType91 is the wasm struct type (struct (field $ (ref null array)) (field $ i64) (field $ f64) (field $ i32) (field $ (ref null eq)) (field $ i16) (field $ v128) (field $ (ref null noextern)) (field $ (ref null extern)) ...).
 type MixinType91 struct {
 	F0  any
 	F1  int64
@@ -8857,7 +8857,7 @@ func newMixinType91Default() *MixinType91 {
 
 var rttNode = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "ga91a972fd4b5a594d1454bd1.0", func(p unsafe.Pointer) any { return (*Node)(p) })
 
-// Node is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut ref null rec.0,mut ref null rec.....
+// Node is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $312)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $left (mut (ref null $313))) (field $right (mut (ref null $313))))), a subtype of KotlinAny.
 type Node struct {
 	KotlinAny
 	Left  *Node
@@ -8865,15 +8865,15 @@ type Node struct {
 }
 
 // NewNode allocates a Node.
-func NewNode(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 *Node, f5 *Node) *Node {
+func NewNode(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, left *Node, right *Node) *Node {
 	p := &Node{}
 	p.RTT = rttNode
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.Left = f4
-	p.Right = f5
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.Left = left
+	p.Right = right
 	return p
 }
 
@@ -8885,7 +8885,7 @@ func newNodeDefault() *Node {
 
 var rttMixinType92 = rt.NewRTT(rt.KStruct, nil, true, "ga91a972fd4b5a594d1454bd1.1", nil)
 
-// MixinType92 is the wasm struct type sub final () struct(ref null array,f32,i8,v128,ref null eq,ref null noextern,ref null struct,ref null array,ref null any,ref null struct,ref null none,ref null eq,i8,i8,ref null func,i8,ref null i31).
+// MixinType92 is the wasm struct type (struct (field $ (ref null array)) (field $ f32) (field $ i8) (field $ v128) (field $ (ref null eq)) (field $ (ref null noextern)) (field $ (ref null struct)) (field $ (ref null array)) ...).
 type MixinType92 struct {
 	F0  any
 	F1  float32
@@ -8938,7 +8938,7 @@ func newMixinType92Default() *MixinType92 {
 
 var rttBody = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g95fb7e35bde292879e1d6aff.0", func(p unsafe.Pointer) any { return (*Body)(p) })
 
-// Body is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <ge18205e74c18fff7605922de.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut f64,mut f64,mut f64,mut f64,mut ....
+// Body is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $315)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $x (mut f64)) (field $y (mut f64)) (field $z (mut f64)) ...)), a subtype of KotlinAny.
 type Body struct {
 	KotlinAny
 	X  float64
@@ -8951,19 +8951,19 @@ type Body struct {
 }
 
 // NewBody allocates a Body.
-func NewBody(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 float64, f5 float64, f6 float64, f7 float64, f8 float64, f9 float64, f10 float64) *Body {
+func NewBody(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, x float64, y float64, z float64, vx float64, vy float64, vz float64, f10 float64) *Body {
 	p := &Body{}
 	p.RTT = rttBody
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.X = f4
-	p.Y = f5
-	p.Z = f6
-	p.Vx = f7
-	p.Vy = f8
-	p.Vz = f9
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.X = x
+	p.Y = y
+	p.Z = z
+	p.Vx = vx
+	p.Vy = vy
+	p.Vz = vz
 	p.M = f10
 	return p
 }
@@ -8976,7 +8976,7 @@ func newBodyDefault() *Body {
 
 var rttMixinType93 = rt.NewRTT(rt.KStruct, nil, true, "g95fb7e35bde292879e1d6aff.1", nil)
 
-// MixinType93 is the wasm struct type sub final () struct(ref null extern,ref null array,ref null extern,ref null extern,ref null struct,ref null func,ref null func,ref null eq,ref null struct,ref null none,ref null eq,i16,i8,f64,i8,ref n....
+// MixinType93 is the wasm struct type (struct (field $ (ref null extern)) (field $ (ref null array)) (field $ (ref null extern)) (field $ (ref null extern)) (field $ (ref null struct)) (field $ (ref null func)) ...).
 type MixinType93 struct {
 	F0  any
 	F1  any
@@ -9031,21 +9031,21 @@ var rttFunc318 = rt.CanonRTT(rt.KFunc, nil, true, "g009201aa1ea2593440c4c5a9.0")
 
 var rttClassVTable46 = rt.NewRTT(rt.KStruct, rttClassVTable, true, "g934b4d9c002ca36c9d9530ab.0", func(p unsafe.Pointer) any { return (*ClassVTable46)(p) })
 
-// ClassVTable46 is the wasm struct type sub final (<g484ce41559fcc92541197c08.7>) struct(ref null <g108eb2fdd25a141caeb4110c.0>,ref null <g484ce41559fcc92541197c08.6>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c0....
+// ClassVTable46 is the wasm struct type (sub ClassVTable (struct (field $<SpecialITable> (ref null $1)) (field $equals (ref null $11)) (field $hashCode (ref null $14)) (field $toString (ref null $9)) (field $area (ref null $318)))), a subtype of ClassVTable.
 type ClassVTable46 struct {
 	ClassVTable
 	Area *rt.Func
 }
 
 // NewClassVTable46 allocates a ClassVTable46.
-func NewClassVTable46(f0 *SpecialITable, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassVTable46 {
+func NewClassVTable46(specialITable *SpecialITable, equals *rt.Func, hashCode *rt.Func, toString *rt.Func, area *rt.Func) *ClassVTable46 {
 	p := &ClassVTable46{}
 	p.RTT = rttClassVTable46
-	p.SpecialITable = f0
-	p.Equals = f1
-	p.HashCode = f2
-	p.ToString = f3
-	p.Area = f4
+	p.SpecialITable = specialITable
+	p.Equals = equals
+	p.HashCode = hashCode
+	p.ToString = toString
+	p.Area = area
 	return p
 }
 
@@ -9057,20 +9057,20 @@ func newClassVTable46Default() *ClassVTable46 {
 
 var rttCircle = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g8ec4dfaa1464ef29ecab1b6f.0", func(p unsafe.Pointer) any { return (*Circle)(p) })
 
-// Circle is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g934b4d9c002ca36c9d9530ab.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut f64).
+// Circle is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $319)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $r (mut f64)))), a subtype of KotlinAny.
 type Circle struct {
 	KotlinAny
 	R float64
 }
 
 // NewCircle allocates a Circle.
-func NewCircle(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 float64) *Circle {
+func NewCircle(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, f4 float64) *Circle {
 	p := &Circle{}
 	p.RTT = rttCircle
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
 	p.R = f4
 	return p
 }
@@ -9083,7 +9083,7 @@ func newCircleDefault() *Circle {
 
 var rttMixinType94 = rt.NewRTT(rt.KStruct, nil, true, "g8ec4dfaa1464ef29ecab1b6f.1", nil)
 
-// MixinType94 is the wasm struct type sub final () struct(f32,i8,f32,i64,ref null none,i64,ref null array,v128,i64,i32,f64,v128,ref null func,ref null array,i32,i16,ref null i31).
+// MixinType94 is the wasm struct type (struct (field $ f32) (field $ i8) (field $ f32) (field $ i64) (field $ (ref null none)) (field $ i64) (field $ (ref null array)) (field $ v128) (field $ i64) (field $ i32) ...).
 type MixinType94 struct {
 	F0  float32
 	F1  int8
@@ -9136,7 +9136,7 @@ func newMixinType94Default() *MixinType94 {
 
 var rttRect = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g3ee0df54636a3c5aa423aa6c.0", func(p unsafe.Pointer) any { return (*Rect)(p) })
 
-// Rect is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g934b4d9c002ca36c9d9530ab.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut f64,mut f64).
+// Rect is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $322)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $w (mut f64)) (field $h (mut f64)))), a subtype of KotlinAny.
 type Rect struct {
 	KotlinAny
 	W float64
@@ -9144,15 +9144,15 @@ type Rect struct {
 }
 
 // NewRect allocates a Rect.
-func NewRect(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 float64, f5 float64) *Rect {
+func NewRect(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, w float64, h float64) *Rect {
 	p := &Rect{}
 	p.RTT = rttRect
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.W = f4
-	p.H = f5
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.W = w
+	p.H = h
 	return p
 }
 
@@ -9164,7 +9164,7 @@ func newRectDefault() *Rect {
 
 var rttMixinType95 = rt.NewRTT(rt.KStruct, nil, true, "g3ee0df54636a3c5aa423aa6c.1", nil)
 
-// MixinType95 is the wasm struct type sub final () struct(ref null any,i8,ref null func,i64,i64,i16,i8,f32,ref null struct,ref null noextern,ref null extern,ref null struct,f32,ref null extern,f64,ref null extern,ref null i31).
+// MixinType95 is the wasm struct type (struct (field $ (ref null any)) (field $ i8) (field $ (ref null func)) (field $ i64) (field $ i64) (field $ i16) (field $ i8) (field $ f32) (field $ (ref null struct)) ...).
 type MixinType95 struct {
 	F0  any
 	F1  int8
@@ -9217,7 +9217,7 @@ func newMixinType95Default() *MixinType95 {
 
 var rttTri = rt.NewRTT(rt.KStruct, rttKotlinAny, true, "g5e5f0424a81eb51e81ff3a74.0", func(p unsafe.Pointer) any { return (*Tri)(p) })
 
-// Tri is the wasm struct type sub final (<g484ce41559fcc92541197c08.5>) struct(ref <g934b4d9c002ca36c9d9530ab.0>,ref null <g04216d06681e37b0cae8058f.0>,ref <g484ce41559fcc92541197c08.8>,mut i32,mut f64,mut f64).
+// Tri is the wasm struct type (sub KotlinAny (struct (field $vtable (ref $325)) (field $itable (ref null $0)) (field $rtti (ref $13)) (field $_hashCode (mut i32)) (field $b (mut f64)) (field $h (mut f64)))), a subtype of KotlinAny.
 type Tri struct {
 	KotlinAny
 	B float64
@@ -9225,15 +9225,15 @@ type Tri struct {
 }
 
 // NewTri allocates a Tri.
-func NewTri(f0 *ClassVTable, f1 *AnyArray, f2 *RTTI, f3 int32, f4 float64, f5 float64) *Tri {
+func NewTri(vtable *ClassVTable, itable *AnyArray, rtti *RTTI, hashCode int32, b float64, h float64) *Tri {
 	p := &Tri{}
 	p.RTT = rttTri
-	p.Vtable = f0
-	p.Itable = f1
-	p.Rtti = f2
-	p.HashCode = f3
-	p.B = f4
-	p.H = f5
+	p.Vtable = vtable
+	p.Itable = itable
+	p.Rtti = rtti
+	p.HashCode = hashCode
+	p.B = b
+	p.H = h
 	return p
 }
 
@@ -9245,7 +9245,7 @@ func newTriDefault() *Tri {
 
 var rttMixinType96 = rt.NewRTT(rt.KStruct, nil, true, "g5e5f0424a81eb51e81ff3a74.1", nil)
 
-// MixinType96 is the wasm struct type sub final () struct(ref null extern,ref null extern,f32,i32,ref null func,v128,ref null i31,ref null array,ref null array,i32,ref null noextern,ref null noextern,ref null array,ref null none,i8,ref nu....
+// MixinType96 is the wasm struct type (struct (field $ (ref null extern)) (field $ (ref null extern)) (field $ f32) (field $ i32) (field $ (ref null func)) (field $ v128) (field $ (ref null i31)) (field $ (ref null array)) ...).
 type MixinType96 struct {
 	F0  any
 	F1  any
@@ -9296,7 +9296,7 @@ func newMixinType96Default() *MixinType96 {
 
 var rttStringArray = rt.NewRTT(rt.KArray, nil, true, "g42d6543e5d4e1067b7ddb0ca.0", nil)
 
-// StringArray is the wasm array type sub final () array(mut ref null <g484ce41559fcc92541197c08.11>).
+// StringArray is the wasm array type (array (mut (ref null $16))).
 type StringArray struct {
 	Elems []*KotlinString
 }
@@ -9314,7 +9314,7 @@ func NewStringArray(elems []*KotlinString) *StringArray {
 
 var rttByteArray = rt.NewRTT(rt.KArray, nil, true, "g14ef0afc4c5ff6df6d426943.0", nil)
 
-// ByteArray is the wasm array type sub final () array(i8).
+// ByteArray is the wasm array type (array i8).
 type ByteArray struct {
 	Elems []int8
 }
@@ -9332,7 +9332,7 @@ func NewByteArray(elems []int8) *ByteArray {
 
 var rttClassITable = rt.NewRTT(rt.KStruct, nil, true, "g1568602a6d05afba1de8306c.0", nil)
 
-// ClassITable is the wasm struct type sub final () struct(ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08.2>,ref null <g484ce41559fcc92541197c08.1>).
+// ClassITable is the wasm struct type (struct (field $<get-length> (ref null $14)) (field $get (ref null $7)) (field $subSequence (ref null $6))).
 type ClassITable struct {
 	GetLength   *rt.Func
 	Get         *rt.Func
@@ -9342,11 +9342,11 @@ type ClassITable struct {
 func (*ClassITable) WasmType() *rt.RTT { return rttClassITable }
 
 // NewClassITable allocates a ClassITable.
-func NewClassITable(f0 *rt.Func, f1 *rt.Func, f2 *rt.Func) *ClassITable {
+func NewClassITable(getLength *rt.Func, get *rt.Func, subSequence *rt.Func) *ClassITable {
 	p := &ClassITable{}
-	p.GetLength = f0
-	p.Get = f1
-	p.SubSequence = f2
+	p.GetLength = getLength
+	p.Get = get
+	p.SubSequence = subSequence
 	return p
 }
 
@@ -9357,7 +9357,7 @@ func newClassITableDefault() *ClassITable {
 
 var rttClassITable2 = rt.NewRTT(rt.KStruct, nil, true, "g2d1b7dab70cc25b3176db91d.0", nil)
 
-// ClassITable2 is the wasm struct type sub final () struct(ref null <g484ce41559fcc92541197c08.6>).
+// ClassITable2 is the wasm struct type (struct (field $compareTo (ref null $11))).
 type ClassITable2 struct {
 	CompareTo *rt.Func
 }
@@ -9365,9 +9365,9 @@ type ClassITable2 struct {
 func (*ClassITable2) WasmType() *rt.RTT { return rttClassITable2 }
 
 // NewClassITable2 allocates a ClassITable2.
-func NewClassITable2(f0 *rt.Func) *ClassITable2 {
+func NewClassITable2(compareTo *rt.Func) *ClassITable2 {
 	p := &ClassITable2{}
-	p.CompareTo = f0
+	p.CompareTo = compareTo
 	return p
 }
 
@@ -9378,7 +9378,7 @@ func newClassITable2Default() *ClassITable2 {
 
 var rttClassITable3 = rt.NewRTT(rt.KStruct, nil, true, "gaf0f60abf00c1be9ff6f9a84.0", nil)
 
-// ClassITable3 is the wasm struct type sub final () struct(ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08.6>,ref null <gf043a1c0bdfa4f1e471c52ab.0>,ref null <g484ce41559fcc....
+// ClassITable3 is the wasm struct type (struct (field $<get-size> (ref null $14)) (field $isEmpty (ref null $14)) (field $contains (ref null $11)) (field $iterator (ref null $33)) (field $containsAll (ref null $11))).
 type ClassITable3 struct {
 	GetSize     *rt.Func
 	IsEmpty     *rt.Func
@@ -9390,13 +9390,13 @@ type ClassITable3 struct {
 func (*ClassITable3) WasmType() *rt.RTT { return rttClassITable3 }
 
 // NewClassITable3 allocates a ClassITable3.
-func NewClassITable3(f0 *rt.Func, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func, f4 *rt.Func) *ClassITable3 {
+func NewClassITable3(getSize *rt.Func, isEmpty *rt.Func, contains *rt.Func, iterator *rt.Func, containsAll *rt.Func) *ClassITable3 {
 	p := &ClassITable3{}
-	p.GetSize = f0
-	p.IsEmpty = f1
-	p.Contains = f2
-	p.Iterator = f3
-	p.ContainsAll = f4
+	p.GetSize = getSize
+	p.IsEmpty = isEmpty
+	p.Contains = contains
+	p.Iterator = iterator
+	p.ContainsAll = containsAll
 	return p
 }
 
@@ -9407,7 +9407,7 @@ func newClassITable3Default() *ClassITable3 {
 
 var rttClassITable4 = rt.NewRTT(rt.KStruct, nil, true, "gf1d5098a8d2f76fead4c2dbd.0", nil)
 
-// ClassITable4 is the wasm struct type sub final () struct(ref null <gf043a1c0bdfa4f1e471c52ab.0>).
+// ClassITable4 is the wasm struct type (struct (field $iterator (ref null $33))).
 type ClassITable4 struct {
 	Iterator *rt.Func
 }
@@ -9415,9 +9415,9 @@ type ClassITable4 struct {
 func (*ClassITable4) WasmType() *rt.RTT { return rttClassITable4 }
 
 // NewClassITable4 allocates a ClassITable4.
-func NewClassITable4(f0 *rt.Func) *ClassITable4 {
+func NewClassITable4(iterator *rt.Func) *ClassITable4 {
 	p := &ClassITable4{}
-	p.Iterator = f0
+	p.Iterator = iterator
 	return p
 }
 
@@ -9428,7 +9428,7 @@ func newClassITable4Default() *ClassITable4 {
 
 var rttClassITable5 = rt.NewRTT(rt.KStruct, nil, true, "g3ca9db4e91b08e56c66842bd.0", nil)
 
-// ClassITable5 is the wasm struct type sub final () struct().
+// ClassITable5 is the wasm struct type (struct).
 type ClassITable5 struct {
 }
 
@@ -9447,7 +9447,7 @@ func newClassITable5Default() *ClassITable5 {
 
 var rttClassITable6 = rt.NewRTT(rt.KStruct, nil, true, "g1560cabd59a94570af95e375.0", nil)
 
-// ClassITable6 is the wasm struct type sub final () struct(ref null <gf043a1c0bdfa4f1e471c52ab.0>,ref null <g484ce41559fcc92541197c08.9>).
+// ClassITable6 is the wasm struct type (struct (field $next (ref null $33)) (field $hasNext (ref null $14))).
 type ClassITable6 struct {
 	Next    *rt.Func
 	HasNext *rt.Func
@@ -9456,10 +9456,10 @@ type ClassITable6 struct {
 func (*ClassITable6) WasmType() *rt.RTT { return rttClassITable6 }
 
 // NewClassITable6 allocates a ClassITable6.
-func NewClassITable6(f0 *rt.Func, f1 *rt.Func) *ClassITable6 {
+func NewClassITable6(next *rt.Func, hasNext *rt.Func) *ClassITable6 {
 	p := &ClassITable6{}
-	p.Next = f0
-	p.HasNext = f1
+	p.Next = next
+	p.HasNext = hasNext
 	return p
 }
 
@@ -9470,7 +9470,7 @@ func newClassITable6Default() *ClassITable6 {
 
 var rttClassITable7 = rt.NewRTT(rt.KStruct, nil, true, "ga0abf16e6ba27eb132ff6c79.0", nil)
 
-// ClassITable7 is the wasm struct type sub final () struct(ref null <g484ce41559fcc92541197c08.9>,ref null <g484ce41559fcc92541197c08.6>,ref null <gf043a1c0bdfa4f1e471c52ab.0>,ref null <gb0a5ef0016c7f4741e879f43.0>).
+// ClassITable7 is the wasm struct type (struct (field $isEmpty (ref null $14)) (field $contains (ref null $11)) (field $iterator (ref null $33)) (field $get (ref null $79))).
 type ClassITable7 struct {
 	IsEmpty  *rt.Func
 	Contains *rt.Func
@@ -9481,12 +9481,12 @@ type ClassITable7 struct {
 func (*ClassITable7) WasmType() *rt.RTT { return rttClassITable7 }
 
 // NewClassITable7 allocates a ClassITable7.
-func NewClassITable7(f0 *rt.Func, f1 *rt.Func, f2 *rt.Func, f3 *rt.Func) *ClassITable7 {
+func NewClassITable7(isEmpty *rt.Func, contains *rt.Func, iterator *rt.Func, get *rt.Func) *ClassITable7 {
 	p := &ClassITable7{}
-	p.IsEmpty = f0
-	p.Contains = f1
-	p.Iterator = f2
-	p.Get = f3
+	p.IsEmpty = isEmpty
+	p.Contains = contains
+	p.Iterator = iterator
+	p.Get = get
 	return p
 }
 
@@ -9497,7 +9497,7 @@ func newClassITable7Default() *ClassITable7 {
 
 var rttClassITable8 = rt.NewRTT(rt.KStruct, nil, true, "gcc755c5151427cdbed8d297f.0", nil)
 
-// ClassITable8 is the wasm struct type sub final () struct(ref null <gf043a1c0bdfa4f1e471c52ab.0>,ref null <gf043a1c0bdfa4f1e471c52ab.0>).
+// ClassITable8 is the wasm struct type (struct (field $<get-key> (ref null $33)) (field $<get-value> (ref null $33))).
 type ClassITable8 struct {
 	GetKey   *rt.Func
 	GetValue *rt.Func
@@ -9506,10 +9506,10 @@ type ClassITable8 struct {
 func (*ClassITable8) WasmType() *rt.RTT { return rttClassITable8 }
 
 // NewClassITable8 allocates a ClassITable8.
-func NewClassITable8(f0 *rt.Func, f1 *rt.Func) *ClassITable8 {
+func NewClassITable8(getKey *rt.Func, getValue *rt.Func) *ClassITable8 {
 	p := &ClassITable8{}
-	p.GetKey = f0
-	p.GetValue = f1
+	p.GetKey = getKey
+	p.GetValue = getValue
 	return p
 }
 
@@ -9520,7 +9520,7 @@ func newClassITable8Default() *ClassITable8 {
 
 var rttClassITable9 = rt.NewRTT(rt.KStruct, nil, true, "ge05717cccbc56f1dd59fc93d.0", nil)
 
-// ClassITable9 is the wasm struct type sub final () struct(ref null <g484ce41559fcc92541197c08.9>,ref null <gf043a1c0bdfa4f1e471c52ab.0>).
+// ClassITable9 is the wasm struct type (struct (field $<get-size> (ref null $14)) (field $<get-entries> (ref null $33))).
 type ClassITable9 struct {
 	GetSize    *rt.Func
 	GetEntries *rt.Func
@@ -9529,10 +9529,10 @@ type ClassITable9 struct {
 func (*ClassITable9) WasmType() *rt.RTT { return rttClassITable9 }
 
 // NewClassITable9 allocates a ClassITable9.
-func NewClassITable9(f0 *rt.Func, f1 *rt.Func) *ClassITable9 {
+func NewClassITable9(getSize *rt.Func, getEntries *rt.Func) *ClassITable9 {
 	p := &ClassITable9{}
-	p.GetSize = f0
-	p.GetEntries = f1
+	p.GetSize = getSize
+	p.GetEntries = getEntries
 	return p
 }
 
@@ -9543,7 +9543,7 @@ func newClassITable9Default() *ClassITable9 {
 
 var rttClassITable10 = rt.NewRTT(rt.KStruct, nil, true, "gcd25841e403d9375732b3559.0", nil)
 
-// ClassITable10 is the wasm struct type sub final () struct(ref null <gb149bba08f59d4b5641589cb.0>,ref null <gf043a1c0bdfa4f1e471c52ab.0>).
+// ClassITable10 is the wasm struct type (struct (field $put (ref null $48)) (field $<get-entries> (ref null $33))).
 type ClassITable10 struct {
 	Put        *rt.Func
 	GetEntries *rt.Func
@@ -9552,10 +9552,10 @@ type ClassITable10 struct {
 func (*ClassITable10) WasmType() *rt.RTT { return rttClassITable10 }
 
 // NewClassITable10 allocates a ClassITable10.
-func NewClassITable10(f0 *rt.Func, f1 *rt.Func) *ClassITable10 {
+func NewClassITable10(put *rt.Func, getEntries *rt.Func) *ClassITable10 {
 	p := &ClassITable10{}
-	p.Put = f0
-	p.GetEntries = f1
+	p.Put = put
+	p.GetEntries = getEntries
 	return p
 }
 
@@ -9566,7 +9566,7 @@ func newClassITable10Default() *ClassITable10 {
 
 var rttClassITable11 = rt.NewRTT(rt.KStruct, nil, true, "g71f7f41c4b2d58184944a066.0", nil)
 
-// ClassITable11 is the wasm struct type sub final () struct(ref null <gb0a5ef0016c7f4741e879f43.0>,ref null <gaccc512e52a36d17d2b4ad72.0>).
+// ClassITable11 is the wasm struct type (struct (field $append (ref null $79)) (field $append (ref null $47))).
 type ClassITable11 struct {
 	Append   *rt.Func
 	Append_2 *rt.Func
@@ -9575,10 +9575,10 @@ type ClassITable11 struct {
 func (*ClassITable11) WasmType() *rt.RTT { return rttClassITable11 }
 
 // NewClassITable11 allocates a ClassITable11.
-func NewClassITable11(f0 *rt.Func, f1 *rt.Func) *ClassITable11 {
+func NewClassITable11(f0 *rt.Func, append2 *rt.Func) *ClassITable11 {
 	p := &ClassITable11{}
 	p.Append = f0
-	p.Append_2 = f1
+	p.Append_2 = append2
 	return p
 }
 
@@ -9589,7 +9589,7 @@ func newClassITable11Default() *ClassITable11 {
 
 var rttClassITable12 = rt.NewRTT(rt.KStruct, nil, true, "g2c5786c1de2f3882cd560fee.0", nil)
 
-// ClassITable12 is the wasm struct type sub final () struct(ref null <gf043a1c0bdfa4f1e471c52ab.0>,ref null <gf043a1c0bdfa4f1e471c52ab.0>,ref null <g484ce41559fcc92541197c08.6>).
+// ClassITable12 is the wasm struct type (struct (field $<get-start> (ref null $33)) (field $<get-endInclusive> (ref null $33)) (field $contains (ref null $11))).
 type ClassITable12 struct {
 	GetStart        *rt.Func
 	GetEndInclusive *rt.Func
@@ -9599,11 +9599,11 @@ type ClassITable12 struct {
 func (*ClassITable12) WasmType() *rt.RTT { return rttClassITable12 }
 
 // NewClassITable12 allocates a ClassITable12.
-func NewClassITable12(f0 *rt.Func, f1 *rt.Func, f2 *rt.Func) *ClassITable12 {
+func NewClassITable12(getStart *rt.Func, getEndInclusive *rt.Func, contains *rt.Func) *ClassITable12 {
 	p := &ClassITable12{}
-	p.GetStart = f0
-	p.GetEndInclusive = f1
-	p.Contains = f2
+	p.GetStart = getStart
+	p.GetEndInclusive = getEndInclusive
+	p.Contains = contains
 	return p
 }
 
@@ -9614,7 +9614,7 @@ func newClassITable12Default() *ClassITable12 {
 
 var rttClassITable13 = rt.NewRTT(rt.KStruct, nil, true, "g29d5aef96df3953c64b4e9d4.0", nil)
 
-// ClassITable13 is the wasm struct type sub final () struct(ref null <g6f63472313d837a6684dac56.0>,ref null <g484ce41559fcc92541197c08.6>).
+// ClassITable13 is the wasm struct type (struct (field $minus (ref null $151)) (field $compareTo (ref null $11))).
 type ClassITable13 struct {
 	Minus     *rt.Func
 	CompareTo *rt.Func
@@ -9623,10 +9623,10 @@ type ClassITable13 struct {
 func (*ClassITable13) WasmType() *rt.RTT { return rttClassITable13 }
 
 // NewClassITable13 allocates a ClassITable13.
-func NewClassITable13(f0 *rt.Func, f1 *rt.Func) *ClassITable13 {
+func NewClassITable13(minus *rt.Func, compareTo *rt.Func) *ClassITable13 {
 	p := &ClassITable13{}
-	p.Minus = f0
-	p.CompareTo = f1
+	p.Minus = minus
+	p.CompareTo = compareTo
 	return p
 }
 
@@ -9637,7 +9637,7 @@ func newClassITable13Default() *ClassITable13 {
 
 var rttClassITable14 = rt.NewRTT(rt.KStruct, nil, true, "gb66ece134dfc1f094186841c.0", nil)
 
-// ClassITable14 is the wasm struct type sub final () struct(ref null <gaccc512e52a36d17d2b4ad72.0>).
+// ClassITable14 is the wasm struct type (struct (field $invoke (ref null $47))).
 type ClassITable14 struct {
 	Invoke *rt.Func
 }
@@ -9645,9 +9645,9 @@ type ClassITable14 struct {
 func (*ClassITable14) WasmType() *rt.RTT { return rttClassITable14 }
 
 // NewClassITable14 allocates a ClassITable14.
-func NewClassITable14(f0 *rt.Func) *ClassITable14 {
+func NewClassITable14(invoke *rt.Func) *ClassITable14 {
 	p := &ClassITable14{}
-	p.Invoke = f0
+	p.Invoke = invoke
 	return p
 }
 
@@ -9658,7 +9658,7 @@ func newClassITable14Default() *ClassITable14 {
 
 var rttClassITable15 = rt.NewRTT(rt.KStruct, nil, true, "g2669d52277a627c7982a3c38.0", nil)
 
-// ClassITable15 is the wasm struct type sub final () struct(ref null <g484ce41559fcc92541197c08.4>,ref null <g484ce41559fcc92541197c08.4>,ref null <g484ce41559fcc92541197c08.6>).
+// ClassITable15 is the wasm struct type (struct (field $<get-simpleName> (ref null $9)) (field $<get-qualifiedName> (ref null $9)) (field $equals (ref null $11))).
 type ClassITable15 struct {
 	GetSimpleName    *rt.Func
 	GetQualifiedName *rt.Func
@@ -9668,11 +9668,11 @@ type ClassITable15 struct {
 func (*ClassITable15) WasmType() *rt.RTT { return rttClassITable15 }
 
 // NewClassITable15 allocates a ClassITable15.
-func NewClassITable15(f0 *rt.Func, f1 *rt.Func, f2 *rt.Func) *ClassITable15 {
+func NewClassITable15(getSimpleName *rt.Func, getQualifiedName *rt.Func, equals *rt.Func) *ClassITable15 {
 	p := &ClassITable15{}
-	p.GetSimpleName = f0
-	p.GetQualifiedName = f1
-	p.Equals = f2
+	p.GetSimpleName = getSimpleName
+	p.GetQualifiedName = getQualifiedName
+	p.Equals = equals
 	return p
 }
 
@@ -9683,7 +9683,7 @@ func newClassITable15Default() *ClassITable15 {
 
 var rttClassITable16 = rt.NewRTT(rt.KStruct, nil, true, "g01b0b80eb6105d3dc04dccfc.0", nil)
 
-// ClassITable16 is the wasm struct type sub final () struct(ref null <g009201aa1ea2593440c4c5a9.0>).
+// ClassITable16 is the wasm struct type (struct (field $area (ref null $318))).
 type ClassITable16 struct {
 	Area *rt.Func
 }
@@ -9691,9 +9691,9 @@ type ClassITable16 struct {
 func (*ClassITable16) WasmType() *rt.RTT { return rttClassITable16 }
 
 // NewClassITable16 allocates a ClassITable16.
-func NewClassITable16(f0 *rt.Func) *ClassITable16 {
+func NewClassITable16(area *rt.Func) *ClassITable16 {
 	p := &ClassITable16{}
-	p.Area = f0
+	p.Area = area
 	return p
 }
 
@@ -11270,16 +11270,10 @@ func (m *Instance) f3(d int, p0 int32, p1 int64, p2 int32) int32 {
 }
 
 func (m *Instance) kotlinNumberInit(d int, this *KotlinNumber) *KotlinNumber {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinCollectionsGetOrNull(d int, this *KotlinArray, index int32) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 int32
 	var s0_1 *KotlinAny
 	if int32(0) <= index {
@@ -11504,9 +11498,6 @@ B1:
 }
 
 func (m *Instance) kotlinRangesToIntExactOrNull(d int, this int64) *KotlinInt {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0, s4 int32
 	var s0_1 *KotlinInt
 	if int64(-2147483648) <= this {
@@ -11524,9 +11515,6 @@ func (m *Instance) kotlinRangesToIntExactOrNull(d int, this int64) *KotlinInt {
 }
 
 func (m *Instance) kotlinRangesCoerceAtMost(d int, this int32, maximumValue int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	if this > maximumValue {
 		s0 = maximumValue
@@ -11537,9 +11525,6 @@ func (m *Instance) kotlinRangesCoerceAtMost(d int, this int32, maximumValue int3
 }
 
 func (m *Instance) kotlinRangesCoerceAtLeast(d int, this int32, minimumValue int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	if this < minimumValue {
 		s0 = minimumValue
@@ -11579,9 +11564,6 @@ func (m *Instance) kotlinRangesCoerceIn(d int, this int64, minimumValue int64, m
 }
 
 func (m *Instance) kotlinRangesCoerceAtLeast2(d int, this int64, minimumValue int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int64
 	if this < minimumValue {
 		s0 = minimumValue
@@ -11592,9 +11574,6 @@ func (m *Instance) kotlinRangesCoerceAtLeast2(d int, this int64, minimumValue in
 }
 
 func (m *Instance) kotlinRangesCoerceAtMost2(d int, this int64, maximumValue int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int64
 	if this > maximumValue {
 		s0 = maximumValue
@@ -11605,9 +11584,6 @@ func (m *Instance) kotlinRangesCoerceAtMost2(d int, this int64, maximumValue int
 }
 
 func (m *Instance) kotlinKotlinNothingValueExceptionInit(d int, this *KotlinKotlinNothingValueException) *KotlinKotlinNothingValueException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinKotlinNothingValueException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -11621,16 +11597,10 @@ func (m *Instance) kotlinKotlinNothingValueExceptionInit(d int, this *KotlinKotl
 }
 
 func (m *Instance) kotlinKotlinNothingValueExceptionInit2(d int, this *KotlinKotlinNothingValueException) *KotlinKotlinNothingValueException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinTextBinarySearchRange(d int, array *KotlinIntArray, needle int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var bottom, top_, middle, value, s0, s1 int32
 	m.kotlinTextInitPropertiesDigitCharsKt(d + 1)
 	bottom = int32(0)
@@ -11671,9 +11641,6 @@ L1:
 }
 
 func (m *Instance) kotlinTextInitPropertiesDigitCharsKt(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, elements, s0_1 *KotlinIntArray
 	var s0 int32
 	var s4 *KotlinWasmInternalWasmIntArray
@@ -11694,25 +11661,16 @@ func (m *Instance) kotlinTextInitPropertiesDigitCharsKt(d int) {
 }
 
 func (m *Instance) kotlinTextGetRangeStart(d int) *KotlinIntArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTextInitPropertiesLowercaseMappingsKt(d + 1)
 	return m.g2
 }
 
 func (m *Instance) kotlinTextGetRangeLength(d int) *KotlinIntArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTextInitPropertiesLowercaseMappingsKt(d + 1)
 	return m.g3
 }
 
 func (m *Instance) kotlinTextLowercaseCharImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int32
 	m.kotlinTextInitPropertiesLowercaseMappingsKt(d + 1)
 	tmp0 = this
@@ -11726,9 +11684,6 @@ B1:
 }
 
 func (m *Instance) kotlinTextLowercaseCodePoint(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var index, s0, s1_1, s2_1 int32
 	var s0_1, s1, s2 *KotlinIntArray
 	m.kotlinTextInitPropertiesLowercaseMappingsKt(d + 1)
@@ -11755,9 +11710,6 @@ func (m *Instance) kotlinTextLowercaseCodePoint(d int, this int32) int32 {
 }
 
 func (m *Instance) kotlinTextInitPropertiesLowercaseMappingsKt(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, elements, tmp0_, elements_, s0_1 *KotlinIntArray
 	var s0 int32
 	var s4 *KotlinWasmInternalWasmIntArray
@@ -11786,25 +11738,16 @@ func (m *Instance) kotlinTextInitPropertiesLowercaseMappingsKt(d int) {
 }
 
 func (m *Instance) kotlinTextGetRangeStart2(d int) *KotlinIntArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTextInitPropertiesUppercaseMappingsKt(d + 1)
 	return m.g5
 }
 
 func (m *Instance) kotlinTextGetRangeLength2(d int) *KotlinIntArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTextInitPropertiesUppercaseMappingsKt(d + 1)
 	return m.g6
 }
 
 func (m *Instance) kotlinTextUppercaseCharImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int32
 	m.kotlinTextInitPropertiesUppercaseMappingsKt(d + 1)
 	tmp0 = this
@@ -11818,9 +11761,6 @@ B1:
 }
 
 func (m *Instance) kotlinTextUppercaseCodePoint(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var index, s0, s1_1, s2_1 int32
 	var s0_1, s1, s2 *KotlinIntArray
 	m.kotlinTextInitPropertiesUppercaseMappingsKt(d + 1)
@@ -11847,9 +11787,6 @@ func (m *Instance) kotlinTextUppercaseCodePoint(d int, this int32) int32 {
 }
 
 func (m *Instance) kotlinTextEqualDistanceMapping(d int, code int32, start int32, pattern int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var diff, length, distance, mapping, s0 int32
 	m.kotlinTextInitPropertiesUppercaseMappingsKt(d + 1)
 	diff = (code - start)
@@ -11867,9 +11804,6 @@ func (m *Instance) kotlinTextEqualDistanceMapping(d int, code int32, start int32
 }
 
 func (m *Instance) kotlinTextInitPropertiesUppercaseMappingsKt(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, elements, tmp0_, elements_, s0_1 *KotlinIntArray
 	var s0 int32
 	var s4 *KotlinWasmInternalWasmIntArray
@@ -11898,9 +11832,6 @@ func (m *Instance) kotlinTextInitPropertiesUppercaseMappingsKt(d int) {
 }
 
 func (m *Instance) kotlinCollectionsAbstractMutableCollectionInit(d int, this *KotlinCollectionsAbstractMutableCollection) *KotlinCollectionsAbstractMutableCollection {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsAbstractCollection
 	_ = s0
 	s0 = m.kotlinCollectionsAbstractCollectionInit(d+1, rt.ViewAs[KotlinCollectionsAbstractCollection](this))
@@ -11908,9 +11839,6 @@ func (m *Instance) kotlinCollectionsAbstractMutableCollectionInit(d int, this *K
 }
 
 func (m *Instance) kotlinCollectionsAbstractMutableSetInit(d int, this *KotlinCollectionsAbstractMutableSet) *KotlinCollectionsAbstractMutableSet {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsAbstractMutableCollection
 	_ = s0
 	s0 = m.kotlinCollectionsAbstractMutableCollectionInit(d+1, rt.ViewAs[KotlinCollectionsAbstractMutableCollection](this))
@@ -11974,9 +11902,6 @@ func (m *Instance) kotlinCollectionsAbstractMutableSetHashCode(d int, this *Kotl
 }
 
 func (m *Instance) kotlinCollectionsCompanionInit(d int, this *KotlinCollectionsCompanion) *KotlinCollectionsCompanion {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsCompanion
 	if this == nil {
 		s0 = NewKotlinCollectionsCompanion(rt.ViewAs[ClassVTable](m.g150), (*AnyArray)(nil), m.g277, int32(0), int32(0), int32(0), int32(0), int32(0))
@@ -11990,9 +11915,6 @@ func (m *Instance) kotlinCollectionsCompanionInit(d int, this *KotlinCollections
 }
 
 func (m *Instance) kotlinCollectionsCompanionComputeHashSize(d int, this *KotlinCollectionsCompanion, capacity int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	s0 = m.kotlinRangesCoerceAtLeast(d+1, capacity, int32(1))
 	s0 = m.kotlinTakeHighestOneBit(d+1, (s0 * int32(3)))
@@ -12000,16 +11922,10 @@ func (m *Instance) kotlinCollectionsCompanionComputeHashSize(d int, this *Kotlin
 }
 
 func (m *Instance) kotlinCollectionsCompanionComputeShift(d int, this *KotlinCollectionsCompanion, hashSize int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return (int32(bits.LeadingZeros32(uint32(hashSize))) + int32(1))
 }
 
 func (m *Instance) kotlinCollectionsItrInit(d int, this *KotlinCollectionsItr, map_ *KotlinCollectionsHashMap) *KotlinCollectionsItr {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsItr
 	var s1 *KotlinCollectionsHashMap
 	var s1_1 int32
@@ -12028,9 +11944,6 @@ func (m *Instance) kotlinCollectionsItrInit(d int, this *KotlinCollectionsItr, m
 }
 
 func (m *Instance) kotlinCollectionsItrInitNext(d int, this *KotlinCollectionsItr) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var unary, tmp0, this_, s0, s1_1 int32
 	var s1, s0_1 *KotlinCollectionsHashMap
 	var s0_2 *KotlinIntArray
@@ -12070,9 +11983,6 @@ L1:
 }
 
 func (m *Instance) kotlinCollectionsItrHasNext(d int, this *KotlinCollectionsItr) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0, s1_1 int32
 	var s1 *KotlinCollectionsHashMap
 	s0 = this.Index
@@ -12083,9 +11993,6 @@ func (m *Instance) kotlinCollectionsItrHasNext(d int, this *KotlinCollectionsItr
 }
 
 func (m *Instance) kotlinCollectionsItrCheckForComodification(d int, this *KotlinCollectionsItr) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsHashMap
 	var s0_1, s1 int32
 	var s0_2 *KotlinConcurrentModificationException
@@ -12101,9 +12008,6 @@ func (m *Instance) kotlinCollectionsItrCheckForComodification(d int, this *Kotli
 }
 
 func (m *Instance) kotlinCollectionsEntriesItrInit(d int, this *KotlinCollectionsEntriesItr, map_ *KotlinCollectionsHashMap) *KotlinCollectionsEntriesItr {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsEntriesItr
 	var s0_1 *KotlinCollectionsItr
 	_ = s0_1
@@ -12116,9 +12020,6 @@ func (m *Instance) kotlinCollectionsEntriesItrInit(d int, this *KotlinCollection
 }
 
 func (m *Instance) kotlinCollectionsEntriesItrNext(d int, this *KotlinAny) *KotlinCollectionsEntryRef {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0_2, s1_2 *KotlinCollectionsEntriesItr
 	var unary, tmp0, this_, s0, s1_1, s2 int32
 	var result *KotlinCollectionsEntryRef
@@ -12156,9 +12057,6 @@ B2:
 }
 
 func (m *Instance) kotlinCollectionsEntriesItrNext2(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsEntryRef
 	s0 = m.kotlinCollectionsEntriesItrNext(d+1, this)
 	return rt.ViewAs[KotlinAny](s0)
@@ -12343,9 +12241,6 @@ func (m *Instance) kotlinCollectionsEntriesItrHasNext(d int, this *KotlinAny) in
 }
 
 func (m *Instance) kotlinCollectionsEntryRefInit(d int, this *KotlinCollectionsEntryRef, map_ *KotlinCollectionsHashMap, index int32) *KotlinCollectionsEntryRef {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsEntryRef
 	var s1 *KotlinCollectionsHashMap
 	var s1_1 int32
@@ -12362,9 +12257,6 @@ func (m *Instance) kotlinCollectionsEntryRefInit(d int, this *KotlinCollectionsE
 }
 
 func (m *Instance) kotlinCollectionsEntryRefGetKey(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinCollectionsEntryRef
 	var s0 *KotlinCollectionsHashMap
 	var s0_1 *KotlinArray
@@ -12381,9 +12273,6 @@ func (m *Instance) kotlinCollectionsEntryRefGetKey(d int, this *KotlinAny) *Kotl
 }
 
 func (m *Instance) kotlinCollectionsEntryRefGetValue(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinCollectionsEntryRef
 	var tmp10, s0_1 *KotlinArray
 	var s0 *KotlinCollectionsHashMap
@@ -12548,9 +12437,6 @@ func (m *Instance) kotlinCollectionsEntryRefToString(d int, this *KotlinAny) *Ko
 }
 
 func (m *Instance) kotlinCollectionsEntryRefCheckForComodification(d int, this *KotlinCollectionsEntryRef) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsHashMap
 	var s0_1, s1 int32
 	var s1_1 *KotlinString
@@ -12568,9 +12454,6 @@ func (m *Instance) kotlinCollectionsEntryRefCheckForComodification(d int, this *
 }
 
 func (m *Instance) kotlinCollectionsHashMapInit(d int, this *KotlinCollectionsHashMap, keysArray *KotlinArray, valuesArray *KotlinArray, presenceArray *KotlinIntArray, hashArray *KotlinIntArray, maxProbeDistance int32, length int32) *KotlinCollectionsHashMap {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsHashMap
 	var s1 *KotlinCollectionsCompanion
 	var s2, s1_1 int32
@@ -12598,9 +12481,6 @@ func (m *Instance) kotlinCollectionsHashMapInit(d int, this *KotlinCollectionsHa
 }
 
 func (m *Instance) kotlinCollectionsHashMapGetSize(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinCollectionsHashMap
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsHashMap)) {
 		panic(rt.ErrCast)
@@ -12674,9 +12554,6 @@ B2:
 }
 
 func (m *Instance) kotlinCollectionsHashMapIsEmpty(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinCollectionsHashMap
 	var s0 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinCollectionsHashMap)) {
@@ -12753,9 +12630,6 @@ func (m *Instance) kotlinCollectionsHashMapPut(d int, this *KotlinAny, key *Kotl
 }
 
 func (m *Instance) kotlinCollectionsHashMapGetEntries(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinCollectionsHashMap
 	var cur, new_, s0 *KotlinCollectionsHashMapEntrySet
 	var s0_1 *KotlinAny
@@ -12777,9 +12651,6 @@ func (m *Instance) kotlinCollectionsHashMapGetEntries(d int, this *KotlinAny) *K
 }
 
 func (m *Instance) kotlinCollectionsHashMapGetEntries2(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinCollectionsHashMapGetEntries(d+1, this)
 }
 
@@ -12903,27 +12774,18 @@ L1:
 }
 
 func (m *Instance) kotlinCollectionsHashMapGetCapacity(d int, this *KotlinCollectionsHashMap) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinArray
 	s0 = this.KeysArray
 	return m.kotlinArrayGetSize(d+1, s0)
 }
 
 func (m *Instance) kotlinCollectionsHashMapGetHashSize(d int, this *KotlinCollectionsHashMap) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinIntArray
 	s0 = this.HashArray
 	return m.kotlinIntArrayGetSize(d+1, s0)
 }
 
 func (m *Instance) kotlinCollectionsHashMapRegisterModification(d int, this *KotlinCollectionsHashMap) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1 int32
 	s1 = this.ModCount
 	this.ModCount = (s1 + int32(1))
@@ -12931,9 +12793,6 @@ func (m *Instance) kotlinCollectionsHashMapRegisterModification(d int, this *Kot
 }
 
 func (m *Instance) kotlinCollectionsHashMapCheckIsMutable(d int, this *KotlinCollectionsHashMap) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	var s0_1 *KotlinUnsupportedOperationException
 	s0 = int32(this.IsReadOnly)
@@ -12960,9 +12819,6 @@ func (m *Instance) kotlinCollectionsHashMapEnsureExtraCapacity(d int, this *Kotl
 }
 
 func (m *Instance) kotlinCollectionsHashMapShouldCompact(d int, this *KotlinCollectionsHashMap, extraCapacity int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var spareCapacity, gaps, s0, s1 int32
 	s0 = m.kotlinCollectionsHashMapGetCapacity(d+1, this)
 	s1 = this.Length
@@ -13643,16 +13499,10 @@ L1:
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntriesIterator(d int, this *KotlinCollectionsHashMap) *KotlinCollectionsEntriesItr {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinCollectionsEntriesItrInit(d+1, (*KotlinCollectionsEntriesItr)(nil), this)
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetInit(d int, this *KotlinCollectionsHashMapEntrySet, backing *KotlinCollectionsHashMap) *KotlinCollectionsHashMapEntrySet {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsHashMapEntrySet
 	var s0_1 *KotlinCollectionsHashMapEntrySetBase
 	_ = s0_1
@@ -13665,9 +13515,6 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetInit(d int, this *KotlinColle
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetIterator(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinCollectionsHashMapEntrySet
 	var s0 *KotlinCollectionsHashMap
 	var s0_1 *KotlinCollectionsEntriesItr
@@ -13681,16 +13528,10 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetIterator(d int, this *KotlinA
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetIterator2(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinCollectionsHashMapEntrySetIterator(d+1, this)
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetBaseInit(d int, this *KotlinCollectionsHashMapEntrySetBase, backing *KotlinCollectionsHashMap) *KotlinCollectionsHashMapEntrySetBase {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsAbstractMutableSet
 	_ = s0
 	s0 = m.kotlinCollectionsAbstractMutableSetInit(d+1, rt.ViewAs[KotlinCollectionsAbstractMutableSet](this))
@@ -13699,9 +13540,6 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetBaseInit(d int, this *KotlinC
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetBaseGetSize(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinCollectionsHashMapEntrySetBase
 	var s0 *KotlinCollectionsHashMap
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsHashMapEntrySetBase))) {
@@ -13713,9 +13551,6 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetBaseGetSize(d int, this *Kotl
 }
 
 func (m *Instance) kotlinCollectionsHashMapEntrySetBaseIsEmpty(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinCollectionsHashMapEntrySetBase
 	var s0 *KotlinCollectionsHashMap
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsHashMapEntrySetBase))) {
@@ -13826,9 +13661,6 @@ func (m *Instance) kotlinCollectionsHashMapEntrySetBaseContainsAll(d int, this *
 }
 
 func (m *Instance) kotlinCollectionsObjectInitializer(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsCompanion
 	s0 = m.kotlinCollectionsCompanionInit(d+1, (*KotlinCollectionsCompanion)(nil))
 	m.g8 = s0
@@ -13836,23 +13668,14 @@ func (m *Instance) kotlinCollectionsObjectInitializer(d int) {
 }
 
 func (m *Instance) kotlinTextUppercaseChar(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinTextUppercaseCharImpl(d+1, this)
 }
 
 func (m *Instance) kotlinTextLowercaseChar(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinTextLowercaseCharImpl(d+1, this)
 }
 
 func (m *Instance) kotlinTextStringBuilderInit(d int, this *KotlinTextStringBuilder, array *KotlinCharArray) *KotlinTextStringBuilder {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinTextStringBuilder
 	if this == nil {
 		s0 = NewKotlinTextStringBuilder(rt.ViewAs[ClassVTable](m.g158), m.g243, m.g281, int32(0), (*KotlinCharArray)(nil), int32(0))
@@ -13864,9 +13687,6 @@ func (m *Instance) kotlinTextStringBuilderInit(d int, this *KotlinTextStringBuil
 }
 
 func (m *Instance) kotlinTextStringBuilderInit2(d int, this *KotlinTextStringBuilder) *KotlinTextStringBuilder {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinTextStringBuilder
 	if this == nil {
 		s0 = NewKotlinTextStringBuilder(rt.ViewAs[ClassVTable](m.g158), m.g243, m.g281, int32(0), (*KotlinCharArray)(nil), int32(0))
@@ -13877,9 +13697,6 @@ func (m *Instance) kotlinTextStringBuilderInit2(d int, this *KotlinTextStringBui
 }
 
 func (m *Instance) kotlinTextStringBuilderInit3(d int, this *KotlinTextStringBuilder, capacity int32) *KotlinTextStringBuilder {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinTextStringBuilder
 	var s1 *KotlinCharArray
 	if this == nil {
@@ -13892,9 +13709,6 @@ func (m *Instance) kotlinTextStringBuilderInit3(d int, this *KotlinTextStringBui
 }
 
 func (m *Instance) kotlinTextStringBuilderGetLength(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinTextStringBuilder
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinTextStringBuilder)) {
 		panic(rt.ErrCast)
@@ -14156,9 +13970,6 @@ func (m *Instance) kotlinTextStringBuilderSubstring(d int, this *KotlinTextStrin
 }
 
 func (m *Instance) kotlinTextStringBuilderToString(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinTextStringBuilder
 	var s0 *KotlinCharArray
 	var s2 int32
@@ -14303,18 +14114,12 @@ func (m *Instance) kotlinTextStringBuilderEnsureCapacityInternal(d int, this *Ko
 }
 
 func (m *Instance) kotlinTextInsertString(d int, array *KotlinCharArray, start int32, value *KotlinString) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s4 int32
 	s4 = value.Length
 	return m.kotlinTextInsertString2(d+1, array, start, value, int32(0), s4)
 }
 
 func (m *Instance) kotlinCollectionsAbstractCollectionInit(d int, this *KotlinCollectionsAbstractCollection) *KotlinCollectionsAbstractCollection {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
@@ -14550,9 +14355,6 @@ func (m *Instance) kotlinCollectionsAbstractCollectionToString(d int, this *Kotl
 }
 
 func (m *Instance) kotlinCollectionsFunction1Bound1AInit(d int, this *KotlinCollectionsFunction1Bound1A, func_ *rt.Func, p0_ *KotlinAny) *KotlinCollectionsFunction1Bound1A {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsFunction1Bound1A
 	if this == nil {
 		s0 = NewKotlinCollectionsFunction1Bound1A(rt.ViewAs[ClassVTable](m.g159), m.g244, m.g283, int32(0), (*rt.Func)(nil), (*KotlinAny)(nil))
@@ -14603,9 +14405,6 @@ func (m *Instance) kotlinCollectionsAbstractCollectionToStringLambdaInvoke(d int
 }
 
 func (m *Instance) kotlinCollectionsIteratorImplInit(d int, this *KotlinCollectionsIteratorImpl, outer *KotlinCollectionsAbstractList) *KotlinCollectionsIteratorImpl {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsIteratorImpl
 	if this == nil {
 		s0 = NewKotlinCollectionsIteratorImpl(rt.ViewAs[ClassVTable](m.g160), m.g245, m.g284, int32(0), int32(0), (*KotlinCollectionsAbstractList)(nil))
@@ -14677,9 +14476,6 @@ B2:
 }
 
 func (m *Instance) kotlinCollectionsCompanionInit2(d int, this *KotlinCollectionsCompanion2) *KotlinCollectionsCompanion2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsCompanion2
 	if this == nil {
 		s0 = NewKotlinCollectionsCompanion2(rt.ViewAs[ClassVTable](m.g161), (*AnyArray)(nil), m.g285, int32(0), int32(0))
@@ -14830,9 +14626,6 @@ func (m *Instance) kotlinCollectionsCompanionCheckBoundsIndexes(d int, this *Kot
 }
 
 func (m *Instance) kotlinCollectionsCompanionNewCapacity(d int, this *KotlinCollectionsCompanion2, oldCapacity int32, minCapacity int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var newCapacity, s0 int32
 	newCapacity = (oldCapacity + (oldCapacity >> (uint32(1) & 31)))
 	if (newCapacity - minCapacity) < int32(0) {
@@ -15008,9 +14801,6 @@ L2:
 }
 
 func (m *Instance) kotlinCollectionsAbstractListInit(d int, this *KotlinCollectionsAbstractList) *KotlinCollectionsAbstractList {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsAbstractCollection
 	_ = s0
 	s0 = m.kotlinCollectionsAbstractCollectionInit(d+1, rt.ViewAs[KotlinCollectionsAbstractCollection](this))
@@ -15018,9 +14808,6 @@ func (m *Instance) kotlinCollectionsAbstractListInit(d int, this *KotlinCollecti
 }
 
 func (m *Instance) kotlinCollectionsAbstractListIterator(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinCollectionsAbstractList
 	var s0 *KotlinCollectionsIteratorImpl
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinCollectionsAbstractList))) {
@@ -15088,9 +14875,6 @@ func (m *Instance) kotlinCollectionsAbstractListHashCode(d int, this *KotlinAny)
 }
 
 func (m *Instance) kotlinCollectionsObjectInitializer2(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsCompanion2
 	s0 = m.kotlinCollectionsCompanionInit2(d+1, (*KotlinCollectionsCompanion2)(nil))
 	m.g9 = s0
@@ -15098,9 +14882,6 @@ func (m *Instance) kotlinCollectionsObjectInitializer2(d int) {
 }
 
 func (m *Instance) kotlinCollectionsCompanionInit3(d int, this *KotlinCollectionsCompanion3) *KotlinCollectionsCompanion3 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsCompanion3
 	if this == nil {
 		s0 = NewKotlinCollectionsCompanion3(rt.ViewAs[ClassVTable](m.g162), (*AnyArray)(nil), m.g286, int32(0))
@@ -15218,9 +14999,6 @@ func (m *Instance) kotlinCollectionsCompanionSetEquals(d int, this *KotlinCollec
 }
 
 func (m *Instance) kotlinCollectionsObjectInitializer3(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCollectionsCompanion3
 	s0 = m.kotlinCollectionsCompanionInit3(d+1, (*KotlinCollectionsCompanion3)(nil))
 	m.g10 = s0
@@ -15228,9 +15006,6 @@ func (m *Instance) kotlinCollectionsObjectInitializer3(d int) {
 }
 
 func (m *Instance) kotlinCollectionsIntIteratorInit(d int, this *KotlinCollectionsIntIterator) *KotlinCollectionsIntIterator {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
@@ -15262,9 +15037,6 @@ func (m *Instance) kotlinCollectionsIntIteratorNext2(d int, this *KotlinAny) *Ko
 }
 
 func (m *Instance) kotlinEnumsEnumEntriesListInit(d int, this *KotlinEnumsEnumEntriesList, entries *KotlinArray) *KotlinEnumsEnumEntriesList {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinEnumsEnumEntriesList
 	var s0_1 *KotlinCollectionsAbstractList
 	_ = s0_1
@@ -15278,9 +15050,6 @@ func (m *Instance) kotlinEnumsEnumEntriesListInit(d int, this *KotlinEnumsEnumEn
 }
 
 func (m *Instance) kotlinEnumsEnumEntriesListGetSize(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinEnumsEnumEntriesList
 	var s0 *KotlinArray
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinEnumsEnumEntriesList)) {
@@ -15326,9 +15095,6 @@ func (m *Instance) kotlinEnumsEnumEntriesListGet2(d int, this *KotlinAny, index 
 }
 
 func (m *Instance) kotlinEnumsEnumEntriesListContains(d int, this *KotlinAny, element *KotlinEnum) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinEnumsEnumEntriesList
 	var target *KotlinEnum
 	var s0 *KotlinArray
@@ -15388,18 +15154,12 @@ func (m *Instance) kotlinEnumsEnumEntriesListContains2(d int, this *KotlinAny, e
 }
 
 func (m *Instance) kotlinEnumsEnumEntries(d int, entries *KotlinArray) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinEnumsEnumEntriesList
 	s0 = m.kotlinEnumsEnumEntriesListInit(d+1, (*KotlinEnumsEnumEntriesList)(nil), entries)
 	return rt.ViewAs[KotlinAny](s0)
 }
 
 func (m *Instance) kotlinInternalGetProgressionLastElement(d int, start int32, end int32, step int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this, s0, s1, s2, s3 int32
 	var s1_1 *KotlinString
 	var s0_1 *KotlinIllegalArgumentException
@@ -15436,9 +15196,6 @@ func (m *Instance) kotlinInternalGetProgressionLastElement(d int, start int32, e
 }
 
 func (m *Instance) kotlinInternalDifferenceModulo(d int, a int32, b int32, c_ int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0, s1 int32
 	s0 = m.kotlinInternalMod(d+1, a, c_)
 	s1 = m.kotlinInternalMod(d+1, b, c_)
@@ -15448,9 +15205,6 @@ func (m *Instance) kotlinInternalDifferenceModulo(d int, a int32, b int32, c_ in
 }
 
 func (m *Instance) kotlinInternalMod(d int, a int32, b int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var mod, s0 int32
 	s0 = m.kotlinIntRemImpl(d+1, a, b)
 	mod = s0
@@ -15558,9 +15312,6 @@ func (m *Instance) kotlinRandomRandomInit(d int, this *KotlinRandomRandom) *Kotl
 }
 
 func (m *Instance) kotlinRandomRandomNextInt(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRandomRandom
 	var s2 *ClassVTable26
 	var s2_1 *rt.Func
@@ -15687,9 +15438,6 @@ B1:
 }
 
 func (m *Instance) kotlinRandomFastLog2(d int, value int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return (int32(31) - int32(bits.LeadingZeros32(uint32(value))))
 }
 
@@ -15730,9 +15478,6 @@ B1:
 }
 
 func (m *Instance) kotlinRandomTakeUpperBits(d int, this int32, bitCount int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0, s1 int32
 	tmp0 = bitCount
 	s0 = int32(uint32(this) >> (uint32((int32(32) - bitCount)) & 31))
@@ -15745,9 +15490,6 @@ B1:
 }
 
 func (m *Instance) kotlinRandomCompanionInit(d int, this *KotlinRandomCompanion) *KotlinRandomCompanion {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinRandomCompanion
 	if this == nil {
 		s0 = NewKotlinRandomCompanion(rt.ViewAs[ClassVTable](m.g165), (*AnyArray)(nil), m.g289, int32(0), int64(0))
@@ -15871,9 +15613,6 @@ B1:
 }
 
 func (m *Instance) kotlinRandomXorWowRandomNextInt(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRandomXorWowRandom
 	var t, v0, s0, s1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRandomXorWowRandom)) {
@@ -15902,9 +15641,6 @@ func (m *Instance) kotlinRandomXorWowRandomNextInt(d int, this *KotlinAny) int32
 }
 
 func (m *Instance) kotlinRandomXorWowRandomNextBits(d int, this *KotlinAny, bitCount int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRandomXorWowRandom
 	var s0 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRandomXorWowRandom)) {
@@ -15917,9 +15653,6 @@ func (m *Instance) kotlinRandomXorWowRandomNextBits(d int, this *KotlinAny, bitC
 }
 
 func (m *Instance) kotlinRandomObjectInitializer(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinRandomCompanion
 	s0 = m.kotlinRandomCompanionInit(d+1, (*KotlinRandomCompanion)(nil))
 	m.g12 = s0
@@ -15974,9 +15707,6 @@ func (m *Instance) kotlinRangesIntRangeInit(d int, this *KotlinRangesIntRange, s
 }
 
 func (m *Instance) kotlinRangesIntRangeGetStart(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRangesIntRange
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRangesIntRange)) {
 		panic(rt.ErrCast)
@@ -15986,9 +15716,6 @@ func (m *Instance) kotlinRangesIntRangeGetStart(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinRangesIntRangeGetStart2(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s4 int32
 	var s0 *KotlinInt
 	s4 = m.kotlinRangesIntRangeGetStart(d+1, this)
@@ -15997,9 +15724,6 @@ func (m *Instance) kotlinRangesIntRangeGetStart2(d int, this *KotlinAny) *Kotlin
 }
 
 func (m *Instance) kotlinRangesIntRangeGetEndInclusive(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRangesIntRange
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRangesIntRange)) {
 		panic(rt.ErrCast)
@@ -16009,9 +15733,6 @@ func (m *Instance) kotlinRangesIntRangeGetEndInclusive(d int, this *KotlinAny) i
 }
 
 func (m *Instance) kotlinRangesIntRangeGetEndInclusive2(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s4 int32
 	var s0 *KotlinInt
 	s4 = m.kotlinRangesIntRangeGetEndInclusive(d+1, this)
@@ -16020,9 +15741,6 @@ func (m *Instance) kotlinRangesIntRangeGetEndInclusive2(d int, this *KotlinAny) 
 }
 
 func (m *Instance) kotlinRangesIntRangeContains(d int, this *KotlinAny, value int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRangesIntRange
 	var s0, s1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRangesIntRange)) {
@@ -16061,9 +15779,6 @@ func (m *Instance) kotlinRangesIntRangeContains2(d int, this *KotlinAny, value *
 }
 
 func (m *Instance) kotlinRangesIntRangeIsEmpty(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRangesIntRange
 	var s0, s1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRangesIntRange)) {
@@ -16077,9 +15792,6 @@ func (m *Instance) kotlinRangesIntRangeIsEmpty(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinRangesIntRangeEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRangesIntRange
 	var s0, s1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRangesIntRange)) {
@@ -16128,9 +15840,6 @@ func (m *Instance) kotlinRangesIntRangeEquals(d int, this *KotlinAny, other *Kot
 }
 
 func (m *Instance) kotlinRangesIntRangeHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRangesIntRange
 	var s0, s1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRangesIntRange)) {
@@ -16179,9 +15888,6 @@ func (m *Instance) kotlinRangesIntRangeToString(d int, this *KotlinAny) *KotlinS
 }
 
 func (m *Instance) kotlinRangesIntProgressionIteratorInit(d int, this *KotlinRangesIntProgressionIterator, first int32, last int32, step int32) *KotlinRangesIntProgressionIterator {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinRangesIntProgressionIterator
 	var s0_1 *KotlinCollectionsIntIterator
 	var s1 int32
@@ -16213,9 +15919,6 @@ func (m *Instance) kotlinRangesIntProgressionIteratorInit(d int, this *KotlinRan
 }
 
 func (m *Instance) kotlinRangesIntProgressionIteratorHasNext(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRangesIntProgressionIterator
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinRangesIntProgressionIterator)) {
 		panic(rt.ErrCast)
@@ -16225,9 +15928,6 @@ func (m *Instance) kotlinRangesIntProgressionIteratorHasNext(d int, this *Kotlin
 }
 
 func (m *Instance) kotlinRangesIntProgressionIteratorNextInt(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRangesIntProgressionIterator
 	var value, s0, s1, s2 int32
 	var s0_1 *KotlinNoSuchElementException
@@ -16256,9 +15956,6 @@ func (m *Instance) kotlinRangesIntProgressionIteratorNextInt(d int, this *Kotlin
 }
 
 func (m *Instance) kotlinRangesCompanionInit2(d int, this *KotlinRangesCompanion2) *KotlinRangesCompanion2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinRangesCompanion2
 	if this == nil {
 		s0 = NewKotlinRangesCompanion2(rt.ViewAs[ClassVTable](m.g170), (*AnyArray)(nil), m.g291, int32(0))
@@ -16268,9 +15965,6 @@ func (m *Instance) kotlinRangesCompanionInit2(d int, this *KotlinRangesCompanion
 }
 
 func (m *Instance) kotlinRangesIntProgressionInit(d int, this *KotlinRangesIntProgression, start int32, endInclusive int32, step int32) *KotlinRangesIntProgression {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinRangesIntProgression
 	var s1 *KotlinString
 	var s0_1 *KotlinIllegalArgumentException
@@ -16297,9 +15991,6 @@ func (m *Instance) kotlinRangesIntProgressionInit(d int, this *KotlinRangesIntPr
 }
 
 func (m *Instance) kotlinRangesIntProgressionIterator(d int, this *KotlinAny) *KotlinCollectionsIntIterator {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRangesIntProgression
 	var s1, s2, s3 int32
 	var s0 *KotlinRangesIntProgressionIterator
@@ -16331,9 +16022,6 @@ func (m *Instance) kotlinRangesIntProgressionIterator2(d int, this *KotlinAny) *
 }
 
 func (m *Instance) kotlinRangesIntProgressionIsEmpty(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinRangesIntProgression
 	var s0, s1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinRangesIntProgression))) {
@@ -16516,9 +16204,6 @@ func (m *Instance) kotlinRangesIntProgressionToString(d int, this *KotlinAny) *K
 }
 
 func (m *Instance) kotlinRangesObjectInitializer(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinRangesCompanion2
 	s0 = m.kotlinRangesCompanionInit2(d+1, (*KotlinRangesCompanion2)(nil))
 	m.g14 = s0
@@ -16526,9 +16211,6 @@ func (m *Instance) kotlinRangesObjectInitializer(d int) {
 }
 
 func (m *Instance) kotlinRangesClosedRangeContains(d int, this *KotlinAny, value *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s2 any
 	var s2_1 *rt.Func
 	var s1 *KotlinAny
@@ -16848,23 +16530,14 @@ func (m *Instance) kotlinTextPadStart2(d int, this *KotlinAny, length int32, pad
 }
 
 func (m *Instance) kotlinTimeDurationInitImpl(d int, rawValue int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return rawValue
 }
 
 func (m *Instance) kotlinTimeDurationGetRawValueImpl(d int, this int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinTimeDurationGetValueImpl(d int, this int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0, s1 int64
 	var tmp2, bitCount int32
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
@@ -16880,9 +16553,6 @@ B1:
 }
 
 func (m *Instance) kotlinTimeDurationIsInNanosImpl(d int, this int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int64
 	var s0_1 int32
 	tmp0 = this
@@ -16896,9 +16566,6 @@ B1:
 }
 
 func (m *Instance) kotlinTimeDurationIsInMillisImpl(d int, this int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int64
 	var s0_1 int32
 	tmp0 = this
@@ -16912,9 +16579,6 @@ B1:
 }
 
 func (m *Instance) kotlinTimeDurationGetStorageUnitImpl(d int, this int64) *KotlinTimeDurationUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	var s0_1 *KotlinTimeDurationUnit
 	s0 = m.kotlinTimeDurationIsInNanosImpl(d+1, this)
@@ -17272,9 +16936,6 @@ B1:
 }
 
 func (m *Instance) kotlinTimeDurationIsNegativeImpl(d int, this int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int64
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
 	return rt.B2I(s0 < int64(0))
@@ -17320,9 +16981,6 @@ func (m *Instance) kotlinTimeDurationGetAbsoluteValueImpl(d int, this int64) int
 }
 
 func (m *Instance) kotlinTimeDurationCompareToImpl(d int, this int64, other int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var compareBits, tmp0, this_, tmp0_, this__, s0, s1 int64
 	var r_, tmp0__, this___, s0_1, s1_1 int32
 	s0 = m.kotlinTimeDurationGetRawValueImpl(d+1, this)
@@ -17878,16 +17536,10 @@ func (m *Instance) kotlinTimeDurationAppendFractionalImpl(d int, this int64, rec
 }
 
 func (m *Instance) kotlinTimeDurationHashCodeImpl(d int, this int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinLongHashCodeImpl(d+1, this)
 }
 
 func (m *Instance) kotlinTimeDurationEqualsImpl(d int, this int64, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0OtherWithCast int64
 	var s0 int32
 	if other == nil {
@@ -17909,9 +17561,6 @@ func (m *Instance) kotlinTimeDurationEqualsImpl(d int, this int64, other *Kotlin
 }
 
 func (m *Instance) kotlinTimeDurationCompareTo(d int, this *KotlinAny, other int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeDuration) {
 		panic(rt.ErrCast)
@@ -17960,9 +17609,6 @@ func (m *Instance) kotlinTimeDurationToString(d int, this *KotlinAny) *KotlinStr
 }
 
 func (m *Instance) kotlinTimeDurationHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeDuration) {
 		panic(rt.ErrCast)
@@ -17972,9 +17618,6 @@ func (m *Instance) kotlinTimeDurationHashCode(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinTimeDurationEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeDuration) {
 		panic(rt.ErrCast)
@@ -18245,9 +17888,6 @@ B1:
 }
 
 func (m *Instance) kotlinTimeNanosToMillis(d int, nanos int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this, s1, s0 int64
 	var tmp2, other int32
 	tmp0 = nanos
@@ -18262,9 +17902,6 @@ B1:
 }
 
 func (m *Instance) kotlinTimeMillisToNanos(d int, millis int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this, s1, s0 int64
 	var tmp2, other int32
 	tmp0 = millis
@@ -18308,9 +17945,6 @@ func (m *Instance) kotlinTimeConvertDurationUnitToMilliseconds(d int, value int6
 }
 
 func (m *Instance) kotlinTimeMultiplyNonNegativeWithoutOverflow(d int, this int64, other int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var bitSum, s1, s0_1 int32
 	var s0 int64
 	if this == int64(0) {
@@ -18407,16 +18041,10 @@ B1:
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkInitImpl(d int, reading int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return reading
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkGetReadingImpl(d int, this int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
@@ -18478,16 +18106,10 @@ func (m *Instance) kotlinTimeValueTimeMarkToStringImpl(d int, this int64) *Kotli
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkHashCodeImpl(d int, this int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinLongHashCodeImpl(d+1, this)
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkEqualsImpl(d int, this int64, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0OtherWithCast int64
 	var s0 int32
 	if other == nil {
@@ -18535,9 +18157,6 @@ func (m *Instance) kotlinTimeValueTimeMarkToString(d int, this *KotlinAny) *Kotl
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeValueTimeMark) {
 		panic(rt.ErrCast)
@@ -18547,9 +18166,6 @@ func (m *Instance) kotlinTimeValueTimeMarkHashCode(d int, this *KotlinAny) int32
 }
 
 func (m *Instance) kotlinTimeValueTimeMarkEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinTimeValueTimeMark) {
 		panic(rt.ErrCast)
@@ -18607,9 +18223,6 @@ func (m *Instance) kotlinTimeValueTimeMarkCompareTo(d int, this *KotlinAny, othe
 }
 
 func (m *Instance) kotlinTimeMonotonicInit(d int, this *KotlinTimeMonotonic) *KotlinTimeMonotonic {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinTimeMonotonic
 	if this == nil {
 		s0 = NewKotlinTimeMonotonic(rt.ViewAs[ClassVTable](m.g175), m.g254, m.g296, int32(0))
@@ -18656,9 +18269,6 @@ func (m *Instance) kotlinTimeComparableTimeMarkCompareTo(d int, this *KotlinAny,
 }
 
 func (m *Instance) kotlinTimeObjectInitializer(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinTimeMonotonic
 	s0 = m.kotlinTimeMonotonicInit(d+1, (*KotlinTimeMonotonic)(nil))
 	m.g16 = s0
@@ -18821,23 +18431,14 @@ B1:
 }
 
 func (m *Instance) kotlinUIntInitImpl(d int, data int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return data
 }
 
 func (m *Instance) kotlinUIntGetDataImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinCompanionInit(d int, this *KotlinCompanion) *KotlinCompanion {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion
 	if this == nil {
 		s0 = NewKotlinCompanion(rt.ViewAs[ClassVTable](m.g176), (*AnyArray)(nil), m.g297, int32(0), int32(0), int32(0), int32(0), int32(0))
@@ -18851,9 +18452,6 @@ func (m *Instance) kotlinCompanionInit(d int, this *KotlinCompanion) *KotlinComp
 }
 
 func (m *Instance) kotlinUIntCompareToImpl(d int, this int32, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0, s1 int32
 	s0 = m.kotlinUIntGetDataImpl(d+1, this)
 	s1 = m.kotlinUIntGetDataImpl(d+1, other)
@@ -18862,9 +18460,6 @@ func (m *Instance) kotlinUIntCompareToImpl(d int, this int32, other int32) int32
 }
 
 func (m *Instance) kotlinUIntToStringImpl(d int, this int32) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, value, tmp0_, this_, s0 int32
 	var s0_1 *KotlinString
 	s0 = m.kotlinUIntGetDataImpl(d+1, this)
@@ -18882,16 +18477,10 @@ B1:
 }
 
 func (m *Instance) kotlinUIntHashCodeImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinIntHashCodeImpl(d+1, this)
 }
 
 func (m *Instance) kotlinUIntEqualsImpl(d int, this int32, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0OtherWithCast, s0 int32
 	if other == nil {
 		s0 = int32(0)
@@ -18913,9 +18502,6 @@ func (m *Instance) kotlinUIntEqualsImpl(d int, this int32, other *KotlinAny) int
 }
 
 func (m *Instance) kotlinUIntCompareTo(d int, this *KotlinAny, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinUInt) {
 		panic(rt.ErrCast)
@@ -18953,9 +18539,6 @@ func (m *Instance) kotlinUIntCompareTo2(d int, this *KotlinAny, other *KotlinAny
 }
 
 func (m *Instance) kotlinUIntToString(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinUInt) {
 		panic(rt.ErrCast)
@@ -18965,9 +18548,6 @@ func (m *Instance) kotlinUIntToString(d int, this *KotlinAny) *KotlinString {
 }
 
 func (m *Instance) kotlinUIntHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinUInt) {
 		panic(rt.ErrCast)
@@ -18979,9 +18559,6 @@ func (m *Instance) kotlinUIntHashCode(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinUIntEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinUInt) {
 		panic(rt.ErrCast)
@@ -18993,9 +18570,6 @@ func (m *Instance) kotlinUIntEquals(d int, this *KotlinAny, other *KotlinAny) in
 }
 
 func (m *Instance) kotlinObjectInitializer(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion
 	s0 = m.kotlinCompanionInit(d+1, (*KotlinCompanion)(nil))
 	m.g17 = s0
@@ -19003,23 +18577,14 @@ func (m *Instance) kotlinObjectInitializer(d int) {
 }
 
 func (m *Instance) kotlinULongInitImpl(d int, data int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return data
 }
 
 func (m *Instance) kotlinULongGetDataImpl(d int, this int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinCompanionInit2(d int, this *KotlinCompanion2) *KotlinCompanion2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion2
 	if this == nil {
 		s0 = NewKotlinCompanion2(rt.ViewAs[ClassVTable](m.g178), (*AnyArray)(nil), m.g299, int32(0), int64(0), int64(0), int32(0), int32(0))
@@ -19033,9 +18598,6 @@ func (m *Instance) kotlinCompanionInit2(d int, this *KotlinCompanion2) *KotlinCo
 }
 
 func (m *Instance) kotlinULongCompareToImpl(d int, this int64, other int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0, s1 int64
 	s0 = m.kotlinULongGetDataImpl(d+1, this)
 	s1 = m.kotlinULongGetDataImpl(d+1, other)
@@ -19043,9 +18605,6 @@ func (m *Instance) kotlinULongCompareToImpl(d int, this int64, other int64) int3
 }
 
 func (m *Instance) kotlinULongToStringImpl(d int, this int64) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, value, tmp0_, this_, s0 int64
 	var s0_1 *KotlinString
 	s0 = m.kotlinULongGetDataImpl(d+1, this)
@@ -19063,16 +18622,10 @@ B1:
 }
 
 func (m *Instance) kotlinULongHashCodeImpl(d int, this int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinLongHashCodeImpl(d+1, this)
 }
 
 func (m *Instance) kotlinULongEqualsImpl(d int, this int64, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0OtherWithCast int64
 	var s0 int32
 	if other == nil {
@@ -19094,9 +18647,6 @@ func (m *Instance) kotlinULongEqualsImpl(d int, this int64, other *KotlinAny) in
 }
 
 func (m *Instance) kotlinULongCompareTo(d int, this *KotlinAny, other int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinULong) {
 		panic(rt.ErrCast)
@@ -19133,9 +18683,6 @@ func (m *Instance) kotlinULongCompareTo2(d int, this *KotlinAny, other *KotlinAn
 }
 
 func (m *Instance) kotlinULongToString(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinULong) {
 		panic(rt.ErrCast)
@@ -19145,9 +18692,6 @@ func (m *Instance) kotlinULongToString(d int, this *KotlinAny) *KotlinString {
 }
 
 func (m *Instance) kotlinULongHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinULong) {
 		panic(rt.ErrCast)
@@ -19157,9 +18701,6 @@ func (m *Instance) kotlinULongHashCode(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinULongEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinULong) {
 		panic(rt.ErrCast)
@@ -19169,9 +18710,6 @@ func (m *Instance) kotlinULongEquals(d int, this *KotlinAny, other *KotlinAny) i
 }
 
 func (m *Instance) kotlinObjectInitializer2(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion2
 	s0 = m.kotlinCompanionInit2(d+1, (*KotlinCompanion2)(nil))
 	m.g18 = s0
@@ -19179,9 +18717,6 @@ func (m *Instance) kotlinObjectInitializer2(d int) {
 }
 
 func (m *Instance) kotlinAnyEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return rt.B2I(this == other)
 }
 
@@ -19227,9 +18762,6 @@ func (m *Instance) kotlinIdentityHashCode(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinArrayInit(d int, this *KotlinArray, size int32) *KotlinArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinArray
 	var s1 *KotlinString
 	var s0_1 *KotlinIllegalArgumentException
@@ -19249,18 +18781,12 @@ func (m *Instance) kotlinArrayInit(d int, this *KotlinArray, size int32) *Kotlin
 }
 
 func (m *Instance) kotlinArrayGetWithoutBoundCheck(d int, this *KotlinArray, index int32) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalWasmAnyArray
 	s0 = this.Storage
 	return s0.Elems[uint32(index)]
 }
 
 func (m *Instance) kotlinArrayGet(d int, this *KotlinArray, index int32) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *KotlinWasmInternalWasmAnyArray
 	var s1_1 int32
 	s1 = this.Storage
@@ -19271,9 +18797,6 @@ func (m *Instance) kotlinArrayGet(d int, this *KotlinArray, index int32) *Kotlin
 }
 
 func (m *Instance) kotlinArraySet(d int, this *KotlinArray, index int32, value *KotlinAny) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *KotlinWasmInternalWasmAnyArray
 	var s1_1 int32
 	s1 = this.Storage
@@ -19285,18 +18808,12 @@ func (m *Instance) kotlinArraySet(d int, this *KotlinArray, index int32, value *
 }
 
 func (m *Instance) kotlinArrayGetSize(d int, this *KotlinArray) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalWasmAnyArray
 	s0 = this.Storage
 	return int32(len(s0.Elems))
 }
 
 func (m *Instance) kotlinCharArrayInit(d int, this *KotlinCharArray, size int32) *KotlinCharArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCharArray
 	var s1 *KotlinString
 	var s0_1 *KotlinIllegalArgumentException
@@ -19316,9 +18833,6 @@ func (m *Instance) kotlinCharArrayInit(d int, this *KotlinCharArray, size int32)
 }
 
 func (m *Instance) kotlinCharArrayGet(d int, this *KotlinCharArray, index int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *KotlinWasmInternalWasmCharArray
 	var s1_1 int32
 	s1 = this.Storage
@@ -19329,9 +18843,6 @@ func (m *Instance) kotlinCharArrayGet(d int, this *KotlinCharArray, index int32)
 }
 
 func (m *Instance) kotlinCharArraySet(d int, this *KotlinCharArray, index int32, value int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *KotlinWasmInternalWasmCharArray
 	var s1_1 int32
 	s1 = this.Storage
@@ -19343,18 +18854,12 @@ func (m *Instance) kotlinCharArraySet(d int, this *KotlinCharArray, index int32,
 }
 
 func (m *Instance) kotlinCharArrayGetSize(d int, this *KotlinCharArray) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalWasmCharArray
 	s0 = this.Storage
 	return int32(len(s0.Elems))
 }
 
 func (m *Instance) kotlinByteArrayInit(d int, this *KotlinByteArray, size int32) *KotlinByteArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinByteArray
 	var s1 *KotlinString
 	var s0_1 *KotlinIllegalArgumentException
@@ -19374,18 +18879,12 @@ func (m *Instance) kotlinByteArrayInit(d int, this *KotlinByteArray, size int32)
 }
 
 func (m *Instance) kotlinByteArrayGetWithoutBoundCheck(d int, this *KotlinByteArray, index int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalWasmByteArray
 	s0 = this.Storage
 	return int32(s0.Elems[uint32(index)])
 }
 
 func (m *Instance) kotlinByteArrayGet(d int, this *KotlinByteArray, index int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *KotlinWasmInternalWasmByteArray
 	var s1_1 int32
 	s1 = this.Storage
@@ -19396,9 +18895,6 @@ func (m *Instance) kotlinByteArrayGet(d int, this *KotlinByteArray, index int32)
 }
 
 func (m *Instance) kotlinByteArraySet(d int, this *KotlinByteArray, index int32, value int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *KotlinWasmInternalWasmByteArray
 	var s1_1 int32
 	s1 = this.Storage
@@ -19410,18 +18906,12 @@ func (m *Instance) kotlinByteArraySet(d int, this *KotlinByteArray, index int32,
 }
 
 func (m *Instance) kotlinByteArrayGetSize(d int, this *KotlinByteArray) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalWasmByteArray
 	s0 = this.Storage
 	return int32(len(s0.Elems))
 }
 
 func (m *Instance) kotlinShortArrayGet(d int, this *KotlinShortArray, index int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *KotlinWasmInternalWasmCharArray
 	var s1_1 int32
 	s1 = this.Storage
@@ -19432,9 +18922,6 @@ func (m *Instance) kotlinShortArrayGet(d int, this *KotlinShortArray, index int3
 }
 
 func (m *Instance) kotlinIntArrayInit(d int, this *KotlinIntArray, size int32) *KotlinIntArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinIntArray
 	var s1 *KotlinString
 	var s0_1 *KotlinIllegalArgumentException
@@ -19454,9 +18941,6 @@ func (m *Instance) kotlinIntArrayInit(d int, this *KotlinIntArray, size int32) *
 }
 
 func (m *Instance) kotlinIntArrayGet(d int, this *KotlinIntArray, index int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *KotlinWasmInternalWasmIntArray
 	var s1_1 int32
 	s1 = this.Storage
@@ -19467,9 +18951,6 @@ func (m *Instance) kotlinIntArrayGet(d int, this *KotlinIntArray, index int32) i
 }
 
 func (m *Instance) kotlinIntArraySet(d int, this *KotlinIntArray, index int32, value int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *KotlinWasmInternalWasmIntArray
 	var s1_1 int32
 	s1 = this.Storage
@@ -19481,18 +18962,12 @@ func (m *Instance) kotlinIntArraySet(d int, this *KotlinIntArray, index int32, v
 }
 
 func (m *Instance) kotlinIntArrayGetSize(d int, this *KotlinIntArray) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalWasmIntArray
 	s0 = this.Storage
 	return int32(len(s0.Elems))
 }
 
 func (m *Instance) kotlinLongArrayGet(d int, this *KotlinLongArray, index int32) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s0 *KotlinWasmInternalWasmLongArray
 	var s1_1 int32
 	s1 = this.Storage
@@ -19503,9 +18978,6 @@ func (m *Instance) kotlinLongArrayGet(d int, this *KotlinLongArray, index int32)
 }
 
 func (m *Instance) kotlinCompanionInit3(d int, this *KotlinCompanion3) *KotlinCompanion3 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion3
 	if this == nil {
 		s0 = NewKotlinCompanion3(rt.ViewAs[ClassVTable](m.g187), (*AnyArray)(nil), m.g307, int32(0))
@@ -19515,9 +18987,6 @@ func (m *Instance) kotlinCompanionInit3(d int, this *KotlinCompanion3) *KotlinCo
 }
 
 func (m *Instance) kotlinBooleanCompareToImpl(d int, this int32, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, tmp2, x, y, s0 int32
 	tmp0 = this
 	tmp2 = other
@@ -19530,9 +18999,6 @@ B1:
 }
 
 func (m *Instance) kotlinBooleanToStringImpl(d int, this int32) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinString
 	if this != 0 {
 		s0 = m.stringLiteralLatin1(d+1, int32(116))
@@ -19543,9 +19009,6 @@ func (m *Instance) kotlinBooleanToStringImpl(d int, this int32) *KotlinString {
 }
 
 func (m *Instance) kotlinBooleanEqualsImpl(d int, this int32, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0, s1 int32
 	if other == nil {
 		s0 = int32(0)
@@ -19565,9 +19028,6 @@ func (m *Instance) kotlinBooleanEqualsImpl(d int, this int32, other *KotlinAny) 
 }
 
 func (m *Instance) kotlinBooleanHashCodeImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	if this != 0 {
 		s0 = int32(1231)
@@ -19578,9 +19038,6 @@ func (m *Instance) kotlinBooleanHashCodeImpl(d int, this int32) int32 {
 }
 
 func (m *Instance) kotlinBooleanCompareTo(d int, this *KotlinAny, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinBoolean) {
 		panic(rt.ErrCast)
@@ -19618,9 +19075,6 @@ func (m *Instance) kotlinBooleanCompareTo2(d int, this *KotlinAny, other *Kotlin
 }
 
 func (m *Instance) kotlinBooleanToString(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinBoolean) {
 		panic(rt.ErrCast)
@@ -19630,9 +19084,6 @@ func (m *Instance) kotlinBooleanToString(d int, this *KotlinAny) *KotlinString {
 }
 
 func (m *Instance) kotlinBooleanEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinBoolean) {
 		panic(rt.ErrCast)
@@ -19644,9 +19095,6 @@ func (m *Instance) kotlinBooleanEquals(d int, this *KotlinAny, other *KotlinAny)
 }
 
 func (m *Instance) kotlinBooleanHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinBoolean) {
 		panic(rt.ErrCast)
@@ -19658,9 +19106,6 @@ func (m *Instance) kotlinBooleanHashCode(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinObjectInitializer3(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion3
 	s0 = m.kotlinCompanionInit3(d+1, (*KotlinCompanion3)(nil))
 	m.g19 = s0
@@ -19668,9 +19113,6 @@ func (m *Instance) kotlinObjectInitializer3(d int) {
 }
 
 func (m *Instance) kotlinCharCompareToImpl(d int, this int32, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, tmp0_, this_, tmp2, tmp0__, this__, x, y, s0 int32
 	tmp0_ = this
 	this_ = tmp0_
@@ -19693,9 +19135,6 @@ B3:
 }
 
 func (m *Instance) kotlinCharToStringImpl(d int, this int32) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var array *KotlinWasmInternalWasmCharArray
 	array = NewKotlinWasmInternalWasmCharArray(rt.MakeSlice(int32(1), int16(0)))
 	array.Elems[uint32(0)] = int16(this)
@@ -19703,9 +19142,6 @@ func (m *Instance) kotlinCharToStringImpl(d int, this int32) *KotlinString {
 }
 
 func (m *Instance) kotlinCharEqualsImpl(d int, this int32, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, tmp0_, this__, s0, s1 int32
 	if other == nil {
 		s0 = int32(0)
@@ -19734,9 +19170,6 @@ func (m *Instance) kotlinCharEqualsImpl(d int, this int32, other *KotlinAny) int
 }
 
 func (m *Instance) kotlinCharHashCodeImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int32
 	tmp0 = this
 	this_ = tmp0
@@ -19748,9 +19181,6 @@ B1:
 }
 
 func (m *Instance) kotlinCompanionInit4(d int, this *KotlinCompanion4) *KotlinCompanion4 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion4
 	if this == nil {
 		s0 = NewKotlinCompanion4(rt.ViewAs[ClassVTable](m.g189), (*AnyArray)(nil), m.g309, int32(0), int16(0), int16(0), int16(0), int16(0), int16(0), int16(0), int16(0), int16(0), int32(0), int32(0), int32(0), int32(0), int32(0), int32(0), int32(0))
@@ -19775,9 +19205,6 @@ func (m *Instance) kotlinCompanionInit4(d int, this *KotlinCompanion4) *KotlinCo
 }
 
 func (m *Instance) kotlinCharCompareTo(d int, this *KotlinAny, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinChar) {
 		panic(rt.ErrCast)
@@ -19815,9 +19242,6 @@ func (m *Instance) kotlinCharCompareTo2(d int, this *KotlinAny, other *KotlinAny
 }
 
 func (m *Instance) kotlinCharToString(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinChar) {
 		panic(rt.ErrCast)
@@ -19827,9 +19251,6 @@ func (m *Instance) kotlinCharToString(d int, this *KotlinAny) *KotlinString {
 }
 
 func (m *Instance) kotlinCharEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinChar) {
 		panic(rt.ErrCast)
@@ -19841,9 +19262,6 @@ func (m *Instance) kotlinCharEquals(d int, this *KotlinAny, other *KotlinAny) in
 }
 
 func (m *Instance) kotlinCharHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinChar) {
 		panic(rt.ErrCast)
@@ -19855,9 +19273,6 @@ func (m *Instance) kotlinCharHashCode(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinObjectInitializer4(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion4
 	s0 = m.kotlinCompanionInit4(d+1, (*KotlinCompanion4)(nil))
 	m.g20 = s0
@@ -19865,9 +19280,6 @@ func (m *Instance) kotlinObjectInitializer4(d int) {
 }
 
 func (m *Instance) kotlinCompanionInit5(d int, this *KotlinCompanion5) *KotlinCompanion5 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion5
 	if this == nil {
 		s0 = NewKotlinCompanion5(rt.ViewAs[ClassVTable](m.g191), (*AnyArray)(nil), m.g311, int32(0))
@@ -19877,18 +19289,12 @@ func (m *Instance) kotlinCompanionInit5(d int, this *KotlinCompanion5) *KotlinCo
 }
 
 func (m *Instance) kotlinEnumInit(d int, this *KotlinEnum, name *KotlinString, ordinal int32) *KotlinEnum {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	this.Name = name
 	this.Ordinal = ordinal
 	return this
 }
 
 func (m *Instance) kotlinEnumCompareTo(d int, this *KotlinAny, other *KotlinEnum) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinEnum
 	var s0, s1 int32
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinEnum))) {
@@ -19929,9 +19335,6 @@ func (m *Instance) kotlinEnumCompareTo2(d int, this *KotlinAny, other *KotlinAny
 }
 
 func (m *Instance) kotlinEnumEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinEnum
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinEnum))) {
 		panic(rt.ErrCast)
@@ -19953,9 +19356,6 @@ func (m *Instance) kotlinEnumHashCode(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinEnumToString(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinEnum
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinEnum))) {
 		panic(rt.ErrCast)
@@ -19965,9 +19365,6 @@ func (m *Instance) kotlinEnumToString(d int, this *KotlinAny) *KotlinString {
 }
 
 func (m *Instance) kotlinObjectInitializer5(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion5
 	s0 = m.kotlinCompanionInit5(d+1, (*KotlinCompanion5)(nil))
 	m.g21 = s0
@@ -20000,23 +19397,14 @@ func (m *Instance) kotlinToString(d int, this *KotlinAny) *KotlinString {
 }
 
 func (m *Instance) kotlinByteToIntImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinShortToIntImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinCompanionInit6(d int, this *KotlinCompanion6) *KotlinCompanion6 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion6
 	if this == nil {
 		s0 = NewKotlinCompanion6(rt.ViewAs[ClassVTable](m.g193), (*AnyArray)(nil), m.g314, int32(0), int32(0), int32(0), int32(0), int32(0))
@@ -20030,9 +19418,6 @@ func (m *Instance) kotlinCompanionInit6(d int, this *KotlinCompanion6) *KotlinCo
 }
 
 func (m *Instance) kotlinIntCompareToImpl(d int, this int32, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, tmp2, x, y, s0 int32
 	tmp0 = this
 	tmp2 = other
@@ -20045,9 +19430,6 @@ B1:
 }
 
 func (m *Instance) kotlinIntDivImpl(d int, this int32, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0Subject, tABLESWITCHSELECTOR, s0 int32
 	var s1 *KotlinString
 	var s0_1 *KotlinArithmeticException
@@ -20082,9 +19464,6 @@ B1:
 }
 
 func (m *Instance) kotlinIntRemImpl(d int, this int32, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0Subject, s0_1 int32
 	var s1 *KotlinString
 	var s0 *KotlinArithmeticException
@@ -20100,44 +19479,26 @@ func (m *Instance) kotlinIntRemImpl(d int, this int32, other int32) int32 {
 }
 
 func (m *Instance) kotlinIntDecImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return (this - int32(1))
 }
 
 func (m *Instance) kotlinIntRangeToImpl(d int, this int32, other int32) *KotlinRangesIntRange {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinRangesIntRangeInit(d+1, (*KotlinRangesIntRange)(nil), this, other)
 }
 
 func (m *Instance) kotlinIntToByteImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return ((this << (uint32(24) & 31)) >> (uint32(24) & 31))
 }
 
 func (m *Instance) kotlinIntToCharImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return (this & int32(65535))
 }
 
 func (m *Instance) kotlinIntToLongImpl(d int, this int32) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return int64(this)
 }
 
 func (m *Instance) kotlinIntToDoubleImpl(d int, this int32) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return float64(this)
 }
 
@@ -20149,9 +19510,6 @@ func (m *Instance) kotlinIntToStringImpl(d int, this int32) *KotlinString {
 }
 
 func (m *Instance) kotlinIntEqualsImpl(d int, this int32, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0, s1 int32
 	if other == nil {
 		s0 = int32(0)
@@ -20171,16 +19529,10 @@ func (m *Instance) kotlinIntEqualsImpl(d int, this int32, other *KotlinAny) int3
 }
 
 func (m *Instance) kotlinIntHashCodeImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinIntCompareTo(d int, this *KotlinAny, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinInt) {
 		panic(rt.ErrCast)
@@ -20230,9 +19582,6 @@ func (m *Instance) kotlinIntToString(d int, this *KotlinAny) *KotlinString {
 }
 
 func (m *Instance) kotlinIntEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinInt) {
 		panic(rt.ErrCast)
@@ -20244,9 +19593,6 @@ func (m *Instance) kotlinIntEquals(d int, this *KotlinAny, other *KotlinAny) int
 }
 
 func (m *Instance) kotlinIntHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinInt) {
 		panic(rt.ErrCast)
@@ -20258,9 +19604,6 @@ func (m *Instance) kotlinIntHashCode(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinCompanionInit7(d int, this *KotlinCompanion7) *KotlinCompanion7 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion7
 	if this == nil {
 		s0 = NewKotlinCompanion7(rt.ViewAs[ClassVTable](m.g195), (*AnyArray)(nil), m.g315, int32(0), int64(0), int64(0), int32(0), int32(0))
@@ -20274,9 +19617,6 @@ func (m *Instance) kotlinCompanionInit7(d int, this *KotlinCompanion7) *KotlinCo
 }
 
 func (m *Instance) kotlinLongCompareToImpl(d int, this int64, other int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, tmp2, x, y int64
 	var s0 int32
 	tmp0 = this
@@ -20290,9 +19630,6 @@ B1:
 }
 
 func (m *Instance) kotlinLongDivImpl(d int, this int64, other int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0Subject, tmp0, this_, s0, s1 int64
 	var s0_1 int32
 	var s1_1 *KotlinString
@@ -20324,9 +19661,6 @@ B1:
 }
 
 func (m *Instance) kotlinLongRemImpl(d int, this int64, other int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0Subject, s0_1 int64
 	var s1 *KotlinString
 	var s0 *KotlinArithmeticException
@@ -20342,16 +19676,10 @@ func (m *Instance) kotlinLongRemImpl(d int, this int64, other int64) int64 {
 }
 
 func (m *Instance) kotlinLongToIntImpl(d int, this int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return int32(this)
 }
 
 func (m *Instance) kotlinLongToDoubleImpl(d int, this int64) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return float64(this)
 }
 
@@ -20363,9 +19691,6 @@ func (m *Instance) kotlinLongToStringImpl(d int, this int64) *KotlinString {
 }
 
 func (m *Instance) kotlinLongEqualsImpl(d int, this int64, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	var s1 int64
 	if other == nil {
@@ -20386,9 +19711,6 @@ func (m *Instance) kotlinLongEqualsImpl(d int, this int64, other *KotlinAny) int
 }
 
 func (m *Instance) kotlinLongHashCodeImpl(d int, this int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s1, s0 int64
 	var tmp2, bitCount, s0_1 int32
 	tmp0 = this
@@ -20404,9 +19726,6 @@ B1:
 }
 
 func (m *Instance) kotlinLongCompareTo(d int, this *KotlinAny, other int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinLong) {
 		panic(rt.ErrCast)
@@ -20455,9 +19774,6 @@ func (m *Instance) kotlinLongToString(d int, this *KotlinAny) *KotlinString {
 }
 
 func (m *Instance) kotlinLongEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinLong) {
 		panic(rt.ErrCast)
@@ -20467,9 +19783,6 @@ func (m *Instance) kotlinLongEquals(d int, this *KotlinAny, other *KotlinAny) in
 }
 
 func (m *Instance) kotlinLongHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This int64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinLong) {
 		panic(rt.ErrCast)
@@ -20479,9 +19792,6 @@ func (m *Instance) kotlinLongHashCode(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinCompanionInit8(d int, this *KotlinCompanion8) *KotlinCompanion8 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion8
 	if this == nil {
 		s0 = NewKotlinCompanion8(rt.ViewAs[ClassVTable](m.g197), (*AnyArray)(nil), m.g316, int32(0), float64(0), float64(0), float64(0), float64(0), float64(0), int32(0), int32(0))
@@ -20498,9 +19808,6 @@ func (m *Instance) kotlinCompanionInit8(d int, this *KotlinCompanion8) *KotlinCo
 }
 
 func (m *Instance) kotlinDoubleCompareToImpl(d int, this float64, other float64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var thisBits, otherBits, s0 int64
 	if this > other {
 		return int32(1)
@@ -20516,23 +19823,14 @@ func (m *Instance) kotlinDoubleCompareToImpl(d int, this float64, other float64)
 }
 
 func (m *Instance) kotlinDoubleToIntImpl(d int, this float64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return rt.I32TruncSatF64S(this)
 }
 
 func (m *Instance) kotlinDoubleToLongImpl(d int, this float64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return rt.I64TruncSatF64S(this)
 }
 
 func (m *Instance) kotlinDoubleToFloatImpl(d int, this float64) float32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return float32(this)
 }
 
@@ -20544,9 +19842,6 @@ func (m *Instance) kotlinDoubleToStringImpl(d int, this float64) *KotlinString {
 }
 
 func (m *Instance) kotlinDoubleEqualsImpl(d int, this float64, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	var s0_1, s1_1 int64
 	var s1 float64
@@ -20570,18 +19865,12 @@ func (m *Instance) kotlinDoubleEqualsImpl(d int, this float64, other *KotlinAny)
 }
 
 func (m *Instance) kotlinDoubleHashCodeImpl(d int, this float64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int64
 	s0 = m.kotlinToBits2(d+1, this)
 	return m.kotlinLongHashCodeImpl(d+1, s0)
 }
 
 func (m *Instance) kotlinDoubleCompareTo(d int, this *KotlinAny, other float64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This float64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinDouble) {
 		panic(rt.ErrCast)
@@ -20630,9 +19919,6 @@ func (m *Instance) kotlinDoubleToString(d int, this *KotlinAny) *KotlinString {
 }
 
 func (m *Instance) kotlinDoubleEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This float64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinDouble) {
 		panic(rt.ErrCast)
@@ -20642,9 +19928,6 @@ func (m *Instance) kotlinDoubleEquals(d int, this *KotlinAny, other *KotlinAny) 
 }
 
 func (m *Instance) kotlinDoubleHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This float64
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinDouble) {
 		panic(rt.ErrCast)
@@ -20654,9 +19937,6 @@ func (m *Instance) kotlinDoubleHashCode(d int, this *KotlinAny) int32 {
 }
 
 func (m *Instance) kotlinObjectInitializer6(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion6
 	var s0_1 *KotlinCompanion7
 	var s0_2 *KotlinCompanion8
@@ -20670,119 +19950,77 @@ func (m *Instance) kotlinObjectInitializer6(d int) {
 }
 
 func (m *Instance) kotlinWasmInternalSetK(d int, set int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	m.g26 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetK(d int) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	return m.g26
 }
 
 func (m *Instance) kotlinWasmInternalSetExp(d int, set int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	m.g27 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetExp(d int) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	return m.g27
 }
 
 func (m *Instance) kotlinWasmInternalSetFrcMinus(d int, set int64) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	m.g28 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetFrcMinus(d int) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	return m.g28
 }
 
 func (m *Instance) kotlinWasmInternalSetFrcPlus(d int, set int64) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	m.g29 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetFrcPlus(d int) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	return m.g29
 }
 
 func (m *Instance) kotlinWasmInternalSetFrcPow(d int, set int64) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	m.g30 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetFrcPow(d int) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	return m.g30
 }
 
 func (m *Instance) kotlinWasmInternalSetExpPow(d int, set int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	m.g31 = set
 	return
 }
 
 func (m *Instance) kotlinWasmInternalGetExpPow(d int) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	return m.g31
 }
 
 func (m *Instance) kotlinWasmInternalGetEXPPOWERS(d int) *KotlinShortArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	return m.g32
 }
 
 func (m *Instance) kotlinWasmInternalGetFRCPOWERS(d int) *KotlinLongArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	return m.g33
 }
@@ -20863,9 +20101,6 @@ func (m *Instance) kotlinWasmInternalDtoaCore(d int, buffer *KotlinWasmInternalW
 }
 
 func (m *Instance) kotlinWasmInternalCopyInto(d int, this *KotlinWasmInternalWasmCharArray, destination *KotlinWasmInternalWasmCharArray, destinationOffset int32, sourceOffset int32, len_ int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var srcIndex, dstIndex, increment, tmp0, times, inductionVariable, index, tmp0_, it, s2 int32
 	var s0 *KotlinUnit
 	_ = it
@@ -20910,9 +20145,6 @@ B2:
 }
 
 func (m *Instance) kotlinWasmInternalStaticInit(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	var s1 *KotlinString
 	var s0_1 *KotlinWasmInternalCharCodes
@@ -20940,9 +20172,6 @@ func (m *Instance) kotlinWasmInternalStaticInit(d int) {
 }
 
 func (m *Instance) kotlinWasmInternalCharCodesInit(d int, this *KotlinWasmInternalCharCodes, name *KotlinString, ordinal int32, code int32) *KotlinWasmInternalCharCodes {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalCharCodes
 	var s0_1 *KotlinEnum
 	_ = s0_1
@@ -20956,9 +20185,6 @@ func (m *Instance) kotlinWasmInternalCharCodesInit(d int, this *KotlinWasmIntern
 }
 
 func (m *Instance) kotlinWasmInternalGrisu2(d int, value float64, buffer *KotlinWasmInternalWasmCharArray, sign int32, isSinglePrecision int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var frc, tmp0, tmp0_, this, tmp0__, this_, tmp2__, this___, other, uv_, tmp0____, this____, sid_, tmp0_____, tmp0______, this_____, tmp0_______, this______, tmp2______, tmp0________, this_______, this________, other_, tmp0_________, this_________, tmp0__________, this__________, tmp0___________, this___________, tmp0____________, this____________, frcPow, wFrc, wpFrc, tmp0_____________, this_____________, tmp0______________, tmp2__________, this_______________, other___, wmFrc, tmp0________________, this________________, tmp0_________________, tmp2____________, this__________________, other_____, delta, tmp0___________________, tmp2_____________, this___________________, other______, s0_2, s1 int64
 	var exp, uv, sid, tmp2, bitCount, tmp2_, bitCount_, tmp0___, this__, tmp2___, bitCount__, tmp2____, bitCount___, tmp2_____, bitCount____, off, tmp2_______, bitCount_____, tmp2________, bitCount______, expPow, tmp2_________, other__, tmp0_______________, this______________, wpExp, tmp2___________, other____, tmp0__________________, this_________________, s0_1 int32
 	var s0 float32
@@ -21310,9 +20536,6 @@ func (m *Instance) kotlinWasmInternalPrettify(d int, buffer *KotlinWasmInternalB
 }
 
 func (m *Instance) kotlinWasmInternalBufferWithOffsetInit(d int, this *KotlinWasmInternalBufferWithOffset, buf *KotlinWasmInternalWasmCharArray, off int32) *KotlinWasmInternalBufferWithOffset {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalBufferWithOffset
 	if this == nil {
 		s0 = NewKotlinWasmInternalBufferWithOffset(rt.ViewAs[ClassVTable](m.g200), (*AnyArray)(nil), m.g317, int32(0), (*KotlinWasmInternalWasmCharArray)(nil), int32(0))
@@ -21324,9 +20547,6 @@ func (m *Instance) kotlinWasmInternalBufferWithOffsetInit(d int, this *KotlinWas
 }
 
 func (m *Instance) kotlinWasmInternalBufferWithOffsetSet(d int, this *KotlinWasmInternalBufferWithOffset, addr int32, value int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalWasmCharArray
 	var s1 int32
 	s0 = this.Buf
@@ -21336,9 +20556,6 @@ func (m *Instance) kotlinWasmInternalBufferWithOffsetSet(d int, this *KotlinWasm
 }
 
 func (m *Instance) kotlinWasmInternalBufferWithOffsetMemoryCopy(d int, this *KotlinWasmInternalBufferWithOffset, destAddr int32, srcAddr int32, len_ int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var startIdx, s0, s2 int32
 	var s0_1, s1 *KotlinWasmInternalWasmCharArray
 	s0 = this.Off
@@ -21351,9 +20568,6 @@ func (m *Instance) kotlinWasmInternalBufferWithOffsetMemoryCopy(d int, this *Kot
 }
 
 func (m *Instance) kotlinWasmInternalBufferWithOffsetOffsetABitMore(d int, this *KotlinWasmInternalBufferWithOffset, anotherOff int32) *KotlinWasmInternalBufferWithOffset {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1 *KotlinWasmInternalWasmCharArray
 	var s2 int32
 	s1 = this.Buf
@@ -21362,9 +20576,6 @@ func (m *Instance) kotlinWasmInternalBufferWithOffsetOffsetABitMore(d int, this 
 }
 
 func (m *Instance) kotlinWasmInternalToULong(d int, this int32) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_ int32
 	var s0 int64
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
@@ -21378,9 +20589,6 @@ B1:
 }
 
 func (m *Instance) kotlinWasmInternalNormalizedBoundaries(d int, f int64, e_ int32, isSinglePrecision int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var frc, tmp0, tmp0_, this, tmp0__, this_, this__, tmp0___, tmp2___, this____, other_, tmp0_____, this_____, tmp0______, this______, tmp0_______, this_______, tmp0________, this________, smallestNormalizedSignificand, tmp0_________, tmp0__________, tmp0___________, this_________, tmp0____________, this__________, this___________, tmp0_____________, tmp2_________, this_____________, other___, this______________, tmp0_______________, this_______________, s0, s1 int64
 	var tmp2, bitCount, tmp2_, bitCount_, tmp2__, other, tmp0____, this___, exp, off, tmp2____, bitCount__, tmp2_____, bitCount___, m_, tmp2______, bitCount____, tmp2_______, bitCount_____, tmp2________, other__, tmp0______________, this____________, tmp2__________, bitCount______, tmp2___________, bitCount_______, s0_1 int32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
@@ -21521,9 +20729,6 @@ B16:
 }
 
 func (m *Instance) kotlinWasmInternalGetCachedPower(d int, minExp int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var c_, dk, tmp0, tmp2, other, this_, s0_1, s1 float64
 	var tmp0_, this, tmp2_, other_, k, index, s0_2 int32
 	var tmp0__, this__, s0_4 int64
@@ -21574,9 +20779,6 @@ B3:
 }
 
 func (m *Instance) kotlinWasmInternalUmul64f(d int, u int64, v int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var u0, tmp0, tmp2, this, other, v0, tmp0_, tmp2_, this_, other_, u1, tmp0__, this__, tmp0___, this___, v1, tmp0____, this____, tmp0_____, this_____, l, tmp0______, tmp2______, this______, other__, t, tmp0_______, tmp0________, tmp2_______, this_______, other___, tmp2________, tmp0_________, this________, tmp0__________, this_________, this__________, other____, w, tmp0___________, tmp0____________, tmp2___________, this___________, other_____, tmp2____________, tmp0_____________, tmp2_____________, this____________, other______, this_____________, other_______, tmp0______________, this______________, tmp0_______________, tmp2_______________, this________________, other_________, tmp0_________________, this_________________, tmp0__________________, this__________________, tmp0___________________, this___________________, tmp0____________________, this____________________, tmp0_____________________, tmp0______________________, tmp0_______________________, tmp2____________________, this_____________________, other__________, tmp2_____________________, this______________________, other___________, tmp2______________________, this_______________________, other____________, s0, s1 int64
 	var tmp2__, bitCount, tmp2___, bitCount_, tmp2____, bitCount__, tmp2_____, bitCount___, tmp2_________, bitCount____, tmp2__________, bitCount_____, tmp2______________, other________, tmp0________________, this_______________, tmp2________________, bitCount______, tmp2_________________, bitCount_______, tmp2__________________, bitCount________, tmp2___________________, bitCount_________, s0_1 int32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
@@ -21806,17 +21008,11 @@ B24:
 }
 
 func (m *Instance) kotlinWasmInternalUmul64e(d int, e1 int32, e2 int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	return ((e1 + e2) + int32(64))
 }
 
 func (m *Instance) kotlinWasmInternalGenDigits(d int, buffer *KotlinWasmInternalWasmCharArray, wFrc int64, mpFrc int64, mpExp int32, deltaInp int64, sign int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var delta, oneFrc, tmp0_, this_, tmp0__, this__, mask, tmp0___, this___, tmp0____, tmp2___, this_____, other_, wpWFrc, tmp0______, tmp2____, this______, other__, tmp0_______, tmp0________, this_______, tmp0_________, this________, this_________, p2_, tmp0__________, tmp2_______, this__________, other___, pow10, tmp, tmp0_____________, tmp0______________, this______________, tmp0________________, this_______________, tmp2__________, this________________, other____, tmp0_________________, tmp2___________, this_________________, other_____, tmp0__________________, this__________________, tmp0___________________, this___________________, unit, tmp0____________________, this____________________, tmp0_____________________, tmp2_______________, this______________________, other_______, tmp0_______________________, this_______________________, tmp0________________________, tmp2_________________, this_________________________, other_________, tmp0__________________________, this__________________________, tmp0___________________________, tmp2___________________, this____________________________, other___________, d__, tmp0_____________________________, this_____________________________, tmp0______________________________, this______________________________, tmp0_______________________________, tmp2______________________, this________________________________, other____________, tmp0__________________________________, this__________________________________, tmp0___________________________________, tmp2_______________________, this___________________________________, other_____________, tmp0____________________________________, tmp2________________________, this____________________________________, other______________, tmp0_____________________________________, tmp2_________________________, this_____________________________________, other_______________, s0_1, s1, s2_1, s3, s4, s5, s6 int64
 	var oneExp, tmp0, this, tmp2, bitCount, tmp2_, bitCount_, tmp2__, other, tmp0_____, this____, p1_, tmp2_____, bitCount__, tmp2______, bitCount___, kappa, tmp0___________, this___________, len_, d_, tmp0Subject, tABLESWITCHSELECTOR, unary, tmp0____________, this____________, tmp0_______________, this_____________, tmp2________, bitCount____, tmp2_________, bitCount_____, tmp2____________, bitCount______, tmp2_____________, bitCount_______, tmp2______________, other______, tmp0______________________, this_____________________, tmp2________________, other________, tmp0_________________________, this________________________, tmp2__________________, other__________, tmp0____________________________, this___________________________, tmp2____________________, bitCount________, tmp2_____________________, bitCount_________, tmp0________________________________, this_______________________________, unary_, tmp0_________________________________, this_________________________________, s0, s1_1, s2 int32
 	var s0_2 *KotlinWasmInternalWasmCharArray
@@ -22352,9 +21548,6 @@ func (m *Instance) kotlinWasmInternalGenExponent(d int, buffer *KotlinWasmIntern
 }
 
 func (m *Instance) kotlinWasmInternalDecimalCount32(d int, value int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, tmp2, this, other, tmp0_, tmp2_, this_, other_, tmp0__, tmp2__, this__, other__, tmp0___, tmp2___, this___, other___, tmp0____, tmp2____, this____, other____, tmp0_____, tmp2_____, this_____, other_____, tmp0______, tmp2______, this______, other______, tmp0_______, tmp2_______, this_______, other_______, tmp0________, tmp2________, this________, other________, s0, s1, s2 int32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
 	tmp0 = value
@@ -22460,9 +21653,6 @@ B1:
 }
 
 func (m *Instance) kotlinWasmInternalDigitToChar(d int, input int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalCharCodes
 	var s0_1 int32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
@@ -22473,9 +21663,6 @@ func (m *Instance) kotlinWasmInternalDigitToChar(d int, input int32) int32 {
 }
 
 func (m *Instance) kotlinWasmInternalGrisuRound(d int, buffer *KotlinWasmInternalWasmCharArray, len_ int32, delta int64, restInp int64, tenKappa int64, wpW int64) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var rest, tmp0, tmp2, this, other, tmp0_, tmp0__, tmp2_, this_, other_, tmp2__, this__, other__, tmp0___, tmp0____, tmp2___, this___, other___, tmp2____, this____, other____, tmp0_____, tmp0______, tmp2_____, this_____, other_____, tmp2______, tmp0_______, tmp0________, tmp2_______, this______, other______, tmp2________, this_______, other_______, this________, other________, tmp0___________, tmp2_________, this___________, other_________, s0_1, s1 int64
 	var lastp, digit, tmp0_________, this_________, tmp0__________, this__________, s0 int32
 	m.kotlinWasmInternalInitPropertiesNumber2StringKt(d + 1)
@@ -22619,49 +21806,31 @@ L1:
 }
 
 func (m *Instance) kotlinWasmInternalCharCodesPLUSGetInstance(d int) *KotlinWasmInternalCharCodes {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalStaticInit(d + 1)
 	return m.g35
 }
 
 func (m *Instance) kotlinWasmInternalCharCodesMINUSGetInstance(d int) *KotlinWasmInternalCharCodes {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalStaticInit(d + 1)
 	return m.g36
 }
 
 func (m *Instance) kotlinWasmInternalCharCodesDOTGetInstance(d int) *KotlinWasmInternalCharCodes {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalStaticInit(d + 1)
 	return m.g37
 }
 
 func (m *Instance) kotlinWasmInternalCharCodes0GetInstance(d int) *KotlinWasmInternalCharCodes {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalStaticInit(d + 1)
 	return m.g38
 }
 
 func (m *Instance) kotlinWasmInternalCharCodesEGetInstance(d int) *KotlinWasmInternalCharCodes {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmInternalStaticInit(d + 1)
 	return m.g39
 }
 
 func (m *Instance) kotlinWasmInternalInitPropertiesNumber2StringKt(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, elements, s0_1 *KotlinShortArray
 	var tmp0_, elements_, s0_3 *KotlinLongArray
 	var tmp0__, this, tmp0___, this_, tmp0____, this__, tmp0_____, this___, tmp0______, this____, tmp0_______, this_____, tmp0________, this______, tmp0_________, this_______, tmp0__________, this________, tmp0___________, this_________, tmp0____________, this__________, tmp0_____________, this___________, tmp0______________, this____________, tmp0_______________, this_____________, tmp0________________, this______________, tmp0_________________, this_______________, tmp0__________________, this________________, tmp0___________________, this_________________, tmp0____________________, this__________________, tmp0_____________________, this___________________, tmp0______________________, this____________________, tmp0_______________________, this_____________________, tmp0________________________, this______________________, tmp0_________________________, this_______________________, tmp0__________________________, this________________________, tmp0___________________________, this_________________________, tmp0____________________________, this__________________________, tmp0_____________________________, this___________________________, tmp0______________________________, this____________________________, tmp0_______________________________, this_____________________________, tmp0________________________________, this______________________________, tmp0_________________________________, this_______________________________, tmp0__________________________________, this________________________________, tmp0___________________________________, this_________________________________, tmp0____________________________________, this__________________________________, tmp0_____________________________________, this___________________________________, tmp0______________________________________, this____________________________________, tmp0_______________________________________, this_____________________________________, tmp0________________________________________, this______________________________________, tmp0_________________________________________, this_______________________________________, tmp0__________________________________________, this________________________________________, tmp0___________________________________________, this_________________________________________, tmp0____________________________________________, this__________________________________________, tmp0_____________________________________________, this___________________________________________, tmp0______________________________________________, this____________________________________________, tmp0_______________________________________________, this_____________________________________________, tmp0________________________________________________, this______________________________________________, tmp0_________________________________________________, this_______________________________________________, tmp0__________________________________________________, this________________________________________________, tmp0___________________________________________________, this_________________________________________________, tmp0____________________________________________________, this__________________________________________________, tmp0_____________________________________________________, this___________________________________________________, tmp0______________________________________________________, this____________________________________________________, tmp0_______________________________________________________, this_____________________________________________________, tmp0________________________________________________________, this______________________________________________________, tmp0_________________________________________________________, this_______________________________________________________, tmp0__________________________________________________________, this________________________________________________________, tmp0___________________________________________________________, this_________________________________________________________, tmp0____________________________________________________________, this__________________________________________________________, tmp0_____________________________________________________________, this___________________________________________________________, tmp0______________________________________________________________, this____________________________________________________________, tmp0_______________________________________________________________, this_____________________________________________________________, tmp0________________________________________________________________, this______________________________________________________________, tmp0_________________________________________________________________, this_______________________________________________________________, tmp0__________________________________________________________________, this________________________________________________________________, tmp0___________________________________________________________________, this_________________________________________________________________, tmp0____________________________________________________________________, this__________________________________________________________________, tmp0_____________________________________________________________________, this___________________________________________________________________, tmp0______________________________________________________________________, this____________________________________________________________________, tmp0_______________________________________________________________________, this_____________________________________________________________________, tmp0________________________________________________________________________, this______________________________________________________________________, tmp0_________________________________________________________________________, this_______________________________________________________________________, tmp0__________________________________________________________________________, this________________________________________________________________________, tmp0___________________________________________________________________________, this_________________________________________________________________________, tmp0____________________________________________________________________________, this__________________________________________________________________________, tmp0_____________________________________________________________________________, this___________________________________________________________________________, tmp0______________________________________________________________________________, this____________________________________________________________________________, tmp0_______________________________________________________________________________, this_____________________________________________________________________________, tmp0________________________________________________________________________________, this______________________________________________________________________________, tmp0_________________________________________________________________________________, this_______________________________________________________________________________, tmp0__________________________________________________________________________________, this________________________________________________________________________________, tmp0___________________________________________________________________________________, this_________________________________________________________________________________, tmp0____________________________________________________________________________________, this__________________________________________________________________________________, tmp0_____________________________________________________________________________________, this___________________________________________________________________________________, tmp0______________________________________________________________________________________, this____________________________________________________________________________________, tmp0_______________________________________________________________________________________, this_____________________________________________________________________________________, tmp0________________________________________________________________________________________, this______________________________________________________________________________________, s4_1, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37, s38, s39, s40, s41, s42, s43, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, s54, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79, s80, s81, s82, s83, s84, s85, s86, s87, s88, s89, s90 int64
@@ -23138,9 +22307,6 @@ func (m *Instance) kotlinWasmInternalInitPropertiesNumber2StringKt(d int) {
 }
 
 func (m *Instance) kotlinWasmInternalGetBoxedBoolean(d int, x int32) *KotlinBoolean {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0ElvisLhs, tmp0_, it, tmp1ElvisLhs, tmp0___, it_, s0 *KotlinBoolean
 	var tmp0, this, tmp0__, this_ *KotlinAny
 	var s0_1 *KotlinUnit
@@ -23216,9 +22382,6 @@ func (m *Instance) kotlinWasmInternalNullableEquals(d int, lhs *KotlinAny, rhs *
 }
 
 func (m *Instance) kotlinWasmInternalRangeCheck(d int, index int32, size int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	var s0_1 *KotlinIndexOutOfBoundsException
 	if index < int32(0) {
@@ -23234,9 +22397,6 @@ func (m *Instance) kotlinWasmInternalRangeCheck(d int, index int32, size int32) 
 }
 
 func (m *Instance) kotlinWasmInternalTHROWNPE(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinNullPointerException
 	s0 = m.kotlinNullPointerExceptionInit(d+1, (*KotlinNullPointerException)(nil))
 	panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
@@ -23370,9 +22530,6 @@ func (m *Instance) kotlinWasmInternalTHROWCCEWITHINFO(d int, obj *KotlinAny, kla
 }
 
 func (m *Instance) kotlinWasmInternalThrowKotlinNothingValueException(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinKotlinNothingValueException
 	s0 = m.kotlinKotlinNothingValueExceptionInit(d+1, (*KotlinKotlinNothingValueException)(nil))
 	panic(&rt.Exception{Tag: m.tag0, Values: []any{rt.ViewAs[KotlinThrowable](s0)}})
@@ -23451,9 +22608,6 @@ func (m *Instance) kotlinWasmInternalGetPackageName(d int, rtti any) *KotlinStri
 }
 
 func (m *Instance) kotlinWasmInternalIsAnonymousClass(d int, rtti any) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	if !(rt.IsType(rtti, rttRTTI)) {
 		panic(rt.ErrCast)
@@ -23463,9 +22617,6 @@ func (m *Instance) kotlinWasmInternalIsAnonymousClass(d int, rtti any) int32 {
 }
 
 func (m *Instance) kotlinWasmInternalIsLocalClass(d int, rtti any) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	if !(rt.IsType(rtti, rttRTTI)) {
 		panic(rt.ErrCast)
@@ -23475,9 +22626,6 @@ func (m *Instance) kotlinWasmInternalIsLocalClass(d int, rtti any) int32 {
 }
 
 func (m *Instance) kotlinWasmInternalTypeInfoDataInit(d int, this *KotlinWasmInternalTypeInfoData, typeId int64, packageName *KotlinString, typeName *KotlinString) *KotlinWasmInternalTypeInfoData {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmInternalTypeInfoData
 	if this == nil {
 		s0 = NewKotlinWasmInternalTypeInfoData(rt.ViewAs[ClassVTable](m.g201), (*AnyArray)(nil), m.g318, int32(0), int64(0), (*KotlinString)(nil), (*KotlinString)(nil))
@@ -23490,9 +22638,6 @@ func (m *Instance) kotlinWasmInternalTypeInfoDataInit(d int, this *KotlinWasmInt
 }
 
 func (m *Instance) kotlinWasmInternalIsSupportedInterface(d int, obj *KotlinAny, interfaceId int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var interfaceArray, tmp0ElvisLhs, s0_1 *LongArray
 	var s0 *RTTI
 	var s0_2 int32
@@ -23510,9 +22655,6 @@ func (m *Instance) kotlinWasmInternalIsSupportedInterface(d int, obj *KotlinAny,
 }
 
 func (m *Instance) kotlinWasmInternalWasmArrayAnyIndexOfValue(d int, array *LongArray, value int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var arraySize, index, unary, tmp0, this, s0 int32
 	var supportedInterface, s0_1 int64
 	s0 = int32(len(array.Elems))
@@ -23543,9 +22685,6 @@ L1:
 }
 
 func (m *Instance) kotlinWasmInternalGetInterfaceVTable(d int, obj *KotlinAny, interfaceId int64) any {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *AnyArray
 	var s1 *RTTI
 	var s1_1 *LongArray
@@ -23931,16 +23070,10 @@ B1:
 }
 
 func (m *Instance) kotlinAssert(d int, value int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return
 }
 
 func (m *Instance) kotlinAssert2(d int, value int32, lazyMessage *KotlinAny) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var message *KotlinAny
 	var s1 *ClassVTable
 	var s1_1 *SpecialITable
@@ -23965,9 +23098,6 @@ func (m *Instance) kotlinAssert2(d int, value int32, lazyMessage *KotlinAny) {
 }
 
 func (m *Instance) kotlinFunction0Init(d int, this *KotlinFunction0, func_ *rt.Func) *KotlinFunction0 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinFunction0
 	if this == nil {
 		s0 = NewKotlinFunction0(rt.ViewAs[ClassVTable](m.g202), m.g263, m.g319, int32(0), (*rt.Func)(nil))
@@ -23992,18 +23122,12 @@ func (m *Instance) kotlinFunction0Invoke(d int, this *KotlinAny) *KotlinAny {
 }
 
 func (m *Instance) kotlinAssertLambdaInvoke(d int) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinString
 	s0 = m.stringLiteralLatin1(d+1, int32(153))
 	return rt.ViewAs[KotlinAny](s0)
 }
 
 func (m *Instance) kotlinObjectInitializer7(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinFunction0
 	s0 = m.kotlinFunction0Init(d+1, (*KotlinFunction0)(nil), m.funcs[484])
 	m.g43 = rt.ViewAs[KotlinAny](s0)
@@ -24011,9 +23135,6 @@ func (m *Instance) kotlinObjectInitializer7(d int) {
 }
 
 func (m *Instance) kotlinNoSuchElementExceptionInit(d int, this *KotlinNoSuchElementException) *KotlinNoSuchElementException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinNoSuchElementException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24027,16 +23148,10 @@ func (m *Instance) kotlinNoSuchElementExceptionInit(d int, this *KotlinNoSuchEle
 }
 
 func (m *Instance) kotlinNoSuchElementExceptionInit2(d int, this *KotlinNoSuchElementException) *KotlinNoSuchElementException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinIllegalStateExceptionInit(d int, this *KotlinIllegalStateException, message *KotlinString) *KotlinIllegalStateException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinIllegalStateException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24050,16 +23165,10 @@ func (m *Instance) kotlinIllegalStateExceptionInit(d int, this *KotlinIllegalSta
 }
 
 func (m *Instance) kotlinIllegalStateExceptionInit2(d int, this *KotlinIllegalStateException) *KotlinIllegalStateException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinIllegalArgumentExceptionInit(d int, this *KotlinIllegalArgumentException, message *KotlinString) *KotlinIllegalArgumentException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinIllegalArgumentException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24073,16 +23182,10 @@ func (m *Instance) kotlinIllegalArgumentExceptionInit(d int, this *KotlinIllegal
 }
 
 func (m *Instance) kotlinIllegalArgumentExceptionInit2(d int, this *KotlinIllegalArgumentException) *KotlinIllegalArgumentException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinArithmeticExceptionInit(d int, this *KotlinArithmeticException, message *KotlinString) *KotlinArithmeticException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinArithmeticException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24096,16 +23199,10 @@ func (m *Instance) kotlinArithmeticExceptionInit(d int, this *KotlinArithmeticEx
 }
 
 func (m *Instance) kotlinArithmeticExceptionInit2(d int, this *KotlinArithmeticException) *KotlinArithmeticException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinIndexOutOfBoundsExceptionInit(d int, this *KotlinIndexOutOfBoundsException) *KotlinIndexOutOfBoundsException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinIndexOutOfBoundsException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24119,9 +23216,6 @@ func (m *Instance) kotlinIndexOutOfBoundsExceptionInit(d int, this *KotlinIndexO
 }
 
 func (m *Instance) kotlinIndexOutOfBoundsExceptionInit2(d int, this *KotlinIndexOutOfBoundsException, message *KotlinString) *KotlinIndexOutOfBoundsException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinIndexOutOfBoundsException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24135,9 +23229,6 @@ func (m *Instance) kotlinIndexOutOfBoundsExceptionInit2(d int, this *KotlinIndex
 }
 
 func (m *Instance) kotlinIndexOutOfBoundsExceptionInit3(d int, this *KotlinIndexOutOfBoundsException) *KotlinIndexOutOfBoundsException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
@@ -24186,16 +23277,10 @@ func (m *Instance) kotlinAssertionErrorInit(d int, this *KotlinAssertionError, m
 }
 
 func (m *Instance) kotlinAssertionErrorInit2(d int, this *KotlinAssertionError) *KotlinAssertionError {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinRuntimeExceptionInit(d int, this *KotlinRuntimeException) *KotlinRuntimeException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinRuntimeException
 	var s0_1 *KotlinException
 	_ = s0_1
@@ -24209,9 +23294,6 @@ func (m *Instance) kotlinRuntimeExceptionInit(d int, this *KotlinRuntimeExceptio
 }
 
 func (m *Instance) kotlinRuntimeExceptionInit2(d int, this *KotlinRuntimeException, message *KotlinString) *KotlinRuntimeException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinRuntimeException
 	var s0_1 *KotlinException
 	_ = s0_1
@@ -24225,16 +23307,10 @@ func (m *Instance) kotlinRuntimeExceptionInit2(d int, this *KotlinRuntimeExcepti
 }
 
 func (m *Instance) kotlinRuntimeExceptionInit3(d int, this *KotlinRuntimeException) *KotlinRuntimeException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinErrorInit(d int, this *KotlinError) *KotlinError {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinError
 	var s0_1 *KotlinThrowable
 	_ = s0_1
@@ -24248,9 +23324,6 @@ func (m *Instance) kotlinErrorInit(d int, this *KotlinError) *KotlinError {
 }
 
 func (m *Instance) kotlinErrorInit2(d int, this *KotlinError, message *KotlinString, cause *KotlinThrowable) *KotlinError {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinError
 	var s0_1 *KotlinThrowable
 	_ = s0_1
@@ -24264,16 +23337,10 @@ func (m *Instance) kotlinErrorInit2(d int, this *KotlinError, message *KotlinStr
 }
 
 func (m *Instance) kotlinErrorInit3(d int, this *KotlinError) *KotlinError {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinExceptionInit(d int, this *KotlinException) *KotlinException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinException
 	var s0_1 *KotlinThrowable
 	_ = s0_1
@@ -24287,9 +23354,6 @@ func (m *Instance) kotlinExceptionInit(d int, this *KotlinException) *KotlinExce
 }
 
 func (m *Instance) kotlinExceptionInit2(d int, this *KotlinException, message *KotlinString) *KotlinException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinException
 	var s0_1 *KotlinThrowable
 	_ = s0_1
@@ -24303,16 +23367,10 @@ func (m *Instance) kotlinExceptionInit2(d int, this *KotlinException, message *K
 }
 
 func (m *Instance) kotlinExceptionInit3(d int, this *KotlinException) *KotlinException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinUnsupportedOperationExceptionInit(d int, this *KotlinUnsupportedOperationException) *KotlinUnsupportedOperationException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinUnsupportedOperationException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24326,16 +23384,10 @@ func (m *Instance) kotlinUnsupportedOperationExceptionInit(d int, this *KotlinUn
 }
 
 func (m *Instance) kotlinUnsupportedOperationExceptionInit2(d int, this *KotlinUnsupportedOperationException) *KotlinUnsupportedOperationException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinOutOfMemoryErrorInit(d int, this *KotlinOutOfMemoryError) *KotlinOutOfMemoryError {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinOutOfMemoryError
 	var s0_1 *KotlinError
 	_ = s0_1
@@ -24349,16 +23401,10 @@ func (m *Instance) kotlinOutOfMemoryErrorInit(d int, this *KotlinOutOfMemoryErro
 }
 
 func (m *Instance) kotlinOutOfMemoryErrorInit2(d int, this *KotlinOutOfMemoryError) *KotlinOutOfMemoryError {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinConcurrentModificationExceptionInit(d int, this *KotlinConcurrentModificationException) *KotlinConcurrentModificationException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinConcurrentModificationException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24372,9 +23418,6 @@ func (m *Instance) kotlinConcurrentModificationExceptionInit(d int, this *Kotlin
 }
 
 func (m *Instance) kotlinConcurrentModificationExceptionInit2(d int, this *KotlinConcurrentModificationException, message *KotlinString) *KotlinConcurrentModificationException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinConcurrentModificationException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24388,16 +23431,10 @@ func (m *Instance) kotlinConcurrentModificationExceptionInit2(d int, this *Kotli
 }
 
 func (m *Instance) kotlinConcurrentModificationExceptionInit3(d int, this *KotlinConcurrentModificationException) *KotlinConcurrentModificationException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinClassCastExceptionInit(d int, this *KotlinClassCastException, message *KotlinString) *KotlinClassCastException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinClassCastException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24411,16 +23448,10 @@ func (m *Instance) kotlinClassCastExceptionInit(d int, this *KotlinClassCastExce
 }
 
 func (m *Instance) kotlinClassCastExceptionInit2(d int, this *KotlinClassCastException) *KotlinClassCastException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinNullPointerExceptionInit(d int, this *KotlinNullPointerException) *KotlinNullPointerException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinNullPointerException
 	var s0_1 *KotlinRuntimeException
 	_ = s0_1
@@ -24434,16 +23465,10 @@ func (m *Instance) kotlinNullPointerExceptionInit(d int, this *KotlinNullPointer
 }
 
 func (m *Instance) kotlinNullPointerExceptionInit2(d int, this *KotlinNullPointerException) *KotlinNullPointerException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinToBits(d int, this float32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	s0 = m.kotlinIsNaN2(d+1, this)
 	if s0 != 0 {
@@ -24455,9 +23480,6 @@ func (m *Instance) kotlinToBits(d int, this float32) int32 {
 }
 
 func (m *Instance) kotlinToBits2(d int, this float64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	var s0_1 int64
 	s0 = m.kotlinIsNaN(d+1, this)
@@ -24470,60 +23492,36 @@ func (m *Instance) kotlinToBits2(d int, this float64) int64 {
 }
 
 func (m *Instance) kotlinToRawBits(d int, this float64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return int64(math.Float64bits(this))
 }
 
 func (m *Instance) kotlinIsFinite(d int, this float64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int64
 	s0 = m.kotlinToRawBits(d+1, this)
 	return rt.B2I((s0 & int64(9223372036854775807)) < int64(9218868437227405312))
 }
 
 func (m *Instance) kotlinIsNaN(d int, this float64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return rt.B2I(rt.B2I(this == this) == 0)
 }
 
 func (m *Instance) kotlinCountLeadingZeroBits(d int, this int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinLongToIntImpl(d+1, int64(bits.LeadingZeros64(uint64(this))))
 }
 
 func (m *Instance) kotlinFromBits(d int, this *KotlinCompanion8, bits_ int64) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return math.Float64frombits(uint64(bits_))
 }
 
 func (m *Instance) kotlinIsNaN2(d int, this float32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return rt.B2I(rt.B2I(this == this) == 0)
 }
 
 func (m *Instance) kotlinToRawBits2(d int, this float32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return int32(math.Float32bits(this))
 }
 
 func (m *Instance) kotlinTakeHighestOneBit(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	if this == int32(0) {
 		s0 = int32(0)
@@ -24534,9 +23532,6 @@ func (m *Instance) kotlinTakeHighestOneBit(d int, this int32) int32 {
 }
 
 func (m *Instance) kotlinUnitInit(d int, this *KotlinUnit) *KotlinUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinUnit
 	if this == nil {
 		s0 = NewKotlinUnit(rt.ViewAs[ClassVTable](m.g217), (*AnyArray)(nil), m.g320, int32(0))
@@ -24546,23 +23541,14 @@ func (m *Instance) kotlinUnitInit(d int, this *KotlinUnit) *KotlinUnit {
 }
 
 func (m *Instance) kotlinUnitToString(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.stringLiteralLatin1(d+1, int32(169))
 }
 
 func (m *Instance) kotlinUnitGetInstance(d int) *KotlinUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g44
 }
 
 func (m *Instance) kotlinObjectInitializer8(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinUnit
 	s0 = m.kotlinUnitInit(d+1, (*KotlinUnit)(nil))
 	m.g44 = s0
@@ -24596,16 +23582,10 @@ func (m *Instance) kotlinCollectionsResetRange(d int, this *KotlinArray, fromInd
 }
 
 func (m *Instance) kotlinMathSqrt(d int, x float64) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return rt.F64Sqrt(x)
 }
 
 func (m *Instance) kotlinMathGetSign(d int, this int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, tmp0_, tmp0__, this__, this___, s1, s0, s2 int64
 	var tmp2, bitCount, tmp2_, bitCount_ int32
 	tmp0 = this
@@ -24634,9 +23614,6 @@ B3:
 }
 
 func (m *Instance) kotlinMathAbs(d int, n int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this, s0 int64
 	if n < int64(0) {
 		tmp0 = n
@@ -24703,9 +23680,6 @@ func (m *Instance) kotlinWasmInternalKClassImplGetQualifiedName(d int, this *Kot
 }
 
 func (m *Instance) kotlinWasmInternalKClassImplEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinWasmInternalKClassImpl
 	var s0 int32
 	var s0_1, s1 any
@@ -24774,9 +23748,6 @@ func (m *Instance) kotlinWasmInternalKClassImplToString(d int, this *KotlinAny) 
 }
 
 func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetSimpleName(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinWasmInternalKClassInterfaceImpl
 	var s0 *KotlinWasmInternalTypeInfoData
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinWasmInternalKClassInterfaceImpl)) {
@@ -24788,9 +23759,6 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetSimpleName(d int, thi
 }
 
 func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetSimpleName2(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinWasmInternalKClassInterfaceImplGetSimpleName(d+1, this)
 }
 
@@ -24849,9 +23817,6 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplGetQualifiedName2(d int,
 }
 
 func (m *Instance) kotlinWasmInternalKClassInterfaceImplEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinWasmInternalKClassInterfaceImpl
 	var s0 int32
 	var s0_1, s1 *KotlinWasmInternalTypeInfoData
@@ -24885,9 +23850,6 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplEquals(d int, this *Kotl
 }
 
 func (m *Instance) kotlinWasmInternalKClassInterfaceImplHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinWasmInternalKClassInterfaceImpl
 	var s0 *KotlinWasmInternalTypeInfoData
 	var s0_1 int64
@@ -24917,16 +23879,10 @@ func (m *Instance) kotlinWasmInternalKClassInterfaceImplToString(d int, this *Ko
 }
 
 func (m *Instance) kotlinWasmInternalGetKClassFromExpression(d int, e_ *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinWasmInternalGetKClassForObject(d+1, e_)
 }
 
 func (m *Instance) kotlinTextCharacterCodingExceptionInit(d int, this *KotlinTextCharacterCodingException, message *KotlinString) *KotlinTextCharacterCodingException {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinTextCharacterCodingException
 	var s0_1 *KotlinException
 	_ = s0_1
@@ -24939,9 +23895,6 @@ func (m *Instance) kotlinTextCharacterCodingExceptionInit(d int, this *KotlinTex
 }
 
 func (m *Instance) kotlinTextCompareTo(d int, this *KotlinString, other *KotlinString, ignoreCase int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var n1, n2, min_, tmp0, tmp2, a, b, inductionVariable, index, thisChar, otherChar, s0 int32
 	m.kotlinTextInitPropertiesStringsWasmKt(d + 1)
 	if ignoreCase != 0 {
@@ -25014,9 +23967,6 @@ func (m *Instance) kotlinTextEncodeToByteArray(d int, this *KotlinString) *Kotli
 }
 
 func (m *Instance) kotlinTextSamKotlinComparator0Init(d int, this *KotlinTextSamKotlinComparator0, function *KotlinAny) *KotlinTextSamKotlinComparator0 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinTextSamKotlinComparator0
 	if this == nil {
 		s0 = NewKotlinTextSamKotlinComparator0(rt.ViewAs[ClassVTable](m.g221), m.g266, m.g323, int32(0), (*KotlinAny)(nil))
@@ -25027,9 +23977,6 @@ func (m *Instance) kotlinTextSamKotlinComparator0Init(d int, this *KotlinTextSam
 }
 
 func (m *Instance) kotlinTextSamKotlinComparator0GetFunctionDelegate(d int, this *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinTextSamKotlinComparator0
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinTextSamKotlinComparator0)) {
 		panic(rt.ErrCast)
@@ -25115,9 +24062,6 @@ func (m *Instance) kotlinTextSamKotlinComparator0HashCode(d int, this *KotlinAny
 }
 
 func (m *Instance) kotlinTextFunction2Init(d int, this *KotlinTextFunction2, func_ *rt.Func) *KotlinTextFunction2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinTextFunction2
 	if this == nil {
 		s0 = NewKotlinTextFunction2(rt.ViewAs[ClassVTable](m.g222), m.g267, m.g324, int32(0), (*rt.Func)(nil))
@@ -25174,9 +24118,6 @@ func (m *Instance) kotlinTextSTRINGCASEINSENSITIVEORDERLambdaInvoke(d int, a *Ko
 }
 
 func (m *Instance) kotlinTextInitPropertiesStringsWasmKt(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp *KotlinAny
 	var s0 int32
 	var s0_2 *KotlinTextSamKotlinComparator0
@@ -25192,9 +24133,6 @@ func (m *Instance) kotlinTextInitPropertiesStringsWasmKt(d int) {
 }
 
 func (m *Instance) kotlinTextObjectInitializer(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinTextFunction2
 	s0 = m.kotlinTextFunction2Init(d+1, (*KotlinTextFunction2)(nil), m.funcs[558])
 	m.g46 = rt.ViewAs[KotlinAny](s0)
@@ -25202,9 +24140,6 @@ func (m *Instance) kotlinTextObjectInitializer(d int) {
 }
 
 func (m *Instance) kotlinTextGetREPLACEMENTBYTESEQUENCE(d int) *KotlinByteArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTextInitPropertiesUtf8EncodingKt(d + 1)
 	return m.g48
 }
@@ -25516,9 +24451,6 @@ B2:
 }
 
 func (m *Instance) kotlinTextInitPropertiesUtf8EncodingKt(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, elements, s0_1 *KotlinByteArray
 	var s0 int32
 	var s4 *KotlinWasmInternalWasmByteArray
@@ -25539,9 +24471,6 @@ func (m *Instance) kotlinTextInitPropertiesUtf8EncodingKt(d int) {
 }
 
 func (m *Instance) kotlinTimeStaticInit(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	var s1 *KotlinString
 	var s0_1 *KotlinTimeDurationUnit
@@ -25575,9 +24504,6 @@ func (m *Instance) kotlinTimeStaticInit(d int) {
 }
 
 func (m *Instance) kotlinTimeDurationUnitInit(d int, this *KotlinTimeDurationUnit, name *KotlinString, ordinal int32, scale float64) *KotlinTimeDurationUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinTimeDurationUnit
 	var s0_1 *KotlinEnum
 	_ = s0_1
@@ -25591,9 +24517,6 @@ func (m *Instance) kotlinTimeDurationUnitInit(d int, this *KotlinTimeDurationUni
 }
 
 func (m *Instance) kotlinTimeConvertDurationUnit(d int, value int64, sourceUnit *KotlinTimeDurationUnit, targetUnit *KotlinTimeDurationUnit) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var sourceCompareTarget int32
 	var scale, result, s0_2, s1_1 int64
 	var s0, s1, s2 float64
@@ -25632,9 +24555,6 @@ func (m *Instance) kotlinTimeConvertDurationUnit(d int, value int64, sourceUnit 
 }
 
 func (m *Instance) kotlinTimeConvertDurationUnitOverflow(d int, value int64, sourceUnit *KotlinTimeDurationUnit, targetUnit *KotlinTimeDurationUnit) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var sourceCompareTarget int32
 	var s0, s1, s2 float64
 	var s1_1, s0_2 int64
@@ -25662,65 +24582,41 @@ func (m *Instance) kotlinTimeConvertDurationUnitOverflow(d int, value int64, sou
 }
 
 func (m *Instance) kotlinTimeDurationUnitNANOSECONDSGetInstance(d int) *KotlinTimeDurationUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTimeStaticInit(d + 1)
 	return m.g51
 }
 
 func (m *Instance) kotlinTimeDurationUnitMICROSECONDSGetInstance(d int) *KotlinTimeDurationUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTimeStaticInit(d + 1)
 	return m.g52
 }
 
 func (m *Instance) kotlinTimeDurationUnitMILLISECONDSGetInstance(d int) *KotlinTimeDurationUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTimeStaticInit(d + 1)
 	return m.g53
 }
 
 func (m *Instance) kotlinTimeDurationUnitSECONDSGetInstance(d int) *KotlinTimeDurationUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTimeStaticInit(d + 1)
 	return m.g54
 }
 
 func (m *Instance) kotlinTimeDurationUnitMINUTESGetInstance(d int) *KotlinTimeDurationUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTimeStaticInit(d + 1)
 	return m.g55
 }
 
 func (m *Instance) kotlinTimeDurationUnitHOURSGetInstance(d int) *KotlinTimeDurationUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTimeStaticInit(d + 1)
 	return m.g56
 }
 
 func (m *Instance) kotlinTimeDurationUnitDAYSGetInstance(d int) *KotlinTimeDurationUnit {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinTimeStaticInit(d + 1)
 	return m.g57
 }
 
 func (m *Instance) kotlinUintCompare(d int, v1 int32, v2 int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, tmp2, x, y, s0 int32
 	tmp0 = v1
 	tmp2 = v2
@@ -25733,9 +24629,6 @@ B1:
 }
 
 func (m *Instance) kotlinUlongCompare(d int, v1 int64, v2 int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, tmp2, x, y int64
 	var s0 int32
 	tmp0 = v1
@@ -25749,23 +24642,14 @@ B1:
 }
 
 func (m *Instance) kotlinWasmUnsafePointerInitImpl(d int, address int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return address
 }
 
 func (m *Instance) kotlinWasmUnsafePointerGetAddressImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinWasmUnsafePointerPlusImpl(d int, this int32, other int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, tmp2, tmp0_, this_, this__, other_, s0, s1 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
 	tmp0 = s0
@@ -25788,9 +24672,6 @@ B2:
 }
 
 func (m *Instance) kotlinWasmUnsafePointerLoadByteImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
 	tmp0 = s0
@@ -25803,9 +24684,6 @@ B1:
 }
 
 func (m *Instance) kotlinWasmUnsafePointerLoadShortImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
 	tmp0 = s0
@@ -25818,9 +24696,6 @@ B1:
 }
 
 func (m *Instance) kotlinWasmUnsafePointerLoadIntImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
 	tmp0 = s0
@@ -25833,9 +24708,6 @@ B1:
 }
 
 func (m *Instance) kotlinWasmUnsafePointerLoadLongImpl(d int, this int32) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int32
 	var s0_1 int64
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
@@ -25849,9 +24721,6 @@ B1:
 }
 
 func (m *Instance) kotlinWasmUnsafePointerStoreByteImpl(d int, this int32, value int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
 	tmp0 = s0
@@ -25864,9 +24733,6 @@ B1:
 }
 
 func (m *Instance) kotlinWasmUnsafePointerStoreIntImpl(d int, this int32, value int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
 	tmp0 = s0
@@ -25879,9 +24745,6 @@ B1:
 }
 
 func (m *Instance) kotlinWasmUnsafePointerStoreLongImpl(d int, this int32, value int64) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this_, s0 int32
 	s0 = m.kotlinWasmUnsafePointerGetAddressImpl(d+1, this)
 	tmp0 = s0
@@ -25908,16 +24771,10 @@ func (m *Instance) kotlinWasmUnsafePointerToStringImpl(d int, this int32) *Kotli
 }
 
 func (m *Instance) kotlinWasmUnsafePointerHashCodeImpl(d int, this int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.kotlinUIntHashCodeImpl(d+1, this)
 }
 
 func (m *Instance) kotlinWasmUnsafePointerEqualsImpl(d int, this int32, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0OtherWithCast, s0 int32
 	if other == nil {
 		s0 = int32(0)
@@ -25951,9 +24808,6 @@ func (m *Instance) kotlinWasmUnsafePointerToString(d int, this *KotlinAny) *Kotl
 }
 
 func (m *Instance) kotlinWasmUnsafePointerHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinWasmUnsafePointer) {
 		panic(rt.ErrCast)
@@ -25965,9 +24819,6 @@ func (m *Instance) kotlinWasmUnsafePointerHashCode(d int, this *KotlinAny) int32
 }
 
 func (m *Instance) kotlinWasmUnsafePointerEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, s0 int32
 	if !(this != nil && rt.ObjRTT(this) == rttKotlinWasmUnsafePointer) {
 		panic(rt.ErrCast)
@@ -25979,9 +24830,6 @@ func (m *Instance) kotlinWasmUnsafePointerEquals(d int, this *KotlinAny, other *
 }
 
 func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorInit(d int, this *KotlinWasmUnsafeScopedMemoryAllocator, startAddress int32, parent *KotlinWasmUnsafeScopedMemoryAllocator) *KotlinWasmUnsafeScopedMemoryAllocator {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmUnsafeScopedMemoryAllocator
 	var s0_1 *KotlinWasmUnsafeMemoryAllocator
 	_ = s0_1
@@ -25998,9 +24846,6 @@ func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorInit(d int, this *Kotlin
 }
 
 func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorAllocate(d int, this *KotlinAny, size int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinWasmUnsafeScopedMemoryAllocator
 	var tmp0, value, tmp0_, value_, align, result, tmp0__, this_, tmp0___, value__, currentMaxSize, numPagesToGrow, tmp0______, value___, tmp0_______, this__, s0, s1 int32
 	var message, message_, message__, tmp0____, message___, tmp0_____, message____, s0_1, s1_1 *KotlinString
@@ -26117,9 +24962,6 @@ B19:
 }
 
 func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorCreateChild(d int, this *KotlinWasmUnsafeScopedMemoryAllocator) *KotlinWasmUnsafeScopedMemoryAllocator {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var child *KotlinWasmUnsafeScopedMemoryAllocator
 	var s1 int32
 	s1 = this.AvailableAddress
@@ -26129,9 +24971,6 @@ func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorCreateChild(d int, this 
 }
 
 func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorDestroy(d int, this *KotlinWasmUnsafeScopedMemoryAllocator) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0SafeReceiver *KotlinWasmUnsafeScopedMemoryAllocator
 	this.Destroyed = int8(1)
 	tmp0SafeReceiver = this.Parent
@@ -26143,16 +24982,10 @@ func (m *Instance) kotlinWasmUnsafeScopedMemoryAllocatorDestroy(d int, this *Kot
 }
 
 func (m *Instance) kotlinWasmUnsafeMemoryAllocatorInit(d int, this *KotlinWasmUnsafeMemoryAllocator) *KotlinWasmUnsafeMemoryAllocator {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return this
 }
 
 func (m *Instance) kotlinWasmUnsafeCreateAllocatorInTheNewScope(d int) *KotlinWasmUnsafeScopedMemoryAllocator {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, value int32
 	var message, s0_1 *KotlinString
 	var allocator, tmp1ElvisLhs, tmp0SafeReceiver, s0 *KotlinWasmUnsafeScopedMemoryAllocator
@@ -26192,9 +25025,6 @@ B1:
 }
 
 func (m *Instance) kotlinCompanionInit9(d int, this *KotlinCompanion9) *KotlinCompanion9 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion9
 	if this == nil {
 		s0 = NewKotlinCompanion9(rt.ViewAs[ClassVTable](m.g226), (*AnyArray)(nil), m.g327, int32(0))
@@ -26204,9 +25034,6 @@ func (m *Instance) kotlinCompanionInit9(d int, this *KotlinCompanion9) *KotlinCo
 }
 
 func (m *Instance) kotlinStringGetLength(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinString
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinString)) {
 		panic(rt.ErrCast)
@@ -26233,9 +25060,6 @@ func (m *Instance) kotlinStringPlus(d int, this *KotlinString, other *KotlinAny)
 }
 
 func (m *Instance) kotlinStringGet(d int, this *KotlinAny, index int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinString
 	var s1 int32
 	var s0 *KotlinWasmInternalWasmCharArray
@@ -26250,9 +25074,6 @@ func (m *Instance) kotlinStringGet(d int, this *KotlinAny, index int32) int32 {
 }
 
 func (m *Instance) kotlinStringFoldChars(d int, this *KotlinString) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var stringLength, currentStartIndex, currentLeftStringLen, tmp4, tmp6, tmp8, sourceIndex, destinationIndex, length, tmp0_, value, s0 int32
 	var newArray, currentLeftStringChars, tmp0, tmp2, source, destination, s0_1 *KotlinWasmInternalWasmCharArray
 	var currentLeftString, s1 *KotlinString
@@ -26310,9 +25131,6 @@ B4:
 }
 
 func (m *Instance) kotlinStringGetChars(d int, this *KotlinString) *KotlinWasmInternalWasmCharArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinString
 	s0 = this.LeftIfInSum
 	if rt.B2I(s0 == nil) == 0 {
@@ -26401,9 +25219,6 @@ func (m *Instance) kotlinStringCheckStringBounds(d int, this *KotlinString, star
 }
 
 func (m *Instance) kotlinStringCompareTo(d int, this *KotlinAny, other *KotlinString) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinString
 	var thisChars, otherChars, s0 *KotlinWasmInternalWasmCharArray
 	var thisLength, otherLength, minimumLength, tmp0, times, inductionVariable, index, tmp0_, it, l, r_, tmp0__, tmp2, this_, other_, tmp0___, this__, tmp0____, this___, s0_1, s1 int32
@@ -26507,9 +25322,6 @@ func (m *Instance) kotlinStringCompareTo2(d int, this *KotlinAny, other *KotlinA
 }
 
 func (m *Instance) kotlinStringEquals(d int, this *KotlinAny, other *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This, otherString, tmp0ElvisLhs, s0_1 *KotlinString
 	var thisLength, otherLength, thisHash, otherHash, tmp0, times, inductionVariable, index, tmp0_, it, s0, s1 int32
 	var thisChars, otherChars, s0_2 *KotlinWasmInternalWasmCharArray
@@ -26611,9 +25423,6 @@ B10:
 }
 
 func (m *Instance) kotlinStringToString(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinString
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttKotlinString)) {
 		panic(rt.ErrCast)
@@ -26623,9 +25432,6 @@ func (m *Instance) kotlinStringToString(d int, this *KotlinAny) *KotlinString {
 }
 
 func (m *Instance) kotlinStringHashCode(d int, this *KotlinAny) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinString
 	var thisLength, hash, tmp0, times, inductionVariable, index, tmp0_, it, tmp0__, this_, s0, s1 int32
 	var thisChars *KotlinWasmInternalWasmCharArray
@@ -26684,9 +25490,6 @@ B3:
 }
 
 func (m *Instance) kotlinObjectInitializer9(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinCompanion9
 	s0 = m.kotlinCompanionInit9(d+1, (*KotlinCompanion9)(nil))
 	m.g60 = s0
@@ -26694,9 +25497,6 @@ func (m *Instance) kotlinObjectInitializer9(d int) {
 }
 
 func (m *Instance) kotlinThrowableInit(d int, this *KotlinThrowable, message *KotlinString, cause *KotlinThrowable) *KotlinThrowable {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinThrowable
 	if this == nil {
 		s0 = NewKotlinThrowable(rt.ViewAs[ClassVTable](m.g228), (*AnyArray)(nil), m.g329, int32(0), (*KotlinString)(nil), (*KotlinThrowable)(nil), (*KotlinAny)(nil))
@@ -26709,9 +25509,6 @@ func (m *Instance) kotlinThrowableInit(d int, this *KotlinThrowable, message *Ko
 }
 
 func (m *Instance) kotlinThrowableGetMessage(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *KotlinThrowable
 	if !(this == nil || (this != nil && rt.ObjRTT(this).SubOf(rttKotlinThrowable))) {
 		panic(rt.ErrCast)
@@ -26721,9 +25518,6 @@ func (m *Instance) kotlinThrowableGetMessage(d int, this *KotlinAny) *KotlinStri
 }
 
 func (m *Instance) kotlinThrowableInit2(d int, this *KotlinThrowable, message *KotlinString) *KotlinThrowable {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinThrowable
 	if this == nil {
 		s0 = NewKotlinThrowable(rt.ViewAs[ClassVTable](m.g228), (*AnyArray)(nil), m.g329, int32(0), (*KotlinString)(nil), (*KotlinThrowable)(nil), (*KotlinAny)(nil))
@@ -26734,9 +25528,6 @@ func (m *Instance) kotlinThrowableInit2(d int, this *KotlinThrowable, message *K
 }
 
 func (m *Instance) kotlinThrowableInit3(d int, this *KotlinThrowable) *KotlinThrowable {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinThrowable
 	if this == nil {
 		s0 = NewKotlinThrowable(rt.ViewAs[ClassVTable](m.g228), (*AnyArray)(nil), m.g329, int32(0), (*KotlinString)(nil), (*KotlinThrowable)(nil), (*KotlinAny)(nil))
@@ -26779,9 +25570,6 @@ func (m *Instance) kotlinThrowableToString(d int, this *KotlinAny) *KotlinString
 }
 
 func (m *Instance) kotlinWasmInternalUtoa32(d int, inputValue int32) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var decimals int32
 	var buf *KotlinWasmInternalWasmCharArray
 	var s0 *KotlinString
@@ -26797,9 +25585,6 @@ func (m *Instance) kotlinWasmInternalUtoa32(d int, inputValue int32) *KotlinStri
 }
 
 func (m *Instance) kotlinWasmInternalUtoa64(d int, inputValue int64) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, this, tmp0_, tmp2_, this__, other_, tmp0___, this___, tmp0____, this____, s0_1, s1 int64
 	var tmp2, other, tmp0__, this_, decimals, s0 int32
 	var buf *KotlinWasmInternalWasmCharArray
@@ -26933,9 +25718,6 @@ B5:
 }
 
 func (m *Instance) kotlinWasmInternalUtoaDecSimple(d int, buffer *KotlinWasmInternalWasmCharArray, numInput int32, offsetInput int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var num, offset, t, tmp0, tmp2, this, other, r_, tmp0_, tmp2_, this_, other_, unary, tmp0__, this__, tmp0___, tmp2__, this___, other__, s0, s1, s2 int32
 	var s0_1 *KotlinWasmInternalWasmCharArray
 	num = numInput
@@ -26989,9 +25771,6 @@ L1:
 }
 
 func (m *Instance) kotlinWasmInternalDecimalCount64High(d int, value int64) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, tmp2, this, other, tmp0_, tmp2_, this_, other_, tmp0__, tmp2__, this__, other__, tmp0___, tmp2___, this___, other___, tmp0____, tmp2____, this____, other____, tmp0_____, tmp2_____, this_____, other_____, tmp0______, tmp2______, this______, other______, tmp0_______, tmp2_______, this_______, other_______, tmp0________, tmp2________, this________, other________, tmp0_________, tmp2_________, this_________, other_________, s0, s1, s2 int64
 	var s0_1, s1_1 int32
 	tmp0 = value
@@ -27107,9 +25886,6 @@ B1:
 }
 
 func (m *Instance) kotlinWasmInternalUtoaDecSimple64(d int, buffer *KotlinWasmInternalWasmCharArray, numInput int64, offsetInput int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var num, t, tmp0, this, tmp0_, tmp2_, this__, other_, r_, tmp0___, this___, tmp0____, tmp2___, this_____, other___, tmp0______, this______, tmp0_______, this_______, tmp0________, tmp2_____, this_________, other_____, s0_1, s2, s1_1 int64
 	var offset, tmp2, other, tmp0__, this_, tmp2__, other__, tmp0_____, this____, unary, tmp2____, other____, tmp0_________, this________, s0, s1, s2_1 int32
 	var s0_2 *KotlinWasmInternalWasmCharArray
@@ -27220,9 +25996,6 @@ func (m *Instance) kotlinWasmWasiErrorInit(d int, this *KotlinWasmWasiError, err
 }
 
 func (m *Instance) kotlinWasmStaticInit(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	var s1 *KotlinString
 	var s0_1 *KotlinWasmWasiErrorCode
@@ -27466,9 +26239,6 @@ func (m *Instance) kotlinWasmStaticInit(d int) {
 }
 
 func (m *Instance) kotlinWasmValues(d int) *KotlinArray {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s4, s5, s6, s7, s8, s9, s10, s11, s12, s13, s14, s15, s16, s17, s18, s19, s20, s21, s22, s23, s24, s25, s26, s27, s28, s29, s30, s31, s32, s33, s34, s35, s36, s37, s38, s39, s40, s41, s42, s43, s44, s45, s46, s47, s48, s49, s50, s51, s52, s53, s54, s55, s56, s57, s58, s59, s60, s61, s62, s63, s64, s65, s66, s67, s68, s69, s70, s71, s72, s73, s74, s75, s76, s77, s78, s79, s80 *KotlinWasmWasiErrorCode
 	var s4_1 *KotlinWasmInternalWasmAnyArray
 	m.kotlinWasmStaticInit(d + 1)
@@ -27554,9 +26324,6 @@ func (m *Instance) kotlinWasmValues(d int) *KotlinArray {
 }
 
 func (m *Instance) kotlinWasmGetEntries(d int) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinAny
 	var s0_1 *KotlinArray
 	m.kotlinWasmStaticInit(d + 1)
@@ -27571,9 +26338,6 @@ func (m *Instance) kotlinWasmGetEntries(d int) *KotlinAny {
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeInit(d int, this *KotlinWasmWasiErrorCode, name *KotlinString, ordinal int32) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinWasmWasiErrorCode
 	var s0_1 *KotlinEnum
 	_ = s0_1
@@ -27586,617 +26350,386 @@ func (m *Instance) kotlinWasmWasiErrorCodeInit(d int, this *KotlinWasmWasiErrorC
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeSUCCESSGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g62
 }
 
 func (m *Instance) kotlinWasmWasiErrorCode2BIGGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g63
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeACCESGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g64
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeADDRINUSEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g65
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeADDRNOTAVAILGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g66
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeAFNOSUPPORTGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g67
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeAGAINGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g68
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeALREADYGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g69
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeBADFGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g70
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeBADMSGGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g71
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeBUSYGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g72
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeCANCELEDGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g73
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeCHILDGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g74
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeCONNABORTEDGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g75
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeCONNREFUSEDGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g76
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeCONNRESETGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g77
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeDEADLKGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g78
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeDESTADDRREQGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g79
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeDOMGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g80
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeDQUOTGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g81
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeEXISTGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g82
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeFAULTGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g83
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeFBIGGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g84
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeHOSTUNREACHGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g85
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeIDRMGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g86
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeILSEQGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g87
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeINPROGRESSGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g88
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeINTRGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g89
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeINVALGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g90
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeIOGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g91
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeISCONNGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g92
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeISDIRGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g93
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeLOOPGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g94
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeMFILEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g95
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeMLINKGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g96
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeMSGSIZEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g97
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeMULTIHOPGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g98
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNAMETOOLONGGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g99
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNETDOWNGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g100
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNETRESETGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g101
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNETUNREACHGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g102
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNFILEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g103
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOBUFSGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g104
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNODEVGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g105
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOENTGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g106
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOEXECGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g107
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOLCKGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g108
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOLINKGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g109
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOMEMGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g110
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOMSGGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g111
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOPROTOOPTGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g112
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOSPCGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g113
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOSYSGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g114
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTCONNGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g115
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTDIRGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g116
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTEMPTYGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g117
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTRECOVERABLEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g118
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTSOCKGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g119
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTSUPGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g120
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTTYGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g121
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNXIOGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g122
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeOVERFLOWGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g123
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeOWNERDEADGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g124
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodePERMGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g125
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodePIPEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g126
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodePROTOGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g127
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodePROTONOSUPPORTGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g128
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodePROTOTYPEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g129
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeRANGEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g130
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeROFSGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g131
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeSPIPEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g132
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeSRCHGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g133
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeSTALEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g134
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeTIMEDOUTGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g135
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeTXTBSYGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g136
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeXDEVGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g137
 }
 
 func (m *Instance) kotlinWasmWasiErrorCodeNOTCAPABLEGetInstance(d int) *KotlinWasmWasiErrorCode {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	m.kotlinWasmStaticInit(d + 1)
 	return m.g138
 }
@@ -28772,9 +27305,6 @@ B3:
 }
 
 func (m *Instance) kotlinWasmInternalGetKClassForObject(d int, obj *KotlinAny) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s4 *RTTI
 	var s0 *KotlinWasmInternalKClassImpl
 	s4 = obj.Rtti
@@ -28796,9 +27326,6 @@ func (m *Instance) kotlinTextInsertInt(d int, array *KotlinCharArray, start int3
 }
 
 func (m *Instance) kotlinTextUnsafeStringFromCharArray(d int, array *KotlinCharArray, start int32, size int32) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var copy_, tmp0, tmp2, source, destination, s0 *KotlinWasmInternalWasmCharArray
 	var tmp4, tmp6, tmp8, sourceIndex, destinationIndex, length int32
 	var s0_1 *KotlinUnit
@@ -28826,9 +27353,6 @@ B1:
 }
 
 func (m *Instance) kotlinTextInsertString2(d int, array *KotlinCharArray, destinationIndex int32, value *KotlinString, sourceIndex int32, count int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0, tmp2, source, destination, s0 *KotlinWasmInternalWasmCharArray
 	var tmp0_, this *KotlinString
 	var tmp4, tmp6, tmp8, sourceIndex_, destinationIndex_, length int32
@@ -28890,9 +27414,6 @@ B1:
 }
 
 func (m *Instance) kotlinTimeMonotonicTimeSourceToString(d int, this *KotlinAny) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.stringLiteralLatin1(d+1, int32(288))
 }
 
@@ -29068,18 +27589,12 @@ B1:
 }
 
 func (m *Instance) kotlinCreateString(d int, this *KotlinWasmInternalWasmCharArray) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s5 int32
 	s5 = int32(len(this.Elems))
 	return NewKotlinString(rt.ViewAs[ClassVTable](m.g227), m.g269, m.g328, int32(0), (*KotlinString)(nil), s5, this)
 }
 
 func (m *Instance) nodeInit(d int, this *Node, left *Node, right *Node) *Node {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Node
 	if this == nil {
 		s0 = NewNode(rt.ViewAs[ClassVTable](m.g232), (*AnyArray)(nil), m.g331, int32(0), (*Node)(nil), (*Node)(nil))
@@ -29190,9 +27705,6 @@ func (m *Instance) check(d int, n *Node) int32 {
 }
 
 func (m *Instance) binaryTrees(d int, maxDepth int32) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var total, tmp0, this, tmp0_, this_, s1, s0_2 int64
 	var long, s0 *Node
 	var d_, iters, inductionVariable, i, tmp2, other, tmp2_, other_, s0_1 int32
@@ -29248,9 +27760,6 @@ B8:
 }
 
 func (m *Instance) bodyInit(d int, this *Body, x float64, y float64, z float64, vx float64, vy float64, vz float64, m_ float64) *Body {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Body
 	if this == nil {
 		s0 = NewBody(rt.ViewAs[ClassVTable](m.g233), (*AnyArray)(nil), m.g332, int32(0), float64(0), float64(0), float64(0), float64(0), float64(0), float64(0), float64(0))
@@ -29535,9 +28044,6 @@ B24:
 }
 
 func (m *Instance) circleInit(d int, this *Circle, r_ float64) *Circle {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Circle
 	if this == nil {
 		s0 = NewCircle(rt.ViewAs[ClassVTable](m.g234), m.g272, m.g333, int32(0), float64(0))
@@ -29548,9 +28054,6 @@ func (m *Instance) circleInit(d int, this *Circle, r_ float64) *Circle {
 }
 
 func (m *Instance) circleArea(d int, this *KotlinAny) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *Circle
 	var s1, s0 float64
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttCircle)) {
@@ -29565,9 +28068,6 @@ func (m *Instance) circleArea(d int, this *KotlinAny) float64 {
 }
 
 func (m *Instance) rectInit(d int, this *Rect, w float64, h float64) *Rect {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Rect
 	if this == nil {
 		s0 = NewRect(rt.ViewAs[ClassVTable](m.g235), m.g273, m.g334, int32(0), float64(0), float64(0))
@@ -29579,9 +28079,6 @@ func (m *Instance) rectInit(d int, this *Rect, w float64, h float64) *Rect {
 }
 
 func (m *Instance) rectArea(d int, this *KotlinAny) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *Rect
 	var s0, s1 float64
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttRect)) {
@@ -29595,9 +28092,6 @@ func (m *Instance) rectArea(d int, this *KotlinAny) float64 {
 }
 
 func (m *Instance) triInit(d int, this *Tri, b float64, h float64) *Tri {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Tri
 	if this == nil {
 		s0 = NewTri(rt.ViewAs[ClassVTable](m.g236), m.g274, m.g335, int32(0), float64(0), float64(0))
@@ -29609,9 +28103,6 @@ func (m *Instance) triInit(d int, this *Tri, b float64, h float64) *Tri {
 }
 
 func (m *Instance) triArea(d int, this *KotlinAny) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var tmp0This *Tri
 	var s1, s0 float64
 	if !(this == nil || (this != nil && rt.ObjRTT(this) == rttTri)) {
@@ -30127,9 +28618,6 @@ B1:
 }
 
 func (m *Instance) mainLambdaInvoke(d int) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s4 int64
 	var s0 *KotlinLong
 	s4 = m.binaryTrees(d+1, int32(16))
@@ -30171,9 +28659,6 @@ func (m *Instance) mainLambdaInvoke4(d int) *KotlinAny {
 }
 
 func (m *Instance) mainLambdaInvoke5(d int) *KotlinAny {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s4 int32
 	var s0 *KotlinInt
 	s4 = m.fib(d+1, int32(32))
@@ -30182,9 +28667,6 @@ func (m *Instance) mainLambdaInvoke5(d int) *KotlinAny {
 }
 
 func (m *Instance) objectInitializer(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinFunction0
 	s0 = m.kotlinFunction0Init(d+1, (*KotlinFunction0)(nil), m.funcs[746])
 	m.g142 = rt.ViewAs[KotlinAny](s0)
@@ -30200,9 +28682,6 @@ func (m *Instance) objectInitializer(d int) {
 }
 
 func (m *Instance) fieldInitialize(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *LongArray
 	s0 = NewLongArray(rt.DecI64(rt.DataBytes(m.data1, int32(0), int32(305), 8)))
 	m.g147 = s0
@@ -30227,9 +28706,6 @@ func (m *Instance) fieldInitialize(d int) {
 }
 
 func (m *Instance) stringLiteralLatin1(d int, poolId int32) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var startAddress, length, intIterator, s2 int32
 	var addressAndLength int64
 	var temporary, s0 *KotlinString
@@ -30266,9 +28742,6 @@ B1:
 }
 
 func (m *Instance) stringLiteralUtf16(d int, poolId int32) *KotlinString {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var startAddress, length int32
 	var addressAndLength int64
 	var temporary, s0 *KotlinString
@@ -30292,9 +28765,6 @@ B1:
 }
 
 func (m *Instance) initializeModule(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *KotlinUnit
 	_ = s0
 	s0 = m.kotlinUnitGetInstance(d + 1)

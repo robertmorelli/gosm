@@ -18,7 +18,7 @@ var (
 
 var rttStruct0 = rt.NewRTT(rt.KStruct, nil, false, "g25931a91152659cab017ec01.0", func(p unsafe.Pointer) any { return (*Struct0)(p) })
 
-// Struct0 is the wasm struct type sub open () struct(i32).
+// Struct0 is the wasm struct type (sub (struct (field i32))).
 type Struct0 struct {
 	rt.Object
 	F0 int32
@@ -40,7 +40,7 @@ func newStruct0Default() *Struct0 {
 
 var rttStruct1 = rt.NewRTT(rt.KStruct, rttStruct0, false, "gd9cf8fe685caf8971233a112.0", func(p unsafe.Pointer) any { return (*Struct1)(p) })
 
-// Struct1 is the wasm struct type sub open (<g25931a91152659cab017ec01.0>) struct(i32,mut i32).
+// Struct1 is the wasm struct type (sub Struct0 (struct (field i32) (field (mut i32)))), a subtype of Struct0.
 type Struct1 struct {
 	Struct0
 	F1 int32
@@ -63,7 +63,7 @@ func newStruct1Default() *Struct1 {
 
 var rttStruct2 = rt.NewRTT(rt.KStruct, rttStruct1, true, "g3a6ebc1d2abfa5cda1596767.0", func(p unsafe.Pointer) any { return (*Struct2)(p) })
 
-// Struct2 is the wasm struct type sub final (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32,ref null extern).
+// Struct2 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)) (field (ref null extern)))), a subtype of Struct1.
 type Struct2 struct {
 	Struct1
 	F2 any
@@ -87,7 +87,7 @@ func newStruct2Default() *Struct2 {
 
 var rttArray3 = rt.NewRTT(rt.KArray, nil, true, "gf8c5dd5462c12ede680515f6.0", nil)
 
-// Array3 is the wasm array type sub final () array(mut ref null <g25931a91152659cab017ec01.0>).
+// Array3 is the wasm array type (array (mut (ref null $0))).
 type Array3 struct {
 	Elems []*Struct0
 }
@@ -105,7 +105,7 @@ func NewArray3(elems []*Struct0) *Array3 {
 
 var rttStruct4 = rt.NewRTT(rt.KStruct, rttStruct1, false, "g2aed357102578d3536d269d8.0", func(p unsafe.Pointer) any { return (*Struct4)(p) })
 
-// Struct4 is the wasm struct type sub open (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32).
+// Struct4 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)))), a subtype of Struct1.
 type Struct4 struct {
 	Struct1
 }
@@ -127,7 +127,7 @@ func newStruct4Default() *Struct4 {
 
 var rttStruct5 = rt.NewRTT(rt.KStruct, rttStruct1, true, "gba15f602f906d90f631aaa5a.0", func(p unsafe.Pointer) any { return (*Struct5)(p) })
 
-// Struct5 is the wasm struct type sub final (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32,mut i64,mut ref <gf8c5dd5462c12ede680515f6.0>,ref <g2aed357102578d3536d269d8.0>).
+// Struct5 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)) (field (mut i64)) (field (mut (ref $3))) (field (ref $4)))), a subtype of Struct1.
 type Struct5 struct {
 	Struct1
 	F2 int64
@@ -155,7 +155,7 @@ func newStruct5Default() *Struct5 {
 
 var rttStruct6 = rt.NewRTT(rt.KStruct, rttStruct1, true, "gd90afaf0dba01e4f11bae644.0", func(p unsafe.Pointer) any { return (*Struct6)(p) })
 
-// Struct6 is the wasm struct type sub final (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32,mut f64,mut f64,mut f64,mut f64,mut f64,mut f64,f64).
+// Struct6 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)) (field (mut f64)) (field (mut f64)) (field (mut f64)) (field (mut f64)) (field (mut f64)) (field (mut f64)) (field f64))), a subtype of Struct1.
 type Struct6 struct {
 	Struct1
 	F2 float64
@@ -191,7 +191,7 @@ func newStruct6Default() *Struct6 {
 
 var rttStruct7 = rt.NewRTT(rt.KStruct, rttStruct0, true, "g32b92959fd1effbe6769983a.0", func(p unsafe.Pointer) any { return (*Struct7)(p) })
 
-// Struct7 is the wasm struct type sub final (<g25931a91152659cab017ec01.0>) struct(i32,i64).
+// Struct7 is the wasm struct type (sub Struct0 (struct (field i32) (field i64))), a subtype of Struct0.
 type Struct7 struct {
 	Struct0
 	F1 int64
@@ -214,7 +214,7 @@ func newStruct7Default() *Struct7 {
 
 var rttStruct8 = rt.NewRTT(rt.KStruct, nil, true, "g566cec6e993d6456dd25af2e.0", nil)
 
-// Struct8 is the wasm struct type sub final () struct(mut ref <g3a6ebc1d2abfa5cda1596767.0>).
+// Struct8 is the wasm struct type (struct (field (mut (ref $2)))).
 type Struct8 struct {
 	F0 *Struct2
 }
@@ -235,7 +235,7 @@ func newStruct8Default() *Struct8 {
 
 var rttArray9 = rt.NewRTT(rt.KArray, nil, true, "gdcbb040201a6ef20fa8d7967.0", nil)
 
-// Array9 is the wasm array type sub final () array(mut ref <g2aed357102578d3536d269d8.0>).
+// Array9 is the wasm array type (array (mut (ref $4))).
 type Array9 struct {
 	Elems []*Struct4
 }
@@ -253,7 +253,7 @@ func NewArray9(elems []*Struct4) *Array9 {
 
 var rttStruct10 = rt.NewRTT(rt.KStruct, rttStruct4, true, "g1ee5eecc7d593fd45602233c.0", func(p unsafe.Pointer) any { return (*Struct10)(p) })
 
-// Struct10 is the wasm struct type sub final (<g2aed357102578d3536d269d8.0>) struct(i32,mut i32,i32,ref <gdcbb040201a6ef20fa8d7967.0>).
+// Struct10 is the wasm struct type (sub Struct4 (struct (field i32) (field (mut i32)) (field i32) (field (ref $9)))), a subtype of Struct4.
 type Struct10 struct {
 	Struct4
 	F2 int32
@@ -281,7 +281,7 @@ var rttFunc11 = rt.CanonRTT(rt.KFunc, nil, true, "g8e213553f161c7ec68f28728.0")
 
 var rttStruct12 = rt.NewRTT(rt.KStruct, rttStruct0, true, "g03e3dcd7045b3d4e4397dbfd.0", func(p unsafe.Pointer) any { return (*Struct12)(p) })
 
-// Struct12 is the wasm struct type sub final (<g25931a91152659cab017ec01.0>) struct(i32,f64).
+// Struct12 is the wasm struct type (sub Struct0 (struct (field i32) (field f64))), a subtype of Struct0.
 type Struct12 struct {
 	Struct0
 	F1 float64
@@ -304,7 +304,7 @@ func newStruct12Default() *Struct12 {
 
 var rttArray13 = rt.NewRTT(rt.KArray, nil, true, "ga797807a9518b0bf3ea5520c.0", nil)
 
-// Array13 is the wasm array type sub final () array(mut i32).
+// Array13 is the wasm array type (array (mut i32)).
 type Array13 struct {
 	Elems []int32
 }
@@ -322,7 +322,7 @@ func NewArray13(elems []int32) *Array13 {
 
 var rttStruct14 = rt.NewRTT(rt.KStruct, rttStruct1, true, "g53a8d8487707fee86cd61c22.0", func(p unsafe.Pointer) any { return (*Struct14)(p) })
 
-// Struct14 is the wasm struct type sub final (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32,mut ref <ga797807a9518b0bf3ea5520c.0>,mut i64,mut ref <gf8c5dd5462c12ede680515f6.0>,mut i64).
+// Struct14 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)) (field (mut (ref $13))) (field (mut i64)) (field (mut (ref $3))) (field (mut i64)))), a subtype of Struct1.
 type Struct14 struct {
 	Struct1
 	F2 *Array13
@@ -352,7 +352,7 @@ func newStruct14Default() *Struct14 {
 
 var rttStruct15 = rt.NewRTT(rt.KStruct, rttStruct1, true, "g934839267fa03ddf32b478d9.0", func(p unsafe.Pointer) any { return (*Struct15)(p) })
 
-// Struct15 is the wasm struct type sub final (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32,ref null extern,mut ref null <g3a6ebc1d2abfa5cda1596767.0>).
+// Struct15 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)) (field (ref null extern)) (field (mut (ref null $2))))), a subtype of Struct1.
 type Struct15 struct {
 	Struct1
 	F2 any
@@ -378,7 +378,7 @@ func newStruct15Default() *Struct15 {
 
 var rttStruct16 = rt.NewRTT(rt.KStruct, rttStruct1, true, "ge19da0a7c5dbfeed6b697934.0", func(p unsafe.Pointer) any { return (*Struct16)(p) })
 
-// Struct16 is the wasm struct type sub final (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32,ref <g2aed357102578d3536d269d8.0>,ref <gba15f602f906d90f631aaa5a.0>,i64,mut i64,mut ref null <g25931a91152659cab017ec01.0>).
+// Struct16 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)) (field (ref $4)) (field (ref $5)) (field i64) (field (mut i64)) (field (mut (ref null $0))))), a subtype of Struct1.
 type Struct16 struct {
 	Struct1
 	F2 *Struct4
@@ -410,7 +410,7 @@ func newStruct16Default() *Struct16 {
 
 var rttStruct17 = rt.NewRTT(rt.KStruct, rttStruct1, true, "gf726e6b3c84cfa8289a04dd6.0", func(p unsafe.Pointer) any { return (*Struct17)(p) })
 
-// Struct17 is the wasm struct type sub final (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32,ref <g3a6ebc1d2abfa5cda1596767.0>).
+// Struct17 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)) (field (ref $2)))), a subtype of Struct1.
 type Struct17 struct {
 	Struct1
 	F2 *Struct2
@@ -436,7 +436,7 @@ var rttFunc18 = rt.CanonRTT(rt.KFunc, nil, true, "g43e94cdfd28ec79fc089de80.0")
 
 var rttStruct19 = rt.NewRTT(rt.KStruct, nil, true, "ged04796f81746ed4911b5708.0", nil)
 
-// Struct19 is the wasm struct type sub final () struct(ref <g43e94cdfd28ec79fc089de80.0>).
+// Struct19 is the wasm struct type (struct (field (ref $18))).
 type Struct19 struct {
 	F0 *rt.Func
 }
@@ -459,7 +459,7 @@ var rttFunc20 = rt.CanonRTT(rt.KFunc, nil, true, "g594da3c271130c9a54554c03.0")
 
 var rttStruct21 = rt.NewRTT(rt.KStruct, nil, true, "g61a59e41ca602d3ddcebe65f.0", nil)
 
-// Struct21 is the wasm struct type sub final () struct(mut i64).
+// Struct21 is the wasm struct type (struct (field (mut i64))).
 type Struct21 struct {
 	F0 int64
 }
@@ -480,7 +480,7 @@ func newStruct21Default() *Struct21 {
 
 var rttStruct22 = rt.NewRTT(rt.KStruct, nil, true, "g3878dbd2d65dc428f35a2d46.0", nil)
 
-// Struct22 is the wasm struct type sub final () struct(ref null rec.0,ref null rec.0).
+// Struct22 is the wasm struct type (struct (field (ref null $22)) (field (ref null $22))).
 type Struct22 struct {
 	F0 *Struct22
 	F1 *Struct22
@@ -503,7 +503,7 @@ func newStruct22Default() *Struct22 {
 
 var rttStruct23 = rt.NewRTT(rt.KStruct, rttStruct1, false, "g6dee27b294d738e35c48b4b7.0", func(p unsafe.Pointer) any { return (*Struct23)(p) })
 
-// Struct23 is the wasm struct type sub open (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32,mut ref null <g934839267fa03ddf32b478d9.0>).
+// Struct23 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)) (field (mut (ref null $15))))), a subtype of Struct1.
 type Struct23 struct {
 	Struct1
 	F2 *Struct15
@@ -527,7 +527,7 @@ func newStruct23Default() *Struct23 {
 
 var rttStruct24 = rt.NewRTT(rt.KStruct, rttStruct1, true, "g6b998f0c21c7e7ddcf40b5ee.0", func(p unsafe.Pointer) any { return (*Struct24)(p) })
 
-// Struct24 is the wasm struct type sub final (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32,f64).
+// Struct24 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)) (field f64))), a subtype of Struct1.
 type Struct24 struct {
 	Struct1
 	F2 float64
@@ -553,7 +553,7 @@ var rttFunc25 = rt.CanonRTT(rt.KFunc, nil, true, "gdc30e43062dab30eb5b1852c.0")
 
 var rttStruct26 = rt.NewRTT(rt.KStruct, nil, true, "ge8ac962a45e853dd471cab02.0", nil)
 
-// Struct26 is the wasm struct type sub final () struct(ref <g566cec6e993d6456dd25af2e.0>,mut i32).
+// Struct26 is the wasm struct type (struct (field (ref $8)) (field (mut i32))).
 type Struct26 struct {
 	F0 *Struct8
 	F1 int32
@@ -576,7 +576,7 @@ func newStruct26Default() *Struct26 {
 
 var rttStruct27 = rt.NewRTT(rt.KStruct, nil, true, "g3ca9db4e91b08e56c66842bd.0", nil)
 
-// Struct27 is the wasm struct type sub final () struct().
+// Struct27 is the wasm struct type (struct).
 type Struct27 struct {
 }
 
@@ -595,7 +595,7 @@ func newStruct27Default() *Struct27 {
 
 var rttStruct28 = rt.NewRTT(rt.KStruct, nil, true, "g947ba39a3cc3196101c82498.0", nil)
 
-// Struct28 is the wasm struct type sub final () struct().
+// Struct28 is the wasm struct type (struct).
 type Struct28 struct {
 }
 
@@ -614,7 +614,7 @@ func newStruct28Default() *Struct28 {
 
 var rttStruct29 = rt.NewRTT(rt.KStruct, rttStruct4, true, "g947ba39a3cc3196101c82498.1", func(p unsafe.Pointer) any { return (*Struct29)(p) })
 
-// Struct29 is the wasm struct type sub final (<g2aed357102578d3536d269d8.0>) struct(i32,mut i32).
+// Struct29 is the wasm struct type (sub Struct4 (struct (field i32) (field (mut i32)))), a subtype of Struct4.
 type Struct29 struct {
 	Struct4
 }
@@ -636,7 +636,7 @@ func newStruct29Default() *Struct29 {
 
 var rttStruct30 = rt.NewRTT(rt.KStruct, rttStruct1, true, "gb8109b1c1a93e91c05da8afb.0", func(p unsafe.Pointer) any { return (*Struct30)(p) })
 
-// Struct30 is the wasm struct type sub final (<gd9cf8fe685caf8971233a112.0>) struct(i32,mut i32,ref <ged04796f81746ed4911b5708.0>,ref <g947ba39a3cc3196101c82498.1>).
+// Struct30 is the wasm struct type (sub Struct1 (struct (field i32) (field (mut i32)) (field (ref $19)) (field (ref $29)))), a subtype of Struct1.
 type Struct30 struct {
 	Struct1
 	F2 *Struct19
@@ -664,7 +664,7 @@ var rttFunc31 = rt.CanonRTT(rt.KFunc, nil, true, "gc2145deacd9d1a0a502603a0.0")
 
 var rttStruct32 = rt.NewRTT(rt.KStruct, nil, true, "ga598eaee0608ead666776e18.0", nil)
 
-// Struct32 is the wasm struct type sub final () struct(ref null extern).
+// Struct32 is the wasm struct type (struct (field (ref null extern))).
 type Struct32 struct {
 	F0 any
 }
@@ -689,7 +689,7 @@ var rttFunc34 = rt.CanonRTT(rt.KFunc, nil, true, "gb663ab1625b987e170b68ec0.0")
 
 var rttStruct35 = rt.NewRTT(rt.KStruct, nil, true, "g910a084ff88d37bb1fb491c7.0", nil)
 
-// Struct35 is the wasm struct type sub final () struct(mut ref null <g566cec6e993d6456dd25af2e.0>).
+// Struct35 is the wasm struct type (struct (field (mut (ref null $8)))).
 type Struct35 struct {
 	F0 *Struct8
 }
@@ -710,7 +710,7 @@ func newStruct35Default() *Struct35 {
 
 var rttStruct36 = rt.NewRTT(rt.KStruct, nil, false, "g6b73bbf97dc83fd5116ea80f.0", func(p unsafe.Pointer) any { return (*Struct36)(p) })
 
-// Struct36 is the wasm struct type sub open () struct(ref struct,ref <g3ca9db4e91b08e56c66842bd.0>).
+// Struct36 is the wasm struct type (sub (struct (field (ref struct)) (field (ref $27)))).
 type Struct36 struct {
 	rt.Object
 	F0 any
@@ -734,7 +734,7 @@ func newStruct36Default() *Struct36 {
 
 var rttArray37 = rt.NewRTT(rt.KArray, nil, true, "gffe3b7314a1881af449e296c.0", nil)
 
-// Array37 is the wasm array type sub final () array(mut ref <g3a6ebc1d2abfa5cda1596767.0>).
+// Array37 is the wasm array type (array (mut (ref $2))).
 type Array37 struct {
 	Elems []*Struct2
 }
@@ -752,7 +752,7 @@ func NewArray37(elems []*Struct2) *Array37 {
 
 var rttArray38 = rt.NewRTT(rt.KArray, nil, true, "gb46f91a0701b7bea7ad00599.0", nil)
 
-// Array38 is the wasm array type sub final () array(mut i64).
+// Array38 is the wasm array type (array (mut i64)).
 type Array38 struct {
 	Elems []int64
 }
@@ -770,7 +770,7 @@ func NewArray38(elems []int64) *Array38 {
 
 var rttStruct39 = rt.NewRTT(rt.KStruct, rttStruct23, true, "g266334b9fb3b346e89720b28.0", func(p unsafe.Pointer) any { return (*Struct39)(p) })
 
-// Struct39 is the wasm struct type sub final (<g6dee27b294d738e35c48b4b7.0>) struct(i32,mut i32,mut ref null <g934839267fa03ddf32b478d9.0>,ref null extern).
+// Struct39 is the wasm struct type (sub Struct23 (struct (field i32) (field (mut i32)) (field (mut (ref null $15))) (field (ref null extern)))), a subtype of Struct23.
 type Struct39 struct {
 	Struct23
 	F3 any
@@ -795,7 +795,7 @@ func newStruct39Default() *Struct39 {
 
 var rttStruct40 = rt.NewRTT(rt.KStruct, rttStruct23, true, "g72d6669ca9110b8009db1ab6.0", func(p unsafe.Pointer) any { return (*Struct40)(p) })
 
-// Struct40 is the wasm struct type sub final (<g6dee27b294d738e35c48b4b7.0>) struct(i32,mut i32,mut ref null <g934839267fa03ddf32b478d9.0>,ref null <g32b92959fd1effbe6769983a.0>).
+// Struct40 is the wasm struct type (sub Struct23 (struct (field i32) (field (mut i32)) (field (mut (ref null $15))) (field (ref null $7)))), a subtype of Struct23.
 type Struct40 struct {
 	Struct23
 	F3 *Struct7
@@ -820,7 +820,7 @@ func newStruct40Default() *Struct40 {
 
 var rttStruct41 = rt.NewRTT(rt.KStruct, rttStruct23, true, "g0fbf9d1d2c9a96c8a9107008.0", func(p unsafe.Pointer) any { return (*Struct41)(p) })
 
-// Struct41 is the wasm struct type sub final (<g6dee27b294d738e35c48b4b7.0>) struct(i32,mut i32,mut ref null <g934839267fa03ddf32b478d9.0>,ref <gd9cf8fe685caf8971233a112.0>).
+// Struct41 is the wasm struct type (sub Struct23 (struct (field i32) (field (mut i32)) (field (mut (ref null $15))) (field (ref $1)))), a subtype of Struct23.
 type Struct41 struct {
 	Struct23
 	F3 *Struct1
@@ -849,7 +849,7 @@ var rttFunc43 = rt.CanonRTT(rt.KFunc, nil, true, "g9381fbbd17af33af75b86aa2.0")
 
 var rttArray44 = rt.NewRTT(rt.KArray, nil, true, "ge5e1c8e2b83b19ec39c889a5.0", nil)
 
-// Array44 is the wasm array type sub final () array(mut i16).
+// Array44 is the wasm array type (array (mut i16)).
 type Array44 struct {
 	Elems []int16
 }
@@ -871,7 +871,7 @@ var rttFunc46 = rt.CanonRTT(rt.KFunc, nil, true, "g061562ff794c1b6c8c231588.0")
 
 var rttStruct47 = rt.NewRTT(rt.KStruct, nil, true, "g3c04602a45e2dbf946debb1d.0", nil)
 
-// Struct47 is the wasm struct type sub final () struct().
+// Struct47 is the wasm struct type (struct).
 type Struct47 struct {
 }
 
@@ -896,7 +896,7 @@ var rttFunc50 = rt.CanonRTT(rt.KFunc, nil, true, "gc9f29c3efb613c6b57e85f26.0")
 
 var rttStruct51 = rt.NewRTT(rt.KStruct, rttStruct4, true, "g4c5e2fcc97f3e5b803a98c27.0", func(p unsafe.Pointer) any { return (*Struct51)(p) })
 
-// Struct51 is the wasm struct type sub final (<g2aed357102578d3536d269d8.0>) struct(i32,mut i32).
+// Struct51 is the wasm struct type (sub Struct4 (struct (field i32) (field (mut i32)))), a subtype of Struct4.
 type Struct51 struct {
 	Struct4
 }
@@ -1004,7 +1004,7 @@ var rttFunc94 = rt.CanonRTT(rt.KFunc, nil, true, "g442d40846180a749d45407b5.0")
 
 var rttStruct95 = rt.NewRTT(rt.KStruct, rttStruct36, true, "gb3abe3f8b74adc8f0d844f5f.0", func(p unsafe.Pointer) any { return (*Struct95)(p) })
 
-// Struct95 is the wasm struct type sub final (<g6b73bbf97dc83fd5116ea80f.0>) struct(ref <g910a084ff88d37bb1fb491c7.0>,ref <g3ca9db4e91b08e56c66842bd.0>).
+// Struct95 is the wasm struct type (sub Struct36 (struct (field (ref $35)) (field (ref $27)))), a subtype of Struct36.
 type Struct95 struct {
 	Struct36
 }
@@ -1044,7 +1044,7 @@ var rttFunc104 = rt.CanonRTT(rt.KFunc, nil, true, "g044cd675c3eee3fb7a04f834.0")
 
 var rttStruct105 = rt.NewRTT(rt.KStruct, rttStruct36, true, "gfaa00fd8fa03b250912f0074.0", func(p unsafe.Pointer) any { return (*Struct105)(p) })
 
-// Struct105 is the wasm struct type sub final (<g6b73bbf97dc83fd5116ea80f.0>) struct(ref <ge8ac962a45e853dd471cab02.0>,ref <g3ca9db4e91b08e56c66842bd.0>).
+// Struct105 is the wasm struct type (sub Struct36 (struct (field (ref $26)) (field (ref $27)))), a subtype of Struct36.
 type Struct105 struct {
 	Struct36
 }
@@ -1072,7 +1072,7 @@ var rttFunc108 = rt.CanonRTT(rt.KFunc, nil, true, "g98356dea8c2f7a4c11399f64.0")
 
 var rttStruct109 = rt.NewRTT(rt.KStruct, nil, true, "ga0800e0b4e798cb4e910fc03.0", nil)
 
-// Struct109 is the wasm struct type sub final () struct().
+// Struct109 is the wasm struct type (struct).
 type Struct109 struct {
 }
 
@@ -1093,7 +1093,7 @@ var rttFunc110 = rt.CanonRTT(rt.KFunc, nil, true, "ga0800e0b4e798cb4e910fc03.1")
 
 var rttStruct111 = rt.NewRTT(rt.KStruct, nil, true, "g63463e26194aacc49d8d6aae.0", nil)
 
-// Struct111 is the wasm struct type sub final () struct().
+// Struct111 is the wasm struct type (struct).
 type Struct111 struct {
 }
 
@@ -1114,7 +1114,7 @@ var rttFunc112 = rt.CanonRTT(rt.KFunc, nil, true, "g63463e26194aacc49d8d6aae.1")
 
 var rttStruct113 = rt.NewRTT(rt.KStruct, nil, true, "ga04e1b5d0fb66e1ec776afd9.0", nil)
 
-// Struct113 is the wasm struct type sub final () struct().
+// Struct113 is the wasm struct type (struct).
 type Struct113 struct {
 }
 
@@ -1176,205 +1176,206 @@ type Host interface {
 
 // Instance is an instantiated module.
 type Instance struct {
-	host   *DartHost
-	funcs  []*rt.Func
-	tab0   *rt.Table[*rt.Func]
-	g0     *rt.Global[any]
-	g1     *rt.Global[any]
-	g2     *rt.Global[any]
-	g3     *rt.Global[any]
-	g4     *rt.Global[any]
-	g5     *rt.Global[any]
-	g6     *rt.Global[any]
-	g7     *rt.Global[any]
-	g8     *rt.Global[any]
-	g9     *rt.Global[any]
-	g10    *rt.Global[any]
-	g11    *rt.Global[any]
-	g12    *rt.Global[any]
-	g13    *rt.Global[any]
-	g14    *rt.Global[any]
-	g15    *rt.Global[any]
-	g16    *rt.Global[any]
-	g17    *rt.Global[any]
-	g18    *rt.Global[any]
-	g19    *rt.Global[any]
-	g20    *rt.Global[any]
-	g21    *rt.Global[any]
-	g22    *rt.Global[any]
-	g23    *rt.Global[any]
-	g24    *rt.Global[any]
-	g25    *rt.Global[any]
-	g26    *rt.Global[any]
-	g27    *rt.Global[any]
-	g28    *rt.Global[any]
-	g29    *rt.Global[any]
-	g30    *rt.Global[any]
-	g31    *rt.Global[any]
-	g32    *rt.Global[any]
-	g33    *rt.Global[any]
-	g34    *rt.Global[any]
-	g35    *rt.Global[any]
-	g36    *rt.Global[any]
-	g37    *rt.Global[any]
-	g38    *rt.Global[any]
-	g39    *rt.Global[any]
-	g40    *rt.Global[any]
-	g41    *rt.Global[any]
-	g42    *rt.Global[any]
-	g43    *rt.Global[any]
-	g44    *rt.Global[any]
-	g45    *rt.Global[any]
-	g46    *rt.Global[any]
-	g47    *rt.Global[any]
-	g48    *rt.Global[any]
-	g49    *rt.Global[any]
-	g50    *rt.Global[any]
-	g51    *rt.Global[any]
-	g52    *rt.Global[any]
-	g53    *rt.Global[any]
-	g54    *Array9
-	g55    *Struct2
-	g56    *Struct2
-	g57    *Struct2
-	g58    *Struct27
-	g59    int64
-	g60    *Struct51
-	g61    *Struct10
-	g62    *Struct29
-	g63    *Struct30
-	g64    *Struct0
-	g65    *Struct10
-	g66    *Struct2
-	g67    *Struct2
-	g68    *Array37
-	g69    *Array38
-	g70    *Struct2
-	g71    *Struct2
-	g72    *Array3
-	g73    *Struct2
-	g74    *Struct2
-	g75    *Struct2
-	g76    *Struct5
-	g77    *Struct21
-	g78    *Struct21
-	g79    *Struct32
-	g80    *Struct2
-	g81    *Struct7
-	g82    *Struct10
-	g83    *Struct2
-	g84    *Struct2
-	g85    *Struct2
-	g86    *Struct2
-	g87    *Struct29
-	g88    int32
-	g89    int64
-	g90    *Struct27
-	g91    *Struct2
-	g92    *Struct2
-	g93    *Struct2
-	g94    *Struct2
-	g95    *Struct2
-	g96    *Struct2
-	g97    *Struct2
-	g98    *Struct2
-	g99    *Struct2
-	g100   *Struct17
-	g101   *Struct2
-	g102   *Struct2
-	g103   *Struct10
-	g104   *Struct10
-	g105   *Struct2
-	g106   *Struct2
-	g107   *Array9
-	g108   *Struct17
-	g109   *Struct17
-	g110   *Struct17
-	g111   *Struct2
-	g112   *Struct2
-	g113   *Struct2
-	g114   *Struct17
-	g115   *Struct2
-	g116   *Struct17
-	g117   *Struct2
-	g118   *Struct2
-	g119   *Struct2
-	g120   *Struct2
-	g121   *Struct2
-	g122   *Struct2
-	g123   *Struct19
-	g124   *Struct2
-	g125   *Struct19
-	g126   *Struct2
-	g127   *Struct19
-	g128   *Struct2
-	g129   *Struct19
-	g130   *Struct2
-	g131   *Struct19
-	g132   *Struct2
-	g133   *Struct19
-	g134   *Struct19
-	g135   *Struct2
-	g136   *Struct17
-	g137   *Struct2
-	g138   *Struct2
-	g139   *Array13
-	g140   *Array3
-	g141   *Struct2
-	g142   *Struct27
-	g143   *Struct10
-	g144   *Struct10
-	tag0   *rt.Tag
-	tag1   *rt.Tag
-	elem0  []*rt.Func
-	elem1  []*rt.Func
-	elem2  []*rt.Func
-	elem3  []*rt.Func
-	elem4  []*rt.Func
-	elem5  []*rt.Func
-	elem6  []*rt.Func
-	elem7  []*rt.Func
-	elem8  []*rt.Func
-	elem9  []*rt.Func
-	elem10 []*rt.Func
-	elem11 []*rt.Func
-	elem12 []*rt.Func
-	elem13 []*rt.Func
-	elem14 []*rt.Func
-	elem15 []*rt.Func
-	elem16 []*rt.Func
-	elem17 []*rt.Func
-	elem18 []*rt.Func
-	elem19 []*rt.Func
-	elem20 []*rt.Func
-	elem21 []*rt.Func
-	elem22 []*rt.Func
-	elem23 []*rt.Func
-	elem24 []*rt.Func
-	elem25 []*rt.Func
-	elem26 []*rt.Func
-	elem27 []*rt.Func
-	elem28 []*rt.Func
-	elem29 []*rt.Func
-	elem30 []*rt.Func
-	elem31 []*rt.Func
-	elem32 []*rt.Func
-	elem33 []*rt.Func
-	elem34 []*rt.Func
-	elem35 []*rt.Func
-	elem36 []*rt.Func
-	elem37 []*rt.Func
-	elem38 []*rt.Func
-	elem39 []*rt.Func
-	elem40 []*rt.Func
-	elem41 []*rt.Func
-	elem42 []*rt.Func
-	elem43 []*rt.Func
-	elem44 []*rt.Func
-	elem45 []*rt.Func
-	elem46 []*rt.Func
-	elem47 []*rt.Func
-	elem48 []*rt.Func
+	host    *DartHost
+	funcs   []*rt.Func
+	tab0    *rt.Table[*rt.Func]
+	g0      *rt.Global[any]
+	g1      *rt.Global[any]
+	g2      *rt.Global[any]
+	g3      *rt.Global[any]
+	g4      *rt.Global[any]
+	g5      *rt.Global[any]
+	g6      *rt.Global[any]
+	g7      *rt.Global[any]
+	g8      *rt.Global[any]
+	g9      *rt.Global[any]
+	g10     *rt.Global[any]
+	g11     *rt.Global[any]
+	g12     *rt.Global[any]
+	g13     *rt.Global[any]
+	g14     *rt.Global[any]
+	g15     *rt.Global[any]
+	g16     *rt.Global[any]
+	g17     *rt.Global[any]
+	g18     *rt.Global[any]
+	g19     *rt.Global[any]
+	g20     *rt.Global[any]
+	g21     *rt.Global[any]
+	g22     *rt.Global[any]
+	g23     *rt.Global[any]
+	g24     *rt.Global[any]
+	g25     *rt.Global[any]
+	g26     *rt.Global[any]
+	g27     *rt.Global[any]
+	g28     *rt.Global[any]
+	g29     *rt.Global[any]
+	g30     *rt.Global[any]
+	g31     *rt.Global[any]
+	g32     *rt.Global[any]
+	g33     *rt.Global[any]
+	g34     *rt.Global[any]
+	g35     *rt.Global[any]
+	g36     *rt.Global[any]
+	g37     *rt.Global[any]
+	g38     *rt.Global[any]
+	g39     *rt.Global[any]
+	g40     *rt.Global[any]
+	g41     *rt.Global[any]
+	g42     *rt.Global[any]
+	g43     *rt.Global[any]
+	g44     *rt.Global[any]
+	g45     *rt.Global[any]
+	g46     *rt.Global[any]
+	g47     *rt.Global[any]
+	g48     *rt.Global[any]
+	g49     *rt.Global[any]
+	g50     *rt.Global[any]
+	g51     *rt.Global[any]
+	g52     *rt.Global[any]
+	g53     *rt.Global[any]
+	g54     *Array9
+	g55     *Struct2
+	g56     *Struct2
+	g57     *Struct2
+	g58     *Struct27
+	g59     int64
+	g60     *Struct51
+	g61     *Struct10
+	g62     *Struct29
+	g63     *Struct30
+	g64     *Struct0
+	g65     *Struct10
+	g66     *Struct2
+	g67     *Struct2
+	g68     *Array37
+	g69     *Array38
+	g70     *Struct2
+	g71     *Struct2
+	g72     *Array3
+	g73     *Struct2
+	g74     *Struct2
+	g75     *Struct2
+	g76     *Struct5
+	g77     *Struct21
+	g78     *Struct21
+	g79     *Struct32
+	g80     *Struct2
+	g81     *Struct7
+	g82     *Struct10
+	g83     *Struct2
+	g84     *Struct2
+	g85     *Struct2
+	g86     *Struct2
+	g87     *Struct29
+	g88     int32
+	g89     int64
+	g90     *Struct27
+	g91     *Struct2
+	g92     *Struct2
+	g93     *Struct2
+	g94     *Struct2
+	g95     *Struct2
+	g96     *Struct2
+	g97     *Struct2
+	g98     *Struct2
+	g99     *Struct2
+	g100    *Struct17
+	g101    *Struct2
+	g102    *Struct2
+	g103    *Struct10
+	g104    *Struct10
+	g105    *Struct2
+	g106    *Struct2
+	g107    *Array9
+	g108    *Struct17
+	g109    *Struct17
+	g110    *Struct17
+	g111    *Struct2
+	g112    *Struct2
+	g113    *Struct2
+	g114    *Struct17
+	g115    *Struct2
+	g116    *Struct17
+	g117    *Struct2
+	g118    *Struct2
+	g119    *Struct2
+	g120    *Struct2
+	g121    *Struct2
+	g122    *Struct2
+	g123    *Struct19
+	g124    *Struct2
+	g125    *Struct19
+	g126    *Struct2
+	g127    *Struct19
+	g128    *Struct2
+	g129    *Struct19
+	g130    *Struct2
+	g131    *Struct19
+	g132    *Struct2
+	g133    *Struct19
+	g134    *Struct19
+	g135    *Struct2
+	g136    *Struct17
+	g137    *Struct2
+	g138    *Struct2
+	g139    *Array13
+	g140    *Array3
+	g141    *Struct2
+	g142    *Struct27
+	g143    *Struct10
+	g144    *Struct10
+	tag0    *rt.Tag
+	tag1    *rt.Tag
+	jsCache rt.JSCache
+	elem0   []*rt.Func
+	elem1   []*rt.Func
+	elem2   []*rt.Func
+	elem3   []*rt.Func
+	elem4   []*rt.Func
+	elem5   []*rt.Func
+	elem6   []*rt.Func
+	elem7   []*rt.Func
+	elem8   []*rt.Func
+	elem9   []*rt.Func
+	elem10  []*rt.Func
+	elem11  []*rt.Func
+	elem12  []*rt.Func
+	elem13  []*rt.Func
+	elem14  []*rt.Func
+	elem15  []*rt.Func
+	elem16  []*rt.Func
+	elem17  []*rt.Func
+	elem18  []*rt.Func
+	elem19  []*rt.Func
+	elem20  []*rt.Func
+	elem21  []*rt.Func
+	elem22  []*rt.Func
+	elem23  []*rt.Func
+	elem24  []*rt.Func
+	elem25  []*rt.Func
+	elem26  []*rt.Func
+	elem27  []*rt.Func
+	elem28  []*rt.Func
+	elem29  []*rt.Func
+	elem30  []*rt.Func
+	elem31  []*rt.Func
+	elem32  []*rt.Func
+	elem33  []*rt.Func
+	elem34  []*rt.Func
+	elem35  []*rt.Func
+	elem36  []*rt.Func
+	elem37  []*rt.Func
+	elem38  []*rt.Func
+	elem39  []*rt.Func
+	elem40  []*rt.Func
+	elem41  []*rt.Func
+	elem42  []*rt.Func
+	elem43  []*rt.Func
+	elem44  []*rt.Func
+	elem45  []*rt.Func
+	elem46  []*rt.Func
+	elem47  []*rt.Func
+	elem48  []*rt.Func
 }
 
 // New instantiates the module. host may be nil if the module has no imports.
@@ -1818,7 +1819,7 @@ func (m *Instance) f6(d int, p0 any) float64 {
 }
 
 func (m *Instance) f7(d int, p0 any, p1 int32) int32 {
-	return rt.JSCharCodeAt(p0, p1)
+	return m.jsCache.CharCodeAt(p0, p1)
 }
 
 func (m *Instance) f8(d int, p0 any, p1 any) any {
@@ -1830,7 +1831,7 @@ func (m *Instance) f9(d int, p0 any, p1 any) int32 {
 }
 
 func (m *Instance) f10(d int, p0 any) int32 {
-	return rt.JSLength(p0)
+	return m.jsCache.Length(p0)
 }
 
 func (m *Instance) f11(d int, p0 any) int32 {
@@ -1878,16 +1879,10 @@ func (m *Instance) f21(d int) any {
 }
 
 func (m *Instance) setThisModule(d int, p0 any) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return
 }
 
 func (m *Instance) f23(d int) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Array37
 	var s0_1 *Array38
 	var s0_2 *Struct1
@@ -1976,9 +1971,6 @@ B1:
 }
 
 func (m *Instance) wasmI16ArrayGet(d int, p0 any, p1 int32) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	if !(rt.IsType(p0, rttArray44)) {
 		panic(rt.ErrCast)
 	}
@@ -1986,9 +1978,6 @@ func (m *Instance) wasmI16ArrayGet(d int, p0 any, p1 int32) int32 {
 }
 
 func (m *Instance) wasmI16ArraySet(d int, p0 any, p1 int32, p2 int32) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	if !(rt.IsType(p0, rttArray44)) {
 		panic(rt.ErrCast)
 	}
@@ -2031,9 +2020,6 @@ func (m *Instance) f28(d int, p0 *Struct0) {
 }
 
 func (m *Instance) f29(d int, p0 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	if p0 == nil {
 		goto B2
@@ -2048,9 +2034,6 @@ B1:
 }
 
 func (m *Instance) f30(d int, p0 *Struct0) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	panic(rt.ErrUnreachable)
 }
 
@@ -2327,7 +2310,11 @@ B13:
 		goto B12
 	}
 	s0_1 = l8.F2
-	s0_4 = m.f10(d+1, s0_1)
+	if rt.EfaceKey(s0_1) == m.jsCache.Key {
+		s0_4 = int32(len(m.jsCache.ASCII))
+	} else {
+		s0_4 = m.jsCache.LengthSlow(s0_1)
+	}
 	s0_1 = l8.F2
 	s0 = m.f12(d+1, s0_1, m.g8.V, int32(0))
 	l7 = s0
@@ -2359,9 +2346,6 @@ B11:
 }
 
 func (m *Instance) f34(d int, p0 *Struct0) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct2) {
 		panic(rt.ErrCast)
 	}
@@ -2369,9 +2353,6 @@ func (m *Instance) f34(d int, p0 *Struct0) *Struct2 {
 }
 
 func (m *Instance) f35(d int, p0 any) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct2(int32(4), int32(0), p0)
 }
 
@@ -2434,23 +2415,14 @@ func (m *Instance) f38(d int, p0 *Struct0) *Struct2 {
 }
 
 func (m *Instance) f39(d int) *Struct23 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct23(int32(56), int32(0), (*Struct15)(nil))
 }
 
 func (m *Instance) f40(d int, p0 *Struct1) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g98
 }
 
 func (m *Instance) f41(d int, p0 *Struct0) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct17) {
 		panic(rt.ErrCast)
 	}
@@ -2458,9 +2430,6 @@ func (m *Instance) f41(d int, p0 *Struct0) *Struct2 {
 }
 
 func (m *Instance) f42(d int, p0 *Struct7) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int64
 	s0 = p0.F1
 	return float64(s0)
@@ -2524,16 +2493,10 @@ func (m *Instance) f43(d int, p0 *Struct0) *Struct2 {
 }
 
 func (m *Instance) f44(d int, p0 *Struct7) *Struct40 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct40(int32(52), int32(0), (*Struct15)(nil), p0)
 }
 
 func (m *Instance) f45(d int, p0 *Struct1) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return (*Struct2)(nil)
 }
 
@@ -2567,9 +2530,6 @@ func (m *Instance) f46(d int, p0 *Struct2, p1 *Struct1, p2 *Struct2) *Struct2 {
 }
 
 func (m *Instance) f47(d int, p0 *Struct1) *Struct0 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Struct7
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct40) {
 		panic(rt.ErrCast)
@@ -2579,9 +2539,6 @@ func (m *Instance) f47(d int, p0 *Struct1) *Struct0 {
 }
 
 func (m *Instance) f48(d int, p0 *Struct1) *Struct0 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Struct2
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct17) {
 		panic(rt.ErrCast)
@@ -2606,9 +2563,6 @@ func (m *Instance) f50(d int, p0 *Struct1) *Struct2 {
 }
 
 func (m *Instance) f51(d int, p0 *Struct1) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return int32(0)
 }
 
@@ -2621,16 +2575,10 @@ func (m *Instance) f52(d int, p0 *Struct1) int32 {
 }
 
 func (m *Instance) f53(d int, p0 *Struct1) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g55
 }
 
 func (m *Instance) f54(d int, p0 *Struct1) *Struct0 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return (*Struct0)(nil)
 }
 
@@ -2784,23 +2732,14 @@ func (m *Instance) f58(d int, p0 *Struct0) *Struct4 {
 }
 
 func (m *Instance) f59(d int, p0 *Struct0) *Array9 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g107
 }
 
 func (m *Instance) f60(d int, p0 int32, p1 *Array9) *Struct10 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct10(int32(10), int32(0), p0, p1)
 }
 
 func (m *Instance) f61(d int, p0 *Struct0) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Struct2
 	if rt.Box(p0) == rt.Box(m.g60) {
 		s0 = m.g106
@@ -2835,16 +2774,10 @@ func (m *Instance) f64(d int, p0 *Struct1) *Struct0 {
 }
 
 func (m *Instance) f65(d int, p0 *Struct1) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g83
 }
 
 func (m *Instance) f66(d int, p0 *Struct2, p1 *Struct2) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0, s1 any
 	s0 = p0.F2
 	s1 = p1.F2
@@ -2888,9 +2821,6 @@ func (m *Instance) f67(d int, p0 *Struct0) *Struct2 {
 }
 
 func (m *Instance) f68(d int, p0 any) *Struct15 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct15(int32(41), int32(0), p0, (*Struct2)(nil))
 }
 
@@ -2917,14 +2847,13 @@ func (m *Instance) f70(d int, p0 *Struct0) *Struct2 {
 	var s0, s2_1 int32
 	var s2 *Struct4
 	var s4 int64
-	var s1, s0_4 *Struct0
+	var s0_4 any
+	var s1, s0_5 *Struct0
 	var x4 *rt.Exception
 	var s1_2 *Struct1
-	var s0_5 any
 	var c4 int
-	_ = s0_4
-	_ = s1_2
 	_ = s0_5
+	_ = s1_2
 	l1 = m.g84
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct5) {
 		panic(rt.ErrCast)
@@ -2959,7 +2888,12 @@ func (m *Instance) f70(d int, p0 *Struct0) *Struct2 {
 		l2 = NewStruct16(int32(91), int32(0), s2, l3, s4, int64(0), (*Struct0)(nil))
 		s0 = m.f84(d+1, rt.ViewAs[Struct1](l2))
 		if s0 != 0 {
-			s0 = m.f10(d+1, m.g27.V)
+			s0_4 = m.g27.V
+			if rt.EfaceKey(s0_4) == m.jsCache.Key {
+				s0 = int32(len(m.jsCache.ASCII))
+			} else {
+				s0 = m.jsCache.LengthSlow(s0_4)
+			}
 			if int64(uint32(s0)) == 0 {
 			L7:
 				for {
@@ -3030,13 +2964,13 @@ func (m *Instance) f70(d int, p0 *Struct0) *Struct2 {
 	}()
 	switch c4 {
 	case -1:
-		s0_4 = x4.Values[0].(*Struct0)
+		s0_5 = x4.Values[0].(*Struct0)
 		s1_2 = x4.Values[1].(*Struct1)
 		s0_2 = m.f88(d + 1)
 		m.f75(d+1, s0_2)
 		panic(x4)
 	case -2:
-		s0_5 = x4.Values[0].(any)
+		s0_4 = x4.Values[0].(any)
 		s0_2 = m.f88(d + 1)
 		m.f75(d+1, s0_2)
 		panic(x4)
@@ -3053,9 +2987,6 @@ B1:
 }
 
 func (m *Instance) f71(d int, p0 *Struct0) *Array9 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Struct4
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct5) {
 		panic(rt.ErrCast)
@@ -3114,9 +3045,6 @@ L1:
 }
 
 func (m *Instance) f74(d int, p0 *Struct5, p1 *Struct1) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l2, s0, s4 int64
 	var l3, s0_1, s2 *Array3
 	s0 = p0.F2
@@ -3202,9 +3130,6 @@ func (m *Instance) f76(d int) {
 }
 
 func (m *Instance) f77(d int, p0 *Struct5) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Array3
 	var s0_1 int32
 	s0 = p0.F3
@@ -3298,9 +3223,6 @@ L1:
 }
 
 func (m *Instance) f81(d int, p0 *Struct1, p1 *Struct15) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l2 *Struct23
 	var s0 *Struct1
 	var s0_1 *Struct15
@@ -3319,16 +3241,10 @@ B1:
 }
 
 func (m *Instance) f82(d int, p0 *Struct0) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g119
 }
 
 func (m *Instance) f83(d int, p0 *Struct0) *Array9 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 *Struct4
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct16) {
 		panic(rt.ErrCast)
@@ -3410,9 +3326,6 @@ func (m *Instance) f86(d int, p0 *Struct0) *Struct2 {
 }
 
 func (m *Instance) f87(d int, p0 *Struct1) *Struct41 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct41(int32(58), int32(0), (*Struct15)(nil), p0)
 }
 
@@ -3436,9 +3349,6 @@ B1:
 }
 
 func (m *Instance) f89(d int, p0 *Struct0, p1 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l2, s0, s1 int32
 	var s0_1, s1_1 int64
 	var s0_2, s1_2 float64
@@ -4008,7 +3918,11 @@ L1:
 	m.f102(d+1, l7, rt.ViewAs[Struct36](s1_2))
 	s1 = l12.F0
 	s1_3 = s1.F2
-	s1_4 = m.f10(d+1, s1_3)
+	if rt.EfaceKey(s1_3) == m.jsCache.Key {
+		s1_4 = int32(len(m.jsCache.ASCII))
+	} else {
+		s1_4 = m.jsCache.LengthSlow(s1_3)
+	}
 	s2_1 = l7.F5
 	s1_5 = (int64(uint32(s1_4)) + (s2_1 >> (uint64(1) & 63)))
 	s0_2 = NewStruct7(int32(84), s1_5)
@@ -4016,9 +3930,6 @@ L1:
 }
 
 func (m *Instance) f95(d int, p0 any) *Struct0 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1 int64
 	var s0 *Struct7
 	s1 = m.f100(d+1, int64(32))
@@ -4306,9 +4217,6 @@ L1:
 }
 
 func (m *Instance) f103(d int, p0 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1 *Struct0
 	s1 = m.g64
 	return m.f89(d+1, p0, s1)
@@ -4446,9 +4354,6 @@ B1:
 }
 
 func (m *Instance) f106(d int, p0 int64, p1 int64, p2 int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int64
 	p0 = (p0 & p1)
 	if p0 == 0 {
@@ -4498,9 +4403,6 @@ L2:
 }
 
 func (m *Instance) f108(d int, p0 int64, p1 int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	p0 = (p0 & p1)
 	return (p1 & ((p0 << (uint64(1) & 63)) + p0))
 }
@@ -4531,30 +4433,18 @@ B1:
 }
 
 func (m *Instance) f110(d int, p0 int64, p1 int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return ((p0 + int64(1)) & p1)
 }
 
 func (m *Instance) f111(d int, p0 *Struct0, p1 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return rt.B2I(p0 == p1)
 }
 
 func (m *Instance) f112(d int, p0 *Struct0, p1 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	panic(rt.ErrUnreachable)
 }
 
 func (m *Instance) f113(d int, p0 *Struct0, p1 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l2 *Struct2
 	var s0 int32
 	var s0_1, s1 any
@@ -4584,9 +4474,6 @@ B1:
 }
 
 func (m *Instance) f114(d int, p0 *Struct0, p1 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	s0 = p1.F0
 	if s0 != int32(9) {
@@ -4709,9 +4596,6 @@ B1:
 }
 
 func (m *Instance) f117(d int, p0 *Struct0, p1 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	s0 = p1.F0
 	if s0 != int32(14) {
@@ -4721,9 +4605,6 @@ func (m *Instance) f117(d int, p0 *Struct0, p1 *Struct0) int32 {
 }
 
 func (m *Instance) f118(d int, p0 *Struct0, p1 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	s0 = p1.F0
 	if s0 != int32(40) {
@@ -4733,9 +4614,6 @@ func (m *Instance) f118(d int, p0 *Struct0, p1 *Struct0) int32 {
 }
 
 func (m *Instance) f119(d int, p0 *Struct0, p1 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int32
 	var s0_1, s1 *Struct19
 	s0 = p1.F0
@@ -4761,9 +4639,6 @@ func (m *Instance) f119(d int, p0 *Struct0, p1 *Struct0) int32 {
 }
 
 func (m *Instance) f120(d int, p0 *Struct0, p1 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l2, s1 int64
 	var s0_1 int32
 	var s1_1 float64
@@ -4794,9 +4669,6 @@ func (m *Instance) f120(d int, p0 *Struct0, p1 *Struct0) int32 {
 }
 
 func (m *Instance) f121(d int, p0 *Struct0, p1 *Struct0) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l2, s1 float64
 	var s0_1 int32
 	var s1_1 int64
@@ -4834,19 +4706,13 @@ func (m *Instance) f122(d int, p0 *Struct0) int64 {
 }
 
 func (m *Instance) f123(d int, p0 *Struct0) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	panic(rt.ErrUnreachable)
 }
 
 func (m *Instance) f124(d int, p0 *Struct0) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l1, l2, l3, s1_2 int64
 	var l4 *Struct2
-	var s0, s1_1 int32
+	var s0, s2, s1_1 int32
 	var s0_1, s1 any
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct2) {
 		panic(rt.ErrCast)
@@ -4859,13 +4725,22 @@ func (m *Instance) f124(d int, p0 *Struct0) int64 {
 	}
 	l1 = int64(0)
 	s0_1 = l4.F2
-	s0 = m.f10(d+1, s0_1)
+	if rt.EfaceKey(s0_1) == m.jsCache.Key {
+		s0 = int32(len(m.jsCache.ASCII))
+	} else {
+		s0 = m.jsCache.LengthSlow(s0_1)
+	}
 	l3 = int64(uint32(s0))
 L2:
 	for {
 		if l1 < l3 {
 			s1 = l4.F2
-			s1_1 = m.f7(d+1, s1, int32(l1))
+			s2 = int32(l1)
+			if rt.EfaceKey(s1) == m.jsCache.Key && uint32(s2) < uint32(len(m.jsCache.ASCII)) {
+				s1_1 = int32(m.jsCache.ASCII[uint32(s2)])
+			} else {
+				s1_1 = m.jsCache.CharCodeAtSlow(s1, s2)
+			}
 			l2 = (l2 + int64(uint32(s1_1)))
 			l2 = (l2 + (l2 << (uint64(10) & 63)))
 			l2 = (int64(uint64((l2&int64(4294967295)))>>(uint64(6)&63)) ^ l2)
@@ -4995,9 +4870,6 @@ func (m *Instance) f127(d int, p0 *Struct0) int64 {
 }
 
 func (m *Instance) f128(d int, p0 *Struct0) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int64
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct7) {
 		panic(rt.ErrCast)
@@ -5008,9 +4880,6 @@ func (m *Instance) f128(d int, p0 *Struct0) int64 {
 }
 
 func (m *Instance) f129(d int, p0 *Struct0) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l1, s0_1 int64
 	var l2 float64
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct12) {
@@ -5029,9 +4898,6 @@ B1:
 }
 
 func (m *Instance) f130(d int, p0 int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l1 int64
 	l1 = ((p0 & int64(4294967295)) * int64(11601))
 	p0 = ((int64(uint64(p0)>>(uint64(32)&63)) * int64(11601)) + int64(uint64(l1)>>(uint64(32)&63)))
@@ -5093,9 +4959,6 @@ func (m *Instance) f131(d int, p0 *Struct0) int64 {
 }
 
 func (m *Instance) f132(d int, p0 *Struct21) {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s1, s2 int64
 	s1 = m.f133(d+1, p0)
 	s2 = p0.F0
@@ -5105,18 +4968,12 @@ func (m *Instance) f132(d int, p0 *Struct21) {
 }
 
 func (m *Instance) f133(d int, p0 *Struct21) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 int64
 	s0 = p0.F0
 	return (s0 & int64(4294967295))
 }
 
 func (m *Instance) f134(d int, p0 int64) int64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	p0 = ((p0 ^ int64(-1)) + (p0 << (uint64(21) & 63)))
 	p0 = ((p0 ^ int64(uint64(p0)>>(uint64(24)&63))) * int64(265))
 	p0 = ((p0 ^ int64(uint64(p0)>>(uint64(14)&63))) * int64(21))
@@ -5243,16 +5100,10 @@ func (m *Instance) f138(d int) {
 }
 
 func (m *Instance) f139(d int, p0 *Struct0) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g138
 }
 
 func (m *Instance) f140(d int, p0 *Struct1) *Struct2 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return m.g137
 }
 
@@ -5338,16 +5189,10 @@ func (m *Instance) f141(d int, p0 *Struct0) *Struct2 {
 }
 
 func (m *Instance) f142(d int, p0 *Struct0) *Array9 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewArray9([]*Struct4{rt.ViewAs[Struct4](m.g65), rt.ViewAs[Struct4](m.g61)})
 }
 
 func (m *Instance) f143(d int, p0 *Struct1) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var l1 *Struct24
 	var s0, s1 float64
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct24) {
@@ -5361,9 +5206,6 @@ func (m *Instance) f143(d int, p0 *Struct1) float64 {
 }
 
 func (m *Instance) f144(d int, p0 *Struct1) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 float64
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct24) {
 		panic(rt.ErrCast)
@@ -5373,9 +5215,6 @@ func (m *Instance) f144(d int, p0 *Struct1) float64 {
 }
 
 func (m *Instance) f145(d int, p0 *Struct1) float64 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0 float64
 	if !(p0 != nil && rt.ObjRTT(p0) == rttStruct24) {
 		panic(rt.ErrCast)
@@ -5385,9 +5224,6 @@ func (m *Instance) f145(d int, p0 *Struct1) float64 {
 }
 
 func (m *Instance) f146(d int, p0 float64, p1 float64, p2 float64, p3 float64, p4 float64, p5 float64, p6 float64) *Struct6 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewStruct6(int32(127), int32(0), p0, p1, p2, p3, p4, p5, p6)
 }
 

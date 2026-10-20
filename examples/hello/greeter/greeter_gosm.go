@@ -76,9 +76,10 @@ type Host interface {
 
 // Instance is an instantiated module.
 type Instance struct {
-	host  Host
-	funcs []*rt.Func
-	g0    *rt.Global[any]
+	host    Host
+	funcs   []*rt.Func
+	g0      *rt.Global[any]
+	jsCache rt.JSCache
 }
 
 // New instantiates the module. host may be nil if the module has no imports.
@@ -132,7 +133,7 @@ func (m *Instance) concat(d int, p0 any, p1 any) any {
 }
 
 func (m *Instance) length(d int, p0 any) int32 {
-	return rt.JSLength(p0)
+	return m.jsCache.Length(p0)
 }
 
 func (m *Instance) greet(d int, name any) int32 {
@@ -140,22 +141,22 @@ func (m *Instance) greet(d int, name any) int32 {
 		rt.Exhausted()
 	}
 	var s any
+	var s0_1 int32
 	s = m.concat(d+1, m.g0.V, name)
 	m.log(d+1, s)
-	return m.length(d+1, s)
+	if rt.EfaceKey(s) == m.jsCache.Key {
+		s0_1 = int32(len(m.jsCache.ASCII))
+	} else {
+		s0_1 = m.jsCache.LengthSlow(s)
+	}
+	return s0_1
 }
 
 func (m *Instance) newPoint(d int, x int32, y int32) *Point {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	return NewPoint(x, y)
 }
 
 func (m *Instance) manhattan(d int, p *Point) int32 {
-	if d > rt.MaxCallDepth {
-		rt.Exhausted()
-	}
 	var s0, s1 int32
 	s0 = p.X
 	s1 = p.Y

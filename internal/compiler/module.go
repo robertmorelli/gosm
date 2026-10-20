@@ -56,6 +56,7 @@ type compiler struct {
 	exportFns   map[uint32]bool
 	exportNames map[int]string
 	fconsts     map[string]string
+	recursive   []bool
 }
 
 // Compile generates Go source for module m.
@@ -83,6 +84,7 @@ func Compile(m *wasm.Module, opts Options) (src []byte, err error) {
 	}
 	c.computeTypes()
 	c.assignNames()
+	c.computeRecursive()
 	var out strings.Builder
 	if opts.HostOnly {
 		c.writeHost(&out)
@@ -142,7 +144,7 @@ func (c *compiler) assignNames() {
 	c.strConst = map[uint32]string{}
 	c.refFuncs = map[uint32]bool{}
 	c.exportFns = map[uint32]bool{}
-	for _, n := range []string{"host", "funcs", "init", "Exports"} {
+	for _, n := range []string{"host", "funcs", "init", "Exports", "jsCache"} {
 		c.members[n] = true
 	}
 	// host method names
@@ -556,6 +558,9 @@ func (c *compiler) writeInstance(w *strings.Builder) {
 	}
 	for i := 0; i < m.NumTags(); i++ {
 		fmt.Fprintf(w, "\ttag%d *rt.Tag\n", i)
+	}
+	if len(c.builtin) > 0 {
+		w.WriteString("\tjsCache rt.JSCache\n")
 	}
 	for i := range m.Datas {
 		fmt.Fprintf(w, "\tdata%d []byte\n", i)

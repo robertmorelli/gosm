@@ -439,8 +439,41 @@ func (f *fn) call(fi uint32, tail bool) {
 		f.setUnreachable()
 		return
 	}
+	if b := c.builtin[fi]; (b == "charCodeAt" || b == "length") && !tail {
+		f.inlineJSString(b)
+		return
+	}
 	args := f.args(ft)
 	f.emitCall("m."+c.funcName(fi), ft, args, tail)
+}
+
+// inlineJSString emits the JSCache fast path for charCodeAt/length directly
+// at the call site: a pointer compare and a byte load for ASCII strings.
+func (f *fn) inlineJSString(name string) {
+	var idx entry
+	if name == "charCodeAt" {
+		idx = f.simpleTop()
+		f.pop()
+	}
+	s := f.simpleTop()
+	f.pop()
+	h := f.height()
+	out := f.slot(h, "int32")
+	if name == "charCodeAt" {
+		i := f.u32(idx)
+		f.emit("if rt.EfaceKey(%s) == m.jsCache.Key && %s < uint32(len(m.jsCache.ASCII)) {", f.ex(s), i)
+		f.emit("%s = int32(m.jsCache.ASCII[%s])", out, i)
+		f.emit("} else {")
+		f.emit("%s = m.jsCache.CharCodeAtSlow(%s, %s)", out, f.ex(s), f.ex(idx))
+		f.emit("}")
+	} else {
+		f.emit("if rt.EfaceKey(%s) == m.jsCache.Key {", f.ex(s))
+		f.emit("%s = int32(len(m.jsCache.ASCII))", out)
+		f.emit("} else {")
+		f.emit("%s = m.jsCache.LengthSlow(%s)", out, f.ex(s))
+		f.emit("}")
+	}
+	f.pushSlotVar(ti32, out)
 }
 
 func (f *fn) goFuncType(ft *wasm.FuncType) string {

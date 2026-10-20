@@ -24,7 +24,15 @@ func jsStr(x any) string {
 }
 
 func isASCII(s string) bool {
-	for i := 0; i < len(s); i++ {
+	i := 0
+	for ; i+8 <= len(s); i += 8 {
+		w := uint64(s[i]) | uint64(s[i+1])<<8 | uint64(s[i+2])<<16 | uint64(s[i+3])<<24 |
+			uint64(s[i+4])<<32 | uint64(s[i+5])<<40 | uint64(s[i+6])<<48 | uint64(s[i+7])<<56
+		if w&0x8080808080808080 != 0 {
+			return false
+		}
+	}
+	for ; i < len(s); i++ {
 		if s[i] >= 0x80 {
 			return false
 		}
@@ -403,4 +411,107 @@ func JSDecodeUTF8(arr []int8, start, end int32) any {
 		i = j
 	}
 	return string(out)
+}
+
+// JSCache is a per-instance cache of the most recently indexed string. Its
+// fast path (same boxed ASCII string as last time) is small enough to be
+// inlined into generated code, so charCodeAt on an ASCII string is a pointer
+// compare, a bounds check and a byte load. An Instance is not safe for
+// concurrent use, so the cache needs no atomics.
+type JSCache struct {
+	Key   unsafe.Pointer // data word of the interface holding the cached ASCII string
+	ASCII string         // the cached string, if ASCII
+	// non-ASCII cache
+	nkey  unsafe.Pointer
+	units []uint16
+}
+
+func efaceData(x *any) unsafe.Pointer { return (*[2]unsafe.Pointer)(unsafe.Pointer(x))[1] }
+
+// EfaceKey returns the identity of the value boxed in x (used by generated
+// code for the JSCache fast path).
+func EfaceKey(x any) unsafe.Pointer { return efaceData(&x) }
+
+// CharCodeAtSlow and LengthSlow are the out-of-line paths used by generated
+// code after its inline fast path misses.
+func (c *JSCache) CharCodeAtSlow(x any, i int32) int32 { return c.charCodeAtSlow(x, i) }
+func (c *JSCache) LengthSlow(x any) int32              { return c.lengthSlow(x) }
+
+// CharCodeAt implements wasm:js-string charCodeAt.
+func (c *JSCache) CharCodeAt(x any, i int32) int32 {
+	if efaceData(&x) == c.Key && uint32(i) < uint32(len(c.ASCII)) {
+		return int32(c.ASCII[uint32(i)])
+	}
+	return c.charCodeAtSlow(x, i)
+}
+
+// Length implements wasm:js-string length.
+func (c *JSCache) Length(x any) int32 {
+	if efaceData(&x) == c.Key {
+		return int32(len(c.ASCII))
+	}
+	return c.lengthSlow(x)
+}
+
+// CodePointAt implements wasm:js-string codePointAt.
+func (c *JSCache) CodePointAt(x any, i int32) int32 {
+	if efaceData(&x) == c.Key && uint32(i) < uint32(len(c.ASCII)) {
+		return int32(c.ASCII[uint32(i)])
+	}
+	return c.codePointAtSlow(x, i)
+}
+
+// unitsOf returns the UTF-16 units of x's string, or nil if it is ASCII
+// (in which case the cache now holds it).
+func (c *JSCache) unitsOf(x any) (string, []uint16) {
+	s := jsStr(x)
+	k := efaceData(&x)
+	if k == c.Key && k != nil {
+		return s, nil
+	}
+	if k == c.nkey && k != nil {
+		return s, c.units
+	}
+	if len(s) < 16 { // not worth caching
+		if isASCII(s) {
+			return s, nil
+		}
+		return s, appendUnits(nil, s)
+	}
+	if isASCII(s) {
+		c.Key, c.ASCII = k, s
+		return s, nil
+	}
+	c.nkey, c.units = k, appendUnits(make([]uint16, 0, len(s)), s)
+	return s, c.units
+}
+
+func (c *JSCache) charCodeAtSlow(x any, i int32) int32 {
+	s, u := c.unitsOf(x)
+	if u == nil {
+		if uint32(i) >= uint32(len(s)) {
+			panic(&Trap{"string index out of bounds"})
+		}
+		return int32(s[uint32(i)])
+	}
+	if uint32(i) >= uint32(len(u)) {
+		panic(&Trap{"string index out of bounds"})
+	}
+	return int32(u[uint32(i)])
+}
+
+func (c *JSCache) lengthSlow(x any) int32 {
+	s, u := c.unitsOf(x)
+	if u == nil {
+		return int32(len(s))
+	}
+	return int32(len(u))
+}
+
+func (c *JSCache) codePointAtSlow(x any, i int32) int32 {
+	s, u := c.unitsOf(x)
+	if u == nil {
+		return c.charCodeAtSlow(x, i)
+	}
+	return JSCodePointAt(s, i)
 }

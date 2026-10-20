@@ -17,11 +17,27 @@ func MakeSlice[T comparable](n int32, v T) []T {
 	s := make([]T, uint32(n))
 	var z T
 	if v != z {
+		fill(s, v)
+	}
+	return s
+}
+
+// fill sets every element of s to v by doubling copies, which use bulk
+// write barriers instead of one barrier per pointer store.
+func fill[T any](s []T, v T) {
+	if len(s) == 0 {
+		return
+	}
+	if len(s) < 16 {
 		for i := range s {
 			s[i] = v
 		}
+		return
 	}
-	return s
+	s[0] = v
+	for i := 1; i < len(s); i *= 2 {
+		copy(s[i:], s[:i])
+	}
 }
 
 // MakeSliceV128 is MakeSlice for non-comparable-zero element types.
@@ -45,9 +61,7 @@ func checkRange(length int, off, n uint32) {
 // ArrayFill implements array.fill.
 func ArrayFill[T any](s []T, off int32, v T, n int32) {
 	checkRange(len(s), uint32(off), uint32(n))
-	for i := uint32(0); i < uint32(n); i++ {
-		s[uint32(off)+i] = v
-	}
+	fill(s[uint32(off):uint32(off)+uint32(n)], v)
 }
 
 // ArrayCopy implements array.copy for identical element types.
