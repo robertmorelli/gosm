@@ -17,13 +17,14 @@ type Options struct {
 	Package     string // Go package name
 	RuntimePath string // import path of the runtime package (default "gosm/rt")
 	Source      string // source file name, for the header comment
-	// StringConstModule is the import module whose global imports are
-	// string constants named by their field (JS string builtins
-	// "importedStringConstants"). Default "'". Empty string disables.
-	StringConstModule string
-	NoBuiltins        bool // treat wasm:js-string etc. as ordinary host imports
-	HostOnly          bool // emit only the Host interface
-	NoFormat          bool // skip gofmt (debugging)
+	// StringConstModules lists the import modules whose immutable global
+	// imports are string constants equal to their field name (JS string
+	// builtins "importedStringConstants"; Dart uses ""). nil means the
+	// default ["'"]; an empty non-nil slice disables the feature.
+	StringConstModules []string
+	NoBuiltins         bool // treat wasm:js-string etc. as ordinary host imports
+	HostOnly           bool // emit only the Host interface
+	NoFormat           bool // skip gofmt (debugging)
 }
 
 type compiler struct {
@@ -141,7 +142,7 @@ func (c *compiler) assignNames() {
 			}
 			fi++
 		case wasm.ExtGlobal:
-			if c.opts.StringConstModule != "" && im.Module == c.opts.StringConstModule && !im.Global.Mutable {
+			if c.isStringConstModule(im.Module) && !im.Global.Mutable {
 				c.strConst[gi] = im.Name
 				gi++
 				continue
@@ -239,6 +240,19 @@ func (c *compiler) assignNames() {
 		}
 		c.funcNames[i] = c.memberIdent(base)
 	}
+}
+
+func (c *compiler) isStringConstModule(mod string) bool {
+	mods := c.opts.StringConstModules
+	if mods == nil {
+		mods = []string{"'"}
+	}
+	for _, m := range mods {
+		if m == mod {
+			return true
+		}
+	}
+	return false
 }
 
 func (c *compiler) builtinFor(im wasm.Import) string {

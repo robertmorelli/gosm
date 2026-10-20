@@ -110,7 +110,14 @@ type fn struct {
 }
 
 func (f *fn) emit(format string, args ...any) {
-	fmt.Fprintf(f.w, format, args...)
+	line := fmt.Sprintf(format, args...)
+	if lhs, rhs, ok := strings.Cut(line, " = "); ok && lhs == rhs {
+		return // self-assignment
+	}
+	if lhs, rhs, ok := strings.Cut(line, " = "); ok && strings.Contains(lhs, ", ") && lhs == rhs {
+		return
+	}
+	f.w.WriteString(line)
 	f.w.WriteByte('\n')
 }
 
@@ -979,6 +986,7 @@ func (f *fn) finish(header string, body string) string {
 	if f.needDelegateDefer {
 		b.WriteString("defer rt.UndelegateFrame()\n")
 	}
+	body = pruneDead(body)
 	body = f.peephole(body)
 	f.dropUnmentioned(body)
 	// group declarations by type for readability

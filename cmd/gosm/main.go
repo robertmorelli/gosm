@@ -27,7 +27,9 @@ func main() {
 	out := flag.String("o", "", "output file (default stdout)")
 	rtPath := flag.String("rt", "gosm/rt", "import path of the gosm runtime package")
 	hostOnly := flag.Bool("emit-host", false, "emit only the Host interface")
-	strMod := flag.String("string-constants", "'", "import module providing imported string constants (\"\" disables)")
+	var strMods stringList
+	flag.Var(&strMods, "string-constants", "import module whose global imports are string constants (repeatable; default \"'\"; Dart uses \"\")")
+	noStrConst := flag.Bool("no-string-constants", false, "disable imported string constants")
 	noBuiltins := flag.Bool("no-builtins", false, "do not implement wasm:js-string / text-encoder / text-decoder builtins")
 	noFormat := flag.Bool("no-format", false, "do not gofmt the output")
 	flag.Usage = func() {
@@ -68,13 +70,13 @@ func main() {
 		}
 	}
 	src, err := compiler.Compile(m, compiler.Options{
-		Package:           name,
-		RuntimePath:       *rtPath,
-		Source:            filepath.Base(in),
-		StringConstModule: *strMod,
-		NoBuiltins:        *noBuiltins,
-		HostOnly:          *hostOnly,
-		NoFormat:          *noFormat,
+		Package:            name,
+		RuntimePath:        *rtPath,
+		Source:             filepath.Base(in),
+		StringConstModules: strModules(strMods, *noStrConst),
+		NoBuiltins:         *noBuiltins,
+		HostOnly:           *hostOnly,
+		NoFormat:           *noFormat,
 	})
 	if err != nil {
 		if src != nil && *out != "" {
@@ -97,4 +99,19 @@ func main() {
 func fatal(err error) {
 	fmt.Fprintln(os.Stderr, "gosm:", err)
 	os.Exit(1)
+}
+
+type stringList []string
+
+func (s *stringList) String() string     { return strings.Join(*s, ",") }
+func (s *stringList) Set(v string) error { *s = append(*s, v); return nil }
+
+func strModules(l stringList, disable bool) []string {
+	if disable {
+		return []string{}
+	}
+	if len(l) == 0 {
+		return nil
+	}
+	return l
 }
