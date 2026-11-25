@@ -6,7 +6,7 @@ const wasi = new WASI({ version: 'preview1', args: argv, env, });
 
 const fs = await import('node:fs');
 const url = await import('node:url');
-const wasmBuffer = fs.readFileSync(url.fileURLToPath(import.meta.resolve('./kbench.wasm')));
+const wasmBuffer = fs.readFileSync(url.fileURLToPath(import.meta.resolve('./kbench/kbench.wasm')));
 const wasmModule = new WebAssembly.Module(wasmBuffer);
 const wasmInstance = new WebAssembly.Instance(wasmModule, wasi.getImportObject());
 

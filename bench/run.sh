@@ -4,7 +4,7 @@
 set -e
 cd "$(dirname "$0")/.."
 N=${N:-3}
-go build -o /tmp/gosm-kbench ./bench/kotlin/cmdopt
+go build -o /tmp/gosm-kbench ./bench/kotlin/cmd
 go build -o /tmp/gosm-dbench ./bench/dart/cmd
 best() { # file -> "name best" lines
   awk '{ if (!($1 in b) || $2 < b[$1]) b[$1] = $2 } END { for (k in b) print k, b[k] }' "$1" | sort
@@ -14,7 +14,7 @@ run() { # label cmd...
   : > /tmp/gosm-bench.$label
   for i in $(seq "$N"); do "$@" 2>/dev/null | grep " ms " >> /tmp/gosm-bench.$label; done
 }
-run kv8 sh -c 'cd bench/kotlin && node kbench.opt.mjs'
+run kv8 sh -c 'cd bench/kotlin && node kbench.mjs'
 run kgo /tmp/gosm-kbench
 run dv8 sh -c 'cd bench/dart && node run.mjs'
 run dgo /tmp/gosm-dbench
